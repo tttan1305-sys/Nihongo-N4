@@ -17,13 +17,13 @@ Kế hoạch chi tiết: [docs/KE_HOACH.md](docs/KE_HOACH.md)
 | 1.5 | Phần từ vựng: furigana, nghĩa, câu thực tế, nút nghe (giọng tiếng Nhật của máy tạm thời) | ✅ 2026-10-20 | `vocab_tab.dart`, `services/speaker.dart` (10 test đạt) |
 | 1.6 | Flashcard ôn tập SM-2, lưu trên máy | ✅ 2026-10-20 | `srs/sm2.dart`, `flashcard_store.dart`, `flashcard_screen.dart` (18 test đạt) |
 | 1.7 | Luyện nghe, nói (nhận dạng giọng), viết, và bài đọc hiểu cuối bài | ✅ 2026-10-20 | `skills_tab.dart`, `speaking_screen.dart`, `writing_screen.dart`, `reading_tab.dart` (25 test đạt) |
-| 1.8 | Build file APK để bạn cài thử trên điện thoại | 👉 đã chọn GitHub Actions, chờ repository mới | `.github/workflows/build-apk.yml` đã soạn sẵn |
+| 1.8 | Build file APK để bạn cài thử trên điện thoại | ✅ 2026-10-20 | GitHub Actions build mỗi lần đẩy lên main, APK ở [Releases](https://github.com/tttan1305-sys/Nihongo-N4/releases) |
 
 ## Giai đoạn 2: Tài khoản Gmail và giọng đọc nữ
 
 | Bước | Nội dung | Trạng thái |
 |---|---|---|
-| 2.1 | 🔑 Bạn tạo dự án Firebase, gửi `google-services.json`; tôi nối đăng nhập Google | ⬜ |
+| 2.1 | 🔑 Bạn tạo dự án Firebase, gửi `google-services.json`; tôi nối đăng nhập Google | 👉 |
 | 2.2 | Đồng bộ tiến độ và flashcard lên Firestore | ⬜ |
 | 2.3 | 🔑 Bạn tạo khóa Google Cloud TTS; tôi tạo file giọng nữ `ja-JP-Neural2-B` cho bài đã soạn | ⬜ |
 
@@ -59,7 +59,8 @@ Mỗi bước soạn 2 bài theo đúng định dạng bài 26, chạy `tools/ch
 
 ## Ghi chú cho lần làm tiếp theo
 
-- Mã nguồn nằm ở `/mnt/project-files/app` (chưa có GitHub; khi bạn đưa repository thì chuyển sang đó).
+- Mã nguồn chính: https://github.com/tttan1305-sys/Nihongo-N4 (nhánh main). `/mnt/project-files/app` là bản sao, cập nhật cùng lúc.
+- **Bước tiếp theo: 2.1** (cần bạn tạo dự án Firebase). APK hiện ký bằng khóa debug; khi đổi sang khóa thật ở bước 4.1 phải gỡ app cũ rồi cài lại.
 - Máy làm việc không tải được Android SDK (`dl.google.com` bị chặn; maven.google.com và services.gradle.org thì được). Cách build APK: GitHub Actions (`.github/workflows/build-apk.yml`) khi có repository, hoặc thêm `dl.google.com` vào Allowed domains của cloud environment.
 - Flutter SDK không có sẵn trong máy làm việc: tải bản stable `flutter_linux_3.47.7` về thư mục tạm (chạy `git config --global --add safe.directory '*'` trước) để chạy `flutter analyze` và `flutter test`. Android SDK chưa có nên chưa build APK được (để bước 1.8).
 - Tiến độ lưu trên máy bằng `shared_preferences` (`lib/data/progress_store.dart`); giai đoạn 2 đồng bộ lên Firestore. Tab Luyện kỹ năng còn trống (bước 1.7).
