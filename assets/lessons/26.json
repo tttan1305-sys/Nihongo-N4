@@ -1,0 +1,143 @@
+{
+  "id": "l26",
+  "number": 26,
+  "titleJa": "ごみの{出|だ}し{方|かた}が{分|わ}からないんです",
+  "titleVi": "Giải thích lý do và nhờ vả lịch sự",
+  "grammar": [
+    {
+      "id": "g1",
+      "pattern": "{普通形|ふつうけい} ＋ んです",
+      "meaningVi": "Giải thích lý do, hoàn cảnh; hoặc hỏi để người khác giải thích",
+      "explanationVi": "Thêm んです sau thể thông thường để nói lý do hoặc hoàn cảnh của mình, hay hỏi về điều mình vừa thấy. Danh từ và tính từ đuôi な đổi だ thành な: {雨|あめ}だ → {雨|あめ}なんです. Khi hỏi: 〜んですか.",
+      "usageNoteVi": "Người Nhật dùng んです rất nhiều khi nói lý do xin nghỉ, đến muộn, hay khi thấy đồng nghiệp có vẻ không ổn: 「どうしたんですか」. Với cấp trên, đừng hỏi 〜んですか liên tục về chuyện riêng của họ vì nghe như đang tra hỏi.",
+      "examples": [
+        { "id": "g1_e1", "ja": "「どうしたんですか。」「{頭|あたま}が{痛|いた}いんです。」", "vi": "\"Anh bị sao vậy?\" \"Tôi bị đau đầu.\"" },
+        { "id": "g1_e2", "ja": "{日本語|にほんご}が{上手|じょうず}ですね。どこで{勉強|べんきょう}したんですか。", "vi": "Bạn giỏi tiếng Nhật quá. Bạn đã học ở đâu vậy?" },
+        { "id": "g1_e3", "ja": "{明日|あした}は{休|やす}みます。{国|くに}から{母|はは}が{来|く}るんです。", "vi": "Mai tôi xin nghỉ. Mẹ tôi từ quê sang ạ." }
+      ],
+      "quiz": [
+        { "prompt": "{顔色|かおいろ}が{悪|わる}いですね。どう＿＿か。", "options": ["したんです", "するんです", "しました"], "answer": 0, "explanationVi": "Thấy sắc mặt xấu (chuyện đã xảy ra) nên hỏi lý do: したんですか." },
+        { "prompt": "{明日|あした}は{休|やす}みです。{病院|びょういん}に{行|い}く＿＿。", "options": ["んです", "なんです", "だんです"], "answer": 0, "explanationVi": "Sau động từ thể thông thường dùng trực tiếp んです." },
+        { "prompt": "{来週|らいしゅう}から{旅行|りょこう}＿＿。", "options": ["んです", "なんです", "だんです"], "answer": 1, "explanationVi": "Sau danh từ phải dùng なんです." }
+      ]
+    },
+    {
+      "id": "g2",
+      "pattern": "〜んですが、Vて いただけませんか",
+      "meaningVi": "Nêu hoàn cảnh rồi nhờ vả một cách lịch sự",
+      "explanationVi": "〜んですが dùng để mở đầu, nêu hoàn cảnh của mình. Theo sau là lời nhờ rất lịch sự Vていただけませんか (lịch sự hơn Vてくださいませんか). Nhiều khi người Nhật chỉ nói 〜んですが… rồi bỏ lửng, người nghe tự hiểu là đang nhờ.",
+      "usageNoteVi": "Đây là mẫu câu quan trọng nhất ở công ty khi nhờ cấp trên hay khách hàng. Ví dụ nhờ kiểm tra tài liệu, hỏi đường, hỏi nhân viên văn phòng.",
+      "examples": [
+        { "id": "g2_e1", "ja": "{日本語|にほんご}でメールを{書|か}いたんですが、ちょっと{見|み}ていただけませんか。", "vi": "Tôi đã viết email bằng tiếng Nhật, anh xem giúp tôi một chút được không ạ?" },
+        { "id": "g2_e2", "ja": "{道|みち}が{分|わ}からないんですが、{地図|ちず}を{書|か}いていただけませんか。", "vi": "Tôi không biết đường, chị vẽ giúp tôi bản đồ được không ạ?" },
+        { "id": "g2_e3", "ja": "すみません、この{書類|しょるい}の{書|か}き{方|かた}が{分|わ}からないんですが…。", "vi": "Xin lỗi, tôi không biết cách điền giấy tờ này ạ… (ngầm nhờ chỉ giúp)" }
+      ],
+      "quiz": [
+        { "prompt": "{漢字|かんじ}が{読|よ}めないんですが、＿＿。", "options": ["{読|よ}んでいただけませんか", "{読|よ}みていただけませんか", "{読|よ}んでいただきますか"], "answer": 0, "explanationVi": "Thể て của {読|よ}みます là {読|よ}んで." },
+        { "prompt": "{部長|ぶちょう}、{資料|しりょう}を{作|つく}ったんですが、＿＿。", "options": ["{見|み}てくれ", "{見|み}ていただけませんか", "{見|み}なさい"], "answer": 1, "explanationVi": "Nói với cấp trên phải dùng cách nhờ lịch sự nhất." }
+      ]
+    },
+    {
+      "id": "g3",
+      "pattern": "{疑問詞|ぎもんし} ＋ Vたら いいですか",
+      "meaningVi": "Hỏi xin lời khuyên: nên làm (cái gì / ở đâu / thế nào) thì được",
+      "explanationVi": "Ghép từ để hỏi (どこ, なに, どう, だれ, いつ…) với Vたら いいですか để hỏi cách làm hoặc xin chỉ dẫn. Thường đi kèm 〜んですが ở phía trước để nêu hoàn cảnh.",
+      "usageNoteVi": "Người mới vào công ty dùng câu này hằng ngày: hỏi nộp giấy ở đâu, gửi email cho ai, photo bao nhiêu bản.",
+      "examples": [
+        { "id": "g3_e1", "ja": "どこでチケットを{買|か}ったらいいですか。", "vi": "Tôi nên mua vé ở đâu ạ?" },
+        { "id": "g3_e2", "ja": "{会議|かいぎ}の{資料|しりょう}は{何部|なんぶ}コピーしたらいいですか。", "vi": "Tài liệu họp nên photo bao nhiêu bản ạ?" },
+        { "id": "g3_e3", "ja": "{熱|ねつ}があるんですが、どうしたらいいですか。", "vi": "Tôi bị sốt, tôi nên làm thế nào ạ?" }
+      ],
+      "quiz": [
+        { "prompt": "この{書類|しょるい}はだれに＿＿いいですか。", "options": ["{出|だ}したら", "{出|だ}すたら", "{出|だ}して"], "answer": 0, "explanationVi": "Thể たら của {出|だ}します là {出|だ}したら." },
+        { "prompt": "Tôi nên đi đường nào thì được?", "options": ["どの{道|みち}を{行|い}ったらいいですか", "どの{道|みち}を{行|い}きましたか", "どの{道|みち}が{行|い}きたいですか"], "answer": 0, "explanationVi": "Hỏi xin chỉ dẫn: {疑問詞|ぎもんし} + Vたらいいですか." }
+      ]
+    },
+    {
+      "id": "g4",
+      "pattern": "N は {好|す}きです・{上手|じょうず}です・あります・Vます",
+      "meaningVi": "Đưa tân ngữ lên làm chủ đề với は để nhấn mạnh hoặc so sánh",
+      "explanationVi": "Tân ngữ vốn đi với が hoặc を có thể đổi thành は khi muốn đối chiếu hai sự việc: A thì thế này, còn B thì thế kia.",
+      "usageNoteVi": "Rất tự nhiên khi nói về bản thân lúc phỏng vấn xin việc hoặc giới thiệu: 「パソコンは{得意|とくい}です」.",
+      "examples": [
+        { "id": "g4_e1", "ja": "{料理|りょうり}はあまり{上手|じょうず}じゃありませんが、{掃除|そうじ}は{好|す}きです。", "vi": "Nấu ăn thì tôi không giỏi lắm, nhưng dọn dẹp thì tôi thích." },
+        { "id": "g4_e2", "ja": "{時間|じかん}はありますが、お{金|かね}はありません。", "vi": "Thời gian thì có, nhưng tiền thì không." },
+        { "id": "g4_e3", "ja": "サッカーは{見|み}ますが、{野球|やきゅう}は{見|み}ません。", "vi": "Bóng đá thì tôi xem, còn bóng chày thì không." }
+      ],
+      "quiz": [
+        { "prompt": "お{酒|さけ}＿＿{飲|の}みますが、たばこ＿＿{吸|す}いません。", "options": ["は・は", "を・が", "が・を"], "answer": 0, "explanationVi": "Đối chiếu hai việc nên cả hai dùng は." },
+        { "prompt": "{日本語|にほんご}＿＿{話|はな}せますが、{漢字|かんじ}＿＿まだ{書|か}けません。", "options": ["を・を", "は・は", "に・に"], "answer": 1, "explanationVi": "So sánh khả năng nói và viết nên dùng は ở cả hai vế." }
+      ]
+    }
+  ],
+  "vocab": [
+    { "id": "v01", "word": "{診|み}ます", "kana": "みます", "meaningVi": "khám (bệnh)", "pos": "động từ nhóm II", "practical": { "id": "v01_p", "ja": "{熱|ねつ}があるんですが、{今日|きょう}{診|み}ていただけませんか。", "vi": "Tôi bị sốt, hôm nay bác sĩ khám giúp tôi được không ạ?", "situationVi": "Gọi điện đặt lịch ở phòng khám" } },
+    { "id": "v02", "word": "{探|さが}します", "kana": "さがします", "meaningVi": "tìm", "pos": "động từ nhóm I", "practical": { "id": "v02_p", "ja": "{部屋|へや}を{探|さが}しているんですが、{駅|えき}から{近|ちか}い{所|ところ}はありますか。", "vi": "Tôi đang tìm phòng, có chỗ nào gần ga không ạ?", "situationVi": "Ở công ty bất động sản" } },
+    { "id": "v03", "word": "{遅|おく}れます", "kana": "おくれます", "meaningVi": "đến muộn, trễ", "pos": "động từ nhóm II", "practical": { "id": "v03_p", "ja": "すみません、{電車|でんしゃ}が{止|と}まって、{会議|かいぎ}に5{分|ふん}ぐらい{遅|おく}れます。", "vi": "Xin lỗi, tàu bị dừng nên tôi sẽ đến họp muộn khoảng 5 phút.", "situationVi": "Báo muộn cho cấp trên" } },
+    { "id": "v04", "word": "{間|ま}に{合|あ}います", "kana": "まにあいます", "meaningVi": "kịp (giờ)", "pos": "động từ nhóm I", "practical": { "id": "v04_p", "ja": "タクシーで{行|い}ったら、{会議|かいぎ}に{間|ま}に{合|あ}いますか。", "vi": "Nếu đi taxi thì có kịp giờ họp không?", "situationVi": "Hỏi đồng nghiệp khi sắp trễ" } },
+    { "id": "v05", "word": "やります", "kana": "やります", "meaningVi": "làm (văn nói)", "pos": "động từ nhóm I", "practical": { "id": "v05_p", "ja": "この{仕事|しごと}、{私|わたし}がやりましょうか。", "vi": "Việc này để tôi làm nhé?", "situationVi": "Chủ động nhận việc ở công ty" } },
+    { "id": "v06", "word": "{拾|ひろ}います", "kana": "ひろいます", "meaningVi": "nhặt", "pos": "động từ nhóm I", "practical": { "id": "v06_p", "ja": "{駅|えき}で{財布|さいふ}を{拾|ひろ}ったんですが、どこに{届|とど}けたらいいですか。", "vi": "Tôi nhặt được ví ở ga, tôi nên mang nộp ở đâu ạ?", "situationVi": "Hỏi nhân viên nhà ga" } },
+    { "id": "v07", "word": "{連絡|れんらく}します", "kana": "れんらくします", "meaningVi": "liên lạc", "pos": "động từ nhóm III", "practical": { "id": "v07_p", "ja": "{休|やす}む{時|とき}は、{朝|あさ}8{時|じ}までに{課長|かちょう}に{連絡|れんらく}してください。", "vi": "Khi nghỉ thì hãy liên lạc với trưởng phòng trước 8 giờ sáng.", "situationVi": "Quy định ở chỗ làm" } },
+    { "id": "v08", "word": "{気分|きぶん}がいい", "kana": "きぶんがいい", "meaningVi": "thấy dễ chịu, tâm trạng tốt", "pos": "cụm tính từ", "practical": { "id": "v08_p", "ja": "{今日|きょう}は{天気|てんき}がよくて、{気分|きぶん}がいいですね。", "vi": "Hôm nay trời đẹp, thấy dễ chịu nhỉ.", "situationVi": "Bắt chuyện với hàng xóm buổi sáng" } },
+    { "id": "v09", "word": "{気分|きぶん}が{悪|わる}い", "kana": "きぶんがわるい", "meaningVi": "thấy khó chịu, mệt trong người", "pos": "cụm tính từ", "practical": { "id": "v09_p", "ja": "すみません、{気分|きぶん}が{悪|わる}いんですが、{少|すこ}し{休|やす}んでもいいですか。", "vi": "Xin lỗi, tôi thấy không khỏe, tôi nghỉ một chút được không ạ?", "situationVi": "Xin nghỉ giữa ca làm" } },
+    { "id": "v10", "word": "{運動会|うんどうかい}", "kana": "うんどうかい", "meaningVi": "hội thao", "pos": "danh từ", "practical": { "id": "v10_p", "ja": "{来月|らいげつ}、{子|こ}どもの{学校|がっこう}で{運動会|うんどうかい}があるんです。", "vi": "Tháng sau trường của con tôi có hội thao.", "situationVi": "Xin nghỉ phép để đi hội thao của con" } },
+    { "id": "v11", "word": "{盆|ぼん}{踊|おど}り", "kana": "ぼんおどり", "meaningVi": "múa Bon (lễ hội mùa hè)", "pos": "danh từ", "practical": { "id": "v11_p", "ja": "{夏|なつ}になると、{町|まち}の{公園|こうえん}で{盆|ぼん}{踊|おど}りがあります。", "vi": "Cứ đến mùa hè là ở công viên của thị trấn có múa Bon.", "situationVi": "Tham gia sự kiện khu phố" } },
+    { "id": "v12", "word": "フリーマーケット", "kana": "フリーマーケット", "meaningVi": "chợ đồ cũ", "pos": "danh từ", "practical": { "id": "v12_p", "ja": "フリーマーケットで{安|やす}い{自転車|じてんしゃ}を{買|か}いました。", "vi": "Tôi đã mua được chiếc xe đạp rẻ ở chợ đồ cũ.", "situationVi": "Mua đồ dùng khi mới sang Nhật" } },
+    { "id": "v13", "word": "{場所|ばしょ}", "kana": "ばしょ", "meaningVi": "địa điểm, chỗ", "pos": "danh từ", "practical": { "id": "v13_p", "ja": "{明日|あした}の{会議|かいぎ}は{場所|ばしょ}が{変|か}わったんですか。", "vi": "Cuộc họp ngày mai đổi địa điểm rồi à?", "situationVi": "Xác nhận lịch họp" } },
+    { "id": "v14", "word": "ボランティア", "kana": "ボランティア", "meaningVi": "tình nguyện, tình nguyện viên", "pos": "danh từ", "practical": { "id": "v14_p", "ja": "{週末|しゅうまつ}、{公園|こうえん}の{掃除|そうじ}のボランティアをしています。", "vi": "Cuối tuần tôi làm tình nguyện dọn dẹp công viên.", "situationVi": "Giới thiệu bản thân" } },
+    { "id": "v15", "word": "{財布|さいふ}", "kana": "さいふ", "meaningVi": "cái ví", "pos": "danh từ", "practical": { "id": "v15_p", "ja": "{財布|さいふ}をなくしたんですが、{交番|こうばん}はどこですか。", "vi": "Tôi bị mất ví, đồn cảnh sát ở đâu ạ?", "situationVi": "Hỏi đường khi gặp sự cố" } },
+    { "id": "v16", "word": "ごみ", "kana": "ごみ", "meaningVi": "rác", "pos": "danh từ", "practical": { "id": "v16_p", "ja": "すみません、ごみはどこに{出|だ}したらいいですか。", "vi": "Xin lỗi, rác thì tôi nên đổ ở đâu ạ?", "situationVi": "Hỏi hàng xóm khi mới chuyển nhà" } },
+    { "id": "v17", "word": "{燃|も}えるごみ", "kana": "もえるごみ", "meaningVi": "rác cháy được", "pos": "danh từ", "practical": { "id": "v17_p", "ja": "{燃|も}えるごみは{月曜日|げつようび}と{木曜日|もくようび}に{出|だ}します。", "vi": "Rác cháy được thì đổ vào thứ Hai và thứ Năm.", "situationVi": "Quy định đổ rác ở khu nhà" } },
+    { "id": "v18", "word": "{置|お}き{場|ば}", "kana": "おきば", "meaningVi": "chỗ để", "pos": "danh từ", "practical": { "id": "v18_p", "ja": "{自転車|じてんしゃ}{置|お}き{場|ば}はアパートの{裏|うら}にあります。", "vi": "Chỗ để xe đạp ở phía sau khu nhà.", "situationVi": "Chủ nhà hướng dẫn khi nhận phòng" } },
+    { "id": "v19", "word": "びん", "kana": "びん", "meaningVi": "chai lọ thủy tinh", "pos": "danh từ", "practical": { "id": "v19_p", "ja": "びんと{缶|かん}は{洗|あら}ってから{出|だ}してください。", "vi": "Chai thủy tinh và lon hãy rửa sạch rồi mới đổ.", "situationVi": "Phân loại rác" } },
+    { "id": "v20", "word": "{缶|かん}", "kana": "かん", "meaningVi": "lon, hộp kim loại", "pos": "danh từ", "practical": { "id": "v20_p", "ja": "{缶|かん}のごみは{土曜日|どようび}なんです。", "vi": "Rác lon là vào thứ Bảy đấy.", "situationVi": "Nhắc bạn cùng phòng" } },
+    { "id": "v21", "word": "{平日|へいじつ}", "kana": "へいじつ", "meaningVi": "ngày thường (thứ Hai đến thứ Sáu)", "pos": "danh từ", "practical": { "id": "v21_p", "ja": "{平日|へいじつ}は{仕事|しごと}なんですが、{土曜日|どようび}に{来|き}ていただけませんか。", "vi": "Ngày thường tôi đi làm, anh đến vào thứ Bảy giúp tôi được không ạ?", "situationVi": "Hẹn thợ sửa chữa hoặc giao hàng" } },
+    { "id": "v22", "word": "{今度|こんど}", "kana": "こんど", "meaningVi": "lần tới, dịp tới", "pos": "danh từ / phó từ", "practical": { "id": "v22_p", "ja": "{今度|こんど}、{一緒|いっしょ}に{飲|の}みに{行|い}きませんか。", "vi": "Lần tới đi uống với nhau nhé?", "situationVi": "Rủ đồng nghiệp sau giờ làm" } },
+    { "id": "v23", "word": "{直接|ちょくせつ}", "kana": "ちょくせつ", "meaningVi": "trực tiếp", "pos": "phó từ", "practical": { "id": "v23_p", "ja": "この{書類|しょるい}は{部長|ぶちょう}に{直接|ちょくせつ}{渡|わた}してください。", "vi": "Giấy tờ này hãy đưa trực tiếp cho trưởng bộ phận.", "situationVi": "Chỉ thị trong công việc" } },
+    { "id": "v24", "word": "ずいぶん", "kana": "ずいぶん", "meaningVi": "khá là, rất (ngạc nhiên)", "pos": "phó từ", "practical": { "id": "v24_p", "ja": "ずいぶん{日本語|にほんご}が{上手|じょうず}になりましたね。", "vi": "Tiếng Nhật của bạn tiến bộ nhiều thật đấy.", "situationVi": "Khen đồng nghiệp" } }
+  ],
+  "listening": [
+    { "audioId": "v03_p", "options": ["Tàu dừng nên tôi sẽ đến họp muộn", "Tôi đã kịp giờ họp", "Cuộc họp đổi địa điểm"], "answer": 0 },
+    { "audioId": "v16_p", "options": ["Hỏi giờ đổ rác", "Hỏi chỗ đổ rác", "Hỏi cách phân loại rác"], "answer": 1 },
+    { "audioId": "g3_e2", "options": ["Hỏi phòng họp ở đâu", "Hỏi họp lúc mấy giờ", "Hỏi photo bao nhiêu bản"], "answer": 2 },
+    { "audioId": "v09_p", "options": ["Xin nghỉ một chút vì không khỏe", "Xin về sớm để đi khám", "Hỏi đường đến bệnh viện"], "answer": 0 }
+  ],
+  "speaking": ["g1_e1", "g2_e2", "g3_e3", "v03_p", "v09_p", "v16_p"],
+  "writing": {
+    "kanji": [
+      { "char": "探", "readings": "さが・す / タン", "meaningVi": "tìm" },
+      { "char": "遅", "readings": "おく・れる / チ", "meaningVi": "muộn" },
+      { "char": "拾", "readings": "ひろ・う / シュウ", "meaningVi": "nhặt" },
+      { "char": "連", "readings": "つ・れる / レン", "meaningVi": "liên" },
+      { "char": "絡", "readings": "から・む / ラク", "meaningVi": "lạc (liên lạc)" },
+      { "char": "財", "readings": "ザイ / サイ", "meaningVi": "tài (tiền của)" },
+      { "char": "布", "readings": "ぬの / フ", "meaningVi": "vải" },
+      { "char": "直", "readings": "なお・す / チョク", "meaningVi": "thẳng, trực" },
+      { "char": "接", "readings": "つ・ぐ / セツ", "meaningVi": "tiếp" },
+      { "char": "平", "readings": "たい・ら / ヘイ", "meaningVi": "bằng phẳng" }
+    ],
+    "typing": [
+      { "ja": "{財布|さいふ}を{拾|ひろ}いました。", "answer": "さいふをひろいました", "vi": "Tôi đã nhặt được cái ví." },
+      { "ja": "{会議|かいぎ}に{遅|おく}れます。", "answer": "かいぎにおくれます", "vi": "Tôi sẽ đến họp muộn." },
+      { "ja": "{課長|かちょう}に{連絡|れんらく}しました。", "answer": "かちょうにれんらくしました", "vi": "Tôi đã liên lạc với trưởng phòng." }
+    ]
+  },
+  "reading": {
+    "id": "reading",
+    "titleJa": "グエンさんの{新|あたら}しい{生活|せいかつ}",
+    "paragraphs": [
+      "グエンさんは{先月|せんげつ}ベトナムから{来|き}ました。{今|いま}、{横浜|よこはま}の{会社|かいしゃ}で{働|はたら}いています。{会社|かいしゃ}の{近|ちか}くのアパートに{住|す}んでいますが、{日本|にほん}の{生活|せいかつ}はまだ{分|わ}からないことが{多|おお}いです。",
+      "ある{朝|あさ}、グエンさんがごみを{出|だ}しに{行|い}くと、{隣|となり}の{田中|たなか}さんが「グエンさん、{今日|きょう}は{燃|も}えるごみの{日|ひ}じゃないんですよ」と{言|い}いました。グエンさんは「すみません。ごみの{出|だ}し{方|かた}がよく{分|わ}からないんです。どうしたらいいですか」と{聞|き}きました。",
+      "{田中|たなか}さんは「{燃|も}えるごみは{月曜日|げつようび}と{木曜日|もくようび}です。びんと{缶|かん}は{洗|あら}ってから、{土曜日|どようび}に{出|だ}してください。ごみ{置|お}き{場|ば}は{駐車場|ちゅうしゃじょう}の{横|よこ}ですよ」と{教|おし}えてくれました。",
+      "その{日|ひ}、グエンさんは{急|いそ}いで{駅|えき}まで{走|はし}りましたが、いつもの{電車|でんしゃ}に{間|ま}に{合|あ}いませんでした。それで、{課長|かちょう}に{電話|でんわ}をかけて、「{申|もう}し{訳|わけ}ありません。{電車|でんしゃ}に{乗|の}れなかったんです。10{分|ぷん}ぐらい{遅|おく}れます」と{連絡|れんらく}しました。{課長|かちょう}は「{分|わ}かりました。{気|き}をつけて{来|き}てください」と{言|い}いました。",
+      "{昼休|ひるやす}みに、{同僚|どうりょう}の{山本|やまもと}さんが「{今度|こんど}の{日曜日|にちようび}、{近|ちか}くの{公園|こうえん}でフリーマーケットがあるんです。{一緒|いっしょ}に{行|い}きませんか」と{言|い}いました。グエンさんは「{行|い}きたいです。でも、{場所|ばしょ}がよく{分|わ}からないんですが、{地図|ちず}を{送|おく}っていただけませんか」と{頼|たの}みました。",
+      "グエンさんは{料理|りょうり}はまだ{下手|へた}ですが、{日本|にほん}の{生活|せいかつ}は{好|す}きです。{周|まわ}りの{人|ひと}がみんな{親切|しんせつ}だからです。"
+    ],
+    "questions": [
+      { "prompt": "グエンさんはどうしてその{朝|あさ}ごみを{出|だ}せませんでしたか。", "options": ["{燃|も}えるごみの{日|ひ}じゃなかったから", "ごみ{置|お}き{場|ば}が{遠|とお}かったから", "{時間|じかん}がなかったから"], "answer": 0 },
+      { "prompt": "びんと{缶|かん}は{何曜日|なんようび}に{出|だ}しますか。", "options": ["{月曜日|げつようび}", "{木曜日|もくようび}", "{土曜日|どようび}"], "answer": 2 },
+      { "prompt": "グエンさんは{課長|かちょう}に{何|なに}を{連絡|れんらく}しましたか。", "options": ["{会社|かいしゃ}を{休|やす}むこと", "10{分|ぷん}ぐらい{遅|おく}れること", "{電車|でんしゃ}が{止|と}まったこと"], "answer": 1 },
+      { "prompt": "グエンさんは{山本|やまもと}さんに{何|なに}を{頼|たの}みましたか。", "options": ["{地図|ちず}を{送|おく}ること", "{一緒|いっしょ}にごみを{出|だ}すこと", "{料理|りょうり}を{教|おし}えること"], "answer": 0 }
+    ]
+  }
+}
