@@ -23,7 +23,7 @@ Kế hoạch chi tiết: [docs/KE_HOACH.md](docs/KE_HOACH.md)
 
 | Bước | Nội dung | Trạng thái |
 |---|---|---|
-| 2.1 | 🔑 Bạn tạo dự án Firebase, gửi `google-services.json`; tôi nối đăng nhập Google | 👉 |
+| 2.1 | 🔑 Bạn tạo dự án Firebase, gửi `google-services.json`; tôi nối đăng nhập Google | 👉 mã đã xong, chờ bạn làm theo `docs/HUONG_DAN_FIREBASE.md` |
 | 2.2 | Đồng bộ tiến độ và flashcard lên Firestore | ⬜ |
 | 2.3 | 🔑 Bạn tạo khóa Google Cloud TTS; tôi tạo file giọng nữ `ja-JP-Neural2-B` cho bài đã soạn | ⬜ |
 
@@ -60,7 +60,9 @@ Mỗi bước soạn 2 bài theo đúng định dạng bài 26, chạy `tools/ch
 ## Ghi chú cho lần làm tiếp theo
 
 - Mã nguồn chính: https://github.com/tttan1305-sys/Nihongo-N4 (nhánh main). `/mnt/project-files/app` là bản sao, cập nhật cùng lúc.
-- **Bước tiếp theo: 2.1** (cần bạn tạo dự án Firebase). APK hiện ký bằng khóa debug; khi đổi sang khóa thật ở bước 4.1 phải gỡ app cũ rồi cài lại.
+- **Bước tiếp theo: 2.1** chờ bạn: tạo Firebase, gửi `firebaseConfig` web + `google-services.json`, thêm 2 GitHub Secret khóa ký. Sau đó điền `lib/firebase_options.dart` (đang để null = chạy không đăng nhập).
+- Khóa ký APK: `/mnt/project-files/app-secrets/` (không đưa lên git), SHA-1 9C:8F:6A:48:BE:91:EE:AB:2F:66:26:B6:1A:F9:25:3C:12:D6:6F:BE. Workflow dùng secret `ANDROID_KEYSTORE_BASE64` + `ANDROID_KEYSTORE_PASSWORD`, thiếu thì ký debug. Khi chuyển từ APK ký debug sang khóa thật phải gỡ app cũ rồi cài lại.
+- Đăng nhập: `services/auth_service.dart` dùng FirebaseAuth `signInWithPopup` (web) / `signInWithProvider` (Android), không dùng gói google_sign_in.
 - Máy làm việc không tải được Android SDK (`dl.google.com` bị chặn; maven.google.com và services.gradle.org thì được). Cách build APK: GitHub Actions (`.github/workflows/build-apk.yml`) khi có repository, hoặc thêm `dl.google.com` vào Allowed domains của cloud environment.
 - Flutter SDK không có sẵn trong máy làm việc: tải bản stable `flutter_linux_3.47.7` về thư mục tạm (chạy `git config --global --add safe.directory '*'` trước) để chạy `flutter analyze` và `flutter test`. Android SDK chưa có nên chưa build APK được (để bước 1.8).
 - Tiến độ lưu trên máy bằng `shared_preferences` (`lib/data/progress_store.dart`); giai đoạn 2 đồng bộ lên Firestore. Tab Luyện kỹ năng còn trống (bước 1.7).
