@@ -69,7 +69,7 @@ Mỗi bước soạn 2 bài theo đúng định dạng bài 26, chạy `tools/ch
 - Thứ tự mở khóa trong bài: Ngữ pháp (≥ 80% mỗi mẫu) → Từ vựng → (bấm học xong) Luyện kỹ năng + Đọc hiểu. Bài hoàn thành khi đọc hiểu ≥ 80%; bài sau mở khi bài trước hoàn thành.
 - Luyện nói dùng `speech_to_text` (locale ja-JP, cần quyền micro, đã khai báo trong AndroidManifest); chấm bằng độ giống Levenshtein với câu gốc hoặc cách đọc kana (`services/japanese_text.dart`), đạt từ 80%. Tập viết chữ Hán hiện chỉ vẽ trên chữ mờ, chưa chấm nét.
 - Mã đã chạy `dart format` (dòng 80 ký tự) và `dart fix --apply` (CI chạy `flutter analyze`, lỗi cả với mức info).
-- Bản web: `.github/workflows/deploy-web.yml` đăng lên https://tttan1305-sys.github.io/Nihongo-N4/ (cần bật Settings → Pages → Source: GitHub Actions).
+- Bản web: `.github/workflows/deploy-web.yml` đăng lên https://tttan1305-sys.github.io/Nihongo-N4/ (đã bật Pages 2026-10-20, tự đăng lại mỗi lần đẩy lên main).
 - `QuizScreen` dùng lại được cho bài đọc hiểu và luyện nghe. Trong widget test, phải nạp trước bài học bằng `tester.runAsync(() => repository.load(26))`.
 - Furigana viết theo cú pháp `{漢字|かんじ}`; mọi chuỗi trong file bài học (trừ trường `char`) phải qua `tools/check_lessons.py` với 0 lỗi.
 - Nội dung tự viết, chỉ theo thứ tự bài và ngữ pháp của Minna no Nihongo (sách có bản quyền).
