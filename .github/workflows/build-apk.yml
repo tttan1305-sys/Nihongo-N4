@@ -1,5 +1,5 @@
 # Kiểm tra mã và build file APK mỗi khi đẩy mã lên nhánh main (hoặc bấm chạy tay).
-# File APK nằm ở mục Artifacts của lần chạy, tải về để cài thử.
+# Mỗi lần build xong, file APK được đăng thành bản thử (pre-release) ở mục Releases để tải thẳng về điện thoại.
 name: Build APK
 
 on:
@@ -7,13 +7,16 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
@@ -38,3 +41,13 @@ jobs:
         with:
           name: nihongo-n4-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Đăng bản thử lên Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk nihongo-n4-thu-${{ github.run_number }}.apk
+          gh release create "thu-${{ github.run_number }}" nihongo-n4-thu-${{ github.run_number }}.apk \
+            --prerelease --target "${{ github.sha }}" \
+            --title "Bản thử #${{ github.run_number }}" \
+            --notes "Bản thử tự build từ commit ${{ github.sha }}. Tải file .apk về điện thoại Android rồi mở để cài."
