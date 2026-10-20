@@ -37,7 +37,10 @@ class DeviceRecognizer implements Recognizer {
         if (r.finalResult && !done.isCompleted) done.complete(last);
       },
     );
-    return done.future.timeout(const Duration(seconds: 20), onTimeout: () => last.isEmpty ? null : last);
+    return done.future.timeout(
+      const Duration(seconds: 20),
+      onTimeout: () => last.isEmpty ? null : last,
+    );
   }
 
   @override

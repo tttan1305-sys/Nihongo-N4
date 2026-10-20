@@ -53,17 +53,21 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
       _heard = heard;
       _failed = heard == null;
       if (heard != null) {
-        _score = speakingScore(heard: heard, plain: plainText(_current.ja), reading: readingText(_current.ja));
+        _score = speakingScore(
+          heard: heard,
+          plain: plainText(_current.ja),
+          reading: readingText(_current.ja),
+        );
       }
     });
   }
 
   void _go(int delta) => setState(() {
-        _index += delta;
-        _heard = null;
-        _score = null;
-        _failed = false;
-      });
+    _index += delta;
+    _heard = null;
+    _score = null;
+    _failed = false;
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -75,15 +79,25 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          Text('Câu ${_index + 1}/${widget.sentences.length}', style: text.labelLarge),
+          Text(
+            'Câu ${_index + 1}/${widget.sentences.length}',
+            style: text.labelLarge,
+          ),
           const SizedBox(height: 8),
           const Text('Nghe câu mẫu, sau đó bấm micro và đọc theo.'),
           const SizedBox(height: 16),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Expanded(child: RubyText(s.ja, style: const TextStyle(fontSize: 22))),
-              ListenButton(speaker: widget.speaker, lesson: widget.lesson, audioId: s.id, text: plainText(s.ja)),
+              Expanded(
+                child: RubyText(s.ja, style: const TextStyle(fontSize: 22)),
+              ),
+              ListenButton(
+                speaker: widget.speaker,
+                lesson: widget.lesson,
+                audioId: s.id,
+                text: plainText(s.ja),
+              ),
             ],
           ),
           Text(s.vi, style: text.bodySmall),
@@ -100,11 +114,17 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
           Center(child: Text(_listening ? 'Đang nghe…' : 'Bấm để nói')),
           const SizedBox(height: 16),
           if (_failed)
-            Text('Không nghe được. Hãy cho app quyền dùng micro, nói to và rõ hơn rồi thử lại.',
-                style: TextStyle(color: colors.error)),
+            Text(
+              'Không nghe được. Hãy cho app quyền dùng micro, nói to và rõ hơn rồi thử lại.',
+              style: TextStyle(color: colors.error),
+            ),
           if (_heard != null && _score != null) ...[
             Text('Máy nghe được:', style: text.labelMedium),
-            Text(_heard!, key: const ValueKey('heard'), style: const TextStyle(fontSize: 18)),
+            Text(
+              _heard!,
+              key: const ValueKey('heard'),
+              style: const TextStyle(fontSize: 18),
+            ),
             const SizedBox(height: 8),
             Text(
               _score! >= SpeakingScreen.goodScore
@@ -113,19 +133,32 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
               key: const ValueKey('speaking-result'),
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: _score! >= SpeakingScreen.goodScore ? colors.primary : colors.error,
+                color: _score! >= SpeakingScreen.goodScore
+                    ? colors.primary
+                    : colors.error,
               ),
             ),
           ],
           const SizedBox(height: 24),
           Row(
             children: [
-              if (_index > 0) OutlinedButton(onPressed: () => _go(-1), child: const Text('Câu trước')),
+              if (_index > 0)
+                OutlinedButton(
+                  onPressed: () => _go(-1),
+                  child: const Text('Câu trước'),
+                ),
               const Spacer(),
               if (_index + 1 < widget.sentences.length)
-                FilledButton(key: const ValueKey('next-sentence'), onPressed: () => _go(1), child: const Text('Câu tiếp'))
+                FilledButton(
+                  key: const ValueKey('next-sentence'),
+                  onPressed: () => _go(1),
+                  child: const Text('Câu tiếp'),
+                )
               else
-                FilledButton(onPressed: () => Navigator.of(context).pop(), child: const Text('Xong')),
+                FilledButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('Xong'),
+                ),
             ],
           ),
         ],

@@ -1,0 +1,51 @@
+# Build bản web và đăng lên GitHub Pages: https://tttan1305-sys.github.io/Nihongo-N4/
+# Cần bật một lần: Settings → Pages → Source: GitHub Actions.
+name: Deploy web
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md', 'docs/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: "3.47.7"
+          cache: true
+
+      - run: flutter pub get
+      - run: flutter test
+
+      # Tự chứa CanvasKit (không tải từ CDN) để web chạy ổn định hơn.
+      - name: Build web
+        run: flutter build web --release --base-href /Nihongo-N4/ --no-web-resources-cdn
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

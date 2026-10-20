@@ -13,17 +13,24 @@ class ReadingTab extends StatelessWidget {
   final ProgressStore progress;
   final Speaker speaker;
 
-  const ReadingTab({super.key, required this.lesson, required this.progress, required this.speaker});
+  const ReadingTab({
+    super.key,
+    required this.lesson,
+    required this.progress,
+    required this.speaker,
+  });
 
   Future<void> _answer(BuildContext context) async {
-    final score = await Navigator.of(context).push<double>(MaterialPageRoute(
-      builder: (_) => QuizScreen(
-        title: 'Đọc hiểu',
-        questions: lesson.reading.questions,
-        passMark: ProgressStore.passMark,
-        passMessage: 'Bạn đã hoàn thành bài ${lesson.number}!',
+    final score = await Navigator.of(context).push<double>(
+      MaterialPageRoute(
+        builder: (_) => QuizScreen(
+          title: 'Đọc hiểu',
+          questions: lesson.reading.questions,
+          passMark: ProgressStore.passMark,
+          passMessage: 'Bạn đã hoàn thành bài ${lesson.number}!',
+        ),
       ),
-    ));
+    );
     if (score != null) await progress.saveReadingScore(lesson.number, score);
   }
 
@@ -41,7 +48,13 @@ class ReadingTab extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
-                  child: RubyText(r.titleJa, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                  child: RubyText(
+                    r.titleJa,
+                    style: const TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
                 ListenButton(
                   speaker: speaker,

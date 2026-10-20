@@ -22,25 +22,26 @@ class CardState {
   factory CardState.fresh(DateTime now) => CardState(due: now);
 
   factory CardState.fromJson(Map<String, dynamic> j) => CardState(
-        ease: (j['ease'] as num).toDouble(),
-        intervalDays: j['interval'] as int,
-        repetitions: j['reps'] as int,
-        lapses: j['lapses'] as int,
-        due: DateTime.fromMillisecondsSinceEpoch(j['due'] as int),
-      );
+    ease: (j['ease'] as num).toDouble(),
+    intervalDays: j['interval'] as int,
+    repetitions: j['reps'] as int,
+    lapses: j['lapses'] as int,
+    due: DateTime.fromMillisecondsSinceEpoch(j['due'] as int),
+  );
 
   Map<String, dynamic> toJson() => {
-        'ease': ease,
-        'interval': intervalDays,
-        'reps': repetitions,
-        'lapses': lapses,
-        'due': due.millisecondsSinceEpoch,
-      };
+    'ease': ease,
+    'interval': intervalDays,
+    'reps': repetitions,
+    'lapses': lapses,
+    'due': due.millisecondsSinceEpoch,
+  };
 
   bool get isNew => repetitions == 0 && lapses == 0;
 
   /// Thẻ cần ôn trong hôm nay (hạn trước 0 giờ ngày mai).
-  bool isDue(DateTime now) => due.isBefore(DateTime(now.year, now.month, now.day + 1));
+  bool isDue(DateTime now) =>
+      due.isBefore(DateTime(now.year, now.month, now.day + 1));
 }
 
 /// Thời gian chờ trước khi gặp lại thẻ vừa bấm "Quên".
@@ -57,7 +58,9 @@ CardState review(CardState s, Rating rating, DateTime now) {
         due: now.add(relearnDelay),
       );
     case Rating.hard:
-      final interval = s.repetitions == 0 ? 1 : _atLeast(s.intervalDays * 1.2, s.intervalDays + 1);
+      final interval = s.repetitions == 0
+          ? 1
+          : _atLeast(s.intervalDays * 1.2, s.intervalDays + 1);
       return _next(s, _clampEase(s.ease - 0.15), interval, now);
     case Rating.good:
       final interval = switch (s.repetitions) {
@@ -85,7 +88,8 @@ String nextIntervalLabel(CardState s, Rating rating, DateTime now) {
   return '${(days / 365).toStringAsFixed(1)} năm';
 }
 
-CardState _next(CardState s, double ease, int interval, DateTime now) => CardState(
+CardState _next(CardState s, double ease, int interval, DateTime now) =>
+    CardState(
       ease: ease,
       intervalDays: interval,
       repetitions: s.repetitions + 1,

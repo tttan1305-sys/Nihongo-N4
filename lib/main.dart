@@ -11,13 +11,15 @@ import 'services/speaker.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
-  runApp(NihongoApp(
-    repository: LessonRepository(),
-    progress: ProgressStore(prefs),
-    flashcards: FlashcardStore(prefs),
-    speaker: DeviceSpeaker(),
-    recognizer: DeviceRecognizer(),
-  ));
+  runApp(
+    NihongoApp(
+      repository: LessonRepository(),
+      progress: ProgressStore(prefs),
+      flashcards: FlashcardStore(prefs),
+      speaker: DeviceSpeaker(),
+      recognizer: DeviceRecognizer(),
+    ),
+  );
 }
 
 class NihongoApp extends StatelessWidget {

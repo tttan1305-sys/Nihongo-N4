@@ -8,8 +8,11 @@ class Sentence {
 
   const Sentence({required this.id, required this.ja, required this.vi});
 
-  factory Sentence.fromJson(Map<String, dynamic> j) =>
-      Sentence(id: j['id'] as String, ja: j['ja'] as String, vi: j['vi'] as String? ?? '');
+  factory Sentence.fromJson(Map<String, dynamic> j) => Sentence(
+    id: j['id'] as String,
+    ja: j['ja'] as String,
+    vi: j['vi'] as String? ?? '',
+  );
 }
 
 class Question {
@@ -30,12 +33,12 @@ class Question {
   });
 
   factory Question.fromJson(Map<String, dynamic> j) => Question(
-        prompt: j['prompt'] as String? ?? '',
-        options: List<String>.from(j['options'] as List),
-        answer: j['answer'] as int,
-        explanationVi: j['explanationVi'] as String?,
-        audioId: j['audioId'] as String?,
-      );
+    prompt: j['prompt'] as String? ?? '',
+    options: List<String>.from(j['options'] as List),
+    answer: j['answer'] as int,
+    explanationVi: j['explanationVi'] as String?,
+    audioId: j['audioId'] as String?,
+  );
 }
 
 class GrammarPoint {
@@ -58,27 +61,32 @@ class GrammarPoint {
   });
 
   factory GrammarPoint.fromJson(Map<String, dynamic> j) => GrammarPoint(
-        id: j['id'] as String,
-        pattern: j['pattern'] as String,
-        meaningVi: j['meaningVi'] as String,
-        explanationVi: j['explanationVi'] as String,
-        usageNoteVi: j['usageNoteVi'] as String,
-        examples: _list(j['examples'], Sentence.fromJson),
-        quiz: _list(j['quiz'], Question.fromJson),
-      );
+    id: j['id'] as String,
+    pattern: j['pattern'] as String,
+    meaningVi: j['meaningVi'] as String,
+    explanationVi: j['explanationVi'] as String,
+    usageNoteVi: j['usageNoteVi'] as String,
+    examples: _list(j['examples'], Sentence.fromJson),
+    quiz: _list(j['quiz'], Question.fromJson),
+  );
 }
 
 class PracticalUse extends Sentence {
   final String situationVi;
 
-  const PracticalUse({required super.id, required super.ja, required super.vi, required this.situationVi});
+  const PracticalUse({
+    required super.id,
+    required super.ja,
+    required super.vi,
+    required this.situationVi,
+  });
 
   factory PracticalUse.fromJson(Map<String, dynamic> j) => PracticalUse(
-        id: j['id'] as String,
-        ja: j['ja'] as String,
-        vi: j['vi'] as String,
-        situationVi: j['situationVi'] as String,
-      );
+    id: j['id'] as String,
+    ja: j['ja'] as String,
+    vi: j['vi'] as String,
+    situationVi: j['situationVi'] as String,
+  );
 }
 
 class Vocab {
@@ -99,13 +107,13 @@ class Vocab {
   });
 
   factory Vocab.fromJson(Map<String, dynamic> j) => Vocab(
-        id: j['id'] as String,
-        word: j['word'] as String,
-        kana: j['kana'] as String,
-        meaningVi: j['meaningVi'] as String,
-        pos: j['pos'] as String,
-        practical: PracticalUse.fromJson(j['practical'] as Map<String, dynamic>),
-      );
+    id: j['id'] as String,
+    word: j['word'] as String,
+    kana: j['kana'] as String,
+    meaningVi: j['meaningVi'] as String,
+    pos: j['pos'] as String,
+    practical: PracticalUse.fromJson(j['practical'] as Map<String, dynamic>),
+  );
 }
 
 class KanjiItem {
@@ -113,13 +121,17 @@ class KanjiItem {
   final String readings;
   final String meaningVi;
 
-  const KanjiItem({required this.char, required this.readings, required this.meaningVi});
+  const KanjiItem({
+    required this.char,
+    required this.readings,
+    required this.meaningVi,
+  });
 
   factory KanjiItem.fromJson(Map<String, dynamic> j) => KanjiItem(
-        char: j['char'] as String,
-        readings: j['readings'] as String,
-        meaningVi: j['meaningVi'] as String,
-      );
+    char: j['char'] as String,
+    readings: j['readings'] as String,
+    meaningVi: j['meaningVi'] as String,
+  );
 }
 
 class TypingItem {
@@ -129,8 +141,11 @@ class TypingItem {
 
   const TypingItem({required this.ja, required this.answer, required this.vi});
 
-  factory TypingItem.fromJson(Map<String, dynamic> j) =>
-      TypingItem(ja: j['ja'] as String, answer: j['answer'] as String, vi: j['vi'] as String);
+  factory TypingItem.fromJson(Map<String, dynamic> j) => TypingItem(
+    ja: j['ja'] as String,
+    answer: j['answer'] as String,
+    vi: j['vi'] as String,
+  );
 }
 
 class Reading {
@@ -139,14 +154,19 @@ class Reading {
   final List<String> paragraphs;
   final List<Question> questions;
 
-  const Reading({required this.id, required this.titleJa, required this.paragraphs, required this.questions});
+  const Reading({
+    required this.id,
+    required this.titleJa,
+    required this.paragraphs,
+    required this.questions,
+  });
 
   factory Reading.fromJson(Map<String, dynamic> j) => Reading(
-        id: j['id'] as String,
-        titleJa: j['titleJa'] as String,
-        paragraphs: List<String>.from(j['paragraphs'] as List),
-        questions: _list(j['questions'], Question.fromJson),
-      );
+    id: j['id'] as String,
+    titleJa: j['titleJa'] as String,
+    paragraphs: List<String>.from(j['paragraphs'] as List),
+    questions: _list(j['questions'], Question.fromJson),
+  );
 }
 
 class Lesson {
@@ -195,11 +215,13 @@ class Lesson {
 
   /// Mọi câu có id trong bài (ví dụ ngữ pháp, câu thực tế của từ vựng), để tra theo id.
   Map<String, Sentence> get sentencesById => {
-        for (final g in grammar)
-          for (final e in g.examples) e.id: e,
-        for (final v in vocab) v.practical.id: v.practical,
-      };
+    for (final g in grammar)
+      for (final e in g.examples) e.id: e,
+    for (final v in vocab) v.practical.id: v.practical,
+  };
 }
 
 List<T> _list<T>(Object? raw, T Function(Map<String, dynamic>) parse) =>
-    (raw as List? ?? const []).map((e) => parse(e as Map<String, dynamic>)).toList();
+    (raw as List? ?? const [])
+        .map((e) => parse(e as Map<String, dynamic>))
+        .toList();

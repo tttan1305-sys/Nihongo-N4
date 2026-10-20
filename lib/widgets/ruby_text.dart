@@ -8,7 +8,8 @@ class RubySegment {
   const RubySegment(this.base, [this.ruby]);
 
   @override
-  bool operator ==(Object other) => other is RubySegment && other.base == base && other.ruby == ruby;
+  bool operator ==(Object other) =>
+      other is RubySegment && other.base == base && other.ruby == ruby;
 
   @override
   int get hashCode => Object.hash(base, ruby);
@@ -24,7 +25,9 @@ List<RubySegment> parseRuby(String text) {
   final segments = <RubySegment>[];
   var last = 0;
   for (final m in _rubyPattern.allMatches(text)) {
-    if (m.start > last) segments.add(RubySegment(text.substring(last, m.start)));
+    if (m.start > last) {
+      segments.add(RubySegment(text.substring(last, m.start)));
+    }
     segments.add(RubySegment(m.group(1)!, m.group(2)));
     last = m.end;
   }
@@ -33,10 +36,12 @@ List<RubySegment> parseRuby(String text) {
 }
 
 /// Bỏ furigana, giữ chữ Hán: "{漢字|かんじ}" → "漢字". Dùng cho giọng đọc.
-String plainText(String text) => text.replaceAllMapped(_rubyPattern, (m) => m.group(1)!);
+String plainText(String text) =>
+    text.replaceAllMapped(_rubyPattern, (m) => m.group(1)!);
 
 /// Đổi chữ Hán thành cách đọc: "{漢字|かんじ}" → "かんじ".
-String readingText(String text) => text.replaceAllMapped(_rubyPattern, (m) => m.group(2)!);
+String readingText(String text) =>
+    text.replaceAllMapped(_rubyPattern, (m) => m.group(2)!);
 
 /// Hiển thị chuỗi có furigana: hiragana nhỏ nằm phía trên chữ Hán.
 /// Khi [showRuby] là false (chế độ tự kiểm tra) thì chỉ hiện chữ Hán.
@@ -59,27 +64,34 @@ class RubyText extends StatelessWidget {
       if (seg.ruby == null || !showRuby) {
         // Chừa chỗ phía trên để các dòng không có furigana vẫn thẳng hàng.
         for (final ch in seg.base.characters) {
-          spans.add(WidgetSpan(
-            alignment: PlaceholderAlignment.bottom,
-            child: Padding(
-              padding: EdgeInsets.only(top: showRuby ? rubyHeight : 0),
-              child: Text(ch, style: base),
+          spans.add(
+            WidgetSpan(
+              alignment: PlaceholderAlignment.bottom,
+              child: Padding(
+                padding: EdgeInsets.only(top: showRuby ? rubyHeight : 0),
+                child: Text(ch, style: base),
+              ),
             ),
-          ));
+          );
         }
       } else {
-        spans.add(WidgetSpan(
-          alignment: PlaceholderAlignment.bottom,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(seg.ruby!, style: rubyStyle, softWrap: false),
-              Text(seg.base, style: base, softWrap: false),
-            ],
+        spans.add(
+          WidgetSpan(
+            alignment: PlaceholderAlignment.bottom,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(seg.ruby!, style: rubyStyle, softWrap: false),
+                Text(seg.base, style: base, softWrap: false),
+              ],
+            ),
           ),
-        ));
+        );
       }
     }
-    return Text.rich(TextSpan(children: spans), semanticsLabel: plainText(text));
+    return Text.rich(
+      TextSpan(children: spans),
+      semanticsLabel: plainText(text),
+    );
   }
 }

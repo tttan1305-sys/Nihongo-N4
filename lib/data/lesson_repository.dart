@@ -31,6 +31,8 @@ class LessonRepository {
     final cached = _cache[number];
     if (cached != null) return cached;
     final raw = await bundle.loadString(pathFor(number));
-    return _cache[number] = Lesson.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    return _cache[number] = Lesson.fromJson(
+      jsonDecode(raw) as Map<String, dynamic>,
+    );
   }
 }

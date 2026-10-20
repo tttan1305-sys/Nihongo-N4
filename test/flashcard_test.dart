@@ -14,8 +14,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'lesson_test.dart' show FakeRecognizer, FakeSpeaker;
 
-Lesson loadLesson26() =>
-    Lesson.fromJson(jsonDecode(File('assets/lessons/26.json').readAsStringSync()) as Map<String, dynamic>);
+Lesson loadLesson26() => Lesson.fromJson(
+  jsonDecode(File('assets/lessons/26.json').readAsStringSync())
+      as Map<String, dynamic>,
+);
 
 void main() {
   var clock = DateTime(2026, 10, 20, 9);
@@ -48,7 +50,9 @@ void main() {
     expect(reopened.contains(26, 'v01'), isFalse);
   });
 
-  testWidgets('học xong từ vựng → trang chủ báo 24 thẻ → ôn hết', (tester) async {
+  testWidgets('học xong từ vựng → trang chủ báo 24 thẻ → ôn hết', (
+    tester,
+  ) async {
     final prefs = await SharedPreferences.getInstance();
     final lesson = loadLesson26();
     final progress = ProgressStore(prefs);
@@ -58,13 +62,15 @@ void main() {
     final flashcards = FlashcardStore(prefs, clock: () => clock);
     final repository = LessonRepository();
     await tester.runAsync(() => repository.load(26));
-    await tester.pumpWidget(NihongoApp(
-      repository: repository,
-      progress: progress,
-      flashcards: flashcards,
-      speaker: FakeSpeaker(),
-      recognizer: FakeRecognizer(),
-    ));
+    await tester.pumpWidget(
+      NihongoApp(
+        repository: repository,
+        progress: progress,
+        flashcards: flashcards,
+        speaker: FakeSpeaker(),
+        recognizer: FakeRecognizer(),
+      ),
+    );
     await tester.pumpAndSettle();
     expect(find.text('Chưa có flashcard'), findsOneWidget);
 
@@ -75,8 +81,16 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('deck-v01')));
     await tester.pumpAndSettle();
     expect(flashcards.contains(26, 'v01'), isTrue);
-    await tester.scrollUntilVisible(find.byKey(const ValueKey('vocab-done')), 500,
-        scrollable: find.descendant(of: find.byType(VocabTab), matching: find.byType(Scrollable)).first);
+    await tester.scrollUntilVisible(
+      find.byKey(const ValueKey('vocab-done')),
+      500,
+      scrollable: find
+          .descendant(
+            of: find.byType(VocabTab),
+            matching: find.byType(Scrollable),
+          )
+          .first,
+    );
     await tester.tap(find.byKey(const ValueKey('vocab-done')));
     await tester.pumpAndSettle();
     expect(flashcards.totalCount, 24);

@@ -31,18 +31,23 @@ class FlashcardStore extends ChangeNotifier {
   final Map<String, CardState> _cards;
 
   FlashcardStore(this._prefs, {DateTime Function()? clock})
-      : _clock = clock ?? DateTime.now,
-        _cards = _load(_prefs);
+    : _clock = clock ?? DateTime.now,
+      _cards = _load(_prefs);
 
   static Map<String, CardState> _load(SharedPreferences prefs) {
     final raw = prefs.getString(_key);
     if (raw == null) return {};
     final json = jsonDecode(raw) as Map<String, dynamic>;
-    return json.map((k, v) => MapEntry(k, CardState.fromJson(v as Map<String, dynamic>)));
+    return json.map(
+      (k, v) => MapEntry(k, CardState.fromJson(v as Map<String, dynamic>)),
+    );
   }
 
   Future<void> _save() async {
-    await _prefs.setString(_key, jsonEncode(_cards.map((k, v) => MapEntry(k, v.toJson()))));
+    await _prefs.setString(
+      _key,
+      jsonEncode(_cards.map((k, v) => MapEntry(k, v.toJson()))),
+    );
     notifyListeners();
   }
 
@@ -50,7 +55,8 @@ class FlashcardStore extends ChangeNotifier {
 
   int get totalCount => _cards.length;
 
-  bool contains(int lesson, String vocabId) => _cards.containsKey(CardId(lesson, vocabId).toString());
+  bool contains(int lesson, String vocabId) =>
+      _cards.containsKey(CardId(lesson, vocabId).toString());
 
   CardState? stateOf(CardId id) => _cards[id.toString()];
 
@@ -63,14 +69,19 @@ class FlashcardStore extends ChangeNotifier {
   }
 
   Future<void> remove(int lesson, String vocabId) async {
-    if (_cards.remove(CardId(lesson, vocabId).toString()) != null) await _save();
+    if (_cards.remove(CardId(lesson, vocabId).toString()) != null) {
+      await _save();
+    }
   }
 
   /// Thêm toàn bộ từ của bài, giữ nguyên tiến độ của những thẻ đã có.
   Future<void> addLesson(Lesson lesson) async {
     final t = now;
     for (final v in lesson.vocab) {
-      _cards.putIfAbsent(CardId(lesson.number, v.id).toString(), () => CardState.fresh(t));
+      _cards.putIfAbsent(
+        CardId(lesson.number, v.id).toString(),
+        () => CardState.fresh(t),
+      );
     }
     await _save();
   }

@@ -23,15 +23,19 @@ class GrammarScreen extends StatelessWidget {
   });
 
   Future<void> _startQuiz(BuildContext context) async {
-    final score = await Navigator.of(context).push<double>(MaterialPageRoute(
-      builder: (_) => QuizScreen(
-        title: 'Kiểm tra ngữ pháp',
-        questions: grammar.quiz,
-        passMark: ProgressStore.passMark,
-        passMessage: 'Bạn đã qua mẫu ngữ pháp này.',
+    final score = await Navigator.of(context).push<double>(
+      MaterialPageRoute(
+        builder: (_) => QuizScreen(
+          title: 'Kiểm tra ngữ pháp',
+          questions: grammar.quiz,
+          passMark: ProgressStore.passMark,
+          passMessage: 'Bạn đã qua mẫu ngữ pháp này.',
+        ),
       ),
-    ));
-    if (score != null) await progress.saveGrammarScore(lessonNumber, grammar.id, score);
+    );
+    if (score != null) {
+      await progress.saveGrammarScore(lessonNumber, grammar.id, score);
+    }
   }
 
   @override
@@ -42,7 +46,10 @@ class GrammarScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          RubyText(grammar.pattern, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+          RubyText(
+            grammar.pattern,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: 8),
           Text(grammar.meaningVi, style: text.titleMedium),
           const SizedBox(height: 16),
@@ -69,8 +76,15 @@ class GrammarScreen extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Expanded(child: RubyText(e.ja, style: const TextStyle(fontSize: 20))),
-                ListenButton(speaker: speaker, lesson: lessonNumber, audioId: e.id, text: plainText(e.ja)),
+                Expanded(
+                  child: RubyText(e.ja, style: const TextStyle(fontSize: 20)),
+                ),
+                ListenButton(
+                  speaker: speaker,
+                  lesson: lessonNumber,
+                  audioId: e.id,
+                  text: plainText(e.ja),
+                ),
               ],
             ),
             Text(e.vi, style: text.bodySmall),
@@ -84,13 +98,20 @@ class GrammarScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   if (score != null)
-                    Text('Điểm cao nhất: ${(score * 100).round()}%', textAlign: TextAlign.center),
+                    Text(
+                      'Điểm cao nhất: ${(score * 100).round()}%',
+                      textAlign: TextAlign.center,
+                    ),
                   const SizedBox(height: 8),
                   FilledButton.icon(
                     key: const ValueKey('start-quiz'),
                     onPressed: () => _startQuiz(context),
                     icon: const Icon(Icons.quiz),
-                    label: Text(score == null ? 'Làm bài kiểm tra' : 'Làm lại bài kiểm tra'),
+                    label: Text(
+                      score == null
+                          ? 'Làm bài kiểm tra'
+                          : 'Làm lại bài kiểm tra',
+                    ),
                   ),
                 ],
               );

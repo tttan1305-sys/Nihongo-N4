@@ -19,7 +19,11 @@ void main() {
   });
 
   test('Quên: về lại từ đầu, giảm hệ số, gặp lại sau 10 phút', () {
-    var s = review(review(CardState.fresh(now), Rating.good, now), Rating.good, now);
+    var s = review(
+      review(CardState.fresh(now), Rating.good, now),
+      Rating.good,
+      now,
+    );
     s = review(s, Rating.again, now);
     expect(s.repetitions, 0);
     expect(s.lapses, 1);
@@ -59,6 +63,13 @@ void main() {
     final s = CardState.fresh(now);
     expect(nextIntervalLabel(s, Rating.again, now), '10 phút');
     expect(nextIntervalLabel(s, Rating.good, now), '1 ngày');
-    expect(nextIntervalLabel(CardState(intervalDays: 40, repetitions: 5, due: now), Rating.good, now), '3 tháng');
+    expect(
+      nextIntervalLabel(
+        CardState(intervalDays: 40, repetitions: 5, due: now),
+        Rating.good,
+        now,
+      ),
+      '3 tháng',
+    );
   });
 }

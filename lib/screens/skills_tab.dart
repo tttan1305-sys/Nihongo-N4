@@ -14,7 +14,12 @@ class SkillsTab extends StatelessWidget {
   final Speaker speaker;
   final Recognizer recognizer;
 
-  const SkillsTab({super.key, required this.lesson, required this.speaker, required this.recognizer});
+  const SkillsTab({
+    super.key,
+    required this.lesson,
+    required this.speaker,
+    required this.recognizer,
+  });
 
   void _open(BuildContext context, Widget screen) =>
       Navigator.of(context).push(MaterialPageRoute(builder: (_) => screen));
@@ -30,7 +35,8 @@ class SkillsTab extends StatelessWidget {
           key: 'skill-listening',
           icon: Icons.headphones,
           title: 'Nghe',
-          subtitle: 'Nghe câu tiếng Nhật, chọn nghĩa đúng (${lesson.listening.length} câu)',
+          subtitle:
+              'Nghe câu tiếng Nhật, chọn nghĩa đúng (${lesson.listening.length} câu)',
           onTap: () => _open(
             context,
             QuizScreen(
@@ -49,7 +55,8 @@ class SkillsTab extends StatelessWidget {
           key: 'skill-speaking',
           icon: Icons.record_voice_over,
           title: 'Nói',
-          subtitle: 'Nghe câu mẫu rồi đọc theo, máy chấm độ giống (${lesson.speakingIds.length} câu)',
+          subtitle:
+              'Nghe câu mẫu rồi đọc theo, máy chấm độ giống (${lesson.speakingIds.length} câu)',
           onTap: () => _open(
             context,
             SpeakingScreen(
@@ -65,19 +72,25 @@ class SkillsTab extends StatelessWidget {
           key: 'skill-writing',
           icon: Icons.draw,
           title: 'Viết',
-          subtitle: 'Tập viết ${lesson.kanji.length} chữ Hán và gõ lại ${lesson.typing.length} câu bằng hiragana',
-          onTap: () => _open(context, WritingScreen(kanji: lesson.kanji, typing: lesson.typing)),
+          subtitle:
+              'Tập viết ${lesson.kanji.length} chữ Hán và gõ lại ${lesson.typing.length} câu bằng hiragana',
+          onTap: () => _open(
+            context,
+            WritingScreen(kanji: lesson.kanji, typing: lesson.typing),
+          ),
         ),
       ],
     );
   }
 
-  Widget _tile(BuildContext context,
-      {required String key,
-      required IconData icon,
-      required String title,
-      required String subtitle,
-      required VoidCallback onTap}) {
+  Widget _tile(
+    BuildContext context, {
+    required String key,
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required VoidCallback onTap,
+  }) {
     return Card(
       child: ListTile(
         key: ValueKey(key),

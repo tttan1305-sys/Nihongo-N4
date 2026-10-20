@@ -12,15 +12,22 @@ class ProgressStore extends ChangeNotifier {
 
   ProgressStore(this._prefs);
 
-  static String _grammarKey(int lesson, String grammarId) => 'grammar.$lesson.$grammarId';
+  static String _grammarKey(int lesson, String grammarId) =>
+      'grammar.$lesson.$grammarId';
 
   /// Điểm cao nhất (0..1) của bài kiểm tra ngữ pháp, null nếu chưa làm.
-  double? grammarScore(int lesson, String grammarId) => _prefs.getDouble(_grammarKey(lesson, grammarId));
+  double? grammarScore(int lesson, String grammarId) =>
+      _prefs.getDouble(_grammarKey(lesson, grammarId));
 
-  bool isGrammarPassed(int lesson, String grammarId) => (grammarScore(lesson, grammarId) ?? 0) >= passMark;
+  bool isGrammarPassed(int lesson, String grammarId) =>
+      (grammarScore(lesson, grammarId) ?? 0) >= passMark;
 
   /// Lưu điểm, chỉ giữ lại điểm cao nhất.
-  Future<void> saveGrammarScore(int lesson, String grammarId, double score) async {
+  Future<void> saveGrammarScore(
+    int lesson,
+    String grammarId,
+    double score,
+  ) async {
     final best = grammarScore(lesson, grammarId);
     if (best != null && best >= score) return;
     await _prefs.setDouble(_grammarKey(lesson, grammarId), score);
@@ -29,7 +36,8 @@ class ProgressStore extends ChangeNotifier {
 
   static String _vocabDoneKey(int lesson) => 'vocabDone.$lesson';
 
-  bool isVocabDone(int lesson) => _prefs.getBool(_vocabDoneKey(lesson)) ?? false;
+  bool isVocabDone(int lesson) =>
+      _prefs.getBool(_vocabDoneKey(lesson)) ?? false;
 
   Future<void> markVocabDone(int lesson) async {
     await _prefs.setBool(_vocabDoneKey(lesson), true);
@@ -60,11 +68,13 @@ class ProgressStore extends ChangeNotifier {
   bool isLessonCompleted(int lesson) => (readingScore(lesson) ?? 0) >= passMark;
 
   /// Bài đầu luôn mở; các bài sau mở khi bài trước đã hoàn thành.
-  bool isLessonUnlocked(int lesson, {required int first}) => lesson <= first || isLessonCompleted(lesson - 1);
+  bool isLessonUnlocked(int lesson, {required int first}) =>
+      lesson <= first || isLessonCompleted(lesson - 1);
 
   int passedGrammarCount(Lesson lesson) =>
       lesson.grammar.where((g) => isGrammarPassed(lesson.number, g.id)).length;
 
   /// Từ vựng chỉ mở khi mọi mẫu ngữ pháp của bài đều đạt từ [passMark].
-  bool isVocabUnlocked(Lesson lesson) => passedGrammarCount(lesson) == lesson.grammar.length;
+  bool isVocabUnlocked(Lesson lesson) =>
+      passedGrammarCount(lesson) == lesson.grammar.length;
 }

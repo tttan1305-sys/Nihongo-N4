@@ -9,7 +9,13 @@ class ListenButton extends StatelessWidget {
   final String audioId;
   final String text;
 
-  const ListenButton({super.key, required this.speaker, required this.lesson, required this.audioId, required this.text});
+  const ListenButton({
+    super.key,
+    required this.speaker,
+    required this.lesson,
+    required this.audioId,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +23,8 @@ class ListenButton extends StatelessWidget {
       key: ValueKey('listen-$audioId'),
       tooltip: 'Nghe',
       icon: const Icon(Icons.volume_up),
-      onPressed: () => speaker.speak(lesson: lesson, audioId: audioId, text: text),
+      onPressed: () =>
+          speaker.speak(lesson: lesson, audioId: audioId, text: text),
     );
   }
 }

@@ -20,7 +20,11 @@ double similarity(String a, String b) {
     final cur = List<int>.filled(y.length + 1, 0)..[0] = i;
     for (var j = 1; j <= y.length; j++) {
       final cost = x[i - 1] == y[j - 1] ? 0 : 1;
-      cur[j] = [prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost].reduce((a, b) => a < b ? a : b);
+      cur[j] = [
+        prev[j] + 1,
+        cur[j - 1] + 1,
+        prev[j - 1] + cost,
+      ].reduce((a, b) => a < b ? a : b);
     }
     prev = cur;
   }
@@ -29,7 +33,11 @@ double similarity(String a, String b) {
 }
 
 /// Chấm câu nói: so với câu gốc (chữ Hán) và cách đọc (kana), lấy kết quả cao hơn.
-double speakingScore({required String heard, required String plain, required String reading}) {
+double speakingScore({
+  required String heard,
+  required String plain,
+  required String reading,
+}) {
   final h = normalizeJa(heard);
   final a = similarity(h, normalizeJa(plain));
   final b = similarity(h, normalizeJa(reading));

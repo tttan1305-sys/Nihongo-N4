@@ -45,7 +45,13 @@ class VocabTab extends StatelessWidget {
               onChanged: progress.setShowFurigana,
             ),
             for (final v in lesson.vocab)
-              _VocabCard(vocab: v, lesson: lesson.number, speaker: speaker, flashcards: flashcards, showRuby: showRuby),
+              _VocabCard(
+                vocab: v,
+                lesson: lesson.number,
+                speaker: speaker,
+                flashcards: flashcards,
+                showRuby: showRuby,
+              ),
             const SizedBox(height: 16),
             if (progress.isVocabDone(lesson.number))
               const ListTile(
@@ -98,15 +104,28 @@ class _VocabCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
-                  child: RubyText(vocab.word, showRuby: showRuby, style: const TextStyle(fontSize: 26)),
+                  child: RubyText(
+                    vocab.word,
+                    showRuby: showRuby,
+                    style: const TextStyle(fontSize: 26),
+                  ),
                 ),
                 // Đọc theo kana để máy đọc đúng âm của từ.
-                ListenButton(speaker: speaker, lesson: lesson, audioId: vocab.id, text: vocab.kana),
+                ListenButton(
+                  speaker: speaker,
+                  lesson: lesson,
+                  audioId: vocab.id,
+                  text: vocab.kana,
+                ),
                 IconButton(
                   key: ValueKey('deck-${vocab.id}'),
                   tooltip: inDeck ? 'Bỏ khỏi flashcard' : 'Thêm vào flashcard',
-                  icon: Icon(inDeck ? Icons.bookmark : Icons.bookmark_add_outlined),
-                  onPressed: () => inDeck ? flashcards.remove(lesson, vocab.id) : flashcards.add(lesson, vocab.id),
+                  icon: Icon(
+                    inDeck ? Icons.bookmark : Icons.bookmark_add_outlined,
+                  ),
+                  onPressed: () => inDeck
+                      ? flashcards.remove(lesson, vocab.id)
+                      : flashcards.add(lesson, vocab.id),
                 ),
               ],
             ),
@@ -117,8 +136,19 @@ class _VocabCard extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Expanded(child: RubyText(p.ja, showRuby: showRuby, style: const TextStyle(fontSize: 17))),
-                ListenButton(speaker: speaker, lesson: lesson, audioId: p.id, text: plainText(p.ja)),
+                Expanded(
+                  child: RubyText(
+                    p.ja,
+                    showRuby: showRuby,
+                    style: const TextStyle(fontSize: 17),
+                  ),
+                ),
+                ListenButton(
+                  speaker: speaker,
+                  lesson: lesson,
+                  audioId: p.id,
+                  text: plainText(p.ja),
+                ),
               ],
             ),
             Padding(

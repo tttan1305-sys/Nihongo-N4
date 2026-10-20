@@ -37,7 +37,8 @@ class _QuizScreenState extends State<QuizScreen> {
   int? _picked;
 
   bool get _finished => _index >= widget.questions.length;
-  double get _score => widget.questions.isEmpty ? 1 : _correct / widget.questions.length;
+  double get _score =>
+      widget.questions.isEmpty ? 1 : _correct / widget.questions.length;
 
   void _pick(int option) {
     if (_picked != null) return;
@@ -48,15 +49,15 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _next() => setState(() {
-        _index++;
-        _picked = null;
-      });
+    _index++;
+    _picked = null;
+  });
 
   void _restart() => setState(() {
-        _index = 0;
-        _correct = 0;
-        _picked = null;
-      });
+    _index = 0;
+    _correct = 0;
+    _picked = null;
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -80,10 +81,15 @@ class _QuizScreenState extends State<QuizScreen> {
     final colors = Theme.of(context).colorScheme;
     return ListView(
       children: [
-        Text('Câu ${_index + 1}/${widget.questions.length}', style: Theme.of(context).textTheme.labelLarge),
+        Text(
+          'Câu ${_index + 1}/${widget.questions.length}',
+          style: Theme.of(context).textTheme.labelLarge,
+        ),
         const SizedBox(height: 12),
-        if (q.prompt.isNotEmpty) RubyText(q.prompt, style: const TextStyle(fontSize: 20)),
-        if (q.audioId != null && widget.speaker != null) _listenPrompt(q.audioId!),
+        if (q.prompt.isNotEmpty)
+          RubyText(q.prompt, style: const TextStyle(fontSize: 20)),
+        if (q.audioId != null && widget.speaker != null)
+          _listenPrompt(q.audioId!),
         const SizedBox(height: 16),
         for (var i = 0; i < q.options.length; i++)
           Padding(
@@ -96,19 +102,27 @@ class _QuizScreenState extends State<QuizScreen> {
                 backgroundColor: _picked == null
                     ? null
                     : i == q.answer
-                        ? colors.primaryContainer
-                        : i == _picked
-                            ? colors.errorContainer
-                            : null,
+                    ? colors.primaryContainer
+                    : i == _picked
+                    ? colors.errorContainer
+                    : null,
               ),
               onPressed: () => _pick(i),
-              child: RubyText(q.options[i], style: TextStyle(fontSize: 18, color: colors.onSurface)),
+              child: RubyText(
+                q.options[i],
+                style: TextStyle(fontSize: 18, color: colors.onSurface),
+              ),
             ),
           ),
         if (_picked != null) ...[
           const SizedBox(height: 8),
-          Text(_picked == q.answer ? 'Đúng rồi!' : 'Chưa đúng.',
-              style: TextStyle(fontWeight: FontWeight.bold, color: _picked == q.answer ? colors.primary : colors.error)),
+          Text(
+            _picked == q.answer ? 'Đúng rồi!' : 'Chưa đúng.',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: _picked == q.answer ? colors.primary : colors.error,
+            ),
+          ),
           if (q.explanationVi != null) RubyText(q.explanationVi!),
           if (widget.sentences[q.audioId] case final s?) ...[
             RubyText(s.ja, style: const TextStyle(fontSize: 18)),
@@ -118,7 +132,11 @@ class _QuizScreenState extends State<QuizScreen> {
           FilledButton(
             key: const ValueKey('next'),
             onPressed: _next,
-            child: Text(_index + 1 < widget.questions.length ? 'Câu tiếp theo' : 'Xem kết quả'),
+            child: Text(
+              _index + 1 < widget.questions.length
+                  ? 'Câu tiếp theo'
+                  : 'Xem kết quả',
+            ),
           ),
         ],
       ],
@@ -151,11 +169,19 @@ class _QuizScreenState extends State<QuizScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Icon(passed ? Icons.check_circle : Icons.replay, size: 72,
-            color: passed ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.error),
+        Icon(
+          passed ? Icons.check_circle : Icons.replay,
+          size: 72,
+          color: passed
+              ? Theme.of(context).colorScheme.primary
+              : Theme.of(context).colorScheme.error,
+        ),
         const SizedBox(height: 16),
-        Text('Đúng $_correct/${widget.questions.length} câu (${(_score * 100).round()}%)',
-            textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineSmall),
+        Text(
+          'Đúng $_correct/${widget.questions.length} câu (${(_score * 100).round()}%)',
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
         const SizedBox(height: 8),
         Text(
           passed
@@ -164,7 +190,8 @@ class _QuizScreenState extends State<QuizScreen> {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 24),
-        if (!passed) OutlinedButton(onPressed: _restart, child: const Text('Làm lại')),
+        if (!passed)
+          OutlinedButton(onPressed: _restart, child: const Text('Làm lại')),
         const SizedBox(height: 8),
         FilledButton(
           key: const ValueKey('done'),

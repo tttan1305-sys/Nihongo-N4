@@ -58,36 +58,72 @@ class LessonScreen extends StatelessWidget {
                 isScrollable: true,
                 tabs: [
                   const Tab(text: 'Ngữ pháp'),
-                  _lockableTab('Từ vựng', () => progress.isVocabUnlocked(lesson)),
-                  _lockableTab('Luyện kỹ năng', () => progress.isVocabDone(lesson.number)),
-                  _lockableTab('Đọc hiểu', () => progress.isVocabDone(lesson.number)),
+                  _lockableTab(
+                    'Từ vựng',
+                    () => progress.isVocabUnlocked(lesson),
+                  ),
+                  _lockableTab(
+                    'Luyện kỹ năng',
+                    () => progress.isVocabDone(lesson.number),
+                  ),
+                  _lockableTab(
+                    'Đọc hiểu',
+                    () => progress.isVocabDone(lesson.number),
+                  ),
                 ],
               ),
             ),
-            body: TabBarView(children: [
-              _GrammarList(lesson: lesson, progress: progress, speaker: speaker),
-              ListenableBuilder(
-                listenable: progress,
-                builder: (context, _) => progress.isVocabUnlocked(lesson)
-                    ? VocabTab(lesson: lesson, progress: progress, flashcards: flashcards, speaker: speaker)
-                    : _Locked(
-                        title: 'Phần Từ vựng đang khóa',
-                        message: 'Hãy học xong phần Ngữ pháp trước. '
-                            'Đã qua ${progress.passedGrammarCount(lesson)}/${lesson.grammar.length} mẫu ngữ pháp.',
-                      ),
-              ),
-              _afterVocab(lesson, 'Phần Luyện kỹ năng đang khóa',
-                  () => SkillsTab(lesson: lesson, speaker: speaker, recognizer: recognizer)),
-              _afterVocab(lesson, 'Bài đọc hiểu đang khóa',
-                  () => ReadingTab(lesson: lesson, progress: progress, speaker: speaker)),
-            ]),
+            body: TabBarView(
+              children: [
+                _GrammarList(
+                  lesson: lesson,
+                  progress: progress,
+                  speaker: speaker,
+                ),
+                ListenableBuilder(
+                  listenable: progress,
+                  builder: (context, _) => progress.isVocabUnlocked(lesson)
+                      ? VocabTab(
+                          lesson: lesson,
+                          progress: progress,
+                          flashcards: flashcards,
+                          speaker: speaker,
+                        )
+                      : _Locked(
+                          title: 'Phần Từ vựng đang khóa',
+                          message:
+                              'Hãy học xong phần Ngữ pháp trước. '
+                              'Đã qua ${progress.passedGrammarCount(lesson)}/${lesson.grammar.length} mẫu ngữ pháp.',
+                        ),
+                ),
+                _afterVocab(
+                  lesson,
+                  'Phần Luyện kỹ năng đang khóa',
+                  () => SkillsTab(
+                    lesson: lesson,
+                    speaker: speaker,
+                    recognizer: recognizer,
+                  ),
+                ),
+                _afterVocab(
+                  lesson,
+                  'Bài đọc hiểu đang khóa',
+                  () => ReadingTab(
+                    lesson: lesson,
+                    progress: progress,
+                    speaker: speaker,
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
     );
   }
 
-  Widget _lockableTab(String label, bool Function() unlocked) => ListenableBuilder(
+  Widget _lockableTab(String label, bool Function() unlocked) =>
+      ListenableBuilder(
         listenable: progress,
         builder: (context, _) => Tab(
           icon: unlocked() ? null : const Icon(Icons.lock_outline, size: 16),
@@ -96,12 +132,19 @@ class LessonScreen extends StatelessWidget {
         ),
       );
 
-  Widget _afterVocab(Lesson lesson, String lockedTitle, Widget Function() build) => ListenableBuilder(
-        listenable: progress,
-        builder: (context, _) => progress.isVocabDone(lesson.number)
-            ? build()
-            : _Locked(title: lockedTitle, message: 'Hãy học xong phần Từ vựng của bài trước.'),
-      );
+  Widget _afterVocab(
+    Lesson lesson,
+    String lockedTitle,
+    Widget Function() build,
+  ) => ListenableBuilder(
+    listenable: progress,
+    builder: (context, _) => progress.isVocabDone(lesson.number)
+        ? build()
+        : _Locked(
+            title: lockedTitle,
+            message: 'Hãy học xong phần Từ vựng của bài trước.',
+          ),
+  );
 }
 
 const _jaStyle = TextStyle(fontSize: 20);
@@ -111,7 +154,11 @@ class _GrammarList extends StatelessWidget {
   final ProgressStore progress;
   final Speaker speaker;
 
-  const _GrammarList({required this.lesson, required this.progress, required this.speaker});
+  const _GrammarList({
+    required this.lesson,
+    required this.progress,
+    required this.speaker,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -120,8 +167,10 @@ class _GrammarList extends StatelessWidget {
       builder: (context, _) => ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          Text('Học xong và đạt từ ${(ProgressStore.passMark * 100).round()}% mỗi bài kiểm tra ngữ pháp để mở phần Từ vựng.',
-              style: Theme.of(context).textTheme.bodySmall),
+          Text(
+            'Học xong và đạt từ ${(ProgressStore.passMark * 100).round()}% mỗi bài kiểm tra ngữ pháp để mở phần Từ vựng.',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
           const SizedBox(height: 8),
           for (final g in lesson.grammar) _tile(context, g),
         ],
@@ -136,14 +185,27 @@ class _GrammarList extends StatelessWidget {
       child: ListTile(
         key: ValueKey('grammar-${g.id}'),
         contentPadding: const EdgeInsets.all(12),
-        title: RubyText(g.pattern, style: _jaStyle.copyWith(fontWeight: FontWeight.bold)),
+        title: RubyText(
+          g.pattern,
+          style: _jaStyle.copyWith(fontWeight: FontWeight.bold),
+        ),
         subtitle: Text(g.meaningVi),
         trailing: passed
-            ? Icon(Icons.check_circle, color: Theme.of(context).colorScheme.primary)
+            ? Icon(
+                Icons.check_circle,
+                color: Theme.of(context).colorScheme.primary,
+              )
             : Text(score == null ? 'Chưa học' : '${(score * 100).round()}%'),
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (_) => GrammarScreen(lessonNumber: lesson.number, grammar: g, progress: progress, speaker: speaker),
-        )),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => GrammarScreen(
+              lessonNumber: lesson.number,
+              grammar: g,
+              progress: progress,
+              speaker: speaker,
+            ),
+          ),
+        ),
       ),
     );
   }

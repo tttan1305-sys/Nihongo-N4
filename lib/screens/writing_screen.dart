@@ -18,12 +18,19 @@ class WritingScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Luyện viết'),
-          bottom: const TabBar(tabs: [Tab(text: 'Tập viết chữ Hán'), Tab(text: 'Gõ hiragana')]),
+          bottom: const TabBar(
+            tabs: [
+              Tab(text: 'Tập viết chữ Hán'),
+              Tab(text: 'Gõ hiragana'),
+            ],
+          ),
         ),
-        body: TabBarView(children: [
-          _KanjiPractice(kanji: kanji),
-          _TypingPractice(items: typing),
-        ]),
+        body: TabBarView(
+          children: [
+            _KanjiPractice(kanji: kanji),
+            _TypingPractice(items: typing),
+          ],
+        ),
       ),
     );
   }
@@ -43,9 +50,9 @@ class _KanjiPracticeState extends State<_KanjiPractice> {
   final _strokes = <List<Offset>>[];
 
   void _go(int i) => setState(() {
-        _index = i;
-        _strokes.clear();
-      });
+    _index = i;
+    _strokes.clear();
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -54,34 +61,48 @@ class _KanjiPracticeState extends State<_KanjiPractice> {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        Text('Chữ ${_index + 1}/${widget.kanji.length}: ${k.meaningVi}', style: Theme.of(context).textTheme.titleMedium),
+        Text(
+          'Chữ ${_index + 1}/${widget.kanji.length}: ${k.meaningVi}',
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
         Text('Cách đọc: ${k.readings}'),
         const SizedBox(height: 12),
         Center(
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 320),
             child: AspectRatio(
-          aspectRatio: 1,
-          child: Container(
-            decoration: BoxDecoration(border: Border.all(color: colors.outline)),
-            child: LayoutBuilder(
-              builder: (context, box) => GestureDetector(
-                onPanStart: (d) => setState(() => _strokes.add([d.localPosition])),
-                onPanUpdate: (d) => setState(() => _strokes.last.add(d.localPosition)),
-                child: CustomPaint(
-                  key: const ValueKey('kanji-canvas'),
-                  painter: _CanvasPainter(_strokes, colors.primary, colors.outlineVariant),
-                  child: Center(
-                    child: Text(
-                      k.char,
-                      style: TextStyle(fontSize: box.maxWidth * 0.75, color: colors.onSurface.withValues(alpha: 0.12)),
+              aspectRatio: 1,
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: colors.outline),
+                ),
+                child: LayoutBuilder(
+                  builder: (context, box) => GestureDetector(
+                    onPanStart: (d) =>
+                        setState(() => _strokes.add([d.localPosition])),
+                    onPanUpdate: (d) =>
+                        setState(() => _strokes.last.add(d.localPosition)),
+                    child: CustomPaint(
+                      key: const ValueKey('kanji-canvas'),
+                      painter: _CanvasPainter(
+                        _strokes,
+                        colors.primary,
+                        colors.outlineVariant,
+                      ),
+                      child: Center(
+                        child: Text(
+                          k.char,
+                          style: TextStyle(
+                            fontSize: box.maxWidth * 0.75,
+                            color: colors.onSurface.withValues(alpha: 0.12),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-        ),
           ),
         ),
         const SizedBox(height: 12),
@@ -93,10 +114,16 @@ class _KanjiPracticeState extends State<_KanjiPractice> {
               label: const Text('Xóa'),
             ),
             const Spacer(),
-            if (_index > 0) TextButton(onPressed: () => _go(_index - 1), child: const Text('Chữ trước')),
+            if (_index > 0)
+              TextButton(
+                onPressed: () => _go(_index - 1),
+                child: const Text('Chữ trước'),
+              ),
             FilledButton(
               key: const ValueKey('next-kanji'),
-              onPressed: _index + 1 < widget.kanji.length ? () => _go(_index + 1) : null,
+              onPressed: _index + 1 < widget.kanji.length
+                  ? () => _go(_index + 1)
+                  : null,
               child: const Text('Chữ tiếp'),
             ),
           ],
@@ -119,8 +146,16 @@ class _CanvasPainter extends CustomPainter {
       ..color = guide
       ..strokeWidth = 1;
     // Đường kẻ chữ thập giúp căn chữ, giống vở tập viết.
-    canvas.drawLine(Offset(size.width / 2, 0), Offset(size.width / 2, size.height), g);
-    canvas.drawLine(Offset(0, size.height / 2), Offset(size.width, size.height / 2), g);
+    canvas.drawLine(
+      Offset(size.width / 2, 0),
+      Offset(size.width / 2, size.height),
+      g,
+    );
+    canvas.drawLine(
+      Offset(0, size.height / 2),
+      Offset(size.width, size.height / 2),
+      g,
+    );
     final p = Paint()
       ..color = ink
       ..strokeWidth = size.width / 28
@@ -129,7 +164,11 @@ class _CanvasPainter extends CustomPainter {
       ..style = PaintingStyle.stroke;
     for (final s in strokes) {
       if (s.length == 1) {
-        canvas.drawCircle(s.first, p.strokeWidth / 2, p..style = PaintingStyle.fill);
+        canvas.drawCircle(
+          s.first,
+          p.strokeWidth / 2,
+          p..style = PaintingStyle.fill,
+        );
         p.style = PaintingStyle.stroke;
         continue;
       }
@@ -166,14 +205,18 @@ class _TypingPracticeState extends State<_TypingPractice> {
   }
 
   void _check() {
-    setState(() => _correct = normalizeJa(_controller.text) == normalizeJa(widget.items[_index].answer));
+    setState(
+      () => _correct =
+          normalizeJa(_controller.text) ==
+          normalizeJa(widget.items[_index].answer),
+    );
   }
 
   void _next() => setState(() {
-        _index++;
-        _correct = null;
-        _controller.clear();
-      });
+    _index++;
+    _correct = null;
+    _controller.clear();
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -185,10 +228,17 @@ class _TypingPracticeState extends State<_TypingPractice> {
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
-        Text('Câu ${_index + 1}/${widget.items.length}', style: Theme.of(context).textTheme.labelLarge),
+        Text(
+          'Câu ${_index + 1}/${widget.items.length}',
+          style: Theme.of(context).textTheme.labelLarge,
+        ),
         const SizedBox(height: 8),
         // Ẩn furigana: người học phải tự nhớ cách đọc.
-        RubyText(item.ja, showRuby: false, style: const TextStyle(fontSize: 24)),
+        RubyText(
+          item.ja,
+          showRuby: false,
+          style: const TextStyle(fontSize: 24),
+        ),
         Text(item.vi, style: Theme.of(context).textTheme.bodySmall),
         const SizedBox(height: 16),
         TextField(
@@ -206,15 +256,26 @@ class _TypingPracticeState extends State<_TypingPractice> {
           Text(
             _correct! ? 'Chính xác!' : 'Chưa đúng. Đáp án: ${item.answer}',
             key: const ValueKey('typing-result'),
-            style: TextStyle(fontWeight: FontWeight.bold, color: _correct! ? colors.primary : colors.error),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: _correct! ? colors.primary : colors.error,
+            ),
           ),
         const SizedBox(height: 12),
         Row(
           children: [
-            FilledButton(key: const ValueKey('typing-check'), onPressed: _check, child: const Text('Kiểm tra')),
+            FilledButton(
+              key: const ValueKey('typing-check'),
+              onPressed: _check,
+              child: const Text('Kiểm tra'),
+            ),
             const Spacer(),
             if (_correct != null)
-              OutlinedButton(key: const ValueKey('typing-next'), onPressed: _next, child: const Text('Câu tiếp')),
+              OutlinedButton(
+                key: const ValueKey('typing-next'),
+                onPressed: _next,
+                child: const Text('Câu tiếp'),
+              ),
           ],
         ),
       ],

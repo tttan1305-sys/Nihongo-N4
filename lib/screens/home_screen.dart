@@ -32,52 +32,63 @@ class HomeScreen extends StatelessWidget {
       body: FutureBuilder<Set<int>>(
         future: repository.availableLessons(),
         builder: (context, snapshot) {
-          if (!snapshot.hasData) return const Center(child: CircularProgressIndicator());
+          if (!snapshot.hasData) {
+            return const Center(child: CircularProgressIndicator());
+          }
           final available = snapshot.data!;
           return ListenableBuilder(
             listenable: progress,
             builder: (context, _) => ListView.separated(
-            itemCount: lastLesson - firstLesson + 2,
-            separatorBuilder: (_, _) => const Divider(height: 1),
-            itemBuilder: (context, i) {
-              if (i == 0) return _reviewCard(context);
-              final number = firstLesson + i - 1;
-              final written = available.contains(number);
-              final unlocked = progress.isLessonUnlocked(number, first: firstLesson);
-              final completed = progress.isLessonCompleted(number);
-              final ready = written && unlocked;
-              return ListTile(
-                key: ValueKey('lesson-$number'),
-                leading: CircleAvatar(child: Text('$number')),
-                title: Text('Bài $number'),
-                subtitle: Text(!written
-                    ? 'Đang soạn nội dung'
-                    : completed
+              itemCount: lastLesson - firstLesson + 2,
+              separatorBuilder: (_, _) => const Divider(height: 1),
+              itemBuilder: (context, i) {
+                if (i == 0) return _reviewCard(context);
+                final number = firstLesson + i - 1;
+                final written = available.contains(number);
+                final unlocked = progress.isLessonUnlocked(
+                  number,
+                  first: firstLesson,
+                );
+                final completed = progress.isLessonCompleted(number);
+                final ready = written && unlocked;
+                return ListTile(
+                  key: ValueKey('lesson-$number'),
+                  leading: CircleAvatar(child: Text('$number')),
+                  title: Text('Bài $number'),
+                  subtitle: Text(
+                    !written
+                        ? 'Đang soạn nội dung'
+                        : completed
                         ? 'Đã hoàn thành'
                         : unlocked
-                            ? 'Sẵn sàng'
-                            : 'Hoàn thành bài trước để mở'),
-                enabled: ready,
-                trailing: Icon(completed
-                    ? Icons.check_circle
-                    : ready
+                        ? 'Sẵn sàng'
+                        : 'Hoàn thành bài trước để mở',
+                  ),
+                  enabled: ready,
+                  trailing: Icon(
+                    completed
+                        ? Icons.check_circle
+                        : ready
                         ? Icons.chevron_right
-                        : Icons.lock_outline),
-                onTap: ready
-                    ? () => Navigator.of(context).push(MaterialPageRoute(
-                          builder: (_) => LessonScreen(
-                            repository: repository,
-                            progress: progress,
-                            flashcards: flashcards,
-                            speaker: speaker,
-                            recognizer: recognizer,
-                            number: number,
+                        : Icons.lock_outline,
+                  ),
+                  onTap: ready
+                      ? () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => LessonScreen(
+                              repository: repository,
+                              progress: progress,
+                              flashcards: flashcards,
+                              speaker: speaker,
+                              recognizer: recognizer,
+                              number: number,
+                            ),
                           ),
-                        ))
-                    : null,
-              );
-            },
-          ),
+                        )
+                      : null,
+                );
+              },
+            ),
           );
         },
       ),
@@ -96,24 +107,30 @@ class HomeScreen extends StatelessWidget {
             contentPadding: const EdgeInsets.all(16),
             leading: const Icon(Icons.style, size: 36),
             title: Text(
-              flashcards.totalCount == 0 ? 'Chưa có flashcard' : 'Hôm nay cần ôn $due thẻ',
+              flashcards.totalCount == 0
+                  ? 'Chưa có flashcard'
+                  : 'Hôm nay cần ôn $due thẻ',
               key: const ValueKey('due-count'),
             ),
-            subtitle: Text(flashcards.totalCount == 0
-                ? 'Học xong phần Từ vựng của một bài để thêm thẻ.'
-                : 'Tổng cộng ${flashcards.totalCount} thẻ'),
+            subtitle: Text(
+              flashcards.totalCount == 0
+                  ? 'Học xong phần Từ vựng của một bài để thêm thẻ.'
+                  : 'Tổng cộng ${flashcards.totalCount} thẻ',
+            ),
             trailing: FilledButton(
               key: const ValueKey('start-review'),
               onPressed: due == 0
                   ? null
-                  : () => Navigator.of(context).push(MaterialPageRoute(
+                  : () => Navigator.of(context).push(
+                      MaterialPageRoute(
                         builder: (_) => FlashcardScreen(
                           repository: repository,
                           flashcards: flashcards,
                           progress: progress,
                           speaker: speaker,
                         ),
-                      )),
+                      ),
+                    ),
               child: const Text('Ôn'),
             ),
           ),
