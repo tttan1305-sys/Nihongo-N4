@@ -36,7 +36,20 @@ jobs:
       - run: flutter analyze
       - run: flutter test
 
+      - name: Giải mã khóa ký APK
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
+            echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+          else
+            echo "::warning::Chưa có secret ANDROID_KEYSTORE_BASE64, APK ký bằng khóa debug (đăng nhập Google trên Android sẽ không chạy)."
+          fi
+
       - name: Build APK
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
         run: flutter build apk --release
 
       - uses: actions/upload-artifact@v4

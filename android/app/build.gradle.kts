@@ -29,11 +29,27 @@ android {
         versionName = flutter.versionName
     }
 
+    // Khóa ký cố định (GitHub Secret, giải mã trong workflow). Đăng nhập Google
+    // trên Android cần SHA-1 của khóa này. Không có khóa thì dùng khóa debug.
+    val keystorePath = System.getenv("ANDROID_KEYSTORE_PATH")
+    val keystorePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+    val hasReleaseKey = !keystorePath.isNullOrEmpty() && file(keystorePath).exists() &&
+        !keystorePassword.isNullOrEmpty()
+
+    signingConfigs {
+        if (hasReleaseKey) {
+            create("release") {
+                storeFile = file(keystorePath!!)
+                storePassword = keystorePassword
+                keyAlias = "nihongo"
+                keyPassword = keystorePassword
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName(if (hasReleaseKey) "release" else "debug")
         }
     }
 }

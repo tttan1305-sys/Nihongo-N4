@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/flashcard_store.dart';
 import '../data/lesson_repository.dart';
 import '../data/progress_store.dart';
+import '../services/auth_service.dart';
 import '../services/recognizer.dart';
 import '../services/speaker.dart';
 import 'flashcard_screen.dart';
@@ -15,6 +16,7 @@ class HomeScreen extends StatelessWidget {
   final FlashcardStore flashcards;
   final Speaker speaker;
   final Recognizer recognizer;
+  final AuthService auth;
 
   const HomeScreen({
     super.key,
@@ -23,12 +25,18 @@ class HomeScreen extends StatelessWidget {
     required this.flashcards,
     required this.speaker,
     required this.recognizer,
+    required this.auth,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lộ trình N4')),
+      appBar: AppBar(
+        title: const Text('Lộ trình N4'),
+        actions: [
+          if (auth.available) _AccountButton(auth: auth, progress: progress),
+        ],
+      ),
       body: FutureBuilder<Set<int>>(
         future: repository.availableLessons(),
         builder: (context, snapshot) {
@@ -136,6 +144,47 @@ class HomeScreen extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+/// Ảnh đại diện góc phải: xem tài khoản, đăng nhập hoặc đăng xuất.
+class _AccountButton extends StatelessWidget {
+  final AuthService auth;
+  final ProgressStore progress;
+
+  const _AccountButton({required this.auth, required this.progress});
+
+  @override
+  Widget build(BuildContext context) {
+    final user = auth.user;
+    return PopupMenuButton<String>(
+      key: const ValueKey('account'),
+      tooltip: 'Tài khoản',
+      icon: user?.photoUrl != null
+          ? CircleAvatar(
+              radius: 14,
+              backgroundImage: NetworkImage(user!.photoUrl!),
+            )
+          : const Icon(Icons.account_circle),
+      onSelected: (value) {
+        if (value == 'sign-out') auth.signOut();
+        // Bỏ chế độ học thử để quay lại màn hình đăng nhập.
+        if (value == 'sign-in') progress.setGuest(false);
+      },
+      itemBuilder: (_) => [
+        if (user != null) ...[
+          PopupMenuItem(
+            enabled: false,
+            child: Text('${user.name ?? ''}\n${user.email ?? ''}'.trim()),
+          ),
+          const PopupMenuItem(value: 'sign-out', child: Text('Đăng xuất')),
+        ] else
+          const PopupMenuItem(
+            value: 'sign-in',
+            child: Text('Đăng nhập bằng Google'),
+          ),
+      ],
     );
   }
 }

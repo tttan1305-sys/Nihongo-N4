@@ -44,6 +44,14 @@ class ProgressStore extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Người dùng chọn "Học không cần đăng nhập".
+  bool get isGuest => _prefs.getBool('settings.guest') ?? false;
+
+  Future<void> setGuest(bool value) async {
+    await _prefs.setBool('settings.guest', value);
+    notifyListeners();
+  }
+
   /// Cài đặt chung: hiện furigana. Tắt đi để tự kiểm tra cách đọc chữ Hán.
   bool get showFurigana => _prefs.getBool('settings.showFurigana') ?? true;
 
