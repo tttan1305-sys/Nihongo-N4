@@ -120,11 +120,14 @@ class HomeScreen extends StatelessWidget {
         contentPadding: const EdgeInsets.all(16),
         leading: const Icon(Icons.menu_book, size: 36),
         title: const Text('Tổng hợp N5'),
-        subtitle: const Text('Các thể, ngữ pháp bài 1–25, từ vựng N5'),
+        subtitle: const Text(
+          'Kiến thức cần nhớ, các thể, ngữ pháp bài 1–25, từ vựng, 5 đề test',
+        ),
         trailing: const Icon(Icons.chevron_right),
         onTap: () => Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => N5Screen(repository: n5, speaker: speaker),
+            builder: (_) =>
+                N5Screen(repository: n5, progress: progress, speaker: speaker),
           ),
         ),
       ),

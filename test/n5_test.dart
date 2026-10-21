@@ -3,9 +3,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nihongo_n4/data/n5_repository.dart';
+import 'package:nihongo_n4/data/progress_store.dart';
 import 'package:nihongo_n4/models/n5.dart';
 import 'package:nihongo_n4/screens/n5_screen.dart';
+import 'package:nihongo_n4/screens/n5_test_screen.dart';
 import 'package:nihongo_n4/screens/quiz_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'lesson_test.dart' show FakeSpeaker;
 
@@ -28,7 +31,25 @@ void main() {
     ]);
     expect(data.grammarCount, greaterThan(100));
     expect(data.wordCount, greaterThan(300));
+    expect(data.notes, isNotEmpty);
+    expect(data.tests, hasLength(5));
+    for (final t in data.tests) {
+      expect(t.questions, hasLength(20));
+      for (final q in t.questions) {
+        expect(q.options.toSet(), hasLength(4), reason: q.id);
+        expect(q.answer, inInclusiveRange(0, 3), reason: q.id);
+        expect(q.explanationVi, isNotEmpty, reason: q.id);
+        if (q.passageId != null) {
+          expect(t.passages, contains(q.passageId), reason: q.id);
+        }
+      }
+    }
   });
+
+  Future<ProgressStore> progressStore() async {
+    SharedPreferences.setMockInitialValues({});
+    return ProgressStore(await SharedPreferences.getInstance());
+  }
 
   test('bảng chia đúng các trường hợp đặc biệt', () {
     expect(verb('kaku').forms['te'], '{書|か}いて');
@@ -64,11 +85,18 @@ void main() {
     final speaker = FakeSpeaker();
     await tester.pumpWidget(
       MaterialApp(
-        home: N5Screen(repository: repository, speaker: speaker),
+        home: N5Screen(
+          repository: repository,
+          progress: await progressStore(),
+          speaker: speaker,
+        ),
       ),
     );
     await tester.pumpAndSettle();
 
+    expect(find.byKey(const ValueKey('n5-note-particles')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('n5-tab-forms')));
+    await tester.pumpAndSettle();
     expect(find.byKey(const ValueKey('n5-conjugation-quiz')), findsOneWidget);
     await tester.tap(find.byKey(const ValueKey('n5-form-masu')));
     await tester.pumpAndSettle();
@@ -89,5 +117,39 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('n5-vocab-quiz')));
     await tester.pumpAndSettle();
     expect(find.byType(QuizScreen), findsOneWidget);
+  });
+
+  testWidgets('làm đề test: nộp bài mới hiện đáp án và giải thích', (
+    tester,
+  ) async {
+    final progress = await progressStore();
+    final test = data.tests.first;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: N5TestScreen(test: test, progress: progress),
+      ),
+    );
+    // Câu 1 chọn sai, các câu còn lại chọn đúng.
+    for (var i = 0; i < test.questions.length; i++) {
+      final q = test.questions[i];
+      final pick = i == 0 ? (q.answer + 1) % 4 : q.answer;
+      await tester.ensureVisible(find.byKey(ValueKey('option-$pick')));
+      await tester.tap(find.byKey(ValueKey('option-$pick')));
+      await tester.pump();
+      // Chưa nộp thì không hiện giải thích.
+      expect(find.text('Giải thích'), findsNothing);
+      if (i < test.questions.length - 1) {
+        await tester.tap(find.byKey(const ValueKey('next-question')));
+        await tester.pump();
+      }
+    }
+    await tester.tap(find.byKey(const ValueKey('submit-test')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Đúng 19/20 câu (95%)'), findsOneWidget);
+    expect(progress.n5TestScore(test.id), 0.95);
+    // Câu sai được mở sẵn, có đáp án đúng và giải thích.
+    expect(find.text('Giải thích'), findsOneWidget);
+    expect(progress.exportData(), containsPair('n5test.${test.id}', 0.95));
   });
 }

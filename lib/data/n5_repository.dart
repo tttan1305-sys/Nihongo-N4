@@ -26,6 +26,8 @@ class N5Repository {
     final forms = FormsData.fromJson(await _json('forms'));
     final grammar = await _json('grammar');
     final vocab = await _json('vocab');
+    final notes = await _json('notes');
+    final tests = await _json('tests');
     return _cache = N5Data(
       forms: forms,
       grammar: [
@@ -35,6 +37,14 @@ class N5Repository {
       topics: [
         for (final t in vocab['topics'] as List)
           N5Topic.fromJson(t as Map<String, dynamic>),
+      ],
+      notes: [
+        for (final n in notes['sections'] as List)
+          NoteSection.fromJson(n as Map<String, dynamic>),
+      ],
+      tests: [
+        for (final t in tests['tests'] as List)
+          N5Test.fromJson(t as Map<String, dynamic>),
       ],
     );
   }

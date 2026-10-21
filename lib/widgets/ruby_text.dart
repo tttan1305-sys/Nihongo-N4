@@ -63,7 +63,7 @@ class RubyText extends StatelessWidget {
     for (final seg in parseRuby(text)) {
       if (seg.ruby == null || !showRuby) {
         // Chừa chỗ phía trên để các dòng không có furigana vẫn thẳng hàng.
-        for (final ch in seg.base.characters) {
+        for (final ch in _wrapUnits(seg.base)) {
           spans.add(
             WidgetSpan(
               alignment: PlaceholderAlignment.bottom,
@@ -94,4 +94,28 @@ class RubyText extends StatelessWidget {
       semanticsLabel: plainText(text),
     );
   }
+}
+
+/// Chia chữ thành các khối không được ngắt dòng ở giữa: chữ Nhật mỗi ký tự
+/// một khối, còn chữ Latin/tiếng Việt giữ nguyên cả từ (kèm dấu cách sau nó)
+/// để không bị xuống dòng giữa từ.
+List<String> _wrapUnits(String text) {
+  final units = <String>[];
+  final word = StringBuffer();
+  void flush() {
+    if (word.isNotEmpty) units.add(word.toString());
+    word.clear();
+  }
+
+  for (final ch in text.characters) {
+    if (ch.runes.first < 0x2E80) {
+      word.write(ch);
+      if (ch == ' ') flush();
+    } else {
+      flush();
+      units.add(ch);
+    }
+  }
+  flush();
+  return units;
 }

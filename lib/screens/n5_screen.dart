@@ -7,28 +7,39 @@ import '../models/n5.dart';
 import '../services/speaker.dart';
 import '../widgets/listen_button.dart';
 import '../widgets/ruby_text.dart';
+import 'n5_test_screen.dart';
 import 'quiz_screen.dart';
 
-/// Tổng hợp N5 (Minna bài 1–25): các thể, ngữ pháp, từ vựng. Mở tự do,
-/// không khóa theo thứ tự như lộ trình N4.
+/// Tổng hợp N5 (Minna bài 1–25): kiến thức cần nhớ, các thể, ngữ pháp,
+/// từ vựng, đề test. Mở tự do, không khóa theo thứ tự như lộ trình N4.
 class N5Screen extends StatelessWidget {
   final N5Repository repository;
+  final ProgressStore progress;
   final Speaker speaker;
 
-  const N5Screen({super.key, required this.repository, required this.speaker});
+  const N5Screen({
+    super.key,
+    required this.repository,
+    required this.progress,
+    required this.speaker,
+  });
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Tổng hợp N5'),
           bottom: const TabBar(
+            isScrollable: true,
+            tabAlignment: TabAlignment.start,
             tabs: [
+              Tab(key: ValueKey('n5-tab-notes'), text: 'Cần nhớ'),
               Tab(key: ValueKey('n5-tab-forms'), text: 'Các thể'),
               Tab(key: ValueKey('n5-tab-grammar'), text: 'Ngữ pháp'),
               Tab(key: ValueKey('n5-tab-vocab'), text: 'Từ vựng'),
+              Tab(key: ValueKey('n5-tab-tests'), text: 'Đề test'),
             ],
           ),
         ),
@@ -44,9 +55,11 @@ class N5Screen extends StatelessWidget {
             }
             return TabBarView(
               children: [
+                _NotesTab(sections: data.notes, speaker: speaker),
                 _FormsTab(data: data.forms, speaker: speaker),
                 _GrammarTab(lessons: data.grammar, speaker: speaker),
                 _VocabTab(topics: data.topics, speaker: speaker),
+                _TestsTab(tests: data.tests, progress: progress),
               ],
             );
           },
@@ -391,6 +404,96 @@ class _TopicScreen extends StatelessWidget {
             ],
           );
         },
+      ),
+    );
+  }
+}
+
+class _NotesTab extends StatelessWidget {
+  final List<NoteSection> sections;
+  final Speaker speaker;
+
+  const _NotesTab({required this.sections, required this.speaker});
+
+  @override
+  Widget build(BuildContext context) {
+    final text = Theme.of(context).textTheme;
+    return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      children: [
+        for (final s in sections)
+          ExpansionTile(
+            key: ValueKey('n5-note-${s.id}'),
+            tilePadding: EdgeInsets.zero,
+            title: Text(s.titleVi, style: text.titleMedium),
+            subtitle: RubyText(s.introVi),
+            expandedCrossAxisAlignment: CrossAxisAlignment.start,
+            childrenPadding: const EdgeInsets.only(bottom: 12),
+            children: [
+              for (final item in s.items)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      RubyText(
+                        item.head,
+                        style: text.titleMedium?.copyWith(
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                      RubyText(item.bodyVi),
+                      const SizedBox(height: 4),
+                      _Example(item.example, speaker),
+                    ],
+                  ),
+                ),
+            ],
+          ),
+      ],
+    );
+  }
+}
+
+class _TestsTab extends StatelessWidget {
+  final List<N5Test> tests;
+  final ProgressStore progress;
+
+  const _TestsTab({required this.tests, required this.progress});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: progress,
+      builder: (context, _) => ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          const Text(
+            'Mỗi đề 20 câu theo dạng đề JLPT N5: chữ Hán, từ vựng, ngữ pháp, '
+            'đọc hiểu. Làm hết rồi nộp bài để xem đáp án và giải thích từng câu.',
+          ),
+          const SizedBox(height: 8),
+          for (final t in tests)
+            Card(
+              child: ListTile(
+                key: ValueKey('n5-test-${t.id}'),
+                leading: const Icon(Icons.assignment, size: 32),
+                title: Text(t.titleVi),
+                subtitle: Text(switch (progress.n5TestScore(t.id)) {
+                  null => '${t.questions.length} câu · chưa làm',
+                  final best =>
+                    '${t.questions.length} câu · điểm cao nhất '
+                        '${(best * t.questions.length).round()}/${t.questions.length}',
+                }),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => N5TestScreen(test: t, progress: progress),
+                  ),
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }

@@ -72,6 +72,18 @@ class ProgressStore extends ChangeNotifier {
     notifyListeners();
   }
 
+  static String _n5TestKey(String testId) => 'n5test.$testId';
+
+  /// Điểm cao nhất (0..1) của một đề test N5, null nếu chưa làm.
+  double? n5TestScore(String testId) => _prefs.getDouble(_n5TestKey(testId));
+
+  Future<void> saveN5TestScore(String testId, double score) async {
+    final best = n5TestScore(testId);
+    if (best != null && best >= score) return;
+    await _prefs.setDouble(_n5TestKey(testId), score);
+    notifyListeners();
+  }
+
   /// Bài hoàn thành khi đã qua bài đọc hiểu cuối bài.
   bool isLessonCompleted(int lesson) => (readingScore(lesson) ?? 0) >= passMark;
 
@@ -87,7 +99,12 @@ class ProgressStore extends ChangeNotifier {
       passedGrammarCount(lesson) == lesson.grammar.length;
 
   // Các khóa tiến độ được đồng bộ (cài đặt như furigana, học thử thì không).
-  static const _syncedPrefixes = ['grammar.', 'vocabDone.', 'reading.'];
+  static const _syncedPrefixes = [
+    'grammar.',
+    'vocabDone.',
+    'reading.',
+    'n5test.',
+  ];
 
   static bool _isSynced(String key) =>
       _syncedPrefixes.any((p) => key.startsWith(p));

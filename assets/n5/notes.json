@@ -1,0 +1,126 @@
+{
+ "sections": [
+  {
+   "id": "particles",
+   "titleVi": "Trợ từ",
+   "introVi": "Trợ từ quyết định vai trò của từ trong câu. Đề N5 luôn có nhiều câu chọn trợ từ.",
+   "items": [
+    {"id": "n-p1", "head": "は", "bodyVi": "Chủ đề của câu (đọc là wa). Nêu điều mình định nói đến, hay dùng để so sánh, đối chiếu.",
+     "example": {"id": "n-p1-e", "ja": "{私|わたし}は　{会社員|かいしゃいん}です。", "vi": "Tôi là nhân viên công ty."}},
+    {"id": "n-p2", "head": "が", "bodyVi": "Chủ ngữ của あります・います, đối tượng của {好|す}き・{上手|じょうず}・わかります・ほしい, chủ ngữ trong mệnh đề phụ, và chủ ngữ của câu hỏi bằng từ để hỏi (だれが...).",
+     "example": {"id": "n-p2-e", "ja": "だれが　{来|き}ましたか。……{田中|たなか}さんが　{来|き}ました。", "vi": "Ai đã đến? ... Anh Tanaka đã đến."}},
+    {"id": "n-p3", "head": "を", "bodyVi": "Đối tượng của hành động ({飲|の}む、{読|よ}む...). Còn dùng với nơi rời khỏi ({家|いえ}を{出|で}ます) và nơi đi qua ({公園|こうえん}を{散歩|さんぽ}します).",
+     "example": {"id": "n-p3-e", "ja": "{毎朝|まいあさ}　{新聞|しんぶん}を　{読|よ}みます。", "vi": "Mỗi sáng tôi đọc báo."}},
+    {"id": "n-p4", "head": "に", "bodyVi": "1) Thời điểm cụ thể (7{時|じ}に). 2) Nơi tồn tại (～に　あります・います). 3) Người nhận (～に　あげます). 4) Đích đến ({電車|でんしゃ}に{乗|の}ります、{部屋|へや}に{入|はい}ります). 5) Mục đích ({買|か}い{物|もの}に{行|い}きます).",
+     "example": {"id": "n-p4-e", "ja": "{日曜日|にちようび}に　{友達|ともだち}に　{会|あ}います。", "vi": "Chủ nhật tôi gặp bạn."}},
+    {"id": "n-p5", "head": "で", "bodyVi": "1) Nơi diễn ra hành động ({図書館|としょかん}で{勉強|べんきょう}します). 2) Phương tiện, công cụ, ngôn ngữ (バスで、はしで、{日本語|にほんご}で). 3) Phạm vi so sánh (クラスで　いちばん) — hay nhầm với に: に là nơi tồn tại, で là nơi hành động.",
+     "example": {"id": "n-p5-e", "ja": "{駅|えき}で　{友達|ともだち}を　{待|ま}ちます。", "vi": "Tôi đợi bạn ở nhà ga."}},
+    {"id": "n-p6", "head": "へ", "bodyVi": "Hướng di chuyển, đi với {行|い}きます・{来|き}ます・{帰|かえ}ります (đọc là e). Có thể thay bằng に.",
+     "example": {"id": "n-p6-e", "ja": "{来年|らいねん}　{日本|にほん}へ　{行|い}きます。", "vi": "Năm sau tôi đi Nhật."}},
+    {"id": "n-p7", "head": "と", "bodyVi": "1) Và (liệt kê đủ): パンと{牛乳|ぎゅうにゅう}. 2) Cùng với ai: {友達|ともだち}と{行|い}きます. 3) Trích dẫn: ～と{思|おも}います、～と{言|い}います.",
+     "example": {"id": "n-p7-e", "ja": "{家族|かぞく}と　{旅行|りょこう}します。", "vi": "Tôi đi du lịch với gia đình."}},
+    {"id": "n-p8", "head": "も", "bodyVi": "Cũng. Thay cho は・が・を. Từ để hỏi + も + phủ định = hoàn toàn không: {何|なに}も{食|た}べません.",
+     "example": {"id": "n-p8-e", "ja": "{昨日|きのう}は　どこも　{行|い}きませんでした。", "vi": "Hôm qua tôi không đi đâu cả."}},
+    {"id": "n-p9", "head": "の", "bodyVi": "Nối hai danh từ: sở hữu ({私|わたし}の{本|ほん}), thuộc về ({会社|かいしゃ}の{人|ひと}), nội dung ({日本語|にほんご}の{本|ほん}), vị trí ({机|つくえ}の{上|うえ}).",
+     "example": {"id": "n-p9-e", "ja": "これは　{兄|あに}の　{車|くるま}です。", "vi": "Đây là xe của anh trai tôi."}},
+    {"id": "n-p10", "head": "から・まで", "bodyVi": "Từ... đến... (thời gian, nơi chốn). から sau câu còn nghĩa là \"vì\": {暑|あつ}いですから、{窓|まど}を{開|あ}けます.",
+     "example": {"id": "n-p10-e", "ja": "9{時|じ}から　5{時|じ}まで　{働|はたら}きます。", "vi": "Tôi làm việc từ 9 giờ đến 5 giờ."}},
+    {"id": "n-p11", "head": "より", "bodyVi": "Hơn (so sánh): A は B より ～. Câu hỏi: AとBと　どちらが　～ですか.",
+     "example": {"id": "n-p11-e", "ja": "{今日|きょう}は　{昨日|きのう}より　{寒|さむ}いです。", "vi": "Hôm nay lạnh hơn hôm qua."}},
+    {"id": "n-p12", "head": "や", "bodyVi": "Liệt kê vài ví dụ (không đủ), thường đi với など.",
+     "example": {"id": "n-p12-e", "ja": "{机|つくえ}の　{上|うえ}に　{本|ほん}や　ペンなどが　あります。", "vi": "Trên bàn có sách, bút, v.v."}},
+    {"id": "n-p13", "head": "か・ね・よ", "bodyVi": "Cuối câu: か hỏi; ね mong người nghe đồng tình (...nhỉ); よ báo thông tin người nghe chưa biết (...đấy).",
+     "example": {"id": "n-p13-e", "ja": "この　{店|みせ}の　ラーメンは　おいしいですよ。", "vi": "Mì ramen quán này ngon đấy."}}
+   ]
+  },
+  {
+   "id": "kosoado",
+   "titleVi": "こ・そ・あ・ど và từ để hỏi",
+   "introVi": "こ: gần người nói. そ: gần người nghe. あ: xa cả hai. ど: để hỏi.",
+   "items": [
+    {"id": "n-k1", "head": "これ・それ・あれ・どれ", "bodyVi": "Cái này · đó · kia · cái nào. Đứng một mình như danh từ.",
+     "example": {"id": "n-k1-e", "ja": "あなたの　かさは　どれですか。", "vi": "Ô của bạn là cái nào?"}},
+    {"id": "n-k2", "head": "この・その・あの・どの + N", "bodyVi": "Luôn có danh từ theo sau: この{本|ほん}. Không nói この　は.",
+     "example": {"id": "n-k2-e", "ja": "この　{本|ほん}は　いくらですか。", "vi": "Cuốn sách này bao nhiêu tiền?"}},
+    {"id": "n-k3", "head": "ここ・そこ・あそこ・どこ", "bodyVi": "Chỗ này · đó · kia · ở đâu. Lịch sự: こちら・そちら・あちら・どちら.",
+     "example": {"id": "n-k3-e", "ja": "{受付|うけつけ}は　どちらですか。", "vi": "Quầy lễ tân ở đâu ạ?"}},
+    {"id": "n-k4", "head": "Từ để hỏi hay gặp", "bodyVi": "{何|なに}・{何|なん} (gì), だれ・どなた (ai), いつ (khi nào), いくら (bao nhiêu tiền), いくつ (mấy cái, mấy tuổi), どうして (tại sao), どう・いかが (thế nào), どんな (như thế nào + N), どのくらい (bao lâu, bao nhiêu), {何時|なんじ} (mấy giờ), {何曜日|なんようび} (thứ mấy).",
+     "example": {"id": "n-k4-e", "ja": "{誕生日|たんじょうび}は　いつですか。", "vi": "Sinh nhật bạn khi nào?"}}
+   ]
+  },
+  {
+   "id": "numbers",
+   "titleVi": "Số đếm và cách đọc đặc biệt",
+   "introVi": "Đề N5 hay hỏi cách đọc số giờ, ngày, số đếm. Chú ý các âm biến đổi.",
+   "items": [
+    {"id": "n-n1", "head": "Đếm đồ vật chung", "bodyVi": "ひとつ、ふたつ、みっつ、よっつ、いつつ、むっつ、ななつ、やっつ、ここのつ、とお. Từ 11 dùng số: じゅういち.",
+     "example": {"id": "n-n1-e", "ja": "りんごを　みっつ　ください。", "vi": "Cho tôi 3 quả táo."}},
+    {"id": "n-n2", "head": "Người: ～{人|にん}", "bodyVi": "{一人|ひとり}、{二人|ふたり}、{三人|さんにん}、{四人|よにん}、{五人|ごにん}... Chú ý 4 người là よにん.",
+     "example": {"id": "n-n2-e", "ja": "{家族|かぞく}は　{四人|よにん}です。", "vi": "Gia đình tôi có 4 người."}},
+    {"id": "n-n3", "head": "Giờ: ～{時|じ}", "bodyVi": "4{時|じ} よじ, 7{時|じ} しちじ, 9{時|じ} くじ. Phút: 1{分|ぷん} いっぷん, 3{分|ぷん} さんぷん, 4{分|ぷん} よんぷん, 6{分|ぷん} ろっぷん, 10{分|ぷん} じゅっぷん; 2, 5, 7, 9 phút đọc ふん.",
+     "example": {"id": "n-n3-e", "ja": "{今|いま}　4{時|じ}10{分|ぷん}です。", "vi": "Bây giờ là 4 giờ 10 phút."}},
+    {"id": "n-n4", "head": "Ngày trong tháng", "bodyVi": "1 ついたち, 2 ふつか, 3 みっか, 4 よっか, 5 いつか, 6 むいか, 7 なのか, 8 ようか, 9 ここのか, 10 とおか, 14 じゅうよっか, 20 はつか, 24 にじゅうよっか.",
+     "example": {"id": "n-n4-e", "ja": "{誕生日|たんじょうび}は　{三月|さんがつ}{二十日|はつか}です。", "vi": "Sinh nhật tôi là ngày 20 tháng 3."}},
+    {"id": "n-n5", "head": "Tháng", "bodyVi": "4 しがつ, 7 しちがつ, 9 くがつ (không đọc よんがつ, くがつ không đọc きゅうがつ).",
+     "example": {"id": "n-n5-e", "ja": "{日本|にほん}の　{学校|がっこう}は　{四月|しがつ}に　{始|はじ}まります。", "vi": "Trường học ở Nhật bắt đầu vào tháng 4."}},
+    {"id": "n-n6", "head": "Lượng từ khác", "bodyVi": "～{本|ほん} (vật dài: いっぽん、にほん、さんぼん), ～{枚|まい} (vật mỏng: giấy, áo, tem), ～{台|だい} (máy, xe), ～{回|かい} (lần), ～{階|かい} (tầng: さんがい), ～{歳|さい} (tuổi: はっさい、じゅっさい).",
+     "example": {"id": "n-n6-e", "ja": "ビールを　{二本|にほん}　{買|か}いました。", "vi": "Tôi đã mua 2 chai bia."}}
+   ]
+  },
+  {
+   "id": "time",
+   "titleVi": "Từ chỉ thời gian",
+   "introVi": "Những từ này không đi với に: {今日|きょう}、{明日|あした}、{毎日|まいにち}、{来週|らいしゅう}...",
+   "items": [
+    {"id": "n-t1", "head": "Ngày", "bodyVi": "おととい (hôm kia) · {昨日|きのう} (hôm qua) · {今日|きょう} (hôm nay) · {明日|あした} (ngày mai) · あさって (ngày kia).",
+     "example": {"id": "n-t1-e", "ja": "あさって　{試験|しけん}が　あります。", "vi": "Ngày kia có kỳ thi."}},
+    {"id": "n-t2", "head": "Tuần · tháng · năm", "bodyVi": "{先週|せんしゅう}・{今週|こんしゅう}・{来週|らいしゅう}; {先月|せんげつ}・{今月|こんげつ}・{来月|らいげつ}; {去年|きょねん}・{今年|ことし}・{来年|らいねん}.",
+     "example": {"id": "n-t2-e", "ja": "{先月|せんげつ}　{日本|にほん}へ　{来|き}ました。", "vi": "Tháng trước tôi đến Nhật."}},
+    {"id": "n-t3", "head": "Buổi", "bodyVi": "{朝|あさ}・{昼|ひる}・{晩|ばん}・{夜|よる}; {今朝|けさ} (sáng nay), {今晩|こんばん} (tối nay), {午前|ごぜん}・{午後|ごご}.",
+     "example": {"id": "n-t3-e", "ja": "{今朝|けさ}　{何|なに}も　{食|た}べませんでした。", "vi": "Sáng nay tôi không ăn gì."}},
+    {"id": "n-t4", "head": "Thứ trong tuần", "bodyVi": "{月曜日|げつようび}・{火曜日|かようび}・{水曜日|すいようび}・{木曜日|もくようび}・{金曜日|きんようび}・{土曜日|どようび}・{日曜日|にちようび} (thứ Hai → Chủ nhật).",
+     "example": {"id": "n-t4-e", "ja": "{金曜日|きんようび}の　{夜|よる}　{飲|の}みに　{行|い}きます。", "vi": "Tối thứ Sáu tôi đi nhậu."}}
+   ]
+  },
+  {
+   "id": "adjectives",
+   "titleVi": "Chia tính từ",
+   "introVi": "Tính từ い và な chia khác nhau. いい là ngoại lệ.",
+   "items": [
+    {"id": "n-a1", "head": "Tính từ い", "bodyVi": "{高|たか}い → {高|たか}くない (không) → {高|たか}かった (đã) → {高|たか}くなかった (đã không). Nối câu: {高|たか}くて. Trạng từ: {高|たか}く.",
+     "example": {"id": "n-a1-e", "ja": "{昨日|きのう}は　{寒|さむ}かったです。", "vi": "Hôm qua lạnh."}},
+    {"id": "n-a2", "head": "いい (ngoại lệ)", "bodyVi": "いい → よくない → よかった → よくなかった → よくて. Không nói いくない, いかった.",
+     "example": {"id": "n-a2-e", "ja": "{旅行|りょこう}は　とても　よかったです。", "vi": "Chuyến đi rất tốt."}},
+    {"id": "n-a3", "head": "Tính từ な", "bodyVi": "{静|しず}かです → {静|しず}かじゃありません → {静|しず}かでした → {静|しず}かじゃありませんでした. Trước danh từ giữ な: {静|しず}かな{町|まち}. Nối câu: {静|しず}かで. Trạng từ: {静|しず}かに.",
+     "example": {"id": "n-a3-e", "ja": "{図書館|としょかん}では　{静|しず}かに　して　ください。", "vi": "Trong thư viện hãy giữ yên lặng."}},
+    {"id": "n-a4", "head": "Bẫy: きれい, きらい, ゆうめい", "bodyVi": "きれい、きらい、ゆうめい、とくい là tính từ な dù kết thúc bằng い: きれいな{花|はな}, không phải きれいい.",
+     "example": {"id": "n-a4-e", "ja": "{京都|きょうと}は　きれいな　{町|まち}です。", "vi": "Kyoto là thành phố đẹp."}}
+   ]
+  },
+  {
+   "id": "confusing",
+   "titleVi": "Những điểm hay nhầm",
+   "introVi": "Các cặp dưới đây xuất hiện rất thường xuyên trong đề thi.",
+   "items": [
+    {"id": "n-c1", "head": "あります ・ います", "bodyVi": "あります: đồ vật, cây, sự kiện. います: người, động vật. Xe buýt, robot dùng あります (không tự sống).",
+     "example": {"id": "n-c1-e", "ja": "{教室|きょうしつ}に　{学生|がくせい}が　います。{机|つくえ}も　あります。", "vi": "Trong lớp có học sinh. Cũng có bàn."}},
+    {"id": "n-c2", "head": "に ・ で (nơi chốn)", "bodyVi": "に: nơi tồn tại (います・あります・{住|す}んでいます). で: nơi diễn ra hành động ({食|た}べます・{働|はたら}きます).",
+     "example": {"id": "n-c2-e", "ja": "{東京|とうきょう}に　{住|す}んで　います。{東京|とうきょう}で　{働|はたら}いて　います。", "vi": "Tôi sống ở Tokyo. Tôi làm việc ở Tokyo."}},
+    {"id": "n-c3", "head": "は ・ が", "bodyVi": "Câu hỏi bằng だれ・{何|なに}・どこ làm chủ ngữ thì dùng が, câu trả lời cũng dùng が. Nói về đặc điểm: AはBが～ ({象|ぞう}は{鼻|はな}が{長|なが}い).",
+     "example": {"id": "n-c3-e", "ja": "どれが　あなたの　かばんですか。", "vi": "Cái nào là túi của bạn?"}},
+    {"id": "n-c4", "head": "もう ・ まだ", "bodyVi": "もう～ました: đã rồi. まだ～ていません: vẫn chưa. Trả lời ngắn: いいえ、まだです.",
+     "example": {"id": "n-c4-e", "ja": "もう　{宿題|しゅくだい}を　しましたか。……いいえ、まだです。", "vi": "Bạn làm bài tập chưa? ... Chưa."}},
+    {"id": "n-c5", "head": "～たい ・ ほしい", "bodyVi": "Vたい: muốn làm (động từ). Nが　ほしい: muốn có (danh từ). Không dùng cho người thứ ba trực tiếp.",
+     "example": {"id": "n-c5-e", "ja": "{新|あたら}しい　パソコンが　ほしいです。", "vi": "Tôi muốn có máy tính mới."}},
+    {"id": "n-c6", "head": "あげます ・ もらいます ・ くれます", "bodyVi": "あげます: mình cho người khác. もらいます: mình nhận (に・から). くれます: người khác cho mình. Đề hay bẫy くれます.",
+     "example": {"id": "n-c6-e", "ja": "{友達|ともだち}が　{私|わたし}に　{本|ほん}を　くれました。", "vi": "Bạn tôi đã cho tôi quyển sách."}},
+    {"id": "n-c7", "head": "～ませんか ・ ～ましょう", "bodyVi": "～ませんか: rủ người khác (lịch sự). ～ましょう: cùng làm nhé (đáp lại lời rủ hoặc đề nghị). ～ましょうか: để tôi làm giúp nhé?",
+     "example": {"id": "n-c7-e", "ja": "いっしょに　{行|い}きませんか。……ええ、{行|い}きましょう。", "vi": "Đi cùng không? ... Ừ, đi nào."}},
+    {"id": "n-c8", "head": "～ています (2 nghĩa)", "bodyVi": "1) Đang làm: {今|いま}{食|た}べています. 2) Trạng thái kéo dài: {結婚|けっこん}しています、{住|す}んでいます、{知|し}っています. Phủ định của {知|し}っています là {知|し}りません.",
+     "example": {"id": "n-c8-e", "ja": "{姉|あね}は　{結婚|けっこん}して　います。", "vi": "Chị tôi đã kết hôn."}},
+    {"id": "n-c9", "head": "{行|い}きます・{来|き}ます・{帰|かえ}ります", "bodyVi": "{行|い}く: rời chỗ mình đến nơi khác. {来|く}る: đến chỗ người nói. {帰|かえ}る: về nhà, về nước, về chỗ của mình.",
+     "example": {"id": "n-c9-e", "ja": "{友達|ともだち}が　{私|わたし}の　{家|いえ}へ　{来|き}ました。", "vi": "Bạn đã đến nhà tôi."}}
+   ]
+  }
+ ]
+}

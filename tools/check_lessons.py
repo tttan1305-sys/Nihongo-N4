@@ -9,6 +9,8 @@ import sys
 
 KANJI = re.compile(r"[一-鿿㐀-䶿々]")
 RUBY = re.compile(r"\{([^|{}]+)\|([^|{}]+)\}")
+# Phần được hỏi trong đề test (đọc chữ Hán): chữ Hán trong 【】 cố ý không furigana.
+ASKED = re.compile(r"【[^】]*】")
 # Các trường được phép có chữ Hán không furigana (chữ mẫu để tập viết).
 SKIP_KEYS = {"char"}
 
@@ -22,6 +24,9 @@ def walk(node, path, errors, ids):
         for k, v in node.items():
             if k in SKIP_KEYS:
                 continue
+            # Câu hỏi viết chữ Hán: đáp án là chữ Hán không furigana.
+            if k == "options" and node.get("type") == "writing":
+                continue
             walk(v, f"{path}.{k}", errors, ids)
     elif isinstance(node, list):
         for i, v in enumerate(node):
@@ -30,7 +35,7 @@ def walk(node, path, errors, ids):
         for base, reading in RUBY.findall(node):
             if KANJI.search(reading):
                 errors.append(f"{path}: phần đọc '{reading}' còn chữ Hán")
-        rest = RUBY.sub("", node)
+        rest = ASKED.sub("", RUBY.sub("", node))
         bad = KANJI.findall(rest)
         if bad:
             errors.append(f"{path}: thiếu furigana cho {''.join(bad)} trong: {node}")

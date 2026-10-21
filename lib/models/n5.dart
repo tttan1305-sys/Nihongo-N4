@@ -239,16 +239,122 @@ class N5Topic {
   );
 }
 
+/// Một ý trong phần Kiến thức cần nhớ.
+class NoteItem {
+  final String id;
+  final String head;
+  final String bodyVi;
+  final Sentence example;
+
+  const NoteItem({
+    required this.id,
+    required this.head,
+    required this.bodyVi,
+    required this.example,
+  });
+
+  factory NoteItem.fromJson(Map<String, dynamic> j) => NoteItem(
+    id: j['id'] as String,
+    head: j['head'] as String,
+    bodyVi: j['bodyVi'] as String,
+    example: Sentence.fromJson(j['example'] as Map<String, dynamic>),
+  );
+}
+
+class NoteSection {
+  final String id;
+  final String titleVi;
+  final String introVi;
+  final List<NoteItem> items;
+
+  const NoteSection({
+    required this.id,
+    required this.titleVi,
+    required this.introVi,
+    required this.items,
+  });
+
+  factory NoteSection.fromJson(Map<String, dynamic> j) => NoteSection(
+    id: j['id'] as String,
+    titleVi: j['titleVi'] as String,
+    introVi: j['introVi'] as String,
+    items: _list(j['items'], NoteItem.fromJson),
+  );
+}
+
+/// Một câu trong đề test. Chữ trong 【】 là phần được hỏi (không furigana).
+class TestQuestion {
+  final String id;
+  final String type;
+  final String section;
+  final String prompt;
+  final List<String> options;
+  final int answer;
+  final String explanationVi;
+  final String? passageId;
+
+  const TestQuestion({
+    required this.id,
+    required this.type,
+    required this.section,
+    required this.prompt,
+    required this.options,
+    required this.answer,
+    required this.explanationVi,
+    this.passageId,
+  });
+
+  factory TestQuestion.fromJson(Map<String, dynamic> j) => TestQuestion(
+    id: j['id'] as String,
+    type: j['type'] as String,
+    section: j['section'] as String,
+    prompt: j['prompt'] as String,
+    options: List<String>.from(j['options'] as List),
+    answer: j['answer'] as int,
+    explanationVi: j['explanationVi'] as String,
+    passageId: j['passage'] as String?,
+  );
+}
+
+/// Đề test N5: làm hết rồi nộp, sau đó mới xem đáp án và giải thích.
+class N5Test {
+  final String id;
+  final String titleVi;
+  final Map<String, String> passages;
+  final List<TestQuestion> questions;
+
+  const N5Test({
+    required this.id,
+    required this.titleVi,
+    required this.passages,
+    required this.questions,
+  });
+
+  factory N5Test.fromJson(Map<String, dynamic> j) => N5Test(
+    id: j['id'] as String,
+    titleVi: j['titleVi'] as String,
+    passages: {
+      for (final p in j['passages'] as List)
+        (p as Map)['id'] as String: p['ja'] as String,
+    },
+    questions: _list(j['questions'], TestQuestion.fromJson),
+  );
+}
+
 /// Toàn bộ phần Tổng hợp N5.
 class N5Data {
   final FormsData forms;
   final List<N5GrammarLesson> grammar;
   final List<N5Topic> topics;
+  final List<NoteSection> notes;
+  final List<N5Test> tests;
 
   const N5Data({
     required this.forms,
     required this.grammar,
     required this.topics,
+    this.notes = const [],
+    this.tests = const [],
   });
 
   int get grammarCount => grammar.fold(0, (n, l) => n + l.points.length);

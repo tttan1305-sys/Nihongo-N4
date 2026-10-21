@@ -27,6 +27,9 @@ Kế hoạch chi tiết: [docs/KE_HOACH.md](docs/KE_HOACH.md)
 | Ngữ pháp Minna bài 1–25: 109 mẫu câu, giải thích, ví dụ, luyện tập từng bài | ✅ 2026-10-21 | `assets/n5/grammar.json` |
 | Từ vựng N5: 304 từ, 15 chủ đề, mỗi từ có câu ví dụ, luyện từ theo chủ đề | ✅ 2026-10-21 | `assets/n5/vocab.json` (sinh từ `tools/n5_vocab_data.py`) |
 
+| Kiến thức cần nhớ N5: trợ từ, こそあど, số đếm, thời gian, chia tính từ, điểm hay nhầm (40 ý có ví dụ) | ✅ 2026-10-21 | `assets/n5/notes.json` |
+| 5 đề test x 20 câu theo dạng JLPT N5, nộp bài mới hiện đáp án + giải thích từng câu, lưu điểm cao nhất | ✅ 2026-10-21 | `assets/n5/tests.json` (sinh từ `tools/n5_tests_data.py`), `screens/n5_test_screen.dart` |
+
 Màn hình: `screens/n5_screen.dart`, mở từ thẻ "Tổng hợp N5" ở trang chủ, không khóa. Chưa đưa từ N5 vào flashcard (mã thẻ hiện theo số bài N4).
 
 ## Giai đoạn 2: Tài khoản Gmail và giọng đọc nữ
