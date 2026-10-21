@@ -39,13 +39,24 @@ jobs:
       - name: Giải mã khóa ký APK
         env:
           KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
         run: |
-          if [ -n "$KEYSTORE_BASE64" ]; then
-            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
-            echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
-          else
+          if [ -z "$KEYSTORE_BASE64" ]; then
             echo "::warning::Chưa có secret ANDROID_KEYSTORE_BASE64, APK ký bằng khóa debug (đăng nhập Google trên Android sẽ không chạy)."
+            exit 0
           fi
+          # Bỏ khoảng trắng, xuống dòng, dấu nháy lỡ dán kèm.
+          clean=$(printf '%s' "$KEYSTORE_BASE64" | tr -d ' \t\r\n"'"'")
+          if ! printf '%s' "$clean" | base64 -d > "$RUNNER_TEMP/release.jks" 2>/dev/null; then
+            echo "::warning::Secret ANDROID_KEYSTORE_BASE64 không phải base64 hợp lệ (dài ${#clean} ký tự, đúng phải là 3492). APK ký bằng khóa debug."
+            exit 0
+          fi
+          if ! keytool -list -keystore "$RUNNER_TEMP/release.jks" -storepass "$KEYSTORE_PASSWORD" >/dev/null 2>&1; then
+            echo "::warning::Khóa ký giải mã được nhưng ANDROID_KEYSTORE_PASSWORD không mở được. APK ký bằng khóa debug."
+            exit 0
+          fi
+          echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+          echo "Đã nạp khóa ký thật."
 
       - name: Build APK
         env:
