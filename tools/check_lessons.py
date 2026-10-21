@@ -40,7 +40,9 @@ def check(file):
     with open(file, encoding="utf-8") as f:
         lesson = json.load(f)
     errors, ids = [], set()
-    walk(lesson, lesson.get("id", file), errors, ids)
+    walk(lesson, lesson.get("id", file) if isinstance(lesson, dict) else file, errors, ids)
+    if not isinstance(lesson, dict):
+        return lesson, errors
     for ref in lesson.get("speaking", []) + [q["audioId"] for q in lesson.get("listening", [])]:
         if ref not in ids:
             errors.append(f"tham chiếu câu không tồn tại: {ref}")
@@ -52,7 +54,10 @@ if __name__ == "__main__":
     for file in sys.argv[1:]:
         lesson, errors = check(file)
         total += len(errors)
-        print(f"{file}: {len(lesson['grammar'])} ngữ pháp, {len(lesson['vocab'])} từ, {len(errors)} lỗi")
+        if isinstance(lesson, dict) and "grammar" in lesson and "vocab" in lesson:
+            print(f"{file}: {len(lesson['grammar'])} ngữ pháp, {len(lesson['vocab'])} từ, {len(errors)} lỗi")
+        else:
+            print(f"{file}: {len(errors)} lỗi")
         for e in errors:
             print("  -", e)
     sys.exit(1 if total else 0)

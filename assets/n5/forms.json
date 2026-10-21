@@ -1,0 +1,631 @@
+{
+ "groups": [
+  {
+   "name": "Nhóm I",
+   "descVi": "Đuôi thể ます thuộc hàng い: {書|か}きます、{飲|の}みます、{帰|かえ}ります. Chú ý: {帰|かえ}る、{入|はい}る、{走|はし}る、{知|し}る、{切|き}る là nhóm I dù trông giống nhóm II."
+  },
+  {
+   "name": "Nhóm II",
+   "descVi": "Đuôi thể ます thuộc hàng え, và một số từ hàng い: {食|た}べます、{寝|ね}ます、{見|み}ます、{起|お}きます."
+  },
+  {
+   "name": "Nhóm III",
+   "descVi": "Chỉ có する (và danh từ + する như {勉強|べんきょう}する) và {来|く}る."
+  }
+ ],
+ "formLabels": {
+  "dict": "Từ điển",
+  "masu": "ます",
+  "masen": "ません",
+  "mashita": "ました",
+  "nai": "ない",
+  "nakatta": "なかった",
+  "te": "て",
+  "ta": "た",
+  "tara": "たら",
+  "temo": "ても"
+ },
+ "forms": [
+  {
+   "id": "masu",
+   "name": "Thể ます",
+   "nameJa": "ます{形|けい}",
+   "lesson": "Bài 4–5",
+   "usesVi": "Cách nói lịch sự, dùng với người không thân, ở chỗ làm. Phủ định ～ません, quá khứ ～ました, quá khứ phủ định ～ませんでした.",
+   "rules": [
+    {
+     "group": "Nhóm I",
+     "ruleVi": "đổi đuôi hàng う sang hàng い + ます",
+     "example": "{書|か}く → {書|か}きます"
+    },
+    {
+     "group": "Nhóm II",
+     "ruleVi": "bỏ る + ます",
+     "example": "{食|た}べる → {食|た}べます"
+    },
+    {
+     "group": "Nhóm III",
+     "ruleVi": "する → します, {来|く}る → {来|き}ます",
+     "example": "{勉強|べんきょう}する → {勉強|べんきょう}します"
+    }
+   ],
+   "examples": [
+    {
+     "id": "f-masu-1",
+     "ja": "{毎朝|まいあさ}　コーヒーを　{飲|の}みます。",
+     "vi": "Mỗi sáng tôi uống cà phê."
+    },
+    {
+     "id": "f-masu-2",
+     "ja": "きのう　{会社|かいしゃ}へ　{行|い}きませんでした。",
+     "vi": "Hôm qua tôi đã không đi làm."
+    }
+   ],
+   "table": [
+    "masu",
+    "masen",
+    "mashita"
+   ]
+  },
+  {
+   "id": "te",
+   "name": "Thể て",
+   "nameJa": "て{形|けい}",
+   "lesson": "Bài 14",
+   "usesVi": "Nhờ vả (～てください), đang làm (～ています), nối hành động (～て、～), xin phép (～てもいいです), cấm (～てはいけません).",
+   "rules": [
+    {
+     "group": "Nhóm I",
+     "ruleVi": "う・つ・る → って",
+     "example": "{買|か}う → {買|か}って、{待|ま}つ → {待|ま}って"
+    },
+    {
+     "group": "Nhóm I",
+     "ruleVi": "む・ぶ・ぬ → んで",
+     "example": "{飲|の}む → {飲|の}んで、{遊|あそ}ぶ → {遊|あそ}んで"
+    },
+    {
+     "group": "Nhóm I",
+     "ruleVi": "く → いて, ぐ → いで (ngoại lệ: {行|い}く → {行|い}って)",
+     "example": "{書|か}く → {書|か}いて、{泳|およ}ぐ → {泳|およ}いで"
+    },
+    {
+     "group": "Nhóm I",
+     "ruleVi": "す → して",
+     "example": "{話|はな}す → {話|はな}して"
+    },
+    {
+     "group": "Nhóm II",
+     "ruleVi": "bỏ る + て",
+     "example": "{見|み}る → {見|み}て"
+    },
+    {
+     "group": "Nhóm III",
+     "ruleVi": "する → して, {来|く}る → {来|き}て",
+     "example": "{来|く}る → {来|き}て"
+    }
+   ],
+   "examples": [
+    {
+     "id": "f-te-1",
+     "ja": "すみません、ちょっと　{待|ま}って　ください。",
+     "vi": "Xin lỗi, vui lòng chờ một chút."
+    },
+    {
+     "id": "f-te-2",
+     "ja": "{今|いま}　{会議|かいぎ}の　{資料|しりょう}を　{読|よ}んで　います。",
+     "vi": "Bây giờ tôi đang đọc tài liệu họp."
+    }
+   ],
+   "table": [
+    "te"
+   ]
+  },
+  {
+   "id": "nai",
+   "name": "Thể ない",
+   "nameJa": "ない{形|けい}",
+   "lesson": "Bài 17",
+   "usesVi": "Phủ định thân mật. Dùng trong ～ないでください (xin đừng), ～なければなりません (phải), ～なくてもいいです (không cần).",
+   "rules": [
+    {
+     "group": "Nhóm I",
+     "ruleVi": "đổi đuôi hàng う sang hàng あ + ない (う → わない)",
+     "example": "{書|か}く → {書|か}かない、{買|か}う → {買|か}わない"
+    },
+    {
+     "group": "Nhóm II",
+     "ruleVi": "bỏ る + ない",
+     "example": "{寝|ね}る → {寝|ね}ない"
+    },
+    {
+     "group": "Nhóm III",
+     "ruleVi": "する → しない, {来|く}る → {来|こ}ない",
+     "example": "{来|く}る → {来|こ}ない"
+    }
+   ],
+   "examples": [
+    {
+     "id": "f-nai-1",
+     "ja": "ここで　たばこを　{吸|す}わないで　ください。",
+     "vi": "Xin đừng hút thuốc ở đây."
+    },
+    {
+     "id": "f-nai-2",
+     "ja": "{明日|あした}までに　レポートを　{出|だ}さなければ　なりません。",
+     "vi": "Tôi phải nộp báo cáo trước ngày mai."
+    }
+   ],
+   "table": [
+    "nai",
+    "nakatta"
+   ]
+  },
+  {
+   "id": "dict",
+   "name": "Thể từ điển",
+   "nameJa": "{辞書形|じしょけい}",
+   "lesson": "Bài 18",
+   "usesVi": "Dạng gốc của động từ, tra trong từ điển. Dùng trong ～ことができます (có thể), {趣味|しゅみ}は～ことです (sở thích), ～まえに (trước khi).",
+   "rules": [
+    {
+     "group": "Nhóm I",
+     "ruleVi": "từ thể ます: đổi hàng い sang hàng う, bỏ ます",
+     "example": "{書|か}きます → {書|か}く"
+    },
+    {
+     "group": "Nhóm II",
+     "ruleVi": "bỏ ます + る",
+     "example": "{食|た}べます → {食|た}べる"
+    },
+    {
+     "group": "Nhóm III",
+     "ruleVi": "します → する, {来|き}ます → {来|く}る",
+     "example": "{来|き}ます → {来|く}る"
+    }
+   ],
+   "examples": [
+    {
+     "id": "f-dict-1",
+     "ja": "{私|わたし}は　{日本語|にほんご}を　{話|はな}す　ことが　できます。",
+     "vi": "Tôi có thể nói tiếng Nhật."
+    },
+    {
+     "id": "f-dict-2",
+     "ja": "{寝|ね}る　まえに、{本|ほん}を　{読|よ}みます。",
+     "vi": "Trước khi ngủ tôi đọc sách."
+    }
+   ],
+   "table": [
+    "dict"
+   ]
+  },
+  {
+   "id": "ta",
+   "name": "Thể た",
+   "nameJa": "た{形|けい}",
+   "lesson": "Bài 19",
+   "usesVi": "Quá khứ thân mật. Dùng trong ～たことがあります (đã từng), ～たり～たりします (nào là... nào là...).",
+   "rules": [
+    {
+     "group": "Tất cả",
+     "ruleVi": "chia giống thể て, đổi て → た, で → だ",
+     "example": "{飲|の}んで → {飲|の}んだ、{行|い}って → {行|い}った"
+    }
+   ],
+   "examples": [
+    {
+     "id": "f-ta-1",
+     "ja": "{富士山|ふじさん}に　{登|のぼ}った　ことが　あります。",
+     "vi": "Tôi đã từng leo núi Phú Sĩ."
+    },
+    {
+     "id": "f-ta-2",
+     "ja": "{日曜日|にちようび}は　{掃除|そうじ}したり、{買|か}い{物|もの}したり　します。",
+     "vi": "Chủ nhật tôi nào là dọn dẹp, nào là đi mua sắm."
+    }
+   ],
+   "table": [
+    "ta"
+   ]
+  },
+  {
+   "id": "tara",
+   "name": "Thể たら, ても",
+   "nameJa": "～たら・～ても",
+   "lesson": "Bài 25",
+   "usesVi": "～たら: nếu, khi (điều kiện). ～ても: dù, cho dù.",
+   "rules": [
+    {
+     "group": "Tất cả",
+     "ruleVi": "～たら = thể た + ら",
+     "example": "{雨|あめ}が　{降|ふ}ったら → nếu trời mưa"
+    },
+    {
+     "group": "Tất cả",
+     "ruleVi": "～ても = thể て + も",
+     "example": "{高|たか}くても → dù đắt"
+    }
+   ],
+   "examples": [
+    {
+     "id": "f-tara-1",
+     "ja": "{駅|えき}に　{着|つ}いたら、{電話|でんわ}して　ください。",
+     "vi": "Khi đến ga thì gọi điện cho tôi nhé."
+    },
+    {
+     "id": "f-tara-2",
+     "ja": "{雨|あめ}が　{降|ふ}っても、{会社|かいしゃ}へ　{行|い}きます。",
+     "vi": "Dù trời mưa tôi vẫn đi làm."
+    }
+   ],
+   "table": [
+    "tara",
+    "temo"
+   ]
+  }
+ ],
+ "verbs": [
+  {
+   "id": "kaku",
+   "group": 1,
+   "meaningVi": "viết",
+   "forms": {
+    "dict": "{書|か}く",
+    "masu": "{書|か}きます",
+    "masen": "{書|か}きません",
+    "mashita": "{書|か}きました",
+    "nai": "{書|か}かない",
+    "nakatta": "{書|か}かなかった",
+    "te": "{書|か}いて",
+    "ta": "{書|か}いた",
+    "tara": "{書|か}いたら",
+    "temo": "{書|か}いても"
+   }
+  },
+  {
+   "id": "iku",
+   "group": 1,
+   "meaningVi": "đi",
+   "forms": {
+    "dict": "{行|い}く",
+    "masu": "{行|い}きます",
+    "masen": "{行|い}きません",
+    "mashita": "{行|い}きました",
+    "nai": "{行|い}かない",
+    "nakatta": "{行|い}かなかった",
+    "te": "{行|い}って",
+    "ta": "{行|い}った",
+    "tara": "{行|い}ったら",
+    "temo": "{行|い}っても"
+   }
+  },
+  {
+   "id": "oyogu",
+   "group": 1,
+   "meaningVi": "bơi",
+   "forms": {
+    "dict": "{泳|およ}ぐ",
+    "masu": "{泳|およ}ぎます",
+    "masen": "{泳|およ}ぎません",
+    "mashita": "{泳|およ}ぎました",
+    "nai": "{泳|およ}がない",
+    "nakatta": "{泳|およ}がなかった",
+    "te": "{泳|およ}いで",
+    "ta": "{泳|およ}いだ",
+    "tara": "{泳|およ}いだら",
+    "temo": "{泳|およ}いでも"
+   }
+  },
+  {
+   "id": "hanasu",
+   "group": 1,
+   "meaningVi": "nói chuyện",
+   "forms": {
+    "dict": "{話|はな}す",
+    "masu": "{話|はな}します",
+    "masen": "{話|はな}しません",
+    "mashita": "{話|はな}しました",
+    "nai": "{話|はな}さない",
+    "nakatta": "{話|はな}さなかった",
+    "te": "{話|はな}して",
+    "ta": "{話|はな}した",
+    "tara": "{話|はな}したら",
+    "temo": "{話|はな}しても"
+   }
+  },
+  {
+   "id": "matsu",
+   "group": 1,
+   "meaningVi": "chờ",
+   "forms": {
+    "dict": "{待|ま}つ",
+    "masu": "{待|ま}ちます",
+    "masen": "{待|ま}ちません",
+    "mashita": "{待|ま}ちました",
+    "nai": "{待|ま}たない",
+    "nakatta": "{待|ま}たなかった",
+    "te": "{待|ま}って",
+    "ta": "{待|ま}った",
+    "tara": "{待|ま}ったら",
+    "temo": "{待|ま}っても"
+   }
+  },
+  {
+   "id": "shinu",
+   "group": 1,
+   "meaningVi": "chết",
+   "forms": {
+    "dict": "{死|し}ぬ",
+    "masu": "{死|し}にます",
+    "masen": "{死|し}にません",
+    "mashita": "{死|し}にました",
+    "nai": "{死|し}なない",
+    "nakatta": "{死|し}ななかった",
+    "te": "{死|し}んで",
+    "ta": "{死|し}んだ",
+    "tara": "{死|し}んだら",
+    "temo": "{死|し}んでも"
+   }
+  },
+  {
+   "id": "asobu",
+   "group": 1,
+   "meaningVi": "chơi",
+   "forms": {
+    "dict": "{遊|あそ}ぶ",
+    "masu": "{遊|あそ}びます",
+    "masen": "{遊|あそ}びません",
+    "mashita": "{遊|あそ}びました",
+    "nai": "{遊|あそ}ばない",
+    "nakatta": "{遊|あそ}ばなかった",
+    "te": "{遊|あそ}んで",
+    "ta": "{遊|あそ}んだ",
+    "tara": "{遊|あそ}んだら",
+    "temo": "{遊|あそ}んでも"
+   }
+  },
+  {
+   "id": "nomu",
+   "group": 1,
+   "meaningVi": "uống",
+   "forms": {
+    "dict": "{飲|の}む",
+    "masu": "{飲|の}みます",
+    "masen": "{飲|の}みません",
+    "mashita": "{飲|の}みました",
+    "nai": "{飲|の}まない",
+    "nakatta": "{飲|の}まなかった",
+    "te": "{飲|の}んで",
+    "ta": "{飲|の}んだ",
+    "tara": "{飲|の}んだら",
+    "temo": "{飲|の}んでも"
+   }
+  },
+  {
+   "id": "kaeru",
+   "group": 1,
+   "meaningVi": "về",
+   "forms": {
+    "dict": "{帰|かえ}る",
+    "masu": "{帰|かえ}ります",
+    "masen": "{帰|かえ}りません",
+    "mashita": "{帰|かえ}りました",
+    "nai": "{帰|かえ}らない",
+    "nakatta": "{帰|かえ}らなかった",
+    "te": "{帰|かえ}って",
+    "ta": "{帰|かえ}った",
+    "tara": "{帰|かえ}ったら",
+    "temo": "{帰|かえ}っても"
+   }
+  },
+  {
+   "id": "kau",
+   "group": 1,
+   "meaningVi": "mua",
+   "forms": {
+    "dict": "{買|か}う",
+    "masu": "{買|か}います",
+    "masen": "{買|か}いません",
+    "mashita": "{買|か}いました",
+    "nai": "{買|か}わない",
+    "nakatta": "{買|か}わなかった",
+    "te": "{買|か}って",
+    "ta": "{買|か}った",
+    "tara": "{買|か}ったら",
+    "temo": "{買|か}っても"
+   }
+  },
+  {
+   "id": "taberu",
+   "group": 2,
+   "meaningVi": "ăn",
+   "forms": {
+    "dict": "{食|た}べる",
+    "masu": "{食|た}べます",
+    "masen": "{食|た}べません",
+    "mashita": "{食|た}べました",
+    "nai": "{食|た}べない",
+    "nakatta": "{食|た}べなかった",
+    "te": "{食|た}べて",
+    "ta": "{食|た}べた",
+    "tara": "{食|た}べたら",
+    "temo": "{食|た}べても"
+   }
+  },
+  {
+   "id": "miru",
+   "group": 2,
+   "meaningVi": "xem, nhìn",
+   "forms": {
+    "dict": "{見|み}る",
+    "masu": "{見|み}ます",
+    "masen": "{見|み}ません",
+    "mashita": "{見|み}ました",
+    "nai": "{見|み}ない",
+    "nakatta": "{見|み}なかった",
+    "te": "{見|み}て",
+    "ta": "{見|み}た",
+    "tara": "{見|み}たら",
+    "temo": "{見|み}ても"
+   }
+  },
+  {
+   "id": "okiru",
+   "group": 2,
+   "meaningVi": "thức dậy",
+   "forms": {
+    "dict": "{起|お}きる",
+    "masu": "{起|お}きます",
+    "masen": "{起|お}きません",
+    "mashita": "{起|お}きました",
+    "nai": "{起|お}きない",
+    "nakatta": "{起|お}きなかった",
+    "te": "{起|お}きて",
+    "ta": "{起|お}きた",
+    "tara": "{起|お}きたら",
+    "temo": "{起|お}きても"
+   }
+  },
+  {
+   "id": "neru",
+   "group": 2,
+   "meaningVi": "ngủ",
+   "forms": {
+    "dict": "{寝|ね}る",
+    "masu": "{寝|ね}ます",
+    "masen": "{寝|ね}ません",
+    "mashita": "{寝|ね}ました",
+    "nai": "{寝|ね}ない",
+    "nakatta": "{寝|ね}なかった",
+    "te": "{寝|ね}て",
+    "ta": "{寝|ね}た",
+    "tara": "{寝|ね}たら",
+    "temo": "{寝|ね}ても"
+   }
+  },
+  {
+   "id": "suru",
+   "group": 3,
+   "meaningVi": "làm",
+   "forms": {
+    "dict": "する",
+    "masu": "します",
+    "masen": "しません",
+    "mashita": "しました",
+    "nai": "しない",
+    "nakatta": "しなかった",
+    "te": "して",
+    "ta": "した",
+    "tara": "したら",
+    "temo": "しても"
+   }
+  },
+  {
+   "id": "benkyousuru",
+   "group": 3,
+   "meaningVi": "học",
+   "forms": {
+    "dict": "{勉強|べんきょう}する",
+    "masu": "{勉強|べんきょう}します",
+    "masen": "{勉強|べんきょう}しません",
+    "mashita": "{勉強|べんきょう}しました",
+    "nai": "{勉強|べんきょう}しない",
+    "nakatta": "{勉強|べんきょう}しなかった",
+    "te": "{勉強|べんきょう}して",
+    "ta": "{勉強|べんきょう}した",
+    "tara": "{勉強|べんきょう}したら",
+    "temo": "{勉強|べんきょう}しても"
+   }
+  },
+  {
+   "id": "kuru",
+   "group": 3,
+   "meaningVi": "đến",
+   "forms": {
+    "dict": "{来|く}る",
+    "masu": "{来|き}ます",
+    "masen": "{来|き}ません",
+    "mashita": "{来|き}ました",
+    "nai": "{来|こ}ない",
+    "nakatta": "{来|こ}なかった",
+    "te": "{来|き}て",
+    "ta": "{来|き}た",
+    "tara": "{来|き}たら",
+    "temo": "{来|き}ても"
+   }
+  }
+ ],
+ "plain": {
+  "id": "plain",
+  "name": "Thể thông thường",
+  "nameJa": "{普通形|ふつうけい}",
+  "lesson": "Bài 8, 12, 20",
+  "usesVi": "Nói chuyện thân mật với bạn bè, gia đình, và đứng trước các mẫu như ～と{思|おも}います, ～と{言|い}いました (bài 21).",
+  "columns": [
+   "Hiện tại",
+   "Phủ định",
+   "Quá khứ",
+   "Quá khứ phủ định"
+  ],
+  "rows": [
+   {
+    "label": "Động từ",
+    "cells": [
+     "{書|か}く",
+     "{書|か}かない",
+     "{書|か}いた",
+     "{書|か}かなかった"
+    ]
+   },
+   {
+    "label": "Tính từ い",
+    "cells": [
+     "{高|たか}い",
+     "{高|たか}くない",
+     "{高|たか}かった",
+     "{高|たか}くなかった"
+    ]
+   },
+   {
+    "label": "いい (đặc biệt)",
+    "cells": [
+     "いい",
+     "よくない",
+     "よかった",
+     "よくなかった"
+    ]
+   },
+   {
+    "label": "Tính từ な",
+    "cells": [
+     "{静|しず}かだ",
+     "{静|しず}かじゃない",
+     "{静|しず}かだった",
+     "{静|しず}かじゃなかった"
+    ]
+   },
+   {
+    "label": "Danh từ",
+    "cells": [
+     "{雨|あめ}だ",
+     "{雨|あめ}じゃない",
+     "{雨|あめ}だった",
+     "{雨|あめ}じゃなかった"
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "id": "f-plain-1",
+    "ja": "あした　{雨|あめ}が　{降|ふ}ると　{思|おも}う。",
+    "vi": "Tôi nghĩ mai trời sẽ mưa."
+   },
+   {
+    "id": "f-plain-2",
+    "ja": "きのうの　テストは　{難|むずか}しかった。",
+    "vi": "Bài kiểm tra hôm qua khó."
+   }
+  ]
+ }
+}

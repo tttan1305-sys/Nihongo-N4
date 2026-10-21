@@ -30,7 +30,7 @@ jobs:
           cache: true
 
       - name: Kiểm tra furigana trong bài học
-        run: python3 tools/check_lessons.py assets/lessons/*.json
+        run: python3 tools/check_lessons.py assets/lessons/*.json assets/n5/*.json
 
       - run: flutter pub get
       - run: flutter analyze

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/flashcard_store.dart';
 import '../data/lesson_repository.dart';
+import '../data/n5_repository.dart';
 import '../data/progress_store.dart';
 import '../services/auth_service.dart';
 import '../services/sync_service.dart';
@@ -9,10 +10,12 @@ import '../services/recognizer.dart';
 import '../services/speaker.dart';
 import 'flashcard_screen.dart';
 import 'lesson_screen.dart';
+import 'n5_screen.dart';
 
-/// Trang chủ: số thẻ cần ôn hôm nay và lộ trình bài 26 → 50.
+/// Trang chủ: số thẻ cần ôn hôm nay, Tổng hợp N5 và lộ trình bài 26 → 50.
 class HomeScreen extends StatelessWidget {
   final LessonRepository repository;
+  final N5Repository n5;
   final ProgressStore progress;
   final FlashcardStore flashcards;
   final Speaker speaker;
@@ -20,16 +23,17 @@ class HomeScreen extends StatelessWidget {
   final AuthService auth;
   final SyncService? sync;
 
-  const HomeScreen({
+  HomeScreen({
     super.key,
     required this.repository,
+    N5Repository? n5,
     required this.progress,
     required this.flashcards,
     required this.speaker,
     required this.recognizer,
     required this.auth,
     this.sync,
-  });
+  }) : n5 = n5 ?? N5Repository();
 
   @override
   Widget build(BuildContext context) {
@@ -51,11 +55,12 @@ class HomeScreen extends StatelessWidget {
           return ListenableBuilder(
             listenable: progress,
             builder: (context, _) => ListView.separated(
-              itemCount: lastLesson - firstLesson + 2,
+              itemCount: lastLesson - firstLesson + 3,
               separatorBuilder: (_, _) => const Divider(height: 1),
               itemBuilder: (context, i) {
                 if (i == 0) return _reviewCard(context);
-                final number = firstLesson + i - 1;
+                if (i == 1) return _n5Card(context);
+                final number = firstLesson + i - 2;
                 final written = available.contains(number);
                 final unlocked = progress.isLessonUnlocked(
                   number,
@@ -103,6 +108,25 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         },
+      ),
+    );
+  }
+
+  Widget _n5Card(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+      child: ListTile(
+        key: const ValueKey('open-n5'),
+        contentPadding: const EdgeInsets.all(16),
+        leading: const Icon(Icons.menu_book, size: 36),
+        title: const Text('Tổng hợp N5'),
+        subtitle: const Text('Các thể, ngữ pháp bài 1–25, từ vựng N5'),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => N5Screen(repository: n5, speaker: speaker),
+          ),
+        ),
       ),
     );
   }

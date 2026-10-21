@@ -1,0 +1,3438 @@
+{
+ "topics": [
+  {
+   "id": "t01",
+   "titleVi": "Con người, gia đình",
+   "words": [
+    {
+     "id": "n5v001",
+     "word": "{私|わたし}",
+     "kana": "わたし",
+     "meaningVi": "tôi",
+     "example": {
+      "id": "n5e001",
+      "ja": "{私|わたし}は　ベトナム{人|じん}です。",
+      "vi": "Tôi là người Việt Nam."
+     }
+    },
+    {
+     "id": "n5v002",
+     "word": "{人|ひと}",
+     "kana": "ひと",
+     "meaningVi": "người",
+     "example": {
+      "id": "n5e002",
+      "ja": "あの　{人|ひと}は　だれですか。",
+      "vi": "Người kia là ai?"
+     }
+    },
+    {
+     "id": "n5v003",
+     "word": "{男|おとこ}の{人|ひと}",
+     "kana": "おとこのひと",
+     "meaningVi": "người đàn ông",
+     "example": {
+      "id": "n5e003",
+      "ja": "{男|おとこ}の{人|ひと}が　{二人|ふたり}　います。",
+      "vi": "Có hai người đàn ông."
+     }
+    },
+    {
+     "id": "n5v004",
+     "word": "{女|おんな}の{人|ひと}",
+     "kana": "おんなのひと",
+     "meaningVi": "người phụ nữ",
+     "example": {
+      "id": "n5e004",
+      "ja": "あの　{女|おんな}の{人|ひと}は　{先生|せんせい}です。",
+      "vi": "Người phụ nữ kia là giáo viên."
+     }
+    },
+    {
+     "id": "n5v005",
+     "word": "{子|こ}ども",
+     "kana": "こども",
+     "meaningVi": "trẻ em, con",
+     "example": {
+      "id": "n5e005",
+      "ja": "{子|こ}どもが　{公園|こうえん}で　{遊|あそ}んで　います。",
+      "vi": "Trẻ con đang chơi ở công viên."
+     }
+    },
+    {
+     "id": "n5v006",
+     "word": "{友達|ともだち}",
+     "kana": "ともだち",
+     "meaningVi": "bạn bè",
+     "example": {
+      "id": "n5e006",
+      "ja": "{友達|ともだち}と　{映画|えいが}を　{見|み}ます。",
+      "vi": "Tôi xem phim với bạn."
+     }
+    },
+    {
+     "id": "n5v007",
+     "word": "{家族|かぞく}",
+     "kana": "かぞく",
+     "meaningVi": "gia đình",
+     "example": {
+      "id": "n5e007",
+      "ja": "{家族|かぞく}は　{四人|よにん}です。",
+      "vi": "Gia đình tôi có 4 người."
+     }
+    },
+    {
+     "id": "n5v008",
+     "word": "{父|ちち}",
+     "kana": "ちち",
+     "meaningVi": "bố (tôi)",
+     "example": {
+      "id": "n5e008",
+      "ja": "{父|ちち}は　{医者|いしゃ}です。",
+      "vi": "Bố tôi là bác sĩ."
+     }
+    },
+    {
+     "id": "n5v009",
+     "word": "{母|はは}",
+     "kana": "はは",
+     "meaningVi": "mẹ (tôi)",
+     "example": {
+      "id": "n5e009",
+      "ja": "{母|はは}は　{料理|りょうり}が　{上手|じょうず}です。",
+      "vi": "Mẹ tôi nấu ăn giỏi."
+     }
+    },
+    {
+     "id": "n5v010",
+     "word": "お{父|とう}さん",
+     "kana": "おとうさん",
+     "meaningVi": "bố (người khác), bố ơi",
+     "example": {
+      "id": "n5e010",
+      "ja": "お{父|とう}さんは　お{元気|げんき}ですか。",
+      "vi": "Bố bạn có khỏe không?"
+     }
+    },
+    {
+     "id": "n5v011",
+     "word": "お{母|かあ}さん",
+     "kana": "おかあさん",
+     "meaningVi": "mẹ (người khác), mẹ ơi",
+     "example": {
+      "id": "n5e011",
+      "ja": "お{母|かあ}さん、{行|い}って　きます。",
+      "vi": "Mẹ ơi, con đi đây."
+     }
+    },
+    {
+     "id": "n5v012",
+     "word": "{兄|あに}",
+     "kana": "あに",
+     "meaningVi": "anh trai (tôi)",
+     "example": {
+      "id": "n5e012",
+      "ja": "{兄|あに}は　{東京|とうきょう}に　{住|す}んで　います。",
+      "vi": "Anh trai tôi sống ở Tokyo."
+     }
+    },
+    {
+     "id": "n5v013",
+     "word": "{姉|あね}",
+     "kana": "あね",
+     "meaningVi": "chị gái (tôi)",
+     "example": {
+      "id": "n5e013",
+      "ja": "{姉|あね}は　{銀行|ぎんこう}で　{働|はたら}いて　います。",
+      "vi": "Chị tôi làm ở ngân hàng."
+     }
+    },
+    {
+     "id": "n5v014",
+     "word": "{弟|おとうと}",
+     "kana": "おとうと",
+     "meaningVi": "em trai",
+     "example": {
+      "id": "n5e014",
+      "ja": "{弟|おとうと}は　{高校生|こうこうせい}です。",
+      "vi": "Em trai tôi là học sinh cấp ba."
+     }
+    },
+    {
+     "id": "n5v015",
+     "word": "{妹|いもうと}",
+     "kana": "いもうと",
+     "meaningVi": "em gái",
+     "example": {
+      "id": "n5e015",
+      "ja": "{妹|いもうと}に　プレゼントを　あげました。",
+      "vi": "Tôi đã tặng quà cho em gái."
+     }
+    },
+    {
+     "id": "n5v016",
+     "word": "{主人|しゅじん}",
+     "kana": "しゅじん",
+     "meaningVi": "chồng (tôi)",
+     "example": {
+      "id": "n5e016",
+      "ja": "{主人|しゅじん}は　{会社員|かいしゃいん}です。",
+      "vi": "Chồng tôi là nhân viên công ty."
+     }
+    },
+    {
+     "id": "n5v017",
+     "word": "{家内|かない}",
+     "kana": "かない",
+     "meaningVi": "vợ (tôi)",
+     "example": {
+      "id": "n5e017",
+      "ja": "{家内|かない}と　{旅行|りょこう}しました。",
+      "vi": "Tôi đã đi du lịch với vợ."
+     }
+    },
+    {
+     "id": "n5v018",
+     "word": "{名前|なまえ}",
+     "kana": "なまえ",
+     "meaningVi": "tên",
+     "example": {
+      "id": "n5e018",
+      "ja": "お{名前|なまえ}は？",
+      "vi": "Tên bạn là gì?"
+     }
+    },
+    {
+     "id": "n5v019",
+     "word": "{国|くに}",
+     "kana": "くに",
+     "meaningVi": "đất nước, quê",
+     "example": {
+      "id": "n5e019",
+      "ja": "お{国|くに}は　どちらですか。",
+      "vi": "Bạn đến từ nước nào?"
+     }
+    },
+    {
+     "id": "n5v020",
+     "word": "{皆|みな}さん",
+     "kana": "みなさん",
+     "meaningVi": "mọi người",
+     "example": {
+      "id": "n5e020",
+      "ja": "{皆|みな}さん、おはようございます。",
+      "vi": "Chào buổi sáng mọi người."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t02",
+   "titleVi": "Công việc, trường học",
+   "words": [
+    {
+     "id": "n5v021",
+     "word": "{先生|せんせい}",
+     "kana": "せんせい",
+     "meaningVi": "giáo viên, thầy cô",
+     "example": {
+      "id": "n5e021",
+      "ja": "{先生|せんせい}に　{質問|しつもん}します。",
+      "vi": "Tôi hỏi thầy giáo."
+     }
+    },
+    {
+     "id": "n5v022",
+     "word": "{学生|がくせい}",
+     "kana": "がくせい",
+     "meaningVi": "sinh viên",
+     "example": {
+      "id": "n5e022",
+      "ja": "{私|わたし}は　{大学|だいがく}の　{学生|がくせい}です。",
+      "vi": "Tôi là sinh viên đại học."
+     }
+    },
+    {
+     "id": "n5v023",
+     "word": "{会社員|かいしゃいん}",
+     "kana": "かいしゃいん",
+     "meaningVi": "nhân viên công ty",
+     "example": {
+      "id": "n5e023",
+      "ja": "{兄|あに}は　{会社員|かいしゃいん}です。",
+      "vi": "Anh tôi là nhân viên công ty."
+     }
+    },
+    {
+     "id": "n5v024",
+     "word": "{社員|しゃいん}",
+     "kana": "しゃいん",
+     "meaningVi": "nhân viên (của công ty)",
+     "example": {
+      "id": "n5e024",
+      "ja": "{新|あたら}しい　{社員|しゃいん}が　{来|き}ました。",
+      "vi": "Có nhân viên mới đến."
+     }
+    },
+    {
+     "id": "n5v025",
+     "word": "{医者|いしゃ}",
+     "kana": "いしゃ",
+     "meaningVi": "bác sĩ",
+     "example": {
+      "id": "n5e025",
+      "ja": "{医者|いしゃ}に　{行|い}きます。",
+      "vi": "Tôi đi khám bác sĩ."
+     }
+    },
+    {
+     "id": "n5v026",
+     "word": "{会社|かいしゃ}",
+     "kana": "かいしゃ",
+     "meaningVi": "công ty",
+     "example": {
+      "id": "n5e026",
+      "ja": "{会社|かいしゃ}は　9{時|じ}からです。",
+      "vi": "Công ty làm từ 9 giờ."
+     }
+    },
+    {
+     "id": "n5v027",
+     "word": "{仕事|しごと}",
+     "kana": "しごと",
+     "meaningVi": "công việc",
+     "example": {
+      "id": "n5e027",
+      "ja": "{仕事|しごと}は　{何時|なんじ}に　{終|お}わりますか。",
+      "vi": "Mấy giờ xong việc?"
+     }
+    },
+    {
+     "id": "n5v028",
+     "word": "{会議|かいぎ}",
+     "kana": "かいぎ",
+     "meaningVi": "cuộc họp",
+     "example": {
+      "id": "n5e028",
+      "ja": "{会議|かいぎ}は　{何時|なんじ}からですか。",
+      "vi": "Cuộc họp bắt đầu lúc mấy giờ?"
+     }
+    },
+    {
+     "id": "n5v029",
+     "word": "{学校|がっこう}",
+     "kana": "がっこう",
+     "meaningVi": "trường học",
+     "example": {
+      "id": "n5e029",
+      "ja": "{学校|がっこう}まで　{歩|ある}いて　{行|い}きます。",
+      "vi": "Tôi đi bộ đến trường."
+     }
+    },
+    {
+     "id": "n5v030",
+     "word": "{大学|だいがく}",
+     "kana": "だいがく",
+     "meaningVi": "đại học",
+     "example": {
+      "id": "n5e030",
+      "ja": "{大学|だいがく}で　{経済|けいざい}を　{勉強|べんきょう}して　います。",
+      "vi": "Tôi học kinh tế ở đại học."
+     }
+    },
+    {
+     "id": "n5v031",
+     "word": "{授業|じゅぎょう}",
+     "kana": "じゅぎょう",
+     "meaningVi": "giờ học",
+     "example": {
+      "id": "n5e031",
+      "ja": "{授業|じゅぎょう}は　{午後|ごご}　{終|お}わります。",
+      "vi": "Giờ học kết thúc vào buổi chiều."
+     }
+    },
+    {
+     "id": "n5v032",
+     "word": "{宿題|しゅくだい}",
+     "kana": "しゅくだい",
+     "meaningVi": "bài tập về nhà",
+     "example": {
+      "id": "n5e032",
+      "ja": "{宿題|しゅくだい}を　{忘|わす}れました。",
+      "vi": "Tôi quên bài tập."
+     }
+    },
+    {
+     "id": "n5v033",
+     "word": "{試験|しけん}",
+     "kana": "しけん",
+     "meaningVi": "kỳ thi",
+     "example": {
+      "id": "n5e033",
+      "ja": "{来週|らいしゅう}　{試験|しけん}が　あります。",
+      "vi": "Tuần sau có kỳ thi."
+     }
+    },
+    {
+     "id": "n5v034",
+     "word": "{質問|しつもん}",
+     "kana": "しつもん",
+     "meaningVi": "câu hỏi",
+     "example": {
+      "id": "n5e034",
+      "ja": "{質問|しつもん}が　ありますか。",
+      "vi": "Bạn có câu hỏi không?"
+     }
+    },
+    {
+     "id": "n5v035",
+     "word": "{問題|もんだい}",
+     "kana": "もんだい",
+     "meaningVi": "vấn đề, câu hỏi bài tập",
+     "example": {
+      "id": "n5e035",
+      "ja": "この　{問題|もんだい}は　{難|むずか}しいです。",
+      "vi": "Câu hỏi này khó."
+     }
+    },
+    {
+     "id": "n5v036",
+     "word": "{言葉|ことば}",
+     "kana": "ことば",
+     "meaningVi": "từ, ngôn ngữ",
+     "example": {
+      "id": "n5e036",
+      "ja": "この　{言葉|ことば}の　{意味|いみ}は　{何|なん}ですか。",
+      "vi": "Từ này nghĩa là gì?"
+     }
+    },
+    {
+     "id": "n5v037",
+     "word": "{漢字|かんじ}",
+     "kana": "かんじ",
+     "meaningVi": "chữ Hán",
+     "example": {
+      "id": "n5e037",
+      "ja": "{毎日|まいにち}　{漢字|かんじ}を　{五|いつ}つ　{覚|おぼ}えます。",
+      "vi": "Mỗi ngày tôi nhớ 5 chữ Hán."
+     }
+    },
+    {
+     "id": "n5v038",
+     "word": "{辞書|じしょ}",
+     "kana": "じしょ",
+     "meaningVi": "từ điển",
+     "example": {
+      "id": "n5e038",
+      "ja": "{辞書|じしょ}で　{調|しら}べます。",
+      "vi": "Tôi tra từ điển."
+     }
+    },
+    {
+     "id": "n5v039",
+     "word": "{本|ほん}",
+     "kana": "ほん",
+     "meaningVi": "sách",
+     "example": {
+      "id": "n5e039",
+      "ja": "{図書館|としょかん}で　{本|ほん}を　{借|か}ります。",
+      "vi": "Tôi mượn sách ở thư viện."
+     }
+    },
+    {
+     "id": "n5v040",
+     "word": "{名刺|めいし}",
+     "kana": "めいし",
+     "meaningVi": "danh thiếp",
+     "example": {
+      "id": "n5e040",
+      "ja": "{名刺|めいし}を　どうぞ。",
+      "vi": "Xin gửi anh danh thiếp."
+     }
+    },
+    {
+     "id": "n5v041",
+     "word": "{資料|しりょう}",
+     "kana": "しりょう",
+     "meaningVi": "tài liệu",
+     "example": {
+      "id": "n5e041",
+      "ja": "{会議|かいぎ}の　{資料|しりょう}を　コピーします。",
+      "vi": "Tôi photo tài liệu họp."
+     }
+    },
+    {
+     "id": "n5v042",
+     "word": "{休|やす}み",
+     "kana": "やすみ",
+     "meaningVi": "nghỉ, ngày nghỉ",
+     "example": {
+      "id": "n5e042",
+      "ja": "あしたは　{休|やす}みです。",
+      "vi": "Mai là ngày nghỉ."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t03",
+   "titleVi": "Nơi chốn",
+   "words": [
+    {
+     "id": "n5v043",
+     "word": "{家|いえ}",
+     "kana": "いえ",
+     "meaningVi": "nhà",
+     "example": {
+      "id": "n5e043",
+      "ja": "{家|いえ}へ　{帰|かえ}ります。",
+      "vi": "Tôi về nhà."
+     }
+    },
+    {
+     "id": "n5v044",
+     "word": "{部屋|へや}",
+     "kana": "へや",
+     "meaningVi": "phòng",
+     "example": {
+      "id": "n5e044",
+      "ja": "{部屋|へや}を　{掃除|そうじ}します。",
+      "vi": "Tôi dọn phòng."
+     }
+    },
+    {
+     "id": "n5v045",
+     "word": "{駅|えき}",
+     "kana": "えき",
+     "meaningVi": "nhà ga",
+     "example": {
+      "id": "n5e045",
+      "ja": "{駅|えき}は　どこですか。",
+      "vi": "Nhà ga ở đâu?"
+     }
+    },
+    {
+     "id": "n5v046",
+     "word": "{銀行|ぎんこう}",
+     "kana": "ぎんこう",
+     "meaningVi": "ngân hàng",
+     "example": {
+      "id": "n5e046",
+      "ja": "{銀行|ぎんこう}で　お{金|かね}を　{下|お}ろします。",
+      "vi": "Tôi rút tiền ở ngân hàng."
+     }
+    },
+    {
+     "id": "n5v047",
+     "word": "{郵便局|ゆうびんきょく}",
+     "kana": "ゆうびんきょく",
+     "meaningVi": "bưu điện",
+     "example": {
+      "id": "n5e047",
+      "ja": "{郵便局|ゆうびんきょく}で　{荷物|にもつ}を　{送|おく}ります。",
+      "vi": "Tôi gửi hàng ở bưu điện."
+     }
+    },
+    {
+     "id": "n5v048",
+     "word": "{病院|びょういん}",
+     "kana": "びょういん",
+     "meaningVi": "bệnh viện",
+     "example": {
+      "id": "n5e048",
+      "ja": "{病院|びょういん}へ　{行|い}かなければ　なりません。",
+      "vi": "Tôi phải đi bệnh viện."
+     }
+    },
+    {
+     "id": "n5v049",
+     "word": "{図書館|としょかん}",
+     "kana": "としょかん",
+     "meaningVi": "thư viện",
+     "example": {
+      "id": "n5e049",
+      "ja": "{図書館|としょかん}は　{静|しず}かです。",
+      "vi": "Thư viện yên tĩnh."
+     }
+    },
+    {
+     "id": "n5v050",
+     "word": "{公園|こうえん}",
+     "kana": "こうえん",
+     "meaningVi": "công viên",
+     "example": {
+      "id": "n5e050",
+      "ja": "{公園|こうえん}を　{散歩|さんぽ}します。",
+      "vi": "Tôi đi dạo trong công viên."
+     }
+    },
+    {
+     "id": "n5v051",
+     "word": "{店|みせ}",
+     "kana": "みせ",
+     "meaningVi": "cửa hàng",
+     "example": {
+      "id": "n5e051",
+      "ja": "あの　{店|みせ}は　{安|やす}いです。",
+      "vi": "Cửa hàng kia rẻ."
+     }
+    },
+    {
+     "id": "n5v052",
+     "word": "{食堂|しょくどう}",
+     "kana": "しょくどう",
+     "meaningVi": "nhà ăn",
+     "example": {
+      "id": "n5e052",
+      "ja": "{食堂|しょくどう}で　{昼|ひる}ごはんを　{食|た}べます。",
+      "vi": "Tôi ăn trưa ở nhà ăn."
+     }
+    },
+    {
+     "id": "n5v053",
+     "word": "{町|まち}",
+     "kana": "まち",
+     "meaningVi": "thị trấn, phố",
+     "example": {
+      "id": "n5e053",
+      "ja": "この　{町|まち}は　にぎやかです。",
+      "vi": "Thị trấn này náo nhiệt."
+     }
+    },
+    {
+     "id": "n5v054",
+     "word": "{道|みち}",
+     "kana": "みち",
+     "meaningVi": "đường",
+     "example": {
+      "id": "n5e054",
+      "ja": "{道|みち}が　わかりません。",
+      "vi": "Tôi không biết đường."
+     }
+    },
+    {
+     "id": "n5v055",
+     "word": "{空港|くうこう}",
+     "kana": "くうこう",
+     "meaningVi": "sân bay",
+     "example": {
+      "id": "n5e055",
+      "ja": "{空港|くうこう}まで　バスで　{行|い}きます。",
+      "vi": "Tôi đi xe buýt ra sân bay."
+     }
+    },
+    {
+     "id": "n5v056",
+     "word": "{受付|うけつけ}",
+     "kana": "うけつけ",
+     "meaningVi": "quầy lễ tân",
+     "example": {
+      "id": "n5e056",
+      "ja": "{受付|うけつけ}で　{名前|なまえ}を　{書|か}いて　ください。",
+      "vi": "Hãy viết tên ở quầy lễ tân."
+     }
+    },
+    {
+     "id": "n5v057",
+     "word": "{事務所|じむしょ}",
+     "kana": "じむしょ",
+     "meaningVi": "văn phòng",
+     "example": {
+      "id": "n5e057",
+      "ja": "{事務所|じむしょ}は　2{階|かい}です。",
+      "vi": "Văn phòng ở tầng 2."
+     }
+    },
+    {
+     "id": "n5v058",
+     "word": "{会議室|かいぎしつ}",
+     "kana": "かいぎしつ",
+     "meaningVi": "phòng họp",
+     "example": {
+      "id": "n5e058",
+      "ja": "{会議室|かいぎしつ}に　だれも　いません。",
+      "vi": "Không có ai trong phòng họp."
+     }
+    },
+    {
+     "id": "n5v059",
+     "word": "トイレ",
+     "kana": "トイレ",
+     "meaningVi": "nhà vệ sinh",
+     "example": {
+      "id": "n5e059",
+      "ja": "トイレは　あちらです。",
+      "vi": "Nhà vệ sinh ở phía kia."
+     }
+    },
+    {
+     "id": "n5v060",
+     "word": "{外|そと}",
+     "kana": "そと",
+     "meaningVi": "bên ngoài",
+     "example": {
+      "id": "n5e060",
+      "ja": "{外|そと}は　{寒|さむ}いです。",
+      "vi": "Bên ngoài lạnh."
+     }
+    },
+    {
+     "id": "n5v061",
+     "word": "{中|なか}",
+     "kana": "なか",
+     "meaningVi": "bên trong",
+     "example": {
+      "id": "n5e061",
+      "ja": "かばんの　{中|なか}に　{財布|さいふ}が　あります。",
+      "vi": "Trong túi có ví."
+     }
+    },
+    {
+     "id": "n5v062",
+     "word": "{上|うえ}",
+     "kana": "うえ",
+     "meaningVi": "trên",
+     "example": {
+      "id": "n5e062",
+      "ja": "{机|つくえ}の　{上|うえ}に　{本|ほん}が　あります。",
+      "vi": "Trên bàn có sách."
+     }
+    },
+    {
+     "id": "n5v063",
+     "word": "{下|した}",
+     "kana": "した",
+     "meaningVi": "dưới",
+     "example": {
+      "id": "n5e063",
+      "ja": "{椅子|いす}の　{下|した}に　{猫|ねこ}が　います。",
+      "vi": "Dưới ghế có con mèo."
+     }
+    },
+    {
+     "id": "n5v064",
+     "word": "{前|まえ}",
+     "kana": "まえ",
+     "meaningVi": "trước",
+     "example": {
+      "id": "n5e064",
+      "ja": "{駅|えき}の　{前|まえ}で　{待|ま}って　います。",
+      "vi": "Tôi đang đợi trước nhà ga."
+     }
+    },
+    {
+     "id": "n5v065",
+     "word": "{後|うし}ろ",
+     "kana": "うしろ",
+     "meaningVi": "sau, phía sau",
+     "example": {
+      "id": "n5e065",
+      "ja": "{私|わたし}の　{後|うし}ろに　{田中|たなか}さんが　います。",
+      "vi": "Sau lưng tôi là anh Tanaka."
+     }
+    },
+    {
+     "id": "n5v066",
+     "word": "{隣|となり}",
+     "kana": "となり",
+     "meaningVi": "bên cạnh",
+     "example": {
+      "id": "n5e066",
+      "ja": "{隣|となり}の　{人|ひと}は　{親切|しんせつ}です。",
+      "vi": "Người bên cạnh rất tốt bụng."
+     }
+    },
+    {
+     "id": "n5v067",
+     "word": "{近|ちか}く",
+     "kana": "ちかく",
+     "meaningVi": "gần, chỗ gần",
+     "example": {
+      "id": "n5e067",
+      "ja": "{近|ちか}くに　コンビニが　あります。",
+      "vi": "Gần đây có cửa hàng tiện lợi."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t04",
+   "titleVi": "Thời gian",
+   "words": [
+    {
+     "id": "n5v068",
+     "word": "{今|いま}",
+     "kana": "いま",
+     "meaningVi": "bây giờ",
+     "example": {
+      "id": "n5e068",
+      "ja": "{今|いま}　{何時|なんじ}ですか。",
+      "vi": "Bây giờ là mấy giờ?"
+     }
+    },
+    {
+     "id": "n5v069",
+     "word": "{今日|きょう}",
+     "kana": "きょう",
+     "meaningVi": "hôm nay",
+     "example": {
+      "id": "n5e069",
+      "ja": "{今日|きょう}は　{暑|あつ}いですね。",
+      "vi": "Hôm nay nóng nhỉ."
+     }
+    },
+    {
+     "id": "n5v070",
+     "word": "{明日|あした}",
+     "kana": "あした",
+     "meaningVi": "ngày mai",
+     "example": {
+      "id": "n5e070",
+      "ja": "{明日|あした}　また　{来|き}ます。",
+      "vi": "Ngày mai tôi lại đến."
+     }
+    },
+    {
+     "id": "n5v071",
+     "word": "{昨日|きのう}",
+     "kana": "きのう",
+     "meaningVi": "hôm qua",
+     "example": {
+      "id": "n5e071",
+      "ja": "{昨日|きのう}　{雨|あめ}が　{降|ふ}りました。",
+      "vi": "Hôm qua trời mưa."
+     }
+    },
+    {
+     "id": "n5v072",
+     "word": "{毎日|まいにち}",
+     "kana": "まいにち",
+     "meaningVi": "mỗi ngày",
+     "example": {
+      "id": "n5e072",
+      "ja": "{毎日|まいにち}　{日本語|にほんご}を　{勉強|べんきょう}します。",
+      "vi": "Mỗi ngày tôi học tiếng Nhật."
+     }
+    },
+    {
+     "id": "n5v073",
+     "word": "{朝|あさ}",
+     "kana": "あさ",
+     "meaningVi": "buổi sáng",
+     "example": {
+      "id": "n5e073",
+      "ja": "{朝|あさ}　コーヒーを　{飲|の}みます。",
+      "vi": "Buổi sáng tôi uống cà phê."
+     }
+    },
+    {
+     "id": "n5v074",
+     "word": "{昼|ひる}",
+     "kana": "ひる",
+     "meaningVi": "buổi trưa",
+     "example": {
+      "id": "n5e074",
+      "ja": "{昼|ひる}は　{何|なに}を　{食|た}べますか。",
+      "vi": "Trưa bạn ăn gì?"
+     }
+    },
+    {
+     "id": "n5v075",
+     "word": "{晩|ばん}",
+     "kana": "ばん",
+     "meaningVi": "buổi tối",
+     "example": {
+      "id": "n5e075",
+      "ja": "{晩|ばん}ごはんを　{作|つく}ります。",
+      "vi": "Tôi nấu bữa tối."
+     }
+    },
+    {
+     "id": "n5v076",
+     "word": "{夜|よる}",
+     "kana": "よる",
+     "meaningVi": "ban đêm",
+     "example": {
+      "id": "n5e076",
+      "ja": "{夜|よる}　{遅|おそ}く　{寝|ね}ます。",
+      "vi": "Tôi ngủ muộn vào ban đêm."
+     }
+    },
+    {
+     "id": "n5v077",
+     "word": "{午前|ごぜん}",
+     "kana": "ごぜん",
+     "meaningVi": "buổi sáng (AM)",
+     "example": {
+      "id": "n5e077",
+      "ja": "{午前|ごぜん}9{時|じ}に　{来|き}て　ください。",
+      "vi": "Hãy đến lúc 9 giờ sáng."
+     }
+    },
+    {
+     "id": "n5v078",
+     "word": "{午後|ごご}",
+     "kana": "ごご",
+     "meaningVi": "buổi chiều (PM)",
+     "example": {
+      "id": "n5e078",
+      "ja": "{午後|ごご}は　{会議|かいぎ}が　あります。",
+      "vi": "Buổi chiều có họp."
+     }
+    },
+    {
+     "id": "n5v079",
+     "word": "{週末|しゅうまつ}",
+     "kana": "しゅうまつ",
+     "meaningVi": "cuối tuần",
+     "example": {
+      "id": "n5e079",
+      "ja": "{週末|しゅうまつ}は　{何|なに}を　しますか。",
+      "vi": "Cuối tuần bạn làm gì?"
+     }
+    },
+    {
+     "id": "n5v080",
+     "word": "{今週|こんしゅう}",
+     "kana": "こんしゅう",
+     "meaningVi": "tuần này",
+     "example": {
+      "id": "n5e080",
+      "ja": "{今週|こんしゅう}は　{忙|いそが}しいです。",
+      "vi": "Tuần này bận."
+     }
+    },
+    {
+     "id": "n5v081",
+     "word": "{来週|らいしゅう}",
+     "kana": "らいしゅう",
+     "meaningVi": "tuần sau",
+     "example": {
+      "id": "n5e081",
+      "ja": "{来週|らいしゅう}　{出張|しゅっちょう}します。",
+      "vi": "Tuần sau tôi đi công tác."
+     }
+    },
+    {
+     "id": "n5v082",
+     "word": "{先週|せんしゅう}",
+     "kana": "せんしゅう",
+     "meaningVi": "tuần trước",
+     "example": {
+      "id": "n5e082",
+      "ja": "{先週|せんしゅう}　{京都|きょうと}へ　{行|い}きました。",
+      "vi": "Tuần trước tôi đi Kyoto."
+     }
+    },
+    {
+     "id": "n5v083",
+     "word": "{今年|ことし}",
+     "kana": "ことし",
+     "meaningVi": "năm nay",
+     "example": {
+      "id": "n5e083",
+      "ja": "{今年|ことし}　{日本|にほん}へ　{来|き}ました。",
+      "vi": "Năm nay tôi đến Nhật."
+     }
+    },
+    {
+     "id": "n5v084",
+     "word": "{来年|らいねん}",
+     "kana": "らいねん",
+     "meaningVi": "năm sau",
+     "example": {
+      "id": "n5e084",
+      "ja": "{来年|らいねん}　{結婚|けっこん}します。",
+      "vi": "Năm sau tôi kết hôn."
+     }
+    },
+    {
+     "id": "n5v085",
+     "word": "{去年|きょねん}",
+     "kana": "きょねん",
+     "meaningVi": "năm ngoái",
+     "example": {
+      "id": "n5e085",
+      "ja": "{去年|きょねん}の　{夏|なつ}は　{暑|あつ}かったです。",
+      "vi": "Mùa hè năm ngoái nóng."
+     }
+    },
+    {
+     "id": "n5v086",
+     "word": "{時間|じかん}",
+     "kana": "じかん",
+     "meaningVi": "thời gian",
+     "example": {
+      "id": "n5e086",
+      "ja": "{時間|じかん}が　ありません。",
+      "vi": "Tôi không có thời gian."
+     }
+    },
+    {
+     "id": "n5v087",
+     "word": "{日曜日|にちようび}",
+     "kana": "にちようび",
+     "meaningVi": "Chủ nhật",
+     "example": {
+      "id": "n5e087",
+      "ja": "{日曜日|にちようび}は　{休|やす}みです。",
+      "vi": "Chủ nhật được nghỉ."
+     }
+    },
+    {
+     "id": "n5v088",
+     "word": "{月曜日|げつようび}",
+     "kana": "げつようび",
+     "meaningVi": "thứ Hai",
+     "example": {
+      "id": "n5e088",
+      "ja": "{月曜日|げつようび}から　{仕事|しごと}です。",
+      "vi": "Từ thứ Hai đi làm."
+     }
+    },
+    {
+     "id": "n5v089",
+     "word": "{誕生日|たんじょうび}",
+     "kana": "たんじょうび",
+     "meaningVi": "sinh nhật",
+     "example": {
+      "id": "n5e089",
+      "ja": "{誕生日|たんじょうび}は　いつですか。",
+      "vi": "Sinh nhật bạn khi nào?"
+     }
+    },
+    {
+     "id": "n5v090",
+     "word": "{春|はる}",
+     "kana": "はる",
+     "meaningVi": "mùa xuân",
+     "example": {
+      "id": "n5e090",
+      "ja": "{春|はる}は　{桜|さくら}が　きれいです。",
+      "vi": "Mùa xuân hoa anh đào đẹp."
+     }
+    },
+    {
+     "id": "n5v091",
+     "word": "{夏|なつ}",
+     "kana": "なつ",
+     "meaningVi": "mùa hè",
+     "example": {
+      "id": "n5e091",
+      "ja": "{夏休|なつやす}みに　{国|くに}へ　{帰|かえ}ります。",
+      "vi": "Nghỉ hè tôi về nước."
+     }
+    },
+    {
+     "id": "n5v092",
+     "word": "{冬|ふゆ}",
+     "kana": "ふゆ",
+     "meaningVi": "mùa đông",
+     "example": {
+      "id": "n5e092",
+      "ja": "{冬|ふゆ}は　{雪|ゆき}が　{降|ふ}ります。",
+      "vi": "Mùa đông có tuyết."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t05",
+   "titleVi": "Ăn uống",
+   "words": [
+    {
+     "id": "n5v093",
+     "word": "ごはん",
+     "kana": "ごはん",
+     "meaningVi": "cơm, bữa ăn",
+     "example": {
+      "id": "n5e093",
+      "ja": "いっしょに　ごはんを　{食|た}べませんか。",
+      "vi": "Cùng ăn cơm không?"
+     }
+    },
+    {
+     "id": "n5v094",
+     "word": "{朝|あさ}ごはん",
+     "kana": "あさごはん",
+     "meaningVi": "bữa sáng",
+     "example": {
+      "id": "n5e094",
+      "ja": "{朝|あさ}ごはんは　パンです。",
+      "vi": "Bữa sáng là bánh mì."
+     }
+    },
+    {
+     "id": "n5v095",
+     "word": "{料理|りょうり}",
+     "kana": "りょうり",
+     "meaningVi": "món ăn, nấu ăn",
+     "example": {
+      "id": "n5e095",
+      "ja": "{日本|にほん}の　{料理|りょうり}が　{好|す}きです。",
+      "vi": "Tôi thích món ăn Nhật."
+     }
+    },
+    {
+     "id": "n5v096",
+     "word": "{肉|にく}",
+     "kana": "にく",
+     "meaningVi": "thịt",
+     "example": {
+      "id": "n5e096",
+      "ja": "{肉|にく}を　{食|た}べません。",
+      "vi": "Tôi không ăn thịt."
+     }
+    },
+    {
+     "id": "n5v097",
+     "word": "{魚|さかな}",
+     "kana": "さかな",
+     "meaningVi": "cá",
+     "example": {
+      "id": "n5e097",
+      "ja": "この　{魚|さかな}は　おいしいです。",
+      "vi": "Con cá này ngon."
+     }
+    },
+    {
+     "id": "n5v098",
+     "word": "{野菜|やさい}",
+     "kana": "やさい",
+     "meaningVi": "rau",
+     "example": {
+      "id": "n5e098",
+      "ja": "{野菜|やさい}を　たくさん　{食|た}べて　ください。",
+      "vi": "Hãy ăn nhiều rau."
+     }
+    },
+    {
+     "id": "n5v099",
+     "word": "{果物|くだもの}",
+     "kana": "くだもの",
+     "meaningVi": "trái cây",
+     "example": {
+      "id": "n5e099",
+      "ja": "どんな　{果物|くだもの}が　{好|す}きですか。",
+      "vi": "Bạn thích trái cây gì?"
+     }
+    },
+    {
+     "id": "n5v100",
+     "word": "{卵|たまご}",
+     "kana": "たまご",
+     "meaningVi": "trứng",
+     "example": {
+      "id": "n5e100",
+      "ja": "{卵|たまご}を　{二|ふた}つ　{買|か}います。",
+      "vi": "Tôi mua 2 quả trứng."
+     }
+    },
+    {
+     "id": "n5v101",
+     "word": "パン",
+     "kana": "パン",
+     "meaningVi": "bánh mì",
+     "example": {
+      "id": "n5e101",
+      "ja": "パンと　{牛乳|ぎゅうにゅう}を　{買|か}いました。",
+      "vi": "Tôi đã mua bánh mì và sữa."
+     }
+    },
+    {
+     "id": "n5v102",
+     "word": "{水|みず}",
+     "kana": "みず",
+     "meaningVi": "nước",
+     "example": {
+      "id": "n5e102",
+      "ja": "{水|みず}を　ください。",
+      "vi": "Cho tôi nước."
+     }
+    },
+    {
+     "id": "n5v103",
+     "word": "お{茶|ちゃ}",
+     "kana": "おちゃ",
+     "meaningVi": "trà",
+     "example": {
+      "id": "n5e103",
+      "ja": "お{茶|ちゃ}を　どうぞ。",
+      "vi": "Mời anh dùng trà."
+     }
+    },
+    {
+     "id": "n5v104",
+     "word": "{牛乳|ぎゅうにゅう}",
+     "kana": "ぎゅうにゅう",
+     "meaningVi": "sữa bò",
+     "example": {
+      "id": "n5e104",
+      "ja": "{毎朝|まいあさ}　{牛乳|ぎゅうにゅう}を　{飲|の}みます。",
+      "vi": "Mỗi sáng tôi uống sữa."
+     }
+    },
+    {
+     "id": "n5v105",
+     "word": "お{酒|さけ}",
+     "kana": "おさけ",
+     "meaningVi": "rượu",
+     "example": {
+      "id": "n5e105",
+      "ja": "お{酒|さけ}は　{飲|の}みません。",
+      "vi": "Tôi không uống rượu."
+     }
+    },
+    {
+     "id": "n5v106",
+     "word": "コーヒー",
+     "kana": "コーヒー",
+     "meaningVi": "cà phê",
+     "example": {
+      "id": "n5e106",
+      "ja": "コーヒーを　{一|ひと}つ　ください。",
+      "vi": "Cho tôi một cà phê."
+     }
+    },
+    {
+     "id": "n5v107",
+     "word": "お{弁当|べんとう}",
+     "kana": "おべんとう",
+     "meaningVi": "cơm hộp",
+     "example": {
+      "id": "n5e107",
+      "ja": "コンビニで　お{弁当|べんとう}を　{買|か}います。",
+      "vi": "Tôi mua cơm hộp ở cửa hàng tiện lợi."
+     }
+    },
+    {
+     "id": "n5v108",
+     "word": "{食|た}べ{物|もの}",
+     "kana": "たべもの",
+     "meaningVi": "đồ ăn",
+     "example": {
+      "id": "n5e108",
+      "ja": "{好|す}きな　{食|た}べ{物|もの}は　{何|なん}ですか。",
+      "vi": "Món ăn bạn thích là gì?"
+     }
+    },
+    {
+     "id": "n5v109",
+     "word": "{飲|の}み{物|もの}",
+     "kana": "のみもの",
+     "meaningVi": "đồ uống",
+     "example": {
+      "id": "n5e109",
+      "ja": "{飲|の}み{物|もの}は　{何|なに}が　いいですか。",
+      "vi": "Bạn uống gì?"
+     }
+    },
+    {
+     "id": "n5v110",
+     "word": "はし",
+     "kana": "はし",
+     "meaningVi": "đũa",
+     "example": {
+      "id": "n5e110",
+      "ja": "はしで　{食|た}べます。",
+      "vi": "Tôi ăn bằng đũa."
+     }
+    },
+    {
+     "id": "n5v111",
+     "word": "{砂糖|さとう}",
+     "kana": "さとう",
+     "meaningVi": "đường",
+     "example": {
+      "id": "n5e111",
+      "ja": "コーヒーに　{砂糖|さとう}を　{入|い}れますか。",
+      "vi": "Bạn có cho đường vào cà phê không?"
+     }
+    },
+    {
+     "id": "n5v112",
+     "word": "{塩|しお}",
+     "kana": "しお",
+     "meaningVi": "muối",
+     "example": {
+      "id": "n5e112",
+      "ja": "{塩|しお}を　{少|すこ}し　{入|い}れます。",
+      "vi": "Cho một chút muối."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t06",
+   "titleVi": "Mua sắm, tiền",
+   "words": [
+    {
+     "id": "n5v113",
+     "word": "お{金|かね}",
+     "kana": "おかね",
+     "meaningVi": "tiền",
+     "example": {
+      "id": "n5e113",
+      "ja": "お{金|かね}が　ありません。",
+      "vi": "Tôi không có tiền."
+     }
+    },
+    {
+     "id": "n5v114",
+     "word": "{財布|さいふ}",
+     "kana": "さいふ",
+     "meaningVi": "ví",
+     "example": {
+      "id": "n5e114",
+      "ja": "{財布|さいふ}を　なくしました。",
+      "vi": "Tôi làm mất ví."
+     }
+    },
+    {
+     "id": "n5v115",
+     "word": "{円|えん}",
+     "kana": "えん",
+     "meaningVi": "yên (tiền Nhật)",
+     "example": {
+      "id": "n5e115",
+      "ja": "これは　500{円|えん}です。",
+      "vi": "Cái này 500 yên."
+     }
+    },
+    {
+     "id": "n5v116",
+     "word": "{買|か}い{物|もの}",
+     "kana": "かいもの",
+     "meaningVi": "mua sắm",
+     "example": {
+      "id": "n5e116",
+      "ja": "デパートへ　{買|か}い{物|もの}に　{行|い}きます。",
+      "vi": "Tôi đi mua sắm ở trung tâm thương mại."
+     }
+    },
+    {
+     "id": "n5v117",
+     "word": "{服|ふく}",
+     "kana": "ふく",
+     "meaningVi": "quần áo",
+     "example": {
+      "id": "n5e117",
+      "ja": "{新|あたら}しい　{服|ふく}を　{買|か}いました。",
+      "vi": "Tôi đã mua quần áo mới."
+     }
+    },
+    {
+     "id": "n5v118",
+     "word": "{靴|くつ}",
+     "kana": "くつ",
+     "meaningVi": "giày",
+     "example": {
+      "id": "n5e118",
+      "ja": "ここで　{靴|くつ}を　{脱|ぬ}いで　ください。",
+      "vi": "Hãy cởi giày ở đây."
+     }
+    },
+    {
+     "id": "n5v119",
+     "word": "{傘|かさ}",
+     "kana": "かさ",
+     "meaningVi": "ô, dù",
+     "example": {
+      "id": "n5e119",
+      "ja": "{傘|かさ}を　{忘|わす}れないで　ください。",
+      "vi": "Đừng quên ô nhé."
+     }
+    },
+    {
+     "id": "n5v120",
+     "word": "かばん",
+     "kana": "かばん",
+     "meaningVi": "cặp, túi",
+     "example": {
+      "id": "n5e120",
+      "ja": "かばんの　{中|なか}に　{何|なに}が　ありますか。",
+      "vi": "Trong túi có gì?"
+     }
+    },
+    {
+     "id": "n5v121",
+     "word": "{時計|とけい}",
+     "kana": "とけい",
+     "meaningVi": "đồng hồ",
+     "example": {
+      "id": "n5e121",
+      "ja": "この　{時計|とけい}は　{日本製|にほんせい}です。",
+      "vi": "Đồng hồ này sản xuất ở Nhật."
+     }
+    },
+    {
+     "id": "n5v122",
+     "word": "{切手|きって}",
+     "kana": "きって",
+     "meaningVi": "tem",
+     "example": {
+      "id": "n5e122",
+      "ja": "{切手|きって}を　{三枚|さんまい}　ください。",
+      "vi": "Cho tôi 3 con tem."
+     }
+    },
+    {
+     "id": "n5v123",
+     "word": "{荷物|にもつ}",
+     "kana": "にもつ",
+     "meaningVi": "hành lý, đồ",
+     "example": {
+      "id": "n5e123",
+      "ja": "{荷物|にもつ}が　{重|おも}いです。",
+      "vi": "Hành lý nặng."
+     }
+    },
+    {
+     "id": "n5v124",
+     "word": "{高|たか}い",
+     "kana": "たかい",
+     "meaningVi": "đắt; cao",
+     "example": {
+      "id": "n5e124",
+      "ja": "この　カメラは　{高|たか}いです。",
+      "vi": "Máy ảnh này đắt."
+     }
+    },
+    {
+     "id": "n5v125",
+     "word": "{安|やす}い",
+     "kana": "やすい",
+     "meaningVi": "rẻ",
+     "example": {
+      "id": "n5e125",
+      "ja": "{安|やす}くて　おいしい　{店|みせ}です。",
+      "vi": "Quán vừa rẻ vừa ngon."
+     }
+    },
+    {
+     "id": "n5v126",
+     "word": "{全部|ぜんぶ}",
+     "kana": "ぜんぶ",
+     "meaningVi": "tất cả",
+     "example": {
+      "id": "n5e126",
+      "ja": "{全部|ぜんぶ}で　いくらですか。",
+      "vi": "Tất cả bao nhiêu tiền?"
+     }
+    },
+    {
+     "id": "n5v127",
+     "word": "{一|ひと}つ",
+     "kana": "ひとつ",
+     "meaningVi": "một cái",
+     "example": {
+      "id": "n5e127",
+      "ja": "りんごを　{一|ひと}つ　ください。",
+      "vi": "Cho tôi một quả táo."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t07",
+   "titleVi": "Giao thông, đi lại",
+   "words": [
+    {
+     "id": "n5v128",
+     "word": "{電車|でんしゃ}",
+     "kana": "でんしゃ",
+     "meaningVi": "tàu điện",
+     "example": {
+      "id": "n5e128",
+      "ja": "{電車|でんしゃ}で　{会社|かいしゃ}へ　{行|い}きます。",
+      "vi": "Tôi đi làm bằng tàu điện."
+     }
+    },
+    {
+     "id": "n5v129",
+     "word": "{地下鉄|ちかてつ}",
+     "kana": "ちかてつ",
+     "meaningVi": "tàu điện ngầm",
+     "example": {
+      "id": "n5e129",
+      "ja": "{地下鉄|ちかてつ}は　{便利|べんり}です。",
+      "vi": "Tàu điện ngầm tiện lợi."
+     }
+    },
+    {
+     "id": "n5v130",
+     "word": "{新幹線|しんかんせん}",
+     "kana": "しんかんせん",
+     "meaningVi": "tàu cao tốc Shinkansen",
+     "example": {
+      "id": "n5e130",
+      "ja": "{新幹線|しんかんせん}で　{大阪|おおさか}へ　{行|い}きます。",
+      "vi": "Tôi đi Osaka bằng Shinkansen."
+     }
+    },
+    {
+     "id": "n5v131",
+     "word": "バス",
+     "kana": "バス",
+     "meaningVi": "xe buýt",
+     "example": {
+      "id": "n5e131",
+      "ja": "バスに　{乗|の}ります。",
+      "vi": "Tôi lên xe buýt."
+     }
+    },
+    {
+     "id": "n5v132",
+     "word": "タクシー",
+     "kana": "タクシー",
+     "meaningVi": "taxi",
+     "example": {
+      "id": "n5e132",
+      "ja": "タクシーを　{呼|よ}んで　ください。",
+      "vi": "Gọi taxi giúp tôi."
+     }
+    },
+    {
+     "id": "n5v133",
+     "word": "{車|くるま}",
+     "kana": "くるま",
+     "meaningVi": "xe hơi",
+     "example": {
+      "id": "n5e133",
+      "ja": "{車|くるま}を　{運転|うんてん}します。",
+      "vi": "Tôi lái xe hơi."
+     }
+    },
+    {
+     "id": "n5v134",
+     "word": "{自転車|じてんしゃ}",
+     "kana": "じてんしゃ",
+     "meaningVi": "xe đạp",
+     "example": {
+      "id": "n5e134",
+      "ja": "{自転車|じてんしゃ}で　{学校|がっこう}へ　{行|い}きます。",
+      "vi": "Tôi đi học bằng xe đạp."
+     }
+    },
+    {
+     "id": "n5v135",
+     "word": "{飛行機|ひこうき}",
+     "kana": "ひこうき",
+     "meaningVi": "máy bay",
+     "example": {
+      "id": "n5e135",
+      "ja": "{飛行機|ひこうき}で　{国|くに}へ　{帰|かえ}ります。",
+      "vi": "Tôi về nước bằng máy bay."
+     }
+    },
+    {
+     "id": "n5v136",
+     "word": "{切符|きっぷ}",
+     "kana": "きっぷ",
+     "meaningVi": "vé",
+     "example": {
+      "id": "n5e136",
+      "ja": "{切符|きっぷ}を　{買|か}って　ください。",
+      "vi": "Hãy mua vé."
+     }
+    },
+    {
+     "id": "n5v137",
+     "word": "{旅行|りょこう}",
+     "kana": "りょこう",
+     "meaningVi": "du lịch",
+     "example": {
+      "id": "n5e137",
+      "ja": "{家族|かぞく}と　{旅行|りょこう}します。",
+      "vi": "Tôi đi du lịch với gia đình."
+     }
+    },
+    {
+     "id": "n5v138",
+     "word": "{出張|しゅっちょう}",
+     "kana": "しゅっちょう",
+     "meaningVi": "công tác",
+     "example": {
+      "id": "n5e138",
+      "ja": "{来週|らいしゅう}　{東京|とうきょう}へ　{出張|しゅっちょう}します。",
+      "vi": "Tuần sau tôi đi công tác Tokyo."
+     }
+    },
+    {
+     "id": "n5v139",
+     "word": "{右|みぎ}",
+     "kana": "みぎ",
+     "meaningVi": "bên phải",
+     "example": {
+      "id": "n5e139",
+      "ja": "{次|つぎ}の　{角|かど}を　{右|みぎ}へ　{曲|ま}がって　ください。",
+      "vi": "Rẽ phải ở góc tiếp theo."
+     }
+    },
+    {
+     "id": "n5v140",
+     "word": "{左|ひだり}",
+     "kana": "ひだり",
+     "meaningVi": "bên trái",
+     "example": {
+      "id": "n5e140",
+      "ja": "{銀行|ぎんこう}は　{左|ひだり}に　あります。",
+      "vi": "Ngân hàng ở bên trái."
+     }
+    },
+    {
+     "id": "n5v141",
+     "word": "まっすぐ",
+     "kana": "まっすぐ",
+     "meaningVi": "thẳng",
+     "example": {
+      "id": "n5e141",
+      "ja": "まっすぐ　{行|い}って　ください。",
+      "vi": "Hãy đi thẳng."
+     }
+    },
+    {
+     "id": "n5v142",
+     "word": "{信号|しんごう}",
+     "kana": "しんごう",
+     "meaningVi": "đèn giao thông",
+     "example": {
+      "id": "n5e142",
+      "ja": "{信号|しんごう}を　{渡|わた}って、{左|ひだり}です。",
+      "vi": "Qua đèn giao thông rồi rẽ trái."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t08",
+   "titleVi": "Nhà cửa, đồ dùng",
+   "words": [
+    {
+     "id": "n5v143",
+     "word": "{机|つくえ}",
+     "kana": "つくえ",
+     "meaningVi": "bàn",
+     "example": {
+      "id": "n5e143",
+      "ja": "{机|つくえ}の　{上|うえ}を　きれいに　します。",
+      "vi": "Tôi dọn sạch mặt bàn."
+     }
+    },
+    {
+     "id": "n5v144",
+     "word": "{椅子|いす}",
+     "kana": "いす",
+     "meaningVi": "ghế",
+     "example": {
+      "id": "n5e144",
+      "ja": "{椅子|いす}に　{座|すわ}って　ください。",
+      "vi": "Mời ngồi xuống ghế."
+     }
+    },
+    {
+     "id": "n5v145",
+     "word": "{窓|まど}",
+     "kana": "まど",
+     "meaningVi": "cửa sổ",
+     "example": {
+      "id": "n5e145",
+      "ja": "{窓|まど}を　{開|あ}けても　いいですか。",
+      "vi": "Tôi mở cửa sổ được không?"
+     }
+    },
+    {
+     "id": "n5v146",
+     "word": "ドア",
+     "kana": "ドア",
+     "meaningVi": "cửa",
+     "example": {
+      "id": "n5e146",
+      "ja": "ドアを　{閉|し}めて　ください。",
+      "vi": "Hãy đóng cửa."
+     }
+    },
+    {
+     "id": "n5v147",
+     "word": "{電気|でんき}",
+     "kana": "でんき",
+     "meaningVi": "điện, đèn",
+     "example": {
+      "id": "n5e147",
+      "ja": "{電気|でんき}を　{消|け}して　ください。",
+      "vi": "Hãy tắt đèn."
+     }
+    },
+    {
+     "id": "n5v148",
+     "word": "{鍵|かぎ}",
+     "kana": "かぎ",
+     "meaningVi": "chìa khóa",
+     "example": {
+      "id": "n5e148",
+      "ja": "{鍵|かぎ}を　かけましたか。",
+      "vi": "Bạn đã khóa cửa chưa?"
+     }
+    },
+    {
+     "id": "n5v149",
+     "word": "{電話|でんわ}",
+     "kana": "でんわ",
+     "meaningVi": "điện thoại",
+     "example": {
+      "id": "n5e149",
+      "ja": "あとで　{電話|でんわ}します。",
+      "vi": "Lát nữa tôi gọi điện."
+     }
+    },
+    {
+     "id": "n5v150",
+     "word": "テレビ",
+     "kana": "テレビ",
+     "meaningVi": "tivi",
+     "example": {
+      "id": "n5e150",
+      "ja": "{夜|よる}　テレビを　{見|み}ます。",
+      "vi": "Buổi tối tôi xem tivi."
+     }
+    },
+    {
+     "id": "n5v151",
+     "word": "{冷蔵庫|れいぞうこ}",
+     "kana": "れいぞうこ",
+     "meaningVi": "tủ lạnh",
+     "example": {
+      "id": "n5e151",
+      "ja": "ビールは　{冷蔵庫|れいぞうこ}の　{中|なか}です。",
+      "vi": "Bia ở trong tủ lạnh."
+     }
+    },
+    {
+     "id": "n5v152",
+     "word": "{写真|しゃしん}",
+     "kana": "しゃしん",
+     "meaningVi": "ảnh",
+     "example": {
+      "id": "n5e152",
+      "ja": "{写真|しゃしん}を　{撮|と}りましょう。",
+      "vi": "Chụp ảnh nào."
+     }
+    },
+    {
+     "id": "n5v153",
+     "word": "{手紙|てがみ}",
+     "kana": "てがみ",
+     "meaningVi": "thư",
+     "example": {
+      "id": "n5e153",
+      "ja": "{母|はは}に　{手紙|てがみ}を　{書|か}きます。",
+      "vi": "Tôi viết thư cho mẹ."
+     }
+    },
+    {
+     "id": "n5v154",
+     "word": "{新聞|しんぶん}",
+     "kana": "しんぶん",
+     "meaningVi": "báo",
+     "example": {
+      "id": "n5e154",
+      "ja": "{毎朝|まいあさ}　{新聞|しんぶん}を　{読|よ}みます。",
+      "vi": "Mỗi sáng tôi đọc báo."
+     }
+    },
+    {
+     "id": "n5v155",
+     "word": "{紙|かみ}",
+     "kana": "かみ",
+     "meaningVi": "giấy",
+     "example": {
+      "id": "n5e155",
+      "ja": "{紙|かみ}に　{名前|なまえ}を　{書|か}きます。",
+      "vi": "Tôi viết tên lên giấy."
+     }
+    },
+    {
+     "id": "n5v156",
+     "word": "ペン",
+     "kana": "ペン",
+     "meaningVi": "bút",
+     "example": {
+      "id": "n5e156",
+      "ja": "ペンを　{貸|か}して　ください。",
+      "vi": "Cho tôi mượn bút."
+     }
+    },
+    {
+     "id": "n5v157",
+     "word": "{箱|はこ}",
+     "kana": "はこ",
+     "meaningVi": "hộp",
+     "example": {
+      "id": "n5e157",
+      "ja": "{箱|はこ}の　{中|なか}は　{何|なん}ですか。",
+      "vi": "Trong hộp là gì?"
+     }
+    }
+   ]
+  },
+  {
+   "id": "t09",
+   "titleVi": "Cơ thể, sức khỏe",
+   "words": [
+    {
+     "id": "n5v158",
+     "word": "{体|からだ}",
+     "kana": "からだ",
+     "meaningVi": "cơ thể",
+     "example": {
+      "id": "n5e158",
+      "ja": "{体|からだ}に　{気|き}を　つけて　ください。",
+      "vi": "Hãy giữ gìn sức khỏe."
+     }
+    },
+    {
+     "id": "n5v159",
+     "word": "{頭|あたま}",
+     "kana": "あたま",
+     "meaningVi": "đầu",
+     "example": {
+      "id": "n5e159",
+      "ja": "{頭|あたま}が　{痛|いた}いです。",
+      "vi": "Tôi đau đầu."
+     }
+    },
+    {
+     "id": "n5v160",
+     "word": "{目|め}",
+     "kana": "め",
+     "meaningVi": "mắt",
+     "example": {
+      "id": "n5e160",
+      "ja": "{目|め}が　{疲|つか}れました。",
+      "vi": "Mắt tôi mỏi rồi."
+     }
+    },
+    {
+     "id": "n5v161",
+     "word": "{耳|みみ}",
+     "kana": "みみ",
+     "meaningVi": "tai",
+     "example": {
+      "id": "n5e161",
+      "ja": "{耳|みみ}が　{痛|いた}いです。",
+      "vi": "Tôi đau tai."
+     }
+    },
+    {
+     "id": "n5v162",
+     "word": "{口|くち}",
+     "kana": "くち",
+     "meaningVi": "miệng",
+     "example": {
+      "id": "n5e162",
+      "ja": "{口|くち}を　{開|あ}けて　ください。",
+      "vi": "Hãy há miệng ra."
+     }
+    },
+    {
+     "id": "n5v163",
+     "word": "{手|て}",
+     "kana": "て",
+     "meaningVi": "tay",
+     "example": {
+      "id": "n5e163",
+      "ja": "{手|て}を　{洗|あら}いましょう。",
+      "vi": "Rửa tay nào."
+     }
+    },
+    {
+     "id": "n5v164",
+     "word": "{足|あし}",
+     "kana": "あし",
+     "meaningVi": "chân",
+     "example": {
+      "id": "n5e164",
+      "ja": "{足|あし}が　{痛|いた}くて、{歩|ある}けません。",
+      "vi": "Chân đau nên không đi được."
+     }
+    },
+    {
+     "id": "n5v165",
+     "word": "{歯|は}",
+     "kana": "は",
+     "meaningVi": "răng",
+     "example": {
+      "id": "n5e165",
+      "ja": "{寝|ね}る　まえに　{歯|は}を　{磨|みが}きます。",
+      "vi": "Tôi đánh răng trước khi ngủ."
+     }
+    },
+    {
+     "id": "n5v166",
+     "word": "{病気|びょうき}",
+     "kana": "びょうき",
+     "meaningVi": "bệnh",
+     "example": {
+      "id": "n5e166",
+      "ja": "{病気|びょうき}で　{会社|かいしゃ}を　{休|やす}みました。",
+      "vi": "Tôi nghỉ làm vì ốm."
+     }
+    },
+    {
+     "id": "n5v167",
+     "word": "{風邪|かぜ}",
+     "kana": "かぜ",
+     "meaningVi": "cảm cúm",
+     "example": {
+      "id": "n5e167",
+      "ja": "{風邪|かぜ}を　ひきました。",
+      "vi": "Tôi bị cảm."
+     }
+    },
+    {
+     "id": "n5v168",
+     "word": "{熱|ねつ}",
+     "kana": "ねつ",
+     "meaningVi": "sốt",
+     "example": {
+      "id": "n5e168",
+      "ja": "{熱|ねつ}が　あります。",
+      "vi": "Tôi bị sốt."
+     }
+    },
+    {
+     "id": "n5v169",
+     "word": "{薬|くすり}",
+     "kana": "くすり",
+     "meaningVi": "thuốc",
+     "example": {
+      "id": "n5e169",
+      "ja": "{一日|いちにち}　{三回|さんかい}　{薬|くすり}を　{飲|の}みます。",
+      "vi": "Ngày uống thuốc 3 lần."
+     }
+    },
+    {
+     "id": "n5v170",
+     "word": "{元気|げんき}",
+     "kana": "げんき",
+     "meaningVi": "khỏe mạnh",
+     "example": {
+      "id": "n5e170",
+      "ja": "お{元気|げんき}ですか。",
+      "vi": "Bạn khỏe không?"
+     }
+    }
+   ]
+  },
+  {
+   "id": "t10",
+   "titleVi": "Thời tiết, thiên nhiên",
+   "words": [
+    {
+     "id": "n5v171",
+     "word": "{天気|てんき}",
+     "kana": "てんき",
+     "meaningVi": "thời tiết",
+     "example": {
+      "id": "n5e171",
+      "ja": "{今日|きょう}は　いい　{天気|てんき}ですね。",
+      "vi": "Hôm nay trời đẹp nhỉ."
+     }
+    },
+    {
+     "id": "n5v172",
+     "word": "{雨|あめ}",
+     "kana": "あめ",
+     "meaningVi": "mưa",
+     "example": {
+      "id": "n5e172",
+      "ja": "{雨|あめ}が　{降|ふ}って　います。",
+      "vi": "Trời đang mưa."
+     }
+    },
+    {
+     "id": "n5v173",
+     "word": "{雪|ゆき}",
+     "kana": "ゆき",
+     "meaningVi": "tuyết",
+     "example": {
+      "id": "n5e173",
+      "ja": "{北海道|ほっかいどう}は　{雪|ゆき}が　{多|おお}いです。",
+      "vi": "Hokkaido có nhiều tuyết."
+     }
+    },
+    {
+     "id": "n5v174",
+     "word": "{風|かぜ}",
+     "kana": "かぜ",
+     "meaningVi": "gió",
+     "example": {
+      "id": "n5e174",
+      "ja": "{今日|きょう}は　{風|かぜ}が　{強|つよ}いです。",
+      "vi": "Hôm nay gió mạnh."
+     }
+    },
+    {
+     "id": "n5v175",
+     "word": "{空|そら}",
+     "kana": "そら",
+     "meaningVi": "bầu trời",
+     "example": {
+      "id": "n5e175",
+      "ja": "{空|そら}が　{青|あお}いです。",
+      "vi": "Bầu trời xanh."
+     }
+    },
+    {
+     "id": "n5v176",
+     "word": "{山|やま}",
+     "kana": "やま",
+     "meaningVi": "núi",
+     "example": {
+      "id": "n5e176",
+      "ja": "{週末|しゅうまつ}　{山|やま}に　{登|のぼ}ります。",
+      "vi": "Cuối tuần tôi leo núi."
+     }
+    },
+    {
+     "id": "n5v177",
+     "word": "{川|かわ}",
+     "kana": "かわ",
+     "meaningVi": "sông",
+     "example": {
+      "id": "n5e177",
+      "ja": "{川|かわ}で　{泳|およ}がないで　ください。",
+      "vi": "Đừng bơi ở sông."
+     }
+    },
+    {
+     "id": "n5v178",
+     "word": "{海|うみ}",
+     "kana": "うみ",
+     "meaningVi": "biển",
+     "example": {
+      "id": "n5e178",
+      "ja": "{夏|なつ}は　{海|うみ}へ　{行|い}きたいです。",
+      "vi": "Mùa hè tôi muốn đi biển."
+     }
+    },
+    {
+     "id": "n5v179",
+     "word": "{花|はな}",
+     "kana": "はな",
+     "meaningVi": "hoa",
+     "example": {
+      "id": "n5e179",
+      "ja": "きれいな　{花|はな}ですね。",
+      "vi": "Hoa đẹp nhỉ."
+     }
+    },
+    {
+     "id": "n5v180",
+     "word": "{犬|いぬ}",
+     "kana": "いぬ",
+     "meaningVi": "con chó",
+     "example": {
+      "id": "n5e180",
+      "ja": "{犬|いぬ}を　{飼|か}って　います。",
+      "vi": "Tôi nuôi chó."
+     }
+    },
+    {
+     "id": "n5v181",
+     "word": "{猫|ねこ}",
+     "kana": "ねこ",
+     "meaningVi": "con mèo",
+     "example": {
+      "id": "n5e181",
+      "ja": "{猫|ねこ}が　{好|す}きです。",
+      "vi": "Tôi thích mèo."
+     }
+    },
+    {
+     "id": "n5v182",
+     "word": "{暑|あつ}い",
+     "kana": "あつい",
+     "meaningVi": "nóng (thời tiết)",
+     "example": {
+      "id": "n5e182",
+      "ja": "{夏|なつ}は　とても　{暑|あつ}いです。",
+      "vi": "Mùa hè rất nóng."
+     }
+    },
+    {
+     "id": "n5v183",
+     "word": "{寒|さむ}い",
+     "kana": "さむい",
+     "meaningVi": "lạnh (thời tiết)",
+     "example": {
+      "id": "n5e183",
+      "ja": "{今朝|けさ}は　{寒|さむ}かったです。",
+      "vi": "Sáng nay lạnh."
+     }
+    },
+    {
+     "id": "n5v184",
+     "word": "{暖|あたた}かい",
+     "kana": "あたたかい",
+     "meaningVi": "ấm áp",
+     "example": {
+      "id": "n5e184",
+      "ja": "{春|はる}は　{暖|あたた}かいです。",
+      "vi": "Mùa xuân ấm áp."
+     }
+    },
+    {
+     "id": "n5v185",
+     "word": "{涼|すず}しい",
+     "kana": "すずしい",
+     "meaningVi": "mát mẻ",
+     "example": {
+      "id": "n5e185",
+      "ja": "{秋|あき}は　{涼|すず}しいです。",
+      "vi": "Mùa thu mát mẻ."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t11",
+   "titleVi": "Tính từ い",
+   "words": [
+    {
+     "id": "n5v186",
+     "word": "{大|おお}きい",
+     "kana": "おおきい",
+     "meaningVi": "to, lớn",
+     "example": {
+      "id": "n5e186",
+      "ja": "{大|おお}きい　{声|こえ}で　{話|はな}して　ください。",
+      "vi": "Hãy nói to lên."
+     }
+    },
+    {
+     "id": "n5v187",
+     "word": "{小|ちい}さい",
+     "kana": "ちいさい",
+     "meaningVi": "nhỏ",
+     "example": {
+      "id": "n5e187",
+      "ja": "{小|ちい}さい　{子|こ}どもが　います。",
+      "vi": "Có đứa trẻ nhỏ."
+     }
+    },
+    {
+     "id": "n5v188",
+     "word": "{新|あたら}しい",
+     "kana": "あたらしい",
+     "meaningVi": "mới",
+     "example": {
+      "id": "n5e188",
+      "ja": "{新|あたら}しい　パソコンを　{買|か}いました。",
+      "vi": "Tôi đã mua máy tính mới."
+     }
+    },
+    {
+     "id": "n5v189",
+     "word": "{古|ふる}い",
+     "kana": "ふるい",
+     "meaningVi": "cũ",
+     "example": {
+      "id": "n5e189",
+      "ja": "この　{寺|てら}は　とても　{古|ふる}いです。",
+      "vi": "Ngôi chùa này rất cổ."
+     }
+    },
+    {
+     "id": "n5v190",
+     "word": "いい",
+     "kana": "いい",
+     "meaningVi": "tốt",
+     "example": {
+      "id": "n5e190",
+      "ja": "この　{本|ほん}は　いいですよ。",
+      "vi": "Cuốn sách này hay đấy."
+     }
+    },
+    {
+     "id": "n5v191",
+     "word": "{悪|わる}い",
+     "kana": "わるい",
+     "meaningVi": "xấu, tệ",
+     "example": {
+      "id": "n5e191",
+      "ja": "{天気|てんき}が　{悪|わる}いです。",
+      "vi": "Thời tiết xấu."
+     }
+    },
+    {
+     "id": "n5v192",
+     "word": "おいしい",
+     "kana": "おいしい",
+     "meaningVi": "ngon",
+     "example": {
+      "id": "n5e192",
+      "ja": "この　ケーキは　おいしいです。",
+      "vi": "Bánh này ngon."
+     }
+    },
+    {
+     "id": "n5v193",
+     "word": "{難|むずか}しい",
+     "kana": "むずかしい",
+     "meaningVi": "khó",
+     "example": {
+      "id": "n5e193",
+      "ja": "{漢字|かんじ}は　{難|むずか}しいです。",
+      "vi": "Chữ Hán khó."
+     }
+    },
+    {
+     "id": "n5v194",
+     "word": "{易|やさ}しい",
+     "kana": "やさしい",
+     "meaningVi": "dễ",
+     "example": {
+      "id": "n5e194",
+      "ja": "この　{問題|もんだい}は　{易|やさ}しいです。",
+      "vi": "Câu này dễ."
+     }
+    },
+    {
+     "id": "n5v195",
+     "word": "{忙|いそが}しい",
+     "kana": "いそがしい",
+     "meaningVi": "bận",
+     "example": {
+      "id": "n5e195",
+      "ja": "{今週|こんしゅう}は　{忙|いそが}しいです。",
+      "vi": "Tuần này bận."
+     }
+    },
+    {
+     "id": "n5v196",
+     "word": "{楽|たの}しい",
+     "kana": "たのしい",
+     "meaningVi": "vui",
+     "example": {
+      "id": "n5e196",
+      "ja": "パーティーは　{楽|たの}しかったです。",
+      "vi": "Bữa tiệc vui."
+     }
+    },
+    {
+     "id": "n5v197",
+     "word": "おもしろい",
+     "kana": "おもしろい",
+     "meaningVi": "thú vị, hay",
+     "example": {
+      "id": "n5e197",
+      "ja": "この　{映画|えいが}は　おもしろいです。",
+      "vi": "Phim này hay."
+     }
+    },
+    {
+     "id": "n5v198",
+     "word": "{近|ちか}い",
+     "kana": "ちかい",
+     "meaningVi": "gần",
+     "example": {
+      "id": "n5e198",
+      "ja": "{駅|えき}は　{家|いえ}から　{近|ちか}いです。",
+      "vi": "Nhà ga gần nhà."
+     }
+    },
+    {
+     "id": "n5v199",
+     "word": "{遠|とお}い",
+     "kana": "とおい",
+     "meaningVi": "xa",
+     "example": {
+      "id": "n5e199",
+      "ja": "{会社|かいしゃ}は　{遠|とお}いです。",
+      "vi": "Công ty xa."
+     }
+    },
+    {
+     "id": "n5v200",
+     "word": "{早|はや}い",
+     "kana": "はやい",
+     "meaningVi": "sớm",
+     "example": {
+      "id": "n5e200",
+      "ja": "{明日|あした}は　{早|はや}く　{来|き}て　ください。",
+      "vi": "Mai hãy đến sớm."
+     }
+    },
+    {
+     "id": "n5v201",
+     "word": "{長|なが}い",
+     "kana": "ながい",
+     "meaningVi": "dài",
+     "example": {
+      "id": "n5e201",
+      "ja": "{髪|かみ}が　{長|なが}いです。",
+      "vi": "Tóc dài."
+     }
+    },
+    {
+     "id": "n5v202",
+     "word": "{短|みじか}い",
+     "kana": "みじかい",
+     "meaningVi": "ngắn",
+     "example": {
+      "id": "n5e202",
+      "ja": "{休|やす}みが　{短|みじか}いです。",
+      "vi": "Kỳ nghỉ ngắn."
+     }
+    },
+    {
+     "id": "n5v203",
+     "word": "{多|おお}い",
+     "kana": "おおい",
+     "meaningVi": "nhiều",
+     "example": {
+      "id": "n5e203",
+      "ja": "{東京|とうきょう}は　{人|ひと}が　{多|おお}いです。",
+      "vi": "Tokyo đông người."
+     }
+    },
+    {
+     "id": "n5v204",
+     "word": "{少|すく}ない",
+     "kana": "すくない",
+     "meaningVi": "ít",
+     "example": {
+      "id": "n5e204",
+      "ja": "この　{町|まち}は　{店|みせ}が　{少|すく}ないです。",
+      "vi": "Thị trấn này ít cửa hàng."
+     }
+    },
+    {
+     "id": "n5v205",
+     "word": "{痛|いた}い",
+     "kana": "いたい",
+     "meaningVi": "đau",
+     "example": {
+      "id": "n5e205",
+      "ja": "おなかが　{痛|いた}いです。",
+      "vi": "Tôi đau bụng."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t12",
+   "titleVi": "Tính từ な",
+   "words": [
+    {
+     "id": "n5v206",
+     "word": "{静|しず}か",
+     "kana": "しずか",
+     "meaningVi": "yên tĩnh",
+     "example": {
+      "id": "n5e206",
+      "ja": "{静|しず}かに　して　ください。",
+      "vi": "Hãy giữ yên lặng."
+     }
+    },
+    {
+     "id": "n5v207",
+     "word": "にぎやか",
+     "kana": "にぎやか",
+     "meaningVi": "náo nhiệt",
+     "example": {
+      "id": "n5e207",
+      "ja": "{夜|よる}の　{町|まち}は　にぎやかです。",
+      "vi": "Phố đêm náo nhiệt."
+     }
+    },
+    {
+     "id": "n5v208",
+     "word": "きれい",
+     "kana": "きれい",
+     "meaningVi": "đẹp, sạch",
+     "example": {
+      "id": "n5e208",
+      "ja": "{部屋|へや}を　きれいに　しました。",
+      "vi": "Tôi đã dọn phòng sạch sẽ."
+     }
+    },
+    {
+     "id": "n5v209",
+     "word": "{有名|ゆうめい}",
+     "kana": "ゆうめい",
+     "meaningVi": "nổi tiếng",
+     "example": {
+      "id": "n5e209",
+      "ja": "{京都|きょうと}は　{有名|ゆうめい}な　{町|まち}です。",
+      "vi": "Kyoto là thành phố nổi tiếng."
+     }
+    },
+    {
+     "id": "n5v210",
+     "word": "{親切|しんせつ}",
+     "kana": "しんせつ",
+     "meaningVi": "tốt bụng",
+     "example": {
+      "id": "n5e210",
+      "ja": "{日本|にほん}の　{人|ひと}は　{親切|しんせつ}です。",
+      "vi": "Người Nhật tốt bụng."
+     }
+    },
+    {
+     "id": "n5v211",
+     "word": "{便利|べんり}",
+     "kana": "べんり",
+     "meaningVi": "tiện lợi",
+     "example": {
+      "id": "n5e211",
+      "ja": "スマホは　{便利|べんり}です。",
+      "vi": "Điện thoại thông minh tiện lợi."
+     }
+    },
+    {
+     "id": "n5v212",
+     "word": "{暇|ひま}",
+     "kana": "ひま",
+     "meaningVi": "rảnh",
+     "example": {
+      "id": "n5e212",
+      "ja": "{今晩|こんばん}　{暇|ひま}ですか。",
+      "vi": "Tối nay bạn rảnh không?"
+     }
+    },
+    {
+     "id": "n5v213",
+     "word": "{大丈夫|だいじょうぶ}",
+     "kana": "だいじょうぶ",
+     "meaningVi": "không sao",
+     "example": {
+      "id": "n5e213",
+      "ja": "{大丈夫|だいじょうぶ}ですか。",
+      "vi": "Bạn có sao không?"
+     }
+    },
+    {
+     "id": "n5v214",
+     "word": "{好|す}き",
+     "kana": "すき",
+     "meaningVi": "thích",
+     "example": {
+      "id": "n5e214",
+      "ja": "{音楽|おんがく}が　{好|す}きです。",
+      "vi": "Tôi thích âm nhạc."
+     }
+    },
+    {
+     "id": "n5v215",
+     "word": "{嫌|きら}い",
+     "kana": "きらい",
+     "meaningVi": "ghét",
+     "example": {
+      "id": "n5e215",
+      "ja": "{虫|むし}が　{嫌|きら}いです。",
+      "vi": "Tôi ghét côn trùng."
+     }
+    },
+    {
+     "id": "n5v216",
+     "word": "{上手|じょうず}",
+     "kana": "じょうず",
+     "meaningVi": "giỏi",
+     "example": {
+      "id": "n5e216",
+      "ja": "{日本語|にほんご}が　{上手|じょうず}ですね。",
+      "vi": "Tiếng Nhật của bạn giỏi nhỉ."
+     }
+    },
+    {
+     "id": "n5v217",
+     "word": "{下手|へた}",
+     "kana": "へた",
+     "meaningVi": "kém",
+     "example": {
+      "id": "n5e217",
+      "ja": "{私|わたし}は　{料理|りょうり}が　{下手|へた}です。",
+      "vi": "Tôi nấu ăn dở."
+     }
+    },
+    {
+     "id": "n5v218",
+     "word": "{大切|たいせつ}",
+     "kana": "たいせつ",
+     "meaningVi": "quan trọng",
+     "example": {
+      "id": "n5e218",
+      "ja": "{時間|じかん}は　{大切|たいせつ}です。",
+      "vi": "Thời gian quý giá."
+     }
+    },
+    {
+     "id": "n5v219",
+     "word": "{簡単|かんたん}",
+     "kana": "かんたん",
+     "meaningVi": "đơn giản",
+     "example": {
+      "id": "n5e219",
+      "ja": "この　{仕事|しごと}は　{簡単|かんたん}です。",
+      "vi": "Công việc này đơn giản."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t13",
+   "titleVi": "Động từ thường dùng",
+   "words": [
+    {
+     "id": "n5v220",
+     "word": "{行|い}く",
+     "kana": "いく",
+     "meaningVi": "đi",
+     "example": {
+      "id": "n5e220",
+      "ja": "{明日|あした}　{病院|びょういん}へ　{行|い}きます。",
+      "vi": "Mai tôi đi bệnh viện."
+     }
+    },
+    {
+     "id": "n5v221",
+     "word": "{来|く}る",
+     "kana": "くる",
+     "meaningVi": "đến",
+     "example": {
+      "id": "n5e221",
+      "ja": "{友達|ともだち}が　{家|いえ}に　{来|き}ます。",
+      "vi": "Bạn đến nhà tôi."
+     }
+    },
+    {
+     "id": "n5v222",
+     "word": "{帰|かえ}る",
+     "kana": "かえる",
+     "meaningVi": "về",
+     "example": {
+      "id": "n5e222",
+      "ja": "{何時|なんじ}に　{帰|かえ}りますか。",
+      "vi": "Mấy giờ bạn về?"
+     }
+    },
+    {
+     "id": "n5v223",
+     "word": "{起|お}きる",
+     "kana": "おきる",
+     "meaningVi": "thức dậy",
+     "example": {
+      "id": "n5e223",
+      "ja": "{毎朝|まいあさ}　6{時|じ}に　{起|お}きます。",
+      "vi": "Mỗi sáng tôi dậy lúc 6 giờ."
+     }
+    },
+    {
+     "id": "n5v224",
+     "word": "{寝|ね}る",
+     "kana": "ねる",
+     "meaningVi": "ngủ",
+     "example": {
+      "id": "n5e224",
+      "ja": "11{時|じ}に　{寝|ね}ます。",
+      "vi": "Tôi ngủ lúc 11 giờ."
+     }
+    },
+    {
+     "id": "n5v225",
+     "word": "{食|た}べる",
+     "kana": "たべる",
+     "meaningVi": "ăn",
+     "example": {
+      "id": "n5e225",
+      "ja": "{一緒|いっしょ}に　{食|た}べましょう。",
+      "vi": "Cùng ăn nào."
+     }
+    },
+    {
+     "id": "n5v226",
+     "word": "{飲|の}む",
+     "kana": "のむ",
+     "meaningVi": "uống",
+     "example": {
+      "id": "n5e226",
+      "ja": "{水|みず}を　たくさん　{飲|の}んで　ください。",
+      "vi": "Hãy uống nhiều nước."
+     }
+    },
+    {
+     "id": "n5v227",
+     "word": "{見|み}る",
+     "kana": "みる",
+     "meaningVi": "xem, nhìn",
+     "example": {
+      "id": "n5e227",
+      "ja": "{映画|えいが}を　{見|み}に　{行|い}きませんか。",
+      "vi": "Đi xem phim không?"
+     }
+    },
+    {
+     "id": "n5v228",
+     "word": "{聞|き}く",
+     "kana": "きく",
+     "meaningVi": "nghe; hỏi",
+     "example": {
+      "id": "n5e228",
+      "ja": "{先生|せんせい}に　{聞|き}いて　ください。",
+      "vi": "Hãy hỏi thầy giáo."
+     }
+    },
+    {
+     "id": "n5v229",
+     "word": "{話|はな}す",
+     "kana": "はなす",
+     "meaningVi": "nói chuyện",
+     "example": {
+      "id": "n5e229",
+      "ja": "{日本語|にほんご}で　{話|はな}しましょう。",
+      "vi": "Hãy nói bằng tiếng Nhật."
+     }
+    },
+    {
+     "id": "n5v230",
+     "word": "{読|よ}む",
+     "kana": "よむ",
+     "meaningVi": "đọc",
+     "example": {
+      "id": "n5e230",
+      "ja": "{新聞|しんぶん}を　{読|よ}みます。",
+      "vi": "Tôi đọc báo."
+     }
+    },
+    {
+     "id": "n5v231",
+     "word": "{書|か}く",
+     "kana": "かく",
+     "meaningVi": "viết",
+     "example": {
+      "id": "n5e231",
+      "ja": "ここに　{住所|じゅうしょ}を　{書|か}いて　ください。",
+      "vi": "Hãy viết địa chỉ vào đây."
+     }
+    },
+    {
+     "id": "n5v232",
+     "word": "{買|か}う",
+     "kana": "かう",
+     "meaningVi": "mua",
+     "example": {
+      "id": "n5e232",
+      "ja": "スーパーで　{野菜|やさい}を　{買|か}います。",
+      "vi": "Tôi mua rau ở siêu thị."
+     }
+    },
+    {
+     "id": "n5v233",
+     "word": "{会|あ}う",
+     "kana": "あう",
+     "meaningVi": "gặp",
+     "example": {
+      "id": "n5e233",
+      "ja": "{駅|えき}で　{友達|ともだち}に　{会|あ}います。",
+      "vi": "Tôi gặp bạn ở nhà ga."
+     }
+    },
+    {
+     "id": "n5v234",
+     "word": "{待|ま}つ",
+     "kana": "まつ",
+     "meaningVi": "chờ",
+     "example": {
+      "id": "n5e234",
+      "ja": "ちょっと　{待|ま}って　ください。",
+      "vi": "Chờ một chút nhé."
+     }
+    },
+    {
+     "id": "n5v235",
+     "word": "{働|はたら}く",
+     "kana": "はたらく",
+     "meaningVi": "làm việc",
+     "example": {
+      "id": "n5e235",
+      "ja": "{工場|こうじょう}で　{働|はたら}いて　います。",
+      "vi": "Tôi đang làm việc ở nhà máy."
+     }
+    },
+    {
+     "id": "n5v236",
+     "word": "{休|やす}む",
+     "kana": "やすむ",
+     "meaningVi": "nghỉ",
+     "example": {
+      "id": "n5e236",
+      "ja": "{今日|きょう}は　{会社|かいしゃ}を　{休|やす}みます。",
+      "vi": "Hôm nay tôi nghỉ làm."
+     }
+    },
+    {
+     "id": "n5v237",
+     "word": "{勉強|べんきょう}する",
+     "kana": "べんきょうする",
+     "meaningVi": "học",
+     "example": {
+      "id": "n5e237",
+      "ja": "{図書館|としょかん}で　{勉強|べんきょう}します。",
+      "vi": "Tôi học ở thư viện."
+     }
+    },
+    {
+     "id": "n5v238",
+     "word": "{分|わ}かる",
+     "kana": "わかる",
+     "meaningVi": "hiểu",
+     "example": {
+      "id": "n5e238",
+      "ja": "{意味|いみ}が　{分|わ}かりますか。",
+      "vi": "Bạn có hiểu nghĩa không?"
+     }
+    },
+    {
+     "id": "n5v239",
+     "word": "ある",
+     "kana": "ある",
+     "meaningVi": "có (đồ vật)",
+     "example": {
+      "id": "n5e239",
+      "ja": "{時間|じかん}が　ありますか。",
+      "vi": "Bạn có thời gian không?"
+     }
+    },
+    {
+     "id": "n5v240",
+     "word": "いる",
+     "kana": "いる",
+     "meaningVi": "có, ở (người, vật)",
+     "example": {
+      "id": "n5e240",
+      "ja": "{教室|きょうしつ}に　{学生|がくせい}が　います。",
+      "vi": "Có sinh viên trong lớp."
+     }
+    },
+    {
+     "id": "n5v241",
+     "word": "{使|つか}う",
+     "kana": "つかう",
+     "meaningVi": "dùng",
+     "example": {
+      "id": "n5e241",
+      "ja": "この　パソコンを　{使|つか}っても　いいですか。",
+      "vi": "Tôi dùng máy tính này được không?"
+     }
+    },
+    {
+     "id": "n5v242",
+     "word": "{作|つく}る",
+     "kana": "つくる",
+     "meaningVi": "làm, nấu",
+     "example": {
+      "id": "n5e242",
+      "ja": "{晩|ばん}ごはんを　{作|つく}ります。",
+      "vi": "Tôi nấu bữa tối."
+     }
+    },
+    {
+     "id": "n5v243",
+     "word": "{送|おく}る",
+     "kana": "おくる",
+     "meaningVi": "gửi",
+     "example": {
+      "id": "n5e243",
+      "ja": "メールを　{送|おく}りました。",
+      "vi": "Tôi đã gửi email."
+     }
+    },
+    {
+     "id": "n5v244",
+     "word": "{入|はい}る",
+     "kana": "はいる",
+     "meaningVi": "vào",
+     "example": {
+      "id": "n5e244",
+      "ja": "{部屋|へや}に　{入|はい}っても　いいですか。",
+      "vi": "Tôi vào phòng được không?"
+     }
+    },
+    {
+     "id": "n5v245",
+     "word": "{出|で}る",
+     "kana": "でる",
+     "meaningVi": "ra, rời",
+     "example": {
+      "id": "n5e245",
+      "ja": "{家|いえ}を　8{時|じ}に　{出|で}ます。",
+      "vi": "Tôi ra khỏi nhà lúc 8 giờ."
+     }
+    },
+    {
+     "id": "n5v246",
+     "word": "{乗|の}る",
+     "kana": "のる",
+     "meaningVi": "lên (xe)",
+     "example": {
+      "id": "n5e246",
+      "ja": "{電車|でんしゃ}に　{乗|の}ります。",
+      "vi": "Tôi lên tàu điện."
+     }
+    },
+    {
+     "id": "n5v247",
+     "word": "{降|お}りる",
+     "kana": "おりる",
+     "meaningVi": "xuống (xe)",
+     "example": {
+      "id": "n5e247",
+      "ja": "{次|つぎ}の　{駅|えき}で　{降|お}ります。",
+      "vi": "Tôi xuống ở ga tiếp theo."
+     }
+    },
+    {
+     "id": "n5v248",
+     "word": "{始|はじ}まる",
+     "kana": "はじまる",
+     "meaningVi": "bắt đầu",
+     "example": {
+      "id": "n5e248",
+      "ja": "{授業|じゅぎょう}は　9{時|じ}に　{始|はじ}まります。",
+      "vi": "Giờ học bắt đầu lúc 9 giờ."
+     }
+    },
+    {
+     "id": "n5v249",
+     "word": "{終|お}わる",
+     "kana": "おわる",
+     "meaningVi": "kết thúc",
+     "example": {
+      "id": "n5e249",
+      "ja": "{仕事|しごと}は　6{時|じ}に　{終|お}わります。",
+      "vi": "Công việc xong lúc 6 giờ."
+     }
+    },
+    {
+     "id": "n5v250",
+     "word": "{教|おし}える",
+     "kana": "おしえる",
+     "meaningVi": "dạy, chỉ",
+     "example": {
+      "id": "n5e250",
+      "ja": "{道|みち}を　{教|おし}えて　ください。",
+      "vi": "Chỉ đường giúp tôi."
+     }
+    },
+    {
+     "id": "n5v251",
+     "word": "{習|なら}う",
+     "kana": "ならう",
+     "meaningVi": "học (từ ai)",
+     "example": {
+      "id": "n5e251",
+      "ja": "{先生|せんせい}に　{日本語|にほんご}を　{習|なら}います。",
+      "vi": "Tôi học tiếng Nhật với thầy."
+     }
+    },
+    {
+     "id": "n5v252",
+     "word": "{借|か}りる",
+     "kana": "かりる",
+     "meaningVi": "mượn",
+     "example": {
+      "id": "n5e252",
+      "ja": "{傘|かさ}を　{借|か}りても　いいですか。",
+      "vi": "Tôi mượn ô được không?"
+     }
+    },
+    {
+     "id": "n5v253",
+     "word": "{貸|か}す",
+     "kana": "かす",
+     "meaningVi": "cho mượn",
+     "example": {
+      "id": "n5e253",
+      "ja": "ペンを　{貸|か}して　ください。",
+      "vi": "Cho tôi mượn bút."
+     }
+    },
+    {
+     "id": "n5v254",
+     "word": "{持|も}つ",
+     "kana": "もつ",
+     "meaningVi": "cầm, mang",
+     "example": {
+      "id": "n5e254",
+      "ja": "{荷物|にもつ}を　{持|も}ちましょうか。",
+      "vi": "Để tôi cầm hành lý nhé?"
+     }
+    },
+    {
+     "id": "n5v255",
+     "word": "{忘|わす}れる",
+     "kana": "わすれる",
+     "meaningVi": "quên",
+     "example": {
+      "id": "n5e255",
+      "ja": "{宿題|しゅくだい}を　{忘|わす}れました。",
+      "vi": "Tôi quên bài tập."
+     }
+    },
+    {
+     "id": "n5v256",
+     "word": "{覚|おぼ}える",
+     "kana": "おぼえる",
+     "meaningVi": "nhớ, thuộc",
+     "example": {
+      "id": "n5e256",
+      "ja": "{新|あたら}しい　{言葉|ことば}を　{覚|おぼ}えます。",
+      "vi": "Tôi học thuộc từ mới."
+     }
+    },
+    {
+     "id": "n5v257",
+     "word": "{知|し}る",
+     "kana": "しる",
+     "meaningVi": "biết",
+     "example": {
+      "id": "n5e257",
+      "ja": "{田中|たなか}さんを　{知|し}って　いますか。",
+      "vi": "Bạn biết anh Tanaka không?"
+     }
+    },
+    {
+     "id": "n5v258",
+     "word": "{住|す}む",
+     "kana": "すむ",
+     "meaningVi": "sống, cư trú",
+     "example": {
+      "id": "n5e258",
+      "ja": "{大阪|おおさか}に　{住|す}んで　います。",
+      "vi": "Tôi sống ở Osaka."
+     }
+    },
+    {
+     "id": "n5v259",
+     "word": "{遊|あそ}ぶ",
+     "kana": "あそぶ",
+     "meaningVi": "chơi",
+     "example": {
+      "id": "n5e259",
+      "ja": "{子|こ}どもと　{公園|こうえん}で　{遊|あそ}びます。",
+      "vi": "Tôi chơi với con ở công viên."
+     }
+    },
+    {
+     "id": "n5v260",
+     "word": "{泳|およ}ぐ",
+     "kana": "およぐ",
+     "meaningVi": "bơi",
+     "example": {
+      "id": "n5e260",
+      "ja": "{海|うみ}で　{泳|およ}ぎました。",
+      "vi": "Tôi đã bơi ở biển."
+     }
+    },
+    {
+     "id": "n5v261",
+     "word": "{歩|ある}く",
+     "kana": "あるく",
+     "meaningVi": "đi bộ",
+     "example": {
+      "id": "n5e261",
+      "ja": "{駅|えき}まで　{歩|ある}いて　10{分|ぷん}です。",
+      "vi": "Đi bộ đến ga mất 10 phút."
+     }
+    },
+    {
+     "id": "n5v262",
+     "word": "{開|あ}ける",
+     "kana": "あける",
+     "meaningVi": "mở",
+     "example": {
+      "id": "n5e262",
+      "ja": "{窓|まど}を　{開|あ}けて　ください。",
+      "vi": "Hãy mở cửa sổ."
+     }
+    },
+    {
+     "id": "n5v263",
+     "word": "{閉|し}める",
+     "kana": "しめる",
+     "meaningVi": "đóng",
+     "example": {
+      "id": "n5e263",
+      "ja": "ドアを　{閉|し}めて　ください。",
+      "vi": "Hãy đóng cửa."
+     }
+    },
+    {
+     "id": "n5v264",
+     "word": "つける",
+     "kana": "つける",
+     "meaningVi": "bật (đèn, máy)",
+     "example": {
+      "id": "n5e264",
+      "ja": "エアコンを　つけましょうか。",
+      "vi": "Để tôi bật điều hòa nhé?"
+     }
+    },
+    {
+     "id": "n5v265",
+     "word": "{消|け}す",
+     "kana": "けす",
+     "meaningVi": "tắt",
+     "example": {
+      "id": "n5e265",
+      "ja": "{電気|でんき}を　{消|け}して　ください。",
+      "vi": "Hãy tắt đèn."
+     }
+    },
+    {
+     "id": "n5v266",
+     "word": "{撮|と}る",
+     "kana": "とる",
+     "meaningVi": "chụp (ảnh)",
+     "example": {
+      "id": "n5e266",
+      "ja": "{写真|しゃしん}を　{撮|と}って　ください。",
+      "vi": "Chụp ảnh giúp tôi."
+     }
+    },
+    {
+     "id": "n5v267",
+     "word": "{洗|あら}う",
+     "kana": "あらう",
+     "meaningVi": "rửa, giặt",
+     "example": {
+      "id": "n5e267",
+      "ja": "{手|て}を　{洗|あら}って　ください。",
+      "vi": "Hãy rửa tay."
+     }
+    },
+    {
+     "id": "n5v268",
+     "word": "{呼|よ}ぶ",
+     "kana": "よぶ",
+     "meaningVi": "gọi",
+     "example": {
+      "id": "n5e268",
+      "ja": "{救急車|きゅうきゅうしゃ}を　{呼|よ}んで　ください。",
+      "vi": "Gọi xe cứu thương giúp tôi."
+     }
+    },
+    {
+     "id": "n5v269",
+     "word": "{急|いそ}ぐ",
+     "kana": "いそぐ",
+     "meaningVi": "vội, gấp",
+     "example": {
+      "id": "n5e269",
+      "ja": "{急|いそ}いで　ください。",
+      "vi": "Nhanh lên nhé."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t14",
+   "titleVi": "Câu nói hằng ngày",
+   "words": [
+    {
+     "id": "n5v270",
+     "word": "おはようございます",
+     "kana": "おはようございます",
+     "meaningVi": "chào buổi sáng",
+     "example": {
+      "id": "n5e270",
+      "ja": "{皆|みな}さん、おはようございます。",
+      "vi": "Chào buổi sáng mọi người."
+     }
+    },
+    {
+     "id": "n5v271",
+     "word": "こんにちは",
+     "kana": "こんにちは",
+     "meaningVi": "xin chào (ban ngày)",
+     "example": {
+      "id": "n5e271",
+      "ja": "こんにちは。いい　{天気|てんき}ですね。",
+      "vi": "Xin chào. Trời đẹp nhỉ."
+     }
+    },
+    {
+     "id": "n5v272",
+     "word": "こんばんは",
+     "kana": "こんばんは",
+     "meaningVi": "chào buổi tối",
+     "example": {
+      "id": "n5e272",
+      "ja": "こんばんは。{今日|きょう}も　{寒|さむ}いですね。",
+      "vi": "Chào buổi tối. Hôm nay cũng lạnh nhỉ."
+     }
+    },
+    {
+     "id": "n5v273",
+     "word": "ありがとうございます",
+     "kana": "ありがとうございます",
+     "meaningVi": "cảm ơn",
+     "example": {
+      "id": "n5e273",
+      "ja": "{手伝|てつだ}って　くれて、ありがとうございます。",
+      "vi": "Cảm ơn bạn đã giúp."
+     }
+    },
+    {
+     "id": "n5v274",
+     "word": "すみません",
+     "kana": "すみません",
+     "meaningVi": "xin lỗi; xin phép",
+     "example": {
+      "id": "n5e274",
+      "ja": "すみません、{駅|えき}は　どこですか。",
+      "vi": "Xin lỗi, nhà ga ở đâu?"
+     }
+    },
+    {
+     "id": "n5v275",
+     "word": "{失礼|しつれい}します",
+     "kana": "しつれいします",
+     "meaningVi": "xin phép (vào, về)",
+     "example": {
+      "id": "n5e275",
+      "ja": "お{先|さき}に　{失礼|しつれい}します。",
+      "vi": "Tôi xin phép về trước."
+     }
+    },
+    {
+     "id": "n5v276",
+     "word": "お{願|ねが}いします",
+     "kana": "おねがいします",
+     "meaningVi": "làm ơn, nhờ",
+     "example": {
+      "id": "n5e276",
+      "ja": "よろしく　お{願|ねが}いします。",
+      "vi": "Rất mong được giúp đỡ."
+     }
+    },
+    {
+     "id": "n5v277",
+     "word": "いただきます",
+     "kana": "いただきます",
+     "meaningVi": "mời ăn (trước bữa)",
+     "example": {
+      "id": "n5e277",
+      "ja": "いただきます。",
+      "vi": "Mời mọi người ăn."
+     }
+    },
+    {
+     "id": "n5v278",
+     "word": "ごちそうさまでした",
+     "kana": "ごちそうさまでした",
+     "meaningVi": "cảm ơn vì bữa ăn",
+     "example": {
+      "id": "n5e278",
+      "ja": "ごちそうさまでした。おいしかったです。",
+      "vi": "Cảm ơn vì bữa ăn. Ngon lắm."
+     }
+    },
+    {
+     "id": "n5v279",
+     "word": "{行|い}って　きます",
+     "kana": "いってきます",
+     "meaningVi": "tôi đi đây",
+     "example": {
+      "id": "n5e279",
+      "ja": "{会社|かいしゃ}へ　{行|い}って　きます。",
+      "vi": "Tôi đi làm đây."
+     }
+    },
+    {
+     "id": "n5v280",
+     "word": "ただいま",
+     "kana": "ただいま",
+     "meaningVi": "tôi về rồi",
+     "example": {
+      "id": "n5e280",
+      "ja": "ただいま。……お{帰|かえ}りなさい。",
+      "vi": "Tôi về rồi. ... Mừng anh về."
+     }
+    },
+    {
+     "id": "n5v281",
+     "word": "お{疲|つか}れさまでした",
+     "kana": "おつかれさまでした",
+     "meaningVi": "anh/chị vất vả rồi",
+     "example": {
+      "id": "n5e281",
+      "ja": "{今日|きょう}も　お{疲|つか}れさまでした。",
+      "vi": "Hôm nay anh vất vả rồi."
+     }
+    },
+    {
+     "id": "n5v282",
+     "word": "{大丈夫|だいじょうぶ}です",
+     "kana": "だいじょうぶです",
+     "meaningVi": "không sao",
+     "example": {
+      "id": "n5e282",
+      "ja": "{心配|しんぱい}しないで。{大丈夫|だいじょうぶ}です。",
+      "vi": "Đừng lo. Không sao đâu."
+     }
+    },
+    {
+     "id": "n5v283",
+     "word": "どうぞ",
+     "kana": "どうぞ",
+     "meaningVi": "xin mời",
+     "example": {
+      "id": "n5e283",
+      "ja": "どうぞ、お{入|はい}り　ください。",
+      "vi": "Xin mời vào."
+     }
+    },
+    {
+     "id": "n5v284",
+     "word": "はじめまして",
+     "kana": "はじめまして",
+     "meaningVi": "rất vui được gặp (lần đầu)",
+     "example": {
+      "id": "n5e284",
+      "ja": "はじめまして。グエンです。",
+      "vi": "Rất vui được gặp anh. Tôi là Nguyễn."
+     }
+    }
+   ]
+  },
+  {
+   "id": "t15",
+   "titleVi": "Từ để hỏi, phó từ",
+   "words": [
+    {
+     "id": "n5v285",
+     "word": "{何|なん}・{何|なに}",
+     "kana": "なん・なに",
+     "meaningVi": "cái gì",
+     "example": {
+      "id": "n5e285",
+      "ja": "これは　{何|なん}ですか。",
+      "vi": "Đây là cái gì?"
+     }
+    },
+    {
+     "id": "n5v286",
+     "word": "だれ",
+     "kana": "だれ",
+     "meaningVi": "ai",
+     "example": {
+      "id": "n5e286",
+      "ja": "あの　{人|ひと}は　だれですか。",
+      "vi": "Người kia là ai?"
+     }
+    },
+    {
+     "id": "n5v287",
+     "word": "どこ",
+     "kana": "どこ",
+     "meaningVi": "ở đâu",
+     "example": {
+      "id": "n5e287",
+      "ja": "トイレは　どこですか。",
+      "vi": "Nhà vệ sinh ở đâu?"
+     }
+    },
+    {
+     "id": "n5v288",
+     "word": "いつ",
+     "kana": "いつ",
+     "meaningVi": "khi nào",
+     "example": {
+      "id": "n5e288",
+      "ja": "いつ　{日本|にほん}へ　{来|き}ましたか。",
+      "vi": "Bạn đến Nhật khi nào?"
+     }
+    },
+    {
+     "id": "n5v289",
+     "word": "いくら",
+     "kana": "いくら",
+     "meaningVi": "bao nhiêu tiền",
+     "example": {
+      "id": "n5e289",
+      "ja": "この　{本|ほん}は　いくらですか。",
+      "vi": "Cuốn sách này bao nhiêu tiền?"
+     }
+    },
+    {
+     "id": "n5v290",
+     "word": "どうして",
+     "kana": "どうして",
+     "meaningVi": "tại sao",
+     "example": {
+      "id": "n5e290",
+      "ja": "どうして　{遅|おく}れましたか。",
+      "vi": "Tại sao bạn đến muộn?"
+     }
+    },
+    {
+     "id": "n5v291",
+     "word": "どう",
+     "kana": "どう",
+     "meaningVi": "thế nào",
+     "example": {
+      "id": "n5e291",
+      "ja": "{日本|にほん}の　{生活|せいかつ}は　どうですか。",
+      "vi": "Cuộc sống ở Nhật thế nào?"
+     }
+    },
+    {
+     "id": "n5v292",
+     "word": "どれ",
+     "kana": "どれ",
+     "meaningVi": "cái nào",
+     "example": {
+      "id": "n5e292",
+      "ja": "あなたの　かばんは　どれですか。",
+      "vi": "Túi của bạn là cái nào?"
+     }
+    },
+    {
+     "id": "n5v293",
+     "word": "とても",
+     "kana": "とても",
+     "meaningVi": "rất",
+     "example": {
+      "id": "n5e293",
+      "ja": "とても　おいしいです。",
+      "vi": "Rất ngon."
+     }
+    },
+    {
+     "id": "n5v294",
+     "word": "あまり",
+     "kana": "あまり",
+     "meaningVi": "không... lắm",
+     "example": {
+      "id": "n5e294",
+      "ja": "あまり　{好|す}きじゃ　ありません。",
+      "vi": "Tôi không thích lắm."
+     }
+    },
+    {
+     "id": "n5v295",
+     "word": "{全然|ぜんぜん}",
+     "kana": "ぜんぜん",
+     "meaningVi": "hoàn toàn không",
+     "example": {
+      "id": "n5e295",
+      "ja": "{全然|ぜんぜん}　{分|わ}かりません。",
+      "vi": "Tôi hoàn toàn không hiểu."
+     }
+    },
+    {
+     "id": "n5v296",
+     "word": "よく",
+     "kana": "よく",
+     "meaningVi": "thường, rõ",
+     "example": {
+      "id": "n5e296",
+      "ja": "よく　この　{店|みせ}に　{来|き}ます。",
+      "vi": "Tôi thường đến quán này."
+     }
+    },
+    {
+     "id": "n5v297",
+     "word": "ときどき",
+     "kana": "ときどき",
+     "meaningVi": "thỉnh thoảng",
+     "example": {
+      "id": "n5e297",
+      "ja": "ときどき　{映画|えいが}を　{見|み}ます。",
+      "vi": "Thỉnh thoảng tôi xem phim."
+     }
+    },
+    {
+     "id": "n5v298",
+     "word": "いつも",
+     "kana": "いつも",
+     "meaningVi": "luôn luôn",
+     "example": {
+      "id": "n5e298",
+      "ja": "いつも　{電車|でんしゃ}で　{行|い}きます。",
+      "vi": "Tôi luôn đi bằng tàu điện."
+     }
+    },
+    {
+     "id": "n5v299",
+     "word": "もう",
+     "kana": "もう",
+     "meaningVi": "đã, rồi",
+     "example": {
+      "id": "n5e299",
+      "ja": "もう　{昼|ひる}ごはんを　{食|た}べましたか。",
+      "vi": "Bạn ăn trưa chưa?"
+     }
+    },
+    {
+     "id": "n5v300",
+     "word": "まだ",
+     "kana": "まだ",
+     "meaningVi": "vẫn, chưa",
+     "example": {
+      "id": "n5e300",
+      "ja": "まだ　{終|お}わって　いません。",
+      "vi": "Vẫn chưa xong."
+     }
+    },
+    {
+     "id": "n5v301",
+     "word": "{少|すこ}し",
+     "kana": "すこし",
+     "meaningVi": "một chút",
+     "example": {
+      "id": "n5e301",
+      "ja": "{少|すこ}し　{休|やす}みましょう。",
+      "vi": "Nghỉ một chút nhé."
+     }
+    },
+    {
+     "id": "n5v302",
+     "word": "たくさん",
+     "kana": "たくさん",
+     "meaningVi": "nhiều",
+     "example": {
+      "id": "n5e302",
+      "ja": "{宿題|しゅくだい}が　たくさん　あります。",
+      "vi": "Có nhiều bài tập."
+     }
+    },
+    {
+     "id": "n5v303",
+     "word": "{一緒|いっしょ}に",
+     "kana": "いっしょに",
+     "meaningVi": "cùng nhau",
+     "example": {
+      "id": "n5e303",
+      "ja": "{一緒|いっしょ}に　{帰|かえ}りませんか。",
+      "vi": "Cùng về không?"
+     }
+    },
+    {
+     "id": "n5v304",
+     "word": "ゆっくり",
+     "kana": "ゆっくり",
+     "meaningVi": "chậm, thong thả",
+     "example": {
+      "id": "n5e304",
+      "ja": "ゆっくり　{話|はな}して　ください。",
+      "vi": "Hãy nói chậm thôi."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -19,6 +19,16 @@ Kế hoạch chi tiết: [docs/KE_HOACH.md](docs/KE_HOACH.md)
 | 1.7 | Luyện nghe, nói (nhận dạng giọng), viết, và bài đọc hiểu cuối bài | ✅ 2026-10-20 | `skills_tab.dart`, `speaking_screen.dart`, `writing_screen.dart`, `reading_tab.dart` (25 test đạt) |
 | 1.8 | Build file APK để bạn cài thử trên điện thoại | ✅ 2026-10-20 | GitHub Actions build mỗi lần đẩy lên main, APK ở [Releases](https://github.com/tttan1305-sys/Nihongo-N4/releases) |
 
+## Phần Tổng hợp N5 (bạn yêu cầu 2026-10-21)
+
+| Nội dung | Trạng thái | Kết quả |
+|---|---|---|
+| Các thể: 3 nhóm động từ, ます・て・ない・từ điển・た・たら/ても, thể thông thường, bảng chia 17 động từ mẫu, luyện chia thể | ✅ 2026-10-21 | `assets/n5/forms.json` (sinh bằng `tools/gen_n5_forms.py`) |
+| Ngữ pháp Minna bài 1–25: 109 mẫu câu, giải thích, ví dụ, luyện tập từng bài | ✅ 2026-10-21 | `assets/n5/grammar.json` |
+| Từ vựng N5: 304 từ, 15 chủ đề, mỗi từ có câu ví dụ, luyện từ theo chủ đề | ✅ 2026-10-21 | `assets/n5/vocab.json` (sinh từ `tools/n5_vocab_data.py`) |
+
+Màn hình: `screens/n5_screen.dart`, mở từ thẻ "Tổng hợp N5" ở trang chủ, không khóa. Chưa đưa từ N5 vào flashcard (mã thẻ hiện theo số bài N4).
+
 ## Giai đoạn 2: Tài khoản Gmail và giọng đọc nữ
 
 | Bước | Nội dung | Trạng thái |

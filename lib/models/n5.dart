@@ -1,0 +1,262 @@
+// Phần Tổng hợp N5 (Minna bài 1–25), đọc từ assets/n5/*.json.
+// Các file này sinh bằng tools/gen_n5_forms.py, tools/gen_n5_vocab.py
+// (ngữ pháp viết tay), và cùng cú pháp furigana {漢字|かんじ} với bài học.
+
+import 'lesson.dart';
+
+class VerbGroup {
+  final String name;
+  final String descVi;
+
+  const VerbGroup({required this.name, required this.descVi});
+
+  factory VerbGroup.fromJson(Map<String, dynamic> j) =>
+      VerbGroup(name: j['name'] as String, descVi: j['descVi'] as String);
+}
+
+class FormRule {
+  final String group;
+  final String ruleVi;
+  final String example;
+
+  const FormRule({
+    required this.group,
+    required this.ruleVi,
+    required this.example,
+  });
+
+  factory FormRule.fromJson(Map<String, dynamic> j) => FormRule(
+    group: j['group'] as String,
+    ruleVi: j['ruleVi'] as String,
+    example: j['example'] as String,
+  );
+}
+
+/// Một thể (て形, ない形...): cách chia, cách dùng và ví dụ.
+class VerbForm {
+  final String id;
+  final String name;
+  final String nameJa;
+  final String lesson;
+  final String usesVi;
+  final List<FormRule> rules;
+  final List<Sentence> examples;
+
+  /// Các cột trong bảng chia của thể này (khóa trong [ConjugatedVerb.forms]).
+  final List<String> table;
+
+  const VerbForm({
+    required this.id,
+    required this.name,
+    required this.nameJa,
+    required this.lesson,
+    required this.usesVi,
+    required this.rules,
+    required this.examples,
+    required this.table,
+  });
+
+  factory VerbForm.fromJson(Map<String, dynamic> j) => VerbForm(
+    id: j['id'] as String,
+    name: j['name'] as String,
+    nameJa: j['nameJa'] as String,
+    lesson: j['lesson'] as String,
+    usesVi: j['usesVi'] as String,
+    rules: _list(j['rules'], FormRule.fromJson),
+    examples: _list(j['examples'], Sentence.fromJson),
+    table: List<String>.from(j['table'] as List),
+  );
+}
+
+/// Một động từ mẫu đã chia sẵn mọi thể.
+class ConjugatedVerb {
+  final String id;
+  final int group;
+  final String meaningVi;
+  final Map<String, String> forms;
+
+  const ConjugatedVerb({
+    required this.id,
+    required this.group,
+    required this.meaningVi,
+    required this.forms,
+  });
+
+  String get dictionary => forms['dict']!;
+
+  factory ConjugatedVerb.fromJson(Map<String, dynamic> j) => ConjugatedVerb(
+    id: j['id'] as String,
+    group: j['group'] as int,
+    meaningVi: j['meaningVi'] as String,
+    forms: Map<String, String>.from(j['forms'] as Map),
+  );
+}
+
+class PlainRow {
+  final String label;
+  final List<String> cells;
+
+  const PlainRow({required this.label, required this.cells});
+
+  factory PlainRow.fromJson(Map<String, dynamic> j) => PlainRow(
+    label: j['label'] as String,
+    cells: List<String>.from(j['cells'] as List),
+  );
+}
+
+/// Bảng thể thông thường (普通形) của động từ, tính từ, danh từ.
+class PlainForms {
+  final String name;
+  final String nameJa;
+  final String lesson;
+  final String usesVi;
+  final List<String> columns;
+  final List<PlainRow> rows;
+  final List<Sentence> examples;
+
+  const PlainForms({
+    required this.name,
+    required this.nameJa,
+    required this.lesson,
+    required this.usesVi,
+    required this.columns,
+    required this.rows,
+    required this.examples,
+  });
+
+  factory PlainForms.fromJson(Map<String, dynamic> j) => PlainForms(
+    name: j['name'] as String,
+    nameJa: j['nameJa'] as String,
+    lesson: j['lesson'] as String,
+    usesVi: j['usesVi'] as String,
+    columns: List<String>.from(j['columns'] as List),
+    rows: _list(j['rows'], PlainRow.fromJson),
+    examples: _list(j['examples'], Sentence.fromJson),
+  );
+}
+
+class FormsData {
+  final List<VerbGroup> groups;
+  final Map<String, String> formLabels;
+  final List<VerbForm> forms;
+  final List<ConjugatedVerb> verbs;
+  final PlainForms plain;
+
+  const FormsData({
+    required this.groups,
+    required this.formLabels,
+    required this.forms,
+    required this.verbs,
+    required this.plain,
+  });
+
+  factory FormsData.fromJson(Map<String, dynamic> j) => FormsData(
+    groups: _list(j['groups'], VerbGroup.fromJson),
+    formLabels: Map<String, String>.from(j['formLabels'] as Map),
+    forms: _list(j['forms'], VerbForm.fromJson),
+    verbs: _list(j['verbs'], ConjugatedVerb.fromJson),
+    plain: PlainForms.fromJson(j['plain'] as Map<String, dynamic>),
+  );
+}
+
+class N5GrammarPoint {
+  final String id;
+  final String pattern;
+  final String meaningVi;
+  final String explanationVi;
+  final List<Sentence> examples;
+
+  const N5GrammarPoint({
+    required this.id,
+    required this.pattern,
+    required this.meaningVi,
+    required this.explanationVi,
+    required this.examples,
+  });
+
+  factory N5GrammarPoint.fromJson(Map<String, dynamic> j) => N5GrammarPoint(
+    id: j['id'] as String,
+    pattern: j['pattern'] as String,
+    meaningVi: j['meaningVi'] as String,
+    explanationVi: j['explanationVi'] as String,
+    examples: _list(j['examples'], Sentence.fromJson),
+  );
+}
+
+class N5GrammarLesson {
+  final int lesson;
+  final String titleVi;
+  final List<N5GrammarPoint> points;
+
+  const N5GrammarLesson({
+    required this.lesson,
+    required this.titleVi,
+    required this.points,
+  });
+
+  factory N5GrammarLesson.fromJson(Map<String, dynamic> j) => N5GrammarLesson(
+    lesson: j['lesson'] as int,
+    titleVi: j['titleVi'] as String,
+    points: _list(j['points'], N5GrammarPoint.fromJson),
+  );
+}
+
+class N5Word {
+  final String id;
+  final String word;
+  final String kana;
+  final String meaningVi;
+  final Sentence example;
+
+  const N5Word({
+    required this.id,
+    required this.word,
+    required this.kana,
+    required this.meaningVi,
+    required this.example,
+  });
+
+  factory N5Word.fromJson(Map<String, dynamic> j) => N5Word(
+    id: j['id'] as String,
+    word: j['word'] as String,
+    kana: j['kana'] as String,
+    meaningVi: j['meaningVi'] as String,
+    example: Sentence.fromJson(j['example'] as Map<String, dynamic>),
+  );
+}
+
+class N5Topic {
+  final String id;
+  final String titleVi;
+  final List<N5Word> words;
+
+  const N5Topic({required this.id, required this.titleVi, required this.words});
+
+  factory N5Topic.fromJson(Map<String, dynamic> j) => N5Topic(
+    id: j['id'] as String,
+    titleVi: j['titleVi'] as String,
+    words: _list(j['words'], N5Word.fromJson),
+  );
+}
+
+/// Toàn bộ phần Tổng hợp N5.
+class N5Data {
+  final FormsData forms;
+  final List<N5GrammarLesson> grammar;
+  final List<N5Topic> topics;
+
+  const N5Data({
+    required this.forms,
+    required this.grammar,
+    required this.topics,
+  });
+
+  int get grammarCount => grammar.fold(0, (n, l) => n + l.points.length);
+
+  int get wordCount => topics.fold(0, (n, t) => n + t.words.length);
+}
+
+List<T> _list<T>(Object? raw, T Function(Map<String, dynamic>) parse) =>
+    (raw as List? ?? const [])
+        .map((e) => parse(e as Map<String, dynamic>))
+        .toList();
