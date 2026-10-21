@@ -50,6 +50,10 @@ android {
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName(if (hasReleaseKey) "release" else "debug")
+            // Tắt R8 thu gọn mã: R8 đổi tên lớp của shared_preferences, app
+            // mở ra báo NoSuchMethodError ...SharedPreferencesApiRegistrar.getAll.
+            isMinifyEnabled = false
+            isShrinkResources = false
         }
     }
 }
