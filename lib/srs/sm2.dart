@@ -11,12 +11,16 @@ class CardState {
   final int lapses;
   final DateTime due;
 
+  /// Lần ôn gần nhất, null nếu chưa ôn. Dùng để chọn bản mới hơn khi đồng bộ.
+  final DateTime? reviewed;
+
   const CardState({
     this.ease = 2.5,
     this.intervalDays = 0,
     this.repetitions = 0,
     this.lapses = 0,
     required this.due,
+    this.reviewed,
   });
 
   factory CardState.fresh(DateTime now) => CardState(due: now);
@@ -27,6 +31,9 @@ class CardState {
     repetitions: j['reps'] as int,
     lapses: j['lapses'] as int,
     due: DateTime.fromMillisecondsSinceEpoch(j['due'] as int),
+    reviewed: j['reviewed'] == null
+        ? null
+        : DateTime.fromMillisecondsSinceEpoch(j['reviewed'] as int),
   );
 
   Map<String, dynamic> toJson() => {
@@ -35,6 +42,7 @@ class CardState {
     'reps': repetitions,
     'lapses': lapses,
     'due': due.millisecondsSinceEpoch,
+    if (reviewed != null) 'reviewed': reviewed!.millisecondsSinceEpoch,
   };
 
   bool get isNew => repetitions == 0 && lapses == 0;
@@ -56,6 +64,7 @@ CardState review(CardState s, Rating rating, DateTime now) {
         repetitions: 0,
         lapses: s.lapses + 1,
         due: now.add(relearnDelay),
+        reviewed: now,
       );
     case Rating.hard:
       final interval = s.repetitions == 0
@@ -95,6 +104,7 @@ CardState _next(CardState s, double ease, int interval, DateTime now) =>
       repetitions: s.repetitions + 1,
       lapses: s.lapses,
       due: now.add(Duration(days: interval)),
+      reviewed: now,
     );
 
 double _clampEase(double e) => e < CardState.minEase ? CardState.minEase : e;

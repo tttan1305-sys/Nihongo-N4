@@ -47,3 +47,25 @@ Claude đã tạo khóa ký app, nằm trong thư mục `app-secrets` của dự
    - Secret: nội dung file `app-secrets/keystore-password.txt`
 
 Hãy tải thư mục `app-secrets` về và cất ở nơi an toàn. Mất khóa này thì không cập nhật được app cho người đã cài.
+
+## 6. Bật Firestore để đồng bộ tiến độ (bước 2.2)
+
+1. Mở https://console.firebase.google.com/project/nihongo-n4-3be63/firestore
+2. Bấm **Create database**.
+   - Database ID: để mặc định `(default)`.
+   - Location: chọn `asia-southeast1 (Singapore)` (gần Việt Nam). Chọn rồi không đổi được.
+   - Chọn **Start in production mode**, bấm **Create**.
+3. Khi database đã tạo xong, mở tab **Rules**, xóa hết nội dung, dán đoạn sau rồi bấm **Publish**:
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}
+```
+
+Quy tắc này cho mỗi người chỉ đọc và ghi được tiến độ của chính mình (file gốc: `firestore.rules`). Gói miễn phí Spark đủ dùng: mỗi lần đồng bộ là một lần đọc hoặc ghi một tài liệu.

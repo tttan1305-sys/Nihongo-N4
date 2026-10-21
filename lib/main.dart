@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -12,18 +13,31 @@ import 'services/auth_service.dart';
 import 'screens/home_screen.dart';
 import 'services/recognizer.dart';
 import 'services/speaker.dart';
+import 'services/sync_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
+  final progress = ProgressStore(prefs);
+  final flashcards = FlashcardStore(prefs);
+  final auth = await _initAuth();
   runApp(
     NihongoApp(
       repository: LessonRepository(),
-      progress: ProgressStore(prefs),
-      flashcards: FlashcardStore(prefs),
+      progress: progress,
+      flashcards: flashcards,
       speaker: DeviceSpeaker(),
       recognizer: DeviceRecognizer(),
-      auth: await _initAuth(),
+      auth: auth,
+      // Có Firebase thì đồng bộ tiến độ lên Firestore khi đăng nhập.
+      sync: auth is FirebaseAuthService
+          ? SyncService(
+              auth: auth,
+              progress: progress,
+              flashcards: flashcards,
+              cloud: FirestoreCloudStore(FirebaseFirestore.instance),
+            )
+          : null,
     ),
   );
 }
@@ -48,6 +62,7 @@ class NihongoApp extends StatelessWidget {
   final Speaker speaker;
   final Recognizer recognizer;
   final AuthService auth;
+  final SyncService? sync;
 
   NihongoApp({
     super.key,
@@ -57,6 +72,7 @@ class NihongoApp extends StatelessWidget {
     required this.speaker,
     required this.recognizer,
     AuthService? auth,
+    this.sync,
   }) : auth = auth ?? NoAuthService();
 
   @override
@@ -85,6 +101,7 @@ class NihongoApp extends StatelessWidget {
             speaker: speaker,
             recognizer: recognizer,
             auth: auth,
+            sync: sync,
           );
         },
       ),

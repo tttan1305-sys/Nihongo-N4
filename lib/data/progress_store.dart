@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/lesson.dart';
 
-/// Tiến độ học lưu trên máy. Giai đoạn 2 sẽ đồng bộ thêm lên Firestore.
+/// Tiến độ học lưu trên máy, đồng bộ lên Firestore qua [SyncService] khi đăng nhập.
 class ProgressStore extends ChangeNotifier {
   /// Điểm tối thiểu để qua một mẫu ngữ pháp.
   static const passMark = 0.8;
@@ -85,4 +85,38 @@ class ProgressStore extends ChangeNotifier {
   /// Từ vựng chỉ mở khi mọi mẫu ngữ pháp của bài đều đạt từ [passMark].
   bool isVocabUnlocked(Lesson lesson) =>
       passedGrammarCount(lesson) == lesson.grammar.length;
+
+  // Các khóa tiến độ được đồng bộ (cài đặt như furigana, học thử thì không).
+  static const _syncedPrefixes = ['grammar.', 'vocabDone.', 'reading.'];
+
+  static bool _isSynced(String key) =>
+      _syncedPrefixes.any((p) => key.startsWith(p));
+
+  /// Tiến độ dạng {khóa: giá trị}, để đẩy lên máy chủ.
+  Map<String, dynamic> exportData() => {
+    for (final k in _prefs.getKeys())
+      if (_isSynced(k)) k: _prefs.get(k),
+  };
+
+  /// Gộp tiến độ từ máy chủ: điểm lấy cao nhất, "đã học xong" thì giữ nếu
+  /// một trong hai nơi đã xong. Trả về true nếu tiến độ trên máy thay đổi.
+  Future<bool> mergeData(Map<String, dynamic> remote) async {
+    var changed = false;
+    for (final e in remote.entries) {
+      if (!_isSynced(e.key)) continue;
+      final v = e.value;
+      if (v is num) {
+        final mine = _prefs.getDouble(e.key);
+        if (mine == null || v > mine) {
+          await _prefs.setDouble(e.key, v.toDouble());
+          changed = true;
+        }
+      } else if (v == true && _prefs.getBool(e.key) != true) {
+        await _prefs.setBool(e.key, true);
+        changed = true;
+      }
+    }
+    if (changed) notifyListeners();
+    return changed;
+  }
 }

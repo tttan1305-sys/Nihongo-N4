@@ -24,7 +24,7 @@ Kế hoạch chi tiết: [docs/KE_HOACH.md](docs/KE_HOACH.md)
 | Bước | Nội dung | Trạng thái |
 |---|---|---|
 | 2.1 | 🔑 Bạn tạo dự án Firebase, gửi `google-services.json`; tôi nối đăng nhập Google | ✅ 2026-10-21 (web + Android nối Firebase, APK ký bằng khóa thật từ bản thử #9) |
-| 2.2 | Đồng bộ tiến độ và flashcard lên Firestore | 👉 |
+| 2.2 | Đồng bộ tiến độ và flashcard lên Firestore | 👉 mã đã xong (2026-10-21), chờ bạn bật Firestore theo mục 6 của `docs/HUONG_DAN_FIREBASE.md` |
 | 2.3 | 🔑 Bạn tạo khóa Google Cloud TTS; tôi tạo file giọng nữ `ja-JP-Neural2-B` cho bài đã soạn | ⬜ |
 
 ## Giai đoạn 3: Nội dung N4 (bài 27 → 50)
@@ -60,7 +60,8 @@ Mỗi bước soạn 2 bài theo đúng định dạng bài 26, chạy `tools/ch
 ## Ghi chú cho lần làm tiếp theo
 
 - Mã nguồn chính: https://github.com/tttan1305-sys/Nihongo-N4 (nhánh main). `/mnt/project-files/app` là bản sao, cập nhật cùng lúc.
-- **Bước tiếp theo: 2.2** đồng bộ tiến độ + flashcard lên Firestore (dự án Firebase `nihongo-n4-3be63`, cần bật Firestore). 2.1 xong: 2 GitHub Secret khóa ký đã đúng, APK từ bản thử #9 ký bằng khóa thật (gỡ app cũ ký debug trước khi cài).
+- **Bước tiếp theo: 2.2** mã đồng bộ đã xong (`services/sync_service.dart`, 35 test đạt); chờ bạn tạo Firestore database + dán `firestore.rules` rồi thử đăng nhập trên 2 máy. Xong thì sang 2.3. 2.1 xong: APK từ bản thử #9 ký bằng khóa thật (gỡ app cũ ký debug trước khi cài).
+- Đồng bộ: tài liệu Firestore `users/<uid>` gồm `progress` (khóa `grammar.*`, `vocabDone.*`, `reading.*`) và `flashcards` (mã thẻ → trạng thái SM-2). Gộp khi đăng nhập: điểm lấy cao nhất, đã xong thì giữ, thẻ lấy bản có `reviewed` mới hơn. Sau đó mỗi thay đổi đẩy lên sau 2 giây. Xóa thẻ chưa đồng bộ (thẻ xóa có thể quay lại từ máy khác). Menu tài khoản hiện trạng thái, bấm để đồng bộ lại.
 - Khóa ký APK: `/mnt/project-files/app-secrets/` (không đưa lên git), SHA-1 9C:8F:6A:48:BE:91:EE:AB:2F:66:26:B6:1A:F9:25:3C:12:D6:6F:BE. Workflow dùng secret `ANDROID_KEYSTORE_BASE64` + `ANDROID_KEYSTORE_PASSWORD`, thiếu thì ký debug. Khi chuyển từ APK ký debug sang khóa thật phải gỡ app cũ rồi cài lại.
 - Đăng nhập: `services/auth_service.dart` dùng FirebaseAuth `signInWithPopup` (web) / `signInWithProvider` (Android), không dùng gói google_sign_in.
 - Máy làm việc không tải được Android SDK (`dl.google.com` bị chặn; maven.google.com và services.gradle.org thì được). Cách build APK: GitHub Actions (`.github/workflows/build-apk.yml`) khi có repository, hoặc thêm `dl.google.com` vào Allowed domains của cloud environment.

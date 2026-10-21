@@ -22,7 +22,7 @@ class CardId {
   String toString() => '$lesson:$vocabId';
 }
 
-/// Bộ flashcard lưu trên máy. Giai đoạn 2 sẽ đồng bộ thêm lên Firestore.
+/// Bộ flashcard lưu trên máy, đồng bộ lên Firestore qua [SyncService] khi đăng nhập.
 class FlashcardStore extends ChangeNotifier {
   static const _key = 'flashcards';
 
@@ -100,4 +100,28 @@ class FlashcardStore extends ChangeNotifier {
     _cards[id.toString()] = review(s, rating, now);
     await _save();
   }
+
+  /// Toàn bộ thẻ dạng JSON, để đẩy lên máy chủ.
+  Map<String, dynamic> exportData() =>
+      _cards.map((k, v) => MapEntry(k, v.toJson()));
+
+  /// Gộp thẻ từ máy chủ: thẻ chưa có thì thêm, thẻ có ở cả hai nơi thì giữ
+  /// bản được ôn gần đây hơn. Trả về true nếu bộ thẻ trên máy thay đổi.
+  Future<bool> mergeData(Map<String, dynamic> remote) async {
+    var changed = false;
+    for (final e in remote.entries) {
+      final theirs = CardState.fromJson(
+        Map<String, dynamic>.from(e.value as Map),
+      );
+      final mine = _cards[e.key];
+      if (mine == null || _time(theirs.reviewed) > _time(mine.reviewed)) {
+        _cards[e.key] = theirs;
+        changed = true;
+      }
+    }
+    if (changed) await _save();
+    return changed;
+  }
+
+  static int _time(DateTime? t) => t?.millisecondsSinceEpoch ?? 0;
 }

@@ -4,6 +4,7 @@ import '../data/flashcard_store.dart';
 import '../data/lesson_repository.dart';
 import '../data/progress_store.dart';
 import '../services/auth_service.dart';
+import '../services/sync_service.dart';
 import '../services/recognizer.dart';
 import '../services/speaker.dart';
 import 'flashcard_screen.dart';
@@ -17,6 +18,7 @@ class HomeScreen extends StatelessWidget {
   final Speaker speaker;
   final Recognizer recognizer;
   final AuthService auth;
+  final SyncService? sync;
 
   const HomeScreen({
     super.key,
@@ -26,6 +28,7 @@ class HomeScreen extends StatelessWidget {
     required this.speaker,
     required this.recognizer,
     required this.auth,
+    this.sync,
   });
 
   @override
@@ -34,7 +37,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Lộ trình N4'),
         actions: [
-          if (auth.available) _AccountButton(auth: auth, progress: progress),
+          if (auth.available)
+            _AccountButton(auth: auth, progress: progress, sync: sync),
         ],
       ),
       body: FutureBuilder<Set<int>>(
@@ -152,8 +156,9 @@ class HomeScreen extends StatelessWidget {
 class _AccountButton extends StatelessWidget {
   final AuthService auth;
   final ProgressStore progress;
+  final SyncService? sync;
 
-  const _AccountButton({required this.auth, required this.progress});
+  const _AccountButton({required this.auth, required this.progress, this.sync});
 
   @override
   Widget build(BuildContext context) {
@@ -171,6 +176,7 @@ class _AccountButton extends StatelessWidget {
         if (value == 'sign-out') auth.signOut();
         // Bỏ chế độ học thử để quay lại màn hình đăng nhập.
         if (value == 'sign-in') progress.setGuest(false);
+        if (value == 'sync') sync?.syncNow();
       },
       itemBuilder: (_) => [
         if (user != null) ...[
@@ -178,6 +184,12 @@ class _AccountButton extends StatelessWidget {
             enabled: false,
             child: Text('${user.name ?? ''}\n${user.email ?? ''}'.trim()),
           ),
+          if (sync != null)
+            PopupMenuItem(
+              key: const ValueKey('sync'),
+              value: 'sync',
+              child: Text(syncLabel(sync!)),
+            ),
           const PopupMenuItem(value: 'sign-out', child: Text('Đăng xuất')),
         ] else
           const PopupMenuItem(
@@ -187,4 +199,19 @@ class _AccountButton extends StatelessWidget {
       ],
     );
   }
+}
+
+/// Dòng trạng thái đồng bộ trong menu tài khoản; bấm vào để đồng bộ lại.
+String syncLabel(SyncService sync) {
+  final t = sync.lastSynced;
+  final time = t == null
+      ? ''
+      : ' lúc ${t.hour.toString().padLeft(2, '0')}:'
+            '${t.minute.toString().padLeft(2, '0')}';
+  return switch (sync.status) {
+    SyncStatus.syncing => 'Đang đồng bộ...',
+    SyncStatus.synced => 'Đã đồng bộ$time',
+    SyncStatus.error => 'Đồng bộ lỗi, bấm để thử lại',
+    SyncStatus.off => 'Đồng bộ ngay',
+  };
 }
