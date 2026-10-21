@@ -1,5 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+import '../firebase_options.dart';
 
 /// Người dùng đã đăng nhập.
 class AppUser {
@@ -68,16 +71,43 @@ class FirebaseAuthService extends AuthService {
 
   @override
   Future<void> signInWithGoogle() async {
-    final provider = GoogleAuthProvider()
-      ..setCustomParameters({'prompt': 'select_account'});
-    // Web mở cửa sổ đăng nhập Google; Android mở trình duyệt trong app.
     if (kIsWeb) {
+      // Web mở cửa sổ đăng nhập Google.
+      final provider = GoogleAuthProvider()
+        ..setCustomParameters({'prompt': 'select_account'});
       await _auth.signInWithPopup(provider);
-    } else {
-      await _auth.signInWithProvider(provider);
+      return;
     }
+    // Android chọn tài khoản Google ngay trong app (không qua trình duyệt,
+    // vì Chrome báo "missing initial state"), rồi đưa ID token cho Firebase.
+    final google = await _google();
+    final account = await google.authenticate();
+    final idToken = account.authentication.idToken;
+    if (idToken == null) throw StateError('Google không trả về ID token');
+    await _auth.signInWithCredential(
+      GoogleAuthProvider.credential(idToken: idToken),
+    );
   }
 
+  Future<GoogleSignIn>? _googleInit;
+
+  Future<GoogleSignIn> _google() => _googleInit ??= () async {
+    await GoogleSignIn.instance.initialize(
+      serverClientId: googleServerClientId,
+    );
+    return GoogleSignIn.instance;
+  }();
+
   @override
-  Future<void> signOut() => _auth.signOut();
+  Future<void> signOut() async {
+    // Đăng xuất cả Google để lần sau được chọn lại tài khoản.
+    if (!kIsWeb && _googleInit != null) {
+      try {
+        await (await _google()).signOut();
+      } catch (e) {
+        debugPrint('Đăng xuất Google lỗi: $e');
+      }
+    }
+    await _auth.signOut();
+  }
 }

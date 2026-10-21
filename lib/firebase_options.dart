@@ -25,3 +25,8 @@ const FirebaseOptions _android = FirebaseOptions(
   projectId: 'nihongo-n4-3be63',
   storageBucket: 'nihongo-n4-3be63.firebasestorage.app',
 );
+
+/// OAuth client loại "Web" của dự án (trong google-services.json, client_type 3).
+/// Đăng nhập Google trên Android cần nó để lấy ID token cho Firebase.
+const googleServerClientId =
+    '482095874185-2aei07228p99quihc0gevseu8hllgon4.apps.googleusercontent.com';
