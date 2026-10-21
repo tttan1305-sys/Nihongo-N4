@@ -73,6 +73,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cp build/app/outputs/flutter-apk/app-release.apk nihongo-n4-thu-${{ github.run_number }}.apk
+          # Chạy lại cùng một lần build thì thay file APK trong bản thử đã có.
+          if gh release view "thu-${{ github.run_number }}" >/dev/null 2>&1; then
+            gh release upload "thu-${{ github.run_number }}" nihongo-n4-thu-${{ github.run_number }}.apk --clobber
+            exit 0
+          fi
           gh release create "thu-${{ github.run_number }}" nihongo-n4-thu-${{ github.run_number }}.apk \
             --prerelease --target "${{ github.sha }}" \
             --title "Bản thử #${{ github.run_number }}" \
