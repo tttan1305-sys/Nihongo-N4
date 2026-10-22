@@ -606,6 +606,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
+// Bóng chữ tối để chữ trắng đọc rõ trên nền trời sáng của ảnh.
+const _textShadow = [Shadow(color: Color(0xCC000000), blurRadius: 10)];
+
 class _HeroTitle extends StatelessWidget {
   const _HeroTitle();
 
@@ -621,7 +624,7 @@ class _HeroTitle extends StatelessWidget {
             fontSize: 32,
             fontWeight: FontWeight.w900,
             color: Colors.white,
-            shadows: [Shadow(color: Color(0xFFB98CFF), blurRadius: 16)],
+            shadows: _textShadow,
           ),
         ),
         Text(
@@ -630,12 +633,18 @@ class _HeroTitle extends StatelessWidget {
             fontSize: 22,
             fontWeight: FontWeight.w800,
             color: Colors.white,
+            shadows: _textShadow,
           ),
         ),
         SizedBox(height: 6),
         Text(
           'Từng bước nhỏ, tiến bộ lớn.',
-          style: TextStyle(fontSize: 14, color: Color(0xFFD4CCF5)),
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+            shadows: _textShadow,
+          ),
         ),
       ],
     );
