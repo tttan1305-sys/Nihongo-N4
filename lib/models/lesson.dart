@@ -6,12 +6,49 @@ class Sentence {
   final String ja;
   final String vi;
 
-  const Sentence({required this.id, required this.ja, required this.vi});
+  /// Phân tích ngữ pháp và cách chia thể (chỉ câu ví dụ ngữ pháp có).
+  final Analysis? analysis;
+
+  const Sentence({
+    required this.id,
+    required this.ja,
+    required this.vi,
+    this.analysis,
+  });
 
   factory Sentence.fromJson(Map<String, dynamic> j) => Sentence(
     id: j['id'] as String,
     ja: j['ja'] as String,
     vi: j['vi'] as String? ?? '',
+    analysis: j['analysis'] == null
+        ? null
+        : Analysis.fromJson(j['analysis'] as Map<String, dynamic>),
+  );
+}
+
+/// Một cụm trong câu: chữ tiếng Nhật và nghĩa kèm vai trò ngữ pháp.
+class AnalysisPart {
+  final String ja;
+  final String vi;
+
+  const AnalysisPart(this.ja, this.vi);
+}
+
+/// Phân tích một câu ví dụ: từng cụm, các bước chia thể, lưu ý.
+class Analysis {
+  final List<AnalysisPart> parts;
+  final List<String> steps;
+  final String note;
+
+  const Analysis({required this.parts, this.steps = const [], this.note = ''});
+
+  factory Analysis.fromJson(Map<String, dynamic> j) => Analysis(
+    parts: [
+      for (final p in j['parts'] as List)
+        AnalysisPart((p as List)[0] as String, p[1] as String),
+    ],
+    steps: [for (final s in j['steps'] as List? ?? const []) s as String],
+    note: j['note'] as String? ?? '',
   );
 }
 

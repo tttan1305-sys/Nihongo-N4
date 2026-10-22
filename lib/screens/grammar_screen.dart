@@ -6,6 +6,7 @@ import '../models/lesson.dart';
 import '../models/n5.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/example_analysis.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
 import 'quiz_screen.dart';
@@ -225,35 +226,52 @@ class _Example extends StatelessWidget {
         color: AppColors.background,
         borderRadius: BorderRadius.circular(14),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RubyText(
-                  sentence.ja,
-                  showRuby: showRuby,
-                  style: const TextStyle(fontSize: 18),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    RubyText(
+                      sentence.ja,
+                      showRuby: showRuby,
+                      style: const TextStyle(fontSize: 18),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      sentence.vi,
+                      style: const TextStyle(color: AppColors.muted),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 4),
-                Text(
-                  sentence.vi,
-                  style: const TextStyle(color: AppColors.muted),
+              ),
+              IconButton(
+                key: ValueKey('listen-${sentence.id}'),
+                tooltip: 'Nghe',
+                icon: const Icon(
+                  Icons.volume_up_rounded,
+                  color: AppColors.primary,
                 ),
-              ],
-            ),
+                onPressed: () => speaker.speak(
+                  lesson: lesson,
+                  audioId: sentence.id,
+                  text: plainText(sentence.ja),
+                ),
+              ),
+            ],
           ),
-          IconButton(
-            key: ValueKey('listen-${sentence.id}'),
-            tooltip: 'Nghe',
-            icon: const Icon(Icons.volume_up_rounded, color: AppColors.primary),
-            onPressed: () => speaker.speak(
-              lesson: lesson,
-              audioId: sentence.id,
-              text: plainText(sentence.ja),
+          if (sentence.analysis != null)
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: ExampleAnalysis(
+                analysis: sentence.analysis!,
+                id: sentence.id,
+              ),
             ),
-          ),
         ],
       ),
     );

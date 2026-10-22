@@ -5,17 +5,17 @@
    "titleVi": "Giới thiệu bản thân",
    "points": [
     {"id": "g1-1", "pattern": "N1は　N2です", "meaningVi": "N1 là N2", "explanationVi": "は (đọc là wa) đánh dấu chủ đề. です đặt cuối câu để nói lịch sự.",
-     "examples": [{"id": "g1-1-1", "ja": "{私|わたし}は　グエンです。", "vi": "Tôi là Nguyễn."}]},
+     "examples": [{"id": "g1-1-1", "ja": "{私|わたし}は　グエンです。", "vi": "Tôi là Nguyễn.", "analysis": {"parts": [["{私|わたし}は", "tôi. は (đọc là wa) đánh dấu chủ đề của câu"], ["グエンです", "là Nguyễn. Danh từ ＋ です: khẳng định lịch sự"]], "steps": ["N1は N2です: N1 là N2. です không đổi theo ngôi hay số"], "note": "Trợ từ は viết là は nhưng đọc là \"wa\"."}}]},
     {"id": "g1-2", "pattern": "N1は　N2じゃ　ありません", "meaningVi": "N1 không phải là N2", "explanationVi": "Phủ định của です. Văn viết dùng では　ありません.",
-     "examples": [{"id": "g1-2-1", "ja": "{私|わたし}は　{学生|がくせい}じゃ　ありません。{会社員|かいしゃいん}です。", "vi": "Tôi không phải sinh viên. Tôi là nhân viên công ty."}]},
+     "examples": [{"id": "g1-2-1", "ja": "{私|わたし}は　{学生|がくせい}じゃ　ありません。{会社員|かいしゃいん}です。", "vi": "Tôi không phải sinh viên. Tôi là nhân viên công ty.", "analysis": {"parts": [["{私|わたし}は", "tôi. は đánh dấu chủ đề"], ["{学生|がくせい}じゃ ありません", "không phải là sinh viên. Danh từ ＋ じゃありません"], ["{会社員|かいしゃいん}です", "là nhân viên công ty. Câu thứ hai bỏ chủ đề vì đã rõ"]], "steps": ["です → じゃありません: phủ định của です (văn viết: ではありません)"], "note": "Tiếng Nhật thường bỏ chủ ngữ khi người nghe đã biết đang nói về ai."}}]},
     {"id": "g1-3", "pattern": "～か", "meaningVi": "Câu hỏi", "explanationVi": "Thêm か vào cuối câu để thành câu hỏi, không cần đổi trật tự từ.",
-     "examples": [{"id": "g1-3-1", "ja": "ミラーさんは　アメリカ{人|じん}ですか。", "vi": "Anh Miller là người Mỹ phải không?"}]},
+     "examples": [{"id": "g1-3-1", "ja": "ミラーさんは　アメリカ{人|じん}ですか。", "vi": "Anh Miller là người Mỹ phải không?", "analysis": {"parts": [["ミラーさんは", "anh Miller. さん gắn sau tên người khác"], ["アメリカ{人|じん}ですか", "là người Mỹ phải không? Tên nước ＋ {人|じん} = người nước đó"]], "steps": ["Câu khẳng định ＋ か → câu hỏi. Không đổi trật tự từ, lên giọng ở か"], "note": "Trả lời: はい、そうです (vâng, đúng vậy) hoặc いいえ、〜じゃありません."}}]},
     {"id": "g1-4", "pattern": "N1の　N2", "meaningVi": "N2 của / thuộc N1", "explanationVi": "の nối hai danh từ, N1 bổ nghĩa cho N2 (nơi làm việc, quốc tịch, sở hữu...).",
-     "examples": [{"id": "g1-4-1", "ja": "{私|わたし}は　IMCの　{社員|しゃいん}です。", "vi": "Tôi là nhân viên của công ty IMC."}]},
+     "examples": [{"id": "g1-4-1", "ja": "{私|わたし}は　IMCの　{社員|しゃいん}です。", "vi": "Tôi là nhân viên của công ty IMC.", "analysis": {"parts": [["{私|わたし}は", "tôi. は đánh dấu chủ đề"], ["IMCの", "của công ty IMC. の nối hai danh từ, N1 bổ nghĩa cho N2"], ["{社員|しゃいん}です", "là nhân viên. {社員|しゃいん} = nhân viên (của một công ty cụ thể)"]], "steps": ["N1の N2: N2 thuộc về N1. Danh từ đứng trước の luôn bổ nghĩa cho danh từ sau"], "note": "Nói nhân viên của công ty nào dùng {社員|しゃいん}; nói nghề nghiệp chung dùng {会社員|かいしゃいん}."}}]},
     {"id": "g1-5", "pattern": "N も", "meaningVi": "N cũng", "explanationVi": "も thay cho は khi điều nói giống với điều trước.",
-     "examples": [{"id": "g1-5-1", "ja": "{私|わたし}も　ベトナム{人|じん}です。", "vi": "Tôi cũng là người Việt Nam."}]},
+     "examples": [{"id": "g1-5-1", "ja": "{私|わたし}も　ベトナム{人|じん}です。", "vi": "Tôi cũng là người Việt Nam.", "analysis": {"parts": [["{私|わたし}も", "tôi cũng. も thay cho は khi điều nói giống điều trước"], ["ベトナム{人|じん}です", "là người Việt Nam"]], "steps": ["N も: thay hẳn は bằng も, không viết はも"], "note": "も cũng thay được が và を: {私|わたし}もします, パンも{食|た}べます."}}]},
     {"id": "g1-6", "pattern": "～さん・{何歳|なんさい}", "meaningVi": "Anh/chị... · Bao nhiêu tuổi", "explanationVi": "さん gắn sau tên người khác, không dùng cho chính mình. Hỏi tuổi lịch sự: おいくつですか.",
-     "examples": [{"id": "g1-6-1", "ja": "{田中|たなか}さんは　{何歳|なんさい}ですか。", "vi": "Anh Tanaka bao nhiêu tuổi?"}]}
+     "examples": [{"id": "g1-6-1", "ja": "{田中|たなか}さんは　{何歳|なんさい}ですか。", "vi": "Anh Tanaka bao nhiêu tuổi?", "analysis": {"parts": [["{田中|たなか}さんは", "anh Tanaka. さん: anh/chị (không dùng cho chính mình)"], ["{何歳|なんさい}ですか", "bao nhiêu tuổi? {何|なん} (bao nhiêu) ＋ {歳|さい} (tuổi)"]], "steps": ["Từ để hỏi ＋ ですか: hỏi về danh từ ở vị trí đó"], "note": "Lịch sự hơn: おいくつですか."}}]}
    ]
   },
   {
@@ -23,15 +23,15 @@
    "titleVi": "Đồ vật: これ・それ・あれ",
    "points": [
     {"id": "g2-1", "pattern": "これ・それ・あれ", "meaningVi": "Cái này · cái đó · cái kia", "explanationVi": "これ: gần người nói. それ: gần người nghe. あれ: xa cả hai. Dùng như danh từ.",
-     "examples": [{"id": "g2-1-1", "ja": "これは　{辞書|じしょ}です。", "vi": "Đây là cuốn từ điển."}]},
+     "examples": [{"id": "g2-1-1", "ja": "これは　{辞書|じしょ}です。", "vi": "Đây là cuốn từ điển.", "analysis": {"parts": [["これは", "cái này. これ = vật ở gần người nói; は đánh dấu chủ đề"], ["{辞書|じしょ}です", "là từ điển. Danh từ ＋ です"]], "steps": ["これ・それ・あれ đứng một mình, thay cho danh từ (không có danh từ theo sau)"], "note": "それ: vật gần người nghe. あれ: vật xa cả hai người."}}]},
     {"id": "g2-2", "pattern": "この・その・あの　N", "meaningVi": "N này · N đó · N kia", "explanationVi": "Luôn đi kèm danh từ phía sau.",
-     "examples": [{"id": "g2-2-1", "ja": "この　{傘|かさ}は　{私|わたし}のです。", "vi": "Cái ô này là của tôi."}]},
+     "examples": [{"id": "g2-2-1", "ja": "この　{傘|かさ}は　{私|わたし}のです。", "vi": "Cái ô này là của tôi.", "analysis": {"parts": [["この{傘|かさ}は", "cái ô này. この ＋ danh từ"], ["{私|わたし}のです", "là của tôi. {私|わたし}の (của tôi) ＋ です, bỏ danh từ {傘|かさ} sau の"]], "steps": ["この・その・あの luôn đi kèm danh từ phía sau: この{傘|かさ}, không nói この một mình", "{私|わたし}の{傘|かさ}です → {私|わたし}のです: bỏ danh từ đã biết, giữ の"], "note": "Khác これ: これは{傘|かさ}です (cái này là ô) — この{傘|かさ}は… (cái ô này thì…)."}}]},
     {"id": "g2-3", "pattern": "そうです・そうじゃ　ありません", "meaningVi": "Đúng vậy · Không phải vậy", "explanationVi": "Trả lời câu hỏi danh từ ～ですか.",
-     "examples": [{"id": "g2-3-1", "ja": "それは　テレホンカードですか。……はい、そうです。", "vi": "Đó là thẻ điện thoại à? ... Vâng, đúng vậy."}]},
+     "examples": [{"id": "g2-3-1", "ja": "それは　テレホンカードですか。……はい、そうです。", "vi": "Đó là thẻ điện thoại à? ... Vâng, đúng vậy.", "analysis": {"parts": [["それは", "cái đó. それ = vật ở gần người nghe"], ["テレホンカードですか", "là thẻ điện thoại phải không?"], ["はい、そうです", "vâng, đúng vậy. そう thay cho cả nội dung câu hỏi"]], "steps": ["Câu hỏi danh từ ＋ ですか → trả lời はい、そうです / いいえ、そうじゃありません"], "note": "Chỉ dùng そうです để trả lời câu hỏi về danh từ, không dùng cho câu hỏi động từ."}}]},
     {"id": "g2-4", "pattern": "～ですか、～ですか", "meaningVi": "...hay là...?", "explanationVi": "Câu hỏi lựa chọn. Trả lời bằng đáp án, không dùng はい・いいえ.",
-     "examples": [{"id": "g2-4-1", "ja": "これは　「9」ですか、「7」ですか。", "vi": "Đây là số 9 hay số 7?"}]},
+     "examples": [{"id": "g2-4-1", "ja": "これは　「9」ですか、「7」ですか。", "vi": "Đây là số 9 hay số 7?", "analysis": {"parts": [["これは", "cái này"], ["「9」ですか", "là số 9…"], ["「7」ですか", "hay là số 7?"]], "steps": ["〜ですか、〜ですか: câu hỏi lựa chọn, đặt hai câu hỏi cạnh nhau"], "note": "Trả lời thẳng đáp án: 「9」です. Không trả lời はい hay いいえ."}}]},
     {"id": "g2-5", "pattern": "N1の　N2 (nội dung)", "meaningVi": "N2 về N1", "explanationVi": "の còn chỉ nội dung: {車|くるま}の{本|ほん} là sách về xe hơi. Khi N2 đã rõ có thể bỏ: {私|わたし}の.",
-     "examples": [{"id": "g2-5-1", "ja": "これは　コンピューターの　{本|ほん}です。", "vi": "Đây là sách về máy tính."}]}
+     "examples": [{"id": "g2-5-1", "ja": "これは　コンピューターの　{本|ほん}です。", "vi": "Đây là sách về máy tính.", "analysis": {"parts": [["これは", "cái này"], ["コンピューターの", "về máy tính. の chỉ nội dung"], ["{本|ほん}です", "là cuốn sách"]], "steps": ["N1の N2: N1 cho biết N2 nói về cái gì (sách về máy tính, không phải sách của máy tính)"]}}]}
    ]
   },
   {
@@ -39,15 +39,15 @@
    "titleVi": "Nơi chốn: ここ・そこ・あそこ",
    "points": [
     {"id": "g3-1", "pattern": "ここ・そこ・あそこ", "meaningVi": "Chỗ này · chỗ đó · chỗ kia", "explanationVi": "Cách lịch sự: こちら・そちら・あちら. Hỏi: どこ / どちら.",
-     "examples": [{"id": "g3-1-1", "ja": "ここは　{食堂|しょくどう}です。", "vi": "Đây là nhà ăn."}]},
+     "examples": [{"id": "g3-1-1", "ja": "ここは　{食堂|しょくどう}です。", "vi": "Đây là nhà ăn.", "analysis": {"parts": [["ここは", "chỗ này. ここ = nơi người nói đang đứng"], ["{食堂|しょくどう}です", "là nhà ăn"]], "steps": ["ここ・そこ・あそこ chỉ nơi chốn, tương ứng これ・それ・あれ chỉ đồ vật"]}}]},
     {"id": "g3-2", "pattern": "Nは　(nơi chốn)です", "meaningVi": "N ở (nơi chốn)", "explanationVi": "Nói vị trí của người, vật hay địa điểm.",
-     "examples": [{"id": "g3-2-1", "ja": "トイレは　あそこです。", "vi": "Nhà vệ sinh ở đằng kia."}]},
+     "examples": [{"id": "g3-2-1", "ja": "トイレは　あそこです。", "vi": "Nhà vệ sinh ở đằng kia.", "analysis": {"parts": [["トイレは", "nhà vệ sinh. は nêu thứ đang được nói đến"], ["あそこです", "ở đằng kia. あそこ ＋ です"]], "steps": ["N は (nơi chốn) です: N ở (nơi chốn). です thay cho động từ \"ở\""], "note": "Hỏi: トイレはどこですか. Lịch sự hơn: お{手洗|てあら}いはどちらですか."}}]},
     {"id": "g3-3", "pattern": "どこ・どちら", "meaningVi": "Ở đâu", "explanationVi": "どちら lịch sự hơn, cũng dùng để hỏi tên công ty, trường, nước.",
-     "examples": [{"id": "g3-3-1", "ja": "{会社|かいしゃ}は　どちらですか。", "vi": "Anh làm ở công ty nào?"}]},
+     "examples": [{"id": "g3-3-1", "ja": "{会社|かいしゃ}は　どちらですか。", "vi": "Anh làm ở công ty nào?", "analysis": {"parts": [["{会社|かいしゃ}は", "công ty (của anh). は đánh dấu chủ đề"], ["どちらですか", "là ở đâu / là công ty nào? どちら = cách nói lịch sự của どこ"]], "steps": ["どこ → どちら: lịch sự hơn, dùng khi hỏi người mới gặp"], "note": "Hỏi {会社|かいしゃ}はどちらですか là hỏi tên công ty, không chỉ hỏi địa chỉ."}}]},
     {"id": "g3-4", "pattern": "N1の　N2 (xuất xứ)", "meaningVi": "N2 sản xuất ở N1", "explanationVi": "Hỏi nơi sản xuất: どこの　N.",
-     "examples": [{"id": "g3-4-1", "ja": "これは　{日本|にほん}の　{時計|とけい}です。", "vi": "Đây là đồng hồ của Nhật."}]},
+     "examples": [{"id": "g3-4-1", "ja": "これは　{日本|にほん}の　{時計|とけい}です。", "vi": "Đây là đồng hồ của Nhật.", "analysis": {"parts": [["これは", "cái này"], ["{日本|にほん}の", "của Nhật, sản xuất ở Nhật. の chỉ xuất xứ"], ["{時計|とけい}です", "là đồng hồ"]], "steps": ["N1 (nước, hãng)の N2: N2 sản xuất ở N1 hoặc của hãng N1"]}}]},
     {"id": "g3-5", "pattern": "いくらですか", "meaningVi": "Bao nhiêu tiền?", "explanationVi": "Hỏi giá. Trả lời: ～{円|えん}です.",
-     "examples": [{"id": "g3-5-1", "ja": "この　ネクタイは　いくらですか。……1,500{円|えん}です。", "vi": "Cà vạt này bao nhiêu tiền? ... 1.500 yên."}]}
+     "examples": [{"id": "g3-5-1", "ja": "この　ネクタイは　いくらですか。……1,500{円|えん}です。", "vi": "Cà vạt này bao nhiêu tiền? ... 1.500 yên.", "analysis": {"parts": [["このネクタイは", "cái cà vạt này. この ＋ danh từ"], ["いくらですか", "bao nhiêu tiền?"], ["1,500{円|えん}です", "1.500 yên. Số ＋ {円|えん}"]], "steps": ["いくら ＋ ですか: hỏi giá"], "note": "1,500 đọc là せんごひゃく."}}]}
    ]
   },
   {
@@ -55,15 +55,15 @@
    "titleVi": "Thời gian và động từ ます",
    "points": [
     {"id": "g4-1", "pattern": "{今|いま}　～{時|じ}～{分|ふん}です", "meaningVi": "Bây giờ là ... giờ ... phút", "explanationVi": "Hỏi giờ: {何時|なんじ}ですか. Chú ý cách đọc: 4{時|じ} よじ, 9{時|じ} くじ.",
-     "examples": [{"id": "g4-1-1", "ja": "{今|いま}　{何時|なんじ}ですか。……7{時|じ}10{分|ぷん}です。", "vi": "Bây giờ là mấy giờ? ... 7 giờ 10 phút."}]},
+     "examples": [{"id": "g4-1-1", "ja": "{今|いま}　{何時|なんじ}ですか。……7{時|じ}10{分|ぷん}です。", "vi": "Bây giờ là mấy giờ? ... 7 giờ 10 phút.", "analysis": {"parts": [["{今|いま}", "bây giờ. Không cần trợ từ"], ["{何時|なんじ}ですか", "mấy giờ? {何|なん} ＋ {時|じ} (giờ)"], ["7{時|じ}10{分|ぷん}です", "7 giờ 10 phút"]], "steps": ["{分|ふん} đổi cách đọc theo số: 1{分|ぷん}, 3{分|ぷん}, 4{分|ぷん}, 6{分|ぷん}, 10{分|ぷん} — 2{分|ふん}, 5{分|ふん}, 7{分|ふん}, 9{分|ふん}"], "note": "4 giờ đọc là よじ, 7 giờ là しちじ, 9 giờ là くじ."}}]},
     {"id": "g4-2", "pattern": "Vます・Vません・Vました・Vませんでした", "meaningVi": "Hiện tại / phủ định / quá khứ / quá khứ phủ định", "explanationVi": "Động từ thể ます dùng cho thói quen, việc tương lai, việc đã xảy ra.",
-     "examples": [{"id": "g4-2-1", "ja": "きのう　{勉強|べんきょう}しませんでした。", "vi": "Hôm qua tôi đã không học."}]},
+     "examples": [{"id": "g4-2-1", "ja": "きのう　{勉強|べんきょう}しませんでした。", "vi": "Hôm qua tôi đã không học.", "analysis": {"parts": [["きのう", "hôm qua. Từ chỉ thời gian tương đối, không cần trợ từ"], ["{勉強|べんきょう}しませんでした", "đã không học. Thể quá khứ phủ định"]], "steps": ["{勉強|べんきょう}します (hiện tại) → {勉強|べんきょう}しません (phủ định) → {勉強|べんきょう}しました (quá khứ) → {勉強|べんきょう}しませんでした (quá khứ phủ định)", "Cách nhớ: ます → ません → ました → ませんでした"]}}]},
     {"id": "g4-3", "pattern": "N (thời điểm)に　V", "meaningVi": "Làm V vào lúc N", "explanationVi": "Dùng に với giờ, ngày, tháng cụ thể. Không dùng に với {今日|きょう}, あした, {毎朝|まいあさ}.",
-     "examples": [{"id": "g4-3-1", "ja": "{毎朝|まいあさ}　6{時|じ}に　{起|お}きます。", "vi": "Mỗi sáng tôi dậy lúc 6 giờ."}]},
+     "examples": [{"id": "g4-3-1", "ja": "{毎朝|まいあさ}　6{時|じ}に　{起|お}きます。", "vi": "Mỗi sáng tôi dậy lúc 6 giờ.", "analysis": {"parts": [["{毎朝|まいあさ}", "mỗi sáng. Không cần trợ từ"], ["6{時|じ}に", "lúc 6 giờ. に chỉ thời điểm cụ thể"], ["{起|お}きます", "thức dậy. {起|お}きる (nhóm II) thể ます"]], "steps": ["{起|お}きる → {起|お}きます: nhóm II, bỏ る thêm ます"], "note": "Giờ, ngày tháng, thứ cần に; còn {今日|きょう}, {毎朝|まいあさ}, きのう thì không dùng に."}}]},
     {"id": "g4-4", "pattern": "N1から　N2まで", "meaningVi": "Từ N1 đến N2", "explanationVi": "Dùng cho thời gian và nơi chốn.",
-     "examples": [{"id": "g4-4-1", "ja": "{銀行|ぎんこう}は　9{時|じ}から　3{時|じ}までです。", "vi": "Ngân hàng mở từ 9 giờ đến 3 giờ."}]},
+     "examples": [{"id": "g4-4-1", "ja": "{銀行|ぎんこう}は　9{時|じ}から　3{時|じ}までです。", "vi": "Ngân hàng mở từ 9 giờ đến 3 giờ.", "analysis": {"parts": [["{銀行|ぎんこう}は", "ngân hàng"], ["9{時|じ}から", "từ 9 giờ. から = điểm bắt đầu"], ["3{時|じ}までです", "đến 3 giờ. まで = điểm kết thúc"]], "steps": ["N1から N2まで ＋ です: thay cho \"mở cửa từ… đến…\""], "note": "から và まで có thể dùng riêng: 9{時|じ}からです."}}]},
     {"id": "g4-5", "pattern": "N1と　N2", "meaningVi": "N1 và N2", "explanationVi": "Nối hai danh từ, liệt kê đầy đủ.",
-     "examples": [{"id": "g4-5-1", "ja": "{休|やす}みは　{土曜日|どようび}と　{日曜日|にちようび}です。", "vi": "Ngày nghỉ là thứ Bảy và Chủ nhật."}]}
+     "examples": [{"id": "g4-5-1", "ja": "{休|やす}みは　{土曜日|どようび}と　{日曜日|にちようび}です。", "vi": "Ngày nghỉ là thứ Bảy và Chủ nhật.", "analysis": {"parts": [["{休|やす}みは", "ngày nghỉ. {休|やす}み = danh từ của {休|やす}む"], ["{土曜日|どようび}と", "thứ Bảy và. と nối hai danh từ"], ["{日曜日|にちようび}です", "Chủ nhật"]], "steps": ["N1と N2: liệt kê đầy đủ (chỉ có hai thứ đó)"], "note": "と chỉ nối danh từ, không nối câu hay tính từ."}}]}
    ]
   },
   {
@@ -71,15 +71,15 @@
    "titleVi": "Đi lại: へ・で・と",
    "points": [
     {"id": "g5-1", "pattern": "N (nơi chốn)へ　{行|い}きます・{来|き}ます・{帰|かえ}ります", "meaningVi": "Đi / đến / về N", "explanationVi": "へ (đọc là e) chỉ hướng di chuyển.",
-     "examples": [{"id": "g5-1-1", "ja": "{来月|らいげつ}　{日本|にほん}へ　{行|い}きます。", "vi": "Tháng sau tôi đi Nhật."}]},
+     "examples": [{"id": "g5-1-1", "ja": "{来月|らいげつ}　{日本|にほん}へ　{行|い}きます。", "vi": "Tháng sau tôi đi Nhật.", "analysis": {"parts": [["{来月|らいげつ}", "tháng sau. Không cần trợ từ"], ["{日本|にほん}へ", "đến Nhật. へ (đọc là e) chỉ hướng di chuyển"], ["{行|い}きます", "đi. {行|い}く (nhóm I) thể ます"]], "steps": ["{行|い}く → {行|い}きます: nhóm I, đuôi く đổi thành き rồi thêm ます"], "note": "へ viết là へ nhưng đọc là \"e\". Có thể thay へ bằng に."}}]},
     {"id": "g5-2", "pattern": "どこ[へ]も　{行|い}きません", "meaningVi": "Không đi đâu cả", "explanationVi": "Từ để hỏi + も + phủ định: phủ định hoàn toàn.",
-     "examples": [{"id": "g5-2-1", "ja": "{日曜日|にちようび}　どこも　{行|い}きませんでした。", "vi": "Chủ nhật tôi không đi đâu cả."}]},
+     "examples": [{"id": "g5-2-1", "ja": "{日曜日|にちようび}　どこも　{行|い}きませんでした。", "vi": "Chủ nhật tôi không đi đâu cả.", "analysis": {"parts": [["{日曜日|にちようび}", "Chủ nhật"], ["どこも", "không đâu cả. どこ ＋ も, đi với phủ định"], ["{行|い}きませんでした", "đã không đi. Quá khứ phủ định"]], "steps": ["{行|い}きます → {行|い}きませんでした: đổi ます thành ませんでした", "Từ để hỏi ＋ も ＋ phủ định = hoàn toàn không: どこも, {何|なに}も, だれも"]}}]},
     {"id": "g5-3", "pattern": "N (phương tiện)で　{行|い}きます", "meaningVi": "Đi bằng N", "explanationVi": "Đi bộ dùng {歩|ある}いて, không dùng で.",
-     "examples": [{"id": "g5-3-1", "ja": "{電車|でんしゃ}で　{会社|かいしゃ}へ　{行|い}きます。", "vi": "Tôi đi làm bằng tàu điện."}]},
+     "examples": [{"id": "g5-3-1", "ja": "{電車|でんしゃ}で　{会社|かいしゃ}へ　{行|い}きます。", "vi": "Tôi đi làm bằng tàu điện.", "analysis": {"parts": [["{電車|でんしゃ}で", "bằng tàu điện. で chỉ phương tiện"], ["{会社|かいしゃ}へ", "đến công ty. へ chỉ hướng"], ["{行|い}きます", "đi"]], "steps": ["N (phương tiện) で: đi bằng N"], "note": "Đi bộ không dùng で: {歩|ある}いて{行|い}きます."}}]},
     {"id": "g5-4", "pattern": "N (người)と　V", "meaningVi": "Làm V cùng với N", "explanationVi": "Làm một mình: ひとりで.",
-     "examples": [{"id": "g5-4-1", "ja": "{家族|かぞく}と　{日本|にほん}へ　{来|き}ました。", "vi": "Tôi đã đến Nhật cùng gia đình."}]},
+     "examples": [{"id": "g5-4-1", "ja": "{家族|かぞく}と　{日本|にほん}へ　{来|き}ました。", "vi": "Tôi đã đến Nhật cùng gia đình.", "analysis": {"parts": [["{家族|かぞく}と", "cùng gia đình. と chỉ người cùng làm"], ["{日本|にほん}へ", "đến Nhật"], ["{来|き}ました", "đã đến. {来|く}る (nhóm III) thể ます quá khứ"]], "steps": ["{来|く}る → {来|き}ます → {来|き}ました: nhóm III, bất quy tắc. Chú ý cách đọc đổi từ く sang き"], "note": "Đi một mình: ひとりで{来|き}ました (dùng で, không dùng と)."}}]},
     {"id": "g5-5", "pattern": "いつ", "meaningVi": "Khi nào", "explanationVi": "Hỏi thời điểm, không dùng に sau いつ.",
-     "examples": [{"id": "g5-5-1", "ja": "いつ　{国|くに}へ　{帰|かえ}りますか。", "vi": "Khi nào bạn về nước?"}]}
+     "examples": [{"id": "g5-5-1", "ja": "いつ　{国|くに}へ　{帰|かえ}りますか。", "vi": "Khi nào bạn về nước?", "analysis": {"parts": [["いつ", "khi nào. Từ để hỏi thời gian, không cần に"], ["{国|くに}へ", "về nước. へ chỉ hướng"], ["{帰|かえ}りますか", "về không? {帰|かえ}る (nhóm I) thể ます ＋ か"]], "steps": ["{帰|かえ}る → {帰|かえ}ります: nhóm I (dù đuôi える), る đổi thành り rồi thêm ます"], "note": "{帰|かえ}る trông giống nhóm II nhưng là nhóm I, cần học thuộc."}}]}
    ]
   },
   {
@@ -87,17 +87,17 @@
    "titleVi": "Tân ngữ を, rủ rê",
    "points": [
     {"id": "g6-1", "pattern": "Nを　V (tha động từ)", "meaningVi": "Làm V với N", "explanationVi": "を (đọc là o) đánh dấu đối tượng của hành động.",
-     "examples": [{"id": "g6-1-1", "ja": "ジュースを　{飲|の}みます。", "vi": "Tôi uống nước ép."}]},
+     "examples": [{"id": "g6-1-1", "ja": "ジュースを　{飲|の}みます。", "vi": "Tôi uống nước ép.", "analysis": {"parts": [["ジュースを", "nước ép. を (đọc là o) đánh dấu tân ngữ"], ["{飲|の}みます", "uống. {飲|の}む (nhóm I) thể ます"]], "steps": ["{飲|の}む → {飲|の}みます: nhóm I, đuôi む đổi thành み rồi thêm ます", "Tha động từ (động từ cần tân ngữ) ＋ を"]}}]},
     {"id": "g6-2", "pattern": "Nを　します", "meaningVi": "Chơi / làm N", "explanationVi": "サッカーを　します (chơi bóng đá), {宿題|しゅくだい}を　します (làm bài tập).",
-     "examples": [{"id": "g6-2-1", "ja": "{友達|ともだち}と　テニスを　します。", "vi": "Tôi chơi tennis với bạn."}]},
+     "examples": [{"id": "g6-2-1", "ja": "{友達|ともだち}と　テニスを　します。", "vi": "Tôi chơi tennis với bạn.", "analysis": {"parts": [["{友達|ともだち}と", "cùng bạn. と chỉ người cùng làm"], ["テニスを", "tennis. を đánh dấu tân ngữ"], ["します", "chơi. する (nhóm III) thể ます"]], "steps": ["する → します: nhóm III, bất quy tắc"], "note": "Nを します dùng cho thể thao, trò chơi, công việc: サッカーをします, {宿題|しゅくだい}をします."}}]},
     {"id": "g6-3", "pattern": "{何|なに}を　しますか", "meaningVi": "Làm gì?", "explanationVi": "Hỏi về hành động.",
-     "examples": [{"id": "g6-3-1", "ja": "{週末|しゅうまつ}　{何|なに}を　しますか。", "vi": "Cuối tuần bạn làm gì?"}]},
+     "examples": [{"id": "g6-3-1", "ja": "{週末|しゅうまつ}　{何|なに}を　しますか。", "vi": "Cuối tuần bạn làm gì?", "analysis": {"parts": [["{週末|しゅうまつ}", "cuối tuần. Không cần trợ từ"], ["{何|なに}を", "cái gì. {何|なに} ＋ を"], ["しますか", "làm không? する thể ます ＋ か"]], "steps": ["{何|なに}をしますか: hỏi về hoạt động"], "note": "{何|なに} đọc なに trước を; đọc なん trước です, の, và đơn vị đếm."}}]},
     {"id": "g6-4", "pattern": "N (nơi chốn)で　V", "meaningVi": "Làm V ở N", "explanationVi": "で chỉ nơi diễn ra hành động.",
-     "examples": [{"id": "g6-4-1", "ja": "{駅|えき}で　{新聞|しんぶん}を　{買|か}います。", "vi": "Tôi mua báo ở nhà ga."}]},
+     "examples": [{"id": "g6-4-1", "ja": "{駅|えき}で　{新聞|しんぶん}を　{買|か}います。", "vi": "Tôi mua báo ở nhà ga.", "analysis": {"parts": [["{駅|えき}で", "ở nhà ga. で chỉ nơi diễn ra hành động"], ["{新聞|しんぶん}を", "báo. を đánh dấu tân ngữ"], ["{買|か}います", "mua. {買|か}う (nhóm I) thể ます"]], "steps": ["{買|か}う → {買|か}います: nhóm I, đuôi う đổi thành い rồi thêm ます"], "note": "で: nơi làm hành động. に: nơi tồn tại hoặc nơi đến. Đừng nhầm hai trợ từ này."}}]},
     {"id": "g6-5", "pattern": "Vませんか", "meaningVi": "Anh/chị có... cùng không?", "explanationVi": "Mời, rủ một cách lịch sự.",
-     "examples": [{"id": "g6-5-1", "ja": "いっしょに　{昼|ひる}ごはんを　{食|た}べませんか。", "vi": "Anh ăn trưa cùng tôi không?"}]},
+     "examples": [{"id": "g6-5-1", "ja": "いっしょに　{昼|ひる}ごはんを　{食|た}べませんか。", "vi": "Anh ăn trưa cùng tôi không?", "analysis": {"parts": [["いっしょに", "cùng nhau"], ["{昼|ひる}ごはんを", "bữa trưa. を đánh dấu tân ngữ"], ["{食|た}べませんか", "anh ăn… không? {食|た}べる thể ません ＋ か"]], "steps": ["{食|た}べる → {食|た}べます → {食|た}べません ＋ か: nhóm II, bỏ る thêm ません", "Vませんか: mời rủ lịch sự, tôn trọng ý người nghe"], "note": "Nhận lời: ええ、いいですね. Từ chối khéo: ちょっと…"}}]},
     {"id": "g6-6", "pattern": "Vましょう", "meaningVi": "Chúng ta cùng... nhé", "explanationVi": "Đề nghị, hưởng ứng lời rủ.",
-     "examples": [{"id": "g6-6-1", "ja": "ちょっと　{休|やす}みましょう。", "vi": "Chúng ta nghỉ một chút nhé."}]}
+     "examples": [{"id": "g6-6-1", "ja": "ちょっと　{休|やす}みましょう。", "vi": "Chúng ta nghỉ một chút nhé.", "analysis": {"parts": [["ちょっと", "một chút"], ["{休|やす}みましょう", "chúng ta nghỉ nhé. {休|やす}む thể ましょう"]], "steps": ["{休|やす}む → {休|やす}みます → {休|やす}みましょう: đổi ます thành ましょう"], "note": "Vましょう: chủ động đề nghị cùng làm. Vませんか: hỏi ý người nghe trước, mềm hơn."}}]}
    ]
   },
   {
@@ -105,15 +105,15 @@
    "titleVi": "Công cụ, cho và nhận",
    "points": [
     {"id": "g7-1", "pattern": "N (công cụ)で　V", "meaningVi": "Làm V bằng N", "explanationVi": "で chỉ phương tiện, công cụ, ngôn ngữ.",
-     "examples": [{"id": "g7-1-1", "ja": "はしで　{食|た}べます。", "vi": "Tôi ăn bằng đũa."}]},
+     "examples": [{"id": "g7-1-1", "ja": "はしで　{食|た}べます。", "vi": "Tôi ăn bằng đũa.", "analysis": {"parts": [["はしで", "bằng đũa. で chỉ công cụ"], ["{食|た}べます", "ăn. {食|た}べる (nhóm II) thể ます"]], "steps": ["N (công cụ, phương tiện) で ＋ V"], "note": "で này giống で trong {電車|でんしゃ}で (phương tiện)."}}]},
     {"id": "g7-2", "pattern": "「～」は　～{語|ご}で　{何|なん}ですか", "meaningVi": "\"...\" tiếng ... là gì?", "explanationVi": "Hỏi cách nói một từ trong ngôn ngữ khác.",
-     "examples": [{"id": "g7-2-1", "ja": "「Thank you」は　{日本語|にほんご}で　{何|なん}ですか。", "vi": "\"Thank you\" tiếng Nhật là gì?"}]},
+     "examples": [{"id": "g7-2-1", "ja": "「Thank you」は　{日本語|にほんご}で　{何|なん}ですか。", "vi": "\"Thank you\" tiếng Nhật là gì?", "analysis": {"parts": [["「Thank you」は", "từ \"Thank you\". は nêu từ cần hỏi"], ["{日本語|にほんご}で", "bằng tiếng Nhật. で chỉ ngôn ngữ"], ["{何|なん}ですか", "là gì?"]], "steps": ["「〜」は 〜{語|ご}で {何|なん}ですか: hỏi cách nói một từ trong ngôn ngữ khác"], "note": "Trả lời: 「ありがとう」です."}}]},
     {"id": "g7-3", "pattern": "N (người)に　あげます", "meaningVi": "Cho, tặng N", "explanationVi": "Cũng dùng に với {貸|か}します, {教|おし}えます, {書|か}きます...",
-     "examples": [{"id": "g7-3-1", "ja": "{母|はは}に　{花|はな}を　あげました。", "vi": "Tôi đã tặng hoa cho mẹ."}]},
+     "examples": [{"id": "g7-3-1", "ja": "{母|はは}に　{花|はな}を　あげました。", "vi": "Tôi đã tặng hoa cho mẹ.", "analysis": {"parts": [["{母|はは}に", "cho mẹ. に chỉ người nhận"], ["{花|はな}を", "hoa. を đánh dấu vật được cho"], ["あげました", "đã tặng. あげる (nhóm II) thể ました"]], "steps": ["あげる → あげます → あげました: nhóm II, bỏ る thêm ました"], "note": "あげる: mình (hoặc người khác) cho người khác. Người khác cho mình thì dùng くれる (bài 24)."}}]},
     {"id": "g7-4", "pattern": "N (người)に・から　もらいます", "meaningVi": "Nhận từ N", "explanationVi": "Cũng dùng với {借|か}ります, {習|なら}います.",
-     "examples": [{"id": "g7-4-1", "ja": "{友達|ともだち}に　{本|ほん}を　もらいました。", "vi": "Tôi đã nhận sách từ bạn."}]},
+     "examples": [{"id": "g7-4-1", "ja": "{友達|ともだち}に　{本|ほん}を　もらいました。", "vi": "Tôi đã nhận sách từ bạn.", "analysis": {"parts": [["{友達|ともだち}に", "từ bạn. に chỉ người cho (có thể thay bằng から)"], ["{本|ほん}を", "sách"], ["もらいました", "đã nhận. もらう (nhóm I) thể ました"]], "steps": ["もらう → もらいます → もらいました: nhóm I, đuôi う đổi thành い rồi thêm ました"], "note": "Với もらう, に là \"từ\" chứ không phải \"cho\"."}}]},
     {"id": "g7-5", "pattern": "もう　Vました", "meaningVi": "Đã V rồi", "explanationVi": "Trả lời phủ định: いいえ、まだです.",
-     "examples": [{"id": "g7-5-1", "ja": "もう　{荷物|にもつ}を　{送|おく}りましたか。……いいえ、まだです。", "vi": "Anh gửi hành lý chưa? ... Chưa."}]}
+     "examples": [{"id": "g7-5-1", "ja": "もう　{荷物|にもつ}を　{送|おく}りましたか。……いいえ、まだです。", "vi": "Anh gửi hành lý chưa? ... Chưa.", "analysis": {"parts": [["もう", "đã… rồi"], ["{荷物|にもつ}を", "hành lý"], ["{送|おく}りましたか", "đã gửi chưa? {送|おく}る thể ました ＋ か"], ["いいえ、まだです", "chưa"]], "steps": ["{送|おく}る → {送|おく}ります → {送|おく}りました: nhóm I, る đổi thành り rồi thêm ました"], "note": "Trả lời \"chưa\" dùng まだです, không nói {送|おく}りませんでした (nghĩa là \"đã không gửi\")."}}]}
    ]
   },
   {
@@ -121,17 +121,17 @@
    "titleVi": "Tính từ",
    "points": [
     {"id": "g8-1", "pattern": "Nは　Aい・Aなです", "meaningVi": "N thì (tính từ)", "explanationVi": "Tính từ い giữ い; tính từ な bỏ な trước です.",
-     "examples": [{"id": "g8-1-1", "ja": "この　{町|まち}は　{静|しず}かです。", "vi": "Thị trấn này yên tĩnh."}]},
+     "examples": [{"id": "g8-1-1", "ja": "この　{町|まち}は　{静|しず}かです。", "vi": "Thị trấn này yên tĩnh.", "analysis": {"parts": [["この{町|まち}は", "thị trấn này"], ["{静|しず}かです", "yên tĩnh. {静|しず}か (tính từ な) ＋ です"]], "steps": ["Tính từ な đứng cuối câu: bỏ な, thêm です → {静|しず}かです"]}}]},
     {"id": "g8-2", "pattern": "Aくない・Aじゃ　ありません", "meaningVi": "Không (tính từ)", "explanationVi": "Tính từ い: い → くないです. いい → よくないです. Tính từ な: ～じゃ　ありません.",
-     "examples": [{"id": "g8-2-1", "ja": "この　{料理|りょうり}は　{辛|から}くないです。", "vi": "Món này không cay."}]},
+     "examples": [{"id": "g8-2-1", "ja": "この　{料理|りょうり}は　{辛|から}くないです。", "vi": "Món này không cay.", "analysis": {"parts": [["この{料理|りょうり}は", "món ăn này"], ["{辛|から}くないです", "không cay. {辛|から}い (tính từ い) phủ định"]], "steps": ["{辛|から}い → {辛|から}くない → {辛|から}くないです: tính từ い, đổi い thành くない"], "note": "Tính từ な phủ định khác: {静|しず}かじゃありません. Ngoại lệ: いい → よくない."}}]},
     {"id": "g8-3", "pattern": "Aい・Aな　N", "meaningVi": "N (tính từ)", "explanationVi": "Tính từ đứng trước danh từ; tính từ な giữ な.",
-     "examples": [{"id": "g8-3-1", "ja": "{富士山|ふじさん}は　{高|たか}い　{山|やま}です。", "vi": "Phú Sĩ là ngọn núi cao."}]},
+     "examples": [{"id": "g8-3-1", "ja": "{富士山|ふじさん}は　{高|たか}い　{山|やま}です。", "vi": "Phú Sĩ là ngọn núi cao.", "analysis": {"parts": [["{富士山|ふじさん}は", "núi Phú Sĩ"], ["{高|たか}い{山|やま}です", "là ngọn núi cao. Tính từ い đứng trước danh từ"]], "steps": ["Tính từ い ＋ N: giữ nguyên い → {高|たか}い{山|やま}", "Tính từ な ＋ N: giữ な → {静|しず}かな{町|まち}"]}}]},
     {"id": "g8-4", "pattern": "とても・あまり", "meaningVi": "Rất · không... lắm", "explanationVi": "あまり luôn đi với phủ định.",
-     "examples": [{"id": "g8-4-1", "ja": "{今日|きょう}は　あまり　{寒|さむ}くないです。", "vi": "Hôm nay không lạnh lắm."}]},
+     "examples": [{"id": "g8-4-1", "ja": "{今日|きょう}は　あまり　{寒|さむ}くないです。", "vi": "Hôm nay không lạnh lắm.", "analysis": {"parts": [["{今日|きょう}は", "hôm nay"], ["あまり", "không… lắm. Luôn đi với phủ định"], ["{寒|さむ}くないです", "không lạnh. {寒|さむ}い phủ định"]], "steps": ["{寒|さむ}い → {寒|さむ}くないです: đổi い thành くない", "とても ＋ khẳng định (rất…); あまり ＋ phủ định (không… lắm)"]}}]},
     {"id": "g8-5", "pattern": "Nは　どうですか・どんな　N", "meaningVi": "N thế nào? · N như thế nào?", "explanationVi": "Hỏi cảm nhận, tính chất.",
-     "examples": [{"id": "g8-5-1", "ja": "{日本|にほん}の　{生活|せいかつ}は　どうですか。", "vi": "Cuộc sống ở Nhật thế nào?"}]},
+     "examples": [{"id": "g8-5-1", "ja": "{日本|にほん}の　{生活|せいかつ}は　どうですか。", "vi": "Cuộc sống ở Nhật thế nào?", "analysis": {"parts": [["{日本|にほん}の{生活|せいかつ}は", "cuộc sống ở Nhật"], ["どうですか", "thế nào? Hỏi cảm nhận, ấn tượng"]], "steps": ["Nは どうですか: hỏi ý kiến về N. どんな N: hỏi N thuộc loại như thế nào"], "note": "Trả lời bằng tính từ: たのしいです, {大変|たいへん}です."}}]},
     {"id": "g8-6", "pattern": "～が、～", "meaningVi": "...nhưng...", "explanationVi": "Nối hai câu trái ý.",
-     "examples": [{"id": "g8-6-1", "ja": "{仕事|しごと}は　{忙|いそが}しいですが、おもしろいです。", "vi": "Công việc bận nhưng thú vị."}]}
+     "examples": [{"id": "g8-6-1", "ja": "{仕事|しごと}は　{忙|いそが}しいですが、おもしろいです。", "vi": "Công việc bận nhưng thú vị.", "analysis": {"parts": [["{仕事|しごと}は", "công việc"], ["{忙|いそが}しいですが", "bận nhưng. {忙|いそが}しい ＋ です ＋ が"], ["おもしろいです", "thú vị"]], "steps": ["Câu 1 ＋ が、Câu 2: nối hai ý trái ngược (… nhưng …)"], "note": "Hai vế trước và sau が đều giữ thể lịch sự です/ます."}}]}
    ]
   },
   {
@@ -139,13 +139,13 @@
    "titleVi": "Thích, giỏi, hiểu; lý do",
    "points": [
     {"id": "g9-1", "pattern": "Nが　{好|す}きです・{嫌|きら}いです", "meaningVi": "Thích · ghét N", "explanationVi": "Đối tượng của cảm xúc dùng が, không dùng を.",
-     "examples": [{"id": "g9-1-1", "ja": "{私|わたし}は　{日本|にほん}の　{料理|りょうり}が　{好|す}きです。", "vi": "Tôi thích món ăn Nhật."}]},
+     "examples": [{"id": "g9-1-1", "ja": "{私|わたし}は　{日本|にほん}の　{料理|りょうり}が　{好|す}きです。", "vi": "Tôi thích món ăn Nhật.", "analysis": {"parts": [["{私|わたし}は", "tôi. は đánh dấu chủ đề (người thích)"], ["{日本|にほん}の{料理|りょうり}が", "món ăn Nhật. が đánh dấu đối tượng được thích"], ["{好|す}きです", "thích. {好|す}き (tính từ な) ＋ です"]], "steps": ["Nが {好|す}きです: đối tượng của {好|す}き dùng が, không dùng を"], "note": "{好|す}き là tính từ nên phủ định là {好|す}きじゃありません."}}]},
     {"id": "g9-2", "pattern": "Nが　{上手|じょうず}です・{下手|へた}です", "meaningVi": "Giỏi · kém N", "explanationVi": "Không dùng {上手|じょうず} để tự khen mình; dùng {得意|とくい}.",
-     "examples": [{"id": "g9-2-1", "ja": "{山田|やまだ}さんは　{歌|うた}が　{上手|じょうず}です。", "vi": "Chị Yamada hát hay."}]},
+     "examples": [{"id": "g9-2-1", "ja": "{山田|やまだ}さんは　{歌|うた}が　{上手|じょうず}です。", "vi": "Chị Yamada hát hay.", "analysis": {"parts": [["{山田|やまだ}さんは", "chị Yamada"], ["{歌|うた}が", "bài hát, việc hát. が đánh dấu lĩnh vực"], ["{上手|じょうず}です", "giỏi. {上手|じょうず} (tính từ な) ＋ です"]], "steps": ["Nが {上手|じょうず}です / {下手|へた}です: giỏi / kém N"], "note": "Không tự khen mình là {上手|じょうず}; nói về mình thì dùng {得意|とくい}です."}}]},
     {"id": "g9-3", "pattern": "Nが　わかります・あります", "meaningVi": "Hiểu N · có N", "explanationVi": "Mức độ: よく、だいたい、すこし、あまり、ぜんぜん (2 từ cuối đi với phủ định).",
-     "examples": [{"id": "g9-3-1", "ja": "{漢字|かんじ}が　{少|すこ}し　わかります。", "vi": "Tôi hiểu một chút chữ Hán."}]},
+     "examples": [{"id": "g9-3-1", "ja": "{漢字|かんじ}が　{少|すこ}し　わかります。", "vi": "Tôi hiểu một chút chữ Hán.", "analysis": {"parts": [["{漢字|かんじ}が", "chữ Hán. が đánh dấu đối tượng được hiểu"], ["{少|すこ}し", "một chút"], ["わかります", "hiểu. わかる (nhóm I) thể ます"]], "steps": ["わかる → わかります: nhóm I, る đổi thành り rồi thêm ます", "Nが わかります: đối tượng của わかる dùng が, không dùng を"]}}]},
     {"id": "g9-4", "pattern": "どうして・～から", "meaningVi": "Tại sao · vì...", "explanationVi": "から đặt sau câu nêu lý do.",
-     "examples": [{"id": "g9-4-1", "ja": "どうして　{早|はや}く　{帰|かえ}りますか。……{用事|ようじ}が　ありますから。", "vi": "Sao anh về sớm? ... Vì tôi có việc."}]}
+     "examples": [{"id": "g9-4-1", "ja": "どうして　{早|はや}く　{帰|かえ}りますか。……{用事|ようじ}が　ありますから。", "vi": "Sao anh về sớm? ... Vì tôi có việc.", "analysis": {"parts": [["どうして", "tại sao"], ["{早|はや}く", "sớm. {早|はや}い đổi い thành く để bổ nghĩa cho động từ"], ["{帰|かえ}りますか", "về không?"], ["{用事|ようじ}が", "việc riêng. が đi với ある"], ["ありますから", "vì có. あります ＋ から (vì)"]], "steps": ["{早|はや}い → {早|はや}く: tính từ い đứng trước động từ thì đổi い thành く", "Lý do ＋ から: から đặt sau câu nêu lý do"], "note": "Trả lời câu hỏi どうして thì kết thúc bằng 〜から."}}]}
    ]
   },
   {
@@ -153,15 +153,15 @@
    "titleVi": "Có, ở: あります・います",
    "points": [
     {"id": "g10-1", "pattern": "Nが　あります・います", "meaningVi": "Có N (vật · người, con vật)", "explanationVi": "あります cho đồ vật, cây cối; います cho người và động vật.",
-     "examples": [{"id": "g10-1-1", "ja": "{公園|こうえん}に　{子|こ}どもが　います。", "vi": "Có trẻ con ở công viên."}]},
+     "examples": [{"id": "g10-1-1", "ja": "{公園|こうえん}に　{子|こ}どもが　います。", "vi": "Có trẻ con ở công viên.", "analysis": {"parts": [["{公園|こうえん}に", "ở công viên. に chỉ nơi tồn tại"], ["{子|こ}どもが", "trẻ con. が đánh dấu chủ ngữ"], ["います", "có, ở. いる (nhóm II) thể ます"]], "steps": ["いる → います: nhóm II, bỏ る thêm ます"], "note": "Người và con vật dùng います; đồ vật, cây cối dùng あります."}}]},
     {"id": "g10-2", "pattern": "N1 (nơi chốn)に　N2が　あります", "meaningVi": "Ở N1 có N2", "explanationVi": "Giới thiệu cái gì có ở đâu.",
-     "examples": [{"id": "g10-2-1", "ja": "{机|つくえ}の　{上|うえ}に　パソコンが　あります。", "vi": "Trên bàn có máy tính."}]},
+     "examples": [{"id": "g10-2-1", "ja": "{机|つくえ}の　{上|うえ}に　パソコンが　あります。", "vi": "Trên bàn có máy tính.", "analysis": {"parts": [["{机|つくえ}の{上|うえ}に", "ở trên bàn. Nの{上|うえ} ＋ に (nơi tồn tại)"], ["パソコンが", "máy tính. が đánh dấu vật tồn tại"], ["あります", "có"]], "steps": ["N1 (nơi chốn)に N2が あります: ở N1 có N2 (nhấn vào thứ tồn tại)"], "note": "Nơi tồn tại dùng に, không dùng で."}}]},
     {"id": "g10-3", "pattern": "N1は　N2 (nơi chốn)に　あります", "meaningVi": "N1 ở N2", "explanationVi": "Nói vị trí của vật đã biết. Có thể rút gọn: N1は　N2です.",
-     "examples": [{"id": "g10-3-1", "ja": "{郵便局|ゆうびんきょく}は　{駅|えき}の　{前|まえ}に　あります。", "vi": "Bưu điện ở trước nhà ga."}]},
+     "examples": [{"id": "g10-3-1", "ja": "{郵便局|ゆうびんきょく}は　{駅|えき}の　{前|まえ}に　あります。", "vi": "Bưu điện ở trước nhà ga.", "analysis": {"parts": [["{郵便局|ゆうびんきょく}は", "bưu điện. は đánh dấu chủ đề đã biết"], ["{駅|えき}の{前|まえ}に", "ở trước nhà ga. Nの{前|まえ} ＋ に"], ["あります", "có, nằm ở"]], "steps": ["N1は N2 (nơi chốn)に あります: N1 nằm ở N2 (nhấn vào vị trí)"], "note": "Đảo lại câu ở g10-2-1: hỏi vị trí của thứ đã biết thì dùng は."}}]},
     {"id": "g10-4", "pattern": "{上|うえ}・{下|した}・{前|まえ}・{後|うし}ろ・{中|なか}・{外|そと}・{隣|となり}", "meaningVi": "Trên · dưới · trước · sau · trong · ngoài · bên cạnh", "explanationVi": "Dùng N1の　(vị trí) để chỉ chỗ.",
-     "examples": [{"id": "g10-4-1", "ja": "{銀行|ぎんこう}の　{隣|となり}に　コンビニが　あります。", "vi": "Bên cạnh ngân hàng có cửa hàng tiện lợi."}]},
+     "examples": [{"id": "g10-4-1", "ja": "{銀行|ぎんこう}の　{隣|となり}に　コンビニが　あります。", "vi": "Bên cạnh ngân hàng có cửa hàng tiện lợi.", "analysis": {"parts": [["{銀行|ぎんこう}の{隣|となり}に", "bên cạnh ngân hàng. Nの{隣|となり} ＋ に"], ["コンビニが", "cửa hàng tiện lợi"], ["あります", "có"]], "steps": ["Nの ＋ từ chỉ vị trí ({上|うえ}・{下|した}・{前|まえ}・{後|うし}ろ・{中|なか}・{外|そと}・{隣|となり}) ＋ に"]}}]},
     {"id": "g10-5", "pattern": "N1や　N2　など", "meaningVi": "N1, N2, v.v.", "explanationVi": "Liệt kê vài ví dụ tiêu biểu (khác với と là liệt kê đủ).",
-     "examples": [{"id": "g10-5-1", "ja": "{箱|はこ}の　{中|なか}に　{手紙|てがみ}や　{写真|しゃしん}などが　あります。", "vi": "Trong hộp có thư, ảnh, v.v."}]}
+     "examples": [{"id": "g10-5-1", "ja": "{箱|はこ}の　{中|なか}に　{手紙|てがみ}や　{写真|しゃしん}などが　あります。", "vi": "Trong hộp có thư, ảnh, v.v.", "analysis": {"parts": [["{箱|はこ}の{中|なか}に", "ở trong hộp"], ["{手紙|てがみ}や", "thư, và. や liệt kê không đầy đủ"], ["{写真|しゃしん}などが", "ảnh, v.v. など = vân vân"], ["あります", "có"]], "steps": ["N1や N2 など: kể vài ví dụ tiêu biểu, ngầm hiểu còn thứ khác"], "note": "Khác と: N1と N2 nghĩa là chỉ có hai thứ đó."}}]}
    ]
   },
   {
@@ -169,15 +169,15 @@
    "titleVi": "Số đếm, lượng từ",
    "points": [
     {"id": "g11-1", "pattern": "ひとつ・ふたつ … とお", "meaningVi": "Đếm đồ vật (1–10)", "explanationVi": "Từ 11 trở lên dùng số: 11、12...",
-     "examples": [{"id": "g11-1-1", "ja": "りんごを　{四|よっ}つ　{買|か}いました。", "vi": "Tôi đã mua 4 quả táo."}]},
+     "examples": [{"id": "g11-1-1", "ja": "りんごを　{四|よっ}つ　{買|か}いました。", "vi": "Tôi đã mua 4 quả táo.", "analysis": {"parts": [["りんごを", "táo. を đánh dấu tân ngữ"], ["{四|よっ}つ", "bốn cái. Cách đếm ひとつ, ふたつ, みっつ, よっつ…"], ["{買|か}いました", "đã mua. {買|か}う thể ました"]], "steps": ["{買|か}う → {買|か}います → {買|か}いました: nhóm I, う đổi thành い rồi thêm ました", "Số lượng đứng ngay trước động từ, không cần trợ từ: りんごを{四|よっ}つ{買|か}いました"]}}]},
     {"id": "g11-2", "pattern": "～{人|にん}・～{台|だい}・～{枚|まい}・～{回|かい}", "meaningVi": "Người · máy, xe · tờ, áo · lần", "explanationVi": "1 người: {一人|ひとり}, 2 người: {二人|ふたり}, từ 3: ～{人|にん}.",
-     "examples": [{"id": "g11-2-1", "ja": "{会議室|かいぎしつ}に　{三人|さんにん}　います。", "vi": "Trong phòng họp có 3 người."}]},
+     "examples": [{"id": "g11-2-1", "ja": "{会議室|かいぎしつ}に　{三人|さんにん}　います。", "vi": "Trong phòng họp có 3 người.", "analysis": {"parts": [["{会議室|かいぎしつ}に", "ở phòng họp. に chỉ nơi tồn tại"], ["{三人|さんにん}", "ba người. Số ＋ {人|にん}"], ["います", "có (người)"]], "steps": ["Đếm người: ひとり, ふたり, {三人|さんにん}, よにん…"], "note": "1 người và 2 người đọc riêng: ひとり, ふたり."}}]},
     {"id": "g11-3", "pattern": "lượng từ + V", "meaningVi": "Vị trí của số lượng", "explanationVi": "Số lượng đứng ngay trước động từ, không cần trợ từ.",
-     "examples": [{"id": "g11-3-1", "ja": "{切手|きって}を　{二枚|にまい}　ください。", "vi": "Cho tôi 2 con tem."}]},
+     "examples": [{"id": "g11-3-1", "ja": "{切手|きって}を　{二枚|にまい}　ください。", "vi": "Cho tôi 2 con tem.", "analysis": {"parts": [["{切手|きって}を", "tem. を đánh dấu tân ngữ"], ["{二枚|にまい}", "hai tờ. Số ＋ {枚|まい} (vật mỏng, dẹt)"], ["ください", "cho tôi"]], "steps": ["Nを ＋ số lượng ＋ ください: xin, mua một số lượng N"], "note": "{枚|まい} dùng cho giấy, tem, áo, đĩa; {台|だい} cho máy móc, xe."}}]},
     {"id": "g11-4", "pattern": "(khoảng thời gian)に　～{回|かい}", "meaningVi": "... lần trong (khoảng thời gian)", "explanationVi": "Nói tần suất.",
-     "examples": [{"id": "g11-4-1", "ja": "{一週間|いっしゅうかん}に　{二回|にかい}　{日本語|にほんご}を　{勉強|べんきょう}します。", "vi": "Mỗi tuần tôi học tiếng Nhật 2 lần."}]},
+     "examples": [{"id": "g11-4-1", "ja": "{一週間|いっしゅうかん}に　{二回|にかい}　{日本語|にほんご}を　{勉強|べんきょう}します。", "vi": "Mỗi tuần tôi học tiếng Nhật 2 lần.", "analysis": {"parts": [["{一週間|いっしゅうかん}に", "trong một tuần. に chỉ khoảng thời gian làm mốc"], ["{二回|にかい}", "hai lần. Số ＋ {回|かい}"], ["{日本語|にほんご}を", "tiếng Nhật"], ["{勉強|べんきょう}します", "học. {勉強|べんきょう}する thể ます"]], "steps": ["Khoảng thời gian ＋ に ＋ số lần: tần suất", "{勉強|べんきょう}する → {勉強|べんきょう}します: nhóm III, する đổi thành します"]}}]},
     {"id": "g11-5", "pattern": "～だけ・どのくらい", "meaningVi": "Chỉ... · khoảng bao lâu", "explanationVi": "どのくらい hỏi thời gian, lượng. ～ぐらい: khoảng.",
-     "examples": [{"id": "g11-5-1", "ja": "{家|いえ}から　{会社|かいしゃ}まで　どのくらい　かかりますか。……{一時間|いちじかん}ぐらいです。", "vi": "Từ nhà đến công ty mất bao lâu? ... Khoảng 1 tiếng."}]}
+     "examples": [{"id": "g11-5-1", "ja": "{家|いえ}から　{会社|かいしゃ}まで　どのくらい　かかりますか。……{一時間|いちじかん}ぐらいです。", "vi": "Từ nhà đến công ty mất bao lâu? ... Khoảng 1 tiếng.", "analysis": {"parts": [["{家|いえ}から", "từ nhà. から = điểm xuất phát"], ["{会社|かいしゃ}まで", "đến công ty. まで = điểm đến"], ["どのくらい", "bao lâu, khoảng bao nhiêu"], ["かかりますか", "mất (thời gian, tiền) không? かかる thể ます ＋ か"], ["{一時間|いちじかん}ぐらいです", "khoảng một tiếng. ぐらい = khoảng"]], "steps": ["かかる → かかります: nhóm I, る đổi thành り rồi thêm ます"], "note": "ぐらい đứng sau số lượng; ごろ đứng sau mốc giờ (3{時|じ}ごろ)."}}]}
    ]
   },
   {
@@ -185,15 +185,15 @@
    "titleVi": "Quá khứ của tính từ, so sánh",
    "points": [
     {"id": "g12-1", "pattern": "Aかったです・Aでした・Nでした", "meaningVi": "Quá khứ của tính từ, danh từ", "explanationVi": "Tính từ い: い → かったです (いい → よかったです). Tính từ な, danh từ: ～でした.",
-     "examples": [{"id": "g12-1-1", "ja": "{旅行|りょこう}は　{楽|たの}しかったです。", "vi": "Chuyến du lịch rất vui."}]},
+     "examples": [{"id": "g12-1-1", "ja": "{旅行|りょこう}は　{楽|たの}しかったです。", "vi": "Chuyến du lịch rất vui.", "analysis": {"parts": [["{旅行|りょこう}は", "chuyến du lịch"], ["{楽|たの}しかったです", "đã rất vui. {楽|たの}しい chia quá khứ"]], "steps": ["{楽|たの}しい → {楽|たの}しかった → {楽|たの}しかったです: tính từ い, đổi い thành かった"], "note": "Không nói {楽|たの}しいでした. Quá khứ của tính từ い nằm ở かった, です giữ nguyên."}}]},
     {"id": "g12-2", "pattern": "Aくなかったです・～じゃ　ありませんでした", "meaningVi": "Quá khứ phủ định", "explanationVi": "{寒|さむ}くなかったです; {暇|ひま}じゃ　ありませんでした.",
-     "examples": [{"id": "g12-2-1", "ja": "きのうは　{暇|ひま}じゃ　ありませんでした。", "vi": "Hôm qua tôi không rảnh."}]},
+     "examples": [{"id": "g12-2-1", "ja": "きのうは　{暇|ひま}じゃ　ありませんでした。", "vi": "Hôm qua tôi không rảnh.", "analysis": {"parts": [["きのうは", "hôm qua thì. は nêu chủ đề thời gian"], ["{暇|ひま}じゃありませんでした", "đã không rảnh. {暇|ひま} (tính từ な) quá khứ phủ định"]], "steps": ["{暇|ひま}です → {暇|ひま}じゃありません → {暇|ひま}じゃありませんでした: tính từ な, thêm でした sau じゃありません"], "note": "Tính từ い quá khứ phủ định thì khác: {寒|さむ}くなかったです."}}]},
     {"id": "g12-3", "pattern": "N1は　N2より　A", "meaningVi": "N1 (tính từ) hơn N2", "explanationVi": "So sánh hai vật.",
-     "examples": [{"id": "g12-3-1", "ja": "{東京|とうきょう}は　ハノイより　{寒|さむ}いです。", "vi": "Tokyo lạnh hơn Hà Nội."}]},
+     "examples": [{"id": "g12-3-1", "ja": "{東京|とうきょう}は　ハノイより　{寒|さむ}いです。", "vi": "Tokyo lạnh hơn Hà Nội.", "analysis": {"parts": [["{東京|とうきょう}は", "Tokyo"], ["ハノイより", "so với Hà Nội. より = hơn (đặt sau vật được so sánh)"], ["{寒|さむ}いです", "lạnh"]], "steps": ["N1は N2より A です: N1 A hơn N2. Tính từ không đổi dạng"], "note": "Thứ đứng trước より là thứ \"kém hơn\"."}}]},
     {"id": "g12-4", "pattern": "N1と　N2と　どちらが　A", "meaningVi": "Giữa N1 và N2, cái nào... hơn?", "explanationVi": "Trả lời: N1の　ほうが　A.",
-     "examples": [{"id": "g12-4-1", "ja": "{電車|でんしゃ}と　バスと　どちらが　{速|はや}いですか。……{電車|でんしゃ}の　ほうが　{速|はや}いです。", "vi": "Tàu điện và xe buýt cái nào nhanh hơn? ... Tàu điện nhanh hơn."}]},
+     "examples": [{"id": "g12-4-1", "ja": "{電車|でんしゃ}と　バスと　どちらが　{速|はや}いですか。……{電車|でんしゃ}の　ほうが　{速|はや}いです。", "vi": "Tàu điện và xe buýt cái nào nhanh hơn? ... Tàu điện nhanh hơn.", "analysis": {"parts": [["{電車|でんしゃ}と バスと", "tàu điện và xe buýt. と…と liệt kê hai thứ cần so sánh"], ["どちらが", "cái nào. どちら (hỏi giữa hai thứ) ＋ が"], ["{速|はや}いですか", "nhanh hơn?"], ["{電車|でんしゃ}のほうが", "tàu điện thì hơn. Nのほうが"], ["{速|はや}いです", "nhanh"]], "steps": ["Hỏi: N1と N2と どちらが A ですか. Trả lời: N のほうが A です"], "note": "Chỉ so sánh hai thứ thì dùng どちら, dù là người hay vật."}}]},
     {"id": "g12-5", "pattern": "N1で　N2が　いちばん　A", "meaningVi": "Trong N1, N2 là... nhất", "explanationVi": "So sánh nhất trong một nhóm.",
-     "examples": [{"id": "g12-5-1", "ja": "{一年|いちねん}で　いつが　いちばん　{暑|あつ}いですか。", "vi": "Trong một năm, khi nào nóng nhất?"}]}
+     "examples": [{"id": "g12-5-1", "ja": "{一年|いちねん}で　いつが　いちばん　{暑|あつ}いですか。", "vi": "Trong một năm, khi nào nóng nhất?", "analysis": {"parts": [["{一年|いちねん}で", "trong một năm. で chỉ phạm vi so sánh"], ["いつが", "khi nào. いつ ＋ が (từ để hỏi làm chủ ngữ thì dùng が)"], ["いちばん", "nhất"], ["{暑|あつ}いですか", "nóng?"]], "steps": ["N1で N2が いちばん A です: trong N1, N2 là A nhất"], "note": "Từ để hỏi (いつ, だれ, どこ, {何|なに}) đứng làm chủ ngữ luôn đi với が, không đi với は."}}]}
    ]
   },
   {
@@ -201,13 +201,13 @@
    "titleVi": "Muốn, đi để làm gì",
    "points": [
     {"id": "g13-1", "pattern": "Nが　ほしいです", "meaningVi": "Muốn có N", "explanationVi": "Dùng cho mong muốn của bản thân; chia như tính từ い.",
-     "examples": [{"id": "g13-1-1", "ja": "{新|あたら}しい　{車|くるま}が　ほしいです。", "vi": "Tôi muốn có xe hơi mới."}]},
+     "examples": [{"id": "g13-1-1", "ja": "{新|あたら}しい　{車|くるま}が　ほしいです。", "vi": "Tôi muốn có xe hơi mới.", "analysis": {"parts": [["{新|あたら}しい{車|くるま}が", "xe hơi mới. Tính từ い ＋ danh từ; が đánh dấu thứ muốn có"], ["ほしいです", "muốn có. ほしい (tính từ い) ＋ です"]], "steps": ["Nが ほしいです: muốn có N. ほしい là tính từ い nên phủ định là ほしくないです"], "note": "Chỉ dùng cho mong muốn của mình; hỏi người trên không nên hỏi trực tiếp 〜がほしいですか."}}]},
     {"id": "g13-2", "pattern": "V (bỏ ます)たいです", "meaningVi": "Muốn làm V", "explanationVi": "{食|た}べます → {食|た}べたいです. Phủ định: ～たくないです.",
-     "examples": [{"id": "g13-2-1", "ja": "{沖縄|おきなわ}へ　{行|い}きたいです。", "vi": "Tôi muốn đi Okinawa."}]},
+     "examples": [{"id": "g13-2-1", "ja": "{沖縄|おきなわ}へ　{行|い}きたいです。", "vi": "Tôi muốn đi Okinawa.", "analysis": {"parts": [["{沖縄|おきなわ}へ", "đến Okinawa. へ chỉ hướng"], ["{行|い}きたいです", "muốn đi. {行|い}き (bỏ ます) ＋ たい ＋ です"]], "steps": ["{行|い}きます → {行|い}き → {行|い}きたい: bỏ ます, thêm たい", "Vたい chia như tính từ い: {行|い}きたくない, {行|い}きたかった"], "note": "Vたい cũng nói về mong muốn của chính mình."}}]},
     {"id": "g13-3", "pattern": "N (nơi chốn)へ　V (bỏ ます)・Nに　{行|い}きます", "meaningVi": "Đi đến ... để làm V", "explanationVi": "Chỉ mục đích của việc đi, đến, về.",
-     "examples": [{"id": "g13-3-1", "ja": "デパートへ　{靴|くつ}を　{買|か}いに　{行|い}きます。", "vi": "Tôi đến cửa hàng bách hóa để mua giày."}]},
+     "examples": [{"id": "g13-3-1", "ja": "デパートへ　{靴|くつ}を　{買|か}いに　{行|い}きます。", "vi": "Tôi đến cửa hàng bách hóa để mua giày.", "analysis": {"parts": [["デパートへ", "đến cửa hàng bách hóa. へ chỉ nơi đến"], ["{靴|くつ}を", "giày"], ["{買|か}いに", "để mua. {買|か}い (bỏ ます) ＋ に (mục đích)"], ["{行|い}きます", "đi"]], "steps": ["{買|か}います → {買|か}い ＋ に: V bỏ ます ＋ に ＋ {行|い}く/{来|く}る/{帰|かえ}る = đi để làm V"], "note": "Với danh từ chỉ hành động: {食事|しょくじ}に{行|い}きます (đi ăn)."}}]},
     {"id": "g13-4", "pattern": "どこか・{何|なに}か", "meaningVi": "Đâu đó · cái gì đó", "explanationVi": "Có thể lược へ, を: どこか[へ]、{何|なに}か[を].",
-     "examples": [{"id": "g13-4-1", "ja": "{冬休|ふゆやす}みは　どこか　{行|い}きましたか。", "vi": "Kỳ nghỉ đông bạn có đi đâu không?"}]}
+     "examples": [{"id": "g13-4-1", "ja": "{冬休|ふゆやす}みは　どこか　{行|い}きましたか。", "vi": "Kỳ nghỉ đông bạn có đi đâu không?", "analysis": {"parts": [["{冬休|ふゆやす}みは", "kỳ nghỉ đông"], ["どこか", "đâu đó. どこ ＋ か"], ["{行|い}きましたか", "đã đi không? {行|い}く quá khứ ＋ か"]], "steps": ["Từ để hỏi ＋ か = \"một nơi / một cái nào đó\": どこか, {何|なに}か, だれか", "{行|い}きます → {行|い}きました: đổi ます thành ました"], "note": "どこか thường bỏ へ: どこか[へ]{行|い}きましたか."}}]}
    ]
   },
   {
@@ -215,11 +215,11 @@
    "titleVi": "Thể て: nhờ vả, đang làm",
    "points": [
     {"id": "g14-1", "pattern": "Vて　ください", "meaningVi": "Hãy làm V", "explanationVi": "Nhờ vả, chỉ dẫn, mời một cách lịch sự.",
-     "examples": [{"id": "g14-1-1", "ja": "ここに　{名前|なまえ}を　{書|か}いて　ください。", "vi": "Hãy viết tên vào đây."}]},
+     "examples": [{"id": "g14-1-1", "ja": "ここに　{名前|なまえ}を　{書|か}いて　ください。", "vi": "Hãy viết tên vào đây.", "analysis": {"parts": [["ここに", "vào đây. に chỉ chỗ đặt, viết vào"], ["{名前|なまえ}を", "tên. を đánh dấu tân ngữ"], ["{書|か}いて", "viết. {書|か}く chia thể て"], ["ください", "hãy… (nhờ, yêu cầu lịch sự)"]], "steps": ["{書|か}きます → {書|か}いて: nhóm I, đuôi き đổi thành いて", "Vて ＋ ください: hãy làm V"], "note": "Quy tắc thể て nhóm I: き→いて, ぎ→いで, み・び・に→んで, い・ち・り→って, し→して. Ngoại lệ: {行|い}く→{行|い}って."}}]},
     {"id": "g14-2", "pattern": "Vて　います (đang)", "meaningVi": "Đang làm V", "explanationVi": "Hành động đang diễn ra.",
-     "examples": [{"id": "g14-2-1", "ja": "{田中|たなか}さんは　{今|いま}　{電話|でんわ}を　かけて　います。", "vi": "Anh Tanaka đang gọi điện thoại."}]},
+     "examples": [{"id": "g14-2-1", "ja": "{田中|たなか}さんは　{今|いま}　{電話|でんわ}を　かけて　います。", "vi": "Anh Tanaka đang gọi điện thoại.", "analysis": {"parts": [["{田中|たなか}さんは", "anh Tanaka"], ["{今|いま}", "bây giờ"], ["{電話|でんわ}を", "điện thoại. を đánh dấu tân ngữ"], ["かけています", "đang gọi. かけて ＋ います"]], "steps": ["かけます → かけて: nhóm II, bỏ ます thêm て", "Vて ＋ います: đang làm V (hành động đang diễn ra)"], "note": "\"Gọi điện thoại\" là {電話|でんわ}をかける."}}]},
     {"id": "g14-3", "pattern": "Vましょうか", "meaningVi": "Để tôi làm V nhé?", "explanationVi": "Đề nghị giúp đỡ người khác.",
-     "examples": [{"id": "g14-3-1", "ja": "{荷物|にもつ}を　{持|も}ちましょうか。", "vi": "Để tôi cầm hành lý giúp nhé?"}]}
+     "examples": [{"id": "g14-3-1", "ja": "{荷物|にもつ}を　{持|も}ちましょうか。", "vi": "Để tôi cầm hành lý giúp nhé?", "analysis": {"parts": [["{荷物|にもつ}を", "hành lý"], ["{持|も}ちましょうか", "để tôi cầm nhé? {持|も}つ thể ましょう ＋ か"]], "steps": ["{持|も}つ → {持|も}ちます → {持|も}ちましょうか: nhóm I, つ đổi thành ち rồi thêm ましょうか", "Vましょうか: đề nghị làm giúp người khác"], "note": "Nhận lời: すみません、お{願|ねが}いします. Từ chối: いいえ、{大丈夫|だいじょうぶ}です."}}]}
    ]
   },
   {
@@ -227,15 +227,15 @@
    "titleVi": "Xin phép, cấm, trạng thái",
    "points": [
     {"id": "g15-1", "pattern": "Vても　いいですか", "meaningVi": "Tôi làm V có được không?", "explanationVi": "Xin phép. Trả lời: ええ、どうぞ / すみません、ちょっと…",
-     "examples": [{"id": "g15-1-1", "ja": "{写真|しゃしん}を　{撮|と}っても　いいですか。", "vi": "Tôi chụp ảnh có được không?"}]},
+     "examples": [{"id": "g15-1-1", "ja": "{写真|しゃしん}を　{撮|と}っても　いいですか。", "vi": "Tôi chụp ảnh có được không?", "analysis": {"parts": [["{写真|しゃしん}を", "ảnh"], ["{撮|と}っても", "dù chụp, nếu chụp. {撮|と}って ＋ も"], ["いいですか", "cũng được không?"]], "steps": ["{撮|と}ります → {撮|と}って: nhóm I, đuôi り đổi thành って", "Vて ＋ も いいですか: xin phép làm V"], "note": "Đồng ý: ええ、いいですよ. Từ chối nhẹ: すみません、ちょっと…."}}]},
     {"id": "g15-2", "pattern": "Vては　いけません", "meaningVi": "Không được làm V", "explanationVi": "Cấm đoán, thường dùng trong nội quy.",
-     "examples": [{"id": "g15-2-1", "ja": "ここで　{写真|しゃしん}を　{撮|と}っては　いけません。", "vi": "Không được chụp ảnh ở đây."}]},
+     "examples": [{"id": "g15-2-1", "ja": "ここで　{写真|しゃしん}を　{撮|と}っては　いけません。", "vi": "Không được chụp ảnh ở đây.", "analysis": {"parts": [["ここで", "ở đây. で chỉ nơi diễn ra hành động"], ["{写真|しゃしん}を", "ảnh"], ["{撮|と}っては", "nếu chụp thì. {撮|と}って ＋ は"], ["いけません", "không được"]], "steps": ["{撮|と}ります → {撮|と}って ＋ は いけません: cấm làm V"], "note": "Vてはいけません rất mạnh, thường dùng cho nội quy. Người dưới không dùng để nói với người trên."}}]},
     {"id": "g15-3", "pattern": "Vて　います (trạng thái)", "meaningVi": "Trạng thái kết quả", "explanationVi": "{結婚|けっこん}して　います (đã kết hôn), {住|す}んで　います (đang sống).",
-     "examples": [{"id": "g15-3-1", "ja": "{私|わたし}は　{大阪|おおさか}に　{住|す}んで　います。", "vi": "Tôi sống ở Osaka."}]},
+     "examples": [{"id": "g15-3-1", "ja": "{私|わたし}は　{大阪|おおさか}に　{住|す}んで　います。", "vi": "Tôi sống ở Osaka.", "analysis": {"parts": [["{私|わたし}は", "tôi"], ["{大阪|おおさか}に", "ở Osaka. に chỉ nơi cư trú"], ["{住|す}んでいます", "sống, đang sống. {住|す}んで ＋ います"]], "steps": ["{住|す}みます → {住|す}んで: nhóm I, đuôi み đổi thành んで", "Vて います: trạng thái kéo dài (đã chuyển đến và vẫn đang sống)"], "note": "{住|す}む đi với に, không đi với で."}}]},
     {"id": "g15-4", "pattern": "Vて　います (nghề nghiệp, thói quen)", "meaningVi": "Làm V (thường xuyên)", "explanationVi": "Nói công việc đang làm lâu dài.",
-     "examples": [{"id": "g15-4-1", "ja": "{兄|あに}は　{車|くるま}の　{会社|かいしゃ}で　{働|はたら}いて　います。", "vi": "Anh tôi làm việc ở công ty ô tô."}]},
+     "examples": [{"id": "g15-4-1", "ja": "{兄|あに}は　{車|くるま}の　{会社|かいしゃ}で　{働|はたら}いて　います。", "vi": "Anh tôi làm việc ở công ty ô tô.", "analysis": {"parts": [["{兄|あに}は", "anh trai tôi. {兄|あに} = anh trai của mình"], ["{車|くるま}の{会社|かいしゃ}で", "ở công ty ô tô. で chỉ nơi làm việc"], ["{働|はたら}いています", "đang làm việc. {働|はたら}いて ＋ います"]], "steps": ["{働|はたら}きます → {働|はたら}いて: nhóm I, đuôi き đổi thành いて", "Vて います: nghề nghiệp, việc làm thường xuyên"], "note": "{働|はたら}く đi với で (nơi làm hành động)."}}]},
     {"id": "g15-5", "pattern": "{知|し}って　います・{知|し}りません", "meaningVi": "Biết · không biết", "explanationVi": "Phủ định không dùng {知|し}って　いません.",
-     "examples": [{"id": "g15-5-1", "ja": "{山田|やまだ}さんの　{電話番号|でんわばんごう}を　{知|し}って　いますか。……いいえ、{知|し}りません。", "vi": "Bạn biết số điện thoại của anh Yamada không? ... Không, tôi không biết."}]}
+     "examples": [{"id": "g15-5-1", "ja": "{山田|やまだ}さんの　{電話番号|でんわばんごう}を　{知|し}って　いますか。……いいえ、{知|し}りません。", "vi": "Bạn biết số điện thoại của anh Yamada không? ... Không, tôi không biết.", "analysis": {"parts": [["{山田|やまだ}さんの{電話番号|でんわばんごう}を", "số điện thoại của anh Yamada"], ["{知|し}っていますか", "có biết không? {知|し}って ＋ います ＋ か"], ["いいえ、{知|し}りません", "không, tôi không biết"]], "steps": ["{知|し}ります → {知|し}って: nhóm I, đuôi り đổi thành って", "Khẳng định: {知|し}っています. Phủ định: {知|し}りません"], "note": "Không nói {知|し}っていません. Đây là chỗ người học hay sai."}}]}
    ]
   },
   {
@@ -243,13 +243,13 @@
    "titleVi": "Nối câu bằng thể て",
    "points": [
     {"id": "g16-1", "pattern": "V1て、V2て、V3", "meaningVi": "Làm V1, rồi V2, rồi V3", "explanationVi": "Nối các hành động theo thứ tự; thì của cả câu theo động từ cuối.",
-     "examples": [{"id": "g16-1-1", "ja": "{朝|あさ}　{起|お}きて、シャワーを　{浴|あ}びて、{会社|かいしゃ}へ　{行|い}きます。", "vi": "Buổi sáng tôi dậy, tắm rồi đi làm."}]},
+     "examples": [{"id": "g16-1-1", "ja": "{朝|あさ}　{起|お}きて、シャワーを　{浴|あ}びて、{会社|かいしゃ}へ　{行|い}きます。", "vi": "Buổi sáng tôi dậy, tắm rồi đi làm.", "analysis": {"parts": [["{朝|あさ}", "buổi sáng"], ["{起|お}きて", "thức dậy, rồi. {起|お}きる thể て"], ["シャワーを{浴|あ}びて", "tắm vòi sen, rồi. {浴|あ}びる thể て"], ["{会社|かいしゃ}へ{行|い}きます", "đi đến công ty"]], "steps": ["{起|お}きる → {起|お}きて, {浴|あ}びる → {浴|あ}びて: nhóm II, bỏ る thêm て", "V1て、V2て、V3: các hành động nối tiếp theo thứ tự. Thì của cả câu nằm ở động từ cuối"], "note": "\"Tắm vòi sen\" là シャワーを{浴|あ}びる."}}]},
     {"id": "g16-2", "pattern": "Aくて・Aで・Nで", "meaningVi": "Nối tính từ, danh từ", "explanationVi": "Tính từ い: い → くて (いい → よくて); tính từ な, danh từ: ～で.",
-     "examples": [{"id": "g16-2-1", "ja": "この　{部屋|へや}は　{広|ひろ}くて、{明|あか}るいです。", "vi": "Căn phòng này rộng và sáng."}]},
+     "examples": [{"id": "g16-2-1", "ja": "この　{部屋|へや}は　{広|ひろ}くて、{明|あか}るいです。", "vi": "Căn phòng này rộng và sáng.", "analysis": {"parts": [["この{部屋|へや}は", "căn phòng này"], ["{広|ひろ}くて", "rộng, và. {広|ひろ}い thể て"], ["{明|あか}るいです", "sáng sủa"]], "steps": ["{広|ひろ}い → {広|ひろ}くて: tính từ い, đổi い thành くて", "Tính từ な và danh từ thì thêm で: {静|しず}かで, {学生|がくせい}で"], "note": "Hai tính từ nối bằng くて phải cùng chiều (cùng tốt hoặc cùng xấu). Trái chiều thì dùng が."}}]},
     {"id": "g16-3", "pattern": "V1てから、V2", "meaningVi": "Sau khi V1 thì V2", "explanationVi": "Nhấn mạnh V1 xong rồi mới V2.",
-     "examples": [{"id": "g16-3-1", "ja": "{仕事|しごと}が　{終|お}わってから、{飲|の}みに　{行|い}きます。", "vi": "Sau khi xong việc, tôi đi uống."}]},
+     "examples": [{"id": "g16-3-1", "ja": "{仕事|しごと}が　{終|お}わってから、{飲|の}みに　{行|い}きます。", "vi": "Sau khi xong việc, tôi đi uống.", "analysis": {"parts": [["{仕事|しごと}が", "công việc. が đi với {終|お}わる"], ["{終|お}わってから", "sau khi xong. {終|お}わって ＋ から"], ["{飲|の}みに{行|い}きます", "đi uống. {飲|の}み (bỏ ます) ＋ に ＋ {行|い}きます"]], "steps": ["{終|お}わります → {終|お}わって: nhóm I, đuôi り đổi thành って", "V1てから、V2: làm V1 xong rồi mới làm V2 (nhấn thứ tự)"], "note": "{終|お}わる là tự động từ nên dùng が: {仕事|しごと}が{終|お}わる."}}]},
     {"id": "g16-4", "pattern": "N1は　N2が　A", "meaningVi": "N1 thì N2 (tính từ)", "explanationVi": "Miêu tả một đặc điểm của N1.",
-     "examples": [{"id": "g16-4-1", "ja": "マリアさんは　{髪|かみ}が　{長|なが}いです。", "vi": "Chị Maria có tóc dài."}]}
+     "examples": [{"id": "g16-4-1", "ja": "マリアさんは　{髪|かみ}が　{長|なが}いです。", "vi": "Chị Maria có tóc dài.", "analysis": {"parts": [["マリアさんは", "chị Maria. は: người được nói đến"], ["{髪|かみ}が", "tóc. が: bộ phận, đặc điểm"], ["{長|なが}いです", "dài"]], "steps": ["N1は N2が A: N1 có N2 (đặc điểm) A"], "note": "Cách nói đặc điểm người: {目|め}が{大|おお}きい, {背|せ}が{高|たか}い."}}]}
    ]
   },
   {
@@ -257,13 +257,13 @@
    "titleVi": "Thể ない: đừng, phải, không cần",
    "points": [
     {"id": "g17-1", "pattern": "Vないで　ください", "meaningVi": "Xin đừng làm V", "explanationVi": "Yêu cầu người khác không làm gì.",
-     "examples": [{"id": "g17-1-1", "ja": "{授業中|じゅぎょうちゅう}に　{話|はな}さないで　ください。", "vi": "Xin đừng nói chuyện trong giờ học."}]},
+     "examples": [{"id": "g17-1-1", "ja": "{授業中|じゅぎょうちゅう}に　{話|はな}さないで　ください。", "vi": "Xin đừng nói chuyện trong giờ học.", "analysis": {"parts": [["{授業中|じゅぎょうちゅう}に", "trong giờ học. 〜{中|ちゅう} = trong lúc"], ["{話|はな}さないで", "đừng nói chuyện. {話|はな}さない ＋ で"], ["ください", "xin hãy"]], "steps": ["{話|はな}します → {話|はな}さない: nhóm I, đuôi し (hàng い) đổi sang さ (hàng あ) rồi thêm ない", "Vない ＋ で ください: xin đừng làm V"], "note": "Quy tắc thể ない nhóm I: đổi âm cuối sang hàng あ. Riêng う → わ: {買|か}う → {買|か}わない."}}]},
     {"id": "g17-2", "pattern": "Vなければ　なりません", "meaningVi": "Phải làm V", "explanationVi": "Nghĩa vụ, việc bắt buộc.",
-     "examples": [{"id": "g17-2-1", "ja": "{毎日|まいにち}　{薬|くすり}を　{飲|の}まなければ　なりません。", "vi": "Tôi phải uống thuốc mỗi ngày."}]},
+     "examples": [{"id": "g17-2-1", "ja": "{毎日|まいにち}　{薬|くすり}を　{飲|の}まなければ　なりません。", "vi": "Tôi phải uống thuốc mỗi ngày.", "analysis": {"parts": [["{毎日|まいにち}", "mỗi ngày. Từ chỉ tần suất, không cần trợ từ"], ["{薬|くすり}を", "thuốc. を đánh dấu tân ngữ"], ["{飲|の}まなければ", "nếu không uống. {飲|の}まない bỏ い ＋ ければ"], ["なりません", "không được. Ghép lại: \"không uống thì không được\" = phải uống"]], "steps": ["{飲|の}みます → {飲|の}まない: nhóm I, đuôi み (hàng い) đổi sang hàng あ là ま, rồi thêm ない", "{飲|の}まない → {飲|の}まなければ: bỏ い cuối, thêm ければ", "{飲|の}まなければ ＋ なりません"], "note": "\"Uống thuốc\" trong tiếng Nhật dùng {飲|の}む (uống), không dùng {食|た}べる."}}]},
     {"id": "g17-3", "pattern": "Vなくても　いいです", "meaningVi": "Không cần làm V", "explanationVi": "Không bắt buộc.",
-     "examples": [{"id": "g17-3-1", "ja": "{明日|あした}は　{来|こ}なくても　いいです。", "vi": "Ngày mai bạn không cần đến."}]},
+     "examples": [{"id": "g17-3-1", "ja": "{明日|あした}は　{来|こ}なくても　いいです。", "vi": "Ngày mai bạn không cần đến.", "analysis": {"parts": [["{明日|あした}は", "ngày mai. は đánh dấu chủ đề"], ["{来|こ}なくても", "dù không đến. {来|こ}ない bỏ い ＋ くても"], ["いいです", "cũng được"]], "steps": ["{来|き}ます → {来|こ}ない: nhóm III, bất quy tắc. Chú ý {来|く}る đổi cách đọc từ き ({来|き}ます) sang こ ({来|こ}ない)", "{来|こ}ない → {来|こ}なくて → {来|こ}なくても: bỏ い, thêm くて, rồi thêm も", "Vなくても いいです = không V cũng được"]}}]},
     {"id": "g17-4", "pattern": "Nを → Nは (đưa lên làm chủ đề)", "meaningVi": "Còn N thì...", "explanationVi": "Đưa tân ngữ lên đầu câu làm chủ đề, thay を bằng は.",
-     "examples": [{"id": "g17-4-1", "ja": "{荷物|にもつ}は　ここに　{置|お}かないで　ください。", "vi": "Hành lý thì xin đừng để ở đây."}]}
+     "examples": [{"id": "g17-4-1", "ja": "{荷物|にもつ}は　ここに　{置|お}かないで　ください。", "vi": "Hành lý thì xin đừng để ở đây.", "analysis": {"parts": [["{荷物|にもつ}は", "hành lý thì. は thay cho を để đưa tân ngữ lên làm chủ đề"], ["ここに", "ở đây. に chỉ chỗ đặt"], ["{置|お}かないで", "đừng để. {置|お}かない ＋ で"], ["ください", "xin hãy"]], "steps": ["Câu gốc: {荷物|にもつ}を ここに {置|お}かないで ください → đưa {荷物|にもつ} lên đầu, を đổi thành は", "{置|お}きます → {置|お}かない: nhóm I, き đổi thành か rồi thêm ない"], "note": "Đưa tân ngữ lên làm chủ đề để nhấn \"còn hành lý thì…\"."}}]}
    ]
   },
   {
@@ -271,13 +271,13 @@
    "titleVi": "Thể từ điển: có thể, sở thích, trước khi",
    "points": [
     {"id": "g18-1", "pattern": "Nが・Vること　が　できます", "meaningVi": "Có thể làm V / N", "explanationVi": "Khả năng hoặc sự cho phép.",
-     "examples": [{"id": "g18-1-1", "ja": "{私|わたし}は　{車|くるま}を　{運転|うんてん}する　ことが　できます。", "vi": "Tôi có thể lái xe hơi."}]},
+     "examples": [{"id": "g18-1-1", "ja": "{私|わたし}は　{車|くるま}を　{運転|うんてん}する　ことが　できます。", "vi": "Tôi có thể lái xe hơi.", "analysis": {"parts": [["{私|わたし}は", "tôi"], ["{車|くるま}を", "xe hơi. を đánh dấu tân ngữ của {運転|うんてん}する"], ["{運転|うんてん}する", "lái. Thể từ điển"], ["ことが", "việc… こと biến động từ thành danh từ; が đi với できる"], ["できます", "có thể. できる (nhóm II) thể ます"]], "steps": ["{運転|うんてん}します → {運転|うんてん}する: nhóm III, thể từ điển là する", "Vる ＋ こと ＋ が できます: có thể làm V"], "note": "Với danh từ chỉ hoạt động thì bỏ こと: {運転|うんてん}ができます."}}]},
     {"id": "g18-2", "pattern": "{趣味|しゅみ}は　Vる　ことです", "meaningVi": "Sở thích là V", "explanationVi": "Biến động từ thành danh từ bằng こと.",
-     "examples": [{"id": "g18-2-1", "ja": "{私|わたし}の　{趣味|しゅみ}は　{写真|しゃしん}を　{撮|と}る　ことです。", "vi": "Sở thích của tôi là chụp ảnh."}]},
+     "examples": [{"id": "g18-2-1", "ja": "{私|わたし}の　{趣味|しゅみ}は　{写真|しゃしん}を　{撮|と}る　ことです。", "vi": "Sở thích của tôi là chụp ảnh.", "analysis": {"parts": [["{私|わたし}の{趣味|しゅみ}は", "sở thích của tôi"], ["{写真|しゃしん}を{撮|と}る", "chụp ảnh. {撮|と}る thể từ điển"], ["ことです", "là việc… こと ＋ です"]], "steps": ["{撮|と}ります → {撮|と}る: nhóm I, り đổi về る", "{趣味|しゅみ}は Vる こと です: sở thích là làm V"], "note": "Không nói {趣味|しゅみ}は{写真|しゃしん}を{撮|と}ります. Phải thêm こと để thành danh từ."}}]},
     {"id": "g18-3", "pattern": "Vる・Nの・(thời gian)　まえに", "meaningVi": "Trước khi...", "explanationVi": "Động từ trước まえに luôn ở thể từ điển.",
-     "examples": [{"id": "g18-3-1", "ja": "{食事|しょくじ}の　まえに、{手|て}を　{洗|あら}います。", "vi": "Trước bữa ăn tôi rửa tay."}]},
+     "examples": [{"id": "g18-3-1", "ja": "{食事|しょくじ}の　まえに、{手|て}を　{洗|あら}います。", "vi": "Trước bữa ăn tôi rửa tay.", "analysis": {"parts": [["{食事|しょくじ}の", "bữa ăn. Danh từ ＋ の"], ["まえに", "trước khi. まえ ＋ に (thời điểm)"], ["{手|て}を", "tay"], ["{洗|あら}います", "rửa. {洗|あら}う (nhóm I) thể ます"]], "steps": ["Nの まえに / Vる まえに / thời gian ＋ まえに", "{洗|あら}う → {洗|あら}います: nhóm I, う đổi thành い rồi thêm ます"], "note": "Động từ trước まえに luôn ở thể từ điển, kể cả khi câu nói về quá khứ: {寝|ね}るまえに."}}]},
     {"id": "g18-4", "pattern": "なかなか～ない", "meaningVi": "Mãi mà không...", "explanationVi": "Đi với phủ định, diễn tả việc khó thực hiện.",
-     "examples": [{"id": "g18-4-1", "ja": "{日本|にほん}では　なかなか　{馬|うま}を　{見|み}る　ことが　できません。", "vi": "Ở Nhật khó mà thấy được ngựa."}]}
+     "examples": [{"id": "g18-4-1", "ja": "{日本|にほん}では　なかなか　{馬|うま}を　{見|み}る　ことが　できません。", "vi": "Ở Nhật khó mà thấy được ngựa.", "analysis": {"parts": [["{日本|にほん}では", "ở Nhật thì. で (nơi) ＋ は (chủ đề, đối chiếu)"], ["なかなか", "mãi mà, khó mà. Đi với phủ định"], ["{馬|うま}を{見|み}る", "nhìn thấy ngựa. {見|み}る thể từ điển"], ["ことができません", "không thể. Phủ định của ことができます"]], "steps": ["{見|み}ます → {見|み}る: nhóm II, thể từ điển thêm lại る", "できます → できません: đổi ます thành ません", "なかなか ＋ phủ định: khó mà, mãi không"]}}]}
    ]
   },
   {
@@ -285,11 +285,11 @@
    "titleVi": "Thể た: đã từng, liệt kê, trở nên",
    "points": [
     {"id": "g19-1", "pattern": "Vた　ことが　あります", "meaningVi": "Đã từng làm V", "explanationVi": "Kinh nghiệm trong quá khứ.",
-     "examples": [{"id": "g19-1-1", "ja": "{私|わたし}は　{日本|にほん}の　{歌|うた}を　{歌|うた}った　ことが　あります。", "vi": "Tôi đã từng hát bài hát Nhật."}]},
+     "examples": [{"id": "g19-1-1", "ja": "{私|わたし}は　{日本|にほん}の　{歌|うた}を　{歌|うた}った　ことが　あります。", "vi": "Tôi đã từng hát bài hát Nhật.", "analysis": {"parts": [["{私|わたし}は", "tôi"], ["{日本|にほん}の{歌|うた}を", "bài hát Nhật"], ["{歌|うた}った", "đã hát. {歌|うた}う thể た"], ["ことがあります", "có trải nghiệm. こと ＋ が ＋ あります"]], "steps": ["{歌|うた}います → {歌|うた}った: nhóm I, đuôi い (gốc う) đổi thành った", "Vた ＋ ことが あります: đã từng làm V"], "note": "Không dùng cho việc hằng ngày hay vừa mới làm. Dùng cho trải nghiệm đáng kể trong đời."}}]},
     {"id": "g19-2", "pattern": "V1たり、V2たり　します", "meaningVi": "Nào là V1, nào là V2", "explanationVi": "Liệt kê vài hành động tiêu biểu.",
-     "examples": [{"id": "g19-2-1", "ja": "{休|やす}みの　{日|ひ}は　{本|ほん}を　{読|よ}んだり、{映画|えいが}を　{見|み}たり　します。", "vi": "Ngày nghỉ tôi nào là đọc sách, nào là xem phim."}]},
+     "examples": [{"id": "g19-2-1", "ja": "{休|やす}みの　{日|ひ}は　{本|ほん}を　{読|よ}んだり、{映画|えいが}を　{見|み}たり　します。", "vi": "Ngày nghỉ tôi nào là đọc sách, nào là xem phim.", "analysis": {"parts": [["{休|やす}みの{日|ひ}は", "ngày nghỉ thì"], ["{本|ほん}を{読|よ}んだり", "nào là đọc sách. {読|よ}んだ ＋ り"], ["{映画|えいが}を{見|み}たり", "nào là xem phim. {見|み}た ＋ り"], ["します", "(làm những việc đó)"]], "steps": ["{読|よ}みます → {読|よ}んだ → {読|よ}んだり: nhóm I, み đổi thành んだ, rồi thêm り", "{見|み}ます → {見|み}た → {見|み}たり: nhóm II, bỏ ます thêm た, rồi thêm り", "V1たり、V2たり します: kể vài việc tiêu biểu, không theo thứ tự"], "note": "Thì của câu nằm ở します cuối: 〜たりしました (quá khứ)."}}]},
     {"id": "g19-3", "pattern": "Aく・Aに・Nに　なります", "meaningVi": "Trở nên...", "explanationVi": "Sự thay đổi trạng thái.",
-     "examples": [{"id": "g19-3-1", "ja": "{日本語|にほんご}が　{上手|じょうず}に　なりました。", "vi": "Tiếng Nhật đã giỏi lên."}]}
+     "examples": [{"id": "g19-3-1", "ja": "{日本語|にほんご}が　{上手|じょうず}に　なりました。", "vi": "Tiếng Nhật đã giỏi lên.", "analysis": {"parts": [["{日本語|にほんご}が", "tiếng Nhật"], ["{上手|じょうず}に", "giỏi lên. {上手|じょうず} (tính từ な) ＋ に"], ["なりました", "đã trở nên. なる (nhóm I) thể ました"]], "steps": ["Tính từ な / danh từ ＋ に なります: {上手|じょうず}になる", "Tính từ い: đổi い thành く ＋ なります: {寒|さむ}くなる", "なる → なります → なりました: nhóm I, る đổi thành り rồi thêm ました"]}}]}
    ]
   },
   {
@@ -297,9 +297,9 @@
    "titleVi": "Thể thông thường (văn nói thân mật)",
    "points": [
     {"id": "g20-1", "pattern": "{普通体|ふつうたい}", "meaningVi": "Cách nói thân mật", "explanationVi": "Dùng với bạn bè, gia đình. です・ます đổi sang thể thông thường: {行|い}きます → {行|い}く, {高|たか}いです → {高|たか}い, {雨|あめ}です → {雨|あめ}だ.",
-     "examples": [{"id": "g20-1-1", "ja": "あした　{東京|とうきょう}へ　{行|い}く？……うん、{行|い}く。", "vi": "Mai đi Tokyo không? ... Ừ, đi."}]},
+     "examples": [{"id": "g20-1-1", "ja": "あした　{東京|とうきょう}へ　{行|い}く？……うん、{行|い}く。", "vi": "Mai đi Tokyo không? ... Ừ, đi.", "analysis": {"parts": [["あした", "ngày mai"], ["{東京|とうきょう}へ", "đến Tokyo"], ["{行|い}く？", "đi không? Thể từ điển, lên giọng cuối câu"], ["うん、{行|い}く", "ừ, đi. うん = はい thân mật"]], "steps": ["{行|い}きます (lịch sự) → {行|い}く (thân mật): dùng thể từ điển thay cho thể ます", "Câu hỏi thân mật bỏ か, chỉ lên giọng"], "note": "Chỉ dùng với bạn bè, gia đình, người nhỏ tuổi hơn. Với người trên và khách hàng phải dùng です・ます."}}]},
     {"id": "g20-2", "pattern": "Câu hỏi thân mật", "meaningVi": "Bỏ か, lên giọng cuối câu", "explanationVi": "Danh từ, tính từ な bỏ だ: {暇|ひま}？. Trả lời はい → うん, いいえ → ううん.",
-     "examples": [{"id": "g20-2-1", "ja": "{今|いま}　{暇|ひま}？……ううん、{忙|いそが}しい。", "vi": "Giờ rảnh không? ... Không, bận."}]}
+     "examples": [{"id": "g20-2-1", "ja": "{今|いま}　{暇|ひま}？……ううん、{忙|いそが}しい。", "vi": "Giờ rảnh không? ... Không, bận.", "analysis": {"parts": [["{今|いま}", "bây giờ"], ["{暇|ひま}？", "rảnh không? Tính từ な bỏ です, không thêm だ khi hỏi"], ["ううん、{忙|いそが}しい", "không, bận. ううん = いいえ thân mật"]], "steps": ["{暇|ひま}ですか → {暇|ひま}？: tính từ な, danh từ bỏ です (không nói {暇|ひま}だ？)", "{忙|いそが}しいです → {忙|いそが}しい: tính từ い chỉ bỏ です"], "note": "Câu khẳng định với tính từ な thì thêm だ: {暇|ひま}だ. Câu hỏi thì bỏ だ."}}]}
    ]
   },
   {
@@ -307,13 +307,13 @@
    "titleVi": "Nghĩ rằng, nói rằng",
    "points": [
     {"id": "g21-1", "pattern": "(thể thông thường)と　{思|おも}います", "meaningVi": "Tôi nghĩ rằng...", "explanationVi": "Phỏng đoán hoặc ý kiến. Danh từ, tính từ な giữ だ.",
-     "examples": [{"id": "g21-1-1", "ja": "{山田|やまだ}さんは　もう　{帰|かえ}ったと　{思|おも}います。", "vi": "Tôi nghĩ anh Yamada đã về rồi."}]},
+     "examples": [{"id": "g21-1-1", "ja": "{山田|やまだ}さんは　もう　{帰|かえ}ったと　{思|おも}います。", "vi": "Tôi nghĩ anh Yamada đã về rồi.", "analysis": {"parts": [["{山田|やまだ}さんは", "anh Yamada"], ["もう", "đã… rồi"], ["{帰|かえ}った", "đã về. {帰|かえ}る thể た"], ["と{思|おも}います", "tôi nghĩ rằng. と (trích dẫn) ＋ {思|おも}います"]], "steps": ["{帰|かえ}ります → {帰|かえ}った: nhóm I, り đổi thành った", "Thể thông thường ＋ と {思|おも}います: tôi nghĩ là…"], "note": "Trước と phải là thể thông thường; không nói {帰|かえ}りましたと{思|おも}います."}}]},
     {"id": "g21-2", "pattern": "「～」・(thể thông thường)と　{言|い}います", "meaningVi": "Nói rằng...", "explanationVi": "Trích dẫn trực tiếp hoặc gián tiếp lời người khác.",
-     "examples": [{"id": "g21-2-1", "ja": "{部長|ぶちょう}は　{会議|かいぎ}が　3{時|じ}に　{始|はじ}まると　{言|い}いました。", "vi": "Trưởng phòng nói cuộc họp bắt đầu lúc 3 giờ."}]},
+     "examples": [{"id": "g21-2-1", "ja": "{部長|ぶちょう}は　{会議|かいぎ}が　3{時|じ}に　{始|はじ}まると　{言|い}いました。", "vi": "Trưởng phòng nói cuộc họp bắt đầu lúc 3 giờ.", "analysis": {"parts": [["{部長|ぶちょう}は", "trưởng phòng"], ["{会議|かいぎ}が", "cuộc họp. が đi với {始|はじ}まる"], ["3{時|じ}に", "lúc 3 giờ. に chỉ thời điểm"], ["{始|はじ}まると", "rằng sẽ bắt đầu. {始|はじ}まる (thể từ điển) ＋ と"], ["{言|い}いました", "đã nói. {言|い}う quá khứ"]], "steps": ["{始|はじ}まります → {始|はじ}まる: nhóm I, り đổi về る", "{言|い}う → {言|い}います → {言|い}いました: nhóm I, う đổi thành い rồi thêm ました", "Thể thông thường ＋ と {言|い}います: thuật lại lời người khác"], "note": "{始|はじ}まる là tự động từ (cuộc họp tự bắt đầu) nên đi với が."}}]},
     {"id": "g21-3", "pattern": "～でしょう？", "meaningVi": "...đúng không?", "explanationVi": "Lên giọng cuối, mong người nghe đồng ý.",
-     "examples": [{"id": "g21-3-1", "ja": "あしたの　パーティーに　{行|い}くでしょう？", "vi": "Mai bạn đi tiệc đúng không?"}]},
+     "examples": [{"id": "g21-3-1", "ja": "あしたの　パーティーに　{行|い}くでしょう？", "vi": "Mai bạn đi tiệc đúng không?", "analysis": {"parts": [["あしたの", "của ngày mai. Danh từ thời gian ＋ の"], ["パーティーに", "đến bữa tiệc. に chỉ nơi đến, sự kiện tham gia"], ["{行|い}く", "đi. Thể từ điển"], ["でしょう？", "đúng không? Lên giọng để xác nhận"]], "steps": ["{行|い}きます → {行|い}く ＋ でしょう？: thể thông thường ＋ でしょう"], "note": "Danh từ, tính từ な bỏ だ: {雨|あめ}でしょう？, {暇|ひま}でしょう？"}}]},
     {"id": "g21-4", "pattern": "N1 (nơi chốn)で　N2 (sự kiện)が　あります", "meaningVi": "Ở N1 có (diễn ra) N2", "explanationVi": "Sự kiện dùng で, không dùng に.",
-     "examples": [{"id": "g21-4-1", "ja": "{東京|とうきょう}で　{日本|にほん}と　ブラジルの　サッカーの　{試合|しあい}が　あります。", "vi": "Ở Tokyo có trận bóng đá Nhật Bản - Brazil."}]}
+     "examples": [{"id": "g21-4-1", "ja": "{東京|とうきょう}で　{日本|にほん}と　ブラジルの　サッカーの　{試合|しあい}が　あります。", "vi": "Ở Tokyo có trận bóng đá Nhật Bản - Brazil.", "analysis": {"parts": [["{東京|とうきょう}で", "ở Tokyo. で chỉ nơi sự kiện diễn ra"], ["{日本|にほん}とブラジルの", "giữa Nhật Bản và Brazil"], ["サッカーの{試合|しあい}が", "trận bóng đá. が đánh dấu sự kiện"], ["あります", "có, diễn ra"]], "steps": ["N1 (nơi chốn)で N2 (sự kiện)が あります: ở N1 có sự kiện N2"], "note": "Sự kiện dùng で, còn đồ vật tồn tại dùng に: {机|つくえ}の{上|うえ}に{本|ほん}があります."}}]}
    ]
   },
   {
@@ -321,9 +321,9 @@
    "titleVi": "Mệnh đề bổ nghĩa danh từ",
    "points": [
     {"id": "g22-1", "pattern": "(thể thông thường) + N", "meaningVi": "N mà...", "explanationVi": "Mệnh đề đặt trước danh từ để bổ nghĩa. Chủ ngữ trong mệnh đề dùng が.",
-     "examples": [{"id": "g22-1-1", "ja": "これは　{妹|いもうと}が　{作|つく}った　ケーキです。", "vi": "Đây là bánh em gái tôi làm."}]},
+     "examples": [{"id": "g22-1-1", "ja": "これは　{妹|いもうと}が　{作|つく}った　ケーキです。", "vi": "Đây là bánh em gái tôi làm.", "analysis": {"parts": [["これは", "cái này"], ["{妹|いもうと}が{作|つく}った", "(mà) em gái tôi đã làm. Mệnh đề bổ nghĩa"], ["ケーキです", "là cái bánh"]], "steps": ["{作|つく}ります → {作|つく}った: nhóm I, り đổi thành った", "Mệnh đề (thể thông thường) ＋ N: mệnh đề đứng trước để bổ nghĩa cho N", "Trong mệnh đề bổ nghĩa, chủ ngữ dùng が (không dùng は): {妹|いもうと}が{作|つく}った"], "note": "Tiếng Việt: \"cái bánh mà em gái làm\" — tiếng Nhật đảo lại, phần giải thích đứng trước."}}]},
     {"id": "g22-2", "pattern": "V (thể từ điển)　{時間|じかん}・{約束|やくそく}・{用事|ようじ}", "meaningVi": "Thời gian · hẹn · việc để làm V", "explanationVi": "Nói về thời gian, việc cần làm.",
-     "examples": [{"id": "g22-2-1", "ja": "{朝|あさ}ごはんを　{食|た}べる　{時間|じかん}が　ありません。", "vi": "Tôi không có thời gian ăn sáng."}]}
+     "examples": [{"id": "g22-2-1", "ja": "{朝|あさ}ごはんを　{食|た}べる　{時間|じかん}が　ありません。", "vi": "Tôi không có thời gian ăn sáng.", "analysis": {"parts": [["{朝|あさ}ごはんを", "bữa sáng"], ["{食|た}べる", "ăn. Thể từ điển, bổ nghĩa cho {時間|じかん}"], ["{時間|じかん}が", "thời gian. が đi với ある"], ["ありません", "không có"]], "steps": ["{食|た}べます → {食|た}べる: nhóm II, thể từ điển", "Vる ＋ {時間|じかん}・{約束|やくそく}・{用事|ようじ}: thời gian / hẹn / việc để làm V"]}}]}
    ]
   },
   {
@@ -331,13 +331,13 @@
    "titleVi": "Khi, hễ... thì",
    "points": [
     {"id": "g23-1", "pattern": "Vる・Vない・Aい・Aな・Nの　とき", "meaningVi": "Khi...", "explanationVi": "とき bổ nghĩa như danh từ.",
-     "examples": [{"id": "g23-1-1", "ja": "{道|みち}が　わからない　とき、{交番|こうばん}で　{聞|き}きます。", "vi": "Khi không biết đường, tôi hỏi ở đồn cảnh sát."}]},
+     "examples": [{"id": "g23-1-1", "ja": "{道|みち}が　わからない　とき、{交番|こうばん}で　{聞|き}きます。", "vi": "Khi không biết đường, tôi hỏi ở đồn cảnh sát.", "analysis": {"parts": [["{道|みち}が", "đường đi. が đi với わかる"], ["わからない", "không biết. わかる thể ない"], ["とき", "khi"], ["{交番|こうばん}で", "ở đồn cảnh sát. で chỉ nơi làm hành động"], ["{聞|き}きます", "hỏi. {聞|き}く thể ます"]], "steps": ["わかります → わからない: nhóm I, る (hàng う) đổi sang ら (hàng あ) rồi thêm ない", "Vない ＋ とき: khi không V"], "note": "{聞|き}く vừa là \"nghe\" vừa là \"hỏi\"."}}]},
     {"id": "g23-2", "pattern": "Vる・Vた　とき", "meaningVi": "Khi sắp làm · khi đã làm", "explanationVi": "Vる　とき: trước khi hành động xảy ra; Vた　とき: sau khi đã xảy ra.",
-     "examples": [{"id": "g23-2-1", "ja": "{国|くに}へ　{帰|かえ}る　とき、かばんを　{買|か}いました。", "vi": "Khi chuẩn bị về nước, tôi đã mua túi."}]},
+     "examples": [{"id": "g23-2-1", "ja": "{国|くに}へ　{帰|かえ}る　とき、かばんを　{買|か}いました。", "vi": "Khi chuẩn bị về nước, tôi đã mua túi.", "analysis": {"parts": [["{国|くに}へ", "về nước"], ["{帰|かえ}る", "về. Thể từ điển"], ["とき", "khi (chuẩn bị)"], ["かばんを{買|か}いました", "đã mua túi"]], "steps": ["{帰|かえ}る ＋ とき: khi sắp về, việc mua túi xảy ra TRƯỚC khi về", "So sánh: {帰|かえ}った ＋ とき = khi đã về rồi, việc xảy ra SAU khi về"], "note": "Câu ở quá khứ nhưng vẫn dùng {帰|かえ}る vì việc về chưa xảy ra lúc mua túi."}}]},
     {"id": "g23-3", "pattern": "Vる　と、～", "meaningVi": "Hễ V thì...", "explanationVi": "Kết quả tất yếu, chỉ đường, cách dùng máy.",
-     "examples": [{"id": "g23-3-1", "ja": "この　ボタンを　{押|お}すと、お{釣|つ}りが　{出|で}ます。", "vi": "Hễ bấm nút này thì tiền thừa sẽ ra."}]},
+     "examples": [{"id": "g23-3-1", "ja": "この　ボタンを　{押|お}すと、お{釣|つ}りが　{出|で}ます。", "vi": "Hễ bấm nút này thì tiền thừa sẽ ra.", "analysis": {"parts": [["このボタンを", "nút này"], ["{押|お}すと", "hễ bấm thì. {押|お}す (thể từ điển) ＋ と"], ["お{釣|つ}りが", "tiền thừa. が đánh dấu chủ ngữ"], ["{出|で}ます", "ra, chạy ra. {出|で}る thể ます"]], "steps": ["{押|お}します → {押|お}す: nhóm I, し đổi về す", "Vる ＋ と、〜: hễ V thì (kết quả luôn xảy ra, như máy móc, tự nhiên)"], "note": "Vế sau と không dùng cho ý muốn, lời nhờ (không nói 〜と、{買|か}ってください)."}}]},
     {"id": "g23-4", "pattern": "Nが　A・V (miêu tả)", "meaningVi": "Miêu tả hiện tượng", "explanationVi": "Miêu tả điều tai nghe mắt thấy dùng が.",
-     "examples": [{"id": "g23-4-1", "ja": "{音|おと}が　{小|ちい}さいです。", "vi": "Âm thanh nhỏ."}]}
+     "examples": [{"id": "g23-4-1", "ja": "{音|おと}が　{小|ちい}さいです。", "vi": "Âm thanh nhỏ.", "analysis": {"parts": [["{音|おと}が", "âm thanh. が đánh dấu chủ ngữ được miêu tả"], ["{小|ちい}さいです", "nhỏ"]], "steps": ["Nが A: miêu tả điều mắt thấy tai nghe ngay lúc đó"], "note": "Dùng は thì thành nhận xét chung: {音|おと}は{小|ちい}さいです (còn âm thanh thì nhỏ)."}}]}
    ]
   },
   {
@@ -345,13 +345,13 @@
    "titleVi": "Cho nhận hành động",
    "points": [
     {"id": "g24-1", "pattern": "くれます", "meaningVi": "(Người khác) cho tôi", "explanationVi": "Người nhận là mình hoặc người nhà mình.",
-     "examples": [{"id": "g24-1-1", "ja": "{佐藤|さとう}さんは　{私|わたし}に　クリスマスカードを　くれました。", "vi": "Chị Sato đã gửi tôi thiệp Giáng sinh."}]},
+     "examples": [{"id": "g24-1-1", "ja": "{佐藤|さとう}さんは　{私|わたし}に　クリスマスカードを　くれました。", "vi": "Chị Sato đã gửi tôi thiệp Giáng sinh.", "analysis": {"parts": [["{佐藤|さとう}さんは", "chị Sato. Người cho"], ["{私|わたし}に", "cho tôi. に chỉ người nhận"], ["クリスマスカードを", "thiệp Giáng sinh"], ["くれました", "đã cho (tôi). くれる (nhóm II) thể ました"]], "steps": ["くれる → くれます → くれました: nhóm II, bỏ る thêm ました"], "note": "くれる: người khác cho tôi (hoặc người nhà tôi). Tôi cho người khác thì dùng あげる."}}]},
     {"id": "g24-2", "pattern": "Vて　あげます", "meaningVi": "Làm V cho (người khác)", "explanationVi": "Không nên dùng trực tiếp với người trên; dùng ～ましょうか.",
-     "examples": [{"id": "g24-2-1", "ja": "{私|わたし}は　{木村|きむら}さんに　{本|ほん}を　{貸|か}して　あげました。", "vi": "Tôi đã cho chị Kimura mượn sách."}]},
+     "examples": [{"id": "g24-2-1", "ja": "{私|わたし}は　{木村|きむら}さんに　{本|ほん}を　{貸|か}して　あげました。", "vi": "Tôi đã cho chị Kimura mượn sách.", "analysis": {"parts": [["{私|わたし}は", "tôi. Người làm giúp"], ["{木村|きむら}さんに", "cho chị Kimura. に chỉ người được giúp"], ["{本|ほん}を", "sách"], ["{貸|か}してあげました", "đã cho mượn. {貸|か}して ＋ あげました"]], "steps": ["{貸|か}します → {貸|か}して: nhóm I, し đổi thành して", "Vて ＋ あげます: làm V cho người khác"], "note": "Nói thẳng với người trên 〜てあげます nghe như ban ơn; nên dùng Vましょうか."}}]},
     {"id": "g24-3", "pattern": "Vて　もらいます", "meaningVi": "Được (người khác) làm V cho", "explanationVi": "Thể hiện lòng biết ơn của người nhận.",
-     "examples": [{"id": "g24-3-1", "ja": "{私|わたし}は　{山田|やまだ}さんに　{図書館|としょかん}の　{電話番号|でんわばんごう}を　{教|おし}えて　もらいました。", "vi": "Tôi được anh Yamada chỉ cho số điện thoại thư viện."}]},
+     "examples": [{"id": "g24-3-1", "ja": "{私|わたし}は　{山田|やまだ}さんに　{図書館|としょかん}の　{電話番号|でんわばんごう}を　{教|おし}えて　もらいました。", "vi": "Tôi được anh Yamada chỉ cho số điện thoại thư viện.", "analysis": {"parts": [["{私|わたし}は", "tôi. Người được giúp"], ["{山田|やまだ}さんに", "(được) anh Yamada. に chỉ người làm giúp"], ["{図書館|としょかん}の{電話番号|でんわばんごう}を", "số điện thoại thư viện"], ["{教|おし}えてもらいました", "được chỉ cho. {教|おし}えて ＋ もらいました"]], "steps": ["{教|おし}えます → {教|おし}えて: nhóm II, bỏ ます thêm て", "Vて ＋ もらいます: được người khác làm V cho (chủ ngữ là người nhận)"], "note": "Với もらう, に chỉ người làm giúp, không phải người nhận."}}]},
     {"id": "g24-4", "pattern": "Vて　くれます", "meaningVi": "(Người khác) làm V cho tôi", "explanationVi": "Chủ ngữ là người làm, người nhận là mình.",
-     "examples": [{"id": "g24-4-1", "ja": "{母|はは}は　{私|わたし}に　セーターを　{送|おく}って　くれました。", "vi": "Mẹ đã gửi áo len cho tôi."}]}
+     "examples": [{"id": "g24-4-1", "ja": "{母|はは}は　{私|わたし}に　セーターを　{送|おく}って　くれました。", "vi": "Mẹ đã gửi áo len cho tôi.", "analysis": {"parts": [["{母|はは}は", "mẹ tôi. Người làm giúp"], ["{私|わたし}に", "cho tôi"], ["セーターを", "áo len"], ["{送|おく}ってくれました", "đã gửi cho tôi. {送|おく}って ＋ くれました"]], "steps": ["{送|おく}ります → {送|おく}って: nhóm I, り đổi thành って", "Vて ＋ くれます: người khác làm V cho tôi (thể hiện biết ơn)"], "note": "Cùng một việc: {母|はは}が{送|おく}ってくれました = {私|わたし}は{母|はは}に{送|おく}ってもらいました."}}]}
    ]
   },
   {
@@ -359,13 +359,13 @@
    "titleVi": "Điều kiện たら, dù ても",
    "points": [
     {"id": "g25-1", "pattern": "(thể thông thường quá khứ)ら、～", "meaningVi": "Nếu...", "explanationVi": "Giả định: nếu điều kiện xảy ra thì...",
-     "examples": [{"id": "g25-1-1", "ja": "お{金|かね}が　あったら、{旅行|りょこう}します。", "vi": "Nếu có tiền, tôi sẽ đi du lịch."}]},
+     "examples": [{"id": "g25-1-1", "ja": "お{金|かね}が　あったら、{旅行|りょこう}します。", "vi": "Nếu có tiền, tôi sẽ đi du lịch.", "analysis": {"parts": [["お{金|かね}が", "tiền"], ["あったら", "nếu có. あった ＋ ら"], ["{旅行|りょこう}します", "sẽ đi du lịch. {旅行|りょこう}する thể ます"]], "steps": ["あります → ある → あった: nhóm I, る đổi thành った", "あった ＋ ら → あったら: thể たら = thể た ＋ ら (nếu…)"], "note": "Vế sau たら dùng được ý muốn, rủ rê, nhờ vả: お{金|かね}があったら、{旅行|りょこう}したいです."}}]},
     {"id": "g25-2", "pattern": "Vたら、～", "meaningVi": "Sau khi V thì..., khi V xong thì...", "explanationVi": "Việc chắc chắn sẽ xảy ra trong tương lai.",
-     "examples": [{"id": "g25-2-1", "ja": "10{時|じ}に　なったら、{出|で}かけましょう。", "vi": "Đến 10 giờ thì chúng ta đi nhé."}]},
+     "examples": [{"id": "g25-2-1", "ja": "10{時|じ}に　なったら、{出|で}かけましょう。", "vi": "Đến 10 giờ thì chúng ta đi nhé.", "analysis": {"parts": [["10{時|じ}に", "đến 10 giờ. に đi với なる"], ["なったら", "khi đã thành. なった ＋ ら"], ["{出|で}かけましょう", "chúng ta đi ra ngoài nhé. {出|で}かける thể ましょう"]], "steps": ["なります → なる → なった → なったら: nhóm I, る đổi thành った, thêm ら", "{出|で}かけます → {出|で}かけましょう: đổi ます thành ましょう", "Vたら (việc chắc chắn sẽ xảy ra): khi V xong thì…"]}}]},
     {"id": "g25-3", "pattern": "Vて・Aくて・Aで・Nで　も、～", "meaningVi": "Dù... cũng...", "explanationVi": "Kết quả trái với điều mong đợi.",
-     "examples": [{"id": "g25-3-1", "ja": "{雨|あめ}が　{降|ふ}っても、{洗濯|せんたく}します。", "vi": "Dù trời mưa tôi vẫn giặt đồ."}]},
+     "examples": [{"id": "g25-3-1", "ja": "{雨|あめ}が　{降|ふ}っても、{洗濯|せんたく}します。", "vi": "Dù trời mưa tôi vẫn giặt đồ.", "analysis": {"parts": [["{雨|あめ}が", "mưa"], ["{降|ふ}っても", "dù rơi. {降|ふ}って ＋ も"], ["{洗濯|せんたく}します", "vẫn giặt đồ"]], "steps": ["{降|ふ}ります → {降|ふ}って: nhóm I, り đổi thành って", "Vて ＋ も、〜: dù V vẫn…"], "note": "\"Trời mưa\" là {雨|あめ}が{降|ふ}る. Tính từ い: {寒|さむ}くても; tính từ な, danh từ: {暇|ひま}でも."}}]},
     {"id": "g25-4", "pattern": "いくら～ても", "meaningVi": "Dù... bao nhiêu đi nữa", "explanationVi": "Nhấn mạnh mức độ.",
-     "examples": [{"id": "g25-4-1", "ja": "いくら　{考|かんが}えても、わかりません。", "vi": "Dù nghĩ bao nhiêu tôi cũng không hiểu."}]}
+     "examples": [{"id": "g25-4-1", "ja": "いくら　{考|かんが}えても、わかりません。", "vi": "Dù nghĩ bao nhiêu tôi cũng không hiểu.", "analysis": {"parts": [["いくら", "dù bao nhiêu"], ["{考|かんが}えても", "dù có nghĩ. {考|かんが}えて ＋ も"], ["わかりません", "cũng không hiểu"]], "steps": ["{考|かんが}えます → {考|かんが}えて: nhóm II, bỏ ます thêm て", "いくら ＋ Vても: dù làm V bao nhiêu đi nữa"]}}]}
    ]
   }
  ]

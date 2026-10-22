@@ -59,8 +59,12 @@ class RubyText extends StatelessWidget {
     final rubyStyle = base.copyWith(fontSize: fontSize * 0.5, height: 1.1);
     final rubyHeight = fontSize * 0.5 * 1.1;
 
+    final segments = parseRuby(text);
+    // Không có furigana thì khỏi chừa chỗ phía trên, vẽ như chữ thường.
+    if (segments.every((s) => s.ruby == null)) return Text(text, style: base);
+
     final spans = <InlineSpan>[];
-    for (final seg in parseRuby(text)) {
+    for (final seg in segments) {
       if (seg.ruby == null || !showRuby) {
         // Chừa chỗ phía trên để các dòng không có furigana vẫn thẳng hàng.
         for (final ch in _wrapUnits(seg.base)) {

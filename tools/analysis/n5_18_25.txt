@@ -1,0 +1,234 @@
+# Phân tích câu ví dụ ngữ pháp N5, bài 18–25. Cách viết: xem tools/apply_analysis.py
+
+@g18-1-1
+{私|わたし}は | tôi
+{車|くるま}を | xe hơi. を đánh dấu tân ngữ của {運転|うんてん}する
+{運転|うんてん}する | lái. Thể từ điển
+ことが | việc… こと biến động từ thành danh từ; が đi với できる
+できます | có thể. できる (nhóm II) thể ます
+> {運転|うんてん}します → {運転|うんてん}する: nhóm III, thể từ điển là する
+> Vる ＋ こと ＋ が できます: có thể làm V
+! Với danh từ chỉ hoạt động thì bỏ こと: {運転|うんてん}ができます.
+
+@g18-2-1
+{私|わたし}の{趣味|しゅみ}は | sở thích của tôi
+{写真|しゃしん}を{撮|と}る | chụp ảnh. {撮|と}る thể từ điển
+ことです | là việc… こと ＋ です
+> {撮|と}ります → {撮|と}る: nhóm I, り đổi về る
+> {趣味|しゅみ}は Vる こと です: sở thích là làm V
+! Không nói {趣味|しゅみ}は{写真|しゃしん}を{撮|と}ります. Phải thêm こと để thành danh từ.
+
+@g18-3-1
+{食事|しょくじ}の | bữa ăn. Danh từ ＋ の
+まえに | trước khi. まえ ＋ に (thời điểm)
+{手|て}を | tay
+{洗|あら}います | rửa. {洗|あら}う (nhóm I) thể ます
+> Nの まえに / Vる まえに / thời gian ＋ まえに
+> {洗|あら}う → {洗|あら}います: nhóm I, う đổi thành い rồi thêm ます
+! Động từ trước まえに luôn ở thể từ điển, kể cả khi câu nói về quá khứ: {寝|ね}るまえに.
+
+@g18-4-1
+{日本|にほん}では | ở Nhật thì. で (nơi) ＋ は (chủ đề, đối chiếu)
+なかなか | mãi mà, khó mà. Đi với phủ định
+{馬|うま}を{見|み}る | nhìn thấy ngựa. {見|み}る thể từ điển
+ことができません | không thể. Phủ định của ことができます
+> {見|み}ます → {見|み}る: nhóm II, thể từ điển thêm lại る
+> できます → できません: đổi ます thành ません
+> なかなか ＋ phủ định: khó mà, mãi không
+
+@g19-1-1
+{私|わたし}は | tôi
+{日本|にほん}の{歌|うた}を | bài hát Nhật
+{歌|うた}った | đã hát. {歌|うた}う thể た
+ことがあります | có trải nghiệm. こと ＋ が ＋ あります
+> {歌|うた}います → {歌|うた}った: nhóm I, đuôi い (gốc う) đổi thành った
+> Vた ＋ ことが あります: đã từng làm V
+! Không dùng cho việc hằng ngày hay vừa mới làm. Dùng cho trải nghiệm đáng kể trong đời.
+
+@g19-2-1
+{休|やす}みの{日|ひ}は | ngày nghỉ thì
+{本|ほん}を{読|よ}んだり | nào là đọc sách. {読|よ}んだ ＋ り
+{映画|えいが}を{見|み}たり | nào là xem phim. {見|み}た ＋ り
+します | (làm những việc đó)
+> {読|よ}みます → {読|よ}んだ → {読|よ}んだり: nhóm I, み đổi thành んだ, rồi thêm り
+> {見|み}ます → {見|み}た → {見|み}たり: nhóm II, bỏ ます thêm た, rồi thêm り
+> V1たり、V2たり します: kể vài việc tiêu biểu, không theo thứ tự
+! Thì của câu nằm ở します cuối: 〜たりしました (quá khứ).
+
+@g19-3-1
+{日本語|にほんご}が | tiếng Nhật
+{上手|じょうず}に | giỏi lên. {上手|じょうず} (tính từ な) ＋ に
+なりました | đã trở nên. なる (nhóm I) thể ました
+> Tính từ な / danh từ ＋ に なります: {上手|じょうず}になる
+> Tính từ い: đổi い thành く ＋ なります: {寒|さむ}くなる
+> なる → なります → なりました: nhóm I, る đổi thành り rồi thêm ました
+
+@g20-1-1
+あした | ngày mai
+{東京|とうきょう}へ | đến Tokyo
+{行|い}く？ | đi không? Thể từ điển, lên giọng cuối câu
+うん、{行|い}く | ừ, đi. うん = はい thân mật
+> {行|い}きます (lịch sự) → {行|い}く (thân mật): dùng thể từ điển thay cho thể ます
+> Câu hỏi thân mật bỏ か, chỉ lên giọng
+! Chỉ dùng với bạn bè, gia đình, người nhỏ tuổi hơn. Với người trên và khách hàng phải dùng です・ます.
+
+@g20-2-1
+{今|いま} | bây giờ
+{暇|ひま}？ | rảnh không? Tính từ な bỏ です, không thêm だ khi hỏi
+ううん、{忙|いそが}しい | không, bận. ううん = いいえ thân mật
+> {暇|ひま}ですか → {暇|ひま}？: tính từ な, danh từ bỏ です (không nói {暇|ひま}だ？)
+> {忙|いそが}しいです → {忙|いそが}しい: tính từ い chỉ bỏ です
+! Câu khẳng định với tính từ な thì thêm だ: {暇|ひま}だ. Câu hỏi thì bỏ だ.
+
+@g21-1-1
+{山田|やまだ}さんは | anh Yamada
+もう | đã… rồi
+{帰|かえ}った | đã về. {帰|かえ}る thể た
+と{思|おも}います | tôi nghĩ rằng. と (trích dẫn) ＋ {思|おも}います
+> {帰|かえ}ります → {帰|かえ}った: nhóm I, り đổi thành った
+> Thể thông thường ＋ と {思|おも}います: tôi nghĩ là…
+! Trước と phải là thể thông thường; không nói {帰|かえ}りましたと{思|おも}います.
+
+@g21-2-1
+{部長|ぶちょう}は | trưởng phòng
+{会議|かいぎ}が | cuộc họp. が đi với {始|はじ}まる
+3{時|じ}に | lúc 3 giờ. に chỉ thời điểm
+{始|はじ}まると | rằng sẽ bắt đầu. {始|はじ}まる (thể từ điển) ＋ と
+{言|い}いました | đã nói. {言|い}う quá khứ
+> {始|はじ}まります → {始|はじ}まる: nhóm I, り đổi về る
+> {言|い}う → {言|い}います → {言|い}いました: nhóm I, う đổi thành い rồi thêm ました
+> Thể thông thường ＋ と {言|い}います: thuật lại lời người khác
+! {始|はじ}まる là tự động từ (cuộc họp tự bắt đầu) nên đi với が.
+
+@g21-3-1
+あしたの | của ngày mai. Danh từ thời gian ＋ の
+パーティーに | đến bữa tiệc. に chỉ nơi đến, sự kiện tham gia
+{行|い}く | đi. Thể từ điển
+でしょう？ | đúng không? Lên giọng để xác nhận
+> {行|い}きます → {行|い}く ＋ でしょう？: thể thông thường ＋ でしょう
+! Danh từ, tính từ な bỏ だ: {雨|あめ}でしょう？, {暇|ひま}でしょう？
+
+@g21-4-1
+{東京|とうきょう}で | ở Tokyo. で chỉ nơi sự kiện diễn ra
+{日本|にほん}とブラジルの | giữa Nhật Bản và Brazil
+サッカーの{試合|しあい}が | trận bóng đá. が đánh dấu sự kiện
+あります | có, diễn ra
+> N1 (nơi chốn)で N2 (sự kiện)が あります: ở N1 có sự kiện N2
+! Sự kiện dùng で, còn đồ vật tồn tại dùng に: {机|つくえ}の{上|うえ}に{本|ほん}があります.
+
+@g22-1-1
+これは | cái này
+{妹|いもうと}が{作|つく}った | (mà) em gái tôi đã làm. Mệnh đề bổ nghĩa
+ケーキです | là cái bánh
+> {作|つく}ります → {作|つく}った: nhóm I, り đổi thành った
+> Mệnh đề (thể thông thường) ＋ N: mệnh đề đứng trước để bổ nghĩa cho N
+> Trong mệnh đề bổ nghĩa, chủ ngữ dùng が (không dùng は): {妹|いもうと}が{作|つく}った
+! Tiếng Việt: "cái bánh mà em gái làm" — tiếng Nhật đảo lại, phần giải thích đứng trước.
+
+@g22-2-1
+{朝|あさ}ごはんを | bữa sáng
+{食|た}べる | ăn. Thể từ điển, bổ nghĩa cho {時間|じかん}
+{時間|じかん}が | thời gian. が đi với ある
+ありません | không có
+> {食|た}べます → {食|た}べる: nhóm II, thể từ điển
+> Vる ＋ {時間|じかん}・{約束|やくそく}・{用事|ようじ}: thời gian / hẹn / việc để làm V
+
+@g23-1-1
+{道|みち}が | đường đi. が đi với わかる
+わからない | không biết. わかる thể ない
+とき | khi
+{交番|こうばん}で | ở đồn cảnh sát. で chỉ nơi làm hành động
+{聞|き}きます | hỏi. {聞|き}く thể ます
+> わかります → わからない: nhóm I, る (hàng う) đổi sang ら (hàng あ) rồi thêm ない
+> Vない ＋ とき: khi không V
+! {聞|き}く vừa là "nghe" vừa là "hỏi".
+
+@g23-2-1
+{国|くに}へ | về nước
+{帰|かえ}る | về. Thể từ điển
+とき | khi (chuẩn bị)
+かばんを{買|か}いました | đã mua túi
+> {帰|かえ}る ＋ とき: khi sắp về, việc mua túi xảy ra TRƯỚC khi về
+> So sánh: {帰|かえ}った ＋ とき = khi đã về rồi, việc xảy ra SAU khi về
+! Câu ở quá khứ nhưng vẫn dùng {帰|かえ}る vì việc về chưa xảy ra lúc mua túi.
+
+@g23-3-1
+このボタンを | nút này
+{押|お}すと | hễ bấm thì. {押|お}す (thể từ điển) ＋ と
+お{釣|つ}りが | tiền thừa. が đánh dấu chủ ngữ
+{出|で}ます | ra, chạy ra. {出|で}る thể ます
+> {押|お}します → {押|お}す: nhóm I, し đổi về す
+> Vる ＋ と、〜: hễ V thì (kết quả luôn xảy ra, như máy móc, tự nhiên)
+! Vế sau と không dùng cho ý muốn, lời nhờ (không nói 〜と、{買|か}ってください).
+
+@g23-4-1
+{音|おと}が | âm thanh. が đánh dấu chủ ngữ được miêu tả
+{小|ちい}さいです | nhỏ
+> Nが A: miêu tả điều mắt thấy tai nghe ngay lúc đó
+! Dùng は thì thành nhận xét chung: {音|おと}は{小|ちい}さいです (còn âm thanh thì nhỏ).
+
+@g24-1-1
+{佐藤|さとう}さんは | chị Sato. Người cho
+{私|わたし}に | cho tôi. に chỉ người nhận
+クリスマスカードを | thiệp Giáng sinh
+くれました | đã cho (tôi). くれる (nhóm II) thể ました
+> くれる → くれます → くれました: nhóm II, bỏ る thêm ました
+! くれる: người khác cho tôi (hoặc người nhà tôi). Tôi cho người khác thì dùng あげる.
+
+@g24-2-1
+{私|わたし}は | tôi. Người làm giúp
+{木村|きむら}さんに | cho chị Kimura. に chỉ người được giúp
+{本|ほん}を | sách
+{貸|か}してあげました | đã cho mượn. {貸|か}して ＋ あげました
+> {貸|か}します → {貸|か}して: nhóm I, し đổi thành して
+> Vて ＋ あげます: làm V cho người khác
+! Nói thẳng với người trên 〜てあげます nghe như ban ơn; nên dùng Vましょうか.
+
+@g24-3-1
+{私|わたし}は | tôi. Người được giúp
+{山田|やまだ}さんに | (được) anh Yamada. に chỉ người làm giúp
+{図書館|としょかん}の{電話番号|でんわばんごう}を | số điện thoại thư viện
+{教|おし}えてもらいました | được chỉ cho. {教|おし}えて ＋ もらいました
+> {教|おし}えます → {教|おし}えて: nhóm II, bỏ ます thêm て
+> Vて ＋ もらいます: được người khác làm V cho (chủ ngữ là người nhận)
+! Với もらう, に chỉ người làm giúp, không phải người nhận.
+
+@g24-4-1
+{母|はは}は | mẹ tôi. Người làm giúp
+{私|わたし}に | cho tôi
+セーターを | áo len
+{送|おく}ってくれました | đã gửi cho tôi. {送|おく}って ＋ くれました
+> {送|おく}ります → {送|おく}って: nhóm I, り đổi thành って
+> Vて ＋ くれます: người khác làm V cho tôi (thể hiện biết ơn)
+! Cùng một việc: {母|はは}が{送|おく}ってくれました = {私|わたし}は{母|はは}に{送|おく}ってもらいました.
+
+@g25-1-1
+お{金|かね}が | tiền
+あったら | nếu có. あった ＋ ら
+{旅行|りょこう}します | sẽ đi du lịch. {旅行|りょこう}する thể ます
+> あります → ある → あった: nhóm I, る đổi thành った
+> あった ＋ ら → あったら: thể たら = thể た ＋ ら (nếu…)
+! Vế sau たら dùng được ý muốn, rủ rê, nhờ vả: お{金|かね}があったら、{旅行|りょこう}したいです.
+
+@g25-2-1
+10{時|じ}に | đến 10 giờ. に đi với なる
+なったら | khi đã thành. なった ＋ ら
+{出|で}かけましょう | chúng ta đi ra ngoài nhé. {出|で}かける thể ましょう
+> なります → なる → なった → なったら: nhóm I, る đổi thành った, thêm ら
+> {出|で}かけます → {出|で}かけましょう: đổi ます thành ましょう
+> Vたら (việc chắc chắn sẽ xảy ra): khi V xong thì…
+
+@g25-3-1
+{雨|あめ}が | mưa
+{降|ふ}っても | dù rơi. {降|ふ}って ＋ も
+{洗濯|せんたく}します | vẫn giặt đồ
+> {降|ふ}ります → {降|ふ}って: nhóm I, り đổi thành って
+> Vて ＋ も、〜: dù V vẫn…
+! "Trời mưa" là {雨|あめ}が{降|ふ}る. Tính từ い: {寒|さむ}くても; tính từ な, danh từ: {暇|ひま}でも.
+
+@g25-4-1
+いくら | dù bao nhiêu
+{考|かんが}えても | dù có nghĩ. {考|かんが}えて ＋ も
+わかりません | cũng không hiểu
+> {考|かんが}えます → {考|かんが}えて: nhóm II, bỏ ます thêm て
+> いくら ＋ Vても: dù làm V bao nhiêu đi nữa

@@ -1,0 +1,117 @@
+# Phân tích câu ví dụ ngữ pháp bài 26. Cách viết: xem tools/apply_analysis.py
+
+@g1_e1
+どうした | bị làm sao. どう (thế nào) ＋ した (thể た của する)
+んですか | hỏi để người kia giải thích. んです ＋ か
+頭が | cái đầu. が đánh dấu chủ ngữ (chỗ bị đau)
+痛いんです | đau (giải thích tình trạng). 痛い (tính từ い) ＋ んです
+> します → する → した: nhóm III, bất quy tắc. Thể た = quá khứ thể thông thường
+> した ＋ んですか → どうしたんですか
+> Tính từ い giữ nguyên trước んです: 痛い → 痛いんです
+! Thấy ai có vẻ không ổn, người Nhật hỏi どうしたんですか. Trả lời bằng 〜んです để giải thích lý do.
+
+@g1_e2
+日本語が | tiếng Nhật. が đi với 上手
+上手ですね | giỏi quá nhỉ. 上手 (tính từ な) ＋ です ＋ ね (cảm thán, tìm đồng tình)
+どこで | ở đâu. どこ (từ để hỏi nơi chốn) ＋ で (nơi diễn ra hành động)
+勉強した | đã học. 勉強する chia thể た
+んですか | hỏi vì tò mò về điều vừa thấy
+> 勉強します → 勉強する → 勉強した: nhóm III (Danh từ ＋ する), đổi する thành した
+> 勉強した ＋ んですか
+! Thấy người kia nói giỏi nên muốn biết lý do, vì vậy dùng んですか chứ không hỏi trơn 勉強しましたか.
+
+@g1_e3
+明日は | ngày mai. は đánh dấu chủ đề (thời gian)
+休みます | xin nghỉ. 休む (nhóm I) chia thể ます
+国から | từ quê nhà. から = "từ" (điểm xuất phát)
+{母|はは}が | mẹ (của mình). が đánh dấu chủ ngữ của sự việc mới nói ra
+{来|く}るんです | sẽ đến (giải thích lý do nghỉ). {来|く}る thể từ điển ＋ んです
+> 休む → 休みます: nhóm I, đổi đuôi む thành み rồi thêm ます
+> {来|き}ます → {来|く}る: nhóm III, bất quy tắc. んです đi sau thể thông thường nên dùng {来|く}る, không dùng {来|き}ます
+! Nói về mẹ mình với người ngoài thì dùng {母|はは}, không dùng お{母|かあ}さん.
+
+@g2_e1
+日本語で | bằng tiếng Nhật. で = phương tiện, cách thức
+メールを | email. を đánh dấu tân ngữ
+書いたんですが | đã viết (dẫn vào chuyện). 書いた ＋ んです ＋ が mở lời
+ちょっと | một chút, làm lời nhờ mềm hơn
+見ていただけませんか | anh xem giúp tôi được không. 見て ＋ いただけませんか
+> 書きます → 書く → 書いた: nhóm I, đuôi く đổi thành いた (thể た)
+> 見ます → 見る → 見て: nhóm II, bỏ る thêm て
+> いただく → いただける (thể khả năng: く đổi thành ける) → いただけません (phủ định lịch sự) ＋ か
+! が ở đây không phải "nhưng" mà là cách mở lời trước khi nhờ. Vていただけませんか lịch sự hơn Vてください.
+
+@g2_e2
+道が | đường đi. が đi với わかる
+{分|わ}からないんですが | không biết (nêu hoàn cảnh). {分|わ}からない ＋ んです ＋ が
+地図を | bản đồ. を đánh dấu tân ngữ
+書いていただけませんか | vẽ giúp tôi được không. 書いて ＋ いただけませんか
+> {分|わ}かります → {分|わ}かる → {分|わ}からない: nhóm I, đuôi る (hàng う) đổi sang ら (hàng あ) rồi thêm ない
+> 書きます → 書いて: nhóm I, đuôi き đổi thành いて
+! 書く nghĩa là viết, nhưng với bản đồ, hình vẽ thì cũng dùng 書く (hoặc かく) với nghĩa "vẽ".
+
+@g2_e3
+すみません | xin lỗi, dùng để bắt chuyện
+この書類の | của giấy tờ này. この ＋ danh từ ＋ の
+書き方が | cách viết, cách điền. 書き (bỏ ます) ＋ 方 (cách)
+{分|わ}からないんですが… | tôi không hiểu… Bỏ lửng sau が để người nghe tự hiểu là đang nhờ
+> 書きます → 書き ＋ 方 = 書き方: V bỏ ます ＋ 方 = cách làm V
+> {分|わ}かります → {分|わ}からない ＋ んですが
+! Người Nhật hay bỏ lửng câu nhờ ở 〜んですが… để lịch sự, không cần nói hết "xin chỉ giúp tôi".
+
+@g3_e1
+どこで | ở đâu. で = nơi diễn ra hành động
+チケットを | vé. を đánh dấu tân ngữ
+{買|か}ったら | nếu mua. {買|か}った ＋ ら
+いいですか | thì được, thì tốt? → "nên mua ở đâu"
+> {買|か}います → {買|か}う → {買|か}った: nhóm I, đuôi う đổi thành った
+> {買|か}った ＋ ら → {買|か}ったら: thể たら = thể た ＋ ら
+> 疑問詞 (どこ) ＋ Vたら いいですか = nên V ở đâu
+
+@g3_e2
+会議の資料は | tài liệu của cuộc họp. は đưa tân ngữ lên làm chủ đề
+何部 | bao nhiêu bản. {何|なん} (bao nhiêu) ＋ {部|ぶ} (đơn vị đếm bản in)
+コピーしたら | nếu photo. コピーする chia thể たら
+いいですか | thì được? → "nên photo bao nhiêu bản"
+> コピーします → コピーする → コピーした → コピーしたら: nhóm III, する → した ＋ ら
+> 疑問詞 (何部) ＋ Vたら いいですか
+! Câu gốc là 資料を何部コピーしたら…; を được thay bằng は để nói "còn tài liệu thì…".
+
+@g3_e3
+熱が | cơn sốt. が đi với ある
+あるんですが | có (sốt), nêu hoàn cảnh. ある thể từ điển ＋ んです ＋ が
+どう | thế nào (từ để hỏi)
+したら | nếu làm. する → した → したら
+いいですか | thì được, thì tốt?
+> あります → ある: nhóm I, đuôi り (hàng い) đổi về る (hàng う) để có thể từ điển
+> します → する → した → したら: nhóm III, bất quy tắc. Thể たら = thể た ＋ ら
+> どう ＋ したら いいですか = nên làm thế nào
+
+@g4_e1
+料理は | việc nấu ăn. は nêu chủ đề để so sánh
+あまり〜じゃありません | không… lắm. あまり luôn đi với dạng phủ định
+上手じゃありません | không giỏi. 上手 (tính từ な) phủ định
+が | nhưng
+掃除は | việc dọn dẹp. は thứ hai tạo thế đối lập với は thứ nhất
+好きです | thích. 好き (tính từ な) ＋ です
+> 上手です → 上手じゃありません: tính từ な, đổi です thành じゃありません
+> Câu gốc: 料理が上手じゃありません / 掃除が好きです. が đổi thành は để đối chiếu hai việc
+! Khi đặt hai chủ đề cạnh nhau, dùng N1は〜が、N2は〜 để làm rõ sự tương phản.
+
+@g4_e2
+時間は | thời gian thì. は thay が để đối chiếu
+あります | có. ある (nhóm I) chia thể ます
+が | nhưng
+お金は | tiền thì. お ＋ 金 (cách nói lịch sự của "tiền")
+ありません | không có. Phủ định của あります
+> あります → ありません: thể ます phủ định, đổi ます thành ません
+> Câu gốc: 時間があります / お金がありません. が đổi thành は vì đang so sánh
+
+@g4_e3
+サッカーは | bóng đá thì. は thay を để đối chiếu
+見ますが | có xem, nhưng. {見|み}る (nhóm II) thể ます ＋ が
+野球は | bóng chày thì. は thay を
+見ません | không xem. Phủ định của 見ます
+> 見る → 見ます → 見ません: nhóm II, bỏ る thêm ます; phủ định đổi ます thành ません
+> Câu gốc: サッカーを見ます / 野球を見ません. を đổi thành は để đối chiếu
+! を đổi thành は (không giữ を は). Còn trợ từ に, で thì giữ lại và thêm は: には, では.

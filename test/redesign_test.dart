@@ -283,6 +283,21 @@ void main() {
     expect(find.byKey(const ValueKey('kanji-example-ja')), findsOneWidget);
   });
 
+  test('mọi câu ví dụ ngữ pháp đều có phân tích và cách chia', () async {
+    final lesson = await LessonRepository().load(26);
+    final examples = [
+      for (final g in lesson.grammar) ...g.examples,
+      for (final l in n5.grammar)
+        for (final p in l.points) ...p.examples,
+    ];
+    expect(examples.length, greaterThanOrEqualTo(121));
+    for (final e in examples) {
+      expect(e.analysis, isNotNull, reason: e.id);
+      expect(e.analysis!.parts.length, greaterThanOrEqualTo(2), reason: e.id);
+      expect(e.analysis!.steps, isNotEmpty, reason: e.id);
+    }
+  });
+
   testWidgets('chi tiết ngữ pháp N5 có cách dùng, cấu trúc, ví dụ', (
     tester,
   ) async {
@@ -296,5 +311,12 @@ void main() {
     expect(find.text('Ví dụ'), findsOneWidget);
     expect(find.text(point.meaningVi), findsOneWidget);
     expect(find.byKey(const ValueKey('start-quiz')), findsNothing);
+
+    final e = point.examples.first;
+    expect(find.byKey(ValueKey('analysis-body-${e.id}')), findsNothing);
+    await tester.tap(find.byKey(ValueKey('analysis-${e.id}')));
+    await tester.pump();
+    expect(find.byKey(ValueKey('analysis-body-${e.id}')), findsOneWidget);
+    expect(find.text('Cách chia'), findsOneWidget);
   });
 }

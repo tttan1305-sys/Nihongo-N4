@@ -1,0 +1,302 @@
+# Phân tích câu ví dụ ngữ pháp N5, bài 9–17. Cách viết: xem tools/apply_analysis.py
+
+@g9-1-1
+{私|わたし}は | tôi. は đánh dấu chủ đề (người thích)
+{日本|にほん}の{料理|りょうり}が | món ăn Nhật. が đánh dấu đối tượng được thích
+{好|す}きです | thích. {好|す}き (tính từ な) ＋ です
+> Nが {好|す}きです: đối tượng của {好|す}き dùng が, không dùng を
+! {好|す}き là tính từ nên phủ định là {好|す}きじゃありません.
+
+@g9-2-1
+{山田|やまだ}さんは | chị Yamada
+{歌|うた}が | bài hát, việc hát. が đánh dấu lĩnh vực
+{上手|じょうず}です | giỏi. {上手|じょうず} (tính từ な) ＋ です
+> Nが {上手|じょうず}です / {下手|へた}です: giỏi / kém N
+! Không tự khen mình là {上手|じょうず}; nói về mình thì dùng {得意|とくい}です.
+
+@g9-3-1
+{漢字|かんじ}が | chữ Hán. が đánh dấu đối tượng được hiểu
+{少|すこ}し | một chút
+わかります | hiểu. わかる (nhóm I) thể ます
+> わかる → わかります: nhóm I, る đổi thành り rồi thêm ます
+> Nが わかります: đối tượng của わかる dùng が, không dùng を
+
+@g9-4-1
+どうして | tại sao
+{早|はや}く | sớm. {早|はや}い đổi い thành く để bổ nghĩa cho động từ
+{帰|かえ}りますか | về không?
+{用事|ようじ}が | việc riêng. が đi với ある
+ありますから | vì có. あります ＋ から (vì)
+> {早|はや}い → {早|はや}く: tính từ い đứng trước động từ thì đổi い thành く
+> Lý do ＋ から: から đặt sau câu nêu lý do
+! Trả lời câu hỏi どうして thì kết thúc bằng 〜から.
+
+@g10-1-1
+{公園|こうえん}に | ở công viên. に chỉ nơi tồn tại
+{子|こ}どもが | trẻ con. が đánh dấu chủ ngữ
+います | có, ở. いる (nhóm II) thể ます
+> いる → います: nhóm II, bỏ る thêm ます
+! Người và con vật dùng います; đồ vật, cây cối dùng あります.
+
+@g10-2-1
+{机|つくえ}の{上|うえ}に | ở trên bàn. Nの{上|うえ} ＋ に (nơi tồn tại)
+パソコンが | máy tính. が đánh dấu vật tồn tại
+あります | có
+> N1 (nơi chốn)に N2が あります: ở N1 có N2 (nhấn vào thứ tồn tại)
+! Nơi tồn tại dùng に, không dùng で.
+
+@g10-3-1
+{郵便局|ゆうびんきょく}は | bưu điện. は đánh dấu chủ đề đã biết
+{駅|えき}の{前|まえ}に | ở trước nhà ga. Nの{前|まえ} ＋ に
+あります | có, nằm ở
+> N1は N2 (nơi chốn)に あります: N1 nằm ở N2 (nhấn vào vị trí)
+! Đảo lại câu ở g10-2-1: hỏi vị trí của thứ đã biết thì dùng は.
+
+@g10-4-1
+{銀行|ぎんこう}の{隣|となり}に | bên cạnh ngân hàng. Nの{隣|となり} ＋ に
+コンビニが | cửa hàng tiện lợi
+あります | có
+> Nの ＋ từ chỉ vị trí ({上|うえ}・{下|した}・{前|まえ}・{後|うし}ろ・{中|なか}・{外|そと}・{隣|となり}) ＋ に
+
+@g10-5-1
+{箱|はこ}の{中|なか}に | ở trong hộp
+{手紙|てがみ}や | thư, và. や liệt kê không đầy đủ
+{写真|しゃしん}などが | ảnh, v.v. など = vân vân
+あります | có
+> N1や N2 など: kể vài ví dụ tiêu biểu, ngầm hiểu còn thứ khác
+! Khác と: N1と N2 nghĩa là chỉ có hai thứ đó.
+
+@g11-1-1
+りんごを | táo. を đánh dấu tân ngữ
+{四|よっ}つ | bốn cái. Cách đếm ひとつ, ふたつ, みっつ, よっつ…
+{買|か}いました | đã mua. {買|か}う thể ました
+> {買|か}う → {買|か}います → {買|か}いました: nhóm I, う đổi thành い rồi thêm ました
+> Số lượng đứng ngay trước động từ, không cần trợ từ: りんごを{四|よっ}つ{買|か}いました
+
+@g11-2-1
+{会議室|かいぎしつ}に | ở phòng họp. に chỉ nơi tồn tại
+{三人|さんにん} | ba người. Số ＋ {人|にん}
+います | có (người)
+> Đếm người: ひとり, ふたり, {三人|さんにん}, よにん…
+! 1 người và 2 người đọc riêng: ひとり, ふたり.
+
+@g11-3-1
+{切手|きって}を | tem. を đánh dấu tân ngữ
+{二枚|にまい} | hai tờ. Số ＋ {枚|まい} (vật mỏng, dẹt)
+ください | cho tôi
+> Nを ＋ số lượng ＋ ください: xin, mua một số lượng N
+! {枚|まい} dùng cho giấy, tem, áo, đĩa; {台|だい} cho máy móc, xe.
+
+@g11-4-1
+{一週間|いっしゅうかん}に | trong một tuần. に chỉ khoảng thời gian làm mốc
+{二回|にかい} | hai lần. Số ＋ {回|かい}
+{日本語|にほんご}を | tiếng Nhật
+{勉強|べんきょう}します | học. {勉強|べんきょう}する thể ます
+> Khoảng thời gian ＋ に ＋ số lần: tần suất
+> {勉強|べんきょう}する → {勉強|べんきょう}します: nhóm III, する đổi thành します
+
+@g11-5-1
+{家|いえ}から | từ nhà. から = điểm xuất phát
+{会社|かいしゃ}まで | đến công ty. まで = điểm đến
+どのくらい | bao lâu, khoảng bao nhiêu
+かかりますか | mất (thời gian, tiền) không? かかる thể ます ＋ か
+{一時間|いちじかん}ぐらいです | khoảng một tiếng. ぐらい = khoảng
+> かかる → かかります: nhóm I, る đổi thành り rồi thêm ます
+! ぐらい đứng sau số lượng; ごろ đứng sau mốc giờ (3{時|じ}ごろ).
+
+@g12-1-1
+{旅行|りょこう}は | chuyến du lịch
+{楽|たの}しかったです | đã rất vui. {楽|たの}しい chia quá khứ
+> {楽|たの}しい → {楽|たの}しかった → {楽|たの}しかったです: tính từ い, đổi い thành かった
+! Không nói {楽|たの}しいでした. Quá khứ của tính từ い nằm ở かった, です giữ nguyên.
+
+@g12-2-1
+きのうは | hôm qua thì. は nêu chủ đề thời gian
+{暇|ひま}じゃありませんでした | đã không rảnh. {暇|ひま} (tính từ な) quá khứ phủ định
+> {暇|ひま}です → {暇|ひま}じゃありません → {暇|ひま}じゃありませんでした: tính từ な, thêm でした sau じゃありません
+! Tính từ い quá khứ phủ định thì khác: {寒|さむ}くなかったです.
+
+@g12-3-1
+{東京|とうきょう}は | Tokyo
+ハノイより | so với Hà Nội. より = hơn (đặt sau vật được so sánh)
+{寒|さむ}いです | lạnh
+> N1は N2より A です: N1 A hơn N2. Tính từ không đổi dạng
+! Thứ đứng trước より là thứ "kém hơn".
+
+@g12-4-1
+{電車|でんしゃ}と バスと | tàu điện và xe buýt. と…と liệt kê hai thứ cần so sánh
+どちらが | cái nào. どちら (hỏi giữa hai thứ) ＋ が
+{速|はや}いですか | nhanh hơn?
+{電車|でんしゃ}のほうが | tàu điện thì hơn. Nのほうが
+{速|はや}いです | nhanh
+> Hỏi: N1と N2と どちらが A ですか. Trả lời: N のほうが A です
+! Chỉ so sánh hai thứ thì dùng どちら, dù là người hay vật.
+
+@g12-5-1
+{一年|いちねん}で | trong một năm. で chỉ phạm vi so sánh
+いつが | khi nào. いつ ＋ が (từ để hỏi làm chủ ngữ thì dùng が)
+いちばん | nhất
+{暑|あつ}いですか | nóng?
+> N1で N2が いちばん A です: trong N1, N2 là A nhất
+! Từ để hỏi (いつ, だれ, どこ, {何|なに}) đứng làm chủ ngữ luôn đi với が, không đi với は.
+
+@g13-1-1
+{新|あたら}しい{車|くるま}が | xe hơi mới. Tính từ い ＋ danh từ; が đánh dấu thứ muốn có
+ほしいです | muốn có. ほしい (tính từ い) ＋ です
+> Nが ほしいです: muốn có N. ほしい là tính từ い nên phủ định là ほしくないです
+! Chỉ dùng cho mong muốn của mình; hỏi người trên không nên hỏi trực tiếp 〜がほしいですか.
+
+@g13-2-1
+{沖縄|おきなわ}へ | đến Okinawa. へ chỉ hướng
+{行|い}きたいです | muốn đi. {行|い}き (bỏ ます) ＋ たい ＋ です
+> {行|い}きます → {行|い}き → {行|い}きたい: bỏ ます, thêm たい
+> Vたい chia như tính từ い: {行|い}きたくない, {行|い}きたかった
+! Vたい cũng nói về mong muốn của chính mình.
+
+@g13-3-1
+デパートへ | đến cửa hàng bách hóa. へ chỉ nơi đến
+{靴|くつ}を | giày
+{買|か}いに | để mua. {買|か}い (bỏ ます) ＋ に (mục đích)
+{行|い}きます | đi
+> {買|か}います → {買|か}い ＋ に: V bỏ ます ＋ に ＋ {行|い}く/{来|く}る/{帰|かえ}る = đi để làm V
+! Với danh từ chỉ hành động: {食事|しょくじ}に{行|い}きます (đi ăn).
+
+@g13-4-1
+{冬休|ふゆやす}みは | kỳ nghỉ đông
+どこか | đâu đó. どこ ＋ か
+{行|い}きましたか | đã đi không? {行|い}く quá khứ ＋ か
+> Từ để hỏi ＋ か = "một nơi / một cái nào đó": どこか, {何|なに}か, だれか
+> {行|い}きます → {行|い}きました: đổi ます thành ました
+! どこか thường bỏ へ: どこか[へ]{行|い}きましたか.
+
+@g14-1-1
+ここに | vào đây. に chỉ chỗ đặt, viết vào
+{名前|なまえ}を | tên. を đánh dấu tân ngữ
+{書|か}いて | viết. {書|か}く chia thể て
+ください | hãy… (nhờ, yêu cầu lịch sự)
+> {書|か}きます → {書|か}いて: nhóm I, đuôi き đổi thành いて
+> Vて ＋ ください: hãy làm V
+! Quy tắc thể て nhóm I: き→いて, ぎ→いで, み・び・に→んで, い・ち・り→って, し→して. Ngoại lệ: {行|い}く→{行|い}って.
+
+@g14-2-1
+{田中|たなか}さんは | anh Tanaka
+{今|いま} | bây giờ
+{電話|でんわ}を | điện thoại. を đánh dấu tân ngữ
+かけています | đang gọi. かけて ＋ います
+> かけます → かけて: nhóm II, bỏ ます thêm て
+> Vて ＋ います: đang làm V (hành động đang diễn ra)
+! "Gọi điện thoại" là {電話|でんわ}をかける.
+
+@g14-3-1
+{荷物|にもつ}を | hành lý
+{持|も}ちましょうか | để tôi cầm nhé? {持|も}つ thể ましょう ＋ か
+> {持|も}つ → {持|も}ちます → {持|も}ちましょうか: nhóm I, つ đổi thành ち rồi thêm ましょうか
+> Vましょうか: đề nghị làm giúp người khác
+! Nhận lời: すみません、お{願|ねが}いします. Từ chối: いいえ、{大丈夫|だいじょうぶ}です.
+
+@g15-1-1
+{写真|しゃしん}を | ảnh
+{撮|と}っても | dù chụp, nếu chụp. {撮|と}って ＋ も
+いいですか | cũng được không?
+> {撮|と}ります → {撮|と}って: nhóm I, đuôi り đổi thành って
+> Vて ＋ も いいですか: xin phép làm V
+! Đồng ý: ええ、いいですよ. Từ chối nhẹ: すみません、ちょっと….
+
+@g15-2-1
+ここで | ở đây. で chỉ nơi diễn ra hành động
+{写真|しゃしん}を | ảnh
+{撮|と}っては | nếu chụp thì. {撮|と}って ＋ は
+いけません | không được
+> {撮|と}ります → {撮|と}って ＋ は いけません: cấm làm V
+! Vてはいけません rất mạnh, thường dùng cho nội quy. Người dưới không dùng để nói với người trên.
+
+@g15-3-1
+{私|わたし}は | tôi
+{大阪|おおさか}に | ở Osaka. に chỉ nơi cư trú
+{住|す}んでいます | sống, đang sống. {住|す}んで ＋ います
+> {住|す}みます → {住|す}んで: nhóm I, đuôi み đổi thành んで
+> Vて います: trạng thái kéo dài (đã chuyển đến và vẫn đang sống)
+! {住|す}む đi với に, không đi với で.
+
+@g15-4-1
+{兄|あに}は | anh trai tôi. {兄|あに} = anh trai của mình
+{車|くるま}の{会社|かいしゃ}で | ở công ty ô tô. で chỉ nơi làm việc
+{働|はたら}いています | đang làm việc. {働|はたら}いて ＋ います
+> {働|はたら}きます → {働|はたら}いて: nhóm I, đuôi き đổi thành いて
+> Vて います: nghề nghiệp, việc làm thường xuyên
+! {働|はたら}く đi với で (nơi làm hành động).
+
+@g15-5-1
+{山田|やまだ}さんの{電話番号|でんわばんごう}を | số điện thoại của anh Yamada
+{知|し}っていますか | có biết không? {知|し}って ＋ います ＋ か
+いいえ、{知|し}りません | không, tôi không biết
+> {知|し}ります → {知|し}って: nhóm I, đuôi り đổi thành って
+> Khẳng định: {知|し}っています. Phủ định: {知|し}りません
+! Không nói {知|し}っていません. Đây là chỗ người học hay sai.
+
+@g16-1-1
+{朝|あさ} | buổi sáng
+{起|お}きて | thức dậy, rồi. {起|お}きる thể て
+シャワーを{浴|あ}びて | tắm vòi sen, rồi. {浴|あ}びる thể て
+{会社|かいしゃ}へ{行|い}きます | đi đến công ty
+> {起|お}きる → {起|お}きて, {浴|あ}びる → {浴|あ}びて: nhóm II, bỏ る thêm て
+> V1て、V2て、V3: các hành động nối tiếp theo thứ tự. Thì của cả câu nằm ở động từ cuối
+! "Tắm vòi sen" là シャワーを{浴|あ}びる.
+
+@g16-2-1
+この{部屋|へや}は | căn phòng này
+{広|ひろ}くて | rộng, và. {広|ひろ}い thể て
+{明|あか}るいです | sáng sủa
+> {広|ひろ}い → {広|ひろ}くて: tính từ い, đổi い thành くて
+> Tính từ な và danh từ thì thêm で: {静|しず}かで, {学生|がくせい}で
+! Hai tính từ nối bằng くて phải cùng chiều (cùng tốt hoặc cùng xấu). Trái chiều thì dùng が.
+
+@g16-3-1
+{仕事|しごと}が | công việc. が đi với {終|お}わる
+{終|お}わってから | sau khi xong. {終|お}わって ＋ から
+{飲|の}みに{行|い}きます | đi uống. {飲|の}み (bỏ ます) ＋ に ＋ {行|い}きます
+> {終|お}わります → {終|お}わって: nhóm I, đuôi り đổi thành って
+> V1てから、V2: làm V1 xong rồi mới làm V2 (nhấn thứ tự)
+! {終|お}わる là tự động từ nên dùng が: {仕事|しごと}が{終|お}わる.
+
+@g16-4-1
+マリアさんは | chị Maria. は: người được nói đến
+{髪|かみ}が | tóc. が: bộ phận, đặc điểm
+{長|なが}いです | dài
+> N1は N2が A: N1 có N2 (đặc điểm) A
+! Cách nói đặc điểm người: {目|め}が{大|おお}きい, {背|せ}が{高|たか}い.
+
+@g17-1-1
+{授業中|じゅぎょうちゅう}に | trong giờ học. 〜{中|ちゅう} = trong lúc
+{話|はな}さないで | đừng nói chuyện. {話|はな}さない ＋ で
+ください | xin hãy
+> {話|はな}します → {話|はな}さない: nhóm I, đuôi し (hàng い) đổi sang さ (hàng あ) rồi thêm ない
+> Vない ＋ で ください: xin đừng làm V
+! Quy tắc thể ない nhóm I: đổi âm cuối sang hàng あ. Riêng う → わ: {買|か}う → {買|か}わない.
+
+@g17-2-1
+{毎日|まいにち} | mỗi ngày. Từ chỉ tần suất, không cần trợ từ
+{薬|くすり}を | thuốc. を đánh dấu tân ngữ
+{飲|の}まなければ | nếu không uống. {飲|の}まない bỏ い ＋ ければ
+なりません | không được. Ghép lại: "không uống thì không được" = phải uống
+> {飲|の}みます → {飲|の}まない: nhóm I, đuôi み (hàng い) đổi sang hàng あ là ま, rồi thêm ない
+> {飲|の}まない → {飲|の}まなければ: bỏ い cuối, thêm ければ
+> {飲|の}まなければ ＋ なりません
+! "Uống thuốc" trong tiếng Nhật dùng {飲|の}む (uống), không dùng {食|た}べる.
+
+@g17-3-1
+{明日|あした}は | ngày mai. は đánh dấu chủ đề
+{来|こ}なくても | dù không đến. {来|こ}ない bỏ い ＋ くても
+いいです | cũng được
+> {来|き}ます → {来|こ}ない: nhóm III, bất quy tắc. Chú ý {来|く}る đổi cách đọc từ き ({来|き}ます) sang こ ({来|こ}ない)
+> {来|こ}ない → {来|こ}なくて → {来|こ}なくても: bỏ い, thêm くて, rồi thêm も
+> Vなくても いいです = không V cũng được
+
+@g17-4-1
+{荷物|にもつ}は | hành lý thì. は thay cho を để đưa tân ngữ lên làm chủ đề
+ここに | ở đây. に chỉ chỗ đặt
+{置|お}かないで | đừng để. {置|お}かない ＋ で
+ください | xin hãy
+> Câu gốc: {荷物|にもつ}を ここに {置|お}かないで ください → đưa {荷物|にもつ} lên đầu, を đổi thành は
+> {置|お}きます → {置|お}かない: nhóm I, き đổi thành か rồi thêm ない
+! Đưa tân ngữ lên làm chủ đề để nhấn "còn hành lý thì…".

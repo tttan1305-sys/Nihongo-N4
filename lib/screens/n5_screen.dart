@@ -6,6 +6,7 @@ import '../models/lesson.dart';
 import '../models/n5.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/example_analysis.dart';
 import '../widgets/listen_button.dart';
 import '../widgets/ruby_text.dart';
 import 'n5_test_screen.dart';
@@ -92,24 +93,34 @@ class _Example extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              RubyText(sentence.ja, style: const TextStyle(fontSize: 17)),
-              Text(sentence.vi, style: Theme.of(context).textTheme.bodySmall),
-            ],
-          ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  RubyText(sentence.ja, style: const TextStyle(fontSize: 17)),
+                  Text(
+                    sentence.vi,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
+            ),
+            ListenButton(
+              speaker: speaker,
+              lesson: n5AudioLesson,
+              audioId: sentence.id,
+              text: plainText(sentence.ja),
+            ),
+          ],
         ),
-        ListenButton(
-          speaker: speaker,
-          lesson: n5AudioLesson,
-          audioId: sentence.id,
-          text: plainText(sentence.ja),
-        ),
+        if (sentence.analysis != null)
+          ExampleAnalysis(analysis: sentence.analysis!, id: sentence.id),
       ],
     );
   }

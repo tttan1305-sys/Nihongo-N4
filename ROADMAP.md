@@ -56,6 +56,14 @@ Chờ bạn duyệt ảnh `docs/screenshots/giao-dien-toi-*.png`, **chưa đẩy
 - ✅ Kanji: tab Viết tay (ô tập viết) và Nhìn & Nhớ, mục Ghi nhớ, nút Xem ví dụ
 - ✅ Thống kê: cấp độ/XP, từ đã học, % trả lời đúng, giờ học, chuỗi ngày, thành tích (5 ngày liên tục, hoàn thành 1 bài, nhớ 100 từ). Thống kê lưu `stats.*`, ngày học `day.*`, đều được đồng bộ
 
+## Phân tích câu ví dụ (bạn yêu cầu 2026-10-22)
+
+Chờ bạn duyệt ảnh `docs/screenshots/phan-tich-vi-du.png`, **chưa đẩy lên GitHub**.
+
+- ✅ Mỗi câu ví dụ ngữ pháp có nút **Phân tích**: từng cụm (nghĩa và vai trò ngữ pháp), Cách chia (từ thể ます qua từng bước), Lưu ý
+- ✅ Đủ 121 câu: 12 câu bài 26, 109 câu N5 bài 1–25. Nội dung viết ở `tools/analysis/*.txt`, gắn vào JSON bằng `python3 tools/apply_analysis.py` (tự thêm furigana, báo chữ Hán nhiều cách đọc)
+- Bài N4 soạn sau: viết phân tích cho mọi câu ví dụ ngữ pháp ngay từ đầu, theo mẫu `docs/mau-phan-tich-vi-du.md`
+
 ## Giai đoạn 2: Tài khoản Gmail và giọng đọc nữ
 
 | Bước | Nội dung | Trạng thái |
