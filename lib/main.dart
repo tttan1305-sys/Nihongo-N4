@@ -21,7 +21,7 @@ Future<void> main() async {
   // Bản phát hành mặc định chỉ vẽ ô xám khi một màn hình lỗi; hiện chữ để
   // người dùng chụp lại được.
   ErrorWidget.builder = (details) => Material(
-    color: Colors.white,
+    color: const Color(0xFF0B1430),
     child: Padding(
       padding: const EdgeInsets.all(16),
       child: Text(

@@ -49,6 +49,7 @@ class GrammarScreen extends StatelessWidget {
           title: 'Kiểm tra ngữ pháp',
           questions: g.quiz,
           passMark: ProgressStore.passMark,
+          onAnswer: progress.recordAnswer,
           passMessage: 'Bạn đã qua mẫu ngữ pháp này.',
         ),
       ),

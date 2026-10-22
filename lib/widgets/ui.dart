@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../theme.dart';
 
-/// Thẻ trắng bo tròn có bóng nhẹ, dùng khắp ứng dụng.
+/// Thẻ tối bo tròn có viền neon mờ, dùng khắp ứng dụng.
 class AppCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry padding;
   final EdgeInsetsGeometry margin;
   final Color color;
+
+  /// Màu viền phát sáng; mặc định là viền xanh mờ.
+  final Color? borderColor;
   final VoidCallback? onTap;
 
   const AppCard({
@@ -15,7 +18,8 @@ class AppCard extends StatelessWidget {
     required this.child,
     this.padding = const EdgeInsets.all(16),
     this.margin = EdgeInsets.zero,
-    this.color = Colors.white,
+    this.color = AppColors.surface,
+    this.borderColor,
     this.onTap,
   });
 
@@ -27,11 +31,15 @@ class AppCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: color,
         borderRadius: radius,
-        boxShadow: const [
+        border: Border.all(
+          color: (borderColor ?? AppColors.primary).withValues(
+            alpha: borderColor == null ? 0.28 : 0.7,
+          ),
+        ),
+        boxShadow: [
           BoxShadow(
-            color: Color(0x0F1B2440),
-            blurRadius: 16,
-            offset: Offset(0, 4),
+            color: (borderColor ?? AppColors.primary).withValues(alpha: 0.16),
+            blurRadius: 18,
           ),
         ],
       ),
@@ -123,8 +131,9 @@ class NumberBadge extends StatelessWidget {
       height: size,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.14),
+        color: color.withValues(alpha: 0.18),
         shape: BoxShape.circle,
+        border: Border.all(color: color.withValues(alpha: 0.6)),
       ),
       child: Text(
         '$number',
@@ -244,7 +253,7 @@ class CircleNavButton extends StatelessWidget {
       iconSize: 22,
       style: IconButton.styleFrom(
         side: const BorderSide(color: AppColors.border),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.surface,
         fixedSize: const Size(52, 52),
       ),
       icon: Icon(icon, color: AppColors.primary),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../models/lesson.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/option_row.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
 
@@ -28,6 +29,9 @@ class QuizScreen extends StatefulWidget {
   final int lesson;
   final Map<String, Sentence> sentences;
 
+  /// Gọi sau mỗi câu trả lời (true nếu đúng), để ghi thống kê.
+  final ValueChanged<bool>? onAnswer;
+
   const QuizScreen({
     super.key,
     required this.title,
@@ -39,6 +43,7 @@ class QuizScreen extends StatefulWidget {
     this.speaker,
     this.lesson = 0,
     this.sentences = const {},
+    this.onAnswer,
   });
 
   @override
@@ -78,9 +83,11 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _pick(int option) {
     if (_picked != null) return;
+    final right = option == widget.questions[_index].answer;
+    widget.onAnswer?.call(right);
     setState(() {
       _picked = option;
-      if (option == widget.questions[_index].answer) _correct++;
+      if (right) _correct++;
     });
   }
 
@@ -194,17 +201,17 @@ class _QuizScreenState extends State<QuizScreen> {
               for (var i = 0; i < q.options.length; i++)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10),
-                  child: _OptionRow(
+                  child: OptionRow(
                     key: ValueKey('option-$i'),
                     letter: _letters[i],
                     text: q.options[i],
                     state: _picked == null
-                        ? _OptionState.idle
+                        ? OptionState.idle
                         : i == q.answer
-                        ? _OptionState.right
+                        ? OptionState.right
                         : i == _picked
-                        ? _OptionState.wrong
-                        : _OptionState.idle,
+                        ? OptionState.wrong
+                        : OptionState.idle,
                     onTap: () => _pick(i),
                   ),
                 ),
@@ -221,7 +228,7 @@ class _QuizScreenState extends State<QuizScreen> {
               child: FilledButton(
                 key: const ValueKey('next'),
                 onPressed: _picked == null ? null : _next,
-                child: Text(last ? 'Xem kết quả' : 'Tiếp tục'),
+                child: Text(last ? 'Xem kết quả' : 'Tiếp theo'),
               ),
             ),
           ),
@@ -322,88 +329,6 @@ class _QuizScreenState extends State<QuizScreen> {
             child: const Text('Xong'),
           ),
         ],
-      ),
-    );
-  }
-}
-
-enum _OptionState { idle, right, wrong }
-
-class _OptionRow extends StatelessWidget {
-  final String letter;
-  final String text;
-  final _OptionState state;
-  final VoidCallback onTap;
-
-  const _OptionRow({
-    super.key,
-    required this.letter,
-    required this.text,
-    required this.state,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final (color, background) = switch (state) {
-      _OptionState.right => (AppColors.green, AppColors.greenSoft),
-      _OptionState.wrong => (AppColors.red, AppColors.redSoft),
-      _OptionState.idle => (AppColors.primary, Colors.white),
-    };
-    final radius = BorderRadius.circular(16);
-    return Material(
-      color: background,
-      shape: RoundedRectangleBorder(
-        borderRadius: radius,
-        side: BorderSide(
-          color: state == _OptionState.idle ? AppColors.border : color,
-          width: state == _OptionState.idle ? 1 : 1.6,
-        ),
-      ),
-      child: InkWell(
-        borderRadius: radius,
-        onTap: onTap,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-          child: Row(
-            children: [
-              Container(
-                width: 32,
-                height: 32,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: state == _OptionState.idle
-                      ? AppColors.primarySoft
-                      : color,
-                  shape: BoxShape.circle,
-                ),
-                child: Text(
-                  letter,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: state == _OptionState.idle
-                        ? AppColors.primary
-                        : Colors.white,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: RubyText(
-                  text,
-                  style: const TextStyle(fontSize: 17, color: AppColors.text),
-                ),
-              ),
-              if (state != _OptionState.idle)
-                Icon(
-                  state == _OptionState.right
-                      ? Icons.check_circle_rounded
-                      : Icons.cancel_rounded,
-                  color: color,
-                ),
-            ],
-          ),
-        ),
       ),
     );
   }

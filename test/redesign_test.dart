@@ -9,6 +9,7 @@ import 'package:nihongo_n4/data/word_bank.dart';
 import 'package:nihongo_n4/models/n5.dart';
 import 'package:nihongo_n4/screens/grammar_screen.dart';
 import 'package:nihongo_n4/screens/kanji_screen.dart';
+import 'package:nihongo_n4/screens/listening_screen.dart';
 import 'package:nihongo_n4/screens/sentence_order_screen.dart';
 import 'package:nihongo_n4/screens/vocab_list_screen.dart';
 import 'package:nihongo_n4/screens/word_study_screen.dart';
@@ -98,13 +99,14 @@ void main() {
       await p.markWordLearned('n5:n5v001');
       await p.markKanjiLearned('家');
       await p.toggleFavorite('n5:n5v001');
-      expect(p.exportData(), {'word.n5:n5v001': true, 'kanji.家': true});
+      final data = p.exportData()..removeWhere((k, _) => k.startsWith('day.'));
+      expect(data, {'word.n5:n5v001': true, 'kanji.家': true});
       await p.toggleFavorite('n5:n5v001');
       expect(p.isFavorite('n5:n5v001'), isFalse);
     },
   );
 
-  testWidgets('học từ: Tiếp theo đánh dấu đã học, hết thì báo xong', (
+  testWidgets('học từ: nghĩa ẩn đến khi bấm, Đã nhớ mới đánh dấu đã học', (
     tester,
   ) async {
     final p = await progressStore();
@@ -114,15 +116,95 @@ void main() {
       app(WordStudyScreen(words: words, progress: p, speaker: speaker)),
     );
     expect(find.text('1/2'), findsOneWidget);
+    expect(find.byKey(const ValueKey('study-meaning')), findsNothing);
+    await tester.tap(find.byKey(const ValueKey('study-reveal')));
+    await tester.pump();
+    expect(find.text(words[0].meaningVi), findsOneWidget);
     await tester.tap(find.byKey(ValueKey('listen-${words[0].audioId}')));
     expect(speaker.spoken.single, (words[0].audioId, words[0].kana));
-    await tester.tap(find.byKey(const ValueKey('study-next')));
+    await tester.tap(find.byKey(const ValueKey('study-known')));
     await tester.pumpAndSettle();
     expect(p.isWordLearned(words[0].key), isTrue);
     expect(find.text('2/2'), findsOneWidget);
-    await tester.tap(find.byKey(const ValueKey('study-next')));
+    expect(find.byKey(const ValueKey('study-meaning')), findsNothing);
+    await tester.tap(find.byKey(const ValueKey('study-unknown')));
     await tester.pumpAndSettle();
+    expect(p.isWordLearned(words[1].key), isFalse);
     expect(find.byKey(const ValueKey('study-done')), findsOneWidget);
+  });
+
+  test('câu luyện nghe: ngắn, 4 đáp án khác nhau, đáp án là nghĩa câu', () {
+    final items = listeningItems(n5.grammar, count: 1000, rnd: Random(2));
+    expect(items.length, greaterThanOrEqualTo(30));
+    final vi = {
+      for (final l in n5.grammar)
+        for (final p in l.points)
+          for (final e in p.examples) e.id: e.vi,
+    };
+    for (final i in items) {
+      expect(plainText(i.ja).replaceAll('　', '').length, lessThanOrEqualTo(24));
+      expect(i.options.toSet(), hasLength(4));
+      expect(i.options[i.answer], vi[i.id]);
+    }
+  });
+
+  test('thống kê: tỉ lệ đúng, thời gian học, chuỗi ngày', () async {
+    final p = await progressStore();
+    expect(p.accuracy, isNull);
+    final day = DateTime(2026, 10, 20);
+    await p.recordAnswer(true, now: day);
+    await p.recordAnswer(false, now: day.add(const Duration(days: 1)));
+    await p.addStudyTime(const Duration(minutes: 90), now: day);
+    expect(p.accuracy, 0.5);
+    expect(p.studyTime, const Duration(minutes: 90));
+    expect(p.streak(now: DateTime(2026, 10, 21, 20)), 2);
+    // Hôm nay chưa học thì vẫn tính chuỗi đến hôm qua.
+    expect(p.streak(now: DateTime(2026, 10, 22, 8)), 2);
+    expect(p.streak(now: DateTime(2026, 10, 24)), 0);
+    expect(p.exportData()['stats.answered'], 2.0);
+  });
+
+  testWidgets('luyện nghe: chọn đáp án, kiểm tra rồi sang câu sau', (
+    tester,
+  ) async {
+    final p = await progressStore();
+    final speaker = FakeSpeaker();
+    final items = listeningItems(n5.grammar, count: 2, rnd: Random(5));
+    final words = bank.groups.last.words.take(1).toList();
+    await tester.pumpWidget(
+      app(
+        ListeningScreen(
+          items: items,
+          words: words,
+          progress: p,
+          speaker: speaker,
+        ),
+      ),
+    );
+    await tester.tap(find.byKey(const ValueKey('listen-play')));
+    expect(speaker.spoken.single.$1, items[0].id);
+    await tester.tap(find.byKey(ValueKey('listen-option-${items[0].answer}')));
+    await tester.pump();
+    await tester.tap(find.byKey(const ValueKey('listen-check')));
+    await tester.pump();
+    expect(find.byKey(const ValueKey('listen-text')), findsOneWidget);
+    expect(p.accuracy, 1);
+    await tester.tap(find.byKey(const ValueKey('listen-next')));
+    await tester.pump();
+    expect(find.text('2/2'), findsOneWidget);
+
+    await tester.tap(find.byKey(const ValueKey('tab-dictation')));
+    await tester.pumpAndSettle();
+    await tester.enterText(
+      find.byKey(const ValueKey('dictation-input')),
+      words[0].kana,
+    );
+    await tester.tap(find.byKey(const ValueKey('dictation-check')));
+    await tester.pump();
+    expect(find.text('Chính xác!'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('dictation-next')));
+    await tester.pump();
+    expect(find.text('Đúng 1/1 từ'), findsOneWidget);
   });
 
   testWidgets('danh sách từ: bài 26 khóa, N5 tìm kiếm và lọc yêu thích', (
@@ -190,6 +272,15 @@ void main() {
     await tester.pumpAndSettle();
     expect(p.isKanjiLearned(n5.kanji[0].char), isTrue);
     expect(shown().data, n5.kanji[1].char);
+
+    expect(find.byKey(const ValueKey('kanji-canvas')), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('kanji-tab-look')));
+    await tester.pump();
+    expect(find.byKey(const ValueKey('kanji-canvas')), findsNothing);
+    expect(find.text('Số nét'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('kanji-example')));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('kanji-example-ja')), findsOneWidget);
   });
 
   testWidgets('chi tiết ngữ pháp N5 có cách dùng, cấu trúc, ví dụ', (

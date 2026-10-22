@@ -174,7 +174,7 @@ class _VocabListScreenState extends State<VocabListScreen> {
                           selected: _filter == f,
                           showCheckmark: false,
                           selectedColor: AppColors.primary,
-                          backgroundColor: Colors.white,
+                          backgroundColor: AppColors.surface,
                           side: const BorderSide(color: AppColors.border),
                           shape: const StadiumBorder(),
                           labelStyle: TextStyle(

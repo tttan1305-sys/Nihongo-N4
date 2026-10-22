@@ -16,17 +16,19 @@ import '../widgets/hero_banner.dart';
 import '../widgets/ui.dart';
 import 'flashcard_screen.dart';
 import 'grammar_list_screen.dart';
+import 'kanji_screen.dart';
 import 'lesson_screen.dart';
 import 'more_screen.dart';
 import 'n5_screen.dart';
 import 'practice_screen.dart';
+import 'profile_screen.dart';
 import 'vocab_list_screen.dart';
 import 'word_study_screen.dart';
 
 export 'more_screen.dart' show syncLabel;
 
-/// Khung chính của ứng dụng: thanh điều hướng dưới với 4 mục
-/// Trang chủ, Từ vựng, Ngữ pháp, Khác.
+/// Khung chính của ứng dụng: thanh điều hướng dưới với 5 mục
+/// Trang chủ, Từ vựng, Luyện tập, Thống kê, Khác.
 class HomeScreen extends StatefulWidget {
   final LessonRepository repository;
   final N5Repository n5;
@@ -60,11 +62,35 @@ class _HomeScreenState extends State<HomeScreen> {
   WordBank? _bank;
   N5Data? _n5;
   Object? _loadError;
+  late final AppLifecycleListener _lifecycle;
+  DateTime? _since = DateTime.now();
 
   @override
   void initState() {
     super.initState();
+    _lifecycle = AppLifecycleListener(
+      onResume: () => _since = DateTime.now(),
+      onHide: _countStudyTime,
+    );
     _load();
+  }
+
+  @override
+  void dispose() {
+    _lifecycle.dispose();
+    super.dispose();
+  }
+
+  /// Cộng thời gian mở ứng dụng từ lần đếm trước. Mỗi lần cộng tối đa 30 phút
+  /// để ứng dụng để quên trên màn hình không bị tính quá nhiều.
+  void _countStudyTime() {
+    final since = _since;
+    final now = DateTime.now();
+    _since = now;
+    if (since == null) return;
+    var d = now.difference(since);
+    if (d > const Duration(minutes: 30)) d = const Duration(minutes: 30);
+    widget.progress.addStudyTime(d);
   }
 
   Future<void> _load() async {
@@ -82,10 +108,13 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  void _select(int tab) => setState(() {
-    _tab = tab;
-    _visited.add(tab);
-  });
+  void _select(int tab) {
+    _countStudyTime();
+    setState(() {
+      _tab = tab;
+      _visited.add(tab);
+    });
+  }
 
   void _showRoadmap() {
     _select(0);
@@ -148,12 +177,34 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   });
 
-  void _practice() => _whenLoaded(
+  void _grammar() => _whenLoaded(
     (bank, n5) => _push(
-      PracticeScreen(
-        bank: bank,
-        n5: widget.n5,
-        n5Data: n5,
+      GrammarListScreen(
+        lessons: [
+          for (final g in bank.groups)
+            if (g.lesson != null) g.lesson!,
+        ],
+        n5: n5,
+        progress: widget.progress,
+        speaker: widget.speaker,
+      ),
+    ),
+  );
+
+  void _listening() => _whenLoaded(
+    (bank, n5) => openListening(
+      context,
+      bank: bank,
+      n5Data: n5,
+      progress: widget.progress,
+      speaker: widget.speaker,
+    ),
+  );
+
+  void _kanji() => _whenLoaded(
+    (_, n5) => _push(
+      KanjiScreen(
+        kanji: n5.kanji,
         progress: widget.progress,
         speaker: widget.speaker,
       ),
@@ -170,15 +221,21 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     ),
     2 => _withData(
-      (bank, n5) => GrammarListScreen(
-        lessons: [
-          for (final g in bank.groups)
-            if (g.lesson != null) g.lesson!,
-        ],
-        n5: n5,
+      (bank, n5) => PracticeScreen(
+        bank: bank,
+        n5: widget.n5,
+        n5Data: n5,
         progress: widget.progress,
         speaker: widget.speaker,
       ),
+    ),
+    3 => ProfileScreen(
+      auth: widget.auth,
+      sync: widget.sync,
+      progress: widget.progress,
+      flashcards: widget.flashcards,
+      bank: _bank,
+      n5: _n5,
     ),
     _ => MoreScreen(
       auth: widget.auth,
@@ -197,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: IndexedStack(
         index: _tab,
         children: [
-          for (var i = 0; i < 4; i++)
+          for (var i = 0; i < 5; i++)
             _visited.contains(i) ? _page(i) : const SizedBox.shrink(),
         ],
       ),
@@ -218,10 +275,16 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Từ vựng',
           ),
           NavigationDestination(
-            key: ValueKey('nav-grammar'),
-            icon: Icon(Icons.menu_book_outlined),
-            selectedIcon: Icon(Icons.menu_book_rounded),
-            label: 'Ngữ pháp',
+            key: ValueKey('nav-practice'),
+            icon: Icon(Icons.edit_note_outlined),
+            selectedIcon: Icon(Icons.edit_note_rounded),
+            label: 'Luyện tập',
+          ),
+          NavigationDestination(
+            key: ValueKey('nav-stats'),
+            icon: Icon(Icons.bar_chart_outlined),
+            selectedIcon: Icon(Icons.bar_chart_rounded),
+            label: 'Thống kê',
           ),
           NavigationDestination(
             key: ValueKey('nav-more'),
@@ -278,7 +341,11 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                GoalCard(bank: _bank, progress: widget.progress),
+                GoalCard(
+                  bank: _bank,
+                  progress: widget.progress,
+                  title: 'JLPT N4',
+                ),
                 const SizedBox(height: 14),
                 _LearnButton(onTap: _learnWords),
                 const SizedBox(height: 14),
@@ -290,19 +357,30 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: AppColors.purple,
                         icon: Icons.menu_book_rounded,
                         title: 'Ngữ pháp',
-                        subtitle: 'Giải thích • Ví dụ',
-                        onTap: () => _select(2),
+                        subtitle: 'Giải thích\nVí dụ',
+                        onTap: _grammar,
                       ),
                     ),
-                    const SizedBox(width: 14),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: _FeatureTile(
-                        key: const ValueKey('tile-practice'),
+                        key: const ValueKey('tile-listening'),
                         color: AppColors.green,
-                        icon: Icons.task_alt_rounded,
-                        title: 'Luyện tập',
-                        subtitle: 'Quiz • Trắc nghiệm',
-                        onTap: _practice,
+                        icon: Icons.headphones_rounded,
+                        title: 'Luyện nghe',
+                        subtitle: 'Audio\nDictation',
+                        onTap: _listening,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: _FeatureTile(
+                        key: const ValueKey('tile-kanji'),
+                        color: AppColors.orange,
+                        icon: Icons.brush_rounded,
+                        title: 'Kanji',
+                        subtitle: 'Học chữ Hán\nViết tay',
+                        onTap: _kanji,
                       ),
                     ),
                   ],
@@ -536,14 +614,14 @@ class _HeroTitle extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 8),
+        SizedBox(height: 10),
         Text(
-          'にほんご',
+          'がんばろう！',
           style: TextStyle(
-            fontSize: 34,
+            fontSize: 32,
             fontWeight: FontWeight.w900,
-            color: Color(0xFF1B2A5C),
-            letterSpacing: 2,
+            color: Colors.white,
+            shadows: [Shadow(color: Color(0xFFB98CFF), blurRadius: 16)],
           ),
         ),
         Text(
@@ -551,16 +629,13 @@ class _HeroTitle extends StatelessWidget {
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.w800,
-            color: Color(0xFF1B2A5C),
+            color: Colors.white,
           ),
         ),
         SizedBox(height: 6),
-        SizedBox(
-          width: 200,
-          child: Text(
-            'Mỗi ngày một chút, tiến bộ mỗi ngày 🌸',
-            style: TextStyle(fontSize: 14, color: Color(0xFF3B4A72)),
-          ),
+        Text(
+          'Từng bước nhỏ, tiến bộ lớn.',
+          style: TextStyle(fontSize: 14, color: Color(0xFFD4CCF5)),
         ),
       ],
     );
@@ -578,9 +653,9 @@ class _HeroButton extends StatelessWidget {
     return IconButton(
       onPressed: onPressed,
       style: IconButton.styleFrom(
-        backgroundColor: Colors.white.withValues(alpha: 0.85),
+        backgroundColor: Colors.white.withValues(alpha: 0.12),
       ),
-      icon: Icon(icon, color: AppColors.text),
+      icon: Icon(icon, color: Colors.white),
     );
   }
 }
@@ -597,13 +672,13 @@ class _LearnButton extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: radius,
         gradient: const LinearGradient(
-          colors: [Color(0xFF4F86FF), AppColors.primaryDark],
+          colors: [Color(0xFF5E8BFF), Color(0xFF7B5CFF)],
         ),
-        boxShadow: const [
+        border: Border.all(color: const Color(0xFF9DB8FF)),
+        boxShadow: [
           BoxShadow(
-            color: Color(0x402F6BFF),
-            blurRadius: 16,
-            offset: Offset(0, 6),
+            color: AppColors.primary.withValues(alpha: 0.55),
+            blurRadius: 24,
           ),
         ],
       ),
@@ -680,31 +755,45 @@ class _FeatureTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       onTap: onTap,
-      color: color.withValues(alpha: 0.1),
+      borderColor: color,
+      color: Color.alphaBlend(color.withValues(alpha: 0.1), AppColors.surface),
+      padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 44,
-            height: 44,
+            width: 42,
+            height: 42,
             decoration: BoxDecoration(
-              color: color,
-              borderRadius: BorderRadius.circular(14),
+              color: color.withValues(alpha: 0.2),
+              borderRadius: BorderRadius.circular(13),
+              border: Border.all(color: color.withValues(alpha: 0.8)),
+              boxShadow: [
+                BoxShadow(color: color.withValues(alpha: 0.4), blurRadius: 10),
+              ],
             ),
-            child: Icon(icon, color: Colors.white),
+            child: Icon(icon, color: color),
           ),
           const SizedBox(height: 12),
           Text(
             title,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(
-              fontSize: 17,
+              fontSize: 15.5,
               fontWeight: FontWeight.w800,
               color: color,
             ),
           ),
+          const SizedBox(height: 2),
           Text(
             subtitle,
-            style: const TextStyle(color: AppColors.muted, fontSize: 13),
+            maxLines: 2,
+            style: const TextStyle(
+              color: AppColors.muted,
+              fontSize: 11.5,
+              height: 1.25,
+            ),
           ),
         ],
       ),
@@ -733,8 +822,8 @@ class _AccountButton extends StatelessWidget {
             )
           : const CircleAvatar(
               radius: 18,
-              backgroundColor: Colors.white,
-              child: Icon(Icons.person_rounded, color: AppColors.text),
+              backgroundColor: Color(0x33FFFFFF),
+              child: Icon(Icons.person_rounded, color: Colors.white),
             ),
       onSelected: (value) {
         if (value == 'sign-out') auth.signOut();

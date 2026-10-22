@@ -92,6 +92,7 @@ class ProgressStore extends ChangeNotifier {
   Future<void> markWordLearned(String key) async {
     if (isWordLearned(key)) return;
     await _prefs.setBool(_wordKey(key), true);
+    await markStudyDay(notify: false);
     notifyListeners();
   }
 
@@ -116,7 +117,72 @@ class ProgressStore extends ChangeNotifier {
   Future<void> markKanjiLearned(String char) async {
     if (isKanjiLearned(char)) return;
     await _prefs.setBool(_kanjiKey(char), true);
+    await markStudyDay(notify: false);
     notifyListeners();
+  }
+
+  // Thống kê: số câu đã trả lời/đúng và số giây học lưu dạng số thực để phép
+  // gộp khi đồng bộ (lấy giá trị lớn hơn) dùng được; ngày học lưu `day.<ngày>`.
+  static const _answeredKey = 'stats.answered';
+  static const _correctKey = 'stats.correct';
+  static const _secondsKey = 'stats.seconds';
+
+  static String _dayKey(DateTime d) =>
+      'day.${d.year}-${_two(d.month)}-${_two(d.day)}';
+
+  static String _two(int n) => n.toString().padLeft(2, '0');
+
+  int get answeredCount => (_prefs.getDouble(_answeredKey) ?? 0).round();
+
+  int get correctCount =>
+      (_prefs.getDouble(_correctKey) ?? 0).round().clamp(0, answeredCount);
+
+  /// Tỉ lệ trả lời đúng (0..1), null nếu chưa trả lời câu nào.
+  double? get accuracy =>
+      answeredCount == 0 ? null : correctCount / answeredCount;
+
+  /// Ghi lại một câu trả lời trong các bài luyện tập.
+  Future<void> recordAnswer(bool correct, {DateTime? now}) async {
+    await _prefs.setDouble(_answeredKey, answeredCount + 1.0);
+    if (correct) await _prefs.setDouble(_correctKey, correctCount + 1.0);
+    await markStudyDay(now: now, notify: false);
+    notifyListeners();
+  }
+
+  Duration get studyTime =>
+      Duration(seconds: (_prefs.getDouble(_secondsKey) ?? 0).round());
+
+  /// Cộng thời gian mở ứng dụng để học.
+  Future<void> addStudyTime(Duration d, {DateTime? now}) async {
+    if (d.inSeconds <= 0) return;
+    await _prefs.setDouble(
+      _secondsKey,
+      studyTime.inSeconds + d.inSeconds + 0.0,
+    );
+    await markStudyDay(now: now, notify: false);
+    notifyListeners();
+  }
+
+  bool isStudyDay(DateTime d) => _prefs.getBool(_dayKey(d)) ?? false;
+
+  Future<void> markStudyDay({DateTime? now, bool notify = true}) async {
+    final key = _dayKey(now ?? DateTime.now());
+    if (_prefs.getBool(key) == true) return;
+    await _prefs.setBool(key, true);
+    if (notify) notifyListeners();
+  }
+
+  /// Số ngày học liên tiếp tính đến hôm nay (hoặc hôm qua nếu hôm nay chưa học).
+  int streak({DateTime? now}) {
+    var d = now ?? DateTime.now();
+    d = DateTime(d.year, d.month, d.day);
+    if (!isStudyDay(d)) d = d.subtract(const Duration(days: 1));
+    var n = 0;
+    while (isStudyDay(d)) {
+      n++;
+      d = DateTime(d.year, d.month, d.day - 1);
+    }
+    return n;
   }
 
   /// Bài hoàn thành khi đã qua bài đọc hiểu cuối bài.
@@ -141,6 +207,8 @@ class ProgressStore extends ChangeNotifier {
     'n5test.',
     'word.',
     'kanji.',
+    'stats.',
+    'day.',
   ];
 
   static bool _isSynced(String key) =>

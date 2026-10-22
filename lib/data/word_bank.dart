@@ -187,3 +187,58 @@ List<OrderItem> orderItems(
   all.shuffle(rnd ?? Random());
   return all.take(count).toList();
 }
+
+/// Một câu luyện nghe: nghe câu tiếng Nhật, chọn nghĩa tiếng Việt đúng.
+class ListeningItem {
+  final String id;
+
+  /// Câu gốc, chữ Hán có furigana `{漢字|かな}`.
+  final String ja;
+  final List<String> options;
+  final int answer;
+
+  const ListeningItem({
+    required this.id,
+    required this.ja,
+    required this.options,
+    required this.answer,
+  });
+}
+
+/// Lấy câu ví dụ ngữ pháp N5 ngắn (một câu, tối đa 24 chữ) làm bài nghe hiểu;
+/// đáp án sai là nghĩa của các câu khác.
+List<ListeningItem> listeningItems(
+  List<N5GrammarLesson> lessons, {
+  int count = 10,
+  Random? rnd,
+}) {
+  rnd ??= Random();
+  final ruby = RegExp(r'\{([^|}]*)\|[^}]*\}');
+  final pool = <Sentence>[];
+  for (final l in lessons) {
+    for (final p in l.points) {
+      for (final e in p.examples) {
+        final plain = e.ja.replaceAllMapped(ruby, (m) => m[1]!).trim();
+        final ends = RegExp('[。？！?!]').allMatches(plain).length;
+        if (ends > 1 || plain.contains('…') || e.vi.isEmpty) continue;
+        if (plain.replaceAll('　', '').length > 24) continue;
+        pool.add(e);
+      }
+    }
+  }
+  final meanings = {for (final e in pool) e.vi}.toList();
+  pool.shuffle(rnd);
+  return [
+    for (final e in pool.take(count))
+      () {
+        final wrong = meanings.where((m) => m != e.vi).toList()..shuffle(rnd);
+        final options = [e.vi, ...wrong.take(3)]..shuffle(rnd);
+        return ListeningItem(
+          id: e.id,
+          ja: e.ja,
+          options: options,
+          answer: options.indexOf(e.vi),
+        );
+      }(),
+  ];
+}

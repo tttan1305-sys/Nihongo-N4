@@ -5,6 +5,7 @@ import '../data/progress_store.dart';
 import '../models/lesson.dart';
 import '../models/n5.dart';
 import '../services/speaker.dart';
+import '../theme.dart';
 import '../widgets/listen_button.dart';
 import '../widgets/ruby_text.dart';
 import 'n5_test_screen.dart';
@@ -426,7 +427,7 @@ class _VocabRowState extends State<_VocabRow> {
     final style = TextStyle(
       fontSize: header ? 13 : 15,
       fontWeight: header ? FontWeight.w700 : FontWeight.w400,
-      color: header ? Colors.white : const Color(0xFF1B2440),
+      color: header ? Colors.white : AppColors.text,
     );
     final row = Row(
       children: [
@@ -453,11 +454,11 @@ class _VocabRowState extends State<_VocabRow> {
     return Container(
       decoration: BoxDecoration(
         color: header
-            ? const Color(0xFF2F6BFF)
+            ? AppColors.primaryDark
             : _open
-            ? const Color(0xFFF4F7FD)
-            : Colors.white,
-        border: const Border(bottom: BorderSide(color: Color(0xFFE3E8F2))),
+            ? AppColors.surfaceHigh
+            : AppColors.surface,
+        border: const Border(bottom: BorderSide(color: AppColors.border)),
         borderRadius: header
             ? const BorderRadius.vertical(top: Radius.circular(12))
             : null,

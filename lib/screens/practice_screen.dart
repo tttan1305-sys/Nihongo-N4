@@ -8,6 +8,7 @@ import '../services/speaker.dart';
 import '../theme.dart';
 import '../widgets/ui.dart';
 import 'kanji_screen.dart';
+import 'listening_screen.dart';
 import 'n5_screen.dart';
 import 'quiz_screen.dart';
 import 'sentence_order_screen.dart';
@@ -17,6 +18,29 @@ List<WordEntry> unlockedWords(WordBank bank, ProgressStore progress) => [
   for (final g in bank.groups)
     if (g.lesson == null || progress.isVocabUnlocked(g.lesson!)) ...g.words,
 ];
+
+/// Mở màn hình Luyện nghe: 10 câu nghe hiểu và 10 từ để chép chính tả.
+void openListening(
+  BuildContext context, {
+  required WordBank bank,
+  required N5Data n5Data,
+  required ProgressStore progress,
+  required Speaker speaker,
+}) {
+  final open = unlockedWords(bank, progress);
+  final learned = open.where((w) => progress.isWordLearned(w.key)).toList();
+  final words = [...(learned.length >= 10 ? learned : open)]..shuffle();
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      builder: (_) => ListeningScreen(
+        items: listeningItems(n5Data.grammar),
+        words: words.take(10).toList(),
+        progress: progress,
+        speaker: speaker,
+      ),
+    ),
+  );
+}
 
 /// Trang Luyện tập: trắc nghiệm từ vựng có tính giờ, sắp xếp câu, học Kanji,
 /// Tổng hợp N5 và đề thi thử.
@@ -49,6 +73,7 @@ class PracticeScreen extends StatelessWidget {
           showTimer: true,
           questions: meaningQuiz(source, open),
           passMark: ProgressStore.passMark,
+          onAnswer: progress.recordAnswer,
           passMessage: 'Giỏi lắm! Bạn nhớ từ rất tốt.',
         ),
       ),
@@ -75,6 +100,20 @@ class PracticeScreen extends StatelessWidget {
                 title: 'Trắc nghiệm từ vựng',
                 subtitle: '10 câu chọn nghĩa đúng, có tính giờ',
                 onTap: () => _vocabQuiz(context),
+              ),
+              _PracticeTile(
+                key: const ValueKey('practice-listening'),
+                icon: Icons.headphones_rounded,
+                color: AppColors.green,
+                title: 'Luyện nghe',
+                subtitle: 'Nghe hiểu câu ngắn • Dictation từ vựng',
+                onTap: () => openListening(
+                  context,
+                  bank: bank,
+                  n5Data: n5Data,
+                  progress: progress,
+                  speaker: speaker,
+                ),
               ),
               _PracticeTile(
                 key: const ValueKey('practice-order'),
@@ -109,7 +148,7 @@ class PracticeScreen extends StatelessWidget {
               _PracticeTile(
                 key: const ValueKey('practice-n5'),
                 icon: Icons.assignment_rounded,
-                color: AppColors.green,
+                color: AppColors.orange,
                 title: 'Tổng hợp N5 và đề thi thử',
                 subtitle: 'Kiến thức cần nhớ, các thể, 5 đề test có giải thích',
                 onTap: () => Navigator.of(context).push(

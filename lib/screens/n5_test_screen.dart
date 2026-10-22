@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/progress_store.dart';
 import '../models/n5.dart';
+import '../theme.dart';
 import '../widgets/ruby_text.dart';
 
 const _letters = ['A', 'B', 'C', 'D'];
@@ -323,8 +324,8 @@ class _Review extends StatelessWidget {
   Widget build(BuildContext context) {
     final right = picked == question.answer;
     final text = Theme.of(context).textTheme;
-    const green = Color(0xFFDDF2DD);
-    const red = Color(0xFFF8D7D7);
+    const green = AppColors.greenSoft;
+    const red = AppColors.redSoft;
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 6),
       child: ExpansionTile(

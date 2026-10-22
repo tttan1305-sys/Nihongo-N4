@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/lesson.dart';
 import '../services/japanese_text.dart';
+import '../widgets/kanji_canvas.dart';
 import '../widgets/ruby_text.dart';
 
 /// Luyện viết: tập viết chữ Hán của bài trên chữ mẫu mờ, rồi gõ lại câu bằng hiragana.
@@ -47,17 +48,12 @@ class _KanjiPractice extends StatefulWidget {
 
 class _KanjiPracticeState extends State<_KanjiPractice> {
   int _index = 0;
-  final _strokes = <List<Offset>>[];
 
-  void _go(int i) => setState(() {
-    _index = i;
-    _strokes.clear();
-  });
+  void _go(int i) => setState(() => _index = i);
 
   @override
   Widget build(BuildContext context) {
     final k = widget.kanji[_index];
-    final colors = Theme.of(context).colorScheme;
     return ListView(
       padding: const EdgeInsets.all(16),
       children: [
@@ -67,52 +63,10 @@ class _KanjiPracticeState extends State<_KanjiPractice> {
         ),
         Text('Cách đọc: ${k.readings}'),
         const SizedBox(height: 12),
-        Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 320),
-            child: AspectRatio(
-              aspectRatio: 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: colors.outline),
-                ),
-                child: LayoutBuilder(
-                  builder: (context, box) => GestureDetector(
-                    onPanStart: (d) =>
-                        setState(() => _strokes.add([d.localPosition])),
-                    onPanUpdate: (d) =>
-                        setState(() => _strokes.last.add(d.localPosition)),
-                    child: CustomPaint(
-                      key: const ValueKey('kanji-canvas'),
-                      painter: _CanvasPainter(
-                        _strokes,
-                        colors.primary,
-                        colors.outlineVariant,
-                      ),
-                      child: Center(
-                        child: Text(
-                          k.char,
-                          style: TextStyle(
-                            fontSize: box.maxWidth * 0.75,
-                            color: colors.onSurface.withValues(alpha: 0.12),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
+        KanjiCanvas(char: k.char),
         const SizedBox(height: 12),
         Row(
           children: [
-            OutlinedButton.icon(
-              onPressed: () => setState(_strokes.clear),
-              icon: const Icon(Icons.refresh),
-              label: const Text('Xóa'),
-            ),
             const Spacer(),
             if (_index > 0)
               TextButton(
@@ -131,57 +85,6 @@ class _KanjiPracticeState extends State<_KanjiPractice> {
       ],
     );
   }
-}
-
-class _CanvasPainter extends CustomPainter {
-  final List<List<Offset>> strokes;
-  final Color ink;
-  final Color guide;
-
-  _CanvasPainter(this.strokes, this.ink, this.guide);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final g = Paint()
-      ..color = guide
-      ..strokeWidth = 1;
-    // Đường kẻ chữ thập giúp căn chữ, giống vở tập viết.
-    canvas.drawLine(
-      Offset(size.width / 2, 0),
-      Offset(size.width / 2, size.height),
-      g,
-    );
-    canvas.drawLine(
-      Offset(0, size.height / 2),
-      Offset(size.width, size.height / 2),
-      g,
-    );
-    final p = Paint()
-      ..color = ink
-      ..strokeWidth = size.width / 28
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..style = PaintingStyle.stroke;
-    for (final s in strokes) {
-      if (s.length == 1) {
-        canvas.drawCircle(
-          s.first,
-          p.strokeWidth / 2,
-          p..style = PaintingStyle.fill,
-        );
-        p.style = PaintingStyle.stroke;
-        continue;
-      }
-      final path = Path()..moveTo(s.first.dx, s.first.dy);
-      for (final o in s.skip(1)) {
-        path.lineTo(o.dx, o.dy);
-      }
-      canvas.drawPath(path, p);
-    }
-  }
-
-  @override
-  bool shouldRepaint(_CanvasPainter old) => true;
 }
 
 class _TypingPractice extends StatefulWidget {

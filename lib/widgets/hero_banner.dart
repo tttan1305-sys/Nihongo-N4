@@ -2,13 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-/// Tranh phong cảnh Nhật Bản ở đầu trang chủ: trời xanh, núi Phú Sĩ,
-/// tháp chùa và cành hoa anh đào. Vẽ bằng code nên không cần file ảnh.
+/// Tranh phong cảnh Nhật Bản ban đêm ở đầu trang chủ: trời tím có sao, trăng,
+/// núi Phú Sĩ, tháp chùa và cành hoa anh đào. Vẽ bằng code nên không cần file ảnh.
 class HeroScenery extends StatelessWidget {
   final Widget child;
   final double height;
 
-  const HeroScenery({super.key, required this.child, this.height = 250});
+  const HeroScenery({super.key, required this.child, this.height = 270});
 
   @override
   Widget build(BuildContext context) {
@@ -28,33 +28,60 @@ class _SceneryPainter extends CustomPainter {
     final w = size.width;
     final h = size.height;
 
-    // Trời.
+    // Trời đêm tím, dưới cùng hòa vào màu nền ứng dụng.
     canvas.drawRect(
       Offset.zero & size,
       Paint()
         ..shader = const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFF9CC7FF), Color(0xFFD9EAFF), Color(0xFFF6FAFF)],
+          colors: [
+            Color(0xFF1B1550),
+            Color(0xFF3A2A86),
+            Color(0xFF5B3A9E),
+            Color(0xFF0B1430),
+          ],
+          stops: [0, 0.4, 0.68, 1],
         ).createShader(Offset.zero & size),
     );
 
-    // Mặt trời và mây.
+    // Sao.
+    final rnd = Random(3);
+    final star = Paint()..color = Colors.white;
+    for (var i = 0; i < 46; i++) {
+      final o = Offset(rnd.nextDouble() * w, rnd.nextDouble() * h * 0.55);
+      star.color = Colors.white.withValues(
+        alpha: 0.35 + rnd.nextDouble() * 0.6,
+      );
+      canvas.drawCircle(o, 0.6 + rnd.nextDouble() * 1.1, star);
+    }
+
+    // Trăng có quầng sáng.
+    final moon = Offset(w * 0.56, h * 0.24);
     canvas.drawCircle(
-      Offset(w * 0.80, h * 0.20),
-      h * 0.09,
-      Paint()..color = const Color(0xFFFFF1D6),
+      moon,
+      h * 0.17,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFFFFE9B8).withValues(alpha: 0.45),
+            const Color(0xFFFFE9B8).withValues(alpha: 0),
+          ],
+        ).createShader(Rect.fromCircle(center: moon, radius: h * 0.17)),
     );
-    _cloud(canvas, Offset(w * 0.58, h * 0.18), h * 0.05);
-    _cloud(canvas, Offset(w * 0.92, h * 0.34), h * 0.04);
+    canvas.drawCircle(
+      moon,
+      h * 0.075,
+      Paint()..color = const Color(0xFFFFF3D1),
+    );
 
     // Núi Phú Sĩ.
-    final peak = Offset(w * 0.70, h * 0.32);
+    final peak = Offset(w * 0.66, h * 0.40);
     final mountain = Path()
-      ..moveTo(w * 0.36, h)
-      ..quadraticBezierTo(w * 0.55, h * 0.55, peak.dx - w * 0.05, peak.dy)
+      ..moveTo(w * 0.24, h)
+      ..quadraticBezierTo(w * 0.48, h * 0.62, peak.dx - w * 0.05, peak.dy)
       ..lineTo(peak.dx + w * 0.05, peak.dy)
-      ..quadraticBezierTo(w * 0.86, h * 0.55, w * 1.06, h)
+      ..quadraticBezierTo(w * 0.84, h * 0.62, w * 1.08, h)
       ..close();
     canvas.drawPath(
       mountain,
@@ -62,56 +89,41 @@ class _SceneryPainter extends CustomPainter {
         ..shader = const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFF5B86D6), Color(0xFF8FB3EE)],
+          colors: [Color(0xFF3D4C9C), Color(0xFF1A2560)],
         ).createShader(Rect.fromLTWH(0, peak.dy, w, h - peak.dy)),
     );
     // Tuyết trên đỉnh, mép dưới lượn sóng.
     final snow = Path()
       ..moveTo(peak.dx - w * 0.05, peak.dy)
       ..lineTo(peak.dx + w * 0.05, peak.dy)
-      ..quadraticBezierTo(w * 0.775, h * 0.42, w * 0.79, h * 0.47)
-      ..lineTo(w * 0.755, h * 0.44)
-      ..lineTo(w * 0.73, h * 0.49)
-      ..lineTo(w * 0.70, h * 0.45)
-      ..lineTo(w * 0.67, h * 0.49)
-      ..lineTo(w * 0.645, h * 0.44)
-      ..lineTo(w * 0.61, h * 0.47)
-      ..quadraticBezierTo(w * 0.625, h * 0.42, peak.dx - w * 0.05, peak.dy)
+      ..quadraticBezierTo(w * 0.735, h * 0.49, w * 0.75, h * 0.54)
+      ..lineTo(w * 0.715, h * 0.51)
+      ..lineTo(w * 0.69, h * 0.555)
+      ..lineTo(w * 0.66, h * 0.515)
+      ..lineTo(w * 0.63, h * 0.555)
+      ..lineTo(w * 0.605, h * 0.51)
+      ..lineTo(w * 0.57, h * 0.54)
+      ..quadraticBezierTo(w * 0.585, h * 0.49, peak.dx - w * 0.05, peak.dy)
       ..close();
-    canvas.drawPath(snow, Paint()..color = Colors.white);
+    canvas.drawPath(snow, Paint()..color = const Color(0xFFDDE4FF));
 
-    // Đồi phía trước.
+    // Đồi tối phía trước.
     final hill = Path()
-      ..moveTo(0, h * 0.86)
-      ..quadraticBezierTo(w * 0.35, h * 0.74, w * 0.7, h * 0.86)
-      ..quadraticBezierTo(w * 0.88, h * 0.92, w, h * 0.84)
+      ..moveTo(0, h * 0.88)
+      ..quadraticBezierTo(w * 0.35, h * 0.78, w * 0.7, h * 0.9)
+      ..quadraticBezierTo(w * 0.88, h * 0.95, w, h * 0.86)
       ..lineTo(w, h)
       ..lineTo(0, h)
       ..close();
-    canvas.drawPath(hill, Paint()..color = const Color(0xFFBFE3C8));
+    canvas.drawPath(hill, Paint()..color = const Color(0xFF0E1838));
 
-    _pagoda(canvas, Offset(w * 0.92, h * 0.88), h * 0.42);
+    _pagoda(canvas, Offset(w * 0.93, h * 0.9), h * 0.42);
     _sakuraBranch(canvas, size);
   }
 
-  void _cloud(Canvas canvas, Offset c, double r) {
-    final paint = Paint()..color = Colors.white.withValues(alpha: 0.9);
-    canvas.drawCircle(c, r, paint);
-    canvas.drawCircle(c.translate(r * 1.1, r * 0.25), r * 0.8, paint);
-    canvas.drawCircle(c.translate(-r * 1.1, r * 0.3), r * 0.7, paint);
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(
-        Rect.fromLTWH(c.dx - r * 1.7, c.dy, r * 3.5, r * 0.9),
-        Radius.circular(r),
-      ),
-      paint,
-    );
-  }
-
-  /// Tháp chùa năm tầng màu đỏ, [base] là chân tháp, [height] là chiều cao.
   void _pagoda(Canvas canvas, Offset base, double height) {
-    final body = Paint()..color = const Color(0xFFD9434F);
-    final roof = Paint()..color = const Color(0xFF3A3F58);
+    final body = Paint()..color = const Color(0xFF8E2E52);
+    final roof = Paint()..color = const Color(0xFF151B3D);
     const floors = 5;
     final floorH = height / (floors + 1);
     for (var i = 0; i < floors; i++) {
@@ -139,7 +151,7 @@ class _SceneryPainter extends CustomPainter {
       Offset(base.dx, top),
       Offset(base.dx, top - floorH * 1.2),
       Paint()
-        ..color = const Color(0xFF3A3F58)
+        ..color = const Color(0xFF151B3D)
         ..strokeWidth = 2,
     );
   }
@@ -148,7 +160,7 @@ class _SceneryPainter extends CustomPainter {
     final w = size.width;
     final h = size.height;
     final branch = Paint()
-      ..color = const Color(0xFF6B4A3A)
+      ..color = const Color(0xFF3B2340)
       ..strokeWidth = 3
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;

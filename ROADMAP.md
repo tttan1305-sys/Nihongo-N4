@@ -45,6 +45,17 @@ Chờ bạn duyệt ảnh chụp, **chưa đẩy lên GitHub** (bạn dặn: th�
 - Từ đã học và Kanji đã nhớ được đồng bộ; Yêu thích chỉ lưu trên máy
 - ✅ Văn phong Tổng hợp N5 theo tài liệu bạn gửi (2026-10-22): bảng từ vựng Từ | Hán Việt | Cách đọc | Nghĩa (cột Hán Việt sinh bằng `tools/han_viet.py`), bộ thủ ghi kiểu "Miên (mái nhà)", Kanji ghi On/Kun
 
+## Giao diện tối neon (bạn yêu cầu 2026-10-22, ảnh mẫu 8 màn hình)
+
+Chờ bạn duyệt ảnh `docs/screenshots/giao-dien-toi-*.png`, **chưa đẩy lên GitHub**.
+
+- ✅ Nền xanh đêm, thẻ viền neon phát sáng (`lib/theme.dart`, `AppCard`); trang chủ vẽ cảnh đêm: trăng, sao, Phú Sĩ, tháp chùa, hoa anh đào
+- ✅ Thanh dưới 5 mục: Trang chủ / Từ vựng / Luyện tập / Thống kê / Khác; 3 ô Ngữ pháp, Luyện nghe, Kanji
+- ✅ Học từ: nghĩa ẩn, nút tròn "Hiển thị nghĩa", "Đã nhớ" (đánh dấu đã học) / "Chưa nhớ"
+- ✅ Luyện nghe mới: Nghe hiểu (câu N5 ngắn, chọn nghĩa, hiện lời) và Dictation (nghe từ, gõ kana)
+- ✅ Kanji: tab Viết tay (ô tập viết) và Nhìn & Nhớ, mục Ghi nhớ, nút Xem ví dụ
+- ✅ Thống kê: cấp độ/XP, từ đã học, % trả lời đúng, giờ học, chuỗi ngày, thành tích (5 ngày liên tục, hoàn thành 1 bài, nhớ 100 từ). Thống kê lưu `stats.*`, ngày học `day.*`, đều được đồng bộ
+
 ## Giai đoạn 2: Tài khoản Gmail và giọng đọc nữ
 
 | Bước | Nội dung | Trạng thái |

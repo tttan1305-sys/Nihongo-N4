@@ -127,7 +127,7 @@ class _SentenceOrderScreenState extends State<SentenceOrderScreen> {
                 padding: const EdgeInsets.all(14),
                 color: checked
                     ? (_result! ? AppColors.greenSoft : AppColors.redSoft)
-                    : Colors.white,
+                    : AppColors.surface,
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(minHeight: 90),
                   child: Wrap(
@@ -225,7 +225,7 @@ class _Chunk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: selected ? AppColors.primarySoft : Colors.white,
+      color: selected ? AppColors.primarySoft : AppColors.surface,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
         side: BorderSide(

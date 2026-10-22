@@ -7,8 +7,8 @@ import '../theme.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
 
-/// Học từ vựng kiểu flashcard: mỗi lần một từ, có cách đọc, nghĩa, câu dùng
-/// thực tế. Bấm "Tiếp theo" là đánh dấu đã học và sang từ sau.
+/// Học từ vựng kiểu flashcard: mỗi lần một từ, nghĩa ẩn đến khi bấm
+/// "Hiển thị nghĩa". "Đã nhớ" đánh dấu đã học, "Chưa nhớ" chỉ sang từ sau.
 class WordStudyScreen extends StatefulWidget {
   final List<WordEntry> words;
   final int initialIndex;
@@ -32,6 +32,8 @@ class WordStudyScreen extends StatefulWidget {
 class _WordStudyScreenState extends State<WordStudyScreen> {
   late int _index = widget.initialIndex;
   bool _finished = false;
+  bool _revealed = false;
+  int _known = 0;
 
   WordEntry get _word => widget.words[_index];
 
@@ -41,9 +43,13 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
     text: w.kana,
   );
 
-  Future<void> _next() async {
-    await widget.progress.markWordLearned(_word.key);
+  Future<void> _answer({required bool known}) async {
+    if (known) {
+      await widget.progress.markWordLearned(_word.key);
+      _known++;
+    }
     setState(() {
+      _revealed = false;
       if (_index + 1 < widget.words.length) {
         _index++;
       } else {
@@ -55,7 +61,15 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(
+        leading: IconButton(
+          key: const ValueKey('study-close'),
+          tooltip: 'Đóng',
+          icon: const Icon(Icons.close_rounded),
+          onPressed: () => Navigator.of(context).maybePop(),
+        ),
+        title: Text(widget.title),
+      ),
       body: _finished ? _done(context) : _card(context),
     );
   }
@@ -76,9 +90,10 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Vào Luyện tập để làm trắc nghiệm các từ vừa học.',
+            Text(
+              'Đã nhớ $_known từ. Vào Luyện tập để làm trắc nghiệm các từ vừa học.',
               textAlign: TextAlign.center,
+              style: const TextStyle(color: AppColors.muted),
             ),
             const SizedBox(height: 24),
             FilledButton(
@@ -139,7 +154,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                                   color: AppColors.muted,
                                 ),
                               ),
-                              if (w.hanViet.isNotEmpty)
+                              if (_revealed && w.hanViet.isNotEmpty)
                                 Text(
                                   w.hanViet.toUpperCase(),
                                   key: const ValueKey('study-hanviet'),
@@ -151,15 +166,23 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                                   ),
                                 ),
                               const SizedBox(height: 10),
-                              Text(
-                                w.meaningVi,
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.w600,
-                                  color: AppColors.primary,
+                              if (_revealed)
+                                Text(
+                                  w.meaningVi,
+                                  key: const ValueKey('study-meaning'),
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColors.primary,
+                                  ),
+                                )
+                              else
+                                const Text(
+                                  'Nhớ nghĩa rồi bấm Hiển thị nghĩa để kiểm tra',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: AppColors.muted),
                                 ),
-                              ),
                               const SizedBox(height: 16),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -201,7 +224,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                       ],
                     ),
                   ),
-                  if (example != null) ...[
+                  if (_revealed && example != null) ...[
                     const SizedBox(height: 16),
                     AppCard(
                       child: Column(
@@ -254,27 +277,31 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 4, 20, 16),
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    CircleNavButton(
-                      icon: Icons.chevron_left_rounded,
-                      onPressed: _index == 0
-                          ? null
-                          : () => setState(() => _index--),
-                    ),
-                    const SizedBox(width: 12),
                     Expanded(
-                      child: FilledButton(
-                        key: const ValueKey('study-next'),
-                        onPressed: _next,
-                        child: const Text('Tiếp theo'),
+                      child: _AnswerButton(
+                        key: const ValueKey('study-known'),
+                        label: 'Đã nhớ',
+                        icon: Icons.check_rounded,
+                        color: AppColors.green,
+                        onPressed: () => _answer(known: true),
                       ),
                     ),
                     const SizedBox(width: 12),
-                    CircleNavButton(
-                      icon: Icons.chevron_right_rounded,
-                      onPressed: _index + 1 >= widget.words.length
-                          ? null
-                          : () => setState(() => _index++),
+                    _RevealButton(
+                      revealed: _revealed,
+                      onPressed: () => setState(() => _revealed = !_revealed),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: _AnswerButton(
+                        key: const ValueKey('study-unknown'),
+                        label: 'Chưa nhớ',
+                        icon: Icons.close_rounded,
+                        color: AppColors.red,
+                        onPressed: () => _answer(known: false),
+                      ),
                     ),
                   ],
                 ),
@@ -283,6 +310,98 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
           ],
         );
       },
+    );
+  }
+}
+
+class _AnswerButton extends StatelessWidget {
+  final String label;
+  final IconData icon;
+  final Color color;
+  final VoidCallback onPressed;
+
+  const _AnswerButton({
+    super.key,
+    required this.label,
+    required this.icon,
+    required this.color,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton.icon(
+      onPressed: onPressed,
+      style: OutlinedButton.styleFrom(
+        foregroundColor: color,
+        backgroundColor: color.withValues(alpha: 0.1),
+        side: BorderSide(color: color.withValues(alpha: 0.7)),
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+      ),
+      icon: Icon(icon, size: 20),
+      label: Text(label),
+    );
+  }
+}
+
+/// Nút tròn phát sáng ở giữa: hiện hoặc ẩn nghĩa của từ.
+class _RevealButton extends StatelessWidget {
+  final bool revealed;
+  final VoidCallback onPressed;
+
+  const _RevealButton({required this.revealed, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 92,
+      height: 92,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFF6FA2FF), AppColors.primaryDark],
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primary.withValues(alpha: 0.6),
+            blurRadius: 22,
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        shape: const CircleBorder(),
+        child: InkWell(
+          key: const ValueKey('study-reveal'),
+          customBorder: const CircleBorder(),
+          onTap: onPressed,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                revealed
+                    ? Icons.visibility_off_rounded
+                    : Icons.visibility_rounded,
+                color: Colors.white,
+              ),
+              const SizedBox(height: 2),
+              Text(
+                revealed ? 'Ẩn nghĩa' : 'Hiển thị\nnghĩa',
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                  height: 1.1,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

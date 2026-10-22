@@ -27,6 +27,7 @@ class ReadingTab extends StatelessWidget {
           title: 'Đọc hiểu',
           questions: lesson.reading.questions,
           passMark: ProgressStore.passMark,
+          onAnswer: progress.recordAnswer,
           passMessage: 'Bạn đã hoàn thành bài ${lesson.number}!',
         ),
       ),

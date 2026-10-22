@@ -100,4 +100,24 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byKey(const ValueKey('google-sign-in')), findsOneWidget);
   });
+
+  testWidgets('thanh dưới 5 mục, tab Thống kê có cấp độ và chuỗi ngày', (
+    tester,
+  ) async {
+    final auth = FakeAuth();
+    await auth.signInWithGoogle();
+    final progress = await pumpApp(tester, auth);
+    await progress.recordAnswer(true);
+    for (final k in ['nav-home', 'nav-vocab', 'nav-practice', 'nav-more']) {
+      expect(find.byKey(ValueKey(k)), findsOneWidget);
+    }
+    await tester.tap(find.byKey(const ValueKey('nav-stats')));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('profile-name')), findsOneWidget);
+    expect(find.text('Tấn'), findsOneWidget);
+    expect(find.text('Lv.1'), findsOneWidget);
+    expect(find.text('2 / 500 XP'), findsOneWidget);
+    expect(find.text('100%'), findsOneWidget);
+    expect(find.text('Chuỗi ngày'), findsOneWidget);
+  });
 }

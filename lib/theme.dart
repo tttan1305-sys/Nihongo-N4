@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 
-/// Bảng màu chung của ứng dụng: nền sáng, thẻ trắng bo tròn, tông xanh dương.
+/// Bảng màu chung của ứng dụng: nền xanh đêm, thẻ tối viền neon.
 abstract final class AppColors {
-  static const primary = Color(0xFF2F6BFF);
-  static const primaryDark = Color(0xFF1E4FD8);
-  static const primarySoft = Color(0xFFE8EFFF);
-  static const purple = Color(0xFF7B61FF);
-  static const purpleSoft = Color(0xFFF0ECFF);
-  static const green = Color(0xFF22B07D);
-  static const greenSoft = Color(0xFFE3F7EE);
-  static const pink = Color(0xFFFF5C8A);
-  static const pinkSoft = Color(0xFFFFE8EF);
-  static const orange = Color(0xFFFF9F43);
-  static const orangeSoft = Color(0xFFFFF1E3);
-  static const red = Color(0xFFEF4B4B);
-  static const redSoft = Color(0xFFFDE8E8);
-  static const background = Color(0xFFF4F7FD);
-  static const text = Color(0xFF1B2440);
-  static const muted = Color(0xFF7A849E);
-  static const border = Color(0xFFE3E8F2);
+  static const primary = Color(0xFF4D8DFF);
+  static const primaryDark = Color(0xFF2A5BE0);
+  static const primarySoft = Color(0xFF1A2E66);
+  static const purple = Color(0xFFA67CFF);
+  static const purpleSoft = Color(0xFF2A1F55);
+  static const green = Color(0xFF2FD39A);
+  static const greenSoft = Color(0xFF0F3B39);
+  static const pink = Color(0xFFFF6FA5);
+  static const pinkSoft = Color(0xFF3F1B44);
+  static const orange = Color(0xFFFFA94D);
+  static const orangeSoft = Color(0xFF3A2A2A);
+  static const red = Color(0xFFFF5F6D);
+  static const redSoft = Color(0xFF431D33);
+  static const background = Color(0xFF0B1430);
+  static const surface = Color(0xFF14224A);
+  static const surfaceHigh = Color(0xFF1B2C5C);
+  static const text = Color(0xFFF2F5FF);
+  static const muted = Color(0xFF8C9BC4);
+  static const border = Color(0xFF2A3B6E);
 
   /// Màu xoay vòng cho số thứ tự trong danh sách.
   static const cycle = [primary, pink, green, orange, purple];
@@ -27,10 +29,19 @@ abstract final class AppColors {
 ThemeData buildAppTheme() {
   final scheme = ColorScheme.fromSeed(
     seedColor: AppColors.primary,
+    brightness: Brightness.dark,
     primary: AppColors.primary,
-    surface: Colors.white,
+    onPrimary: Colors.white,
+    surface: AppColors.surface,
+    onSurface: AppColors.text,
+    surfaceContainerHighest: AppColors.surfaceHigh,
+    outline: AppColors.border,
   );
-  final base = ThemeData(colorScheme: scheme, useMaterial3: true);
+  final base = ThemeData(
+    colorScheme: scheme,
+    useMaterial3: true,
+    brightness: Brightness.dark,
+  );
   return base.copyWith(
     scaffoldBackgroundColor: AppColors.background,
     appBarTheme: const AppBarTheme(
@@ -46,7 +57,7 @@ ThemeData buildAppTheme() {
       ),
     ),
     cardTheme: CardThemeData(
-      color: Colors.white,
+      color: AppColors.surface,
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       shape: RoundedRectangleBorder(
@@ -70,7 +81,7 @@ ThemeData buildAppTheme() {
       ),
     ),
     navigationBarTheme: NavigationBarThemeData(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF0E1A3C),
       surfaceTintColor: Colors.transparent,
       indicatorColor: AppColors.primarySoft,
       labelTextStyle: WidgetStateProperty.resolveWith(
@@ -98,7 +109,8 @@ ThemeData buildAppTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: Colors.white,
+      fillColor: AppColors.surface,
+      hintStyle: const TextStyle(color: AppColors.muted),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
@@ -114,5 +126,30 @@ ThemeData buildAppTheme() {
       linearTrackColor: AppColors.primarySoft,
     ),
     dividerTheme: const DividerThemeData(color: AppColors.border),
+    dialogTheme: const DialogThemeData(backgroundColor: AppColors.surface),
+    popupMenuTheme: const PopupMenuThemeData(color: AppColors.surfaceHigh),
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: AppColors.surface,
+    ),
+    snackBarTheme: const SnackBarThemeData(
+      backgroundColor: AppColors.surfaceHigh,
+      contentTextStyle: TextStyle(color: AppColors.text),
+    ),
+    segmentedButtonTheme: SegmentedButtonThemeData(
+      style: SegmentedButton.styleFrom(
+        backgroundColor: AppColors.surface,
+        foregroundColor: AppColors.muted,
+        selectedBackgroundColor: AppColors.primary,
+        selectedForegroundColor: Colors.white,
+        side: const BorderSide(color: AppColors.border),
+      ),
+    ),
+    switchTheme: SwitchThemeData(
+      trackColor: WidgetStateProperty.resolveWith(
+        (s) => s.contains(WidgetState.selected)
+            ? AppColors.primary
+            : AppColors.surfaceHigh,
+      ),
+    ),
   );
 }
