@@ -13,6 +13,7 @@ import 'package:nihongo_n4/screens/sentence_order_screen.dart';
 import 'package:nihongo_n4/screens/vocab_list_screen.dart';
 import 'package:nihongo_n4/screens/word_study_screen.dart';
 import 'package:nihongo_n4/theme.dart';
+import 'package:nihongo_n4/widgets/ruby_text.dart';
 import 'package:nihongo_n4/widgets/ui.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -43,6 +44,17 @@ void main() {
     expect(bank.total, 24 + n5.wordCount);
     final keys = bank.all.map((w) => w.key).toList();
     expect(keys.toSet(), hasLength(keys.length));
+  });
+
+  test('từ có chữ Hán đều có âm Hán Việt', () {
+    final words = bank.all.toList();
+    final w = words.firstWhere((w) => w.word == '{会社員|かいしゃいん}');
+    expect(w.hanViet, 'Hội Xã Viên');
+    for (final w in words) {
+      final hasKanji = RegExp('[一-鿿]').hasMatch(plainText(w.word));
+      expect(w.hanViet.isNotEmpty, hasKanji, reason: w.word);
+    }
+    expect(n5.kanji.first.radicalName, 'Nhất (số một)');
   });
 
   test('chữ Hán N5 đủ thông tin, không trùng', () {

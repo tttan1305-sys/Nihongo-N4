@@ -8,6 +8,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
+from han_viet import han_viet  # noqa: E402
 from n5_vocab_data import TOPICS  # noqa: E402
 
 
@@ -18,7 +19,8 @@ def main():
         for word, kana, meaning, ja, vi in words:
             n += 1
             items.append({
-                "id": f"n5v{n:03d}", "word": word, "kana": kana, "meaningVi": meaning,
+                "id": f"n5v{n:03d}", "word": word, "hanViet": han_viet(word), "kana": kana,
+                "meaningVi": meaning,
                 "example": {"id": f"n5e{n:03d}", "ja": ja, "vi": vi},
             })
         topics.append({"id": f"t{i:02d}", "titleVi": title, "words": items})

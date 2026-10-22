@@ -92,6 +92,9 @@ class PracticalUse extends Sentence {
 class Vocab {
   final String id;
   final String word;
+
+  /// Âm Hán Việt, ví dụ 会社員 → "Hội Xã Viên" ("" nếu từ không có chữ Hán).
+  final String hanViet;
   final String kana;
   final String meaningVi;
   final String pos;
@@ -100,6 +103,7 @@ class Vocab {
   const Vocab({
     required this.id,
     required this.word,
+    this.hanViet = '',
     required this.kana,
     required this.meaningVi,
     required this.pos,
@@ -109,6 +113,7 @@ class Vocab {
   factory Vocab.fromJson(Map<String, dynamic> j) => Vocab(
     id: j['id'] as String,
     word: j['word'] as String,
+    hanViet: j['hanViet'] as String? ?? '',
     kana: j['kana'] as String,
     meaningVi: j['meaningVi'] as String,
     pos: j['pos'] as String,

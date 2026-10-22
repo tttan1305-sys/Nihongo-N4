@@ -325,7 +325,9 @@ class _WordRow extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    word.meaningVi,
+                    word.hanViet.isEmpty
+                        ? word.meaningVi
+                        : '${word.hanViet} · ${word.meaningVi}',
                     style: const TextStyle(color: AppColors.muted),
                   ),
                 ],

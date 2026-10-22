@@ -7,6 +7,7 @@
     {
      "id": "n5v001",
      "word": "{私|わたし}",
+     "hanViet": "Tư",
      "kana": "わたし",
      "meaningVi": "tôi",
      "example": {
@@ -18,6 +19,7 @@
     {
      "id": "n5v002",
      "word": "{人|ひと}",
+     "hanViet": "Nhân",
      "kana": "ひと",
      "meaningVi": "người",
      "example": {
@@ -29,6 +31,7 @@
     {
      "id": "n5v003",
      "word": "{男|おとこ}の{人|ひと}",
+     "hanViet": "Nam Nhân",
      "kana": "おとこのひと",
      "meaningVi": "người đàn ông",
      "example": {
@@ -40,6 +43,7 @@
     {
      "id": "n5v004",
      "word": "{女|おんな}の{人|ひと}",
+     "hanViet": "Nữ Nhân",
      "kana": "おんなのひと",
      "meaningVi": "người phụ nữ",
      "example": {
@@ -51,6 +55,7 @@
     {
      "id": "n5v005",
      "word": "{子|こ}ども",
+     "hanViet": "Tử",
      "kana": "こども",
      "meaningVi": "trẻ em, con",
      "example": {
@@ -62,6 +67,7 @@
     {
      "id": "n5v006",
      "word": "{友達|ともだち}",
+     "hanViet": "Hữu Đạt",
      "kana": "ともだち",
      "meaningVi": "bạn bè",
      "example": {
@@ -73,6 +79,7 @@
     {
      "id": "n5v007",
      "word": "{家族|かぞく}",
+     "hanViet": "Gia Tộc",
      "kana": "かぞく",
      "meaningVi": "gia đình",
      "example": {
@@ -84,6 +91,7 @@
     {
      "id": "n5v008",
      "word": "{父|ちち}",
+     "hanViet": "Phụ",
      "kana": "ちち",
      "meaningVi": "bố (tôi)",
      "example": {
@@ -95,6 +103,7 @@
     {
      "id": "n5v009",
      "word": "{母|はは}",
+     "hanViet": "Mẫu",
      "kana": "はは",
      "meaningVi": "mẹ (tôi)",
      "example": {
@@ -106,6 +115,7 @@
     {
      "id": "n5v010",
      "word": "お{父|とう}さん",
+     "hanViet": "Phụ",
      "kana": "おとうさん",
      "meaningVi": "bố (người khác), bố ơi",
      "example": {
@@ -117,6 +127,7 @@
     {
      "id": "n5v011",
      "word": "お{母|かあ}さん",
+     "hanViet": "Mẫu",
      "kana": "おかあさん",
      "meaningVi": "mẹ (người khác), mẹ ơi",
      "example": {
@@ -128,6 +139,7 @@
     {
      "id": "n5v012",
      "word": "{兄|あに}",
+     "hanViet": "Huynh",
      "kana": "あに",
      "meaningVi": "anh trai (tôi)",
      "example": {
@@ -139,6 +151,7 @@
     {
      "id": "n5v013",
      "word": "{姉|あね}",
+     "hanViet": "Tỷ",
      "kana": "あね",
      "meaningVi": "chị gái (tôi)",
      "example": {
@@ -150,6 +163,7 @@
     {
      "id": "n5v014",
      "word": "{弟|おとうと}",
+     "hanViet": "Đệ",
      "kana": "おとうと",
      "meaningVi": "em trai",
      "example": {
@@ -161,6 +175,7 @@
     {
      "id": "n5v015",
      "word": "{妹|いもうと}",
+     "hanViet": "Muội",
      "kana": "いもうと",
      "meaningVi": "em gái",
      "example": {
@@ -172,6 +187,7 @@
     {
      "id": "n5v016",
      "word": "{主人|しゅじん}",
+     "hanViet": "Chủ Nhân",
      "kana": "しゅじん",
      "meaningVi": "chồng (tôi)",
      "example": {
@@ -183,6 +199,7 @@
     {
      "id": "n5v017",
      "word": "{家内|かない}",
+     "hanViet": "Gia Nội",
      "kana": "かない",
      "meaningVi": "vợ (tôi)",
      "example": {
@@ -194,6 +211,7 @@
     {
      "id": "n5v018",
      "word": "{名前|なまえ}",
+     "hanViet": "Danh Tiền",
      "kana": "なまえ",
      "meaningVi": "tên",
      "example": {
@@ -205,6 +223,7 @@
     {
      "id": "n5v019",
      "word": "{国|くに}",
+     "hanViet": "Quốc",
      "kana": "くに",
      "meaningVi": "đất nước, quê",
      "example": {
@@ -216,6 +235,7 @@
     {
      "id": "n5v020",
      "word": "{皆|みな}さん",
+     "hanViet": "Giai",
      "kana": "みなさん",
      "meaningVi": "mọi người",
      "example": {
@@ -233,6 +253,7 @@
     {
      "id": "n5v021",
      "word": "{先生|せんせい}",
+     "hanViet": "Tiên Sinh",
      "kana": "せんせい",
      "meaningVi": "giáo viên, thầy cô",
      "example": {
@@ -244,6 +265,7 @@
     {
      "id": "n5v022",
      "word": "{学生|がくせい}",
+     "hanViet": "Học Sinh",
      "kana": "がくせい",
      "meaningVi": "sinh viên",
      "example": {
@@ -255,6 +277,7 @@
     {
      "id": "n5v023",
      "word": "{会社員|かいしゃいん}",
+     "hanViet": "Hội Xã Viên",
      "kana": "かいしゃいん",
      "meaningVi": "nhân viên công ty",
      "example": {
@@ -266,6 +289,7 @@
     {
      "id": "n5v024",
      "word": "{社員|しゃいん}",
+     "hanViet": "Xã Viên",
      "kana": "しゃいん",
      "meaningVi": "nhân viên (của công ty)",
      "example": {
@@ -277,6 +301,7 @@
     {
      "id": "n5v025",
      "word": "{医者|いしゃ}",
+     "hanViet": "Y Giả",
      "kana": "いしゃ",
      "meaningVi": "bác sĩ",
      "example": {
@@ -288,6 +313,7 @@
     {
      "id": "n5v026",
      "word": "{会社|かいしゃ}",
+     "hanViet": "Hội Xã",
      "kana": "かいしゃ",
      "meaningVi": "công ty",
      "example": {
@@ -299,6 +325,7 @@
     {
      "id": "n5v027",
      "word": "{仕事|しごと}",
+     "hanViet": "Sĩ Sự",
      "kana": "しごと",
      "meaningVi": "công việc",
      "example": {
@@ -310,6 +337,7 @@
     {
      "id": "n5v028",
      "word": "{会議|かいぎ}",
+     "hanViet": "Hội Nghị",
      "kana": "かいぎ",
      "meaningVi": "cuộc họp",
      "example": {
@@ -321,6 +349,7 @@
     {
      "id": "n5v029",
      "word": "{学校|がっこう}",
+     "hanViet": "Học Hiệu",
      "kana": "がっこう",
      "meaningVi": "trường học",
      "example": {
@@ -332,6 +361,7 @@
     {
      "id": "n5v030",
      "word": "{大学|だいがく}",
+     "hanViet": "Đại Học",
      "kana": "だいがく",
      "meaningVi": "đại học",
      "example": {
@@ -343,6 +373,7 @@
     {
      "id": "n5v031",
      "word": "{授業|じゅぎょう}",
+     "hanViet": "Thụ Nghiệp",
      "kana": "じゅぎょう",
      "meaningVi": "giờ học",
      "example": {
@@ -354,6 +385,7 @@
     {
      "id": "n5v032",
      "word": "{宿題|しゅくだい}",
+     "hanViet": "Túc Đề",
      "kana": "しゅくだい",
      "meaningVi": "bài tập về nhà",
      "example": {
@@ -365,6 +397,7 @@
     {
      "id": "n5v033",
      "word": "{試験|しけん}",
+     "hanViet": "Thí Nghiệm",
      "kana": "しけん",
      "meaningVi": "kỳ thi",
      "example": {
@@ -376,6 +409,7 @@
     {
      "id": "n5v034",
      "word": "{質問|しつもん}",
+     "hanViet": "Chất Vấn",
      "kana": "しつもん",
      "meaningVi": "câu hỏi",
      "example": {
@@ -387,6 +421,7 @@
     {
      "id": "n5v035",
      "word": "{問題|もんだい}",
+     "hanViet": "Vấn Đề",
      "kana": "もんだい",
      "meaningVi": "vấn đề, câu hỏi bài tập",
      "example": {
@@ -398,6 +433,7 @@
     {
      "id": "n5v036",
      "word": "{言葉|ことば}",
+     "hanViet": "Ngôn Diệp",
      "kana": "ことば",
      "meaningVi": "từ, ngôn ngữ",
      "example": {
@@ -409,6 +445,7 @@
     {
      "id": "n5v037",
      "word": "{漢字|かんじ}",
+     "hanViet": "Hán Tự",
      "kana": "かんじ",
      "meaningVi": "chữ Hán",
      "example": {
@@ -420,6 +457,7 @@
     {
      "id": "n5v038",
      "word": "{辞書|じしょ}",
+     "hanViet": "Từ Thư",
      "kana": "じしょ",
      "meaningVi": "từ điển",
      "example": {
@@ -431,6 +469,7 @@
     {
      "id": "n5v039",
      "word": "{本|ほん}",
+     "hanViet": "Bản",
      "kana": "ほん",
      "meaningVi": "sách",
      "example": {
@@ -442,6 +481,7 @@
     {
      "id": "n5v040",
      "word": "{名刺|めいし}",
+     "hanViet": "Danh Thích",
      "kana": "めいし",
      "meaningVi": "danh thiếp",
      "example": {
@@ -453,6 +493,7 @@
     {
      "id": "n5v041",
      "word": "{資料|しりょう}",
+     "hanViet": "Tư Liệu",
      "kana": "しりょう",
      "meaningVi": "tài liệu",
      "example": {
@@ -464,6 +505,7 @@
     {
      "id": "n5v042",
      "word": "{休|やす}み",
+     "hanViet": "Hưu",
      "kana": "やすみ",
      "meaningVi": "nghỉ, ngày nghỉ",
      "example": {
@@ -481,6 +523,7 @@
     {
      "id": "n5v043",
      "word": "{家|いえ}",
+     "hanViet": "Gia",
      "kana": "いえ",
      "meaningVi": "nhà",
      "example": {
@@ -492,6 +535,7 @@
     {
      "id": "n5v044",
      "word": "{部屋|へや}",
+     "hanViet": "Bộ Ốc",
      "kana": "へや",
      "meaningVi": "phòng",
      "example": {
@@ -503,6 +547,7 @@
     {
      "id": "n5v045",
      "word": "{駅|えき}",
+     "hanViet": "Dịch",
      "kana": "えき",
      "meaningVi": "nhà ga",
      "example": {
@@ -514,6 +559,7 @@
     {
      "id": "n5v046",
      "word": "{銀行|ぎんこう}",
+     "hanViet": "Ngân Hành",
      "kana": "ぎんこう",
      "meaningVi": "ngân hàng",
      "example": {
@@ -525,6 +571,7 @@
     {
      "id": "n5v047",
      "word": "{郵便局|ゆうびんきょく}",
+     "hanViet": "Bưu Tiện Cục",
      "kana": "ゆうびんきょく",
      "meaningVi": "bưu điện",
      "example": {
@@ -536,6 +583,7 @@
     {
      "id": "n5v048",
      "word": "{病院|びょういん}",
+     "hanViet": "Bệnh Viện",
      "kana": "びょういん",
      "meaningVi": "bệnh viện",
      "example": {
@@ -547,6 +595,7 @@
     {
      "id": "n5v049",
      "word": "{図書館|としょかん}",
+     "hanViet": "Đồ Thư Quán",
      "kana": "としょかん",
      "meaningVi": "thư viện",
      "example": {
@@ -558,6 +607,7 @@
     {
      "id": "n5v050",
      "word": "{公園|こうえん}",
+     "hanViet": "Công Viên",
      "kana": "こうえん",
      "meaningVi": "công viên",
      "example": {
@@ -569,6 +619,7 @@
     {
      "id": "n5v051",
      "word": "{店|みせ}",
+     "hanViet": "Điếm",
      "kana": "みせ",
      "meaningVi": "cửa hàng",
      "example": {
@@ -580,6 +631,7 @@
     {
      "id": "n5v052",
      "word": "{食堂|しょくどう}",
+     "hanViet": "Thực Đường",
      "kana": "しょくどう",
      "meaningVi": "nhà ăn",
      "example": {
@@ -591,6 +643,7 @@
     {
      "id": "n5v053",
      "word": "{町|まち}",
+     "hanViet": "Đinh",
      "kana": "まち",
      "meaningVi": "thị trấn, phố",
      "example": {
@@ -602,6 +655,7 @@
     {
      "id": "n5v054",
      "word": "{道|みち}",
+     "hanViet": "Đạo",
      "kana": "みち",
      "meaningVi": "đường",
      "example": {
@@ -613,6 +667,7 @@
     {
      "id": "n5v055",
      "word": "{空港|くうこう}",
+     "hanViet": "Không Cảng",
      "kana": "くうこう",
      "meaningVi": "sân bay",
      "example": {
@@ -624,6 +679,7 @@
     {
      "id": "n5v056",
      "word": "{受付|うけつけ}",
+     "hanViet": "Thụ Phó",
      "kana": "うけつけ",
      "meaningVi": "quầy lễ tân",
      "example": {
@@ -635,6 +691,7 @@
     {
      "id": "n5v057",
      "word": "{事務所|じむしょ}",
+     "hanViet": "Sự Vụ Sở",
      "kana": "じむしょ",
      "meaningVi": "văn phòng",
      "example": {
@@ -646,6 +703,7 @@
     {
      "id": "n5v058",
      "word": "{会議室|かいぎしつ}",
+     "hanViet": "Hội Nghị Thất",
      "kana": "かいぎしつ",
      "meaningVi": "phòng họp",
      "example": {
@@ -657,6 +715,7 @@
     {
      "id": "n5v059",
      "word": "トイレ",
+     "hanViet": "",
      "kana": "トイレ",
      "meaningVi": "nhà vệ sinh",
      "example": {
@@ -668,6 +727,7 @@
     {
      "id": "n5v060",
      "word": "{外|そと}",
+     "hanViet": "Ngoại",
      "kana": "そと",
      "meaningVi": "bên ngoài",
      "example": {
@@ -679,6 +739,7 @@
     {
      "id": "n5v061",
      "word": "{中|なか}",
+     "hanViet": "Trung",
      "kana": "なか",
      "meaningVi": "bên trong",
      "example": {
@@ -690,6 +751,7 @@
     {
      "id": "n5v062",
      "word": "{上|うえ}",
+     "hanViet": "Thượng",
      "kana": "うえ",
      "meaningVi": "trên",
      "example": {
@@ -701,6 +763,7 @@
     {
      "id": "n5v063",
      "word": "{下|した}",
+     "hanViet": "Hạ",
      "kana": "した",
      "meaningVi": "dưới",
      "example": {
@@ -712,6 +775,7 @@
     {
      "id": "n5v064",
      "word": "{前|まえ}",
+     "hanViet": "Tiền",
      "kana": "まえ",
      "meaningVi": "trước",
      "example": {
@@ -723,6 +787,7 @@
     {
      "id": "n5v065",
      "word": "{後|うし}ろ",
+     "hanViet": "Hậu",
      "kana": "うしろ",
      "meaningVi": "sau, phía sau",
      "example": {
@@ -734,6 +799,7 @@
     {
      "id": "n5v066",
      "word": "{隣|となり}",
+     "hanViet": "Lân",
      "kana": "となり",
      "meaningVi": "bên cạnh",
      "example": {
@@ -745,6 +811,7 @@
     {
      "id": "n5v067",
      "word": "{近|ちか}く",
+     "hanViet": "Cận",
      "kana": "ちかく",
      "meaningVi": "gần, chỗ gần",
      "example": {
@@ -762,6 +829,7 @@
     {
      "id": "n5v068",
      "word": "{今|いま}",
+     "hanViet": "Kim",
      "kana": "いま",
      "meaningVi": "bây giờ",
      "example": {
@@ -773,6 +841,7 @@
     {
      "id": "n5v069",
      "word": "{今日|きょう}",
+     "hanViet": "Kim Nhật",
      "kana": "きょう",
      "meaningVi": "hôm nay",
      "example": {
@@ -784,6 +853,7 @@
     {
      "id": "n5v070",
      "word": "{明日|あした}",
+     "hanViet": "Minh Nhật",
      "kana": "あした",
      "meaningVi": "ngày mai",
      "example": {
@@ -795,6 +865,7 @@
     {
      "id": "n5v071",
      "word": "{昨日|きのう}",
+     "hanViet": "Tạc Nhật",
      "kana": "きのう",
      "meaningVi": "hôm qua",
      "example": {
@@ -806,6 +877,7 @@
     {
      "id": "n5v072",
      "word": "{毎日|まいにち}",
+     "hanViet": "Mỗi Nhật",
      "kana": "まいにち",
      "meaningVi": "mỗi ngày",
      "example": {
@@ -817,6 +889,7 @@
     {
      "id": "n5v073",
      "word": "{朝|あさ}",
+     "hanViet": "Triều",
      "kana": "あさ",
      "meaningVi": "buổi sáng",
      "example": {
@@ -828,6 +901,7 @@
     {
      "id": "n5v074",
      "word": "{昼|ひる}",
+     "hanViet": "Trú",
      "kana": "ひる",
      "meaningVi": "buổi trưa",
      "example": {
@@ -839,6 +913,7 @@
     {
      "id": "n5v075",
      "word": "{晩|ばん}",
+     "hanViet": "Vãn",
      "kana": "ばん",
      "meaningVi": "buổi tối",
      "example": {
@@ -850,6 +925,7 @@
     {
      "id": "n5v076",
      "word": "{夜|よる}",
+     "hanViet": "Dạ",
      "kana": "よる",
      "meaningVi": "ban đêm",
      "example": {
@@ -861,6 +937,7 @@
     {
      "id": "n5v077",
      "word": "{午前|ごぜん}",
+     "hanViet": "Ngọ Tiền",
      "kana": "ごぜん",
      "meaningVi": "buổi sáng (AM)",
      "example": {
@@ -872,6 +949,7 @@
     {
      "id": "n5v078",
      "word": "{午後|ごご}",
+     "hanViet": "Ngọ Hậu",
      "kana": "ごご",
      "meaningVi": "buổi chiều (PM)",
      "example": {
@@ -883,6 +961,7 @@
     {
      "id": "n5v079",
      "word": "{週末|しゅうまつ}",
+     "hanViet": "Chu Mạt",
      "kana": "しゅうまつ",
      "meaningVi": "cuối tuần",
      "example": {
@@ -894,6 +973,7 @@
     {
      "id": "n5v080",
      "word": "{今週|こんしゅう}",
+     "hanViet": "Kim Chu",
      "kana": "こんしゅう",
      "meaningVi": "tuần này",
      "example": {
@@ -905,6 +985,7 @@
     {
      "id": "n5v081",
      "word": "{来週|らいしゅう}",
+     "hanViet": "Lai Chu",
      "kana": "らいしゅう",
      "meaningVi": "tuần sau",
      "example": {
@@ -916,6 +997,7 @@
     {
      "id": "n5v082",
      "word": "{先週|せんしゅう}",
+     "hanViet": "Tiên Chu",
      "kana": "せんしゅう",
      "meaningVi": "tuần trước",
      "example": {
@@ -927,6 +1009,7 @@
     {
      "id": "n5v083",
      "word": "{今年|ことし}",
+     "hanViet": "Kim Niên",
      "kana": "ことし",
      "meaningVi": "năm nay",
      "example": {
@@ -938,6 +1021,7 @@
     {
      "id": "n5v084",
      "word": "{来年|らいねん}",
+     "hanViet": "Lai Niên",
      "kana": "らいねん",
      "meaningVi": "năm sau",
      "example": {
@@ -949,6 +1033,7 @@
     {
      "id": "n5v085",
      "word": "{去年|きょねん}",
+     "hanViet": "Khứ Niên",
      "kana": "きょねん",
      "meaningVi": "năm ngoái",
      "example": {
@@ -960,6 +1045,7 @@
     {
      "id": "n5v086",
      "word": "{時間|じかん}",
+     "hanViet": "Thời Gian",
      "kana": "じかん",
      "meaningVi": "thời gian",
      "example": {
@@ -971,8 +1057,9 @@
     {
      "id": "n5v087",
      "word": "{日曜日|にちようび}",
+     "hanViet": "Nhật Diệu Nhật",
      "kana": "にちようび",
-     "meaningVi": "Chủ nhật",
+     "meaningVi": "chủ nhật",
      "example": {
       "id": "n5e087",
       "ja": "{日曜日|にちようび}は　{休|やす}みです。",
@@ -982,6 +1069,7 @@
     {
      "id": "n5v088",
      "word": "{月曜日|げつようび}",
+     "hanViet": "Nguyệt Diệu Nhật",
      "kana": "げつようび",
      "meaningVi": "thứ Hai",
      "example": {
@@ -993,6 +1081,7 @@
     {
      "id": "n5v089",
      "word": "{誕生日|たんじょうび}",
+     "hanViet": "Đản Sinh Nhật",
      "kana": "たんじょうび",
      "meaningVi": "sinh nhật",
      "example": {
@@ -1004,6 +1093,7 @@
     {
      "id": "n5v090",
      "word": "{春|はる}",
+     "hanViet": "Xuân",
      "kana": "はる",
      "meaningVi": "mùa xuân",
      "example": {
@@ -1015,6 +1105,7 @@
     {
      "id": "n5v091",
      "word": "{夏|なつ}",
+     "hanViet": "Hạ",
      "kana": "なつ",
      "meaningVi": "mùa hè",
      "example": {
@@ -1026,6 +1117,7 @@
     {
      "id": "n5v092",
      "word": "{冬|ふゆ}",
+     "hanViet": "Đông",
      "kana": "ふゆ",
      "meaningVi": "mùa đông",
      "example": {
@@ -1043,6 +1135,7 @@
     {
      "id": "n5v093",
      "word": "ごはん",
+     "hanViet": "",
      "kana": "ごはん",
      "meaningVi": "cơm, bữa ăn",
      "example": {
@@ -1054,6 +1147,7 @@
     {
      "id": "n5v094",
      "word": "{朝|あさ}ごはん",
+     "hanViet": "Triều",
      "kana": "あさごはん",
      "meaningVi": "bữa sáng",
      "example": {
@@ -1065,6 +1159,7 @@
     {
      "id": "n5v095",
      "word": "{料理|りょうり}",
+     "hanViet": "Liệu Lý",
      "kana": "りょうり",
      "meaningVi": "món ăn, nấu ăn",
      "example": {
@@ -1076,6 +1171,7 @@
     {
      "id": "n5v096",
      "word": "{肉|にく}",
+     "hanViet": "Nhục",
      "kana": "にく",
      "meaningVi": "thịt",
      "example": {
@@ -1087,6 +1183,7 @@
     {
      "id": "n5v097",
      "word": "{魚|さかな}",
+     "hanViet": "Ngư",
      "kana": "さかな",
      "meaningVi": "cá",
      "example": {
@@ -1098,6 +1195,7 @@
     {
      "id": "n5v098",
      "word": "{野菜|やさい}",
+     "hanViet": "Dã Thái",
      "kana": "やさい",
      "meaningVi": "rau",
      "example": {
@@ -1109,6 +1207,7 @@
     {
      "id": "n5v099",
      "word": "{果物|くだもの}",
+     "hanViet": "Quả Vật",
      "kana": "くだもの",
      "meaningVi": "trái cây",
      "example": {
@@ -1120,6 +1219,7 @@
     {
      "id": "n5v100",
      "word": "{卵|たまご}",
+     "hanViet": "Noãn",
      "kana": "たまご",
      "meaningVi": "trứng",
      "example": {
@@ -1131,6 +1231,7 @@
     {
      "id": "n5v101",
      "word": "パン",
+     "hanViet": "",
      "kana": "パン",
      "meaningVi": "bánh mì",
      "example": {
@@ -1142,6 +1243,7 @@
     {
      "id": "n5v102",
      "word": "{水|みず}",
+     "hanViet": "Thủy",
      "kana": "みず",
      "meaningVi": "nước",
      "example": {
@@ -1153,6 +1255,7 @@
     {
      "id": "n5v103",
      "word": "お{茶|ちゃ}",
+     "hanViet": "Trà",
      "kana": "おちゃ",
      "meaningVi": "trà",
      "example": {
@@ -1164,6 +1267,7 @@
     {
      "id": "n5v104",
      "word": "{牛乳|ぎゅうにゅう}",
+     "hanViet": "Ngưu Nhũ",
      "kana": "ぎゅうにゅう",
      "meaningVi": "sữa bò",
      "example": {
@@ -1175,6 +1279,7 @@
     {
      "id": "n5v105",
      "word": "お{酒|さけ}",
+     "hanViet": "Tửu",
      "kana": "おさけ",
      "meaningVi": "rượu",
      "example": {
@@ -1186,6 +1291,7 @@
     {
      "id": "n5v106",
      "word": "コーヒー",
+     "hanViet": "",
      "kana": "コーヒー",
      "meaningVi": "cà phê",
      "example": {
@@ -1197,6 +1303,7 @@
     {
      "id": "n5v107",
      "word": "お{弁当|べんとう}",
+     "hanViet": "Biện Đương",
      "kana": "おべんとう",
      "meaningVi": "cơm hộp",
      "example": {
@@ -1208,6 +1315,7 @@
     {
      "id": "n5v108",
      "word": "{食|た}べ{物|もの}",
+     "hanViet": "Thực Vật",
      "kana": "たべもの",
      "meaningVi": "đồ ăn",
      "example": {
@@ -1219,6 +1327,7 @@
     {
      "id": "n5v109",
      "word": "{飲|の}み{物|もの}",
+     "hanViet": "Ẩm Vật",
      "kana": "のみもの",
      "meaningVi": "đồ uống",
      "example": {
@@ -1230,6 +1339,7 @@
     {
      "id": "n5v110",
      "word": "はし",
+     "hanViet": "",
      "kana": "はし",
      "meaningVi": "đũa",
      "example": {
@@ -1241,6 +1351,7 @@
     {
      "id": "n5v111",
      "word": "{砂糖|さとう}",
+     "hanViet": "Sa Đường",
      "kana": "さとう",
      "meaningVi": "đường",
      "example": {
@@ -1252,6 +1363,7 @@
     {
      "id": "n5v112",
      "word": "{塩|しお}",
+     "hanViet": "Diêm",
      "kana": "しお",
      "meaningVi": "muối",
      "example": {
@@ -1269,6 +1381,7 @@
     {
      "id": "n5v113",
      "word": "お{金|かね}",
+     "hanViet": "Kim",
      "kana": "おかね",
      "meaningVi": "tiền",
      "example": {
@@ -1280,6 +1393,7 @@
     {
      "id": "n5v114",
      "word": "{財布|さいふ}",
+     "hanViet": "Tài Bố",
      "kana": "さいふ",
      "meaningVi": "ví",
      "example": {
@@ -1291,6 +1405,7 @@
     {
      "id": "n5v115",
      "word": "{円|えん}",
+     "hanViet": "Viên",
      "kana": "えん",
      "meaningVi": "yên (tiền Nhật)",
      "example": {
@@ -1302,6 +1417,7 @@
     {
      "id": "n5v116",
      "word": "{買|か}い{物|もの}",
+     "hanViet": "Mãi Vật",
      "kana": "かいもの",
      "meaningVi": "mua sắm",
      "example": {
@@ -1313,6 +1429,7 @@
     {
      "id": "n5v117",
      "word": "{服|ふく}",
+     "hanViet": "Phục",
      "kana": "ふく",
      "meaningVi": "quần áo",
      "example": {
@@ -1324,6 +1441,7 @@
     {
      "id": "n5v118",
      "word": "{靴|くつ}",
+     "hanViet": "Ngoa",
      "kana": "くつ",
      "meaningVi": "giày",
      "example": {
@@ -1335,6 +1453,7 @@
     {
      "id": "n5v119",
      "word": "{傘|かさ}",
+     "hanViet": "Tản",
      "kana": "かさ",
      "meaningVi": "ô, dù",
      "example": {
@@ -1346,6 +1465,7 @@
     {
      "id": "n5v120",
      "word": "かばん",
+     "hanViet": "",
      "kana": "かばん",
      "meaningVi": "cặp, túi",
      "example": {
@@ -1357,6 +1477,7 @@
     {
      "id": "n5v121",
      "word": "{時計|とけい}",
+     "hanViet": "Thời Kế",
      "kana": "とけい",
      "meaningVi": "đồng hồ",
      "example": {
@@ -1368,6 +1489,7 @@
     {
      "id": "n5v122",
      "word": "{切手|きって}",
+     "hanViet": "Thiết Thủ",
      "kana": "きって",
      "meaningVi": "tem",
      "example": {
@@ -1379,6 +1501,7 @@
     {
      "id": "n5v123",
      "word": "{荷物|にもつ}",
+     "hanViet": "Hà Vật",
      "kana": "にもつ",
      "meaningVi": "hành lý, đồ",
      "example": {
@@ -1390,6 +1513,7 @@
     {
      "id": "n5v124",
      "word": "{高|たか}い",
+     "hanViet": "Cao",
      "kana": "たかい",
      "meaningVi": "đắt; cao",
      "example": {
@@ -1401,6 +1525,7 @@
     {
      "id": "n5v125",
      "word": "{安|やす}い",
+     "hanViet": "An",
      "kana": "やすい",
      "meaningVi": "rẻ",
      "example": {
@@ -1412,6 +1537,7 @@
     {
      "id": "n5v126",
      "word": "{全部|ぜんぶ}",
+     "hanViet": "Toàn Bộ",
      "kana": "ぜんぶ",
      "meaningVi": "tất cả",
      "example": {
@@ -1423,6 +1549,7 @@
     {
      "id": "n5v127",
      "word": "{一|ひと}つ",
+     "hanViet": "Nhất",
      "kana": "ひとつ",
      "meaningVi": "một cái",
      "example": {
@@ -1440,6 +1567,7 @@
     {
      "id": "n5v128",
      "word": "{電車|でんしゃ}",
+     "hanViet": "Điện Xa",
      "kana": "でんしゃ",
      "meaningVi": "tàu điện",
      "example": {
@@ -1451,6 +1579,7 @@
     {
      "id": "n5v129",
      "word": "{地下鉄|ちかてつ}",
+     "hanViet": "Địa Hạ Thiết",
      "kana": "ちかてつ",
      "meaningVi": "tàu điện ngầm",
      "example": {
@@ -1462,6 +1591,7 @@
     {
      "id": "n5v130",
      "word": "{新幹線|しんかんせん}",
+     "hanViet": "Tân Cán Tuyến",
      "kana": "しんかんせん",
      "meaningVi": "tàu cao tốc Shinkansen",
      "example": {
@@ -1473,6 +1603,7 @@
     {
      "id": "n5v131",
      "word": "バス",
+     "hanViet": "",
      "kana": "バス",
      "meaningVi": "xe buýt",
      "example": {
@@ -1484,6 +1615,7 @@
     {
      "id": "n5v132",
      "word": "タクシー",
+     "hanViet": "",
      "kana": "タクシー",
      "meaningVi": "taxi",
      "example": {
@@ -1495,6 +1627,7 @@
     {
      "id": "n5v133",
      "word": "{車|くるま}",
+     "hanViet": "Xa",
      "kana": "くるま",
      "meaningVi": "xe hơi",
      "example": {
@@ -1506,6 +1639,7 @@
     {
      "id": "n5v134",
      "word": "{自転車|じてんしゃ}",
+     "hanViet": "Tự Chuyển Xa",
      "kana": "じてんしゃ",
      "meaningVi": "xe đạp",
      "example": {
@@ -1517,6 +1651,7 @@
     {
      "id": "n5v135",
      "word": "{飛行機|ひこうき}",
+     "hanViet": "Phi Hành Cơ",
      "kana": "ひこうき",
      "meaningVi": "máy bay",
      "example": {
@@ -1528,6 +1663,7 @@
     {
      "id": "n5v136",
      "word": "{切符|きっぷ}",
+     "hanViet": "Thiết Phù",
      "kana": "きっぷ",
      "meaningVi": "vé",
      "example": {
@@ -1539,6 +1675,7 @@
     {
      "id": "n5v137",
      "word": "{旅行|りょこう}",
+     "hanViet": "Lữ Hành",
      "kana": "りょこう",
      "meaningVi": "du lịch",
      "example": {
@@ -1550,6 +1687,7 @@
     {
      "id": "n5v138",
      "word": "{出張|しゅっちょう}",
+     "hanViet": "Xuất Trương",
      "kana": "しゅっちょう",
      "meaningVi": "công tác",
      "example": {
@@ -1561,6 +1699,7 @@
     {
      "id": "n5v139",
      "word": "{右|みぎ}",
+     "hanViet": "Hữu",
      "kana": "みぎ",
      "meaningVi": "bên phải",
      "example": {
@@ -1572,6 +1711,7 @@
     {
      "id": "n5v140",
      "word": "{左|ひだり}",
+     "hanViet": "Tả",
      "kana": "ひだり",
      "meaningVi": "bên trái",
      "example": {
@@ -1583,6 +1723,7 @@
     {
      "id": "n5v141",
      "word": "まっすぐ",
+     "hanViet": "",
      "kana": "まっすぐ",
      "meaningVi": "thẳng",
      "example": {
@@ -1594,6 +1735,7 @@
     {
      "id": "n5v142",
      "word": "{信号|しんごう}",
+     "hanViet": "Tín Hiệu",
      "kana": "しんごう",
      "meaningVi": "đèn giao thông",
      "example": {
@@ -1611,6 +1753,7 @@
     {
      "id": "n5v143",
      "word": "{机|つくえ}",
+     "hanViet": "Cơ",
      "kana": "つくえ",
      "meaningVi": "bàn",
      "example": {
@@ -1622,6 +1765,7 @@
     {
      "id": "n5v144",
      "word": "{椅子|いす}",
+     "hanViet": "Ỷ Tử",
      "kana": "いす",
      "meaningVi": "ghế",
      "example": {
@@ -1633,6 +1777,7 @@
     {
      "id": "n5v145",
      "word": "{窓|まど}",
+     "hanViet": "Song",
      "kana": "まど",
      "meaningVi": "cửa sổ",
      "example": {
@@ -1644,6 +1789,7 @@
     {
      "id": "n5v146",
      "word": "ドア",
+     "hanViet": "",
      "kana": "ドア",
      "meaningVi": "cửa",
      "example": {
@@ -1655,6 +1801,7 @@
     {
      "id": "n5v147",
      "word": "{電気|でんき}",
+     "hanViet": "Điện Khí",
      "kana": "でんき",
      "meaningVi": "điện, đèn",
      "example": {
@@ -1666,6 +1813,7 @@
     {
      "id": "n5v148",
      "word": "{鍵|かぎ}",
+     "hanViet": "Kiện",
      "kana": "かぎ",
      "meaningVi": "chìa khóa",
      "example": {
@@ -1677,6 +1825,7 @@
     {
      "id": "n5v149",
      "word": "{電話|でんわ}",
+     "hanViet": "Điện Thoại",
      "kana": "でんわ",
      "meaningVi": "điện thoại",
      "example": {
@@ -1688,6 +1837,7 @@
     {
      "id": "n5v150",
      "word": "テレビ",
+     "hanViet": "",
      "kana": "テレビ",
      "meaningVi": "tivi",
      "example": {
@@ -1699,6 +1849,7 @@
     {
      "id": "n5v151",
      "word": "{冷蔵庫|れいぞうこ}",
+     "hanViet": "Lãnh Tàng Khố",
      "kana": "れいぞうこ",
      "meaningVi": "tủ lạnh",
      "example": {
@@ -1710,6 +1861,7 @@
     {
      "id": "n5v152",
      "word": "{写真|しゃしん}",
+     "hanViet": "Tả Chân",
      "kana": "しゃしん",
      "meaningVi": "ảnh",
      "example": {
@@ -1721,6 +1873,7 @@
     {
      "id": "n5v153",
      "word": "{手紙|てがみ}",
+     "hanViet": "Thủ Chỉ",
      "kana": "てがみ",
      "meaningVi": "thư",
      "example": {
@@ -1732,6 +1885,7 @@
     {
      "id": "n5v154",
      "word": "{新聞|しんぶん}",
+     "hanViet": "Tân Văn",
      "kana": "しんぶん",
      "meaningVi": "báo",
      "example": {
@@ -1743,6 +1897,7 @@
     {
      "id": "n5v155",
      "word": "{紙|かみ}",
+     "hanViet": "Chỉ",
      "kana": "かみ",
      "meaningVi": "giấy",
      "example": {
@@ -1754,6 +1909,7 @@
     {
      "id": "n5v156",
      "word": "ペン",
+     "hanViet": "",
      "kana": "ペン",
      "meaningVi": "bút",
      "example": {
@@ -1765,6 +1921,7 @@
     {
      "id": "n5v157",
      "word": "{箱|はこ}",
+     "hanViet": "Tương",
      "kana": "はこ",
      "meaningVi": "hộp",
      "example": {
@@ -1782,6 +1939,7 @@
     {
      "id": "n5v158",
      "word": "{体|からだ}",
+     "hanViet": "Thể",
      "kana": "からだ",
      "meaningVi": "cơ thể",
      "example": {
@@ -1793,6 +1951,7 @@
     {
      "id": "n5v159",
      "word": "{頭|あたま}",
+     "hanViet": "Đầu",
      "kana": "あたま",
      "meaningVi": "đầu",
      "example": {
@@ -1804,6 +1963,7 @@
     {
      "id": "n5v160",
      "word": "{目|め}",
+     "hanViet": "Mục",
      "kana": "め",
      "meaningVi": "mắt",
      "example": {
@@ -1815,6 +1975,7 @@
     {
      "id": "n5v161",
      "word": "{耳|みみ}",
+     "hanViet": "Nhĩ",
      "kana": "みみ",
      "meaningVi": "tai",
      "example": {
@@ -1826,6 +1987,7 @@
     {
      "id": "n5v162",
      "word": "{口|くち}",
+     "hanViet": "Khẩu",
      "kana": "くち",
      "meaningVi": "miệng",
      "example": {
@@ -1837,6 +1999,7 @@
     {
      "id": "n5v163",
      "word": "{手|て}",
+     "hanViet": "Thủ",
      "kana": "て",
      "meaningVi": "tay",
      "example": {
@@ -1848,6 +2011,7 @@
     {
      "id": "n5v164",
      "word": "{足|あし}",
+     "hanViet": "Túc",
      "kana": "あし",
      "meaningVi": "chân",
      "example": {
@@ -1859,6 +2023,7 @@
     {
      "id": "n5v165",
      "word": "{歯|は}",
+     "hanViet": "Xỉ",
      "kana": "は",
      "meaningVi": "răng",
      "example": {
@@ -1870,6 +2035,7 @@
     {
      "id": "n5v166",
      "word": "{病気|びょうき}",
+     "hanViet": "Bệnh Khí",
      "kana": "びょうき",
      "meaningVi": "bệnh",
      "example": {
@@ -1881,6 +2047,7 @@
     {
      "id": "n5v167",
      "word": "{風邪|かぜ}",
+     "hanViet": "Phong Tà",
      "kana": "かぜ",
      "meaningVi": "cảm cúm",
      "example": {
@@ -1892,6 +2059,7 @@
     {
      "id": "n5v168",
      "word": "{熱|ねつ}",
+     "hanViet": "Nhiệt",
      "kana": "ねつ",
      "meaningVi": "sốt",
      "example": {
@@ -1903,6 +2071,7 @@
     {
      "id": "n5v169",
      "word": "{薬|くすり}",
+     "hanViet": "Dược",
      "kana": "くすり",
      "meaningVi": "thuốc",
      "example": {
@@ -1914,6 +2083,7 @@
     {
      "id": "n5v170",
      "word": "{元気|げんき}",
+     "hanViet": "Nguyên Khí",
      "kana": "げんき",
      "meaningVi": "khỏe mạnh",
      "example": {
@@ -1931,6 +2101,7 @@
     {
      "id": "n5v171",
      "word": "{天気|てんき}",
+     "hanViet": "Thiên Khí",
      "kana": "てんき",
      "meaningVi": "thời tiết",
      "example": {
@@ -1942,6 +2113,7 @@
     {
      "id": "n5v172",
      "word": "{雨|あめ}",
+     "hanViet": "Vũ",
      "kana": "あめ",
      "meaningVi": "mưa",
      "example": {
@@ -1953,6 +2125,7 @@
     {
      "id": "n5v173",
      "word": "{雪|ゆき}",
+     "hanViet": "Tuyết",
      "kana": "ゆき",
      "meaningVi": "tuyết",
      "example": {
@@ -1964,6 +2137,7 @@
     {
      "id": "n5v174",
      "word": "{風|かぜ}",
+     "hanViet": "Phong",
      "kana": "かぜ",
      "meaningVi": "gió",
      "example": {
@@ -1975,6 +2149,7 @@
     {
      "id": "n5v175",
      "word": "{空|そら}",
+     "hanViet": "Không",
      "kana": "そら",
      "meaningVi": "bầu trời",
      "example": {
@@ -1986,6 +2161,7 @@
     {
      "id": "n5v176",
      "word": "{山|やま}",
+     "hanViet": "Sơn",
      "kana": "やま",
      "meaningVi": "núi",
      "example": {
@@ -1997,6 +2173,7 @@
     {
      "id": "n5v177",
      "word": "{川|かわ}",
+     "hanViet": "Xuyên",
      "kana": "かわ",
      "meaningVi": "sông",
      "example": {
@@ -2008,6 +2185,7 @@
     {
      "id": "n5v178",
      "word": "{海|うみ}",
+     "hanViet": "Hải",
      "kana": "うみ",
      "meaningVi": "biển",
      "example": {
@@ -2019,6 +2197,7 @@
     {
      "id": "n5v179",
      "word": "{花|はな}",
+     "hanViet": "Hoa",
      "kana": "はな",
      "meaningVi": "hoa",
      "example": {
@@ -2030,6 +2209,7 @@
     {
      "id": "n5v180",
      "word": "{犬|いぬ}",
+     "hanViet": "Khuyển",
      "kana": "いぬ",
      "meaningVi": "con chó",
      "example": {
@@ -2041,6 +2221,7 @@
     {
      "id": "n5v181",
      "word": "{猫|ねこ}",
+     "hanViet": "Miêu",
      "kana": "ねこ",
      "meaningVi": "con mèo",
      "example": {
@@ -2052,6 +2233,7 @@
     {
      "id": "n5v182",
      "word": "{暑|あつ}い",
+     "hanViet": "Thử",
      "kana": "あつい",
      "meaningVi": "nóng (thời tiết)",
      "example": {
@@ -2063,6 +2245,7 @@
     {
      "id": "n5v183",
      "word": "{寒|さむ}い",
+     "hanViet": "Hàn",
      "kana": "さむい",
      "meaningVi": "lạnh (thời tiết)",
      "example": {
@@ -2074,6 +2257,7 @@
     {
      "id": "n5v184",
      "word": "{暖|あたた}かい",
+     "hanViet": "Noãn",
      "kana": "あたたかい",
      "meaningVi": "ấm áp",
      "example": {
@@ -2085,6 +2269,7 @@
     {
      "id": "n5v185",
      "word": "{涼|すず}しい",
+     "hanViet": "Lương",
      "kana": "すずしい",
      "meaningVi": "mát mẻ",
      "example": {
@@ -2102,6 +2287,7 @@
     {
      "id": "n5v186",
      "word": "{大|おお}きい",
+     "hanViet": "Đại",
      "kana": "おおきい",
      "meaningVi": "to, lớn",
      "example": {
@@ -2113,6 +2299,7 @@
     {
      "id": "n5v187",
      "word": "{小|ちい}さい",
+     "hanViet": "Tiểu",
      "kana": "ちいさい",
      "meaningVi": "nhỏ",
      "example": {
@@ -2124,6 +2311,7 @@
     {
      "id": "n5v188",
      "word": "{新|あたら}しい",
+     "hanViet": "Tân",
      "kana": "あたらしい",
      "meaningVi": "mới",
      "example": {
@@ -2135,6 +2323,7 @@
     {
      "id": "n5v189",
      "word": "{古|ふる}い",
+     "hanViet": "Cổ",
      "kana": "ふるい",
      "meaningVi": "cũ",
      "example": {
@@ -2146,6 +2335,7 @@
     {
      "id": "n5v190",
      "word": "いい",
+     "hanViet": "",
      "kana": "いい",
      "meaningVi": "tốt",
      "example": {
@@ -2157,6 +2347,7 @@
     {
      "id": "n5v191",
      "word": "{悪|わる}い",
+     "hanViet": "Ác",
      "kana": "わるい",
      "meaningVi": "xấu, tệ",
      "example": {
@@ -2168,6 +2359,7 @@
     {
      "id": "n5v192",
      "word": "おいしい",
+     "hanViet": "",
      "kana": "おいしい",
      "meaningVi": "ngon",
      "example": {
@@ -2179,6 +2371,7 @@
     {
      "id": "n5v193",
      "word": "{難|むずか}しい",
+     "hanViet": "Nan",
      "kana": "むずかしい",
      "meaningVi": "khó",
      "example": {
@@ -2190,6 +2383,7 @@
     {
      "id": "n5v194",
      "word": "{易|やさ}しい",
+     "hanViet": "Dị",
      "kana": "やさしい",
      "meaningVi": "dễ",
      "example": {
@@ -2201,6 +2395,7 @@
     {
      "id": "n5v195",
      "word": "{忙|いそが}しい",
+     "hanViet": "Mang",
      "kana": "いそがしい",
      "meaningVi": "bận",
      "example": {
@@ -2212,6 +2407,7 @@
     {
      "id": "n5v196",
      "word": "{楽|たの}しい",
+     "hanViet": "Lạc",
      "kana": "たのしい",
      "meaningVi": "vui",
      "example": {
@@ -2223,6 +2419,7 @@
     {
      "id": "n5v197",
      "word": "おもしろい",
+     "hanViet": "",
      "kana": "おもしろい",
      "meaningVi": "thú vị, hay",
      "example": {
@@ -2234,6 +2431,7 @@
     {
      "id": "n5v198",
      "word": "{近|ちか}い",
+     "hanViet": "Cận",
      "kana": "ちかい",
      "meaningVi": "gần",
      "example": {
@@ -2245,6 +2443,7 @@
     {
      "id": "n5v199",
      "word": "{遠|とお}い",
+     "hanViet": "Viễn",
      "kana": "とおい",
      "meaningVi": "xa",
      "example": {
@@ -2256,6 +2455,7 @@
     {
      "id": "n5v200",
      "word": "{早|はや}い",
+     "hanViet": "Tảo",
      "kana": "はやい",
      "meaningVi": "sớm",
      "example": {
@@ -2267,6 +2467,7 @@
     {
      "id": "n5v201",
      "word": "{長|なが}い",
+     "hanViet": "Trường",
      "kana": "ながい",
      "meaningVi": "dài",
      "example": {
@@ -2278,6 +2479,7 @@
     {
      "id": "n5v202",
      "word": "{短|みじか}い",
+     "hanViet": "Đoản",
      "kana": "みじかい",
      "meaningVi": "ngắn",
      "example": {
@@ -2289,6 +2491,7 @@
     {
      "id": "n5v203",
      "word": "{多|おお}い",
+     "hanViet": "Đa",
      "kana": "おおい",
      "meaningVi": "nhiều",
      "example": {
@@ -2300,6 +2503,7 @@
     {
      "id": "n5v204",
      "word": "{少|すく}ない",
+     "hanViet": "Thiểu",
      "kana": "すくない",
      "meaningVi": "ít",
      "example": {
@@ -2311,6 +2515,7 @@
     {
      "id": "n5v205",
      "word": "{痛|いた}い",
+     "hanViet": "Thống",
      "kana": "いたい",
      "meaningVi": "đau",
      "example": {
@@ -2328,6 +2533,7 @@
     {
      "id": "n5v206",
      "word": "{静|しず}か",
+     "hanViet": "Tĩnh",
      "kana": "しずか",
      "meaningVi": "yên tĩnh",
      "example": {
@@ -2339,6 +2545,7 @@
     {
      "id": "n5v207",
      "word": "にぎやか",
+     "hanViet": "",
      "kana": "にぎやか",
      "meaningVi": "náo nhiệt",
      "example": {
@@ -2350,6 +2557,7 @@
     {
      "id": "n5v208",
      "word": "きれい",
+     "hanViet": "",
      "kana": "きれい",
      "meaningVi": "đẹp, sạch",
      "example": {
@@ -2361,6 +2569,7 @@
     {
      "id": "n5v209",
      "word": "{有名|ゆうめい}",
+     "hanViet": "Hữu Danh",
      "kana": "ゆうめい",
      "meaningVi": "nổi tiếng",
      "example": {
@@ -2372,6 +2581,7 @@
     {
      "id": "n5v210",
      "word": "{親切|しんせつ}",
+     "hanViet": "Thân Thiết",
      "kana": "しんせつ",
      "meaningVi": "tốt bụng",
      "example": {
@@ -2383,6 +2593,7 @@
     {
      "id": "n5v211",
      "word": "{便利|べんり}",
+     "hanViet": "Tiện Lợi",
      "kana": "べんり",
      "meaningVi": "tiện lợi",
      "example": {
@@ -2394,6 +2605,7 @@
     {
      "id": "n5v212",
      "word": "{暇|ひま}",
+     "hanViet": "Hạ",
      "kana": "ひま",
      "meaningVi": "rảnh",
      "example": {
@@ -2405,6 +2617,7 @@
     {
      "id": "n5v213",
      "word": "{大丈夫|だいじょうぶ}",
+     "hanViet": "Đại Trượng Phu",
      "kana": "だいじょうぶ",
      "meaningVi": "không sao",
      "example": {
@@ -2416,6 +2629,7 @@
     {
      "id": "n5v214",
      "word": "{好|す}き",
+     "hanViet": "Hảo",
      "kana": "すき",
      "meaningVi": "thích",
      "example": {
@@ -2427,6 +2641,7 @@
     {
      "id": "n5v215",
      "word": "{嫌|きら}い",
+     "hanViet": "Hiềm",
      "kana": "きらい",
      "meaningVi": "ghét",
      "example": {
@@ -2438,6 +2653,7 @@
     {
      "id": "n5v216",
      "word": "{上手|じょうず}",
+     "hanViet": "Thượng Thủ",
      "kana": "じょうず",
      "meaningVi": "giỏi",
      "example": {
@@ -2449,6 +2665,7 @@
     {
      "id": "n5v217",
      "word": "{下手|へた}",
+     "hanViet": "Hạ Thủ",
      "kana": "へた",
      "meaningVi": "kém",
      "example": {
@@ -2460,6 +2677,7 @@
     {
      "id": "n5v218",
      "word": "{大切|たいせつ}",
+     "hanViet": "Đại Thiết",
      "kana": "たいせつ",
      "meaningVi": "quan trọng",
      "example": {
@@ -2471,6 +2689,7 @@
     {
      "id": "n5v219",
      "word": "{簡単|かんたん}",
+     "hanViet": "Giản Đơn",
      "kana": "かんたん",
      "meaningVi": "đơn giản",
      "example": {
@@ -2488,6 +2707,7 @@
     {
      "id": "n5v220",
      "word": "{行|い}く",
+     "hanViet": "Hành",
      "kana": "いく",
      "meaningVi": "đi",
      "example": {
@@ -2499,6 +2719,7 @@
     {
      "id": "n5v221",
      "word": "{来|く}る",
+     "hanViet": "Lai",
      "kana": "くる",
      "meaningVi": "đến",
      "example": {
@@ -2510,6 +2731,7 @@
     {
      "id": "n5v222",
      "word": "{帰|かえ}る",
+     "hanViet": "Quy",
      "kana": "かえる",
      "meaningVi": "về",
      "example": {
@@ -2521,6 +2743,7 @@
     {
      "id": "n5v223",
      "word": "{起|お}きる",
+     "hanViet": "Khởi",
      "kana": "おきる",
      "meaningVi": "thức dậy",
      "example": {
@@ -2532,6 +2755,7 @@
     {
      "id": "n5v224",
      "word": "{寝|ね}る",
+     "hanViet": "Tẩm",
      "kana": "ねる",
      "meaningVi": "ngủ",
      "example": {
@@ -2543,6 +2767,7 @@
     {
      "id": "n5v225",
      "word": "{食|た}べる",
+     "hanViet": "Thực",
      "kana": "たべる",
      "meaningVi": "ăn",
      "example": {
@@ -2554,6 +2779,7 @@
     {
      "id": "n5v226",
      "word": "{飲|の}む",
+     "hanViet": "Ẩm",
      "kana": "のむ",
      "meaningVi": "uống",
      "example": {
@@ -2565,6 +2791,7 @@
     {
      "id": "n5v227",
      "word": "{見|み}る",
+     "hanViet": "Kiến",
      "kana": "みる",
      "meaningVi": "xem, nhìn",
      "example": {
@@ -2576,6 +2803,7 @@
     {
      "id": "n5v228",
      "word": "{聞|き}く",
+     "hanViet": "Văn",
      "kana": "きく",
      "meaningVi": "nghe; hỏi",
      "example": {
@@ -2587,6 +2815,7 @@
     {
      "id": "n5v229",
      "word": "{話|はな}す",
+     "hanViet": "Thoại",
      "kana": "はなす",
      "meaningVi": "nói chuyện",
      "example": {
@@ -2598,6 +2827,7 @@
     {
      "id": "n5v230",
      "word": "{読|よ}む",
+     "hanViet": "Độc",
      "kana": "よむ",
      "meaningVi": "đọc",
      "example": {
@@ -2609,6 +2839,7 @@
     {
      "id": "n5v231",
      "word": "{書|か}く",
+     "hanViet": "Thư",
      "kana": "かく",
      "meaningVi": "viết",
      "example": {
@@ -2620,6 +2851,7 @@
     {
      "id": "n5v232",
      "word": "{買|か}う",
+     "hanViet": "Mãi",
      "kana": "かう",
      "meaningVi": "mua",
      "example": {
@@ -2631,6 +2863,7 @@
     {
      "id": "n5v233",
      "word": "{会|あ}う",
+     "hanViet": "Hội",
      "kana": "あう",
      "meaningVi": "gặp",
      "example": {
@@ -2642,6 +2875,7 @@
     {
      "id": "n5v234",
      "word": "{待|ま}つ",
+     "hanViet": "Đãi",
      "kana": "まつ",
      "meaningVi": "chờ",
      "example": {
@@ -2653,6 +2887,7 @@
     {
      "id": "n5v235",
      "word": "{働|はたら}く",
+     "hanViet": "Động",
      "kana": "はたらく",
      "meaningVi": "làm việc",
      "example": {
@@ -2664,6 +2899,7 @@
     {
      "id": "n5v236",
      "word": "{休|やす}む",
+     "hanViet": "Hưu",
      "kana": "やすむ",
      "meaningVi": "nghỉ",
      "example": {
@@ -2675,6 +2911,7 @@
     {
      "id": "n5v237",
      "word": "{勉強|べんきょう}する",
+     "hanViet": "Miễn Cường",
      "kana": "べんきょうする",
      "meaningVi": "học",
      "example": {
@@ -2686,6 +2923,7 @@
     {
      "id": "n5v238",
      "word": "{分|わ}かる",
+     "hanViet": "Phân",
      "kana": "わかる",
      "meaningVi": "hiểu",
      "example": {
@@ -2697,6 +2935,7 @@
     {
      "id": "n5v239",
      "word": "ある",
+     "hanViet": "",
      "kana": "ある",
      "meaningVi": "có (đồ vật)",
      "example": {
@@ -2708,6 +2947,7 @@
     {
      "id": "n5v240",
      "word": "いる",
+     "hanViet": "",
      "kana": "いる",
      "meaningVi": "có, ở (người, vật)",
      "example": {
@@ -2719,6 +2959,7 @@
     {
      "id": "n5v241",
      "word": "{使|つか}う",
+     "hanViet": "Sử",
      "kana": "つかう",
      "meaningVi": "dùng",
      "example": {
@@ -2730,6 +2971,7 @@
     {
      "id": "n5v242",
      "word": "{作|つく}る",
+     "hanViet": "Tác",
      "kana": "つくる",
      "meaningVi": "làm, nấu",
      "example": {
@@ -2741,6 +2983,7 @@
     {
      "id": "n5v243",
      "word": "{送|おく}る",
+     "hanViet": "Tống",
      "kana": "おくる",
      "meaningVi": "gửi",
      "example": {
@@ -2752,6 +2995,7 @@
     {
      "id": "n5v244",
      "word": "{入|はい}る",
+     "hanViet": "Nhập",
      "kana": "はいる",
      "meaningVi": "vào",
      "example": {
@@ -2763,6 +3007,7 @@
     {
      "id": "n5v245",
      "word": "{出|で}る",
+     "hanViet": "Xuất",
      "kana": "でる",
      "meaningVi": "ra, rời",
      "example": {
@@ -2774,6 +3019,7 @@
     {
      "id": "n5v246",
      "word": "{乗|の}る",
+     "hanViet": "Thừa",
      "kana": "のる",
      "meaningVi": "lên (xe)",
      "example": {
@@ -2785,6 +3031,7 @@
     {
      "id": "n5v247",
      "word": "{降|お}りる",
+     "hanViet": "Giáng",
      "kana": "おりる",
      "meaningVi": "xuống (xe)",
      "example": {
@@ -2796,6 +3043,7 @@
     {
      "id": "n5v248",
      "word": "{始|はじ}まる",
+     "hanViet": "Thủy",
      "kana": "はじまる",
      "meaningVi": "bắt đầu",
      "example": {
@@ -2807,6 +3055,7 @@
     {
      "id": "n5v249",
      "word": "{終|お}わる",
+     "hanViet": "Chung",
      "kana": "おわる",
      "meaningVi": "kết thúc",
      "example": {
@@ -2818,6 +3067,7 @@
     {
      "id": "n5v250",
      "word": "{教|おし}える",
+     "hanViet": "Giáo",
      "kana": "おしえる",
      "meaningVi": "dạy, chỉ",
      "example": {
@@ -2829,6 +3079,7 @@
     {
      "id": "n5v251",
      "word": "{習|なら}う",
+     "hanViet": "Tập",
      "kana": "ならう",
      "meaningVi": "học (từ ai)",
      "example": {
@@ -2840,6 +3091,7 @@
     {
      "id": "n5v252",
      "word": "{借|か}りる",
+     "hanViet": "Tá",
      "kana": "かりる",
      "meaningVi": "mượn",
      "example": {
@@ -2851,6 +3103,7 @@
     {
      "id": "n5v253",
      "word": "{貸|か}す",
+     "hanViet": "Thải",
      "kana": "かす",
      "meaningVi": "cho mượn",
      "example": {
@@ -2862,6 +3115,7 @@
     {
      "id": "n5v254",
      "word": "{持|も}つ",
+     "hanViet": "Trì",
      "kana": "もつ",
      "meaningVi": "cầm, mang",
      "example": {
@@ -2873,6 +3127,7 @@
     {
      "id": "n5v255",
      "word": "{忘|わす}れる",
+     "hanViet": "Vong",
      "kana": "わすれる",
      "meaningVi": "quên",
      "example": {
@@ -2884,6 +3139,7 @@
     {
      "id": "n5v256",
      "word": "{覚|おぼ}える",
+     "hanViet": "Giác",
      "kana": "おぼえる",
      "meaningVi": "nhớ, thuộc",
      "example": {
@@ -2895,6 +3151,7 @@
     {
      "id": "n5v257",
      "word": "{知|し}る",
+     "hanViet": "Tri",
      "kana": "しる",
      "meaningVi": "biết",
      "example": {
@@ -2906,6 +3163,7 @@
     {
      "id": "n5v258",
      "word": "{住|す}む",
+     "hanViet": "Trú",
      "kana": "すむ",
      "meaningVi": "sống, cư trú",
      "example": {
@@ -2917,6 +3175,7 @@
     {
      "id": "n5v259",
      "word": "{遊|あそ}ぶ",
+     "hanViet": "Du",
      "kana": "あそぶ",
      "meaningVi": "chơi",
      "example": {
@@ -2928,6 +3187,7 @@
     {
      "id": "n5v260",
      "word": "{泳|およ}ぐ",
+     "hanViet": "Vịnh",
      "kana": "およぐ",
      "meaningVi": "bơi",
      "example": {
@@ -2939,6 +3199,7 @@
     {
      "id": "n5v261",
      "word": "{歩|ある}く",
+     "hanViet": "Bộ",
      "kana": "あるく",
      "meaningVi": "đi bộ",
      "example": {
@@ -2950,6 +3211,7 @@
     {
      "id": "n5v262",
      "word": "{開|あ}ける",
+     "hanViet": "Khai",
      "kana": "あける",
      "meaningVi": "mở",
      "example": {
@@ -2961,6 +3223,7 @@
     {
      "id": "n5v263",
      "word": "{閉|し}める",
+     "hanViet": "Bế",
      "kana": "しめる",
      "meaningVi": "đóng",
      "example": {
@@ -2972,6 +3235,7 @@
     {
      "id": "n5v264",
      "word": "つける",
+     "hanViet": "",
      "kana": "つける",
      "meaningVi": "bật (đèn, máy)",
      "example": {
@@ -2983,6 +3247,7 @@
     {
      "id": "n5v265",
      "word": "{消|け}す",
+     "hanViet": "Tiêu",
      "kana": "けす",
      "meaningVi": "tắt",
      "example": {
@@ -2994,6 +3259,7 @@
     {
      "id": "n5v266",
      "word": "{撮|と}る",
+     "hanViet": "Toát",
      "kana": "とる",
      "meaningVi": "chụp (ảnh)",
      "example": {
@@ -3005,6 +3271,7 @@
     {
      "id": "n5v267",
      "word": "{洗|あら}う",
+     "hanViet": "Tẩy",
      "kana": "あらう",
      "meaningVi": "rửa, giặt",
      "example": {
@@ -3016,6 +3283,7 @@
     {
      "id": "n5v268",
      "word": "{呼|よ}ぶ",
+     "hanViet": "Hô",
      "kana": "よぶ",
      "meaningVi": "gọi",
      "example": {
@@ -3027,6 +3295,7 @@
     {
      "id": "n5v269",
      "word": "{急|いそ}ぐ",
+     "hanViet": "Cấp",
      "kana": "いそぐ",
      "meaningVi": "vội, gấp",
      "example": {
@@ -3044,6 +3313,7 @@
     {
      "id": "n5v270",
      "word": "おはようございます",
+     "hanViet": "",
      "kana": "おはようございます",
      "meaningVi": "chào buổi sáng",
      "example": {
@@ -3055,6 +3325,7 @@
     {
      "id": "n5v271",
      "word": "こんにちは",
+     "hanViet": "",
      "kana": "こんにちは",
      "meaningVi": "xin chào (ban ngày)",
      "example": {
@@ -3066,6 +3337,7 @@
     {
      "id": "n5v272",
      "word": "こんばんは",
+     "hanViet": "",
      "kana": "こんばんは",
      "meaningVi": "chào buổi tối",
      "example": {
@@ -3077,6 +3349,7 @@
     {
      "id": "n5v273",
      "word": "ありがとうございます",
+     "hanViet": "",
      "kana": "ありがとうございます",
      "meaningVi": "cảm ơn",
      "example": {
@@ -3088,6 +3361,7 @@
     {
      "id": "n5v274",
      "word": "すみません",
+     "hanViet": "",
      "kana": "すみません",
      "meaningVi": "xin lỗi; xin phép",
      "example": {
@@ -3099,6 +3373,7 @@
     {
      "id": "n5v275",
      "word": "{失礼|しつれい}します",
+     "hanViet": "Thất Lễ",
      "kana": "しつれいします",
      "meaningVi": "xin phép (vào, về)",
      "example": {
@@ -3110,6 +3385,7 @@
     {
      "id": "n5v276",
      "word": "お{願|ねが}いします",
+     "hanViet": "Nguyện",
      "kana": "おねがいします",
      "meaningVi": "làm ơn, nhờ",
      "example": {
@@ -3121,6 +3397,7 @@
     {
      "id": "n5v277",
      "word": "いただきます",
+     "hanViet": "",
      "kana": "いただきます",
      "meaningVi": "mời ăn (trước bữa)",
      "example": {
@@ -3132,6 +3409,7 @@
     {
      "id": "n5v278",
      "word": "ごちそうさまでした",
+     "hanViet": "",
      "kana": "ごちそうさまでした",
      "meaningVi": "cảm ơn vì bữa ăn",
      "example": {
@@ -3143,6 +3421,7 @@
     {
      "id": "n5v279",
      "word": "{行|い}って　きます",
+     "hanViet": "Hành",
      "kana": "いってきます",
      "meaningVi": "tôi đi đây",
      "example": {
@@ -3154,6 +3433,7 @@
     {
      "id": "n5v280",
      "word": "ただいま",
+     "hanViet": "",
      "kana": "ただいま",
      "meaningVi": "tôi về rồi",
      "example": {
@@ -3165,6 +3445,7 @@
     {
      "id": "n5v281",
      "word": "お{疲|つか}れさまでした",
+     "hanViet": "Bì",
      "kana": "おつかれさまでした",
      "meaningVi": "anh/chị vất vả rồi",
      "example": {
@@ -3176,6 +3457,7 @@
     {
      "id": "n5v282",
      "word": "{大丈夫|だいじょうぶ}です",
+     "hanViet": "Đại Trượng Phu",
      "kana": "だいじょうぶです",
      "meaningVi": "không sao",
      "example": {
@@ -3187,6 +3469,7 @@
     {
      "id": "n5v283",
      "word": "どうぞ",
+     "hanViet": "",
      "kana": "どうぞ",
      "meaningVi": "xin mời",
      "example": {
@@ -3198,6 +3481,7 @@
     {
      "id": "n5v284",
      "word": "はじめまして",
+     "hanViet": "",
      "kana": "はじめまして",
      "meaningVi": "rất vui được gặp (lần đầu)",
      "example": {
@@ -3215,6 +3499,7 @@
     {
      "id": "n5v285",
      "word": "{何|なん}・{何|なに}",
+     "hanViet": "Hà",
      "kana": "なん・なに",
      "meaningVi": "cái gì",
      "example": {
@@ -3226,6 +3511,7 @@
     {
      "id": "n5v286",
      "word": "だれ",
+     "hanViet": "",
      "kana": "だれ",
      "meaningVi": "ai",
      "example": {
@@ -3237,6 +3523,7 @@
     {
      "id": "n5v287",
      "word": "どこ",
+     "hanViet": "",
      "kana": "どこ",
      "meaningVi": "ở đâu",
      "example": {
@@ -3248,6 +3535,7 @@
     {
      "id": "n5v288",
      "word": "いつ",
+     "hanViet": "",
      "kana": "いつ",
      "meaningVi": "khi nào",
      "example": {
@@ -3259,6 +3547,7 @@
     {
      "id": "n5v289",
      "word": "いくら",
+     "hanViet": "",
      "kana": "いくら",
      "meaningVi": "bao nhiêu tiền",
      "example": {
@@ -3270,6 +3559,7 @@
     {
      "id": "n5v290",
      "word": "どうして",
+     "hanViet": "",
      "kana": "どうして",
      "meaningVi": "tại sao",
      "example": {
@@ -3281,6 +3571,7 @@
     {
      "id": "n5v291",
      "word": "どう",
+     "hanViet": "",
      "kana": "どう",
      "meaningVi": "thế nào",
      "example": {
@@ -3292,6 +3583,7 @@
     {
      "id": "n5v292",
      "word": "どれ",
+     "hanViet": "",
      "kana": "どれ",
      "meaningVi": "cái nào",
      "example": {
@@ -3303,6 +3595,7 @@
     {
      "id": "n5v293",
      "word": "とても",
+     "hanViet": "",
      "kana": "とても",
      "meaningVi": "rất",
      "example": {
@@ -3314,6 +3607,7 @@
     {
      "id": "n5v294",
      "word": "あまり",
+     "hanViet": "",
      "kana": "あまり",
      "meaningVi": "không... lắm",
      "example": {
@@ -3325,6 +3619,7 @@
     {
      "id": "n5v295",
      "word": "{全然|ぜんぜん}",
+     "hanViet": "Toàn Nhiên",
      "kana": "ぜんぜん",
      "meaningVi": "hoàn toàn không",
      "example": {
@@ -3336,6 +3631,7 @@
     {
      "id": "n5v296",
      "word": "よく",
+     "hanViet": "",
      "kana": "よく",
      "meaningVi": "thường, rõ",
      "example": {
@@ -3347,6 +3643,7 @@
     {
      "id": "n5v297",
      "word": "ときどき",
+     "hanViet": "",
      "kana": "ときどき",
      "meaningVi": "thỉnh thoảng",
      "example": {
@@ -3358,6 +3655,7 @@
     {
      "id": "n5v298",
      "word": "いつも",
+     "hanViet": "",
      "kana": "いつも",
      "meaningVi": "luôn luôn",
      "example": {
@@ -3369,6 +3667,7 @@
     {
      "id": "n5v299",
      "word": "もう",
+     "hanViet": "",
      "kana": "もう",
      "meaningVi": "đã, rồi",
      "example": {
@@ -3380,6 +3679,7 @@
     {
      "id": "n5v300",
      "word": "まだ",
+     "hanViet": "",
      "kana": "まだ",
      "meaningVi": "vẫn, chưa",
      "example": {
@@ -3391,6 +3691,7 @@
     {
      "id": "n5v301",
      "word": "{少|すこ}し",
+     "hanViet": "Thiểu",
      "kana": "すこし",
      "meaningVi": "một chút",
      "example": {
@@ -3402,6 +3703,7 @@
     {
      "id": "n5v302",
      "word": "たくさん",
+     "hanViet": "",
      "kana": "たくさん",
      "meaningVi": "nhiều",
      "example": {
@@ -3413,6 +3715,7 @@
     {
      "id": "n5v303",
      "word": "{一緒|いっしょ}に",
+     "hanViet": "Nhất Tự",
      "kana": "いっしょに",
      "meaningVi": "cùng nhau",
      "example": {
@@ -3424,6 +3727,7 @@
     {
      "id": "n5v304",
      "word": "ゆっくり",
+     "hanViet": "",
      "kana": "ゆっくり",
      "meaningVi": "chậm, thong thả",
      "example": {

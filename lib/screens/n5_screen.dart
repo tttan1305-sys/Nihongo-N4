@@ -358,7 +358,6 @@ class _TopicScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final text = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(title: Text(topic.titleVi)),
       floatingActionButton: FloatingActionButton.extended(
@@ -371,40 +370,115 @@ class _TopicScreen extends StatelessWidget {
           vocabQuiz(topic, topics),
         ),
       ),
-      body: ListView.separated(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 96),
-        itemCount: topic.words.length,
-        separatorBuilder: (_, _) => const Divider(),
-        itemBuilder: (context, i) {
-          final w = topic.words[i];
-          return Column(
-            key: ValueKey('n5-word-${w.id}'),
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(12, 8, 12, 96),
+        children: [
+          const _VocabRow(
+            cells: ['Từ', 'Hán Việt', 'Cách đọc', 'Nghĩa'],
+            header: true,
+          ),
+          for (final w in topic.words)
+            _VocabRow(
+              key: ValueKey('n5-word-${w.id}'),
+              cells: [w.word, w.hanViet, w.kana, w.meaningVi],
+              trailing: ListenButton(
+                speaker: speaker,
+                lesson: n5AudioLesson,
+                audioId: w.id,
+                text: w.kana,
+              ),
+              example: _Example(w.example, speaker),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Một dòng bảng từ vựng theo kiểu sổ tay từ vựng N5:
+/// Từ | Hán Việt | Cách đọc | Nghĩa. Bấm vào dòng để xem câu ví dụ.
+class _VocabRow extends StatefulWidget {
+  final List<String> cells;
+  final bool header;
+  final Widget? trailing;
+  final Widget? example;
+
+  const _VocabRow({
+    super.key,
+    required this.cells,
+    this.header = false,
+    this.trailing,
+    this.example,
+  });
+
+  @override
+  State<_VocabRow> createState() => _VocabRowState();
+}
+
+class _VocabRowState extends State<_VocabRow> {
+  bool _open = false;
+
+  static const _flex = [5, 5, 5, 6];
+
+  @override
+  Widget build(BuildContext context) {
+    final header = widget.header;
+    final style = TextStyle(
+      fontSize: header ? 13 : 15,
+      fontWeight: header ? FontWeight.w700 : FontWeight.w400,
+      color: header ? Colors.white : const Color(0xFF1B2440),
+    );
+    final row = Row(
+      children: [
+        for (var i = 0; i < 4; i++)
+          Expanded(
+            flex: _flex[i],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: i == 0 && !header
+                  ? RubyText(
+                      widget.cells[i],
+                      showRuby: false,
+                      style: style.copyWith(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    )
+                  : Text(widget.cells[i], style: style),
+            ),
+          ),
+        SizedBox(width: 44, child: widget.trailing),
+      ],
+    );
+    return Container(
+      decoration: BoxDecoration(
+        color: header
+            ? const Color(0xFF2F6BFF)
+            : _open
+            ? const Color(0xFFF4F7FD)
+            : Colors.white,
+        border: const Border(bottom: BorderSide(color: Color(0xFFE3E8F2))),
+        borderRadius: header
+            ? const BorderRadius.vertical(top: Radius.circular(12))
+            : null,
+      ),
+      padding: EdgeInsets.symmetric(vertical: header ? 10 : 6),
+      child: header || widget.example == null
+          ? row
+          : InkWell(
+              onTap: () => setState(() => _open = !_open),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        RubyText(w.word, style: const TextStyle(fontSize: 24)),
-                        Text(w.meaningVi, style: text.titleSmall),
-                      ],
+                  row,
+                  if (_open)
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 6, 0, 2),
+                      child: widget.example,
                     ),
-                  ),
-                  ListenButton(
-                    speaker: speaker,
-                    lesson: n5AudioLesson,
-                    audioId: w.id,
-                    text: w.kana,
-                  ),
                 ],
               ),
-              _Example(w.example, speaker),
-            ],
-          );
-        },
-      ),
+            ),
     );
   }
 }

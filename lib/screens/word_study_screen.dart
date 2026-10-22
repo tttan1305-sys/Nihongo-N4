@@ -139,6 +139,17 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                                   color: AppColors.muted,
                                 ),
                               ),
+                              if (w.hanViet.isNotEmpty)
+                                Text(
+                                  w.hanViet.toUpperCase(),
+                                  key: const ValueKey('study-hanviet'),
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                    letterSpacing: 1,
+                                    fontWeight: FontWeight.w600,
+                                    color: AppColors.purple,
+                                  ),
+                                ),
                               const SizedBox(height: 10),
                               Text(
                                 w.meaningVi,

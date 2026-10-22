@@ -130,7 +130,12 @@ class _VocabCard extends StatelessWidget {
               ],
             ),
             Text(vocab.meaningVi, style: text.titleMedium),
-            Text(vocab.pos, style: text.bodySmall),
+            Text(
+              vocab.hanViet.isEmpty
+                  ? vocab.pos
+                  : 'Hán Việt: ${vocab.hanViet} · ${vocab.pos}',
+              style: text.bodySmall,
+            ),
             const Divider(),
             Text('Dùng thực tế: ${p.situationVi}', style: text.labelMedium),
             Row(

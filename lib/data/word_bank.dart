@@ -10,6 +10,9 @@ class WordEntry {
   /// Mã duy nhất: `26:v01` cho từ bài 26, `n5:n5v001` cho từ N5.
   final String key;
   final String word;
+
+  /// Âm Hán Việt ("Hội Xã Viên"), "" nếu từ không có chữ Hán.
+  final String hanViet;
   final String kana;
   final String meaningVi;
   final String level;
@@ -25,6 +28,7 @@ class WordEntry {
   const WordEntry({
     required this.key,
     required this.word,
+    this.hanViet = '',
     required this.kana,
     required this.meaningVi,
     required this.level,
@@ -37,6 +41,7 @@ class WordEntry {
   factory WordEntry.fromVocab(int lesson, Vocab v) => WordEntry(
     key: '$lesson:${v.id}',
     word: v.word,
+    hanViet: v.hanViet,
     kana: v.kana,
     meaningVi: v.meaningVi,
     level: 'N4',
@@ -49,6 +54,7 @@ class WordEntry {
   factory WordEntry.fromN5(N5Word w) => WordEntry(
     key: 'n5:${w.id}',
     word: w.word,
+    hanViet: w.hanViet,
     kana: w.kana,
     meaningVi: w.meaningVi,
     level: 'N5',

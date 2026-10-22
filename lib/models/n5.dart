@@ -204,6 +204,9 @@ class N5GrammarLesson {
 class N5Word {
   final String id;
   final String word;
+
+  /// Âm Hán Việt, ví dụ 会社員 → "Hội Xã Viên" ("" nếu từ không có chữ Hán).
+  final String hanViet;
   final String kana;
   final String meaningVi;
   final Sentence example;
@@ -211,6 +214,7 @@ class N5Word {
   const N5Word({
     required this.id,
     required this.word,
+    this.hanViet = '',
     required this.kana,
     required this.meaningVi,
     required this.example,
@@ -219,6 +223,7 @@ class N5Word {
   factory N5Word.fromJson(Map<String, dynamic> j) => N5Word(
     id: j['id'] as String,
     word: j['word'] as String,
+    hanViet: j['hanViet'] as String? ?? '',
     kana: j['kana'] as String,
     meaningVi: j['meaningVi'] as String,
     example: Sentence.fromJson(j['example'] as Map<String, dynamic>),
@@ -354,7 +359,12 @@ class N5Kanji {
   final String reading;
   final int strokes;
   final String radical;
+
+  /// Tên bộ theo kiểu bảng bộ thủ: "Miên (mái nhà)".
   final String radicalName;
+
+  /// Tên bộ tiếng Nhật: "うかんむり".
+  final String radicalJa;
   final String mnemonicVi;
   final Sentence example;
 
@@ -369,6 +379,7 @@ class N5Kanji {
     required this.strokes,
     required this.radical,
     required this.radicalName,
+    this.radicalJa = '',
     required this.mnemonicVi,
     required this.example,
   });
@@ -384,6 +395,7 @@ class N5Kanji {
     strokes: j['strokes'] as int,
     radical: j['radical'] as String,
     radicalName: j['radicalName'] as String,
+    radicalJa: j['radicalJa'] as String? ?? '',
     mnemonicVi: j['mnemonicVi'] as String,
     example: Sentence.fromJson(j['example'] as Map<String, dynamic>),
   );

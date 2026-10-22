@@ -11,7 +11,8 @@
    "reading": "いち",
    "strokes": 1,
    "radical": "一",
-   "radicalName": "いち",
+   "radicalName": "Nhất (số một)",
+   "radicalJa": "いち",
    "mnemonicVi": "Một nét ngang nằm yên: số một.",
    "example": {
     "id": "k001_e",
@@ -29,7 +30,8 @@
    "reading": "に",
    "strokes": 2,
    "radical": "二",
-   "radicalName": "に",
+   "radicalName": "Nhị (số hai)",
+   "radicalJa": "に",
    "mnemonicVi": "Hai nét ngang chồng lên nhau: số hai.",
    "example": {
     "id": "k002_e",
@@ -47,7 +49,8 @@
    "reading": "さん",
    "strokes": 3,
    "radical": "一",
-   "radicalName": "いち",
+   "radicalName": "Nhất (số một)",
+   "radicalJa": "いち",
    "mnemonicVi": "Ba nét ngang: số ba.",
    "example": {
     "id": "k003_e",
@@ -65,7 +68,8 @@
    "reading": "よん",
    "strokes": 5,
    "radical": "囗",
-   "radicalName": "くにがまえ",
+   "radicalName": "Vi (vây quanh)",
+   "radicalJa": "くにがまえ",
    "mnemonicVi": "Một căn phòng vuông bốn góc, bên trong có hai chân bàn.",
    "example": {
     "id": "k004_e",
@@ -83,7 +87,8 @@
    "reading": "ご",
    "strokes": 4,
    "radical": "二",
-   "radicalName": "に",
+   "radicalName": "Nhị (số hai)",
+   "radicalJa": "に",
    "mnemonicVi": "Giữa trời và đất (hai nét ngang) có số năm đứng giữa.",
    "example": {
     "id": "k005_e",
@@ -101,7 +106,8 @@
    "reading": "ろく",
    "strokes": 4,
    "radical": "八",
-   "radicalName": "はち",
+   "radicalName": "Bát (số tám)",
+   "radicalJa": "はち",
    "mnemonicVi": "Người đội mũ dang hai chân: sáu.",
    "example": {
     "id": "k006_e",
@@ -119,7 +125,8 @@
    "reading": "なな",
    "strokes": 2,
    "radical": "一",
-   "radicalName": "いち",
+   "radicalName": "Nhất (số một)",
+   "radicalJa": "いち",
    "mnemonicVi": "Giống số 7 lộn ngược, có một nét cắt ngang.",
    "example": {
     "id": "k007_e",
@@ -137,7 +144,8 @@
    "reading": "はち",
    "strokes": 2,
    "radical": "八",
-   "radicalName": "はち",
+   "radicalName": "Bát (số tám)",
+   "radicalJa": "はち",
    "mnemonicVi": "Hai nét tách ra như mái nhà hình chữ bát: tám.",
    "example": {
     "id": "k008_e",
@@ -155,7 +163,8 @@
    "reading": "きゅう",
    "strokes": 2,
    "radical": "乙",
-   "radicalName": "おつ",
+   "radicalName": "Ất (can thứ hai)",
+   "radicalJa": "おつ",
    "mnemonicVi": "Cánh tay co lại sắp với tới mười: chín.",
    "example": {
     "id": "k009_e",
@@ -173,7 +182,8 @@
    "reading": "じゅう",
    "strokes": 2,
    "radical": "十",
-   "radicalName": "じゅう",
+   "radicalName": "Thập (số mười)",
+   "radicalJa": "じゅう",
    "mnemonicVi": "Dấu cộng: đủ mười ngón tay đan chéo.",
    "example": {
     "id": "k010_e",
@@ -191,7 +201,8 @@
    "reading": "ひゃく",
    "strokes": 6,
    "radical": "白",
-   "radicalName": "しろ",
+   "radicalName": "Bạch (màu trắng)",
+   "radicalJa": "しろ",
    "mnemonicVi": "Một nét ngang trên chữ trắng: một trăm tờ giấy trắng.",
    "example": {
     "id": "k011_e",
@@ -209,7 +220,8 @@
    "reading": "せん",
    "strokes": 3,
    "radical": "十",
-   "radicalName": "じゅう",
+   "radicalName": "Thập (số mười)",
+   "radicalJa": "じゅう",
    "mnemonicVi": "Chữ mười có thêm nét phẩy trên đầu: nhiều gấp trăm lần.",
    "example": {
     "id": "k012_e",
@@ -227,7 +239,8 @@
    "reading": "まん",
    "strokes": 3,
    "radical": "一",
-   "radicalName": "いち",
+   "radicalName": "Nhất (số một)",
+   "radicalJa": "いち",
    "mnemonicVi": "Một nét ngang dài che cả vạn thứ bên dưới.",
    "example": {
     "id": "k013_e",
@@ -245,7 +258,8 @@
    "reading": "えん",
    "strokes": 4,
    "radical": "冂",
-   "radicalName": "けいがまえ",
+   "radicalName": "Quynh (biên giới)",
+   "radicalJa": "けいがまえ",
    "mnemonicVi": "Cái ví hình vuông đựng đồng tiền yên.",
    "example": {
     "id": "k014_e",
@@ -263,7 +277,8 @@
    "reading": "ひ",
    "strokes": 4,
    "radical": "日",
-   "radicalName": "ひ",
+   "radicalName": "Nhật (mặt trời)",
+   "radicalJa": "ひ",
    "mnemonicVi": "Mặt trời vẽ thành hình vuông có một vạch ở giữa.",
    "example": {
     "id": "k015_e",
@@ -281,7 +296,8 @@
    "reading": "つき",
    "strokes": 4,
    "radical": "月",
-   "radicalName": "つき",
+   "radicalName": "Nguyệt (mặt trăng)",
+   "radicalJa": "つき",
    "mnemonicVi": "Vầng trăng khuyết có hai vệt mây ngang.",
    "example": {
     "id": "k016_e",
@@ -299,7 +315,8 @@
    "reading": "ひ",
    "strokes": 4,
    "radical": "火",
-   "radicalName": "ひ",
+   "radicalName": "Hỏa (lửa)",
+   "radicalJa": "ひ",
    "mnemonicVi": "Đống lửa có tia lửa bắn sang hai bên.",
    "example": {
     "id": "k017_e",
@@ -317,7 +334,8 @@
    "reading": "みず",
    "strokes": 4,
    "radical": "水",
-   "radicalName": "みず",
+   "radicalName": "Thủy (nước)",
+   "radicalJa": "みず",
    "mnemonicVi": "Dòng nước chảy ở giữa, bọt nước bắn hai bên.",
    "example": {
     "id": "k018_e",
@@ -335,7 +353,8 @@
    "reading": "き",
    "strokes": 4,
    "radical": "木",
-   "radicalName": "き",
+   "radicalName": "Mộc (cây)",
+   "radicalJa": "き",
    "mnemonicVi": "Cái cây có thân, cành ngang và rễ tỏa xuống.",
    "example": {
     "id": "k019_e",
@@ -353,7 +372,8 @@
    "reading": "かね",
    "strokes": 8,
    "radical": "金",
-   "radicalName": "かね",
+   "radicalName": "Kim (kim loại)",
+   "radicalJa": "かね",
    "mnemonicVi": "Dưới mái nhà có thỏi vàng chôn trong đất.",
    "example": {
     "id": "k020_e",
@@ -371,7 +391,8 @@
    "reading": "つち",
    "strokes": 3,
    "radical": "土",
-   "radicalName": "つち",
+   "radicalName": "Thổ (đất)",
+   "radicalJa": "つち",
    "mnemonicVi": "Mầm cây nhú lên khỏi mặt đất.",
    "example": {
     "id": "k021_e",
@@ -389,7 +410,8 @@
    "reading": "よう",
    "strokes": 18,
    "radical": "日",
-   "radicalName": "ひへん",
+   "radicalName": "Nhật (mặt trời)",
+   "radicalJa": "ひへん",
    "mnemonicVi": "Mặt trời bên trái, hai đôi cánh chim bay qua mỗi ngày trong tuần.",
    "example": {
     "id": "k022_e",
@@ -407,7 +429,8 @@
    "reading": "とし",
    "strokes": 6,
    "radical": "干",
-   "radicalName": "かん",
+   "radicalName": "Can (thiên can)",
+   "radicalJa": "かん",
    "mnemonicVi": "Người nông dân gánh lúa sau mỗi năm thu hoạch.",
    "example": {
     "id": "k023_e",
@@ -425,7 +448,8 @@
    "reading": "じ",
    "strokes": 10,
    "radical": "日",
-   "radicalName": "ひへん",
+   "radicalName": "Nhật (mặt trời)",
+   "radicalJa": "ひへん",
    "mnemonicVi": "Mặt trời đi qua ngôi chùa: đến giờ đánh chuông.",
    "example": {
     "id": "k024_e",
@@ -443,7 +467,8 @@
    "reading": "ふん",
    "strokes": 4,
    "radical": "刀",
-   "radicalName": "かたな",
+   "radicalName": "Đao (con dao)",
+   "radicalJa": "かたな",
    "mnemonicVi": "Con dao chia đôi thứ ở trên: chia ra, hiểu ra.",
    "example": {
     "id": "k025_e",
@@ -461,7 +486,8 @@
    "reading": "はん",
    "strokes": 5,
    "radical": "十",
-   "radicalName": "じゅう",
+   "radicalName": "Thập (số mười)",
+   "radicalJa": "じゅう",
    "mnemonicVi": "Một nét dọc cắt đôi mọi thứ thành hai nửa.",
    "example": {
     "id": "k026_e",
@@ -479,7 +505,8 @@
    "reading": "いま",
    "strokes": 4,
    "radical": "人",
-   "radicalName": "ひとやね",
+   "radicalName": "Nhân (người)",
+   "radicalJa": "ひとやね",
    "mnemonicVi": "Dưới mái nhà, mọi người tụ lại ngay bây giờ.",
    "example": {
     "id": "k027_e",
@@ -497,7 +524,8 @@
    "reading": "なに",
    "strokes": 7,
    "radical": "亻",
-   "radicalName": "にんべん",
+   "radicalName": "Nhân đứng (người)",
+   "radicalJa": "にんべん",
    "mnemonicVi": "Người đứng cạnh cái cửa hỏi: cái gì vậy?",
    "example": {
     "id": "k028_e",
@@ -515,7 +543,8 @@
    "reading": "ご",
    "strokes": 4,
    "radical": "十",
-   "radicalName": "じゅう",
+   "radicalName": "Thập (số mười)",
+   "radicalJa": "じゅう",
    "mnemonicVi": "Cây cọc cắm thẳng, bóng ngắn nhất lúc giữa trưa.",
    "example": {
     "id": "k029_e",
@@ -533,7 +562,8 @@
    "reading": "まえ",
    "strokes": 9,
    "radical": "刂",
-   "radicalName": "りっとう",
+   "radicalName": "Đao đứng (con dao)",
+   "radicalJa": "りっとう",
    "mnemonicVi": "Con thuyền có mái chèo tiến về phía trước.",
    "example": {
     "id": "k030_e",
@@ -551,7 +581,8 @@
    "reading": "あと",
    "strokes": 9,
    "radical": "彳",
-   "radicalName": "ぎょうにんべん",
+   "radicalName": "Xích (bước chân trái)",
+   "radicalJa": "ぎょうにんべん",
    "mnemonicVi": "Người đi chậm bị bỏ lại phía sau.",
    "example": {
     "id": "k031_e",
@@ -569,7 +600,8 @@
    "reading": "しゅう",
    "strokes": 11,
    "radical": "辶",
-   "radicalName": "しんにょう",
+   "radicalName": "Sước (bước đi)",
+   "radicalJa": "しんにょう",
    "mnemonicVi": "Đi vòng quanh một lượt là hết một tuần.",
    "example": {
     "id": "k032_e",
@@ -587,7 +619,8 @@
    "reading": "まい",
    "strokes": 6,
    "radical": "毋",
-   "radicalName": "なかれ",
+   "radicalName": "Vô (chớ, đừng)",
+   "radicalJa": "なかれ",
    "mnemonicVi": "Người mẹ đội mũ, ngày nào cũng làm việc nhà.",
    "example": {
     "id": "k033_e",
@@ -605,7 +638,8 @@
    "reading": "ひと",
    "strokes": 2,
    "radical": "人",
-   "radicalName": "ひと",
+   "radicalName": "Nhân (người)",
+   "radicalJa": "ひと",
    "mnemonicVi": "Hình một người đang bước đi bằng hai chân.",
    "example": {
     "id": "k034_e",
@@ -623,7 +657,8 @@
    "reading": "おとこ",
    "strokes": 7,
    "radical": "田",
-   "radicalName": "た",
+   "radicalName": "Điền (ruộng)",
+   "radicalJa": "た",
    "mnemonicVi": "Người có sức lực làm việc ngoài ruộng.",
    "example": {
     "id": "k035_e",
@@ -641,7 +676,8 @@
    "reading": "おんな",
    "strokes": 3,
    "radical": "女",
-   "radicalName": "おんな",
+   "radicalName": "Nữ (phụ nữ)",
+   "radicalJa": "おんな",
    "mnemonicVi": "Người phụ nữ ngồi khoanh tay duyên dáng.",
    "example": {
     "id": "k036_e",
@@ -659,7 +695,8 @@
    "reading": "こ",
    "strokes": 3,
    "radical": "子",
-   "radicalName": "こ",
+   "radicalName": "Tử (con)",
+   "radicalJa": "こ",
    "mnemonicVi": "Em bé quấn tã dang hai tay.",
    "example": {
     "id": "k037_e",
@@ -677,7 +714,8 @@
    "reading": "ちち",
    "strokes": 4,
    "radical": "父",
-   "radicalName": "ちち",
+   "radicalName": "Phụ (cha)",
+   "radicalJa": "ちち",
    "mnemonicVi": "Người cha cầm hai chiếc rìu bắt chéo đi làm.",
    "example": {
     "id": "k038_e",
@@ -695,7 +733,8 @@
    "reading": "はは",
    "strokes": 5,
    "radical": "毋",
-   "radicalName": "なかれ",
+   "radicalName": "Vô (chớ, đừng)",
+   "radicalJa": "なかれ",
    "mnemonicVi": "Người mẹ ôm con, có hai chấm là bầu sữa.",
    "example": {
     "id": "k039_e",
@@ -713,7 +752,8 @@
    "reading": "とも",
    "strokes": 4,
    "radical": "又",
-   "radicalName": "また",
+   "radicalName": "Hựu (lại nữa)",
+   "radicalJa": "また",
    "mnemonicVi": "Hai bàn tay nắm lấy nhau: bạn bè.",
    "example": {
     "id": "k040_e",
@@ -731,7 +771,8 @@
    "reading": "な",
    "strokes": 6,
    "radical": "口",
-   "radicalName": "くち",
+   "radicalName": "Khẩu (cái miệng)",
+   "radicalJa": "くち",
    "mnemonicVi": "Buổi tối tối trời, phải gọi tên bằng miệng mới nhận ra nhau.",
    "example": {
     "id": "k041_e",
@@ -749,7 +790,8 @@
    "reading": "さき",
    "strokes": 6,
    "radical": "儿",
-   "radicalName": "ひとあし",
+   "radicalName": "Nhân đi (người đi)",
+   "radicalJa": "ひとあし",
    "mnemonicVi": "Đôi chân bước lên trước người khác.",
    "example": {
     "id": "k042_e",
@@ -767,7 +809,8 @@
    "reading": "せい",
    "strokes": 5,
    "radical": "生",
-   "radicalName": "うまれる",
+   "radicalName": "Sinh (sống)",
+   "radicalJa": "うまれる",
    "mnemonicVi": "Mầm cây mọc lên từ đất: sự sống.",
    "example": {
     "id": "k043_e",
@@ -785,7 +828,8 @@
    "reading": "がく",
    "strokes": 8,
    "radical": "子",
-   "radicalName": "こ",
+   "radicalName": "Tử (con)",
+   "radicalJa": "こ",
    "mnemonicVi": "Đứa trẻ ngồi dưới mái trường để học.",
    "example": {
     "id": "k044_e",
@@ -803,7 +847,8 @@
    "reading": "こう",
    "strokes": 10,
    "radical": "木",
-   "radicalName": "きへん",
+   "radicalName": "Mộc (cây)",
+   "radicalJa": "きへん",
    "mnemonicVi": "Ngôi trường bằng gỗ, nơi mọi người giao lưu.",
    "example": {
     "id": "k045_e",
@@ -821,7 +866,8 @@
    "reading": "やま",
    "strokes": 3,
    "radical": "山",
-   "radicalName": "やま",
+   "radicalName": "Sơn (núi)",
+   "radicalJa": "やま",
    "mnemonicVi": "Ba đỉnh núi nhô lên.",
    "example": {
     "id": "k046_e",
@@ -839,7 +885,8 @@
    "reading": "かわ",
    "strokes": 3,
    "radical": "川",
-   "radicalName": "かわ",
+   "radicalName": "Xuyên (sông)",
+   "radicalJa": "かわ",
    "mnemonicVi": "Ba dòng nước chảy song song: con sông.",
    "example": {
     "id": "k047_e",
@@ -857,7 +904,8 @@
    "reading": "てん",
    "strokes": 4,
    "radical": "大",
-   "radicalName": "だい",
+   "radicalName": "Đại (to lớn)",
+   "radicalJa": "だい",
    "mnemonicVi": "Trên đầu người lớn là bầu trời.",
    "example": {
     "id": "k048_e",
@@ -875,7 +923,8 @@
    "reading": "き",
    "strokes": 6,
    "radical": "气",
-   "radicalName": "きがまえ",
+   "radicalName": "Khí (hơi nước)",
+   "radicalJa": "きがまえ",
    "mnemonicVi": "Hơi nước bốc lên từ nồi cơm.",
    "example": {
     "id": "k049_e",
@@ -893,7 +942,8 @@
    "reading": "あめ",
    "strokes": 8,
    "radical": "雨",
-   "radicalName": "あめ",
+   "radicalName": "Vũ (mưa)",
+   "radicalJa": "あめ",
    "mnemonicVi": "Những hạt mưa rơi từ đám mây dưới bầu trời.",
    "example": {
     "id": "k050_e",
@@ -911,7 +961,8 @@
    "reading": "はな",
    "strokes": 7,
    "radical": "艹",
-   "radicalName": "くさかんむり",
+   "radicalName": "Thảo (cỏ)",
+   "radicalJa": "くさかんむり",
    "mnemonicVi": "Cỏ cây biến hóa thành bông hoa.",
    "example": {
     "id": "k051_e",
@@ -929,7 +980,8 @@
    "reading": "うえ",
    "strokes": 3,
    "radical": "一",
-   "radicalName": "いち",
+   "radicalName": "Nhất (số một)",
+   "radicalJa": "いち",
    "mnemonicVi": "Vạch chỉ hướng lên phía trên mặt đất.",
    "example": {
     "id": "k052_e",
@@ -947,7 +999,8 @@
    "reading": "した",
    "strokes": 3,
    "radical": "一",
-   "radicalName": "いち",
+   "radicalName": "Nhất (số một)",
+   "radicalJa": "いち",
    "mnemonicVi": "Vạch chỉ hướng xuống phía dưới mặt đất.",
    "example": {
     "id": "k053_e",
@@ -965,7 +1018,8 @@
    "reading": "なか",
    "strokes": 4,
    "radical": "丨",
-   "radicalName": "ぼう",
+   "radicalName": "Cổn (nét sổ)",
+   "radicalJa": "ぼう",
    "mnemonicVi": "Mũi tên bắn trúng giữa tấm bia.",
    "example": {
     "id": "k054_e",
@@ -983,7 +1037,8 @@
    "reading": "そと",
    "strokes": 5,
    "radical": "夕",
-   "radicalName": "ゆうべ",
+   "radicalName": "Tịch (chiều tối)",
+   "radicalJa": "ゆうべ",
    "mnemonicVi": "Buổi tối đi xem bói ở bên ngoài.",
    "example": {
     "id": "k055_e",
@@ -1001,7 +1056,8 @@
    "reading": "みぎ",
    "strokes": 5,
    "radical": "口",
-   "radicalName": "くち",
+   "radicalName": "Khẩu (cái miệng)",
+   "radicalJa": "くち",
    "mnemonicVi": "Tay phải đưa đồ ăn lên miệng.",
    "example": {
     "id": "k056_e",
@@ -1019,7 +1075,8 @@
    "reading": "ひだり",
    "strokes": 5,
    "radical": "工",
-   "radicalName": "たくみ",
+   "radicalName": "Công (người thợ)",
+   "radicalJa": "たくみ",
    "mnemonicVi": "Tay trái giữ thước thợ.",
    "example": {
     "id": "k057_e",
@@ -1037,7 +1094,8 @@
    "reading": "ひがし",
    "strokes": 8,
    "radical": "木",
-   "radicalName": "き",
+   "radicalName": "Mộc (cây)",
+   "radicalJa": "き",
    "mnemonicVi": "Mặt trời mọc sau rặng cây: phía đông.",
    "example": {
     "id": "k058_e",
@@ -1055,7 +1113,8 @@
    "reading": "にし",
    "strokes": 6,
    "radical": "襾",
-   "radicalName": "にし",
+   "radicalName": "Á (che đậy)",
+   "radicalJa": "にし",
    "mnemonicVi": "Con chim về tổ khi mặt trời lặn ở phía tây.",
    "example": {
     "id": "k059_e",
@@ -1073,7 +1132,8 @@
    "reading": "みなみ",
    "strokes": 9,
    "radical": "十",
-   "radicalName": "じゅう",
+   "radicalName": "Thập (số mười)",
+   "radicalJa": "じゅう",
    "mnemonicVi": "Cái lều mở cửa đón gió ấm phương nam.",
    "example": {
     "id": "k060_e",
@@ -1091,7 +1151,8 @@
    "reading": "きた",
    "strokes": 5,
    "radical": "匕",
-   "radicalName": "さじ",
+   "radicalName": "Chủy (cái thìa)",
+   "radicalJa": "さじ",
    "mnemonicVi": "Hai người quay lưng vào nhau tránh gió bấc phương bắc.",
    "example": {
     "id": "k061_e",
@@ -1109,7 +1170,8 @@
    "reading": "だい",
    "strokes": 3,
    "radical": "大",
-   "radicalName": "だい",
+   "radicalName": "Đại (to lớn)",
+   "radicalJa": "だい",
    "mnemonicVi": "Người dang rộng hai tay khoe: to thế này!",
    "example": {
     "id": "k062_e",
@@ -1127,7 +1189,8 @@
    "reading": "しょう",
    "strokes": 3,
    "radical": "小",
-   "radicalName": "しょう",
+   "radicalName": "Tiểu (nhỏ)",
+   "radicalJa": "しょう",
    "mnemonicVi": "Một nét nhỏ ở giữa, hai hạt nhỏ hai bên.",
    "example": {
     "id": "k063_e",
@@ -1145,7 +1208,8 @@
    "reading": "たかい",
    "strokes": 10,
    "radical": "高",
-   "radicalName": "たかい",
+   "radicalName": "Cao (cao)",
+   "radicalJa": "たかい",
    "mnemonicVi": "Tòa tháp cao nhiều tầng.",
    "example": {
     "id": "k064_e",
@@ -1163,7 +1227,8 @@
    "reading": "やすい",
    "strokes": 6,
    "radical": "宀",
-   "radicalName": "うかんむり",
+   "radicalName": "Miên (mái nhà)",
+   "radicalJa": "うかんむり",
    "mnemonicVi": "Người phụ nữ ở trong nhà thì yên ổn.",
    "example": {
     "id": "k065_e",
@@ -1181,7 +1246,8 @@
    "reading": "ながい",
    "strokes": 8,
    "radical": "長",
-   "radicalName": "ながい",
+   "radicalName": "Trường (dài)",
+   "radicalJa": "ながい",
    "mnemonicVi": "Ông già tóc dài chống gậy: người đứng đầu.",
    "example": {
     "id": "k066_e",
@@ -1199,7 +1265,8 @@
    "reading": "あたらしい",
    "strokes": 13,
    "radical": "斤",
-   "radicalName": "おのづくり",
+   "radicalName": "Cân (cái rìu)",
+   "radicalJa": "おのづくり",
    "mnemonicVi": "Đứng cạnh cây, cầm rìu chặt gỗ mới.",
    "example": {
     "id": "k067_e",
@@ -1217,7 +1284,8 @@
    "reading": "ふるい",
    "strokes": 5,
    "radical": "口",
-   "radicalName": "くち",
+   "radicalName": "Khẩu (cái miệng)",
+   "radicalJa": "くち",
    "mnemonicVi": "Chuyện truyền qua mười miệng người đã thành chuyện cũ.",
    "example": {
     "id": "k068_e",
@@ -1235,7 +1303,8 @@
    "reading": "しろい",
    "strokes": 5,
    "radical": "白",
-   "radicalName": "しろ",
+   "radicalName": "Bạch (màu trắng)",
+   "radicalJa": "しろ",
    "mnemonicVi": "Mặt trời có một tia sáng: màu trắng.",
    "example": {
     "id": "k069_e",
@@ -1253,7 +1322,8 @@
    "reading": "おおい",
    "strokes": 6,
    "radical": "夕",
-   "radicalName": "ゆうべ",
+   "radicalName": "Tịch (chiều tối)",
+   "radicalJa": "ゆうべ",
    "mnemonicVi": "Hai buổi tối chồng lên nhau: nhiều.",
    "example": {
     "id": "k070_e",
@@ -1271,7 +1341,8 @@
    "reading": "すこし",
    "strokes": 4,
    "radical": "小",
-   "radicalName": "しょう",
+   "radicalName": "Tiểu (nhỏ)",
+   "radicalJa": "しょう",
    "mnemonicVi": "Đồ nhỏ lại bị gạt đi một phần: còn ít.",
    "example": {
     "id": "k071_e",
@@ -1289,7 +1360,8 @@
    "reading": "みる",
    "strokes": 7,
    "radical": "見",
-   "radicalName": "みる",
+   "radicalName": "Kiến (nhìn)",
+   "radicalJa": "みる",
    "mnemonicVi": "Con mắt to đặt trên đôi chân: đi xem.",
    "example": {
     "id": "k072_e",
@@ -1307,7 +1379,8 @@
    "reading": "いく",
    "strokes": 6,
    "radical": "行",
-   "radicalName": "ぎょうがまえ",
+   "radicalName": "Hành (đi)",
+   "radicalJa": "ぎょうがまえ",
    "mnemonicVi": "Ngã tư đường để đi.",
    "example": {
     "id": "k073_e",
@@ -1325,7 +1398,8 @@
    "reading": "くる",
    "strokes": 7,
    "radical": "木",
-   "radicalName": "き",
+   "radicalName": "Mộc (cây)",
+   "radicalJa": "き",
    "mnemonicVi": "Cây lúa chín, mùa gặt đã đến.",
    "example": {
     "id": "k074_e",
@@ -1343,7 +1417,8 @@
    "reading": "たべる",
    "strokes": 9,
    "radical": "食",
-   "radicalName": "しょく",
+   "radicalName": "Thực (ăn)",
+   "radicalJa": "しょく",
    "mnemonicVi": "Mái nhà che bát cơm ngon: ăn.",
    "example": {
     "id": "k075_e",
@@ -1361,7 +1436,8 @@
    "reading": "のむ",
    "strokes": 12,
    "radical": "飠",
-   "radicalName": "しょくへん",
+   "radicalName": "Thực (ăn)",
+   "radicalJa": "しょくへん",
    "mnemonicVi": "Bên cạnh đồ ăn là người há miệng uống.",
    "example": {
     "id": "k076_e",
@@ -1379,7 +1455,8 @@
    "reading": "はなす",
    "strokes": 13,
    "radical": "言",
-   "radicalName": "ごんべん",
+   "radicalName": "Ngôn (nói)",
+   "radicalJa": "ごんべん",
    "mnemonicVi": "Lời nói phát ra từ cái lưỡi: nói chuyện.",
    "example": {
     "id": "k077_e",
@@ -1397,7 +1474,8 @@
    "reading": "きく",
    "strokes": 14,
    "radical": "耳",
-   "radicalName": "みみ",
+   "radicalName": "Nhĩ (tai)",
+   "radicalJa": "みみ",
    "mnemonicVi": "Ghé tai vào cửa để nghe.",
    "example": {
     "id": "k078_e",
@@ -1415,7 +1493,8 @@
    "reading": "よむ",
    "strokes": 14,
    "radical": "言",
-   "radicalName": "ごんべん",
+   "radicalName": "Ngôn (nói)",
+   "radicalJa": "ごんべん",
    "mnemonicVi": "Lời nói đem đi bán: đọc to lên.",
    "example": {
     "id": "k079_e",
@@ -1433,7 +1512,8 @@
    "reading": "かく",
    "strokes": 10,
    "radical": "曰",
-   "radicalName": "ひらび",
+   "radicalName": "Viết (nói rằng)",
+   "radicalJa": "ひらび",
    "mnemonicVi": "Tay cầm bút viết lên trang giấy.",
    "example": {
     "id": "k080_e",
@@ -1451,7 +1531,8 @@
    "reading": "かう",
    "strokes": 12,
    "radical": "貝",
-   "radicalName": "かい",
+   "radicalName": "Bối (vỏ sò)",
+   "radicalJa": "かい",
    "mnemonicVi": "Cái lưới đựng vỏ sò (tiền ngày xưa) đi mua đồ.",
    "example": {
     "id": "k081_e",
@@ -1469,7 +1550,8 @@
    "reading": "やすむ",
    "strokes": 6,
    "radical": "亻",
-   "radicalName": "にんべん",
+   "radicalName": "Nhân đứng (người)",
+   "radicalJa": "にんべん",
    "mnemonicVi": "Người tựa vào gốc cây nghỉ ngơi.",
    "example": {
     "id": "k082_e",
@@ -1487,7 +1569,8 @@
    "reading": "でる",
    "strokes": 5,
    "radical": "凵",
-   "radicalName": "うけばこ",
+   "radicalName": "Khảm (há miệng)",
+   "radicalJa": "うけばこ",
    "mnemonicVi": "Hai ngọn núi chồng lên nhau, mầm cây mọc ra.",
    "example": {
     "id": "k083_e",
@@ -1505,7 +1588,8 @@
    "reading": "はいる",
    "strokes": 2,
    "radical": "入",
-   "radicalName": "いる",
+   "radicalName": "Nhập (vào)",
+   "radicalJa": "いる",
    "mnemonicVi": "Người cúi đầu chui vào cửa.",
    "example": {
     "id": "k084_e",
@@ -1523,7 +1607,8 @@
    "reading": "いう",
    "strokes": 7,
    "radical": "言",
-   "radicalName": "げん",
+   "radicalName": "Ngôn (nói)",
+   "radicalJa": "げん",
    "mnemonicVi": "Lời nói tuôn ra từ miệng thành nhiều dòng.",
    "example": {
     "id": "k085_e",
@@ -1541,7 +1626,8 @@
    "reading": "たつ",
    "strokes": 5,
    "radical": "立",
-   "radicalName": "たつ",
+   "radicalName": "Lập (đứng)",
+   "radicalJa": "たつ",
    "mnemonicVi": "Người đứng thẳng trên mặt đất.",
    "example": {
     "id": "k086_e",
@@ -1559,7 +1645,8 @@
    "reading": "あう",
    "strokes": 6,
    "radical": "人",
-   "radicalName": "ひとやね",
+   "radicalName": "Nhân (người)",
+   "radicalJa": "ひとやね",
    "mnemonicVi": "Mọi người tụ lại dưới một mái nhà để gặp nhau.",
    "example": {
     "id": "k087_e",
@@ -1577,7 +1664,8 @@
    "reading": "ほん",
    "strokes": 5,
    "radical": "木",
-   "radicalName": "き",
+   "radicalName": "Mộc (cây)",
+   "radicalJa": "き",
    "mnemonicVi": "Cái cây có vạch đánh dấu ở gốc.",
    "example": {
     "id": "k088_e",
@@ -1595,7 +1683,8 @@
    "reading": "くに",
    "strokes": 8,
    "radical": "囗",
-   "radicalName": "くにがまえ",
+   "radicalName": "Vi (vây quanh)",
+   "radicalJa": "くにがまえ",
    "mnemonicVi": "Viên ngọc quý được bảo vệ trong bốn bức tường: đất nước.",
    "example": {
     "id": "k089_e",
@@ -1613,7 +1702,8 @@
    "reading": "ご",
    "strokes": 14,
    "radical": "言",
-   "radicalName": "ごんべん",
+   "radicalName": "Ngôn (nói)",
+   "radicalJa": "ごんべん",
    "mnemonicVi": "Năm cái miệng cùng nói: ngôn ngữ.",
    "example": {
     "id": "k090_e",
@@ -1631,7 +1721,8 @@
    "reading": "みせ",
    "strokes": 8,
    "radical": "广",
-   "radicalName": "まだれ",
+   "radicalName": "Nghiễm (hiên nhà)",
+   "radicalJa": "まだれ",
    "mnemonicVi": "Dưới mái hiên có người bói toán bày hàng.",
    "example": {
     "id": "k091_e",
@@ -1649,7 +1740,8 @@
    "reading": "えき",
    "strokes": 14,
    "radical": "馬",
-   "radicalName": "うまへん",
+   "radicalName": "Mã (ngựa)",
+   "radicalJa": "うまへん",
    "mnemonicVi": "Trạm đổi ngựa ngày xưa, nay là nhà ga.",
    "example": {
     "id": "k092_e",
@@ -1667,7 +1759,8 @@
    "reading": "みち",
    "strokes": 12,
    "radical": "辶",
-   "radicalName": "しんにょう",
+   "radicalName": "Sước (bước đi)",
+   "radicalJa": "しんにょう",
    "mnemonicVi": "Cái đầu dẫn bước chân đi trên con đường.",
    "example": {
     "id": "k093_e",
@@ -1685,7 +1778,8 @@
    "reading": "くるま",
    "strokes": 7,
    "radical": "車",
-   "radicalName": "くるま",
+   "radicalName": "Xa (xe)",
+   "radicalJa": "くるま",
    "mnemonicVi": "Nhìn từ trên xuống: chiếc xe có trục và hai bánh.",
    "example": {
     "id": "k094_e",
@@ -1703,7 +1797,8 @@
    "reading": "でん",
    "strokes": 13,
    "radical": "雨",
-   "radicalName": "あめかんむり",
+   "radicalName": "Vũ (mưa)",
+   "radicalJa": "あめかんむり",
    "mnemonicVi": "Trời mưa có tia chớp: điện.",
    "example": {
     "id": "k095_e",
@@ -1721,7 +1816,8 @@
    "reading": "しゃ",
    "strokes": 7,
    "radical": "礻",
-   "radicalName": "しめすへん",
+   "radicalName": "Thị (thần đất)",
+   "radicalJa": "しめすへん",
    "mnemonicVi": "Nơi thờ thần đất, nay chỉ công ty.",
    "example": {
     "id": "k096_e",
@@ -1739,7 +1835,8 @@
    "reading": "いえ",
    "strokes": 10,
    "radical": "宀",
-   "radicalName": "うかんむり",
+   "radicalName": "Miên (mái nhà)",
+   "radicalJa": "うかんむり",
    "mnemonicVi": "Dưới mái nhà có nuôi con lợn: ngôi nhà ấm no.",
    "example": {
     "id": "k097_e",
@@ -1757,7 +1854,8 @@
    "reading": "て",
    "strokes": 4,
    "radical": "手",
-   "radicalName": "て",
+   "radicalName": "Thủ (tay)",
+   "radicalJa": "て",
    "mnemonicVi": "Bàn tay xòe năm ngón.",
    "example": {
     "id": "k098_e",
@@ -1775,7 +1873,8 @@
    "reading": "め",
    "strokes": 5,
    "radical": "目",
-   "radicalName": "め",
+   "radicalName": "Mục (mắt)",
+   "radicalJa": "め",
    "mnemonicVi": "Con mắt dựng đứng có con ngươi.",
    "example": {
     "id": "k099_e",
@@ -1793,7 +1892,8 @@
    "reading": "くち",
    "strokes": 3,
    "radical": "口",
-   "radicalName": "くち",
+   "radicalName": "Khẩu (cái miệng)",
+   "radicalJa": "くち",
    "mnemonicVi": "Cái miệng há ra hình vuông.",
    "example": {
     "id": "k100_e",
@@ -1811,7 +1911,8 @@
    "reading": "みみ",
    "strokes": 6,
    "radical": "耳",
-   "radicalName": "みみ",
+   "radicalName": "Nhĩ (tai)",
+   "radicalJa": "みみ",
    "mnemonicVi": "Hình vành tai có các nếp gấp.",
    "example": {
     "id": "k101_e",
@@ -1829,7 +1930,8 @@
    "reading": "あし",
    "strokes": 7,
    "radical": "足",
-   "radicalName": "あし",
+   "radicalName": "Túc (chân)",
+   "radicalJa": "あし",
    "mnemonicVi": "Đầu gối và bàn chân đang bước.",
    "example": {
     "id": "k102_e",

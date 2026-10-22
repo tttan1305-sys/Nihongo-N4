@@ -43,6 +43,7 @@ Chờ bạn duyệt ảnh chụp, **chưa đẩy lên GitHub** (bạn dặn: th�
 - ✅ Luyện tập câu (sắp xếp cụm từ), Học Kanji: 102 chữ N5 có cách nhớ, bộ, số nét, ví dụ (`tools/gen_n5_kanji.py`)
 - ✅ Khác: lời chào, mục tiêu, Lộ trình học, Thống kê, Cài đặt, Góp ý
 - Từ đã học và Kanji đã nhớ được đồng bộ; Yêu thích chỉ lưu trên máy
+- ✅ Văn phong Tổng hợp N5 theo tài liệu bạn gửi (2026-10-22): bảng từ vựng Từ | Hán Việt | Cách đọc | Nghĩa (cột Hán Việt sinh bằng `tools/han_viet.py`), bộ thủ ghi kiểu "Miên (mái nhà)", Kanji ghi On/Kun
 
 ## Giai đoạn 2: Tài khoản Gmail và giọng đọc nữ
 

@@ -128,9 +128,9 @@ class _KanjiScreenState extends State<KanjiScreen> {
                           alignment: WrapAlignment.center,
                           children: [
                             if (k.on.isNotEmpty)
-                              Pill('Âm On: ${k.on}', color: AppColors.purple),
+                              Pill('On: ${k.on}', color: AppColors.purple),
                             if (k.kun.isNotEmpty)
-                              Pill('Âm Kun: ${k.kun}', color: AppColors.green),
+                              Pill('Kun: ${k.kun}', color: AppColors.green),
                           ],
                         ),
                       ],
@@ -219,8 +219,9 @@ class _KanjiScreenState extends State<KanjiScreen> {
                     children: [
                       Expanded(
                         child: _Fact(
-                          label: 'Bộ',
-                          value: '${k.radical}  ${k.radicalName}',
+                          label: 'Bộ ${k.radical}',
+                          value: k.radicalName,
+                          note: k.radicalJa,
                           color: AppColors.purple,
                         ),
                       ),
@@ -278,9 +279,15 @@ class _KanjiScreenState extends State<KanjiScreen> {
 class _Fact extends StatelessWidget {
   final String label;
   final String value;
+  final String note;
   final Color color;
 
-  const _Fact({required this.label, required this.value, required this.color});
+  const _Fact({
+    required this.label,
+    required this.value,
+    required this.color,
+    this.note = '',
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -294,11 +301,16 @@ class _Fact extends StatelessWidget {
           Text(
             value,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w700,
               color: color,
             ),
           ),
+          if (note.isNotEmpty)
+            Text(
+              note,
+              style: const TextStyle(color: AppColors.muted, fontSize: 12),
+            ),
         ],
       ),
     );
