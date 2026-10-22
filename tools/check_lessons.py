@@ -12,7 +12,7 @@ RUBY = re.compile(r"\{([^|{}]+)\|([^|{}]+)\}")
 # Phần được hỏi trong đề test (đọc chữ Hán): chữ Hán trong 【】 cố ý không furigana.
 ASKED = re.compile(r"【[^】]*】")
 # Các trường được phép có chữ Hán không furigana (chữ mẫu để tập viết).
-SKIP_KEYS = {"char"}
+SKIP_KEYS = {"char", "radical"}
 
 
 def walk(node, path, errors, ids):

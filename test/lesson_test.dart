@@ -69,6 +69,7 @@ Future<void> openLesson26(
     ),
   );
   await tester.pumpAndSettle();
+  await tester.ensureVisible(find.byKey(const ValueKey('lesson-26')));
   await tester.tap(find.byKey(const ValueKey('lesson-26')));
   await tester.pumpAndSettle();
 }

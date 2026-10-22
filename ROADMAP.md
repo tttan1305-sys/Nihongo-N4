@@ -32,6 +32,18 @@ Kế hoạch chi tiết: [docs/KE_HOACH.md](docs/KE_HOACH.md)
 
 Màn hình: `screens/n5_screen.dart`, mở từ thẻ "Tổng hợp N5" ở trang chủ, không khóa. Chưa đưa từ N5 vào flashcard (mã thẻ hiện theo số bài N4).
 
+## Giao diện mới theo ảnh mẫu (bạn yêu cầu 2026-10-22)
+
+Chờ bạn duyệt ảnh chụp, **chưa đẩy lên GitHub** (bạn dặn: thấy ổn rồi mới đẩy).
+
+- ✅ Tông xanh, thẻ trắng bo tròn, thanh điều hướng dưới: Trang chủ / Từ vựng / Ngữ pháp / Khác
+- ✅ Trang chủ: tranh núi Phú Sĩ, thẻ mục tiêu, nút Học từ vựng, ô Ngữ pháp và Luyện tập, ôn flashcard, Tổng hợp N5, lộ trình bài 26–50
+- ✅ Từ vựng: tìm kiếm, lọc Tất cả / Đã học / Chưa học / Yêu thích, N4 và N5; từ bài N4 vẫn khóa đến khi qua ngữ pháp
+- ✅ Học từ dạng thẻ (Tiếp theo = đánh dấu đã học), trắc nghiệm A–D có đồng hồ, chi tiết ngữ pháp (Cách dùng, Cấu trúc, Ví dụ, Lưu ý)
+- ✅ Luyện tập câu (sắp xếp cụm từ), Học Kanji: 102 chữ N5 có cách nhớ, bộ, số nét, ví dụ (`tools/gen_n5_kanji.py`)
+- ✅ Khác: lời chào, mục tiêu, Lộ trình học, Thống kê, Cài đặt, Góp ý
+- Từ đã học và Kanji đã nhớ được đồng bộ; Yêu thích chỉ lưu trên máy
+
 ## Giai đoạn 2: Tài khoản Gmail và giọng đọc nữ
 
 | Bước | Nội dung | Trạng thái |

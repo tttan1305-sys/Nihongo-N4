@@ -84,6 +84,41 @@ class ProgressStore extends ChangeNotifier {
     notifyListeners();
   }
 
+  static String _wordKey(String key) => 'word.$key';
+
+  /// Từ đã học trong danh sách từ vựng chung ([key] như `26:v01`, `n5:n5v001`).
+  bool isWordLearned(String key) => _prefs.getBool(_wordKey(key)) ?? false;
+
+  Future<void> markWordLearned(String key) async {
+    if (isWordLearned(key)) return;
+    await _prefs.setBool(_wordKey(key), true);
+    notifyListeners();
+  }
+
+  int learnedCount(Iterable<String> keys) => keys.where(isWordLearned).length;
+
+  // Từ yêu thích chỉ lưu trên máy: bỏ thích phải giữ được, mà phép gộp khi
+  // đồng bộ luôn giữ giá trị true.
+  static String _favoriteKey(String key) => 'favorite.$key';
+
+  bool isFavorite(String key) => _prefs.getBool(_favoriteKey(key)) ?? false;
+
+  Future<void> toggleFavorite(String key) async {
+    await _prefs.setBool(_favoriteKey(key), !isFavorite(key));
+    notifyListeners();
+  }
+
+  static String _kanjiKey(String char) => 'kanji.$char';
+
+  /// Chữ Hán đã đánh dấu "đã nhớ".
+  bool isKanjiLearned(String char) => _prefs.getBool(_kanjiKey(char)) ?? false;
+
+  Future<void> markKanjiLearned(String char) async {
+    if (isKanjiLearned(char)) return;
+    await _prefs.setBool(_kanjiKey(char), true);
+    notifyListeners();
+  }
+
   /// Bài hoàn thành khi đã qua bài đọc hiểu cuối bài.
   bool isLessonCompleted(int lesson) => (readingScore(lesson) ?? 0) >= passMark;
 
@@ -104,6 +139,8 @@ class ProgressStore extends ChangeNotifier {
     'vocabDone.',
     'reading.',
     'n5test.',
+    'word.',
+    'kanji.',
   ];
 
   static bool _isSynced(String key) =>

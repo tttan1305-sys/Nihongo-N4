@@ -74,6 +74,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Chưa có flashcard'), findsOneWidget);
 
+    await tester.ensureVisible(find.byKey(const ValueKey('lesson-26')));
     await tester.tap(find.byKey(const ValueKey('lesson-26')));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Từ vựng'));
@@ -99,6 +100,7 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Hôm nay cần ôn 24 thẻ'), findsOneWidget);
 
+    await tester.ensureVisible(find.byKey(const ValueKey('start-review')));
     await tester.tap(find.byKey(const ValueKey('start-review')));
     await tester.pumpAndSettle();
     expect(find.text('Còn 24 thẻ · Bài 26'), findsOneWidget);

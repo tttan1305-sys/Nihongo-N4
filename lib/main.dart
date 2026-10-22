@@ -14,6 +14,7 @@ import 'screens/home_screen.dart';
 import 'services/recognizer.dart';
 import 'services/speaker.dart';
 import 'services/sync_service.dart';
+import 'theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -166,10 +167,7 @@ class NihongoApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nihongo N4',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFBC002D)),
-        useMaterial3: true,
-      ),
+      theme: buildAppTheme(),
       home: ListenableBuilder(
         listenable: Listenable.merge([auth, progress]),
         builder: (context, _) {

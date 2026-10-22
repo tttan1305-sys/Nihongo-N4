@@ -341,6 +341,54 @@ class N5Test {
   );
 }
 
+/// Một chữ Hán N5 để học: cách đọc, cách nhớ, bộ thủ, số nét, từ ví dụ.
+class N5Kanji {
+  final String id;
+  final String char;
+  final String hanViet;
+  final String meaningVi;
+  final String on;
+  final String kun;
+
+  /// Cách đọc hay gặp nhất, dùng để hiện và phát âm.
+  final String reading;
+  final int strokes;
+  final String radical;
+  final String radicalName;
+  final String mnemonicVi;
+  final Sentence example;
+
+  const N5Kanji({
+    required this.id,
+    required this.char,
+    required this.hanViet,
+    required this.meaningVi,
+    required this.on,
+    required this.kun,
+    required this.reading,
+    required this.strokes,
+    required this.radical,
+    required this.radicalName,
+    required this.mnemonicVi,
+    required this.example,
+  });
+
+  factory N5Kanji.fromJson(Map<String, dynamic> j) => N5Kanji(
+    id: j['id'] as String,
+    char: j['char'] as String,
+    hanViet: j['hanViet'] as String,
+    meaningVi: j['meaningVi'] as String,
+    on: j['on'] as String,
+    kun: j['kun'] as String,
+    reading: j['reading'] as String,
+    strokes: j['strokes'] as int,
+    radical: j['radical'] as String,
+    radicalName: j['radicalName'] as String,
+    mnemonicVi: j['mnemonicVi'] as String,
+    example: Sentence.fromJson(j['example'] as Map<String, dynamic>),
+  );
+}
+
 /// Toàn bộ phần Tổng hợp N5.
 class N5Data {
   final FormsData forms;
@@ -348,6 +396,7 @@ class N5Data {
   final List<N5Topic> topics;
   final List<NoteSection> notes;
   final List<N5Test> tests;
+  final List<N5Kanji> kanji;
 
   const N5Data({
     required this.forms,
@@ -355,6 +404,7 @@ class N5Data {
     required this.topics,
     this.notes = const [],
     this.tests = const [],
+    this.kanji = const [],
   });
 
   int get grammarCount => grammar.fold(0, (n, l) => n + l.points.length);

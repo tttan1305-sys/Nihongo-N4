@@ -1,0 +1,1841 @@
+{
+ "id": "n5kanji",
+ "kanji": [
+  {
+   "id": "k001",
+   "char": "一",
+   "hanViet": "NHẤT",
+   "meaningVi": "một",
+   "on": "イチ・イツ",
+   "kun": "ひと・つ",
+   "reading": "いち",
+   "strokes": 1,
+   "radical": "一",
+   "radicalName": "いち",
+   "mnemonicVi": "Một nét ngang nằm yên: số một.",
+   "example": {
+    "id": "k001_e",
+    "ja": "{一|ひと}つ",
+    "vi": "một cái"
+   }
+  },
+  {
+   "id": "k002",
+   "char": "二",
+   "hanViet": "NHỊ",
+   "meaningVi": "hai",
+   "on": "ニ",
+   "kun": "ふた・つ",
+   "reading": "に",
+   "strokes": 2,
+   "radical": "二",
+   "radicalName": "に",
+   "mnemonicVi": "Hai nét ngang chồng lên nhau: số hai.",
+   "example": {
+    "id": "k002_e",
+    "ja": "{二人|ふたり}",
+    "vi": "hai người"
+   }
+  },
+  {
+   "id": "k003",
+   "char": "三",
+   "hanViet": "TAM",
+   "meaningVi": "ba",
+   "on": "サン",
+   "kun": "みっ・つ",
+   "reading": "さん",
+   "strokes": 3,
+   "radical": "一",
+   "radicalName": "いち",
+   "mnemonicVi": "Ba nét ngang: số ba.",
+   "example": {
+    "id": "k003_e",
+    "ja": "{三月|さんがつ}",
+    "vi": "tháng ba"
+   }
+  },
+  {
+   "id": "k004",
+   "char": "四",
+   "hanViet": "TỨ",
+   "meaningVi": "bốn",
+   "on": "シ",
+   "kun": "よ・よっ・つ・よん",
+   "reading": "よん",
+   "strokes": 5,
+   "radical": "囗",
+   "radicalName": "くにがまえ",
+   "mnemonicVi": "Một căn phòng vuông bốn góc, bên trong có hai chân bàn.",
+   "example": {
+    "id": "k004_e",
+    "ja": "{四時|よじ}",
+    "vi": "bốn giờ"
+   }
+  },
+  {
+   "id": "k005",
+   "char": "五",
+   "hanViet": "NGŨ",
+   "meaningVi": "năm",
+   "on": "ゴ",
+   "kun": "いつ・つ",
+   "reading": "ご",
+   "strokes": 4,
+   "radical": "二",
+   "radicalName": "に",
+   "mnemonicVi": "Giữa trời và đất (hai nét ngang) có số năm đứng giữa.",
+   "example": {
+    "id": "k005_e",
+    "ja": "{五月|ごがつ}",
+    "vi": "tháng năm"
+   }
+  },
+  {
+   "id": "k006",
+   "char": "六",
+   "hanViet": "LỤC",
+   "meaningVi": "sáu",
+   "on": "ロク",
+   "kun": "むっ・つ",
+   "reading": "ろく",
+   "strokes": 4,
+   "radical": "八",
+   "radicalName": "はち",
+   "mnemonicVi": "Người đội mũ dang hai chân: sáu.",
+   "example": {
+    "id": "k006_e",
+    "ja": "{六百|ろっぴゃく}",
+    "vi": "sáu trăm"
+   }
+  },
+  {
+   "id": "k007",
+   "char": "七",
+   "hanViet": "THẤT",
+   "meaningVi": "bảy",
+   "on": "シチ",
+   "kun": "なな・つ",
+   "reading": "なな",
+   "strokes": 2,
+   "radical": "一",
+   "radicalName": "いち",
+   "mnemonicVi": "Giống số 7 lộn ngược, có một nét cắt ngang.",
+   "example": {
+    "id": "k007_e",
+    "ja": "{七時|しちじ}",
+    "vi": "bảy giờ"
+   }
+  },
+  {
+   "id": "k008",
+   "char": "八",
+   "hanViet": "BÁT",
+   "meaningVi": "tám",
+   "on": "ハチ",
+   "kun": "やっ・つ",
+   "reading": "はち",
+   "strokes": 2,
+   "radical": "八",
+   "radicalName": "はち",
+   "mnemonicVi": "Hai nét tách ra như mái nhà hình chữ bát: tám.",
+   "example": {
+    "id": "k008_e",
+    "ja": "{八月|はちがつ}",
+    "vi": "tháng tám"
+   }
+  },
+  {
+   "id": "k009",
+   "char": "九",
+   "hanViet": "CỬU",
+   "meaningVi": "chín",
+   "on": "キュウ・ク",
+   "kun": "ここの・つ",
+   "reading": "きゅう",
+   "strokes": 2,
+   "radical": "乙",
+   "radicalName": "おつ",
+   "mnemonicVi": "Cánh tay co lại sắp với tới mười: chín.",
+   "example": {
+    "id": "k009_e",
+    "ja": "{九時|くじ}",
+    "vi": "chín giờ"
+   }
+  },
+  {
+   "id": "k010",
+   "char": "十",
+   "hanViet": "THẬP",
+   "meaningVi": "mười",
+   "on": "ジュウ",
+   "kun": "とお",
+   "reading": "じゅう",
+   "strokes": 2,
+   "radical": "十",
+   "radicalName": "じゅう",
+   "mnemonicVi": "Dấu cộng: đủ mười ngón tay đan chéo.",
+   "example": {
+    "id": "k010_e",
+    "ja": "{十日|とおか}",
+    "vi": "ngày mùng mười"
+   }
+  },
+  {
+   "id": "k011",
+   "char": "百",
+   "hanViet": "BÁCH",
+   "meaningVi": "trăm",
+   "on": "ヒャク",
+   "kun": "",
+   "reading": "ひゃく",
+   "strokes": 6,
+   "radical": "白",
+   "radicalName": "しろ",
+   "mnemonicVi": "Một nét ngang trên chữ trắng: một trăm tờ giấy trắng.",
+   "example": {
+    "id": "k011_e",
+    "ja": "{三百|さんびゃく}",
+    "vi": "ba trăm"
+   }
+  },
+  {
+   "id": "k012",
+   "char": "千",
+   "hanViet": "THIÊN",
+   "meaningVi": "nghìn",
+   "on": "セン",
+   "kun": "ち",
+   "reading": "せん",
+   "strokes": 3,
+   "radical": "十",
+   "radicalName": "じゅう",
+   "mnemonicVi": "Chữ mười có thêm nét phẩy trên đầu: nhiều gấp trăm lần.",
+   "example": {
+    "id": "k012_e",
+    "ja": "{千円|せんえん}",
+    "vi": "một nghìn yên"
+   }
+  },
+  {
+   "id": "k013",
+   "char": "万",
+   "hanViet": "VẠN",
+   "meaningVi": "mười nghìn",
+   "on": "マン・バン",
+   "kun": "",
+   "reading": "まん",
+   "strokes": 3,
+   "radical": "一",
+   "radicalName": "いち",
+   "mnemonicVi": "Một nét ngang dài che cả vạn thứ bên dưới.",
+   "example": {
+    "id": "k013_e",
+    "ja": "{一万円|いちまんえん}",
+    "vi": "mười nghìn yên"
+   }
+  },
+  {
+   "id": "k014",
+   "char": "円",
+   "hanViet": "VIÊN",
+   "meaningVi": "yên (tiền), tròn",
+   "on": "エン",
+   "kun": "まる・い",
+   "reading": "えん",
+   "strokes": 4,
+   "radical": "冂",
+   "radicalName": "けいがまえ",
+   "mnemonicVi": "Cái ví hình vuông đựng đồng tiền yên.",
+   "example": {
+    "id": "k014_e",
+    "ja": "{百円|ひゃくえん}",
+    "vi": "một trăm yên"
+   }
+  },
+  {
+   "id": "k015",
+   "char": "日",
+   "hanViet": "NHẬT",
+   "meaningVi": "ngày, mặt trời",
+   "on": "ニチ・ジツ",
+   "kun": "ひ・か",
+   "reading": "ひ",
+   "strokes": 4,
+   "radical": "日",
+   "radicalName": "ひ",
+   "mnemonicVi": "Mặt trời vẽ thành hình vuông có một vạch ở giữa.",
+   "example": {
+    "id": "k015_e",
+    "ja": "{毎日|まいにち}",
+    "vi": "mỗi ngày"
+   }
+  },
+  {
+   "id": "k016",
+   "char": "月",
+   "hanViet": "NGUYỆT",
+   "meaningVi": "tháng, mặt trăng",
+   "on": "ゲツ・ガツ",
+   "kun": "つき",
+   "reading": "つき",
+   "strokes": 4,
+   "radical": "月",
+   "radicalName": "つき",
+   "mnemonicVi": "Vầng trăng khuyết có hai vệt mây ngang.",
+   "example": {
+    "id": "k016_e",
+    "ja": "{月曜日|げつようび}",
+    "vi": "thứ hai"
+   }
+  },
+  {
+   "id": "k017",
+   "char": "火",
+   "hanViet": "HỎA",
+   "meaningVi": "lửa",
+   "on": "カ",
+   "kun": "ひ",
+   "reading": "ひ",
+   "strokes": 4,
+   "radical": "火",
+   "radicalName": "ひ",
+   "mnemonicVi": "Đống lửa có tia lửa bắn sang hai bên.",
+   "example": {
+    "id": "k017_e",
+    "ja": "{火曜日|かようび}",
+    "vi": "thứ ba"
+   }
+  },
+  {
+   "id": "k018",
+   "char": "水",
+   "hanViet": "THỦY",
+   "meaningVi": "nước",
+   "on": "スイ",
+   "kun": "みず",
+   "reading": "みず",
+   "strokes": 4,
+   "radical": "水",
+   "radicalName": "みず",
+   "mnemonicVi": "Dòng nước chảy ở giữa, bọt nước bắn hai bên.",
+   "example": {
+    "id": "k018_e",
+    "ja": "{水曜日|すいようび}",
+    "vi": "thứ tư"
+   }
+  },
+  {
+   "id": "k019",
+   "char": "木",
+   "hanViet": "MỘC",
+   "meaningVi": "cây, gỗ",
+   "on": "モク・ボク",
+   "kun": "き",
+   "reading": "き",
+   "strokes": 4,
+   "radical": "木",
+   "radicalName": "き",
+   "mnemonicVi": "Cái cây có thân, cành ngang và rễ tỏa xuống.",
+   "example": {
+    "id": "k019_e",
+    "ja": "{木曜日|もくようび}",
+    "vi": "thứ năm"
+   }
+  },
+  {
+   "id": "k020",
+   "char": "金",
+   "hanViet": "KIM",
+   "meaningVi": "vàng, tiền",
+   "on": "キン・コン",
+   "kun": "かね",
+   "reading": "かね",
+   "strokes": 8,
+   "radical": "金",
+   "radicalName": "かね",
+   "mnemonicVi": "Dưới mái nhà có thỏi vàng chôn trong đất.",
+   "example": {
+    "id": "k020_e",
+    "ja": "お{金|かね}",
+    "vi": "tiền"
+   }
+  },
+  {
+   "id": "k021",
+   "char": "土",
+   "hanViet": "THỔ",
+   "meaningVi": "đất",
+   "on": "ド・ト",
+   "kun": "つち",
+   "reading": "つち",
+   "strokes": 3,
+   "radical": "土",
+   "radicalName": "つち",
+   "mnemonicVi": "Mầm cây nhú lên khỏi mặt đất.",
+   "example": {
+    "id": "k021_e",
+    "ja": "{土曜日|どようび}",
+    "vi": "thứ bảy"
+   }
+  },
+  {
+   "id": "k022",
+   "char": "曜",
+   "hanViet": "DIỆU",
+   "meaningVi": "ngày trong tuần",
+   "on": "ヨウ",
+   "kun": "",
+   "reading": "よう",
+   "strokes": 18,
+   "radical": "日",
+   "radicalName": "ひへん",
+   "mnemonicVi": "Mặt trời bên trái, hai đôi cánh chim bay qua mỗi ngày trong tuần.",
+   "example": {
+    "id": "k022_e",
+    "ja": "{何曜日|なんようび}",
+    "vi": "thứ mấy"
+   }
+  },
+  {
+   "id": "k023",
+   "char": "年",
+   "hanViet": "NIÊN",
+   "meaningVi": "năm",
+   "on": "ネン",
+   "kun": "とし",
+   "reading": "とし",
+   "strokes": 6,
+   "radical": "干",
+   "radicalName": "かん",
+   "mnemonicVi": "Người nông dân gánh lúa sau mỗi năm thu hoạch.",
+   "example": {
+    "id": "k023_e",
+    "ja": "{来年|らいねん}",
+    "vi": "năm sau"
+   }
+  },
+  {
+   "id": "k024",
+   "char": "時",
+   "hanViet": "THỜI",
+   "meaningVi": "giờ, thời gian",
+   "on": "ジ",
+   "kun": "とき",
+   "reading": "じ",
+   "strokes": 10,
+   "radical": "日",
+   "radicalName": "ひへん",
+   "mnemonicVi": "Mặt trời đi qua ngôi chùa: đến giờ đánh chuông.",
+   "example": {
+    "id": "k024_e",
+    "ja": "{時間|じかん}",
+    "vi": "thời gian"
+   }
+  },
+  {
+   "id": "k025",
+   "char": "分",
+   "hanViet": "PHÂN",
+   "meaningVi": "phút, chia, hiểu",
+   "on": "フン・ブン",
+   "kun": "わ・かる",
+   "reading": "ふん",
+   "strokes": 4,
+   "radical": "刀",
+   "radicalName": "かたな",
+   "mnemonicVi": "Con dao chia đôi thứ ở trên: chia ra, hiểu ra.",
+   "example": {
+    "id": "k025_e",
+    "ja": "{自分|じぶん}",
+    "vi": "bản thân"
+   }
+  },
+  {
+   "id": "k026",
+   "char": "半",
+   "hanViet": "BÁN",
+   "meaningVi": "một nửa",
+   "on": "ハン",
+   "kun": "なか・ば",
+   "reading": "はん",
+   "strokes": 5,
+   "radical": "十",
+   "radicalName": "じゅう",
+   "mnemonicVi": "Một nét dọc cắt đôi mọi thứ thành hai nửa.",
+   "example": {
+    "id": "k026_e",
+    "ja": "{半分|はんぶん}",
+    "vi": "một nửa"
+   }
+  },
+  {
+   "id": "k027",
+   "char": "今",
+   "hanViet": "KIM",
+   "meaningVi": "bây giờ",
+   "on": "コン",
+   "kun": "いま",
+   "reading": "いま",
+   "strokes": 4,
+   "radical": "人",
+   "radicalName": "ひとやね",
+   "mnemonicVi": "Dưới mái nhà, mọi người tụ lại ngay bây giờ.",
+   "example": {
+    "id": "k027_e",
+    "ja": "{今日|きょう}",
+    "vi": "hôm nay"
+   }
+  },
+  {
+   "id": "k028",
+   "char": "何",
+   "hanViet": "HÀ",
+   "meaningVi": "cái gì",
+   "on": "カ",
+   "kun": "なに・なん",
+   "reading": "なに",
+   "strokes": 7,
+   "radical": "亻",
+   "radicalName": "にんべん",
+   "mnemonicVi": "Người đứng cạnh cái cửa hỏi: cái gì vậy?",
+   "example": {
+    "id": "k028_e",
+    "ja": "{何時|なんじ}",
+    "vi": "mấy giờ"
+   }
+  },
+  {
+   "id": "k029",
+   "char": "午",
+   "hanViet": "NGỌ",
+   "meaningVi": "trưa",
+   "on": "ゴ",
+   "kun": "",
+   "reading": "ご",
+   "strokes": 4,
+   "radical": "十",
+   "radicalName": "じゅう",
+   "mnemonicVi": "Cây cọc cắm thẳng, bóng ngắn nhất lúc giữa trưa.",
+   "example": {
+    "id": "k029_e",
+    "ja": "{午後|ごご}",
+    "vi": "buổi chiều"
+   }
+  },
+  {
+   "id": "k030",
+   "char": "前",
+   "hanViet": "TIỀN",
+   "meaningVi": "trước",
+   "on": "ゼン",
+   "kun": "まえ",
+   "reading": "まえ",
+   "strokes": 9,
+   "radical": "刂",
+   "radicalName": "りっとう",
+   "mnemonicVi": "Con thuyền có mái chèo tiến về phía trước.",
+   "example": {
+    "id": "k030_e",
+    "ja": "{名前|なまえ}",
+    "vi": "tên"
+   }
+  },
+  {
+   "id": "k031",
+   "char": "後",
+   "hanViet": "HẬU",
+   "meaningVi": "sau",
+   "on": "ゴ・コウ",
+   "kun": "うし・ろ・あと",
+   "reading": "あと",
+   "strokes": 9,
+   "radical": "彳",
+   "radicalName": "ぎょうにんべん",
+   "mnemonicVi": "Người đi chậm bị bỏ lại phía sau.",
+   "example": {
+    "id": "k031_e",
+    "ja": "{午後|ごご}",
+    "vi": "buổi chiều"
+   }
+  },
+  {
+   "id": "k032",
+   "char": "週",
+   "hanViet": "CHU",
+   "meaningVi": "tuần",
+   "on": "シュウ",
+   "kun": "",
+   "reading": "しゅう",
+   "strokes": 11,
+   "radical": "辶",
+   "radicalName": "しんにょう",
+   "mnemonicVi": "Đi vòng quanh một lượt là hết một tuần.",
+   "example": {
+    "id": "k032_e",
+    "ja": "{来週|らいしゅう}",
+    "vi": "tuần sau"
+   }
+  },
+  {
+   "id": "k033",
+   "char": "毎",
+   "hanViet": "MỖI",
+   "meaningVi": "mỗi",
+   "on": "マイ",
+   "kun": "",
+   "reading": "まい",
+   "strokes": 6,
+   "radical": "毋",
+   "radicalName": "なかれ",
+   "mnemonicVi": "Người mẹ đội mũ, ngày nào cũng làm việc nhà.",
+   "example": {
+    "id": "k033_e",
+    "ja": "{毎朝|まいあさ}",
+    "vi": "mỗi sáng"
+   }
+  },
+  {
+   "id": "k034",
+   "char": "人",
+   "hanViet": "NHÂN",
+   "meaningVi": "người",
+   "on": "ジン・ニン",
+   "kun": "ひと",
+   "reading": "ひと",
+   "strokes": 2,
+   "radical": "人",
+   "radicalName": "ひと",
+   "mnemonicVi": "Hình một người đang bước đi bằng hai chân.",
+   "example": {
+    "id": "k034_e",
+    "ja": "{日本人|にほんじん}",
+    "vi": "người Nhật"
+   }
+  },
+  {
+   "id": "k035",
+   "char": "男",
+   "hanViet": "NAM",
+   "meaningVi": "đàn ông",
+   "on": "ダン・ナン",
+   "kun": "おとこ",
+   "reading": "おとこ",
+   "strokes": 7,
+   "radical": "田",
+   "radicalName": "た",
+   "mnemonicVi": "Người có sức lực làm việc ngoài ruộng.",
+   "example": {
+    "id": "k035_e",
+    "ja": "{男|おとこ}の{人|ひと}",
+    "vi": "người đàn ông"
+   }
+  },
+  {
+   "id": "k036",
+   "char": "女",
+   "hanViet": "NỮ",
+   "meaningVi": "phụ nữ",
+   "on": "ジョ・ニョ",
+   "kun": "おんな",
+   "reading": "おんな",
+   "strokes": 3,
+   "radical": "女",
+   "radicalName": "おんな",
+   "mnemonicVi": "Người phụ nữ ngồi khoanh tay duyên dáng.",
+   "example": {
+    "id": "k036_e",
+    "ja": "{女|おんな}の{子|こ}",
+    "vi": "bé gái"
+   }
+  },
+  {
+   "id": "k037",
+   "char": "子",
+   "hanViet": "TỬ",
+   "meaningVi": "con",
+   "on": "シ・ス",
+   "kun": "こ",
+   "reading": "こ",
+   "strokes": 3,
+   "radical": "子",
+   "radicalName": "こ",
+   "mnemonicVi": "Em bé quấn tã dang hai tay.",
+   "example": {
+    "id": "k037_e",
+    "ja": "{子|こ}ども",
+    "vi": "trẻ con"
+   }
+  },
+  {
+   "id": "k038",
+   "char": "父",
+   "hanViet": "PHỤ",
+   "meaningVi": "cha",
+   "on": "フ",
+   "kun": "ちち",
+   "reading": "ちち",
+   "strokes": 4,
+   "radical": "父",
+   "radicalName": "ちち",
+   "mnemonicVi": "Người cha cầm hai chiếc rìu bắt chéo đi làm.",
+   "example": {
+    "id": "k038_e",
+    "ja": "お{父|とう}さん",
+    "vi": "bố (của người khác)"
+   }
+  },
+  {
+   "id": "k039",
+   "char": "母",
+   "hanViet": "MẪU",
+   "meaningVi": "mẹ",
+   "on": "ボ",
+   "kun": "はは",
+   "reading": "はは",
+   "strokes": 5,
+   "radical": "毋",
+   "radicalName": "なかれ",
+   "mnemonicVi": "Người mẹ ôm con, có hai chấm là bầu sữa.",
+   "example": {
+    "id": "k039_e",
+    "ja": "お{母|かあ}さん",
+    "vi": "mẹ (của người khác)"
+   }
+  },
+  {
+   "id": "k040",
+   "char": "友",
+   "hanViet": "HỮU",
+   "meaningVi": "bạn",
+   "on": "ユウ",
+   "kun": "とも",
+   "reading": "とも",
+   "strokes": 4,
+   "radical": "又",
+   "radicalName": "また",
+   "mnemonicVi": "Hai bàn tay nắm lấy nhau: bạn bè.",
+   "example": {
+    "id": "k040_e",
+    "ja": "{友達|ともだち}",
+    "vi": "bạn bè"
+   }
+  },
+  {
+   "id": "k041",
+   "char": "名",
+   "hanViet": "DANH",
+   "meaningVi": "tên",
+   "on": "メイ・ミョウ",
+   "kun": "な",
+   "reading": "な",
+   "strokes": 6,
+   "radical": "口",
+   "radicalName": "くち",
+   "mnemonicVi": "Buổi tối tối trời, phải gọi tên bằng miệng mới nhận ra nhau.",
+   "example": {
+    "id": "k041_e",
+    "ja": "{名前|なまえ}",
+    "vi": "tên"
+   }
+  },
+  {
+   "id": "k042",
+   "char": "先",
+   "hanViet": "TIÊN",
+   "meaningVi": "trước, tiên",
+   "on": "セン",
+   "kun": "さき",
+   "reading": "さき",
+   "strokes": 6,
+   "radical": "儿",
+   "radicalName": "ひとあし",
+   "mnemonicVi": "Đôi chân bước lên trước người khác.",
+   "example": {
+    "id": "k042_e",
+    "ja": "{先生|せんせい}",
+    "vi": "thầy cô giáo"
+   }
+  },
+  {
+   "id": "k043",
+   "char": "生",
+   "hanViet": "SINH",
+   "meaningVi": "sống, sinh ra",
+   "on": "セイ・ショウ",
+   "kun": "い・きる・う・まれる",
+   "reading": "せい",
+   "strokes": 5,
+   "radical": "生",
+   "radicalName": "うまれる",
+   "mnemonicVi": "Mầm cây mọc lên từ đất: sự sống.",
+   "example": {
+    "id": "k043_e",
+    "ja": "{学生|がくせい}",
+    "vi": "học sinh"
+   }
+  },
+  {
+   "id": "k044",
+   "char": "学",
+   "hanViet": "HỌC",
+   "meaningVi": "học",
+   "on": "ガク",
+   "kun": "まな・ぶ",
+   "reading": "がく",
+   "strokes": 8,
+   "radical": "子",
+   "radicalName": "こ",
+   "mnemonicVi": "Đứa trẻ ngồi dưới mái trường để học.",
+   "example": {
+    "id": "k044_e",
+    "ja": "{大学|だいがく}",
+    "vi": "đại học"
+   }
+  },
+  {
+   "id": "k045",
+   "char": "校",
+   "hanViet": "HIỆU",
+   "meaningVi": "trường",
+   "on": "コウ",
+   "kun": "",
+   "reading": "こう",
+   "strokes": 10,
+   "radical": "木",
+   "radicalName": "きへん",
+   "mnemonicVi": "Ngôi trường bằng gỗ, nơi mọi người giao lưu.",
+   "example": {
+    "id": "k045_e",
+    "ja": "{学校|がっこう}",
+    "vi": "trường học"
+   }
+  },
+  {
+   "id": "k046",
+   "char": "山",
+   "hanViet": "SƠN",
+   "meaningVi": "núi",
+   "on": "サン",
+   "kun": "やま",
+   "reading": "やま",
+   "strokes": 3,
+   "radical": "山",
+   "radicalName": "やま",
+   "mnemonicVi": "Ba đỉnh núi nhô lên.",
+   "example": {
+    "id": "k046_e",
+    "ja": "{富士山|ふじさん}",
+    "vi": "núi Phú Sĩ"
+   }
+  },
+  {
+   "id": "k047",
+   "char": "川",
+   "hanViet": "XUYÊN",
+   "meaningVi": "sông",
+   "on": "セン",
+   "kun": "かわ",
+   "reading": "かわ",
+   "strokes": 3,
+   "radical": "川",
+   "radicalName": "かわ",
+   "mnemonicVi": "Ba dòng nước chảy song song: con sông.",
+   "example": {
+    "id": "k047_e",
+    "ja": "{川|かわ}の{水|みず}",
+    "vi": "nước sông"
+   }
+  },
+  {
+   "id": "k048",
+   "char": "天",
+   "hanViet": "THIÊN",
+   "meaningVi": "trời",
+   "on": "テン",
+   "kun": "あめ",
+   "reading": "てん",
+   "strokes": 4,
+   "radical": "大",
+   "radicalName": "だい",
+   "mnemonicVi": "Trên đầu người lớn là bầu trời.",
+   "example": {
+    "id": "k048_e",
+    "ja": "{天気|てんき}",
+    "vi": "thời tiết"
+   }
+  },
+  {
+   "id": "k049",
+   "char": "気",
+   "hanViet": "KHÍ",
+   "meaningVi": "khí, tinh thần",
+   "on": "キ・ケ",
+   "kun": "",
+   "reading": "き",
+   "strokes": 6,
+   "radical": "气",
+   "radicalName": "きがまえ",
+   "mnemonicVi": "Hơi nước bốc lên từ nồi cơm.",
+   "example": {
+    "id": "k049_e",
+    "ja": "{元気|げんき}",
+    "vi": "khỏe mạnh"
+   }
+  },
+  {
+   "id": "k050",
+   "char": "雨",
+   "hanViet": "VŨ",
+   "meaningVi": "mưa",
+   "on": "ウ",
+   "kun": "あめ",
+   "reading": "あめ",
+   "strokes": 8,
+   "radical": "雨",
+   "radicalName": "あめ",
+   "mnemonicVi": "Những hạt mưa rơi từ đám mây dưới bầu trời.",
+   "example": {
+    "id": "k050_e",
+    "ja": "{大雨|おおあめ}",
+    "vi": "mưa to"
+   }
+  },
+  {
+   "id": "k051",
+   "char": "花",
+   "hanViet": "HOA",
+   "meaningVi": "hoa",
+   "on": "カ",
+   "kun": "はな",
+   "reading": "はな",
+   "strokes": 7,
+   "radical": "艹",
+   "radicalName": "くさかんむり",
+   "mnemonicVi": "Cỏ cây biến hóa thành bông hoa.",
+   "example": {
+    "id": "k051_e",
+    "ja": "{花見|はなみ}",
+    "vi": "ngắm hoa"
+   }
+  },
+  {
+   "id": "k052",
+   "char": "上",
+   "hanViet": "THƯỢNG",
+   "meaningVi": "trên",
+   "on": "ジョウ",
+   "kun": "うえ・あ・がる",
+   "reading": "うえ",
+   "strokes": 3,
+   "radical": "一",
+   "radicalName": "いち",
+   "mnemonicVi": "Vạch chỉ hướng lên phía trên mặt đất.",
+   "example": {
+    "id": "k052_e",
+    "ja": "{上手|じょうず}",
+    "vi": "giỏi"
+   }
+  },
+  {
+   "id": "k053",
+   "char": "下",
+   "hanViet": "HẠ",
+   "meaningVi": "dưới",
+   "on": "カ・ゲ",
+   "kun": "した・さ・がる",
+   "reading": "した",
+   "strokes": 3,
+   "radical": "一",
+   "radicalName": "いち",
+   "mnemonicVi": "Vạch chỉ hướng xuống phía dưới mặt đất.",
+   "example": {
+    "id": "k053_e",
+    "ja": "{地下鉄|ちかてつ}",
+    "vi": "tàu điện ngầm"
+   }
+  },
+  {
+   "id": "k054",
+   "char": "中",
+   "hanViet": "TRUNG",
+   "meaningVi": "giữa, trong",
+   "on": "チュウ",
+   "kun": "なか",
+   "reading": "なか",
+   "strokes": 4,
+   "radical": "丨",
+   "radicalName": "ぼう",
+   "mnemonicVi": "Mũi tên bắn trúng giữa tấm bia.",
+   "example": {
+    "id": "k054_e",
+    "ja": "{中国|ちゅうごく}",
+    "vi": "Trung Quốc"
+   }
+  },
+  {
+   "id": "k055",
+   "char": "外",
+   "hanViet": "NGOẠI",
+   "meaningVi": "ngoài",
+   "on": "ガイ",
+   "kun": "そと",
+   "reading": "そと",
+   "strokes": 5,
+   "radical": "夕",
+   "radicalName": "ゆうべ",
+   "mnemonicVi": "Buổi tối đi xem bói ở bên ngoài.",
+   "example": {
+    "id": "k055_e",
+    "ja": "{外国人|がいこくじん}",
+    "vi": "người nước ngoài"
+   }
+  },
+  {
+   "id": "k056",
+   "char": "右",
+   "hanViet": "HỮU",
+   "meaningVi": "phải",
+   "on": "ウ・ユウ",
+   "kun": "みぎ",
+   "reading": "みぎ",
+   "strokes": 5,
+   "radical": "口",
+   "radicalName": "くち",
+   "mnemonicVi": "Tay phải đưa đồ ăn lên miệng.",
+   "example": {
+    "id": "k056_e",
+    "ja": "{右手|みぎて}",
+    "vi": "tay phải"
+   }
+  },
+  {
+   "id": "k057",
+   "char": "左",
+   "hanViet": "TẢ",
+   "meaningVi": "trái",
+   "on": "サ",
+   "kun": "ひだり",
+   "reading": "ひだり",
+   "strokes": 5,
+   "radical": "工",
+   "radicalName": "たくみ",
+   "mnemonicVi": "Tay trái giữ thước thợ.",
+   "example": {
+    "id": "k057_e",
+    "ja": "{左側|ひだりがわ}",
+    "vi": "bên trái"
+   }
+  },
+  {
+   "id": "k058",
+   "char": "東",
+   "hanViet": "ĐÔNG",
+   "meaningVi": "phía đông",
+   "on": "トウ",
+   "kun": "ひがし",
+   "reading": "ひがし",
+   "strokes": 8,
+   "radical": "木",
+   "radicalName": "き",
+   "mnemonicVi": "Mặt trời mọc sau rặng cây: phía đông.",
+   "example": {
+    "id": "k058_e",
+    "ja": "{東京|とうきょう}",
+    "vi": "Tokyo"
+   }
+  },
+  {
+   "id": "k059",
+   "char": "西",
+   "hanViet": "TÂY",
+   "meaningVi": "phía tây",
+   "on": "セイ・サイ",
+   "kun": "にし",
+   "reading": "にし",
+   "strokes": 6,
+   "radical": "襾",
+   "radicalName": "にし",
+   "mnemonicVi": "Con chim về tổ khi mặt trời lặn ở phía tây.",
+   "example": {
+    "id": "k059_e",
+    "ja": "{西口|にしぐち}",
+    "vi": "cửa tây"
+   }
+  },
+  {
+   "id": "k060",
+   "char": "南",
+   "hanViet": "NAM",
+   "meaningVi": "phía nam",
+   "on": "ナン",
+   "kun": "みなみ",
+   "reading": "みなみ",
+   "strokes": 9,
+   "radical": "十",
+   "radicalName": "じゅう",
+   "mnemonicVi": "Cái lều mở cửa đón gió ấm phương nam.",
+   "example": {
+    "id": "k060_e",
+    "ja": "{南口|みなみぐち}",
+    "vi": "cửa nam"
+   }
+  },
+  {
+   "id": "k061",
+   "char": "北",
+   "hanViet": "BẮC",
+   "meaningVi": "phía bắc",
+   "on": "ホク",
+   "kun": "きた",
+   "reading": "きた",
+   "strokes": 5,
+   "radical": "匕",
+   "radicalName": "さじ",
+   "mnemonicVi": "Hai người quay lưng vào nhau tránh gió bấc phương bắc.",
+   "example": {
+    "id": "k061_e",
+    "ja": "{北海道|ほっかいどう}",
+    "vi": "Hokkaido"
+   }
+  },
+  {
+   "id": "k062",
+   "char": "大",
+   "hanViet": "ĐẠI",
+   "meaningVi": "to, lớn",
+   "on": "ダイ・タイ",
+   "kun": "おお・きい",
+   "reading": "だい",
+   "strokes": 3,
+   "radical": "大",
+   "radicalName": "だい",
+   "mnemonicVi": "Người dang rộng hai tay khoe: to thế này!",
+   "example": {
+    "id": "k062_e",
+    "ja": "{大学|だいがく}",
+    "vi": "đại học"
+   }
+  },
+  {
+   "id": "k063",
+   "char": "小",
+   "hanViet": "TIỂU",
+   "meaningVi": "nhỏ",
+   "on": "ショウ",
+   "kun": "ちい・さい",
+   "reading": "しょう",
+   "strokes": 3,
+   "radical": "小",
+   "radicalName": "しょう",
+   "mnemonicVi": "Một nét nhỏ ở giữa, hai hạt nhỏ hai bên.",
+   "example": {
+    "id": "k063_e",
+    "ja": "{小学校|しょうがっこう}",
+    "vi": "trường tiểu học"
+   }
+  },
+  {
+   "id": "k064",
+   "char": "高",
+   "hanViet": "CAO",
+   "meaningVi": "cao, đắt",
+   "on": "コウ",
+   "kun": "たか・い",
+   "reading": "たかい",
+   "strokes": 10,
+   "radical": "高",
+   "radicalName": "たかい",
+   "mnemonicVi": "Tòa tháp cao nhiều tầng.",
+   "example": {
+    "id": "k064_e",
+    "ja": "{高校|こうこう}",
+    "vi": "trường cấp ba"
+   }
+  },
+  {
+   "id": "k065",
+   "char": "安",
+   "hanViet": "AN",
+   "meaningVi": "rẻ, yên ổn",
+   "on": "アン",
+   "kun": "やす・い",
+   "reading": "やすい",
+   "strokes": 6,
+   "radical": "宀",
+   "radicalName": "うかんむり",
+   "mnemonicVi": "Người phụ nữ ở trong nhà thì yên ổn.",
+   "example": {
+    "id": "k065_e",
+    "ja": "{安心|あんしん}",
+    "vi": "yên tâm"
+   }
+  },
+  {
+   "id": "k066",
+   "char": "長",
+   "hanViet": "TRƯỜNG",
+   "meaningVi": "dài, trưởng",
+   "on": "チョウ",
+   "kun": "なが・い",
+   "reading": "ながい",
+   "strokes": 8,
+   "radical": "長",
+   "radicalName": "ながい",
+   "mnemonicVi": "Ông già tóc dài chống gậy: người đứng đầu.",
+   "example": {
+    "id": "k066_e",
+    "ja": "{社長|しゃちょう}",
+    "vi": "giám đốc"
+   }
+  },
+  {
+   "id": "k067",
+   "char": "新",
+   "hanViet": "TÂN",
+   "meaningVi": "mới",
+   "on": "シン",
+   "kun": "あたら・しい",
+   "reading": "あたらしい",
+   "strokes": 13,
+   "radical": "斤",
+   "radicalName": "おのづくり",
+   "mnemonicVi": "Đứng cạnh cây, cầm rìu chặt gỗ mới.",
+   "example": {
+    "id": "k067_e",
+    "ja": "{新聞|しんぶん}",
+    "vi": "báo"
+   }
+  },
+  {
+   "id": "k068",
+   "char": "古",
+   "hanViet": "CỔ",
+   "meaningVi": "cũ",
+   "on": "コ",
+   "kun": "ふる・い",
+   "reading": "ふるい",
+   "strokes": 5,
+   "radical": "口",
+   "radicalName": "くち",
+   "mnemonicVi": "Chuyện truyền qua mười miệng người đã thành chuyện cũ.",
+   "example": {
+    "id": "k068_e",
+    "ja": "{中古|ちゅうこ}",
+    "vi": "đồ cũ"
+   }
+  },
+  {
+   "id": "k069",
+   "char": "白",
+   "hanViet": "BẠCH",
+   "meaningVi": "trắng",
+   "on": "ハク",
+   "kun": "しろ・い",
+   "reading": "しろい",
+   "strokes": 5,
+   "radical": "白",
+   "radicalName": "しろ",
+   "mnemonicVi": "Mặt trời có một tia sáng: màu trắng.",
+   "example": {
+    "id": "k069_e",
+    "ja": "{白|しろ}い{紙|かみ}",
+    "vi": "giấy trắng"
+   }
+  },
+  {
+   "id": "k070",
+   "char": "多",
+   "hanViet": "ĐA",
+   "meaningVi": "nhiều",
+   "on": "タ",
+   "kun": "おお・い",
+   "reading": "おおい",
+   "strokes": 6,
+   "radical": "夕",
+   "radicalName": "ゆうべ",
+   "mnemonicVi": "Hai buổi tối chồng lên nhau: nhiều.",
+   "example": {
+    "id": "k070_e",
+    "ja": "{多分|たぶん}",
+    "vi": "có lẽ"
+   }
+  },
+  {
+   "id": "k071",
+   "char": "少",
+   "hanViet": "THIỂU",
+   "meaningVi": "ít",
+   "on": "ショウ",
+   "kun": "すく・ない・すこ・し",
+   "reading": "すこし",
+   "strokes": 4,
+   "radical": "小",
+   "radicalName": "しょう",
+   "mnemonicVi": "Đồ nhỏ lại bị gạt đi một phần: còn ít.",
+   "example": {
+    "id": "k071_e",
+    "ja": "{少|すこ}し",
+    "vi": "một chút"
+   }
+  },
+  {
+   "id": "k072",
+   "char": "見",
+   "hanViet": "KIẾN",
+   "meaningVi": "nhìn, xem",
+   "on": "ケン",
+   "kun": "み・る",
+   "reading": "みる",
+   "strokes": 7,
+   "radical": "見",
+   "radicalName": "みる",
+   "mnemonicVi": "Con mắt to đặt trên đôi chân: đi xem.",
+   "example": {
+    "id": "k072_e",
+    "ja": "{見物|けんぶつ}",
+    "vi": "tham quan"
+   }
+  },
+  {
+   "id": "k073",
+   "char": "行",
+   "hanViet": "HÀNH",
+   "meaningVi": "đi",
+   "on": "コウ・ギョウ",
+   "kun": "い・く",
+   "reading": "いく",
+   "strokes": 6,
+   "radical": "行",
+   "radicalName": "ぎょうがまえ",
+   "mnemonicVi": "Ngã tư đường để đi.",
+   "example": {
+    "id": "k073_e",
+    "ja": "{銀行|ぎんこう}",
+    "vi": "ngân hàng"
+   }
+  },
+  {
+   "id": "k074",
+   "char": "来",
+   "hanViet": "LAI",
+   "meaningVi": "đến",
+   "on": "ライ",
+   "kun": "く・る",
+   "reading": "くる",
+   "strokes": 7,
+   "radical": "木",
+   "radicalName": "き",
+   "mnemonicVi": "Cây lúa chín, mùa gặt đã đến.",
+   "example": {
+    "id": "k074_e",
+    "ja": "{来月|らいげつ}",
+    "vi": "tháng sau"
+   }
+  },
+  {
+   "id": "k075",
+   "char": "食",
+   "hanViet": "THỰC",
+   "meaningVi": "ăn",
+   "on": "ショク",
+   "kun": "た・べる",
+   "reading": "たべる",
+   "strokes": 9,
+   "radical": "食",
+   "radicalName": "しょく",
+   "mnemonicVi": "Mái nhà che bát cơm ngon: ăn.",
+   "example": {
+    "id": "k075_e",
+    "ja": "{食堂|しょくどう}",
+    "vi": "nhà ăn"
+   }
+  },
+  {
+   "id": "k076",
+   "char": "飲",
+   "hanViet": "ẨM",
+   "meaningVi": "uống",
+   "on": "イン",
+   "kun": "の・む",
+   "reading": "のむ",
+   "strokes": 12,
+   "radical": "飠",
+   "radicalName": "しょくへん",
+   "mnemonicVi": "Bên cạnh đồ ăn là người há miệng uống.",
+   "example": {
+    "id": "k076_e",
+    "ja": "{飲|の}み{物|もの}",
+    "vi": "đồ uống"
+   }
+  },
+  {
+   "id": "k077",
+   "char": "話",
+   "hanViet": "THOẠI",
+   "meaningVi": "nói chuyện",
+   "on": "ワ",
+   "kun": "はな・す",
+   "reading": "はなす",
+   "strokes": 13,
+   "radical": "言",
+   "radicalName": "ごんべん",
+   "mnemonicVi": "Lời nói phát ra từ cái lưỡi: nói chuyện.",
+   "example": {
+    "id": "k077_e",
+    "ja": "{電話|でんわ}",
+    "vi": "điện thoại"
+   }
+  },
+  {
+   "id": "k078",
+   "char": "聞",
+   "hanViet": "VĂN",
+   "meaningVi": "nghe, hỏi",
+   "on": "ブン",
+   "kun": "き・く",
+   "reading": "きく",
+   "strokes": 14,
+   "radical": "耳",
+   "radicalName": "みみ",
+   "mnemonicVi": "Ghé tai vào cửa để nghe.",
+   "example": {
+    "id": "k078_e",
+    "ja": "{聞|き}き{取|と}り",
+    "vi": "nghe hiểu"
+   }
+  },
+  {
+   "id": "k079",
+   "char": "読",
+   "hanViet": "ĐỘC",
+   "meaningVi": "đọc",
+   "on": "ドク",
+   "kun": "よ・む",
+   "reading": "よむ",
+   "strokes": 14,
+   "radical": "言",
+   "radicalName": "ごんべん",
+   "mnemonicVi": "Lời nói đem đi bán: đọc to lên.",
+   "example": {
+    "id": "k079_e",
+    "ja": "{読書|どくしょ}",
+    "vi": "đọc sách"
+   }
+  },
+  {
+   "id": "k080",
+   "char": "書",
+   "hanViet": "THƯ",
+   "meaningVi": "viết",
+   "on": "ショ",
+   "kun": "か・く",
+   "reading": "かく",
+   "strokes": 10,
+   "radical": "曰",
+   "radicalName": "ひらび",
+   "mnemonicVi": "Tay cầm bút viết lên trang giấy.",
+   "example": {
+    "id": "k080_e",
+    "ja": "{辞書|じしょ}",
+    "vi": "từ điển"
+   }
+  },
+  {
+   "id": "k081",
+   "char": "買",
+   "hanViet": "MÃI",
+   "meaningVi": "mua",
+   "on": "バイ",
+   "kun": "か・う",
+   "reading": "かう",
+   "strokes": 12,
+   "radical": "貝",
+   "radicalName": "かい",
+   "mnemonicVi": "Cái lưới đựng vỏ sò (tiền ngày xưa) đi mua đồ.",
+   "example": {
+    "id": "k081_e",
+    "ja": "{買|か}い{物|もの}",
+    "vi": "mua sắm"
+   }
+  },
+  {
+   "id": "k082",
+   "char": "休",
+   "hanViet": "HƯU",
+   "meaningVi": "nghỉ",
+   "on": "キュウ",
+   "kun": "やす・む",
+   "reading": "やすむ",
+   "strokes": 6,
+   "radical": "亻",
+   "radicalName": "にんべん",
+   "mnemonicVi": "Người tựa vào gốc cây nghỉ ngơi.",
+   "example": {
+    "id": "k082_e",
+    "ja": "{休|やす}み",
+    "vi": "ngày nghỉ"
+   }
+  },
+  {
+   "id": "k083",
+   "char": "出",
+   "hanViet": "XUẤT",
+   "meaningVi": "ra",
+   "on": "シュツ",
+   "kun": "で・る・だ・す",
+   "reading": "でる",
+   "strokes": 5,
+   "radical": "凵",
+   "radicalName": "うけばこ",
+   "mnemonicVi": "Hai ngọn núi chồng lên nhau, mầm cây mọc ra.",
+   "example": {
+    "id": "k083_e",
+    "ja": "{出口|でぐち}",
+    "vi": "lối ra"
+   }
+  },
+  {
+   "id": "k084",
+   "char": "入",
+   "hanViet": "NHẬP",
+   "meaningVi": "vào",
+   "on": "ニュウ",
+   "kun": "はい・る・い・れる",
+   "reading": "はいる",
+   "strokes": 2,
+   "radical": "入",
+   "radicalName": "いる",
+   "mnemonicVi": "Người cúi đầu chui vào cửa.",
+   "example": {
+    "id": "k084_e",
+    "ja": "{入口|いりぐち}",
+    "vi": "lối vào"
+   }
+  },
+  {
+   "id": "k085",
+   "char": "言",
+   "hanViet": "NGÔN",
+   "meaningVi": "nói",
+   "on": "ゲン・ゴン",
+   "kun": "い・う",
+   "reading": "いう",
+   "strokes": 7,
+   "radical": "言",
+   "radicalName": "げん",
+   "mnemonicVi": "Lời nói tuôn ra từ miệng thành nhiều dòng.",
+   "example": {
+    "id": "k085_e",
+    "ja": "{言葉|ことば}",
+    "vi": "từ ngữ"
+   }
+  },
+  {
+   "id": "k086",
+   "char": "立",
+   "hanViet": "LẬP",
+   "meaningVi": "đứng",
+   "on": "リツ",
+   "kun": "た・つ",
+   "reading": "たつ",
+   "strokes": 5,
+   "radical": "立",
+   "radicalName": "たつ",
+   "mnemonicVi": "Người đứng thẳng trên mặt đất.",
+   "example": {
+    "id": "k086_e",
+    "ja": "{立|た}ち{入|い}り{禁止|きんし}",
+    "vi": "cấm vào"
+   }
+  },
+  {
+   "id": "k087",
+   "char": "会",
+   "hanViet": "HỘI",
+   "meaningVi": "gặp, hội",
+   "on": "カイ",
+   "kun": "あ・う",
+   "reading": "あう",
+   "strokes": 6,
+   "radical": "人",
+   "radicalName": "ひとやね",
+   "mnemonicVi": "Mọi người tụ lại dưới một mái nhà để gặp nhau.",
+   "example": {
+    "id": "k087_e",
+    "ja": "{会社|かいしゃ}",
+    "vi": "công ty"
+   }
+  },
+  {
+   "id": "k088",
+   "char": "本",
+   "hanViet": "BẢN",
+   "meaningVi": "sách, gốc",
+   "on": "ホン",
+   "kun": "もと",
+   "reading": "ほん",
+   "strokes": 5,
+   "radical": "木",
+   "radicalName": "き",
+   "mnemonicVi": "Cái cây có vạch đánh dấu ở gốc.",
+   "example": {
+    "id": "k088_e",
+    "ja": "{日本|にほん}",
+    "vi": "Nhật Bản"
+   }
+  },
+  {
+   "id": "k089",
+   "char": "国",
+   "hanViet": "QUỐC",
+   "meaningVi": "nước",
+   "on": "コク",
+   "kun": "くに",
+   "reading": "くに",
+   "strokes": 8,
+   "radical": "囗",
+   "radicalName": "くにがまえ",
+   "mnemonicVi": "Viên ngọc quý được bảo vệ trong bốn bức tường: đất nước.",
+   "example": {
+    "id": "k089_e",
+    "ja": "{外国|がいこく}",
+    "vi": "nước ngoài"
+   }
+  },
+  {
+   "id": "k090",
+   "char": "語",
+   "hanViet": "NGỮ",
+   "meaningVi": "ngôn ngữ",
+   "on": "ゴ",
+   "kun": "かた・る",
+   "reading": "ご",
+   "strokes": 14,
+   "radical": "言",
+   "radicalName": "ごんべん",
+   "mnemonicVi": "Năm cái miệng cùng nói: ngôn ngữ.",
+   "example": {
+    "id": "k090_e",
+    "ja": "{日本語|にほんご}",
+    "vi": "tiếng Nhật"
+   }
+  },
+  {
+   "id": "k091",
+   "char": "店",
+   "hanViet": "ĐIẾM",
+   "meaningVi": "cửa hàng",
+   "on": "テン",
+   "kun": "みせ",
+   "reading": "みせ",
+   "strokes": 8,
+   "radical": "广",
+   "radicalName": "まだれ",
+   "mnemonicVi": "Dưới mái hiên có người bói toán bày hàng.",
+   "example": {
+    "id": "k091_e",
+    "ja": "{店員|てんいん}",
+    "vi": "nhân viên cửa hàng"
+   }
+  },
+  {
+   "id": "k092",
+   "char": "駅",
+   "hanViet": "DỊCH",
+   "meaningVi": "nhà ga",
+   "on": "エキ",
+   "kun": "",
+   "reading": "えき",
+   "strokes": 14,
+   "radical": "馬",
+   "radicalName": "うまへん",
+   "mnemonicVi": "Trạm đổi ngựa ngày xưa, nay là nhà ga.",
+   "example": {
+    "id": "k092_e",
+    "ja": "{駅員|えきいん}",
+    "vi": "nhân viên nhà ga"
+   }
+  },
+  {
+   "id": "k093",
+   "char": "道",
+   "hanViet": "ĐẠO",
+   "meaningVi": "đường",
+   "on": "ドウ",
+   "kun": "みち",
+   "reading": "みち",
+   "strokes": 12,
+   "radical": "辶",
+   "radicalName": "しんにょう",
+   "mnemonicVi": "Cái đầu dẫn bước chân đi trên con đường.",
+   "example": {
+    "id": "k093_e",
+    "ja": "{歩道|ほどう}",
+    "vi": "vỉa hè"
+   }
+  },
+  {
+   "id": "k094",
+   "char": "車",
+   "hanViet": "XA",
+   "meaningVi": "xe",
+   "on": "シャ",
+   "kun": "くるま",
+   "reading": "くるま",
+   "strokes": 7,
+   "radical": "車",
+   "radicalName": "くるま",
+   "mnemonicVi": "Nhìn từ trên xuống: chiếc xe có trục và hai bánh.",
+   "example": {
+    "id": "k094_e",
+    "ja": "{電車|でんしゃ}",
+    "vi": "tàu điện"
+   }
+  },
+  {
+   "id": "k095",
+   "char": "電",
+   "hanViet": "ĐIỆN",
+   "meaningVi": "điện",
+   "on": "デン",
+   "kun": "",
+   "reading": "でん",
+   "strokes": 13,
+   "radical": "雨",
+   "radicalName": "あめかんむり",
+   "mnemonicVi": "Trời mưa có tia chớp: điện.",
+   "example": {
+    "id": "k095_e",
+    "ja": "{電気|でんき}",
+    "vi": "điện, đèn"
+   }
+  },
+  {
+   "id": "k096",
+   "char": "社",
+   "hanViet": "XÃ",
+   "meaningVi": "công ty, đền",
+   "on": "シャ",
+   "kun": "やしろ",
+   "reading": "しゃ",
+   "strokes": 7,
+   "radical": "礻",
+   "radicalName": "しめすへん",
+   "mnemonicVi": "Nơi thờ thần đất, nay chỉ công ty.",
+   "example": {
+    "id": "k096_e",
+    "ja": "{会社員|かいしゃいん}",
+    "vi": "nhân viên công ty"
+   }
+  },
+  {
+   "id": "k097",
+   "char": "家",
+   "hanViet": "GIA",
+   "meaningVi": "nhà",
+   "on": "カ・ケ",
+   "kun": "いえ・うち",
+   "reading": "いえ",
+   "strokes": 10,
+   "radical": "宀",
+   "radicalName": "うかんむり",
+   "mnemonicVi": "Dưới mái nhà có nuôi con lợn: ngôi nhà ấm no.",
+   "example": {
+    "id": "k097_e",
+    "ja": "{家族|かぞく}",
+    "vi": "gia đình"
+   }
+  },
+  {
+   "id": "k098",
+   "char": "手",
+   "hanViet": "THỦ",
+   "meaningVi": "tay",
+   "on": "シュ",
+   "kun": "て",
+   "reading": "て",
+   "strokes": 4,
+   "radical": "手",
+   "radicalName": "て",
+   "mnemonicVi": "Bàn tay xòe năm ngón.",
+   "example": {
+    "id": "k098_e",
+    "ja": "{切手|きって}",
+    "vi": "tem thư"
+   }
+  },
+  {
+   "id": "k099",
+   "char": "目",
+   "hanViet": "MỤC",
+   "meaningVi": "mắt",
+   "on": "モク",
+   "kun": "め",
+   "reading": "め",
+   "strokes": 5,
+   "radical": "目",
+   "radicalName": "め",
+   "mnemonicVi": "Con mắt dựng đứng có con ngươi.",
+   "example": {
+    "id": "k099_e",
+    "ja": "{一|ひと}つ{目|め}",
+    "vi": "cái thứ nhất"
+   }
+  },
+  {
+   "id": "k100",
+   "char": "口",
+   "hanViet": "KHẨU",
+   "meaningVi": "miệng",
+   "on": "コウ",
+   "kun": "くち",
+   "reading": "くち",
+   "strokes": 3,
+   "radical": "口",
+   "radicalName": "くち",
+   "mnemonicVi": "Cái miệng há ra hình vuông.",
+   "example": {
+    "id": "k100_e",
+    "ja": "{人口|じんこう}",
+    "vi": "dân số"
+   }
+  },
+  {
+   "id": "k101",
+   "char": "耳",
+   "hanViet": "NHĨ",
+   "meaningVi": "tai",
+   "on": "ジ",
+   "kun": "みみ",
+   "reading": "みみ",
+   "strokes": 6,
+   "radical": "耳",
+   "radicalName": "みみ",
+   "mnemonicVi": "Hình vành tai có các nếp gấp.",
+   "example": {
+    "id": "k101_e",
+    "ja": "{耳|みみ}が{痛|いた}い",
+    "vi": "đau tai"
+   }
+  },
+  {
+   "id": "k102",
+   "char": "足",
+   "hanViet": "TÚC",
+   "meaningVi": "chân, đủ",
+   "on": "ソク",
+   "kun": "あし・た・りる",
+   "reading": "あし",
+   "strokes": 7,
+   "radical": "足",
+   "radicalName": "あし",
+   "mnemonicVi": "Đầu gối và bàn chân đang bước.",
+   "example": {
+    "id": "k102_e",
+    "ja": "{足|あし}りる",
+    "vi": "đủ"
+   }
+  }
+ ]
+}
