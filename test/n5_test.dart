@@ -47,7 +47,7 @@ void main() {
   });
 
   Future<ProgressStore> progressStore() async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
     return ProgressStore(await SharedPreferences.getInstance());
   }
 

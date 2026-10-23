@@ -6,6 +6,7 @@ import '../models/lesson.dart';
 import '../models/n5.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/example_analysis.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
@@ -67,99 +68,101 @@ class GrammarScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(grammar == null ? 'Ngữ pháp N5' : 'Ngữ pháp N4'),
       ),
-      body: ListenableBuilder(
-        listenable: progress,
-        builder: (context, _) => ListView(
-          padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-          children: [
-            AppCard(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  RubyText(
-                    grammarTitle(_pattern),
-                    style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w800,
-                      color: AppColors.primary,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-                  Pill(_meaning, color: AppColors.pink),
-                  const SizedBox(height: 20),
-                  const SectionLabel(
-                    'Cách dùng',
-                    icon: Icons.lightbulb_outline_rounded,
-                  ),
-                  RubyText(
-                    _explanation,
-                    style: const TextStyle(fontSize: 15, height: 1.4),
-                  ),
-                  const SizedBox(height: 20),
-                  const SectionLabel(
-                    'Cấu trúc',
-                    icon: Icons.account_tree_outlined,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 14,
-                      vertical: 8,
-                    ),
-                    decoration: BoxDecoration(
-                      color: AppColors.primarySoft,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: RubyText(
-                      _pattern,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.primaryDark,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const SectionLabel(
-                    'Ví dụ',
-                    icon: Icons.chat_bubble_outline_rounded,
-                  ),
-                  for (final e in _examples)
-                    _Example(
-                      sentence: e,
-                      lesson: lessonNumber,
-                      speaker: speaker,
-                      showRuby: progress.showFurigana,
-                    ),
-                ],
-              ),
-            ),
-            if (note != null && note.isNotEmpty) ...[
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: AppColors.orangeSoft,
-                  borderRadius: BorderRadius.circular(18),
-                ),
+      body: ContentScale(
+        child: ListenableBuilder(
+          listenable: progress,
+          builder: (context, _) => ListView(
+            padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
+            children: [
+              AppCard(
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SectionLabel(
-                      'Lưu ý',
-                      icon: Icons.info_outline_rounded,
-                      color: AppColors.orange,
+                    RubyText(
+                      grammarTitle(_pattern),
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.primary,
+                      ),
                     ),
-                    RubyText(note, style: const TextStyle(height: 1.4)),
+                    const SizedBox(height: 10),
+                    Pill(_meaning, color: AppColors.pink),
+                    const SizedBox(height: 20),
+                    const SectionLabel(
+                      'Cách dùng',
+                      icon: Icons.lightbulb_outline_rounded,
+                    ),
+                    RubyText(
+                      _explanation,
+                      style: const TextStyle(fontSize: 15, height: 1.4),
+                    ),
+                    const SizedBox(height: 20),
+                    const SectionLabel(
+                      'Cấu trúc',
+                      icon: Icons.account_tree_outlined,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 14,
+                        vertical: 8,
+                      ),
+                      decoration: BoxDecoration(
+                        color: AppColors.primarySoft,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: RubyText(
+                        _pattern,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.primaryDark,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    const SectionLabel(
+                      'Ví dụ',
+                      icon: Icons.chat_bubble_outline_rounded,
+                    ),
+                    for (final e in _examples)
+                      _Example(
+                        sentence: e,
+                        lesson: lessonNumber,
+                        speaker: speaker,
+                        showRuby: progress.showFurigana,
+                      ),
                   ],
                 ),
               ),
+              if (note != null && note.isNotEmpty) ...[
+                const SizedBox(height: 16),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: AppColors.orangeSoft,
+                    borderRadius: BorderRadius.circular(18),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SectionLabel(
+                        'Lưu ý',
+                        icon: Icons.info_outline_rounded,
+                        color: AppColors.orange,
+                      ),
+                      RubyText(note, style: const TextStyle(height: 1.4)),
+                    ],
+                  ),
+                ),
+              ],
+              if (grammar != null) ...[
+                const SizedBox(height: 20),
+                _quizButton(context),
+              ],
             ],
-            if (grammar != null) ...[
-              const SizedBox(height: 20),
-              _quizButton(context),
-            ],
-          ],
+          ),
         ),
       ),
     );

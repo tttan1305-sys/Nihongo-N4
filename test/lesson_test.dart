@@ -19,7 +19,7 @@ Lesson loadLesson26() => Lesson.fromJson(
 );
 
 Future<ProgressStore> freshProgress() async {
-  SharedPreferences.setMockInitialValues({});
+  SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
   return ProgressStore(await SharedPreferences.getInstance());
 }
 

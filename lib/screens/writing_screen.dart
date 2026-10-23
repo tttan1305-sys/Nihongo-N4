@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/lesson.dart';
 import '../services/japanese_text.dart';
 import '../widgets/kanji_canvas.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 
 /// Luyện viết: tập viết chữ Hán của bài trên chữ mẫu mờ, rồi gõ lại câu bằng hiragana.
@@ -26,11 +27,13 @@ class WritingScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
-          children: [
-            _KanjiPractice(kanji: kanji),
-            _TypingPractice(items: typing),
-          ],
+        body: ContentScale(
+          child: TabBarView(
+            children: [
+              _KanjiPractice(kanji: kanji),
+              _TypingPractice(items: typing),
+            ],
+          ),
         ),
       ),
     );

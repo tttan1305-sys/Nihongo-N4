@@ -7,6 +7,7 @@ import '../models/lesson.dart';
 import '../services/speaker.dart';
 import '../srs/sm2.dart';
 import '../widgets/listen_button.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 
 /// Ôn các thẻ đến hạn hôm nay. Thẻ bấm "Quên" quay lại cuối hàng trong cùng lượt ôn.
@@ -59,20 +60,22 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ôn flashcard')),
-      body: FutureBuilder<Map<String, Vocab>>(
-        future: _vocab,
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          // Bỏ qua thẻ của từ không còn trong bài (nội dung bài đã sửa).
-          _queue.removeWhere(
-            (id) => !snapshot.data!.containsKey(id.toString()),
-          );
-          if (_queue.isEmpty) return _done(context);
-          final id = _queue.first;
-          return _card(context, id, snapshot.data![id.toString()]!);
-        },
+      body: ContentScale(
+        child: FutureBuilder<Map<String, Vocab>>(
+          future: _vocab,
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            // Bỏ qua thẻ của từ không còn trong bài (nội dung bài đã sửa).
+            _queue.removeWhere(
+              (id) => !snapshot.data!.containsKey(id.toString()),
+            );
+            if (_queue.isEmpty) return _done(context);
+            final id = _queue.first;
+            return _card(context, id, snapshot.data![id.toString()]!);
+          },
+        ),
       ),
     );
   }

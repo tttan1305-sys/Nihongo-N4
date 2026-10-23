@@ -24,7 +24,7 @@ void main() {
 
   setUp(() {
     clock = DateTime(2026, 10, 20, 9);
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
   });
 
   test('thêm bài vào flashcard, ôn, lưu lại sau khi mở lại app', () async {

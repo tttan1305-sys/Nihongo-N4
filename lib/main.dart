@@ -15,6 +15,7 @@ import 'services/recognizer.dart';
 import 'services/speaker.dart';
 import 'services/sync_service.dart';
 import 'theme.dart';
+import 'widgets/content_scale.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -168,6 +169,11 @@ class NihongoApp extends StatelessWidget {
       title: 'Nihongo N4',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(),
+      builder: (context, child) => ListenableBuilder(
+        listenable: progress,
+        builder: (context, _) =>
+            ContentScaleScope(scale: progress.textScale, child: child!),
+      ),
       home: ListenableBuilder(
         listenable: Listenable.merge([auth, progress]),
         builder: (context, _) {

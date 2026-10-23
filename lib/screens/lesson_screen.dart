@@ -6,6 +6,7 @@ import '../data/progress_store.dart';
 import '../models/lesson.dart';
 import '../services/recognizer.dart';
 import '../services/speaker.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 import 'grammar_screen.dart';
 import 'reading_tab.dart';
@@ -73,48 +74,50 @@ class LessonScreen extends StatelessWidget {
                 ],
               ),
             ),
-            body: TabBarView(
-              children: [
-                _GrammarList(
-                  lesson: lesson,
-                  progress: progress,
-                  speaker: speaker,
-                ),
-                ListenableBuilder(
-                  listenable: progress,
-                  builder: (context, _) => progress.isVocabUnlocked(lesson)
-                      ? VocabTab(
-                          lesson: lesson,
-                          progress: progress,
-                          flashcards: flashcards,
-                          speaker: speaker,
-                        )
-                      : _Locked(
-                          title: 'Phần Từ vựng đang khóa',
-                          message:
-                              'Hãy học xong phần Ngữ pháp trước. '
-                              'Đã qua ${progress.passedGrammarCount(lesson)}/${lesson.grammar.length} mẫu ngữ pháp.',
-                        ),
-                ),
-                _afterVocab(
-                  lesson,
-                  'Phần Luyện kỹ năng đang khóa',
-                  () => SkillsTab(
-                    lesson: lesson,
-                    speaker: speaker,
-                    recognizer: recognizer,
-                  ),
-                ),
-                _afterVocab(
-                  lesson,
-                  'Bài đọc hiểu đang khóa',
-                  () => ReadingTab(
+            body: ContentScale(
+              child: TabBarView(
+                children: [
+                  _GrammarList(
                     lesson: lesson,
                     progress: progress,
                     speaker: speaker,
                   ),
-                ),
-              ],
+                  ListenableBuilder(
+                    listenable: progress,
+                    builder: (context, _) => progress.isVocabUnlocked(lesson)
+                        ? VocabTab(
+                            lesson: lesson,
+                            progress: progress,
+                            flashcards: flashcards,
+                            speaker: speaker,
+                          )
+                        : _Locked(
+                            title: 'Phần Từ vựng đang khóa',
+                            message:
+                                'Hãy học xong phần Ngữ pháp trước. '
+                                'Đã qua ${progress.passedGrammarCount(lesson)}/${lesson.grammar.length} mẫu ngữ pháp.',
+                          ),
+                  ),
+                  _afterVocab(
+                    lesson,
+                    'Phần Luyện kỹ năng đang khóa',
+                    () => SkillsTab(
+                      lesson: lesson,
+                      speaker: speaker,
+                      recognizer: recognizer,
+                    ),
+                  ),
+                  _afterVocab(
+                    lesson,
+                    'Bài đọc hiểu đang khóa',
+                    () => ReadingTab(
+                      lesson: lesson,
+                      progress: progress,
+                      speaker: speaker,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );

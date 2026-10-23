@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/content_scale.dart';
+
 /// Bảng màu chung của ứng dụng: nền xanh đêm, thẻ tối viền neon.
 abstract final class AppColors {
   static const primary = Color(0xFF4D8DFF);
@@ -71,14 +73,17 @@ ThemeData buildAppTheme() {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-      ),
+      ).copyWith(foregroundBuilder: _normalText),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom().copyWith(foregroundBuilder: _normalText),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         side: const BorderSide(color: AppColors.border),
-      ),
+      ).copyWith(foregroundBuilder: _normalText),
     ),
     navigationBarTheme: NavigationBarThemeData(
       backgroundColor: const Color(0xFF0E1A3C),
@@ -142,7 +147,7 @@ ThemeData buildAppTheme() {
         selectedBackgroundColor: AppColors.primary,
         selectedForegroundColor: Colors.white,
         side: const BorderSide(color: AppColors.border),
-      ),
+      ).copyWith(foregroundBuilder: _normalText),
     ),
     switchTheme: SwitchThemeData(
       trackColor: WidgetStateProperty.resolveWith(
@@ -153,3 +158,11 @@ ThemeData buildAppTheme() {
     ),
   );
 }
+
+/// Chữ trên nút giữ cỡ thường, kể cả khi nút nằm trong vùng nội dung bài học
+/// đã phóng to.
+Widget _normalText(
+  BuildContext context,
+  Set<WidgetState> states,
+  Widget? child,
+) => NormalTextScale(child: child ?? const SizedBox.shrink());

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../data/word_bank.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
 
@@ -67,7 +68,9 @@ class _SentenceOrderScreenState extends State<SentenceOrderScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Luyện tập câu')),
-      body: _index >= widget.items.length ? _done(context) : _question(),
+      body: ContentScale(
+        child: _index >= widget.items.length ? _done(context) : _question(),
+      ),
     );
   }
 

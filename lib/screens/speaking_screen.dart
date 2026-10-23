@@ -5,6 +5,7 @@ import '../services/japanese_text.dart';
 import '../services/recognizer.dart';
 import '../services/speaker.dart';
 import '../widgets/listen_button.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 
 /// Luyện nói: nghe câu mẫu, đọc theo (shadowing), máy nhận dạng và chấm điểm.
@@ -76,92 +77,94 @@ class _SpeakingScreenState extends State<SpeakingScreen> {
     final s = _current;
     return Scaffold(
       appBar: AppBar(title: const Text('Luyện nói')),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          Text(
-            'Câu ${_index + 1}/${widget.sentences.length}',
-            style: text.labelLarge,
-          ),
-          const SizedBox(height: 8),
-          const Text('Nghe câu mẫu, sau đó bấm micro và đọc theo.'),
-          const SizedBox(height: 16),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Expanded(
-                child: RubyText(s.ja, style: const TextStyle(fontSize: 22)),
-              ),
-              ListenButton(
-                speaker: widget.speaker,
-                lesson: widget.lesson,
-                audioId: s.id,
-                text: plainText(s.ja),
-              ),
-            ],
-          ),
-          Text(s.vi, style: text.bodySmall),
-          const SizedBox(height: 32),
-          Center(
-            child: IconButton.filled(
-              key: const ValueKey('record'),
-              iconSize: 56,
-              icon: Icon(_listening ? Icons.hearing : Icons.mic),
-              onPressed: _listening ? null : _record,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Center(child: Text(_listening ? 'Đang nghe…' : 'Bấm để nói')),
-          const SizedBox(height: 16),
-          if (_failed)
+      body: ContentScale(
+        child: ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
             Text(
-              'Không nghe được. Hãy cho app quyền dùng micro, nói to và rõ hơn rồi thử lại.',
-              style: TextStyle(color: colors.error),
-            ),
-          if (_heard != null && _score != null) ...[
-            Text('Máy nghe được:', style: text.labelMedium),
-            Text(
-              _heard!,
-              key: const ValueKey('heard'),
-              style: const TextStyle(fontSize: 18),
+              'Câu ${_index + 1}/${widget.sentences.length}',
+              style: text.labelLarge,
             ),
             const SizedBox(height: 8),
-            Text(
-              _score! >= SpeakingScreen.goodScore
-                  ? 'Tốt lắm! Giống câu mẫu ${(_score! * 100).round()}%'
-                  : 'Giống câu mẫu ${(_score! * 100).round()}%. Nghe lại và thử thêm lần nữa nhé.',
-              key: const ValueKey('speaking-result'),
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: _score! >= SpeakingScreen.goodScore
-                    ? colors.primary
-                    : colors.error,
+            const Text('Nghe câu mẫu, sau đó bấm micro và đọc theo.'),
+            const SizedBox(height: 16),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Expanded(
+                  child: RubyText(s.ja, style: const TextStyle(fontSize: 22)),
+                ),
+                ListenButton(
+                  speaker: widget.speaker,
+                  lesson: widget.lesson,
+                  audioId: s.id,
+                  text: plainText(s.ja),
+                ),
+              ],
+            ),
+            Text(s.vi, style: text.bodySmall),
+            const SizedBox(height: 32),
+            Center(
+              child: IconButton.filled(
+                key: const ValueKey('record'),
+                iconSize: 56,
+                icon: Icon(_listening ? Icons.hearing : Icons.mic),
+                onPressed: _listening ? null : _record,
               ),
             ),
-          ],
-          const SizedBox(height: 24),
-          Row(
-            children: [
-              if (_index > 0)
-                OutlinedButton(
-                  onPressed: () => _go(-1),
-                  child: const Text('Câu trước'),
+            const SizedBox(height: 8),
+            Center(child: Text(_listening ? 'Đang nghe…' : 'Bấm để nói')),
+            const SizedBox(height: 16),
+            if (_failed)
+              Text(
+                'Không nghe được. Hãy cho app quyền dùng micro, nói to và rõ hơn rồi thử lại.',
+                style: TextStyle(color: colors.error),
+              ),
+            if (_heard != null && _score != null) ...[
+              Text('Máy nghe được:', style: text.labelMedium),
+              Text(
+                _heard!,
+                key: const ValueKey('heard'),
+                style: const TextStyle(fontSize: 18),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                _score! >= SpeakingScreen.goodScore
+                    ? 'Tốt lắm! Giống câu mẫu ${(_score! * 100).round()}%'
+                    : 'Giống câu mẫu ${(_score! * 100).round()}%. Nghe lại và thử thêm lần nữa nhé.',
+                key: const ValueKey('speaking-result'),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: _score! >= SpeakingScreen.goodScore
+                      ? colors.primary
+                      : colors.error,
                 ),
-              const Spacer(),
-              if (_index + 1 < widget.sentences.length)
-                FilledButton(
-                  key: const ValueKey('next-sentence'),
-                  onPressed: () => _go(1),
-                  child: const Text('Câu tiếp'),
-                )
-              else
-                FilledButton(
-                  onPressed: () => Navigator.of(context).pop(),
-                  child: const Text('Xong'),
-                ),
+              ),
             ],
-          ),
-        ],
+            const SizedBox(height: 24),
+            Row(
+              children: [
+                if (_index > 0)
+                  OutlinedButton(
+                    onPressed: () => _go(-1),
+                    child: const Text('Câu trước'),
+                  ),
+                const Spacer(),
+                if (_index + 1 < widget.sentences.length)
+                  FilledButton(
+                    key: const ValueKey('next-sentence'),
+                    onPressed: () => _go(1),
+                    child: const Text('Câu tiếp'),
+                  )
+                else
+                  FilledButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: const Text('Xong'),
+                  ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -60,6 +60,14 @@ class ProgressStore extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Cỡ chữ nội dung bài học, nhân với cỡ chữ của máy. Mặc định 2 lần.
+  double get textScale => _prefs.getDouble('settings.textScale') ?? 2.0;
+
+  Future<void> setTextScale(double value) async {
+    await _prefs.setDouble('settings.textScale', value);
+    notifyListeners();
+  }
+
   static String _readingKey(int lesson) => 'reading.$lesson';
 
   /// Điểm cao nhất của câu hỏi đọc hiểu cuối bài.

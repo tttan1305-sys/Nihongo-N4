@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/progress_store.dart';
 import '../models/n5.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 
 const _letters = ['A', 'B', 'C', 'D'];
@@ -83,7 +84,9 @@ class _N5TestScreenState extends State<N5TestScreen> {
               : '${widget.test.titleVi}  (${_index + 1}/${_picked.length})',
         ),
       ),
-      body: _submitted ? _results(context) : _question(context),
+      body: ContentScale(
+        child: _submitted ? _results(context) : _question(context),
+      ),
     );
   }
 

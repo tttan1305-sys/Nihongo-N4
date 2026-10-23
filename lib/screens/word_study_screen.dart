@@ -4,6 +4,7 @@ import '../data/progress_store.dart';
 import '../data/word_bank.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
 
@@ -70,7 +71,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
         ),
         title: Text(widget.title),
       ),
-      body: _finished ? _done(context) : _card(context),
+      body: ContentScale(child: _finished ? _done(context) : _card(context)),
     );
   }
 
@@ -330,17 +331,19 @@ class _AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton.icon(
-      onPressed: onPressed,
-      style: OutlinedButton.styleFrom(
-        foregroundColor: color,
-        backgroundColor: color.withValues(alpha: 0.1),
-        side: BorderSide(color: color.withValues(alpha: 0.7)),
-        padding: const EdgeInsets.symmetric(vertical: 14),
-        textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+    return NormalTextScale(
+      child: OutlinedButton.icon(
+        onPressed: onPressed,
+        style: OutlinedButton.styleFrom(
+          foregroundColor: color,
+          backgroundColor: color.withValues(alpha: 0.1),
+          side: BorderSide(color: color.withValues(alpha: 0.7)),
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          textStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+        ),
+        icon: Icon(icon, size: 20),
+        label: Text(label),
       ),
-      icon: Icon(icon, size: 20),
-      label: Text(label),
     );
   }
 }
@@ -354,51 +357,53 @@ class _RevealButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 92,
-      height: 92,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFF6FA2FF), AppColors.primaryDark],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.primary.withValues(alpha: 0.6),
-            blurRadius: 22,
+    return NormalTextScale(
+      child: Container(
+        width: 92,
+        height: 92,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Color(0xFF6FA2FF), AppColors.primaryDark],
           ),
-        ],
-      ),
-      child: Material(
-        color: Colors.transparent,
-        shape: const CircleBorder(),
-        child: InkWell(
-          key: const ValueKey('study-reveal'),
-          customBorder: const CircleBorder(),
-          onTap: onPressed,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                revealed
-                    ? Icons.visibility_off_rounded
-                    : Icons.visibility_rounded,
-                color: Colors.white,
-              ),
-              const SizedBox(height: 2),
-              Text(
-                revealed ? 'Ẩn nghĩa' : 'Hiển thị\nnghĩa',
-                textAlign: TextAlign.center,
-                style: const TextStyle(
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.primary.withValues(alpha: 0.6),
+              blurRadius: 22,
+            ),
+          ],
+        ),
+        child: Material(
+          color: Colors.transparent,
+          shape: const CircleBorder(),
+          child: InkWell(
+            key: const ValueKey('study-reveal'),
+            customBorder: const CircleBorder(),
+            onTap: onPressed,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  revealed
+                      ? Icons.visibility_off_rounded
+                      : Icons.visibility_rounded,
                   color: Colors.white,
-                  fontSize: 12,
-                  height: 1.1,
-                  fontWeight: FontWeight.w700,
                 ),
-              ),
-            ],
+                const SizedBox(height: 2),
+                Text(
+                  revealed ? 'Ẩn nghĩa' : 'Hiển thị\nnghĩa',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    height: 1.1,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

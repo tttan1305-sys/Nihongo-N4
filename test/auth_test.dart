@@ -34,7 +34,7 @@ class FakeAuth extends AuthService {
 }
 
 Future<ProgressStore> pumpApp(WidgetTester tester, AuthService auth) async {
-  SharedPreferences.setMockInitialValues({});
+  SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
   final prefs = await SharedPreferences.getInstance();
   final progress = ProgressStore(prefs);
   await tester.pumpWidget(

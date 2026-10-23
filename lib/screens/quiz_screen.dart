@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../models/lesson.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/option_row.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
@@ -113,7 +114,9 @@ class _QuizScreenState extends State<QuizScreen> {
       },
       child: Scaffold(
         appBar: AppBar(title: Text(widget.title)),
-        body: _finished ? _buildResult(context) : _buildQuestion(context),
+        body: ContentScale(
+          child: _finished ? _buildResult(context) : _buildQuestion(context),
+        ),
       ),
     );
   }

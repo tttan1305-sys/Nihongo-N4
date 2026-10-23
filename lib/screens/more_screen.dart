@@ -258,7 +258,7 @@ class _FeedbackDialogState extends State<_FeedbackDialog> {
   }
 }
 
-/// Cài đặt: furigana, tài khoản Google, đồng bộ.
+/// Cài đặt: furigana, cỡ chữ, tài khoản Google, đồng bộ.
 class SettingsScreen extends StatelessWidget {
   final AuthService auth;
   final ProgressStore progress;
@@ -293,6 +293,38 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   value: progress.showFurigana,
                   onChanged: progress.setShowFurigana,
+                ),
+              ),
+              const SizedBox(height: 16),
+              AppCard(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Cỡ chữ trong bài học',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    const Text(
+                      'Chữ Nhật, ví dụ, nghĩa và giải thích',
+                      style: TextStyle(color: AppColors.muted, fontSize: 13),
+                    ),
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      width: double.infinity,
+                      child: SegmentedButton<double>(
+                        key: const ValueKey('settings-text-scale'),
+                        showSelectedIcon: false,
+                        segments: const [
+                          ButtonSegment(value: 1.0, label: Text('Nhỏ')),
+                          ButtonSegment(value: 1.5, label: Text('Vừa')),
+                          ButtonSegment(value: 2.0, label: Text('Lớn')),
+                        ],
+                        selected: {progress.textScale},
+                        onSelectionChanged: (v) =>
+                            progress.setTextScale(v.first),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 16),

@@ -54,14 +54,21 @@ class RubyText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final base = DefaultTextStyle.of(context).style.merge(style);
-    final fontSize = base.fontSize ?? 16;
-    final rubyStyle = base.copyWith(fontSize: fontSize * 0.5, height: 1.1);
-    final rubyHeight = fontSize * 0.5 * 1.1;
-
+    final unscaled = DefaultTextStyle.of(context).style.merge(style);
     final segments = parseRuby(text);
     // Không có furigana thì khỏi chừa chỗ phía trên, vẽ như chữ thường.
-    if (segments.every((s) => s.ruby == null)) return Text(text, style: base);
+    if (segments.every((s) => s.ruby == null)) {
+      return Text(text, style: unscaled);
+    }
+
+    // Tự tính cỡ chữ đã phóng (cỡ chữ của máy, cỡ chữ bài học) để furigana
+    // luôn bằng nửa chữ Hán và khoảng chừa phía trên khớp với furigana.
+    final fontSize = MediaQuery.textScalerOf(context)
+        .scale(unscaled.fontSize ?? 16);
+    final base = unscaled.copyWith(fontSize: fontSize);
+    final rubyStyle = base.copyWith(fontSize: fontSize * 0.5, height: 1.1);
+    final rubyHeight = fontSize * 0.5 * 1.1;
+    const fixed = TextScaler.noScaling;
 
     final spans = <InlineSpan>[];
     for (final seg in segments) {
@@ -73,7 +80,7 @@ class RubyText extends StatelessWidget {
               alignment: PlaceholderAlignment.bottom,
               child: Padding(
                 padding: EdgeInsets.only(top: showRuby ? rubyHeight : 0),
-                child: Text(ch, style: base),
+                child: Text(ch, style: base, textScaler: fixed),
               ),
             ),
           );
@@ -85,8 +92,13 @@ class RubyText extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(seg.ruby!, style: rubyStyle, softWrap: false),
-                Text(seg.base, style: base, softWrap: false),
+                Text(
+                  seg.ruby!,
+                  style: rubyStyle,
+                  softWrap: false,
+                  textScaler: fixed,
+                ),
+                Text(seg.base, style: base, softWrap: false, textScaler: fixed),
               ],
             ),
           ),
@@ -96,6 +108,7 @@ class RubyText extends StatelessWidget {
     return Text.rich(
       TextSpan(children: spans),
       semanticsLabel: plainText(text),
+      textScaler: fixed,
     );
   }
 }

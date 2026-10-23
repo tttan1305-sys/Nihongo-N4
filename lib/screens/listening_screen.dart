@@ -8,6 +8,7 @@ import '../data/word_bank.dart';
 import '../services/japanese_text.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/option_row.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
@@ -44,11 +45,17 @@ class ListeningScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
-          children: [
-            _Comprehension(items: items, progress: progress, speaker: speaker),
-            _Dictation(words: words, progress: progress, speaker: speaker),
-          ],
+        body: ContentScale(
+          child: TabBarView(
+            children: [
+              _Comprehension(
+                items: items,
+                progress: progress,
+                speaker: speaker,
+              ),
+              _Dictation(words: words, progress: progress, speaker: speaker),
+            ],
+          ),
         ),
       ),
     );

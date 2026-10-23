@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../theme.dart';
@@ -40,11 +41,23 @@ class _KanjiCanvasState extends State<KanjiCanvas> {
               children: [
                 Positioned.fill(
                   child: LayoutBuilder(
-                    builder: (context, box) => GestureDetector(
-                      onPanStart: (d) =>
-                          setState(() => _strokes.add([d.localPosition])),
-                      onPanUpdate: (d) =>
-                          setState(() => _strokes.last.add(d.localPosition)),
+                    builder: (context, box) => RawGestureDetector(
+                      gestures: {
+                        _InkPanRecognizer:
+                            GestureRecognizerFactoryWithHandlers<
+                              _InkPanRecognizer
+                            >(_InkPanRecognizer.new, (r) {
+                              r.dragStartBehavior = DragStartBehavior.down;
+                              r.onStart = (d) {
+                                setState(() => _strokes.add([d.localPosition]));
+                              };
+                              r.onUpdate = (d) {
+                                setState(
+                                  () => _strokes.last.add(d.localPosition),
+                                );
+                              };
+                            }),
+                      },
                       child: CustomPaint(
                         key: const ValueKey('kanji-canvas'),
                         painter: _CanvasPainter(
@@ -93,6 +106,16 @@ class _KanjiCanvasState extends State<KanjiCanvas> {
         ),
       ),
     );
+  }
+}
+
+/// Nhận nét vẽ ngay khi chạm, không nhường cho trang cuộn phía ngoài.
+/// Nếu dùng GestureDetector thường, nét kéo dọc bị trang cuộn giành mất.
+class _InkPanRecognizer extends PanGestureRecognizer {
+  @override
+  void addAllowedPointer(PointerDownEvent event) {
+    super.addAllowedPointer(event);
+    resolve(GestureDisposition.accepted);
   }
 }
 

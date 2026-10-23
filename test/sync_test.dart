@@ -41,7 +41,7 @@ void main() {
   final t0 = DateTime(2026, 10, 21, 9);
 
   setUp(() async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
     final prefs = await SharedPreferences.getInstance();
     progress = ProgressStore(prefs);
     flashcards = FlashcardStore(prefs, clock: () => t0);

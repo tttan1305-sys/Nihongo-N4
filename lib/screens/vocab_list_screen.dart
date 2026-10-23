@@ -4,6 +4,7 @@ import '../data/progress_store.dart';
 import '../data/word_bank.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
 import 'word_study_screen.dart';
@@ -128,72 +129,80 @@ class _VocabListScreenState extends State<VocabListScreen> {
         }
         return Scaffold(
           appBar: AppBar(title: Text('Từ vựng $_level')),
-          body: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        key: const ValueKey('vocab-search'),
-                        decoration: const InputDecoration(
-                          hintText: 'Tìm kiếm từ...',
-                          prefixIcon: Icon(Icons.search_rounded),
-                        ),
-                        onChanged: (v) => setState(() => _query = v),
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    SegmentedButton<String>(
-                      key: const ValueKey('vocab-level'),
-                      showSelectedIcon: false,
-                      segments: const [
-                        ButtonSegment(value: 'N4', label: Text('N4')),
-                        ButtonSegment(value: 'N5', label: Text('N5')),
-                      ],
-                      selected: {_level},
-                      onSelectionChanged: (s) =>
-                          setState(() => _level = s.first),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 44,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  children: [
-                    for (final f in WordFilter.values)
-                      Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: ChoiceChip(
-                          key: ValueKey('filter-${f.name}'),
-                          label: Text(_filterLabels[f]!),
-                          selected: _filter == f,
-                          showCheckmark: false,
-                          selectedColor: AppColors.primary,
-                          backgroundColor: AppColors.surface,
-                          side: const BorderSide(color: AppColors.border),
-                          shape: const StadiumBorder(),
-                          labelStyle: TextStyle(
-                            color: _filter == f ? Colors.white : AppColors.text,
-                            fontWeight: FontWeight.w600,
+          body: ContentScale(
+            child: Column(
+              children: [
+                NormalTextScale(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            key: const ValueKey('vocab-search'),
+                            decoration: const InputDecoration(
+                              hintText: 'Tìm kiếm từ...',
+                              prefixIcon: Icon(Icons.search_rounded),
+                            ),
+                            onChanged: (v) => setState(() => _query = v),
                           ),
-                          onSelected: (_) => setState(() => _filter = f),
                         ),
-                      ),
-                  ],
+                        const SizedBox(width: 8),
+                        SegmentedButton<String>(
+                          key: const ValueKey('vocab-level'),
+                          showSelectedIcon: false,
+                          segments: const [
+                            ButtonSegment(value: 'N4', label: Text('N4')),
+                            ButtonSegment(value: 'N5', label: Text('N5')),
+                          ],
+                          selected: {_level},
+                          onSelectionChanged: (s) =>
+                              setState(() => _level = s.first),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-              Expanded(
-                child: ListView(
-                  padding: const EdgeInsets.only(bottom: 24),
-                  children: rows,
+                NormalTextScale(
+                  child: SizedBox(
+                    height: 44,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      children: [
+                        for (final f in WordFilter.values)
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: ChoiceChip(
+                              key: ValueKey('filter-${f.name}'),
+                              label: Text(_filterLabels[f]!),
+                              selected: _filter == f,
+                              showCheckmark: false,
+                              selectedColor: AppColors.primary,
+                              backgroundColor: AppColors.surface,
+                              side: const BorderSide(color: AppColors.border),
+                              shape: const StadiumBorder(),
+                              labelStyle: TextStyle(
+                                color: _filter == f
+                                    ? Colors.white
+                                    : AppColors.text,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              onSelected: (_) => setState(() => _filter = f),
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            ],
+                Expanded(
+                  child: ListView(
+                    padding: const EdgeInsets.only(bottom: 24),
+                    children: rows,
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },

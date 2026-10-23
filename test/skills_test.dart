@@ -19,7 +19,7 @@ Lesson loadLesson26() => Lesson.fromJson(
 
 /// Tiến độ khi đã qua ngữ pháp và học xong từ vựng bài 26.
 Future<ProgressStore> progressAfterVocab() async {
-  SharedPreferences.setMockInitialValues({});
+  SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
   final progress = ProgressStore(await SharedPreferences.getInstance());
   for (final g in loadLesson26().grammar) {
     await progress.saveGrammarScore(26, g.id, 1);
@@ -60,7 +60,7 @@ void main() {
   });
 
   test('bài sau chỉ mở khi bài trước qua đọc hiểu', () async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
     final progress = ProgressStore(await SharedPreferences.getInstance());
     expect(progress.isLessonUnlocked(26, first: 26), isTrue);
     expect(progress.isLessonUnlocked(27, first: 26), isFalse);
@@ -75,7 +75,7 @@ void main() {
   testWidgets('Luyện kỹ năng và Đọc hiểu khóa đến khi học xong từ vựng', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
     await openLesson26(
       tester,
       ProgressStore(await SharedPreferences.getInstance()),

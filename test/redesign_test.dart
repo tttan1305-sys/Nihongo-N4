@@ -33,7 +33,7 @@ void main() {
   });
 
   Future<ProgressStore> progressStore() async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'settings.textScale': 1.0});
     return ProgressStore(await SharedPreferences.getInstance());
   }
 
@@ -281,6 +281,29 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('kanji-example')));
     await tester.pumpAndSettle();
     expect(find.byKey(const ValueKey('kanji-example-ja')), findsOneWidget);
+  });
+
+  testWidgets('ô viết Kanji nhận nét dọc, trang không cuộn theo', (
+    tester,
+  ) async {
+    final p = await progressStore();
+    await tester.pumpWidget(
+      app(KanjiScreen(kanji: n5.kanji, progress: p, speaker: FakeSpeaker())),
+    );
+    final canvas = find.byKey(const ValueKey('kanji-canvas'));
+    await tester.ensureVisible(canvas);
+    await tester.pumpAndSettle();
+    final scroll = tester
+        .state<ScrollableState>(
+          find.ancestor(of: canvas, matching: find.byType(Scrollable)).first,
+        )
+        .position;
+    final before = scroll.pixels;
+    await tester.drag(canvas, const Offset(0, -120));
+    await tester.pumpAndSettle();
+    expect(scroll.pixels, before);
+    final painter = tester.widget<CustomPaint>(canvas).painter as dynamic;
+    expect((painter.strokes as List).length, 1);
   });
 
   test('mọi câu ví dụ ngữ pháp đều có phân tích và cách chia', () async {

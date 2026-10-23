@@ -6,6 +6,7 @@ import '../models/lesson.dart';
 import '../models/n5.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/example_analysis.dart';
 import '../widgets/listen_button.dart';
 import '../widgets/ruby_text.dart';
@@ -45,26 +46,30 @@ class N5Screen extends StatelessWidget {
             ],
           ),
         ),
-        body: FutureBuilder<N5Data>(
-          future: repository.load(),
-          builder: (context, snapshot) {
-            if (snapshot.hasError) {
-              return Center(child: Text('Lỗi đọc dữ liệu: ${snapshot.error}'));
-            }
-            final data = snapshot.data;
-            if (data == null) {
-              return const Center(child: CircularProgressIndicator());
-            }
-            return TabBarView(
-              children: [
-                _NotesTab(sections: data.notes, speaker: speaker),
-                _FormsTab(data: data.forms, speaker: speaker),
-                _GrammarTab(lessons: data.grammar, speaker: speaker),
-                _VocabTab(topics: data.topics, speaker: speaker),
-                _TestsTab(tests: data.tests, progress: progress),
-              ],
-            );
-          },
+        body: ContentScale(
+          child: FutureBuilder<N5Data>(
+            future: repository.load(),
+            builder: (context, snapshot) {
+              if (snapshot.hasError) {
+                return Center(
+                  child: Text('Lỗi đọc dữ liệu: ${snapshot.error}'),
+                );
+              }
+              final data = snapshot.data;
+              if (data == null) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              return TabBarView(
+                children: [
+                  _NotesTab(sections: data.notes, speaker: speaker),
+                  _FormsTab(data: data.forms, speaker: speaker),
+                  _GrammarTab(lessons: data.grammar, speaker: speaker),
+                  _VocabTab(topics: data.topics, speaker: speaker),
+                  _TestsTab(tests: data.tests, progress: progress),
+                ],
+              );
+            },
+          ),
         ),
       ),
     );
@@ -382,26 +387,28 @@ class _TopicScreen extends StatelessWidget {
           vocabQuiz(topic, topics),
         ),
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(12, 8, 12, 96),
-        children: [
-          const _VocabRow(
-            cells: ['Từ', 'Hán Việt', 'Cách đọc', 'Nghĩa'],
-            header: true,
-          ),
-          for (final w in topic.words)
-            _VocabRow(
-              key: ValueKey('n5-word-${w.id}'),
-              cells: [w.word, w.hanViet, w.kana, w.meaningVi],
-              trailing: ListenButton(
-                speaker: speaker,
-                lesson: n5AudioLesson,
-                audioId: w.id,
-                text: w.kana,
-              ),
-              example: _Example(w.example, speaker),
+      body: ContentScale(
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(12, 8, 12, 96),
+          children: [
+            const _VocabRow(
+              cells: ['Từ', 'Hán Việt', 'Cách đọc', 'Nghĩa'],
+              header: true,
             ),
-        ],
+            for (final w in topic.words)
+              _VocabRow(
+                key: ValueKey('n5-word-${w.id}'),
+                cells: [w.word, w.hanViet, w.kana, w.meaningVi],
+                trailing: ListenButton(
+                  speaker: speaker,
+                  lesson: n5AudioLesson,
+                  audioId: w.id,
+                  text: w.kana,
+                ),
+                example: _Example(w.example, speaker),
+              ),
+          ],
+        ),
       ),
     );
   }

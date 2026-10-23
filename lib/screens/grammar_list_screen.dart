@@ -6,6 +6,7 @@ import '../models/lesson.dart';
 import '../models/n5.dart';
 import '../services/speaker.dart';
 import '../theme.dart';
+import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
 import '../widgets/ui.dart';
 import 'grammar_screen.dart';
@@ -40,34 +41,38 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
     final p = widget.progress;
     return Scaffold(
       appBar: AppBar(title: Text('Ngữ pháp $_level')),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-            child: SizedBox(
-              width: double.infinity,
-              child: SegmentedButton<String>(
-                key: const ValueKey('grammar-level'),
-                showSelectedIcon: false,
-                segments: const [
-                  ButtonSegment(value: 'N4', label: Text('N4 · Bài 26–50')),
-                  ButtonSegment(value: 'N5', label: Text('N5 · Bài 1–25')),
-                ],
-                selected: {_level},
-                onSelectionChanged: (s) => setState(() => _level = s.first),
+      body: ContentScale(
+        child: Column(
+          children: [
+            NormalTextScale(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: SegmentedButton<String>(
+                    key: const ValueKey('grammar-level'),
+                    showSelectedIcon: false,
+                    segments: const [
+                      ButtonSegment(value: 'N4', label: Text('N4 · Bài 26–50')),
+                      ButtonSegment(value: 'N5', label: Text('N5 · Bài 1–25')),
+                    ],
+                    selected: {_level},
+                    onSelectionChanged: (s) => setState(() => _level = s.first),
+                  ),
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: ListenableBuilder(
-              listenable: p,
-              builder: (context, _) => ListView(
-                padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-                children: _level == 'N4' ? _n4() : _n5(),
+            Expanded(
+              child: ListenableBuilder(
+                listenable: p,
+                builder: (context, _) => ListView(
+                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
+                  children: _level == 'N4' ? _n4() : _n5(),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
