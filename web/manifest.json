@@ -3,9 +3,9 @@
     "short_name": "Nihongo N4",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#FFFFFF",
-    "theme_color": "#BC002D",
-    "description": "Học tiếng Nhật N4 theo lộ trình Minna no Nihongo: furigana, giọng đọc, flashcard, 4 kỹ năng.",
+    "background_color": "#0B1430",
+    "theme_color": "#0B1430",
+    "description": "Học tiếng Nhật sơ cấp N5 và N4: ngữ pháp có phân tích, furigana, giọng đọc, flashcard, luyện nghe, Kanji.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

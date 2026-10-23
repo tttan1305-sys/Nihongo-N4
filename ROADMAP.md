@@ -121,3 +121,4 @@ Mỗi bước soạn 2 bài theo đúng định dạng bài 26, chạy `tools/ch
 - `QuizScreen` dùng lại được cho bài đọc hiểu và luyện nghe. Trong widget test, phải nạp trước bài học bằng `tester.runAsync(() => repository.load(26))`.
 - Furigana viết theo cú pháp `{漢字|かんじ}`; mọi chuỗi trong file bài học (trừ trường `char`) phải qua `tools/check_lessons.py` với 0 lỗi.
 - Nội dung tự viết, chỉ theo thứ tự bài và ngữ pháp của Minna no Nihongo (sách có bản quyền).
+- Đăng store (2026-10-23, chưa đẩy lên GitHub, chờ bạn duyệt): icon mới (あ + N4 + hoa anh đào, sinh bằng `tools/make_icons.py`), trang `web/privacy.html`, versionCode = số lần chạy GitHub Actions, ảnh và icon store trong `docs/store/`, hướng dẫn ở `docs/HUONG_DAN_DANG_STORE.md`. Samsung Galaxy Store không nhận cá nhân (cần D-U-N-S), nên chọn Huawei AppGallery, Uptodown, APKPure. Tên và mô tả trên store không ghi "Minna no Nihongo".

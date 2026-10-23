@@ -1,7 +1,7 @@
 name: nihongo_n4
 description: "Học tiếng Nhật N4 theo lộ trình Minna no Nihongo, có furigana, giọng đọc và flashcard."
 publish_to: 'none'
-version: 0.1.0+1
+version: 1.0.0+1
 
 environment:
   sdk: ^3.13.5

@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Học tiếng Nhật N4 theo lộ trình Minna no Nihongo',
+                    'Học tiếng Nhật sơ cấp N5 và N4',
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 40),
