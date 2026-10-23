@@ -1,0 +1,45 @@
+name: Kiểm tra đăng nhập Unity
+
+# Chạy tay: chỉ thử đăng nhập tài khoản Unity bằng UNITY_EMAIL / UNITY_PASSWORD,
+# không build. Không in ra nội dung secret, chỉ in độ dài và lỗi định dạng.
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Kiểm tra định dạng secret
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        run: |
+          check() {
+            local name="$1" value="$2"
+            if [ -z "$value" ]; then echo "❌ $name: trống"; return 0; fi
+            echo "$name: dài ${#value} ký tự"
+            trimmed="$(printf '%s' "$value" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+            [ "$value" != "$trimmed" ] && echo "⚠️ $name có dấu cách hoặc xuống dòng ở đầu/cuối"
+            return 0
+          }
+          check UNITY_EMAIL "$UNITY_EMAIL"
+          check UNITY_PASSWORD "$UNITY_PASSWORD"
+          case "$UNITY_EMAIL" in *@*.*) echo "UNITY_EMAIL: có dạng email";; *) echo "⚠️ UNITY_EMAIL không có dạng email";; esac
+          case "$UNITY_LICENSE" in *"<root"*"</root>"*) echo "UNITY_LICENSE: đúng dạng file .ulf";; *) echo "⚠️ UNITY_LICENSE không giống file .ulf";; esac
+
+      - name: Thử đăng nhập Unity
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        run: |
+          docker run --rm -e UNITY_EMAIL -e UNITY_PASSWORD unityci/editor:ubuntu-2021.3.33f1-base-3 \
+            bash -c 'unity-editor -batchmode -nographics -quit -logFile - -username "$UNITY_EMAIL" -password "$UNITY_PASSWORD" 2>&1' \
+            > login.log || true
+          grep -iE "login|licens|401|403|two.?factor|verif" login.log | head -40 || true
+          if grep -q "Failed to login" login.log; then
+            echo "::error::Unity từ chối đăng nhập: email hoặc mật khẩu sai, hoặc tài khoản cần xác minh/2FA."
+            exit 1
+          fi
+          echo "✅ Không thấy lỗi đăng nhập"
