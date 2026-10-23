@@ -32,7 +32,21 @@ Các giá trị này chỉ GitHub Actions đọc được khi build, không ai x
 
 ## 3. Build
 
-Vào tab **Actions → Build game → Run workflow**. Lần đầu mất khoảng 30–60 phút (tải Unity). Xong sẽ có bản thử tên `game-<số>` trong mục Releases, tải file APK về điện thoại để cài. Game có tên gói riêng (`com.tttan.nihongo.adventure`) nên cài song song được với ứng dụng học hiện tại.
+Mục **Build game** chỉ hiện trên GitHub sau khi mã game (thư mục `unity/`) đã được đẩy lên. Từ đó, mỗi lần đẩy mã game hoặc sửa bài học, GitHub tự build, không cần bấm gì. Muốn build lại bằng tay:
+
+1. Mở https://github.com/tttan1305-sys/Nihongo-N4/actions
+2. Cột bên trái, bấm **Build game**.
+3. Bên phải có dải màu xanh nhạt ghi "This workflow has a workflow_dispatch event trigger". Bấm nút **Run workflow** ở đó, giữ nhánh **main**, bấm nút xanh **Run workflow**.
+4. Sau vài giây có một dòng mới với vòng tròn vàng (đang chạy). Lần đầu mất khoảng 30–60 phút vì GitHub phải tải Unity; các lần sau nhanh hơn.
+5. Xong: dấu tích xanh là thành công, dấu X đỏ là lỗi (bấm vào dòng đó để xem; báo lại để sửa).
+
+## 4. Tải game về điện thoại
+
+1. Mở https://github.com/tttan1305-sys/Nihongo-N4/releases
+2. Tìm bản tên **Game phiêu lưu, bản thử game-<số>** (số lớn nhất là mới nhất).
+3. Mục **Assets**, bấm file `nihongo-phieu-luu-game-<số>.apk` để tải.
+4. Mở file vừa tải trên điện thoại. Nếu máy hỏi, cho phép "Cài ứng dụng không rõ nguồn gốc" cho trình duyệt rồi bấm **Cài đặt**.
+5. Game mở theo chiều ngang. Chạm và kéo nửa trái màn hình để đi, tới gần quái để vào ải.
 
 ## Cấu trúc mã
 
