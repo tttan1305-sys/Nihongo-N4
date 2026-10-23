@@ -1,0 +1,75 @@
+# Build game phiêu lưu 3D (Unity, thư mục unity/) thành file APK.
+# Cần 3 secret của tài khoản Unity miễn phí: UNITY_LICENSE, UNITY_EMAIL, UNITY_PASSWORD
+# (cách lấy: docs/HUONG_DAN_UNITY.md). Chưa có secret thì bỏ qua, không báo lỗi.
+name: Build game
+
+on:
+  push:
+    branches: [main]
+    paths: ['unity/**', 'assets/lessons/**', '.github/workflows/build-game.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kiểm tra secret Unity
+        id: check
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        run: |
+          if [ -z "$UNITY_LICENSE" ]; then
+            echo "::warning::Chưa có secret UNITY_LICENSE nên chưa build được game. Xem docs/HUONG_DAN_UNITY.md."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Ảnh Unity cho Android rất nặng, dọn bớt chỗ trên máy build.
+      - if: steps.check.outputs.ready == 'true'
+        uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: false
+
+      - if: steps.check.outputs.ready == 'true'
+        uses: actions/checkout@v5
+
+      - if: steps.check.outputs.ready == 'true'
+        uses: actions/cache@v4
+        with:
+          path: unity/Library
+          key: unity-library-${{ hashFiles('unity/Assets/**', 'unity/Packages/**', 'unity/ProjectSettings/**') }}
+          restore-keys: unity-library-
+
+      - if: steps.check.outputs.ready == 'true'
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: unity
+          targetPlatform: Android
+          buildMethod: Nihongo.EditorTools.BuildScript.BuildAndroid
+          buildName: nihongo-phieu-luu
+          versioning: Custom
+          version: 0.1.${{ github.run_number }}
+          androidVersionCode: ${{ github.run_number }}
+
+      - if: steps.check.outputs.ready == 'true'
+        name: Đăng bản thử lên Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          apk=$(find build -name '*.apk' | head -1)
+          tag="game-${{ github.run_number }}"
+          cp "$apk" "nihongo-phieu-luu-$tag.apk"
+          gh release create "$tag" "nihongo-phieu-luu-$tag.apk" --prerelease \
+            --title "Game phiêu lưu, bản thử $tag" \
+            --notes "Game 3D vượt ải (Unity). Tải file APK về điện thoại Android để cài."

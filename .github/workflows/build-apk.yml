@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
     # Chỉ sửa tài liệu thì không cần build lại.
-    paths-ignore: ['**.md', 'docs/**']
+    paths-ignore: ['**.md', 'docs/**', 'unity/**', '.github/workflows/build-game.yml']
   workflow_dispatch:
 
 permissions:

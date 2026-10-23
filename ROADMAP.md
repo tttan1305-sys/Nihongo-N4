@@ -124,3 +124,15 @@ Mỗi bước soạn 2 bài theo đúng định dạng bài 26, chạy `tools/ch
 - Đăng store (2026-10-23, đã đẩy, APK thu-21): icon mới (あ + N4 + hoa anh đào, sinh bằng `tools/make_icons.py`), trang `web/privacy.html`, versionCode = số lần chạy GitHub Actions, ảnh và icon store trong `docs/store/`, hướng dẫn ở `docs/HUONG_DAN_DANG_STORE.md`. Samsung Galaxy Store không nhận cá nhân (cần D-U-N-S), nên chọn Huawei AppGallery, Uptodown, APKPure. Tên và mô tả trên store không ghi "Minna no Nihongo".
 - Cỡ chữ bài học (2026-10-23, APK thu-21): `widgets/content_scale.dart`. Thân các màn học (ngữ pháp, từ vựng, Kanji, flashcard, quiz, nghe, nói, viết, Tổng hợp N5) bọc `ContentScale`; chữ thường phóng theo Cài đặt (Nhỏ 1×/Vừa 1.5×/Lớn 2×, mặc định Lớn, khóa `settings.textScale`) nhưng tối đa 36, chữ vốn to giữ nguyên. Nút giữ cỡ thường qua `foregroundBuilder` trong theme; nút tự vẽ bọc `NormalTextScale`. RubyText tự tính cỡ furigana. Test đặt `settings.textScale` = 1.0.
 - Ô viết Kanji dùng `_InkPanRecognizer` (nhận cử chỉ ngay khi chạm) để nét dọc không bị trang cuộn giành.
+
+## Game phiêu lưu 3D (Unity)
+
+Người dùng chọn Unity (2026-10-23). Phác thảo: `docs/game/*.png`. Mã ở `unity/` (Unity 2021.3.33f1, cảnh dựng bằng mã, giao diện IMGUI). Build bằng `.github/workflows/build-game.yml` (game-ci), cần secret Unity theo `docs/HUONG_DAN_UNITY.md`. Máy làm việc không tải được Unity; kiểm tra biên dịch bằng `dotnet build` với thư viện tham chiếu Unity từ NuGet (UnityEngine.Modules 2021.3.33, Unity3D.SDK cho UnityEditor).
+
+| Bước | Việc | Trạng thái |
+|---|---|---|
+| G1 | Vùng Kyoto (bài 26): bản đồ, nhân vật chibi + tùy biến, cần điều khiển, 4 ải lính thường + tinh anh + boss dùng câu hỏi bài 26 | ✅ mã xong, biên dịch được; 🔑 chờ secret Unity để build APK |
+| G2 | Bản đồ thế giới nối các vùng, Làng Khởi Đầu (ôn N5) | 👉 |
+| G3 | Nara, Osaka, Tokyo, Phú Sĩ (khi có bài 31–50) | ⬜ |
+| G4 | Map ẩn Arashiyama / Itsukushima / Himeji với test Dễ / Vừa / Khó | ⬜ |
+| G5 | Đăng nhập Google + đồng bộ tiến độ với ứng dụng | ⬜ |
