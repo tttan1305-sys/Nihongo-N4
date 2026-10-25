@@ -146,4 +146,4 @@ Theo canvas thiết kế "App học tiếng Nhật — Mechanical & Anime" và t
 | M1 | `lib/skins.dart`: 5 bảng màu, `AppColors` thành getter; lưu `settings.skin`, `settings.brightness`; phông Chakra Petch, JetBrains Mono, Nunito (OFL) trong `assets/fonts/` | ✅ |
 | M2 | Trang chủ (bảng điều khiển đồng hồ đo / Kumo + bong bóng thoại), Flashcard (ô 田 / tia tốc độ, 4 nút SM-2), Bài kiểm tra (màn LCD / Kumo hỏi) | ✅ |
 | M3 | Thẻ, nút, thanh tiến độ, thanh điều hướng chung theo phong cách; bỏ chữ trắng ghi cứng trên nền sáng | ✅ |
-| M4 | Ảnh duyệt: `docs/screenshots/giao-dien-{mechanical,anime}-{sang,toi}.png`, `giao-dien-cai-dat.png` | 👉 chờ bạn duyệt rồi mới đẩy lên GitHub |
+| M4 | Ảnh duyệt: `docs/screenshots/giao-dien-{mechanical,anime}-{sang,toi}.png`, `giao-dien-cai-dat.png` | ✅ bạn duyệt, đã đẩy; APK thu-25 |
