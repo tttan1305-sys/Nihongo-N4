@@ -85,13 +85,10 @@ class _KanjiCanvasState extends State<KanjiCanvas> {
                     key: const ValueKey('canvas-clear'),
                     tooltip: 'Xóa nét',
                     onPressed: () => setState(_strokes.clear),
-                    icon: const Icon(
-                      Icons.refresh_rounded,
-                      color: AppColors.muted,
-                    ),
+                    icon: Icon(Icons.refresh_rounded, color: AppColors.muted),
                   ),
                 ),
-                const Positioned(
+                Positioned(
                   left: 14,
                   top: 12,
                   child: Icon(

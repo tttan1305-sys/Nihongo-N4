@@ -8,6 +8,7 @@ import '../theme.dart';
 import '../widgets/content_scale.dart';
 import '../widgets/option_row.dart';
 import '../widgets/ruby_text.dart';
+import '../widgets/skin_widgets.dart';
 import '../widgets/ui.dart';
 
 const _letters = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -114,8 +115,10 @@ class _QuizScreenState extends State<QuizScreen> {
       },
       child: Scaffold(
         appBar: AppBar(title: Text(widget.title)),
-        body: ContentScale(
-          child: _finished ? _buildResult(context) : _buildQuestion(context),
+        body: SkinBackground(
+          child: ContentScale(
+            child: _finished ? _buildResult(context) : _buildQuestion(context),
+          ),
         ),
       ),
     );
@@ -139,7 +142,7 @@ class _QuizScreenState extends State<QuizScreen> {
             trailing: widget.showTimer
                 ? Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.timer_outlined,
                         size: 18,
                         color: AppColors.primary,
@@ -148,7 +151,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       Text(
                         _clock,
                         key: const ValueKey('quiz-timer'),
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.w700,
                           color: AppColors.primary,
                         ),
@@ -167,7 +170,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Text(
                     widget.heading!,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: AppColors.muted,
@@ -175,12 +178,8 @@ class _QuizScreenState extends State<QuizScreen> {
                   ),
                 ),
               if (q.prompt.isNotEmpty || q.audioId != null)
-                AppCard(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 24,
-                  ),
-                  child: Column(
+                _promptFrame(
+                  Column(
                     children: [
                       if (q.prompt.isNotEmpty)
                         Center(
@@ -191,7 +190,10 @@ class _QuizScreenState extends State<QuizScreen> {
                               fontWeight: short
                                   ? FontWeight.w700
                                   : FontWeight.w500,
-                              color: AppColors.text,
+                              color:
+                                  SkinPalette.current.skin == AppSkin.mechanical
+                                  ? SkinPalette.current.screenInk
+                                  : AppColors.text,
                             ),
                           ),
                         ),
@@ -240,29 +242,127 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 
+  /// Khung câu hỏi: thẻ thường (Neon), màn hình LCD (Mechanical) hoặc
+  /// Kumo hỏi trong bong bóng thoại (Anime).
+  Widget _promptFrame(Widget child) {
+    final p = SkinPalette.current;
+    switch (p.skin) {
+      case AppSkin.neon:
+        return AppCard(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+          child: child,
+        );
+      case AppSkin.mechanical:
+        return Container(
+          padding: const EdgeInsets.all(4),
+          decoration: BoxDecoration(
+            color: p.surfaceHigh,
+            borderRadius: BorderRadius.circular(6),
+            border: Border.all(color: p.border),
+          ),
+          child: Container(
+            constraints: const BoxConstraints(minHeight: 150),
+            padding: const EdgeInsets.fromLTRB(16, 30, 16, 22),
+            decoration: BoxDecoration(
+              color: p.screen,
+              borderRadius: BorderRadius.circular(3),
+            ),
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Positioned(
+                  top: -22,
+                  left: -4,
+                  child: Text(
+                    'INPUT >_',
+                    style: skinLabelStyle(color: p.screenDim, size: 10),
+                  ),
+                ),
+                Center(child: child),
+              ],
+            ),
+          ),
+        );
+      case AppSkin.anime:
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                const KumoMascot(width: 56),
+                const SizedBox(width: 6),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 6),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 3,
+                  ),
+                  decoration: BoxDecoration(
+                    color: p.primary,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: p.border, width: 2),
+                  ),
+                  child: Text(
+                    'Kumo',
+                    style: TextStyle(
+                      color: p.onPrimary,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            AppCard(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+              child: Center(child: child),
+            ),
+          ],
+        );
+    }
+  }
+
   Widget _feedback(BuildContext context, Question q) {
     final right = _picked == q.answer;
+    final skin = SkinPalette.current.skin;
+    final title = switch (skin) {
+      AppSkin.mechanical => right ? 'CHÍNH XÁC' : 'CHƯA ĐÚNG',
+      AppSkin.anime => right ? '「すごい！」 Chính xác rồi!' : '「ざんねん…」 Chưa đúng',
+      AppSkin.neon => right ? 'Đúng rồi!' : 'Chưa đúng.',
+    };
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         color: right ? AppColors.greenSoft : AppColors.redSoft,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(skinCardRadius() - 4),
+        border: skin == AppSkin.neon
+            ? null
+            : Border.all(
+                color: right ? AppColors.green : AppColors.red,
+                width: skin == AppSkin.anime ? 2 : 1,
+              ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            right ? 'Đúng rồi!' : 'Chưa đúng.',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: right ? AppColors.green : AppColors.red,
-            ),
+            title,
+            style: skin == AppSkin.mechanical
+                ? skinLabelStyle(
+                    color: right ? AppColors.green : AppColors.red,
+                    size: 12,
+                  )
+                : TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: right ? AppColors.green : AppColors.red,
+                  ),
           ),
           if (q.explanationVi != null) RubyText(q.explanationVi!),
           if (widget.sentences[q.audioId] case final s?) ...[
             const SizedBox(height: 4),
             RubyText(s.ja, style: const TextStyle(fontSize: 18)),
-            Text(s.vi, style: const TextStyle(color: AppColors.muted)),
+            Text(s.vi, style: TextStyle(color: AppColors.muted)),
           ],
         ],
       ),
@@ -312,7 +412,7 @@ class _QuizScreenState extends State<QuizScreen> {
             Text(
               'Thời gian: $_clock',
               textAlign: TextAlign.center,
-              style: const TextStyle(color: AppColors.muted),
+              style: TextStyle(color: AppColors.muted),
             ),
           const SizedBox(height: 8),
           Text(

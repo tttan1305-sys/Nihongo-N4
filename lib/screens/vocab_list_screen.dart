@@ -84,7 +84,7 @@ class _VocabListScreenState extends State<VocabListScreen> {
           );
           if (locked) {
             rows.add(
-              const Padding(
+              Padding(
                 padding: EdgeInsets.fromLTRB(20, 0, 20, 12),
                 child: Text(
                   'Học xong phần Ngữ pháp của bài này để mở từ vựng.',
@@ -117,7 +117,7 @@ class _VocabListScreenState extends State<VocabListScreen> {
         }
         if (rows.isEmpty) {
           rows.add(
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(32),
               child: Text(
                 'Không có từ nào phù hợp.',
@@ -180,11 +180,11 @@ class _VocabListScreenState extends State<VocabListScreen> {
                               showCheckmark: false,
                               selectedColor: AppColors.primary,
                               backgroundColor: AppColors.surface,
-                              side: const BorderSide(color: AppColors.border),
+                              side: BorderSide(color: AppColors.border),
                               shape: const StadiumBorder(),
                               labelStyle: TextStyle(
                                 color: _filter == f
-                                    ? Colors.white
+                                    ? AppColors.onPrimary
                                     : AppColors.text,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -235,11 +235,7 @@ class _GroupHeader extends StatelessWidget {
             Row(
               children: [
                 if (locked) ...[
-                  const Icon(
-                    Icons.lock_outline,
-                    size: 18,
-                    color: AppColors.muted,
-                  ),
+                  Icon(Icons.lock_outline, size: 18, color: AppColors.muted),
                   const SizedBox(width: 6),
                 ],
                 Expanded(
@@ -254,7 +250,7 @@ class _GroupHeader extends StatelessWidget {
                 ),
                 Text(
                   '$learned/$total',
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppColors.primary,
                     fontWeight: FontWeight.w700,
                   ),
@@ -264,7 +260,7 @@ class _GroupHeader extends StatelessWidget {
             if (group.level == 'N4')
               Text(
                 group.subtitle,
-                style: const TextStyle(color: AppColors.muted, fontSize: 13),
+                style: TextStyle(color: AppColors.muted, fontSize: 13),
               ),
             const SizedBox(height: 8),
             RoundedProgress(value: total == 0 ? 0 : learned / total),
@@ -315,7 +311,7 @@ class _WordRow extends StatelessWidget {
                       RubyText(
                         word.word,
                         showRuby: false,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 19,
                           fontWeight: FontWeight.w700,
                           color: AppColors.text,
@@ -323,10 +319,10 @@ class _WordRow extends StatelessWidget {
                       ),
                       Text(
                         '(${word.kana})',
-                        style: const TextStyle(color: AppColors.muted),
+                        style: TextStyle(color: AppColors.muted),
                       ),
                       if (learned)
-                        const Icon(
+                        Icon(
                           Icons.check_circle_rounded,
                           size: 16,
                           color: AppColors.green,
@@ -337,7 +333,7 @@ class _WordRow extends StatelessWidget {
                     word.hanViet.isEmpty
                         ? word.meaningVi
                         : '${word.hanViet} · ${word.meaningVi}',
-                    style: const TextStyle(color: AppColors.muted),
+                    style: TextStyle(color: AppColors.muted),
                   ),
                 ],
               ),
@@ -345,10 +341,7 @@ class _WordRow extends StatelessWidget {
             IconButton(
               key: ValueKey('listen-${word.audioId}'),
               tooltip: 'Nghe',
-              icon: const Icon(
-                Icons.volume_up_rounded,
-                color: AppColors.primary,
-              ),
+              icon: Icon(Icons.volume_up_rounded, color: AppColors.primary),
               onPressed: () => speaker.speak(
                 lesson: word.audioLesson,
                 audioId: word.audioId,

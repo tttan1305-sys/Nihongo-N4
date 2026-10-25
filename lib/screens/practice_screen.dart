@@ -206,11 +206,11 @@ class _PracticeTile extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 2),
-                Text(subtitle, style: const TextStyle(color: AppColors.muted)),
+                Text(subtitle, style: TextStyle(color: AppColors.muted)),
               ],
             ),
           ),
-          const Icon(Icons.chevron_right_rounded, color: AppColors.muted),
+          Icon(Icons.chevron_right_rounded, color: AppColors.muted),
         ],
       ),
     );

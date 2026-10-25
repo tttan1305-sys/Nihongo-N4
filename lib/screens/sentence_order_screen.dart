@@ -114,7 +114,7 @@ class _SentenceOrderScreenState extends State<SentenceOrderScreen> {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
             children: [
-              const Text(
+              Text(
                 'Sắp xếp các từ để tạo thành câu đúng',
                 style: TextStyle(
                   fontSize: 16,
@@ -123,7 +123,7 @@ class _SentenceOrderScreenState extends State<SentenceOrderScreen> {
                 ),
               ),
               const SizedBox(height: 4),
-              Text(item.vi, style: const TextStyle(color: AppColors.muted)),
+              Text(item.vi, style: TextStyle(color: AppColors.muted)),
               const SizedBox(height: 16),
               // Ô trả lời: cụm đã chọn, chạm để bỏ ra.
               AppCard(
@@ -242,7 +242,7 @@ class _Chunk extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
           child: RubyText(
             text,
-            style: const TextStyle(fontSize: 18, color: AppColors.text),
+            style: TextStyle(fontSize: 18, color: AppColors.text),
           ),
         ),
       ),

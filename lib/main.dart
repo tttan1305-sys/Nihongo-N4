@@ -22,7 +22,7 @@ Future<void> main() async {
   // Bản phát hành mặc định chỉ vẽ ô xám khi một màn hình lỗi; hiện chữ để
   // người dùng chụp lại được.
   ErrorWidget.builder = (details) => Material(
-    color: const Color(0xFF0B1430),
+    color: SkinPalette.current.background,
     child: Padding(
       padding: const EdgeInsets.all(16),
       child: Text(
@@ -143,7 +143,7 @@ class _StartupState extends State<_Startup> {
   }
 }
 
-class NihongoApp extends StatelessWidget {
+class NihongoApp extends StatefulWidget {
   final LessonRepository repository;
   final ProgressStore progress;
   final FlashcardStore flashcards;
@@ -164,11 +164,58 @@ class NihongoApp extends StatelessWidget {
   }) : auth = auth ?? NoAuthService();
 
   @override
+  State<NihongoApp> createState() => _NihongoAppState();
+}
+
+class _NihongoAppState extends State<NihongoApp> with WidgetsBindingObserver {
+  NihongoApp get w => widget;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  // Chế độ "Theo máy": máy đổi sáng/tối thì vẽ lại.
+  @override
+  void didChangePlatformBrightness() => setState(() {});
+
+  @override
   Widget build(BuildContext context) {
+    final progress = w.progress;
+    return ListenableBuilder(
+      listenable: progress,
+      builder: (context, _) {
+        final b = switch (progress.brightness) {
+          'light' => Brightness.light,
+          'dark' => Brightness.dark,
+          _ => View.of(context).platformDispatcher.platformBrightness,
+        };
+        final palette = SkinPalette.of(progress.skin, b);
+        SkinPalette.current = palette;
+        // Đổi key khi đổi giao diện để mọi màn vẽ lại bằng màu mới.
+        return _app(
+          ValueKey('${palette.skin.name}-${palette.brightness.name}'),
+          palette,
+        );
+      },
+    );
+  }
+
+  Widget _app(Key key, SkinPalette palette) {
+    final progress = w.progress;
+    final auth = w.auth;
     return MaterialApp(
+      key: key,
       title: 'Nihongo N4',
       debugShowCheckedModeBanner: false,
-      theme: buildAppTheme(),
+      theme: buildAppTheme(palette),
       builder: (context, child) => ListenableBuilder(
         listenable: progress,
         builder: (context, _) =>
@@ -185,13 +232,13 @@ class NihongoApp extends StatelessWidget {
             );
           }
           return HomeScreen(
-            repository: repository,
+            repository: w.repository,
             progress: progress,
-            flashcards: flashcards,
-            speaker: speaker,
-            recognizer: recognizer,
+            flashcards: w.flashcards,
+            speaker: w.speaker,
+            recognizer: w.recognizer,
             auth: auth,
-            sync: sync,
+            sync: w.sync,
           );
         },
       ),

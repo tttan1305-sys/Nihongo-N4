@@ -84,7 +84,7 @@ class ProfileScreen extends StatelessWidget {
                           ? null
                           : NetworkImage(user!.photoUrl!),
                       child: user?.photoUrl == null
-                          ? const Icon(
+                          ? Icon(
                               Icons.person_rounded,
                               size: 34,
                               color: AppColors.primary,
@@ -223,10 +223,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      const IconTile(
-                        Icons.insights_rounded,
-                        color: AppColors.pink,
-                      ),
+                      IconTile(Icons.insights_rounded, color: AppColors.pink),
                       const SizedBox(width: 14),
                       Expanded(
                         child: Column(
@@ -241,7 +238,7 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             Text(
                               'Kanji đã nhớ $kanjiDone · ngữ pháp, flashcard, đề test N5',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 color: AppColors.muted,
                                 fontSize: 13,
                               ),
@@ -249,10 +246,7 @@ class ProfileScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const Icon(
-                        Icons.chevron_right_rounded,
-                        color: AppColors.muted,
-                      ),
+                      Icon(Icons.chevron_right_rounded, color: AppColors.muted),
                     ],
                   ),
                 ),
@@ -291,15 +285,18 @@ class _LevelCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final level = xp ~/ xpPerLevel + 1;
     final inLevel = xp % xpPerLevel;
+    final neon = SkinPalette.current.skin == AppSkin.neon;
     return Container(
       key: const ValueKey('level-card'),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        gradient: const LinearGradient(
+        borderRadius: BorderRadius.circular(skinCardRadius() + 2),
+        gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Color(0xFF2B2A7A), Color(0xFF16235A)],
+          colors: neon
+              ? const [Color(0xFF2B2A7A), Color(0xFF16235A)]
+              : [AppColors.surfaceHigh, AppColors.surface],
         ),
         border: Border.all(color: AppColors.purple.withValues(alpha: 0.6)),
         boxShadow: [
@@ -317,8 +314,10 @@ class _LevelCard extends StatelessWidget {
             alignment: Alignment.center,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: const LinearGradient(
-                colors: [AppColors.purple, AppColors.primary],
+              gradient: LinearGradient(
+                colors: neon
+                    ? [AppColors.purple, AppColors.primary]
+                    : [AppColors.primary, AppColors.primary],
               ),
               boxShadow: [
                 BoxShadow(
@@ -330,8 +329,8 @@ class _LevelCard extends StatelessWidget {
             child: Text(
               'Lv.$level',
               key: const ValueKey('level'),
-              style: const TextStyle(
-                color: Colors.white,
+              style: TextStyle(
+                color: AppColors.onPrimary,
                 fontWeight: FontWeight.w900,
                 fontSize: 17,
               ),
@@ -359,7 +358,7 @@ class _LevelCard extends StatelessWidget {
                 Text(
                   '$inLevel / $xpPerLevel XP',
                   key: const ValueKey('xp'),
-                  style: const TextStyle(color: AppColors.muted),
+                  style: TextStyle(color: AppColors.muted),
                 ),
               ],
             ),
@@ -415,10 +414,7 @@ class _StatTile extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            label,
-            style: const TextStyle(color: AppColors.muted, fontSize: 13),
-          ),
+          Text(label, style: TextStyle(color: AppColors.muted, fontSize: 13)),
         ],
       ),
     );
@@ -466,7 +462,7 @@ class _Badge extends StatelessWidget {
               style: const TextStyle(fontSize: 12.5, height: 1.25),
             ),
             if (achieved)
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 4),
                 child: Icon(
                   Icons.verified_rounded,

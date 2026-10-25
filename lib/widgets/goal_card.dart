@@ -35,7 +35,7 @@ class GoalCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const IconTile(
+                  IconTile(
                     Icons.emoji_events_rounded,
                     color: AppColors.orange,
                     size: 40,
@@ -54,14 +54,14 @@ class GoalCard extends StatelessWidget {
                         ),
                         Text(
                           bank == null ? 'Đang tải...' : '$learned/$total từ',
-                          style: const TextStyle(color: AppColors.muted),
+                          style: TextStyle(color: AppColors.muted),
                         ),
                       ],
                     ),
                   ),
                   Text(
                     '${(ratio * 100).round()}%',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w800,
                       color: AppColors.primary,

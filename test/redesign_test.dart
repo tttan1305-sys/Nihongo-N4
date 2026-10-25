@@ -37,7 +37,8 @@ void main() {
     return ProgressStore(await SharedPreferences.getInstance());
   }
 
-  Widget app(Widget home) => MaterialApp(theme: buildAppTheme(), home: home);
+  Widget app(Widget home) =>
+      MaterialApp(theme: buildAppTheme(SkinPalette.current), home: home);
 
   test('danh sách từ chung gồm bài 26 và từ N5, mã không trùng', () {
     expect(bank.groups.first.title, 'Bài 26');

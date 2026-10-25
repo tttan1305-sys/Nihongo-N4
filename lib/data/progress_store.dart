@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/lesson.dart';
+import '../skins.dart';
 
 /// Tiến độ học lưu trên máy, đồng bộ lên Firestore qua [SyncService] khi đăng nhập.
 class ProgressStore extends ChangeNotifier {
@@ -65,6 +66,25 @@ class ProgressStore extends ChangeNotifier {
 
   Future<void> setTextScale(double value) async {
     await _prefs.setDouble('settings.textScale', value);
+    notifyListeners();
+  }
+
+  /// Phong cách giao diện: neon (mặc định), mechanical hoặc anime.
+  AppSkin get skin => AppSkin.values.firstWhere(
+    (s) => s.name == _prefs.getString('settings.skin'),
+    orElse: () => AppSkin.neon,
+  );
+
+  Future<void> setSkin(AppSkin value) async {
+    await _prefs.setString('settings.skin', value.name);
+    notifyListeners();
+  }
+
+  /// Chế độ sáng/tối: 'system' (theo máy), 'light' hoặc 'dark'.
+  String get brightness => _prefs.getString('settings.brightness') ?? 'system';
+
+  Future<void> setBrightness(String value) async {
+    await _prefs.setString('settings.brightness', value);
     notifyListeners();
   }
 

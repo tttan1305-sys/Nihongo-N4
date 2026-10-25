@@ -29,14 +29,18 @@ class OptionRow extends StatelessWidget {
       OptionState.idle => (AppColors.primary, AppColors.surface),
       OptionState.selected => (AppColors.primary, AppColors.primarySoft),
     };
-    final radius = BorderRadius.circular(16);
+    final p = SkinPalette.current;
+    final mech = p.skin == AppSkin.mechanical;
+    final anime = p.skin == AppSkin.anime;
+    final radius = BorderRadius.circular(mech ? 4 : 16);
+    final idleBorder = anime ? 2.0 : 1.0;
     return Material(
       color: background,
       shape: RoundedRectangleBorder(
         borderRadius: radius,
         side: BorderSide(
           color: state == OptionState.idle ? AppColors.border : color,
-          width: state == OptionState.idle ? 1 : 1.6,
+          width: state == OptionState.idle ? idleBorder : idleBorder + 0.8,
         ),
       ),
       child: InkWell(
@@ -54,15 +58,22 @@ class OptionRow extends StatelessWidget {
                   color: state == OptionState.idle
                       ? AppColors.primarySoft
                       : color,
-                  shape: BoxShape.circle,
+                  shape: mech ? BoxShape.rectangle : BoxShape.circle,
+                  borderRadius: mech ? BorderRadius.circular(3) : null,
+                  border: anime
+                      ? Border.all(color: AppColors.border, width: 2)
+                      : null,
                 ),
                 child: Text(
                   letter,
                   style: TextStyle(
+                    fontFamily: mech ? 'JetBrainsMono' : null,
                     fontWeight: FontWeight.w700,
                     color: state == OptionState.idle
-                        ? AppColors.primary
-                        : Colors.white,
+                        ? AppColors.primaryText
+                        : p.skin == AppSkin.neon
+                        ? Colors.white
+                        : p.onPrimary,
                   ),
                 ),
               ),
@@ -70,9 +81,11 @@ class OptionRow extends StatelessWidget {
               Expanded(
                 child: RubyText(
                   text,
-                  style: const TextStyle(fontSize: 17, color: AppColors.text),
+                  style: TextStyle(fontSize: 17, color: AppColors.text),
                 ),
               ),
+              if (anime && state == OptionState.selected)
+                Icon(Icons.play_arrow_rounded, color: AppColors.primary),
               if (state == OptionState.right || state == OptionState.wrong)
                 Icon(
                   state == OptionState.right

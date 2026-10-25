@@ -94,7 +94,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
             Text(
               'Đã nhớ $_known từ. Vào Luyện tập để làm trắc nghiệm các từ vừa học.',
               textAlign: TextAlign.center,
-              style: const TextStyle(color: AppColors.muted),
+              style: TextStyle(color: AppColors.muted),
             ),
             const SizedBox(height: 24),
             FilledButton(
@@ -140,7 +140,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                               RubyText(
                                 w.word,
                                 showRuby: false,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 40,
                                   fontWeight: FontWeight.w700,
                                   color: AppColors.text,
@@ -150,7 +150,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                               Text(
                                 '(${w.kana})',
                                 key: const ValueKey('study-kana'),
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 18,
                                   color: AppColors.muted,
                                 ),
@@ -159,7 +159,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                                 Text(
                                   w.hanViet.toUpperCase(),
                                   key: const ValueKey('study-hanviet'),
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontSize: 14,
                                     letterSpacing: 1,
                                     fontWeight: FontWeight.w600,
@@ -172,14 +172,14 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                                   w.meaningVi,
                                   key: const ValueKey('study-meaning'),
                                   textAlign: TextAlign.center,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontSize: 22,
                                     fontWeight: FontWeight.w600,
                                     color: AppColors.primary,
                                   ),
                                 )
                               else
-                                const Text(
+                                Text(
                                   'Nhớ nghĩa rồi bấm Hiển thị nghĩa để kiểm tra',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(color: AppColors.muted),
@@ -249,7 +249,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                               ),
                               IconButton(
                                 key: ValueKey('listen-${example.id}'),
-                                icon: const Icon(
+                                icon: Icon(
                                   Icons.volume_up_rounded,
                                   color: AppColors.primary,
                                 ),
@@ -264,7 +264,7 @@ class _WordStudyScreenState extends State<WordStudyScreen> {
                           const SizedBox(height: 4),
                           Text(
                             example.vi,
-                            style: const TextStyle(color: AppColors.muted),
+                            style: TextStyle(color: AppColors.muted),
                           ),
                         ],
                       ),
@@ -363,10 +363,15 @@ class _RevealButton extends StatelessWidget {
         height: 92,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          gradient: const LinearGradient(
+          gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFF6FA2FF), AppColors.primaryDark],
+            colors: [
+              SkinPalette.current.skin == AppSkin.neon
+                  ? const Color(0xFF6FA2FF)
+                  : AppColors.primary,
+              AppColors.primaryDark,
+            ],
           ),
           boxShadow: [
             BoxShadow(
@@ -389,14 +394,14 @@ class _RevealButton extends StatelessWidget {
                   revealed
                       ? Icons.visibility_off_rounded
                       : Icons.visibility_rounded,
-                  color: Colors.white,
+                  color: AppColors.onPrimary,
                 ),
                 const SizedBox(height: 2),
                 Text(
                   revealed ? 'Ẩn nghĩa' : 'Hiển thị\nnghĩa',
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style: TextStyle(
+                    color: AppColors.onPrimary,
                     fontSize: 12,
                     height: 1.1,
                     fontWeight: FontWeight.w700,

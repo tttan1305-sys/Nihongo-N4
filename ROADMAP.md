@@ -131,8 +131,19 @@ Người dùng chọn Unity (2026-10-23). Phác thảo: `docs/game/*.png`. Mã �
 
 | Bước | Việc | Trạng thái |
 |---|---|---|
-| G1 | Vùng Kyoto (bài 26): bản đồ, nhân vật chibi + tùy biến, cần điều khiển, 4 ải lính thường + tinh anh + boss dùng câu hỏi bài 26 | ✅ mã xong, biên dịch được; 🔑 chờ secret Unity để build APK |
-| G2 | Bản đồ thế giới nối các vùng, Làng Khởi Đầu (ôn N5) | 👉 |
+| G1 | Vùng Kyoto (bài 26): bản đồ, nhân vật chibi + tùy biến, cần điều khiển, 4 ải lính thường + tinh anh + boss dùng câu hỏi bài 26 | ✅ APK bản thử `game-3` (2026-10-23) |
+| G2 | Bản đồ thế giới nối các vùng, Làng Khởi Đầu (ôn N5) | ⏸ dừng: bạn quyết định không làm game nữa (2026-10-23), giữ mã trên GitHub |
 | G3 | Nara, Osaka, Tokyo, Phú Sĩ (khi có bài 31–50) | ⬜ |
 | G4 | Map ẩn Arashiyama / Itsukushima / Himeji với test Dễ / Vừa / Khó | ⬜ |
 | G5 | Đăng nhập Google + đồng bộ tiến độ với ứng dụng | ⬜ |
+
+## Giao diện Mechanical & Anime (bạn yêu cầu 2026-10-25)
+
+Theo canvas thiết kế "App học tiếng Nhật — Mechanical & Anime" và tài liệu bàn giao cùng tên. Chọn trong Cài đặt → Giao diện: Neon (cũ, mặc định) / Mecha / Anime, kèm Theo máy / Sáng / Tối. Nút Sáng/Tối nhanh ở đầu Trang chủ.
+
+| Bước | Việc | Trạng thái |
+|---|---|---|
+| M1 | `lib/skins.dart`: 5 bảng màu, `AppColors` thành getter; lưu `settings.skin`, `settings.brightness`; phông Chakra Petch, JetBrains Mono, Nunito (OFL) trong `assets/fonts/` | ✅ |
+| M2 | Trang chủ (bảng điều khiển đồng hồ đo / Kumo + bong bóng thoại), Flashcard (ô 田 / tia tốc độ, 4 nút SM-2), Bài kiểm tra (màn LCD / Kumo hỏi) | ✅ |
+| M3 | Thẻ, nút, thanh tiến độ, thanh điều hướng chung theo phong cách; bỏ chữ trắng ghi cứng trên nền sáng | ✅ |
+| M4 | Ảnh duyệt: `docs/screenshots/giao-dien-{mechanical,anime}-{sang,toi}.png`, `giao-dien-cai-dat.png` | 👉 chờ bạn duyệt rồi mới đẩy lên GitHub |

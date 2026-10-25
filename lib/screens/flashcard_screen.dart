@@ -8,7 +8,10 @@ import '../services/speaker.dart';
 import '../srs/sm2.dart';
 import '../widgets/listen_button.dart';
 import '../widgets/content_scale.dart';
+import '../theme.dart';
 import '../widgets/ruby_text.dart';
+import '../widgets/skin_widgets.dart';
+import '../widgets/ui.dart';
 
 /// Ôn các thẻ đến hạn hôm nay. Thẻ bấm "Quên" quay lại cuối hàng trong cùng lượt ôn.
 class FlashcardScreen extends StatefulWidget {
@@ -60,21 +63,26 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ôn flashcard')),
-      body: ContentScale(
-        child: FutureBuilder<Map<String, Vocab>>(
-          future: _vocab,
-          builder: (context, snapshot) {
-            if (!snapshot.hasData) {
-              return const Center(child: CircularProgressIndicator());
-            }
-            // Bỏ qua thẻ của từ không còn trong bài (nội dung bài đã sửa).
-            _queue.removeWhere(
-              (id) => !snapshot.data!.containsKey(id.toString()),
-            );
-            if (_queue.isEmpty) return _done(context);
-            final id = _queue.first;
-            return _card(context, id, snapshot.data![id.toString()]!);
-          },
+      body: SkinBackground(
+        child: ContentScale(
+          child: FutureBuilder<Map<String, Vocab>>(
+            future: _vocab,
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              // Bỏ qua thẻ của từ không còn trong bài (nội dung bài đã sửa).
+              _queue.removeWhere(
+                (id) => !snapshot.data!.containsKey(id.toString()),
+              );
+              if (_queue.isEmpty) return _done(context);
+              final id = _queue.first;
+              final v = snapshot.data![id.toString()]!;
+              return SkinPalette.current.skin == AppSkin.neon
+                  ? _card(context, id, v)
+                  : _skinCard(context, id, v);
+            },
+          ),
         ),
       ),
     );
@@ -205,6 +213,330 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
             ],
           ),
       ],
+    );
+  }
+
+  /// Thẻ theo phong cách Mechanical / Anime: chữ trong ô 田 hoặc vòng tia
+  /// tốc độ, đáp án hiện sau khi lật, 4 nút đánh giá SM-2.
+  Widget _skinCard(BuildContext context, CardId id, Vocab v) {
+    final p = SkinPalette.current;
+    final mech = p.skin == AppSkin.mechanical;
+    final state = widget.flashcards.stateOf(id)!;
+    final now = widget.flashcards.now;
+    final length = plainText(v.word).characters.length;
+    final wordSize = switch (length) {
+      1 => 96.0,
+      2 => 64.0,
+      3 => 46.0,
+      _ => 34.0,
+    };
+    final total = _reviewed + _queue.length;
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+      children: [
+        Text(
+          mech
+              ? 'THẺ ÔN // BÀI ${id.lesson} · CÒN ${_queue.length}'
+              : 'Bài ${id.lesson} · còn ${_queue.length} thẻ',
+          style: skinLabelStyle(),
+        ),
+        const SizedBox(height: 8),
+        mech
+            ? SegmentedProgress(
+                value: total == 0 ? 0 : _reviewed / total,
+                segments: 30,
+                height: 8,
+              )
+            : StripedProgress(value: total == 0 ? 0 : _reviewed / total),
+        const SizedBox(height: 14),
+        AppCard(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: mech
+                        ? Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'MẪU VẬT #${v.id.toUpperCase()}',
+                                style: skinLabelStyle(color: p.primaryText),
+                              ),
+                              Text(
+                                'BÀI ${id.lesson} · ${v.pos.toUpperCase()}',
+                                style: skinLabelStyle(),
+                              ),
+                            ],
+                          )
+                        : Align(
+                            alignment: Alignment.centerLeft,
+                            child: Transform.rotate(
+                              angle: -0.1,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 10,
+                                  vertical: 3,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: p.orangeSoft,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(color: p.border, width: 2),
+                                ),
+                                child: Text(
+                                  '「おぼえてる？」',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w900,
+                                    color: p.text,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                  ),
+                  ListenButton(
+                    speaker: widget.speaker,
+                    lesson: id.lesson,
+                    audioId: v.id,
+                    text: v.kana,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Center(
+                child: KanjiFrame(
+                  size: 210,
+                  child: RubyText(
+                    v.word,
+                    showRuby: widget.progress.showFurigana,
+                    style: TextStyle(
+                      fontSize: wordSize,
+                      fontWeight: FontWeight.w900,
+                      color: p.text,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 14),
+              if (_revealed) ..._answer(v, mech) else _locked(mech),
+            ],
+          ),
+        ),
+        const SizedBox(height: 16),
+        if (!_revealed)
+          FilledButton(
+            key: const ValueKey('reveal'),
+            onPressed: () => setState(() => _revealed = true),
+            child: Text(mech ? 'LẬT THẺ ▸' : 'Lật thẻ nào!'),
+          )
+        else
+          Row(
+            children: [
+              for (final (rating, label, color, soft) in [
+                (Rating.again, mech ? 'LẠI' : 'Quên', p.red, p.redSoft),
+                (Rating.hard, mech ? 'KHÓ' : 'Khó', p.text, p.orangeSoft),
+                (Rating.good, mech ? 'ỔN' : 'Ổn', p.onPrimary, p.primary),
+                (Rating.easy, mech ? 'DỄ' : 'Dễ', p.green, p.greenSoft),
+              ])
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 3),
+                    child: _rateButton(
+                      rating,
+                      label,
+                      nextIntervalLabel(state, rating, now),
+                      color,
+                      mech ? (rating == Rating.good ? soft : p.surface) : soft,
+                    ),
+                  ),
+                ),
+            ],
+          ),
+      ],
+    );
+  }
+
+  List<Widget> _answer(Vocab v, bool mech) {
+    final p = SkinPalette.current;
+    Widget chip(String label, String value) => Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        decoration: BoxDecoration(
+          color: mech ? null : p.surfaceHigh,
+          borderRadius: BorderRadius.circular(mech ? 3 : 14),
+          border: Border.all(color: p.border, width: mech ? 1 : 2),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(label, style: skinLabelStyle(size: 10)),
+            Text(
+              value.isEmpty ? '—' : value,
+              key: label == (mech ? 'CÁCH ĐỌC' : 'Cách đọc')
+                  ? const ValueKey('answer-kana')
+                  : null,
+              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+            ),
+          ],
+        ),
+      ),
+    );
+    return [
+      Row(
+        children: [
+          chip(mech ? 'CÁCH ĐỌC' : 'Cách đọc', v.kana),
+          const SizedBox(width: 8),
+          chip(mech ? 'HÁN VIỆT' : 'Hán Việt', v.hanViet),
+        ],
+      ),
+      const SizedBox(height: 8),
+      mech
+          ? Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+              decoration: BoxDecoration(
+                color: p.primary,
+                borderRadius: BorderRadius.circular(3),
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'NGHĨA',
+                    style: skinLabelStyle(color: p.onPrimary, size: 10),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      v.meaningVi.toUpperCase(),
+                      textAlign: TextAlign.right,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: p.onPrimary,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          : Text(
+              v.meaningVi,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w900,
+                color: p.primaryText,
+              ),
+            ),
+      const SizedBox(height: 10),
+      Container(
+        padding: const EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          border: Border(top: BorderSide(color: p.border)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            RubyText(v.practical.ja, style: const TextStyle(fontSize: 17)),
+            Text(
+              v.practical.vi,
+              style: TextStyle(color: p.muted, fontSize: 13),
+            ),
+          ],
+        ),
+      ),
+    ];
+  }
+
+  Widget _locked(bool mech) {
+    final p = SkinPalette.current;
+    return Container(
+      height: 120,
+      alignment: Alignment.center,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: p.surfaceHigh,
+        borderRadius: BorderRadius.circular(mech ? 3 : 16),
+        border: Border.all(color: p.border, width: mech ? 1 : 2),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            mech ? 'DỮ LIỆU ĐANG KHÓA' : '? ? ?',
+            style: mech
+                ? skinLabelStyle(color: p.primaryText, size: 12)
+                : TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w900,
+                    color: p.primaryText,
+                  ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            mech
+                ? 'Nhớ lại cách đọc và nghĩa trước, rồi lật thẻ để kiểm tra.'
+                : 'Cậu còn nhớ chữ này không nè?',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: p.muted, fontSize: 14),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _rateButton(
+    Rating rating,
+    String label,
+    String interval,
+    Color color,
+    Color background,
+  ) {
+    final p = SkinPalette.current;
+    final mech = p.skin == AppSkin.mechanical;
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(mech ? 4 : 18),
+        boxShadow: mech || rating != Rating.good
+            ? null
+            : [BoxShadow(color: p.shadow, offset: const Offset(3, 3))],
+      ),
+      child: Material(
+        color: background,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(mech ? 4 : 18),
+          side: BorderSide(color: p.border, width: mech ? 1 : 2),
+        ),
+        child: InkWell(
+          key: ValueKey('rate-${rating.name}'),
+          onTap: () => _rate(rating),
+          child: SizedBox(
+            height: 62,
+            child: NormalTextScale(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    label,
+                    style: TextStyle(
+                      color: color,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  Text(
+                    interval,
+                    style: skinLabelStyle(
+                      size: 9.5,
+                      color: rating == Rating.good ? color : p.muted,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

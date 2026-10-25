@@ -81,7 +81,7 @@ class GrammarScreen extends StatelessWidget {
                   children: [
                     RubyText(
                       grammarTitle(_pattern),
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.w800,
                         color: AppColors.primary,
@@ -114,7 +114,7 @@ class GrammarScreen extends StatelessWidget {
                       ),
                       child: RubyText(
                         _pattern,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: AppColors.primaryDark,
@@ -147,7 +147,7 @@ class GrammarScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SectionLabel(
+                      SectionLabel(
                         'Lưu ý',
                         icon: Icons.info_outline_rounded,
                         color: AppColors.orange,
@@ -179,7 +179,7 @@ class GrammarScreen extends StatelessWidget {
             child: Text(
               'Điểm cao nhất: ${(score * 100).round()}%',
               textAlign: TextAlign.center,
-              style: const TextStyle(color: AppColors.muted),
+              style: TextStyle(color: AppColors.muted),
             ),
           ),
         FilledButton.icon(
@@ -245,20 +245,14 @@ class _Example extends StatelessWidget {
                       style: const TextStyle(fontSize: 18),
                     ),
                     const SizedBox(height: 4),
-                    Text(
-                      sentence.vi,
-                      style: const TextStyle(color: AppColors.muted),
-                    ),
+                    Text(sentence.vi, style: TextStyle(color: AppColors.muted)),
                   ],
                 ),
               ),
               IconButton(
                 key: ValueKey('listen-${sentence.id}'),
                 tooltip: 'Nghe',
-                icon: const Icon(
-                  Icons.volume_up_rounded,
-                  color: AppColors.primary,
-                ),
+                icon: Icon(Icons.volume_up_rounded, color: AppColors.primary),
                 onPressed: () => speaker.speak(
                   lesson: lesson,
                   audioId: sentence.id,

@@ -327,8 +327,8 @@ class _Review extends StatelessWidget {
   Widget build(BuildContext context) {
     final right = picked == question.answer;
     final text = Theme.of(context).textTheme;
-    const green = AppColors.greenSoft;
-    const red = AppColors.redSoft;
+    final green = AppColors.greenSoft;
+    final red = AppColors.redSoft;
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 6),
       child: ExpansionTile(

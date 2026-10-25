@@ -65,7 +65,7 @@ class _ExampleAnalysisState extends State<ExampleAnalysis> {
                           width: 118,
                           child: RubyText(
                             p.ja,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w700,
                               color: AppColors.text,
@@ -76,7 +76,7 @@ class _ExampleAnalysisState extends State<ExampleAnalysis> {
                         Expanded(
                           child: RubyText(
                             p.vi,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 14,
                               height: 1.35,
                               color: AppColors.text,
@@ -87,7 +87,7 @@ class _ExampleAnalysisState extends State<ExampleAnalysis> {
                     ),
                   ),
                 if (a.steps.isNotEmpty) ...[
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(top: 4, bottom: 6),
                     child: Text(
                       'Cách chia',
@@ -103,7 +103,7 @@ class _ExampleAnalysisState extends State<ExampleAnalysis> {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Padding(
+                          Padding(
                             padding: EdgeInsets.only(top: 6, right: 8),
                             child: Icon(
                               Icons.circle,
@@ -114,7 +114,7 @@ class _ExampleAnalysisState extends State<ExampleAnalysis> {
                           Expanded(
                             child: RubyText(
                               s,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 14,
                                 height: 1.35,
                                 color: AppColors.text,
@@ -136,7 +136,7 @@ class _ExampleAnalysisState extends State<ExampleAnalysis> {
                     ),
                     child: RubyText(
                       'Lưu ý: ${a.note}',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 14,
                         height: 1.35,
                         color: AppColors.orange,

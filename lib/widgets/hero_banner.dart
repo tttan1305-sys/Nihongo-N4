@@ -25,8 +25,7 @@ class HeroScenery extends StatelessWidget {
             fit: BoxFit.cover,
             alignment: const Alignment(0.25, 0),
             // Ảnh chưa tải xong (hoặc lỗi) thì hiện màu nền thay vì ô trống.
-            errorBuilder: (_, _, _) =>
-                const ColoredBox(color: AppColors.surface),
+            errorBuilder: (_, _, _) => ColoredBox(color: AppColors.surface),
           ),
           const DecoratedBox(
             decoration: BoxDecoration(
@@ -38,7 +37,7 @@ class HeroScenery extends StatelessWidget {
               ),
             ),
           ),
-          const DecoratedBox(
+          DecoratedBox(
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,

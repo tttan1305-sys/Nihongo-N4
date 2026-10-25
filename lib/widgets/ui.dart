@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../theme.dart';
+import 'skin_widgets.dart';
 
-/// Thẻ tối bo tròn có viền neon mờ, dùng khắp ứng dụng.
+/// Thẻ dùng khắp ứng dụng; hình dáng theo phong cách đang chọn (neon phát
+/// sáng, mechanical viền mảnh có đinh tán, anime viền mực có bóng lệch).
 class AppCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry padding;
   final EdgeInsetsGeometry margin;
-  final Color color;
-
-  /// Màu viền phát sáng; mặc định là viền xanh mờ.
+  final Color? color;
   final Color? borderColor;
   final VoidCallback? onTap;
 
@@ -18,38 +18,30 @@ class AppCard extends StatelessWidget {
     required this.child,
     this.padding = const EdgeInsets.all(16),
     this.margin = EdgeInsets.zero,
-    this.color = AppColors.surface,
+    this.color,
     this.borderColor,
     this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    final radius = BorderRadius.circular(18);
+    final radius = BorderRadius.circular(skinCardRadius());
+    final mech = SkinPalette.current.skin == AppSkin.mechanical;
     return Container(
       margin: margin,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: radius,
-        border: Border.all(
-          color: (borderColor ?? AppColors.primary).withValues(
-            alpha: borderColor == null ? 0.28 : 0.7,
+      decoration: skinCardDecoration(color: color, borderColor: borderColor),
+      child: Stack(
+        children: [
+          Material(
+            color: Colors.transparent,
+            child: InkWell(
+              borderRadius: radius,
+              onTap: onTap,
+              child: Padding(padding: padding, child: child),
+            ),
           ),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: (borderColor ?? AppColors.primary).withValues(alpha: 0.16),
-            blurRadius: 18,
-          ),
+          if (mech) const Rivets(),
         ],
-      ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          borderRadius: radius,
-          onTap: onTap,
-          child: Padding(padding: padding, child: child),
-        ),
       ),
     );
   }
@@ -58,18 +50,30 @@ class AppCard extends StatelessWidget {
 /// Thanh tiến độ bo tròn.
 class RoundedProgress extends StatelessWidget {
   final double value;
-  final Color color;
+  final Color? color;
   final double height;
 
   const RoundedProgress({
     super.key,
     required this.value,
-    this.color = AppColors.primary,
+    this.color,
     this.height = 8,
   });
 
   @override
   Widget build(BuildContext context) {
+    final color = this.color ?? AppColors.primary;
+    // Mechanical: thanh chia vạch rời như đồng hồ máy.
+    if (this.color == null) {
+      switch (SkinPalette.current.skin) {
+        case AppSkin.mechanical:
+          return SegmentedProgress(value: value, height: height);
+        case AppSkin.anime:
+          return StripedProgress(value: value, height: height + 6);
+        case AppSkin.neon:
+          break;
+      }
+    }
     return ClipRRect(
       borderRadius: BorderRadius.circular(height),
       child: LinearProgressIndicator(
@@ -101,10 +105,7 @@ class StepProgress extends StatelessWidget {
       children: [
         Text(
           '$current/$total',
-          style: const TextStyle(
-            fontWeight: FontWeight.w700,
-            color: AppColors.text,
-          ),
+          style: TextStyle(fontWeight: FontWeight.w700, color: AppColors.text),
         ),
         const SizedBox(width: 12),
         Expanded(
@@ -150,23 +151,21 @@ class NumberBadge extends StatelessWidget {
 /// Nhãn nhỏ bo tròn có màu.
 class Pill extends StatelessWidget {
   final String text;
-  final Color color;
+  final Color? color;
   final Color? background;
 
-  const Pill(
-    this.text, {
-    super.key,
-    this.color = AppColors.primary,
-    this.background,
-  });
+  const Pill(this.text, {super.key, this.color, this.background});
 
   @override
   Widget build(BuildContext context) {
+    final color = this.color ?? AppColors.primaryText;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
       decoration: BoxDecoration(
         color: background ?? color.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(
+          SkinPalette.current.skin == AppSkin.mechanical ? 3 : 20,
+        ),
       ),
       child: Text(
         text,
@@ -206,17 +205,13 @@ class IconTile extends StatelessWidget {
 class SectionLabel extends StatelessWidget {
   final String text;
   final IconData? icon;
-  final Color color;
+  final Color? color;
 
-  const SectionLabel(
-    this.text, {
-    super.key,
-    this.icon,
-    this.color = AppColors.primary,
-  });
+  const SectionLabel(this.text, {super.key, this.icon, this.color});
 
   @override
   Widget build(BuildContext context) {
+    final color = this.color ?? AppColors.primaryText;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Row(
@@ -252,7 +247,7 @@ class CircleNavButton extends StatelessWidget {
       onPressed: onPressed,
       iconSize: 22,
       style: IconButton.styleFrom(
-        side: const BorderSide(color: AppColors.border),
+        side: BorderSide(color: AppColors.border),
         backgroundColor: AppColors.surface,
         fixedSize: const Size(52, 52),
       ),

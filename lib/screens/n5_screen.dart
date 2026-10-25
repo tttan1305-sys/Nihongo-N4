@@ -445,7 +445,7 @@ class _VocabRowState extends State<_VocabRow> {
     final style = TextStyle(
       fontSize: header ? 13 : 15,
       fontWeight: header ? FontWeight.w700 : FontWeight.w400,
-      color: header ? Colors.white : AppColors.text,
+      color: header ? AppColors.onPrimary : AppColors.text,
     );
     final row = Row(
       children: [
@@ -476,7 +476,7 @@ class _VocabRowState extends State<_VocabRow> {
             : _open
             ? AppColors.surfaceHigh
             : AppColors.surface,
-        border: const Border(bottom: BorderSide(color: AppColors.border)),
+        border: Border(bottom: BorderSide(color: AppColors.border)),
         borderRadius: header
             ? const BorderRadius.vertical(top: Radius.circular(12))
             : null,

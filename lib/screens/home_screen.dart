@@ -13,6 +13,7 @@ import '../services/sync_service.dart';
 import '../theme.dart';
 import '../widgets/goal_card.dart';
 import '../widgets/hero_banner.dart';
+import '../widgets/skin_widgets.dart';
 import '../widgets/ui.dart';
 import 'flashcard_screen.dart';
 import 'grammar_list_screen.dart';
@@ -258,46 +259,543 @@ class _HomeScreenState extends State<HomeScreen> {
             _visited.contains(i) ? _page(i) : const SizedBox.shrink(),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _tab,
-        onDestinationSelected: _select,
-        destinations: const [
-          NavigationDestination(
-            key: ValueKey('nav-home'),
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home_rounded),
-            label: 'Trang chủ',
+      bottomNavigationBar: _navFrame(
+        NavigationBar(
+          selectedIndex: _tab,
+          labelBehavior: SkinPalette.current.skin == AppSkin.anime
+              ? NavigationDestinationLabelBehavior.onlyShowSelected
+              : null,
+          onDestinationSelected: _select,
+          destinations: const [
+            NavigationDestination(
+              key: ValueKey('nav-home'),
+              icon: Icon(Icons.home_outlined),
+              selectedIcon: Icon(Icons.home_rounded),
+              label: 'Trang chủ',
+            ),
+            NavigationDestination(
+              key: ValueKey('nav-vocab'),
+              icon: Icon(Icons.translate_outlined),
+              selectedIcon: Icon(Icons.translate_rounded),
+              label: 'Từ vựng',
+            ),
+            NavigationDestination(
+              key: ValueKey('nav-practice'),
+              icon: Icon(Icons.edit_note_outlined),
+              selectedIcon: Icon(Icons.edit_note_rounded),
+              label: 'Luyện tập',
+            ),
+            NavigationDestination(
+              key: ValueKey('nav-stats'),
+              icon: Icon(Icons.bar_chart_outlined),
+              selectedIcon: Icon(Icons.bar_chart_rounded),
+              label: 'Thống kê',
+            ),
+            NavigationDestination(
+              key: ValueKey('nav-more'),
+              icon: Icon(Icons.more_horiz_rounded),
+              selectedIcon: Icon(Icons.more_horiz_rounded),
+              label: 'Khác',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// Anime: thanh điều hướng dạng viên thuốc nổi viền mực.
+  Widget _navFrame(Widget bar) {
+    final p = SkinPalette.current;
+    if (p.skin != AppSkin.anime) return bar;
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(14, 4, 14, 12),
+        child: Container(
+          decoration: BoxDecoration(
+            color: p.navBackground,
+            borderRadius: BorderRadius.circular(34),
+            border: Border.all(color: p.border, width: 2.5),
+            boxShadow: [BoxShadow(color: p.shadow, offset: const Offset(4, 4))],
           ),
-          NavigationDestination(
-            key: ValueKey('nav-vocab'),
-            icon: Icon(Icons.translate_outlined),
-            selectedIcon: Icon(Icons.translate_rounded),
-            label: 'Từ vựng',
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(32),
+            child: MediaQuery.removePadding(
+              context: context,
+              removeBottom: true,
+              child: bar,
+            ),
           ),
-          NavigationDestination(
-            key: ValueKey('nav-practice'),
-            icon: Icon(Icons.edit_note_outlined),
-            selectedIcon: Icon(Icons.edit_note_rounded),
-            label: 'Luyện tập',
+        ),
+      ),
+    );
+  }
+
+  Widget _homeTab(BuildContext context) {
+    final skin = SkinPalette.current.skin;
+    if (skin == AppSkin.neon) return _neonHome(context);
+    final mech = skin == AppSkin.mechanical;
+    return SkinBackground(
+      child: SingleChildScrollView(
+        key: const ValueKey('home-scroll'),
+        padding: const EdgeInsets.only(bottom: 24),
+        child: SafeArea(
+          bottom: false,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
+            child: ListenableBuilder(
+              listenable: widget.progress,
+              builder: (context, _) => Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  mech ? _mechHeader() : _animeHeader(),
+                  const SizedBox(height: 14),
+                  if (mech) ...[
+                    _sectionLabel('▌ BẢNG ĐIỀU KHIỂN · HÔM NAY'),
+                    _mechDashboard(),
+                    const SizedBox(height: 12),
+                    _mechContinue(),
+                    const SizedBox(height: 16),
+                    _sectionLabel('▌ HỆ MÔ-ĐUN'),
+                  ] else ...[
+                    _animeBubble(),
+                    const SizedBox(height: 16),
+                    _animeEpisode(),
+                    const SizedBox(height: 18),
+                  ],
+                  _modules(mech),
+                  const SizedBox(height: 14),
+                  _reviewCard(context),
+                  const SizedBox(height: 14),
+                  _n5Card(context),
+                  Padding(
+                    key: _roadmapKey,
+                    padding: const EdgeInsets.fromLTRB(4, 22, 4, 10),
+                    child: mech
+                        ? _sectionLabel('▌ LỘ TRÌNH N4', bottom: 0)
+                        : const Text(
+                            'Lộ trình N4',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                  ),
+                  _lessonList(context),
+                ],
+              ),
+            ),
           ),
-          NavigationDestination(
-            key: ValueKey('nav-stats'),
-            icon: Icon(Icons.bar_chart_outlined),
-            selectedIcon: Icon(Icons.bar_chart_rounded),
-            label: 'Thống kê',
+        ),
+      ),
+    );
+  }
+
+  /// Số từ đã thuộc và tổng số từ của ứng dụng.
+  (int, int) _wordProgress() {
+    final bank = _bank;
+    if (bank == null) return (0, 0);
+    return (
+      widget.progress.learnedCount(bank.all.map((w) => w.key)),
+      bank.total,
+    );
+  }
+
+  /// Bài đang học: bài đầu tiên đã mở mà chưa hoàn thành.
+  int _currentLesson() {
+    for (var n = firstLesson; n <= lastLesson; n++) {
+      if (!widget.progress.isLessonCompleted(n)) return n;
+    }
+    return lastLesson;
+  }
+
+  void _openSettings() => _push(
+    SettingsScreen(
+      auth: widget.auth,
+      progress: widget.progress,
+      sync: widget.sync,
+    ),
+  );
+
+  List<Widget> _headerButtons() => [
+    SkinModeToggle(progress: widget.progress),
+    const SizedBox(width: 8),
+    SkinIconButton(
+      key: const ValueKey('settings'),
+      icon: Icons.settings_rounded,
+      tooltip: 'Cài đặt',
+      onPressed: _openSettings,
+    ),
+    if (widget.auth.available)
+      _AccountButton(
+        auth: widget.auth,
+        progress: widget.progress,
+        sync: widget.sync,
+      ),
+  ];
+
+  Widget _sectionLabel(String text, {double bottom = 8}) => Padding(
+    padding: EdgeInsets.only(left: 2, bottom: bottom),
+    child: Text(text, style: skinLabelStyle()),
+  );
+
+  Widget _mechHeader() => Row(
+    children: [
+      Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('SYS.NIHONGO // 稼働中', style: skinLabelStyle()),
+            const SizedBox(height: 4),
+            Text(
+              greeting(),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+            ),
+          ],
+        ),
+      ),
+      ..._headerButtons(),
+    ],
+  );
+
+  Widget _animeHeader() {
+    final p = SkinPalette.current;
+    return Row(
+      children: [
+        Container(
+          width: 52,
+          height: 52,
+          decoration: BoxDecoration(
+            color: p.primarySoft,
+            shape: BoxShape.circle,
+            border: Border.all(color: p.border, width: 2.5),
           ),
-          NavigationDestination(
-            key: ValueKey('nav-more'),
-            icon: Icon(Icons.more_horiz_rounded),
-            selectedIcon: Icon(Icons.more_horiz_rounded),
-            label: 'Khác',
+          alignment: Alignment.center,
+          child: const KumoMascot(width: 38),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '「おはよう〜！」',
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w800,
+                  color: p.primaryText,
+                ),
+              ),
+              Text(
+                greeting(),
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+            ],
+          ),
+        ),
+        ..._headerButtons(),
+      ],
+    );
+  }
+
+  Widget _mechDashboard() {
+    final (learned, total) = _wordProgress();
+    final ratio = total == 0 ? 0.0 : learned / total;
+    final p = SkinPalette.current;
+    return AppCard(
+      key: const ValueKey('goal-card'),
+      child: Row(
+        children: [
+          GaugeDial(value: ratio, label: 'TỪ ĐÃ THUỘC'),
+          const SizedBox(width: 18),
+          Expanded(
+            child: Column(
+              children: [
+                GaugeStatRow(
+                  label: 'CHUỖI NGÀY',
+                  value: '${widget.progress.streak()} ngày',
+                ),
+                GaugeStatRow(label: 'TỪ VỰNG', value: '$learned / $total'),
+                GaugeStatRow(
+                  label: 'CẤP ĐỘ',
+                  value: 'JLPT N4',
+                  color: p.primaryText,
+                  last: true,
+                ),
+              ],
+            ),
           ),
         ],
       ),
     );
   }
 
-  Widget _homeTab(BuildContext context) {
+  Widget _mechContinue() {
+    final p = SkinPalette.current;
+    return Container(
+      decoration: skinCardDecoration(color: p.surfaceHigh),
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const HazardStripe(),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'TIẾP TỤC · BÀI ${_currentLesson()}',
+                            style: skinLabelStyle(
+                              color: p.primaryText,
+                              size: 10,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          const Text(
+                            'Học từ vựng',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          Text(
+                            'Flashcard • Luyện tập',
+                            style: TextStyle(color: p.muted, fontSize: 13),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 60,
+                      height: 60,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: p.surface,
+                        border: Border.all(color: p.border),
+                        borderRadius: BorderRadius.circular(3),
+                      ),
+                      child: const Text(
+                        '語',
+                        style: TextStyle(
+                          fontSize: 34,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                FilledButton.icon(
+                  key: const ValueKey('learn-words'),
+                  onPressed: _learnWords,
+                  iconAlignment: IconAlignment.end,
+                  icon: const Icon(Icons.chevron_right_rounded),
+                  label: const Text('KHỞI ĐỘNG'),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _animeBubble() {
+    final (learned, total) = _wordProgress();
+    final p = SkinPalette.current;
+    final streak = widget.progress.streak();
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(top: 6),
+          child: KumoMascot(width: 64, wink: true),
+        ),
+        const SizedBox(width: 4),
+        Expanded(
+          child: SpeechBubble(
+            key: const ValueKey('goal-card'),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  streak > 0
+                      ? 'Chuỗi $streak ngày rồi đó! Học tiếp nhé~'
+                      : 'Hôm nay mình học cùng nhau nhé~',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 15,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Đã thuộc $learned/$total từ N4',
+                  style: TextStyle(
+                    color: p.muted,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                StripedProgress(value: total == 0 ? 0 : learned / total),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _animeEpisode() {
+    final p = SkinPalette.current;
+    final n = _currentLesson();
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Transform.rotate(
+                angle: -0.1,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: p.orangeSoft,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: p.border, width: 2),
+                  ),
+                  child: Text(
+                    '第$n話',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: p.text,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Bài $n · Học từ vựng',
+                      style: const TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    Text(
+                      'Flashcard • Luyện tập',
+                      style: TextStyle(
+                        color: p.muted,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          FilledButton.icon(
+            key: const ValueKey('learn-words'),
+            onPressed: _learnWords,
+            iconAlignment: IconAlignment.end,
+            icon: const Icon(Icons.play_arrow_rounded),
+            label: const Text('Học tiếp'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _modules(bool mech) {
+    final items = [
+      (const ValueKey('tile-grammar'), 'M-01', '文', 'Ngữ pháp', _grammar),
+      (const ValueKey('tile-listening'), 'M-02', '聴', 'Luyện nghe', _listening),
+      (const ValueKey('tile-kanji'), 'M-03', '漢', 'Kanji', _kanji),
+    ];
+    final p = SkinPalette.current;
+    return Row(
+      children: [
+        for (var i = 0; i < items.length; i++) ...[
+          if (i > 0) const SizedBox(width: 10),
+          Expanded(
+            child: mech
+                ? AppCard(
+                    key: items[i].$1,
+                    onTap: items[i].$5,
+                    padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(items[i].$2, style: skinLabelStyle(size: 10)),
+                        const SizedBox(height: 6),
+                        Text(
+                          items[i].$3,
+                          style: const TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        Text(
+                          items[i].$4,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : Transform.rotate(
+                    angle: (i.isEven ? -1 : 1) * 0.025,
+                    child: AppCard(
+                      key: items[i].$1,
+                      onTap: items[i].$5,
+                      color: p.tints[i % p.tints.length],
+                      padding: const EdgeInsets.fromLTRB(10, 12, 10, 12),
+                      child: Column(
+                        children: [
+                          Text(
+                            items[i].$3,
+                            style: const TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                          Text(
+                            items[i].$4,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(fontWeight: FontWeight.w900),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+          ),
+        ],
+      ],
+    );
+  }
+
+  Widget _neonHome(BuildContext context) {
     final auth = widget.auth;
     return SingleChildScrollView(
       key: const ValueKey('home-scroll'),
@@ -488,7 +986,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       : unlocked
                       ? 'Sẵn sàng'
                       : 'Hoàn thành bài trước để mở',
-                  style: const TextStyle(color: AppColors.muted, fontSize: 13),
+                  style: TextStyle(color: AppColors.muted, fontSize: 13),
                 ),
               ],
             ),
@@ -516,7 +1014,7 @@ class _HomeScreenState extends State<HomeScreen> {
           speaker: widget.speaker,
         ),
       ),
-      child: const Row(
+      child: Row(
         children: [
           IconTile(Icons.auto_stories_rounded, color: AppColors.pink),
           SizedBox(width: 14),
@@ -550,7 +1048,7 @@ class _HomeScreenState extends State<HomeScreen> {
         return AppCard(
           child: Row(
             children: [
-              const IconTile(Icons.style_rounded, color: AppColors.orange),
+              IconTile(Icons.style_rounded, color: AppColors.orange),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
@@ -570,10 +1068,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       flashcards.totalCount == 0
                           ? 'Học xong phần Từ vựng của một bài để thêm thẻ.'
                           : 'Tổng cộng ${flashcards.totalCount} thẻ',
-                      style: const TextStyle(
-                        color: AppColors.muted,
-                        fontSize: 13,
-                      ),
+                      style: TextStyle(color: AppColors.muted, fontSize: 13),
                     ),
                   ],
                 ),
@@ -798,7 +1293,7 @@ class _FeatureTile extends StatelessWidget {
           Text(
             subtitle,
             maxLines: 2,
-            style: const TextStyle(
+            style: TextStyle(
               color: AppColors.muted,
               fontSize: 11.5,
               height: 1.25,
@@ -821,6 +1316,7 @@ class _AccountButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = auth.user;
+    final neon = SkinPalette.current.skin == AppSkin.neon;
     return PopupMenuButton<String>(
       key: const ValueKey('account'),
       tooltip: 'Tài khoản',
@@ -829,10 +1325,16 @@ class _AccountButton extends StatelessWidget {
               radius: 16,
               backgroundImage: NetworkImage(user!.photoUrl!),
             )
-          : const CircleAvatar(
+          : neon
+          ? const CircleAvatar(
               radius: 18,
               backgroundColor: Color(0x33FFFFFF),
               child: Icon(Icons.person_rounded, color: Colors.white),
+            )
+          : CircleAvatar(
+              radius: 18,
+              backgroundColor: AppColors.surfaceHigh,
+              child: Icon(Icons.person_rounded, color: AppColors.text),
             ),
       onSelected: (value) {
         if (value == 'sign-out') auth.signOut();

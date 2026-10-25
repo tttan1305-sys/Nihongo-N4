@@ -78,14 +78,14 @@ class _KanjiScreenState extends State<KanjiScreen> {
                         ),
                         Text(
                           k.example.vi,
-                          style: const TextStyle(color: AppColors.muted),
+                          style: TextStyle(color: AppColors.muted),
                         ),
                       ],
                     ),
                   ),
                   IconButton(
                     key: ValueKey('listen-${k.example.id}'),
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.volume_up_rounded,
                       color: AppColors.primary,
                     ),
@@ -121,10 +121,7 @@ class _KanjiScreenState extends State<KanjiScreen> {
                   total: widget.kanji.length,
                   trailing: Text(
                     'Đã nhớ ${widget.kanji.where((k) => widget.progress.isKanjiLearned(k.char)).length}',
-                    style: const TextStyle(
-                      color: AppColors.muted,
-                      fontSize: 13,
-                    ),
+                    style: TextStyle(color: AppColors.muted, fontSize: 13),
                   ),
                 ),
               ),
@@ -139,7 +136,7 @@ class _KanjiScreenState extends State<KanjiScreen> {
                           Text(
                             k.char,
                             key: const ValueKey('kanji-char'),
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 56,
                               height: 1.1,
                               fontWeight: FontWeight.w700,
@@ -153,14 +150,14 @@ class _KanjiScreenState extends State<KanjiScreen> {
                               children: [
                                 Text(
                                   '(${k.reading})',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontSize: 17,
                                     color: AppColors.muted,
                                   ),
                                 ),
                                 Text(
                                   '${k.hanViet} · ${k.meaningVi}',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontSize: 19,
                                     fontWeight: FontWeight.w700,
                                     color: AppColors.text,
@@ -170,13 +167,13 @@ class _KanjiScreenState extends State<KanjiScreen> {
                             ),
                           ),
                           if (widget.progress.isKanjiLearned(k.char))
-                            const Icon(
+                            Icon(
                               Icons.check_circle_rounded,
                               color: AppColors.green,
                             ),
                           IconButton(
                             key: ValueKey('listen-${k.id}'),
-                            icon: const Icon(
+                            icon: Icon(
                               Icons.volume_up_rounded,
                               color: AppColors.primary,
                             ),
@@ -205,7 +202,7 @@ class _KanjiScreenState extends State<KanjiScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SectionLabel(
+                          SectionLabel(
                             'Ghi nhớ',
                             icon: Icons.lightbulb_outline_rounded,
                             color: AppColors.orange,
@@ -287,7 +284,7 @@ class _KanjiScreenState extends State<KanjiScreen> {
             children: [
               Text(
                 k.char,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 110,
                   height: 1.15,
                   fontWeight: FontWeight.w700,
@@ -373,14 +370,14 @@ class _ModeTabs extends StatelessWidget {
                 Icon(
                   icon,
                   size: 18,
-                  color: selected ? Colors.white : AppColors.muted,
+                  color: selected ? AppColors.onPrimary : AppColors.muted,
                 ),
                 const SizedBox(width: 6),
                 Text(
                   label,
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    color: selected ? Colors.white : AppColors.muted,
+                    color: selected ? AppColors.onPrimary : AppColors.muted,
                   ),
                 ),
               ],
@@ -434,7 +431,7 @@ class _Fact extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label, style: const TextStyle(color: AppColors.muted)),
+          Text(label, style: TextStyle(color: AppColors.muted)),
           const SizedBox(height: 4),
           Text(
             value,
@@ -445,10 +442,7 @@ class _Fact extends StatelessWidget {
             ),
           ),
           if (note.isNotEmpty)
-            Text(
-              note,
-              style: const TextStyle(color: AppColors.muted, fontSize: 12),
-            ),
+            Text(note, style: TextStyle(color: AppColors.muted, fontSize: 12)),
         ],
       ),
     );

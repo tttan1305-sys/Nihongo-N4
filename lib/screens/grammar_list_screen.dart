@@ -88,7 +88,7 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
               '${p.passedGrammarCount(lesson)}/${lesson.grammar.length} đã qua',
         ),
         if (!p.isLessonUnlocked(lesson.number, first: firstLesson))
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(bottom: 12),
             child: Text(
               'Hoàn thành bài trước để mở bài này.',
@@ -119,7 +119,7 @@ class _GrammarListScreenState extends State<GrammarListScreen> {
           child: Text(
             'Bài ${firstLesson + widget.lessons.length}–$lastLesson đang soạn nội dung.',
             textAlign: TextAlign.center,
-            style: const TextStyle(color: AppColors.muted),
+            style: TextStyle(color: AppColors.muted),
           ),
         ),
     ];
@@ -173,13 +173,13 @@ class _LessonHeader extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w800,
                     color: AppColors.text,
                   ),
                 ),
-                Text(subtitle, style: const TextStyle(color: AppColors.muted)),
+                Text(subtitle, style: TextStyle(color: AppColors.muted)),
               ],
             ),
           ),
@@ -222,14 +222,14 @@ class _PointTile extends StatelessWidget {
               children: [
                 RubyText(
                   pattern,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
                     color: AppColors.text,
                   ),
                 ),
                 const SizedBox(height: 2),
-                Text(meaning, style: const TextStyle(color: AppColors.muted)),
+                Text(meaning, style: TextStyle(color: AppColors.muted)),
               ],
             ),
           ),

@@ -142,10 +142,7 @@ class _ComprehensionState extends State<_Comprehension> {
                     ? RubyText(
                         item.ja,
                         key: const ValueKey('listen-text'),
-                        style: const TextStyle(
-                          fontSize: 20,
-                          color: AppColors.text,
-                        ),
+                        style: TextStyle(fontSize: 20, color: AppColors.text),
                       )
                     : TextButton.icon(
                         key: const ValueKey('listen-show-text'),
@@ -292,7 +289,7 @@ class _DictationState extends State<_Dictation> {
               _Player(
                 seed: w.key,
                 onPlay: _play,
-                transcript: const Text(
+                transcript: Text(
                   'Nghe rồi gõ lại từ bằng hiragana/katakana',
                   style: TextStyle(color: AppColors.muted),
                 ),
@@ -339,7 +336,7 @@ class _DictationState extends State<_Dictation> {
                           ),
                           Text(
                             '(${w.kana}) · ${w.meaningVi}',
-                            style: const TextStyle(color: AppColors.muted),
+                            style: TextStyle(color: AppColors.muted),
                           ),
                         ],
                       ),
@@ -415,7 +412,7 @@ class _Player extends StatelessWidget {
                   iconSize: 30,
                   style: IconButton.styleFrom(
                     backgroundColor: AppColors.primary,
-                    foregroundColor: Colors.white,
+                    foregroundColor: AppColors.onPrimary,
                     fixedSize: const Size(58, 58),
                   ),
                   onPressed: onPlay,

@@ -68,7 +68,7 @@ class MoreScreen extends StatelessWidget {
                             Text(
                               user?.email ??
                                   'Học tiếng Nhật mỗi ngày một chút 🌸',
-                              style: const TextStyle(color: AppColors.muted),
+                              style: TextStyle(color: AppColors.muted),
                             ),
                           ],
                         ),
@@ -167,7 +167,7 @@ class _Avatar extends StatelessWidget {
           ? const Text('🌸', style: TextStyle(fontSize: 26))
           : Text(
               name.characters.first.toUpperCase(),
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w800,
                 color: AppColors.primary,
@@ -197,7 +197,7 @@ class _MenuItem extends StatelessWidget {
       onTap: onTap,
       leading: IconTile(icon, color: color, size: 40),
       title: Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
-      trailing: const Icon(Icons.chevron_right_rounded, color: AppColors.muted),
+      trailing: Icon(Icons.chevron_right_rounded, color: AppColors.muted),
     );
   }
 }
@@ -304,7 +304,7 @@ class SettingsScreen extends StatelessWidget {
                       'Cỡ chữ trong bài học',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
-                    const Text(
+                    Text(
                       'Chữ Nhật, ví dụ, nghĩa và giải thích',
                       style: TextStyle(color: AppColors.muted, fontSize: 13),
                     ),
@@ -324,6 +324,68 @@ class SettingsScreen extends StatelessWidget {
                             progress.setTextScale(v.first),
                       ),
                     ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
+              AppCard(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Giao diện',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      'Đổi xong ứng dụng quay về Trang chủ, tiến độ giữ nguyên',
+                      style: TextStyle(color: AppColors.muted, fontSize: 13),
+                    ),
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      width: double.infinity,
+                      child: SegmentedButton<AppSkin>(
+                        key: const ValueKey('settings-skin'),
+                        showSelectedIcon: false,
+                        segments: const [
+                          ButtonSegment(
+                            value: AppSkin.neon,
+                            label: Text('Neon'),
+                          ),
+                          ButtonSegment(
+                            value: AppSkin.mechanical,
+                            label: Text('Mecha'),
+                          ),
+                          ButtonSegment(
+                            value: AppSkin.anime,
+                            label: Text('Anime'),
+                          ),
+                        ],
+                        selected: {progress.skin},
+                        onSelectionChanged: (v) => progress.setSkin(v.first),
+                      ),
+                    ),
+                    // Neon chỉ có bản tối nên ẩn lựa chọn sáng/tối.
+                    if (progress.skin != AppSkin.neon) ...[
+                      const SizedBox(height: 10),
+                      SizedBox(
+                        width: double.infinity,
+                        child: SegmentedButton<String>(
+                          key: const ValueKey('settings-brightness'),
+                          showSelectedIcon: false,
+                          segments: const [
+                            ButtonSegment(
+                              value: 'system',
+                              label: Text('Theo máy'),
+                            ),
+                            ButtonSegment(value: 'light', label: Text('Sáng')),
+                            ButtonSegment(value: 'dark', label: Text('Tối')),
+                          ],
+                          selected: {progress.brightness},
+                          onSelectionChanged: (v) =>
+                              progress.setBrightness(v.first),
+                        ),
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -500,7 +562,7 @@ class StatsScreen extends StatelessWidget {
                               null => 'Chưa làm',
                               final s => '${(s * 100).round()}%',
                             },
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontWeight: FontWeight.w700,
                               color: AppColors.primary,
                             ),

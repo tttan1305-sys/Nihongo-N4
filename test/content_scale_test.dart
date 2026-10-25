@@ -9,7 +9,7 @@ void main() {
   ) async {
     await tester.pumpWidget(
       MaterialApp(
-        theme: buildAppTheme(),
+        theme: buildAppTheme(SkinPalette.current),
         home: ContentScaleScope(
           scale: 2,
           child: Scaffold(
