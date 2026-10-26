@@ -146,6 +146,25 @@ class PracticeScreen extends StatelessWidget {
                 ),
               ),
               _PracticeTile(
+                key: const ValueKey('practice-n5-checks'),
+                icon: Icons.fact_check_rounded,
+                color: AppColors.green,
+                title: 'Kiểm tra các thể và ngữ pháp N5',
+                subtitle:
+                    '${n5Data.checks.fold(0, (n, s) => n + s.questions.length)} câu '
+                    'phủ hết các thể và mẫu ngữ pháp, có phân tích từng câu',
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => N5Screen(
+                      repository: n5,
+                      progress: progress,
+                      speaker: speaker,
+                      initialTab: N5Screen.checksTab,
+                    ),
+                  ),
+                ),
+              ),
+              _PracticeTile(
                 key: const ValueKey('practice-n5'),
                 icon: Icons.assignment_rounded,
                 color: AppColors.orange,

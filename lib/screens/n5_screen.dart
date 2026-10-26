@@ -10,27 +10,34 @@ import '../widgets/content_scale.dart';
 import '../widgets/example_analysis.dart';
 import '../widgets/listen_button.dart';
 import '../widgets/ruby_text.dart';
+import 'n5_check_screen.dart';
 import 'n5_test_screen.dart';
 import 'quiz_screen.dart';
 
 /// Tổng hợp N5 (Minna bài 1–25): kiến thức cần nhớ, các thể, ngữ pháp,
-/// từ vựng, đề test. Mở tự do, không khóa theo thứ tự như lộ trình N4.
+/// từ vựng, kiểm tra các thể và ngữ pháp, đề test. Mở tự do, không khóa theo thứ tự như lộ trình N4.
 class N5Screen extends StatelessWidget {
   final N5Repository repository;
   final ProgressStore progress;
   final Speaker speaker;
+  final int initialTab;
+
+  /// Thứ tự tab "Kiểm tra" (các thể và ngữ pháp).
+  static const checksTab = 5;
 
   const N5Screen({
     super.key,
     required this.repository,
     required this.progress,
     required this.speaker,
+    this.initialTab = 0,
   });
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 6,
+      initialIndex: initialTab,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Tổng hợp N5'),
@@ -43,6 +50,7 @@ class N5Screen extends StatelessWidget {
               Tab(key: ValueKey('n5-tab-grammar'), text: 'Ngữ pháp'),
               Tab(key: ValueKey('n5-tab-vocab'), text: 'Từ vựng'),
               Tab(key: ValueKey('n5-tab-tests'), text: 'Đề test'),
+              Tab(key: ValueKey('n5-tab-checks'), text: 'Kiểm tra thể & NP'),
             ],
           ),
         ),
@@ -66,6 +74,11 @@ class N5Screen extends StatelessWidget {
                   _GrammarTab(lessons: data.grammar, speaker: speaker),
                   _VocabTab(topics: data.topics, speaker: speaker),
                   _TestsTab(tests: data.tests, progress: progress),
+                  _ChecksTab(
+                    sets: data.checks,
+                    progress: progress,
+                    speaker: speaker,
+                  ),
                 ],
               );
             },
@@ -582,6 +595,67 @@ class _TestsTab extends StatelessWidget {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (_) => N5TestScreen(test: t, progress: progress),
+                  ),
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ChecksTab extends StatelessWidget {
+  final List<N5CheckSet> sets;
+  final ProgressStore progress;
+  final Speaker speaker;
+
+  const _ChecksTab({
+    required this.sets,
+    required this.progress,
+    required this.speaker,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final total = sets.fold(0, (n, s) => n + s.questions.length);
+    return ListenableBuilder(
+      listenable: progress,
+      builder: (context, _) => ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          Text(
+            '$total câu kiểm tra hết các thể động từ và mọi mẫu ngữ pháp '
+            'bài 1–25. Chọn xong mỗi câu là xem ngay câu đúng, ý nghĩa, '
+            'phân tích, vì sao các đáp án khác sai và mẹo nhớ.',
+          ),
+          const SizedBox(height: 8),
+          for (final s in sets)
+            Card(
+              child: ListTile(
+                key: ValueKey('n5-check-${s.id}'),
+                leading: Icon(
+                  s.id == 'check-forms' ? Icons.transform : Icons.fact_check,
+                  size: 32,
+                ),
+                title: Text(s.titleVi),
+                subtitle: Text(
+                  '${s.subtitleVi}\n'
+                  '${switch (progress.n5TestScore(s.id)) {
+                    null => '${s.questions.length} câu · chưa làm',
+                    final best => '${s.questions.length} câu · điểm cao nhất '
+                        '${(best * s.questions.length).round()}/${s.questions.length}',
+                  }}',
+                ),
+                isThreeLine: true,
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => N5CheckScreen(
+                      set: s,
+                      progress: progress,
+                      speaker: speaker,
+                    ),
                   ),
                 ),
               ),

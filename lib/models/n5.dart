@@ -346,6 +346,73 @@ class N5Test {
   );
 }
 
+/// Một bài kiểm tra Các thể & Ngữ pháp N5 (assets/n5/checks.json).
+class N5CheckSet {
+  final String id;
+  final String titleVi;
+  final String subtitleVi;
+  final List<N5CheckQuestion> questions;
+
+  const N5CheckSet({
+    required this.id,
+    required this.titleVi,
+    required this.subtitleVi,
+    required this.questions,
+  });
+
+  factory N5CheckSet.fromJson(Map<String, dynamic> j) => N5CheckSet(
+    id: j['id'] as String,
+    titleVi: j['titleVi'] as String,
+    subtitleVi: j['subtitleVi'] as String? ?? '',
+    questions: _list(j['questions'], N5CheckQuestion.fromJson),
+  );
+}
+
+/// Một câu kiểm tra: đáp án đúng kèm câu hoàn chỉnh, nghĩa, phân tích,
+/// lý do từng đáp án sai và mẹo nhớ.
+class N5CheckQuestion {
+  final String id;
+
+  /// Tên thể hoặc mẫu ngữ pháp câu này kiểm tra.
+  final List<String> coversVi;
+  final String prompt;
+  final List<String> options;
+  final int answer;
+  final String fullJa;
+  final String meaningVi;
+  final String explainVi;
+
+  /// Lý do sai của từng đáp án (rỗng ở đáp án đúng).
+  final List<String> wrongVi;
+  final String tipVi;
+
+  const N5CheckQuestion({
+    required this.id,
+    required this.coversVi,
+    required this.prompt,
+    required this.options,
+    required this.answer,
+    required this.fullJa,
+    required this.meaningVi,
+    required this.explainVi,
+    required this.wrongVi,
+    required this.tipVi,
+  });
+
+  factory N5CheckQuestion.fromJson(Map<String, dynamic> j) => N5CheckQuestion(
+    id: j['id'] as String,
+    coversVi: [for (final c in j['coversVi'] as List? ?? const []) c as String],
+    prompt: j['prompt'] as String,
+    options: [for (final o in j['options'] as List) o as String],
+    answer: j['answer'] as int,
+    fullJa: j['fullJa'] as String,
+    meaningVi: j['meaningVi'] as String,
+    explainVi: j['explainVi'] as String,
+    wrongVi: [for (final w in j['wrongVi'] as List) w as String],
+    tipVi: j['tipVi'] as String? ?? '',
+  );
+}
+
 /// Một chữ Hán N5 để học: cách đọc, cách nhớ, bộ thủ, số nét, từ ví dụ.
 class N5Kanji {
   final String id;
@@ -409,6 +476,7 @@ class N5Data {
   final List<NoteSection> notes;
   final List<N5Test> tests;
   final List<N5Kanji> kanji;
+  final List<N5CheckSet> checks;
 
   const N5Data({
     required this.forms,
@@ -417,6 +485,7 @@ class N5Data {
     this.notes = const [],
     this.tests = const [],
     this.kanji = const [],
+    this.checks = const [],
   });
 
   int get grammarCount => grammar.fold(0, (n, l) => n + l.points.length);

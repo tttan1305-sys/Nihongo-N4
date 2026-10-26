@@ -29,6 +29,7 @@ class N5Repository {
     final notes = await _json('notes');
     final tests = await _json('tests');
     final kanji = await _json('kanji');
+    final checks = await _json('checks');
     return _cache = N5Data(
       forms: forms,
       grammar: [
@@ -50,6 +51,10 @@ class N5Repository {
       kanji: [
         for (final k in kanji['kanji'] as List)
           N5Kanji.fromJson(k as Map<String, dynamic>),
+      ],
+      checks: [
+        for (final c in checks['sets'] as List)
+          N5CheckSet.fromJson(c as Map<String, dynamic>),
       ],
     );
   }
