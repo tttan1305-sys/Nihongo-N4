@@ -138,7 +138,11 @@ class _Example extends StatelessWidget {
           ],
         ),
         if (sentence.analysis != null)
-          ExampleAnalysis(analysis: sentence.analysis!, id: sentence.id),
+          ExampleAnalysis(
+            analysis: sentence.analysis!,
+            id: sentence.id,
+            vi: sentence.vi,
+          ),
       ],
     );
   }

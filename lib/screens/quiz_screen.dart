@@ -8,6 +8,7 @@ import '../theme.dart';
 import '../widgets/content_scale.dart';
 import '../widgets/option_row.dart';
 import '../widgets/ruby_text.dart';
+import '../widgets/translation_note.dart';
 import '../widgets/skin_widgets.dart';
 import '../widgets/ui.dart';
 
@@ -359,11 +360,10 @@ class _QuizScreenState extends State<QuizScreen> {
                   ),
           ),
           if (q.explanationVi != null) RubyText(q.explanationVi!),
-          if (widget.sentences[q.audioId] case final s?) ...[
-            const SizedBox(height: 4),
-            RubyText(s.ja, style: const TextStyle(fontSize: 18)),
-            Text(s.vi, style: TextStyle(color: AppColors.muted)),
-          ],
+          if (widget.sentences[q.audioId] case final s?)
+            TranslationNote(s.vi, ja: s.ja)
+          else if (q.translationVi case final vi?)
+            TranslationNote(vi, ja: q.translationJa),
         ],
       ),
     );

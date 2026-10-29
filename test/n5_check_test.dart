@@ -68,7 +68,8 @@ void main() {
     await tester.pump();
     expect(find.textContaining('Chưa đúng'), findsOneWidget);
     for (final title in [
-      'Câu đúng và ý nghĩa',
+      'Câu đúng',
+      'Dịch nghĩa',
       'Phân tích',
       'Vì sao các đáp án khác sai',
       'Mẹo nhớ',

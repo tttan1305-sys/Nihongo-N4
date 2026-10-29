@@ -31,6 +31,8 @@ Kế hoạch chi tiết: [docs/KE_HOACH.md](docs/KE_HOACH.md)
 | 5 đề test x 20 câu theo dạng JLPT N5, nộp bài mới hiện đáp án + giải thích từng câu, lưu điểm cao nhất | ✅ 2026-10-21 | `assets/n5/tests.json` (sinh từ `tools/n5_tests_data.py`), `screens/n5_test_screen.dart` |
 | Kiểm tra Các thể & Ngữ pháp (yêu cầu 2026-10-26): 6 bài, 145 câu phủ đủ 7 thể + 109 mẫu ngữ pháp; chọn xong là hiện câu đúng, ý nghĩa, phân tích, lý do từng đáp án sai, mẹo nhớ; làm lại câu sai | ✅ 2026-10-26, bạn duyệt, đã đẩy | `assets/n5/checks.json` (sinh từ `tools/n5_checks_data*.py` bằng `tools/gen_n5_checks.py`, tự kiểm tra phủ đủ và furigana), `screens/n5_check_screen.dart`, tab "Kiểm tra thể & NP" + thẻ ở Luyện tập; bản đọc `docs/kiem-tra-n5.md` |
 
+Dịch nghĩa sau mọi lời giải thích (yêu cầu 2026-10-29): khung "Dịch nghĩa" (`widgets/translation_note.dart`) ở cuối kiểm tra thể & NP, đề test (100 câu + 5 đoạn văn, `tools/n5_tests_translations.py`), phân tích câu ví dụ, các bài trắc nghiệm, luyện nghe, sắp xếp câu, gõ câu, ngữ pháp bài 26. ✅ 2026-10-29, bạn duyệt, đã đẩy.
+
 Màn hình: `screens/n5_screen.dart`, mở từ thẻ "Tổng hợp N5" ở trang chủ, không khóa. Chưa đưa từ N5 vào flashcard (mã thẻ hiện theo số bài N4).
 
 ## Giao diện mới theo ảnh mẫu (bạn yêu cầu 2026-10-22)

@@ -67,6 +67,8 @@ Question _question(
   Iterable<String> pool,
   Random rnd, {
   String? explanationVi,
+  String? translationJa,
+  String? translationVi,
 }) {
   final wrong = pool.where((o) => o != answer).toSet().toList()..shuffle(rnd);
   final options = [answer, ...wrong.take(3)]..shuffle(rnd);
@@ -75,6 +77,8 @@ Question _question(
     options: options,
     answer: options.indexOf(answer),
     explanationVi: explanationVi,
+    translationJa: translationJa,
+    translationVi: translationVi,
   );
 }
 
@@ -94,6 +98,8 @@ List<Question> conjugationQuiz(FormsData data, {int count = 10, Random? rnd}) {
           v.forms.entries.where((e) => e.key != 'dict').map((e) => e.value),
           rnd,
           explanationVi: 'Nhóm ${v.group}',
+          translationJa: v.forms[key],
+          translationVi: '${v.dictionary}: $meaning (${data.formLabels[key]})',
         );
       }(),
   ];
@@ -118,6 +124,8 @@ List<Question> grammarQuiz(
         pool,
         rnd,
         explanationVi: p.explanationVi,
+        translationJa: p.examples.firstOrNull?.ja,
+        translationVi: p.examples.firstOrNull?.vi,
       ),
   ]..shuffle(rnd);
 }
@@ -138,6 +146,8 @@ List<Question> vocabQuiz(N5Topic topic, List<N5Topic> all, {Random? rnd}) {
         w.meaningVi,
         pool.take(topic.words.length + 20),
         rnd,
+        translationJa: w.example.ja,
+        translationVi: w.example.vi,
       ),
   ]..shuffle(rnd);
 }

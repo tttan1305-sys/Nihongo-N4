@@ -58,6 +58,10 @@ class Question {
   final int answer;
   final String? explanationVi;
 
+  /// Dịch nghĩa hiện sau lời giải thích: câu tiếng Nhật (nếu có) và nghĩa.
+  final String? translationJa;
+  final String? translationVi;
+
   /// Id câu cần phát âm thanh (dùng cho bài luyện nghe).
   final String? audioId;
 
@@ -66,6 +70,8 @@ class Question {
     required this.options,
     required this.answer,
     this.explanationVi,
+    this.translationJa,
+    this.translationVi,
     this.audioId,
   });
 
@@ -74,6 +80,8 @@ class Question {
     options: List<String>.from(j['options'] as List),
     answer: j['answer'] as int,
     explanationVi: j['explanationVi'] as String?,
+    translationJa: j['translationJa'] as String?,
+    translationVi: j['translationVi'] as String?,
     audioId: j['audioId'] as String?,
   );
 }

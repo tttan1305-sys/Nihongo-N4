@@ -267,6 +267,7 @@ class _Example extends StatelessWidget {
               child: ExampleAnalysis(
                 analysis: sentence.analysis!,
                 id: sentence.id,
+                vi: sentence.vi,
               ),
             ),
         ],

@@ -16,9 +16,9 @@
         { "id": "g1_e3", "ja": "{明日|あした}は{休|やす}みます。{国|くに}から{母|はは}が{来|く}るんです。", "vi": "Mai tôi xin nghỉ. Mẹ tôi từ quê sang ạ.", "analysis": {"parts": [["{明日|あした}は", "ngày mai. は đánh dấu chủ đề (thời gian)"], ["{休|やす}みます", "xin nghỉ. {休|やす}む (nhóm I) chia thể ます"], ["{国|くに}から", "từ quê nhà. から = \"từ\" (điểm xuất phát)"], ["{母|はは}が", "mẹ (của mình). が đánh dấu chủ ngữ của sự việc mới nói ra"], ["{来|く}るんです", "sẽ đến (giải thích lý do nghỉ). {来|く}る thể từ điển ＋ んです"]], "steps": ["{休|やす}む → {休|やす}みます: nhóm I, đổi đuôi む thành み rồi thêm ます", "{来|き}ます → {来|く}る: nhóm III, bất quy tắc. んです đi sau thể thông thường nên dùng {来|く}る, không dùng {来|き}ます"], "note": "Nói về mẹ mình với người ngoài thì dùng {母|はは}, không dùng お{母|かあ}さん."} }
       ],
       "quiz": [
-        { "prompt": "{顔色|かおいろ}が{悪|わる}いですね。どう＿＿か。", "options": ["したんです", "するんです", "しました"], "answer": 0, "explanationVi": "Thấy sắc mặt xấu (chuyện đã xảy ra) nên hỏi lý do: したんですか." },
-        { "prompt": "{明日|あした}は{休|やす}みです。{病院|びょういん}に{行|い}く＿＿。", "options": ["んです", "なんです", "だんです"], "answer": 0, "explanationVi": "Sau động từ thể thông thường dùng trực tiếp んです." },
-        { "prompt": "{来週|らいしゅう}から{旅行|りょこう}＿＿。", "options": ["んです", "なんです", "だんです"], "answer": 1, "explanationVi": "Sau danh từ phải dùng なんです." }
+        { "prompt": "{顔色|かおいろ}が{悪|わる}いですね。どう＿＿か。", "options": ["したんです", "するんです", "しました"], "answer": 0, "explanationVi": "Thấy sắc mặt xấu (chuyện đã xảy ra) nên hỏi lý do: したんですか.", "translationJa": "{顔色|かおいろ}が{悪|わる}いですね。どうしたんですか。", "translationVi": "Sắc mặt bạn không tốt nhỉ. Bạn bị làm sao vậy?" },
+        { "prompt": "{明日|あした}は{休|やす}みです。{病院|びょういん}に{行|い}く＿＿。", "options": ["んです", "なんです", "だんです"], "answer": 0, "explanationVi": "Sau động từ thể thông thường dùng trực tiếp んです.", "translationJa": "{明日|あした}は{休|やす}みです。{病院|びょういん}に{行|い}くんです。", "translationVi": "Ngày mai tôi nghỉ. Là vì tôi đi bệnh viện." },
+        { "prompt": "{来週|らいしゅう}から{旅行|りょこう}＿＿。", "options": ["んです", "なんです", "だんです"], "answer": 1, "explanationVi": "Sau danh từ phải dùng なんです.", "translationJa": "{来週|らいしゅう}から{旅行|りょこう}なんです。", "translationVi": "Là vì từ tuần sau tôi đi du lịch." }
       ]
     },
     {
@@ -33,8 +33,8 @@
         { "id": "g2_e3", "ja": "すみません、この{書類|しょるい}の{書|か}き{方|かた}が{分|わ}からないんですが…。", "vi": "Xin lỗi, tôi không biết cách điền giấy tờ này ạ… (ngầm nhờ chỉ giúp)", "analysis": {"parts": [["すみません", "xin lỗi, dùng để bắt chuyện"], ["この{書類|しょるい}の", "của giấy tờ này. この ＋ danh từ ＋ の"], ["{書|か}き{方|かた}が", "cách viết, cách điền. {書|か}き (bỏ ます) ＋ {方|かた} (cách)"], ["{分|わ}からないんですが…", "tôi không hiểu… Bỏ lửng sau が để người nghe tự hiểu là đang nhờ"]], "steps": ["{書|か}きます → {書|か}き ＋ {方|かた} = {書|か}き{方|かた}: V bỏ ます ＋ {方|かた} = cách làm V", "{分|わ}かります → {分|わ}からない ＋ んですが"], "note": "Người Nhật hay bỏ lửng câu nhờ ở 〜んですが… để lịch sự, không cần nói hết \"xin chỉ giúp tôi\"."} }
       ],
       "quiz": [
-        { "prompt": "{漢字|かんじ}が{読|よ}めないんですが、＿＿。", "options": ["{読|よ}んでいただけませんか", "{読|よ}みていただけませんか", "{読|よ}んでいただきますか"], "answer": 0, "explanationVi": "Thể て của {読|よ}みます là {読|よ}んで." },
-        { "prompt": "{部長|ぶちょう}、{資料|しりょう}を{作|つく}ったんですが、＿＿。", "options": ["{見|み}てくれ", "{見|み}ていただけませんか", "{見|み}なさい"], "answer": 1, "explanationVi": "Nói với cấp trên phải dùng cách nhờ lịch sự nhất." }
+        { "prompt": "{漢字|かんじ}が{読|よ}めないんですが、＿＿。", "options": ["{読|よ}んでいただけませんか", "{読|よ}みていただけませんか", "{読|よ}んでいただきますか"], "answer": 0, "explanationVi": "Thể て của {読|よ}みます là {読|よ}んで.", "translationJa": "{漢字|かんじ}が{読|よ}めないんですが、{読|よ}んでいただけませんか。", "translationVi": "Tôi không đọc được chữ Hán, anh đọc giúp tôi được không ạ?" },
+        { "prompt": "{部長|ぶちょう}、{資料|しりょう}を{作|つく}ったんですが、＿＿。", "options": ["{見|み}てくれ", "{見|み}ていただけませんか", "{見|み}なさい"], "answer": 1, "explanationVi": "Nói với cấp trên phải dùng cách nhờ lịch sự nhất.", "translationJa": "{部長|ぶちょう}、{資料|しりょう}を{作|つく}ったんですが、{見|み}ていただけませんか。", "translationVi": "Thưa trưởng phòng, tôi đã làm xong tài liệu, anh xem giúp tôi được không ạ?" }
       ]
     },
     {
@@ -49,8 +49,8 @@
         { "id": "g3_e3", "ja": "{熱|ねつ}があるんですが、どうしたらいいですか。", "vi": "Tôi bị sốt, tôi nên làm thế nào ạ?", "analysis": {"parts": [["{熱|ねつ}が", "cơn sốt. が đi với ある"], ["あるんですが", "có (sốt), nêu hoàn cảnh. ある thể từ điển ＋ んです ＋ が"], ["どう", "thế nào (từ để hỏi)"], ["したら", "nếu làm. する → した → したら"], ["いいですか", "thì được, thì tốt?"]], "steps": ["あります → ある: nhóm I, đuôi り (hàng い) đổi về る (hàng う) để có thể từ điển", "します → する → した → したら: nhóm III, bất quy tắc. Thể たら = thể た ＋ ら", "どう ＋ したら いいですか = nên làm thế nào"]} }
       ],
       "quiz": [
-        { "prompt": "この{書類|しょるい}はだれに＿＿いいですか。", "options": ["{出|だ}したら", "{出|だ}すたら", "{出|だ}して"], "answer": 0, "explanationVi": "Thể たら của {出|だ}します là {出|だ}したら." },
-        { "prompt": "Tôi nên đi đường nào thì được?", "options": ["どの{道|みち}を{行|い}ったらいいですか", "どの{道|みち}を{行|い}きましたか", "どの{道|みち}が{行|い}きたいですか"], "answer": 0, "explanationVi": "Hỏi xin chỉ dẫn: {疑問詞|ぎもんし} + Vたらいいですか." }
+        { "prompt": "この{書類|しょるい}はだれに＿＿いいですか。", "options": ["{出|だ}したら", "{出|だ}すたら", "{出|だ}して"], "answer": 0, "explanationVi": "Thể たら của {出|だ}します là {出|だ}したら.", "translationJa": "この{書類|しょるい}はだれに{出|だ}したらいいですか。", "translationVi": "Giấy tờ này tôi nộp cho ai thì được ạ?" },
+        { "prompt": "Tôi nên đi đường nào thì được?", "options": ["どの{道|みち}を{行|い}ったらいいですか", "どの{道|みち}を{行|い}きましたか", "どの{道|みち}が{行|い}きたいですか"], "answer": 0, "explanationVi": "Hỏi xin chỉ dẫn: {疑問詞|ぎもんし} + Vたらいいですか.", "translationJa": "どの{道|みち}を{行|い}ったらいいですか。", "translationVi": "Tôi nên đi đường nào thì được?" }
       ]
     },
     {
@@ -65,8 +65,8 @@
         { "id": "g4_e3", "ja": "サッカーは{見|み}ますが、{野球|やきゅう}は{見|み}ません。", "vi": "Bóng đá thì tôi xem, còn bóng chày thì không.", "analysis": {"parts": [["サッカーは", "bóng đá thì. は thay を để đối chiếu"], ["{見|み}ますが", "có xem, nhưng. {見|み}る (nhóm II) thể ます ＋ が"], ["{野球|やきゅう}は", "bóng chày thì. は thay を"], ["{見|み}ません", "không xem. Phủ định của {見|み}ます"]], "steps": ["{見|み}る → {見|み}ます → {見|み}ません: nhóm II, bỏ る thêm ます; phủ định đổi ます thành ません", "Câu gốc: サッカーを{見|み}ます / {野球|やきゅう}を{見|み}ません. を đổi thành は để đối chiếu"], "note": "を đổi thành は (không giữ を は). Còn trợ từ に, で thì giữ lại và thêm は: には, では."} }
       ],
       "quiz": [
-        { "prompt": "お{酒|さけ}＿＿{飲|の}みますが、たばこ＿＿{吸|す}いません。", "options": ["は・は", "を・が", "が・を"], "answer": 0, "explanationVi": "Đối chiếu hai việc nên cả hai dùng は." },
-        { "prompt": "{日本語|にほんご}＿＿{話|はな}せますが、{漢字|かんじ}＿＿まだ{書|か}けません。", "options": ["を・を", "は・は", "に・に"], "answer": 1, "explanationVi": "So sánh khả năng nói và viết nên dùng は ở cả hai vế." }
+        { "prompt": "お{酒|さけ}＿＿{飲|の}みますが、たばこ＿＿{吸|す}いません。", "options": ["は・は", "を・が", "が・を"], "answer": 0, "explanationVi": "Đối chiếu hai việc nên cả hai dùng は.", "translationJa": "お{酒|さけ}は{飲|の}みますが、たばこは{吸|す}いません。", "translationVi": "Rượu thì tôi uống, nhưng thuốc lá thì không hút." },
+        { "prompt": "{日本語|にほんご}＿＿{話|はな}せますが、{漢字|かんじ}＿＿まだ{書|か}けません。", "options": ["を・を", "は・は", "に・に"], "answer": 1, "explanationVi": "So sánh khả năng nói và viết nên dùng は ở cả hai vế.", "translationJa": "{日本語|にほんご}は{話|はな}せますが、{漢字|かんじ}はまだ{書|か}けません。", "translationVi": "Tiếng Nhật thì tôi nói được, nhưng chữ Hán thì vẫn chưa viết được." }
       ]
     }
   ],

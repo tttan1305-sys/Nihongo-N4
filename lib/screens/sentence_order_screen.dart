@@ -6,6 +6,7 @@ import '../data/word_bank.dart';
 import '../theme.dart';
 import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
+import '../widgets/translation_note.dart';
 import '../widgets/ui.dart';
 
 /// Luyện tập câu: chạm các cụm từ theo đúng thứ tự để tạo thành câu.
@@ -182,6 +183,7 @@ class _SentenceOrderScreenState extends State<SentenceOrderScreen> {
                     item.chunks.join('　'),
                     style: const TextStyle(fontSize: 18),
                   ),
+                TranslationNote(item.vi),
               ],
             ],
           ),

@@ -148,6 +148,8 @@ List<Question> meaningQuiz(
           options: options,
           answer: options.indexOf(w.meaningVi),
           explanationVi: '${w.kana}: ${w.meaningVi}',
+          translationJa: w.example?.ja,
+          translationVi: w.example?.vi,
         );
       }(),
   ];

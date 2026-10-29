@@ -5,6 +5,7 @@ import '../models/n5.dart';
 import '../theme.dart';
 import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
+import '../widgets/translation_note.dart';
 
 const _letters = ['A', 'B', 'C', 'D'];
 
@@ -214,6 +215,7 @@ class _N5TestScreenState extends State<N5TestScreen> {
             passage: questions[i].passageId == null
                 ? null
                 : widget.test.passages[questions[i].passageId],
+            passageVi: widget.test.passagesVi[questions[i].passageId],
             picked: _picked[i],
           ),
       ],
@@ -313,6 +315,7 @@ class _Review extends StatelessWidget {
   final int number;
   final TestQuestion question;
   final String? passage;
+  final String? passageVi;
   final int? picked;
 
   const _Review({
@@ -320,6 +323,7 @@ class _Review extends StatelessWidget {
     required this.number,
     required this.question,
     required this.passage,
+    this.passageVi,
     required this.picked,
   });
 
@@ -368,6 +372,10 @@ class _Review extends StatelessWidget {
           const SizedBox(height: 4),
           Text('Giải thích', style: text.titleSmall),
           RubyText(question.explanationVi),
+          if (question.translationVi.isNotEmpty)
+            TranslationNote(question.translationVi),
+          if (passageVi != null)
+            TranslationNote(passageVi!, title: 'Dịch đoạn văn'),
         ],
       ),
     );

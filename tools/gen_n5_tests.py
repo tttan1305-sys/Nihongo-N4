@@ -11,6 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from n5_tests_data import SECTION, TESTS  # noqa: E402
+from n5_tests_translations import PASSAGES, QUESTIONS  # noqa: E402
 
 
 KANJI = re.compile(r"[一-鿿㐀-䶿々亻罒]+")
@@ -26,7 +27,8 @@ def mark_kanji(text):
 def main():
     tests = []
     for t, test in enumerate(TESTS, 1):
-        passages = [{"id": f"t{t}-p{i}", "ja": p} for i, p in enumerate(test["passages"], 1)]
+        passages = [{"id": f"t{t}-p{i}", "ja": p, "vi": PASSAGES[f"t{t}-p{i}"]}
+                    for i, p in enumerate(test["passages"], 1)]
         questions = []
         for q, item in enumerate(test["questions"], 1):
             kind, prompt, options, answer, explanation = item[:5]
@@ -42,6 +44,8 @@ def main():
                 "id": f"t{t}-q{q:02d}", "type": kind, "section": SECTION[kind],
                 "prompt": prompt, "options": options, "answer": answer,
                 "explanationVi": mark_kanji(explanation),
+                # Dịch nghĩa câu (đã điền đáp án), hiện sau phần giải thích.
+                "translationVi": QUESTIONS[f"t{t}-q{q:02d}"],
             }
             if len(item) > 5:
                 question["passage"] = passages[item[5]]["id"]

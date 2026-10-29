@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/lesson.dart';
 import '../theme.dart';
 import 'ruby_text.dart';
+import 'translation_note.dart';
 
 /// Nút "Phân tích" dưới câu ví dụ: bấm để xem từng cụm, cách chia thể và
 /// lưu ý của câu.
@@ -10,7 +11,15 @@ class ExampleAnalysis extends StatefulWidget {
   final Analysis analysis;
   final String id;
 
-  const ExampleAnalysis({super.key, required this.analysis, required this.id});
+  /// Nghĩa tiếng Việt của câu, hiện cuối phần phân tích.
+  final String? vi;
+
+  const ExampleAnalysis({
+    super.key,
+    required this.analysis,
+    required this.id,
+    this.vi,
+  });
 
   @override
   State<ExampleAnalysis> createState() => _ExampleAnalysisState();
@@ -143,6 +152,8 @@ class _ExampleAnalysisState extends State<ExampleAnalysis> {
                       ),
                     ),
                   ),
+                if (widget.vi case final vi? when vi.isNotEmpty)
+                  TranslationNote(vi),
               ],
             ),
           ),

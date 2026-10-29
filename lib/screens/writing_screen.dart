@@ -5,6 +5,7 @@ import '../services/japanese_text.dart';
 import '../widgets/kanji_canvas.dart';
 import '../widgets/content_scale.dart';
 import '../widgets/ruby_text.dart';
+import '../widgets/translation_note.dart';
 
 /// Luyện viết: tập viết chữ Hán của bài trên chữ mẫu mờ, rồi gõ lại câu bằng hiragana.
 class WritingScreen extends StatelessWidget {
@@ -167,6 +168,7 @@ class _TypingPracticeState extends State<_TypingPractice> {
               color: _correct! ? colors.primary : colors.error,
             ),
           ),
+        if (_correct != null) TranslationNote(item.vi, ja: item.ja),
         const SizedBox(height: 12),
         Row(
           children: [

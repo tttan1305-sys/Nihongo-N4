@@ -39,6 +39,7 @@ void main() {
         expect(q.options.toSet(), hasLength(4), reason: q.id);
         expect(q.answer, inInclusiveRange(0, 3), reason: q.id);
         expect(q.explanationVi, isNotEmpty, reason: q.id);
+        expect(q.translationVi, isNotEmpty, reason: q.id);
         if (q.passageId != null) {
           expect(t.passages, contains(q.passageId), reason: q.id);
         }
@@ -150,6 +151,8 @@ void main() {
     expect(progress.n5TestScore(test.id), 0.95);
     // Câu sai được mở sẵn, có đáp án đúng và giải thích.
     expect(find.text('Giải thích'), findsOneWidget);
+    // Sau giải thích là phần dịch nghĩa câu.
+    expect(find.text('Dịch nghĩa'), findsOneWidget);
     expect(progress.exportData(), containsPair('n5test.${test.id}', 0.95));
   });
 }

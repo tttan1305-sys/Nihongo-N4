@@ -11,6 +11,7 @@ import '../theme.dart';
 import '../widgets/content_scale.dart';
 import '../widgets/option_row.dart';
 import '../widgets/ruby_text.dart';
+import '../widgets/translation_note.dart';
 import '../widgets/ui.dart';
 
 const _letters = ['A', 'B', 'C', 'D'];
@@ -178,6 +179,8 @@ class _ComprehensionState extends State<_Comprehension> {
                     },
                   ),
                 ),
+              if (_checked)
+                TranslationNote(item.options[item.answer], ja: item.ja),
             ],
           ),
         ),
@@ -340,6 +343,8 @@ class _DictationState extends State<_Dictation> {
                           ),
                         ],
                       ),
+                      if (w.example case final e?)
+                        TranslationNote(e.vi, ja: e.ja),
                     ],
                   ),
                 ),

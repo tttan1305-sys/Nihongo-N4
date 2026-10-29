@@ -316,23 +316,16 @@ class _Explanation extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         _Block(
-          icon: Icons.translate,
+          icon: Icons.task_alt,
           color: AppColors.green,
-          title: 'Câu đúng và ý nghĩa',
+          title: 'Câu đúng',
           trailing: ListenButton(
             speaker: speaker,
             lesson: n5AudioLesson,
             audioId: q.id,
             text: readingText(q.fullJa),
           ),
-          children: [
-            RubyText(q.fullJa, style: const TextStyle(fontSize: 19)),
-            const SizedBox(height: 6),
-            Text(
-              q.meaningVi,
-              style: const TextStyle(fontStyle: FontStyle.italic),
-            ),
-          ],
+          children: [RubyText(q.fullJa, style: const TextStyle(fontSize: 19))],
         ),
         _Block(
           icon: Icons.manage_search,
@@ -363,6 +356,21 @@ class _Explanation extends StatelessWidget {
             title: 'Mẹo nhớ',
             children: [RubyText(q.tipVi)],
           ),
+        // Dịch nghĩa luôn đứng sau cùng, sau mọi lời giải thích.
+        _Block(
+          key: const ValueKey('check-translation'),
+          icon: Icons.translate,
+          color: AppColors.green,
+          title: 'Dịch nghĩa',
+          children: [
+            RubyText(q.fullJa, style: const TextStyle(fontSize: 17)),
+            const SizedBox(height: 4),
+            Text(
+              q.meaningVi,
+              style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 16),
+            ),
+          ],
+        ),
       ],
     );
   }
@@ -376,6 +384,7 @@ class _Block extends StatelessWidget {
   final List<Widget> children;
 
   const _Block({
+    super.key,
     required this.icon,
     required this.color,
     required this.title,

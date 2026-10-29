@@ -6,7 +6,8 @@
    "passages": [
     {
      "id": "t1-p1",
-     "ja": "{私|わたし}は　{毎朝|まいあさ}　6{時|じ}に　{起|お}きます。{朝|あさ}ごはんを　{食|た}べてから、{電車|でんしゃ}で　{会社|かいしゃ}へ　{行|い}きます。{会社|かいしゃ}は　9{時|じ}から　6{時|じ}までです。{昨日|きのう}は　{仕事|しごと}が　{多|おお}かったですから、8{時|じ}に　{家|いえ}へ　{帰|かえ}りました。"
+     "ja": "{私|わたし}は　{毎朝|まいあさ}　6{時|じ}に　{起|お}きます。{朝|あさ}ごはんを　{食|た}べてから、{電車|でんしゃ}で　{会社|かいしゃ}へ　{行|い}きます。{会社|かいしゃ}は　9{時|じ}から　6{時|じ}までです。{昨日|きのう}は　{仕事|しごと}が　{多|おお}かったですから、8{時|じ}に　{家|いえ}へ　{帰|かえ}りました。",
+     "vi": "Mỗi sáng tôi dậy lúc 6 giờ. Ăn sáng xong, tôi đi làm bằng tàu điện. Công ty làm việc từ 9 giờ đến 6 giờ. Hôm qua vì nhiều việc nên 8 giờ tôi mới về nhà."
     }
    ],
    "questions": [
@@ -22,7 +23,8 @@
       "さきしゅう"
      ],
      "answer": 1,
-     "explanationVi": "{先週|せんしゅう} = tuần trước: {先|せん} (trước) + {週|しゅう} (tuần, có trường âm う). せんしゅ thiếu trường âm; さき là âm kun của 【先】, không dùng trong từ này; ぜん sai âm đục."
+     "explanationVi": "{先週|せんしゅう} = tuần trước: {先|せん} (trước) + {週|しゅう} (tuần, có trường âm う). せんしゅ thiếu trường âm; さき là âm kun của 【先】, không dùng trong từ này; ぜん sai âm đục.",
+     "translationVi": "Tuần trước tôi đã đến Nhật."
     },
     {
      "id": "t1-q02",
@@ -36,7 +38,8 @@
       "やすい"
      ],
      "answer": 3,
-     "explanationVi": "{安|やす}い = rẻ. たかい ({高|たか}い) là đắt, cao; ひくい ({低|ひく}い) là thấp; うすい ({薄|うす}い) là mỏng, nhạt."
+     "explanationVi": "{安|やす}い = rẻ. たかい ({高|たか}い) là đắt, cao; ひくい ({低|ひく}い) là thấp; うすい ({薄|うす}い) là mỏng, nhạt.",
+     "translationVi": "Cửa hàng này rẻ."
     },
     {
      "id": "t1-q03",
@@ -50,7 +53,8 @@
       "もくようび"
      ],
      "answer": 0,
-     "explanationVi": "{水曜日|すいようび} = thứ Tư ({水|すい} = nước). {木曜日|もくようび} thứ Năm, {火曜日|かようび} thứ Ba, {金曜日|きんようび} thứ Sáu."
+     "explanationVi": "{水曜日|すいようび} = thứ Tư ({水|すい} = nước). {木曜日|もくようび} thứ Năm, {火曜日|かようび} thứ Ba, {金曜日|きんようび} thứ Sáu.",
+     "translationVi": "Có cuộc họp vào thứ Tư."
     },
     {
      "id": "t1-q04",
@@ -64,7 +68,8 @@
       "にし"
      ],
      "answer": 0,
-     "explanationVi": "{北|きた} = phía bắc. みなみ ({南|みなみ}) nam, ひがし ({東|ひがし}) đông, にし ({西|にし}) tây."
+     "explanationVi": "{北|きた} = phía bắc. みなみ ({南|みなみ}) nam, ひがし ({東|ひがし}) đông, にし ({西|にし}) tây.",
+     "translationVi": "Ở phía bắc nhà ga có ngân hàng."
     },
     {
      "id": "t1-q05",
@@ -78,7 +83,8 @@
       "連"
      ],
      "answer": 2,
-     "explanationVi": "くるま (xe hơi) viết là 【車】. 【東】 (ひがし) là phía đông; 【軍】 (quân đội) và 【連】 (liên kết) có phần giống 【車】 nhưng không đọc là くるま."
+     "explanationVi": "くるま (xe hơi) viết là 【車】. 【東】 (ひがし) là phía đông; 【軍】 (quân đội) và 【連】 (liên kết) có phần giống 【車】 nhưng không đọc là くるま.",
+     "translationVi": "Tôi đi làm bằng ô tô."
     },
     {
      "id": "t1-q06",
@@ -92,7 +98,8 @@
       "末"
      ],
      "answer": 1,
-     "explanationVi": "ほん (sách) là 【本】: chữ 【木】 (cây) thêm một nét ngang ngắn ở dưới. 【木】 đọc là き; 【末】 và 【未】 có thêm nét ngang ở trên, nghĩa khác."
+     "explanationVi": "ほん (sách) là 【本】: chữ 【木】 (cây) thêm một nét ngang ngắn ở dưới. 【木】 đọc là き; 【末】 và 【未】 có thêm nét ngang ở trên, nghĩa khác.",
+     "translationVi": "Tối nào tôi cũng đọc sách."
     },
     {
      "id": "t1-q07",
@@ -106,7 +113,8 @@
       "川"
      ],
      "answer": 0,
-     "explanationVi": "やま (núi) là 【山】. 【川】 là かわ (sông), 【出】 là で(る) (ra), 【田】 là た (ruộng)."
+     "explanationVi": "やま (núi) là 【山】. 【川】 là かわ (sông), 【出】 là で(る) (ra), 【田】 là た (ruộng).",
+     "translationVi": "Ngọn núi kia cao."
     },
     {
      "id": "t1-q08",
@@ -120,7 +128,8 @@
       "でんわ"
      ],
      "answer": 2,
-     "explanationVi": "Trời nóng nên mở cửa sổ: まどを{開|あ}けます. いす (ghế), かばん (túi), でんわ (điện thoại) không mở ra để làm mát phòng."
+     "explanationVi": "Trời nóng nên mở cửa sổ: まどを{開|あ}けます. いす (ghế), かばん (túi), でんわ (điện thoại) không mở ra để làm mát phòng.",
+     "translationVi": "Vì nóng nên hãy mở cửa sổ ra."
     },
     {
      "id": "t1-q09",
@@ -134,7 +143,8 @@
       "おしえます"
      ],
      "answer": 1,
-     "explanationVi": "{辞書|じしょ}で{調|しら}べます = tra từ điển. おしえます (dạy) là mình dạy người khác; ならいます (học từ ai) đi với người, không đi với {辞書|じしょ}で; あそびます (chơi) không hợp nghĩa."
+     "explanationVi": "{辞書|じしょ}で{調|しら}べます = tra từ điển. おしえます (dạy) là mình dạy người khác; ならいます (học từ ai) đi với người, không đi với {辞書|じしょ}で; あそびます (chơi) không hợp nghĩa.",
+     "translationVi": "Từ không hiểu thì tra bằng từ điển."
     },
     {
      "id": "t1-q10",
@@ -148,7 +158,8 @@
       "セーター"
      ],
      "answer": 3,
-     "explanationVi": "{着|き}ます dùng cho áo mặc ở thân trên: セーター (áo len). くつ (giày) dùng はきます, ぼうし (mũ) dùng かぶります, めがね (kính) dùng かけます."
+     "explanationVi": "{着|き}ます dùng cho áo mặc ở thân trên: セーター (áo len). くつ (giày) dùng はきます, ぼうし (mũ) dùng かぶります, めがね (kính) dùng かけます.",
+     "translationVi": "Vì lạnh nên tôi mặc áo len."
     },
     {
      "id": "t1-q11",
@@ -162,7 +173,8 @@
       "いそがしかった"
      ],
      "answer": 2,
-     "explanationVi": "{頭|あたま}が{痛|いた}い = đau đầu, là lý do hợp lý để nghỉ làm. たかい, おもしろい, いそがしい không dùng với {頭|あたま}が theo nghĩa này."
+     "explanationVi": "{頭|あたま}が{痛|いた}い = đau đầu, là lý do hợp lý để nghỉ làm. たかい, おもしろい, いそがしい không dùng với {頭|あたま}が theo nghĩa này.",
+     "translationVi": "Hôm qua tôi bị đau đầu nên đã nghỉ làm."
     },
     {
      "id": "t1-q12",
@@ -176,7 +188,8 @@
       "が"
      ],
      "answer": 1,
-     "explanationVi": "で chỉ phương tiện: バスで (bằng xe buýt). に dùng khi nói lên xe (バスに{乗|の}ります), không dùng cho \"đi bằng\"."
+     "explanationVi": "で chỉ phương tiện: バスで (bằng xe buýt). に dùng khi nói lên xe (バスに{乗|の}ります), không dùng cho \"đi bằng\".",
+     "translationVi": "Hằng ngày tôi đi học bằng xe buýt."
     },
     {
      "id": "t1-q13",
@@ -190,7 +203,8 @@
       "に"
      ],
      "answer": 1,
-     "explanationVi": "と = cùng với (người): {友達|ともだち}と{見|み}ました. へ chỉ hướng đi; を đã dùng cho {映画|えいが}; に{見|み}ます không mang nghĩa \"xem cùng\"."
+     "explanationVi": "と = cùng với (người): {友達|ともだち}と{見|み}ました. へ chỉ hướng đi; を đã dùng cho {映画|えいが}; に{見|み}ます không mang nghĩa \"xem cùng\".",
+     "translationVi": "Chủ nhật tôi đã xem phim cùng bạn."
     },
     {
      "id": "t1-q14",
@@ -204,7 +218,8 @@
       "は"
      ],
      "answer": 2,
-     "explanationVi": "Nơi tồn tại của đồ vật dùng に: ～に　あります. で dùng cho nơi diễn ra hành động, không dùng với あります khi nói vật ở đâu."
+     "explanationVi": "Nơi tồn tại của đồ vật dùng に: ～に　あります. で dùng cho nơi diễn ra hành động, không dùng với あります khi nói vật ở đâu.",
+     "translationVi": "Trên bàn có quyển sách."
     },
     {
      "id": "t1-q15",
@@ -218,7 +233,8 @@
       "よく"
      ],
      "answer": 1,
-     "explanationVi": "あまり + phủ định = không... lắm. とても (rất) chỉ đi với khẳng định; よく và たくさん không ghép với {好|す}きじゃありません."
+     "explanationVi": "あまり + phủ định = không... lắm. とても (rất) chỉ đi với khẳng định; よく và たくさん không ghép với {好|す}きじゃありません.",
+     "translationVi": "Tôi không thích thịt lắm."
     },
     {
      "id": "t1-q16",
@@ -232,7 +248,8 @@
       "{待|ま}って"
      ],
      "answer": 3,
-     "explanationVi": "Nhờ vả: Vて＋ください. {待|ま}つ (nhóm I, đuôi つ) → {待|ま}って. Thể ます bỏ ます ({待|ま}ち), thể từ điển ({待|ま}つ) và thể た ({待|ま}った) không đứng trước ください."
+     "explanationVi": "Nhờ vả: Vて＋ください. {待|ま}つ (nhóm I, đuôi つ) → {待|ま}って. Thể ます bỏ ます ({待|ま}ち), thể từ điển ({待|ま}つ) và thể た ({待|ま}った) không đứng trước ください.",
+     "translationVi": "Xin lỗi, xin hãy đợi một chút."
     },
     {
      "id": "t1-q17",
@@ -246,7 +263,8 @@
       "{食|た}べましょう"
      ],
      "answer": 3,
-     "explanationVi": "Đáp lại lời rủ ～ませんか bằng ～ましょう (cùng làm nhé). {食|た}べません là từ chối, mâu thuẫn với ええ; hai đáp án còn lại là câu hỏi, không phải câu trả lời."
+     "explanationVi": "Đáp lại lời rủ ～ませんか bằng ～ましょう (cùng làm nhé). {食|た}べません là từ chối, mâu thuẫn với ええ; hai đáp án còn lại là câu hỏi, không phải câu trả lời.",
+     "translationVi": "A: Cùng ăn trưa không? B: Vâng, cùng ăn nào."
     },
     {
      "id": "t1-q18",
@@ -260,7 +278,8 @@
       "テレビ"
      ],
      "answer": 3,
-     "explanationVi": "Câu đúng: {私|わたし}の{部屋|へや}　に　{大|おお}きい　テレビ　が　あります (Trong phòng tôi có cái tivi to). Nơi chốn + に, tính từ đứng trước danh từ ({大|おお}きいテレビ), chủ ngữ của あります dùng が. Ô ★ là ô thứ ba: テレビ."
+     "explanationVi": "Câu đúng: {私|わたし}の{部屋|へや}　に　{大|おお}きい　テレビ　が　あります (Trong phòng tôi có cái tivi to). Nơi chốn + に, tính từ đứng trước danh từ ({大|おお}きいテレビ), chủ ngữ của あります dùng が. Ô ★ là ô thứ ba: テレビ.",
+     "translationVi": "Trong phòng tôi có cái tivi lớn."
     },
     {
      "id": "t1-q19",
@@ -275,6 +294,7 @@
      ],
      "answer": 1,
      "explanationVi": "Đoạn văn viết: {電車|でんしゃ}で　{会社|かいしゃ}へ　{行|い}きます (đi làm bằng tàu điện).",
+     "translationVi": "Người này đi làm bằng gì? (Đáp: bằng tàu điện.)",
      "passage": "t1-p1"
     },
     {
@@ -290,6 +310,7 @@
      ],
      "answer": 3,
      "explanationVi": "Câu cuối: 8{時|じ}に　{家|いえ}へ　{帰|かえ}りました, vì hôm qua nhiều việc ({仕事|しごと}が{多|おお}かったですから). 6 giờ là giờ tan làm bình thường; 9 giờ là giờ vào làm.",
+     "translationVi": "Hôm qua người này về nhà lúc mấy giờ? (Đáp: 8 giờ.)",
      "passage": "t1-p1"
     }
    ]
@@ -300,7 +321,8 @@
    "passages": [
     {
      "id": "t2-p1",
-     "ja": "{先週|せんしゅう}の　{土曜日|どようび}、{友達|ともだち}と　{海|うみ}へ　{行|い}きました。{天気|てんき}が　よくて、{暑|あつ}かったです。{海|うみ}で　{泳|およ}いだり、{写真|しゃしん}を　{撮|と}ったり　しました。{昼|ひる}ごはんは　{魚|さかな}の　{料理|りょうり}を　{食|た}べました。とても　おいしかったです。{来月|らいげつ}　また　{行|い}きたいです。"
+     "ja": "{先週|せんしゅう}の　{土曜日|どようび}、{友達|ともだち}と　{海|うみ}へ　{行|い}きました。{天気|てんき}が　よくて、{暑|あつ}かったです。{海|うみ}で　{泳|およ}いだり、{写真|しゃしん}を　{撮|と}ったり　しました。{昼|ひる}ごはんは　{魚|さかな}の　{料理|りょうり}を　{食|た}べました。とても　おいしかったです。{来月|らいげつ}　また　{行|い}きたいです。",
+     "vi": "Thứ Bảy tuần trước tôi đi biển với bạn. Trời đẹp và nóng. Ở biển chúng tôi bơi, chụp ảnh. Bữa trưa chúng tôi ăn món cá. Rất ngon. Tháng sau tôi muốn đi nữa."
     }
    ],
    "questions": [
@@ -316,7 +338,8 @@
       "ぎゅうにゅうう"
      ],
      "answer": 1,
-     "explanationVi": "{牛乳|ぎゅうにゅう} = sữa bò. Cả {牛|ぎゅう} và {乳|にゅう} đều có trường âm う. Các đáp án khác thiếu hoặc thừa trường âm."
+     "explanationVi": "{牛乳|ぎゅうにゅう} = sữa bò. Cả {牛|ぎゅう} và {乳|にゅう} đều có trường âm う. Các đáp án khác thiếu hoặc thừa trường âm.",
+     "translationVi": "Ngày nào tôi cũng uống sữa bò."
     },
     {
      "id": "t2-q02",
@@ -330,7 +353,8 @@
       "みぎ"
      ],
      "answer": 3,
-     "explanationVi": "{右|みぎ} = bên phải. ひだり ({左|ひだり}) là bên trái, まえ ({前|まえ}) phía trước, うしろ ({後|うし}ろ) phía sau. Mẹo: 【右】 có chữ 【口】 (miệng) ở dưới, 【左】 có chữ 【工】."
+     "explanationVi": "{右|みぎ} = bên phải. ひだり ({左|ひだり}) là bên trái, まえ ({前|まえ}) phía trước, うしろ ({後|うし}ろ) phía sau. Mẹo: 【右】 có chữ 【口】 (miệng) ở dưới, 【左】 có chữ 【工】.",
+     "translationVi": "Xin hãy rẽ phải."
     },
     {
      "id": "t2-q03",
@@ -344,7 +368,8 @@
       "いつさい"
      ],
      "answer": 1,
-     "explanationVi": "{五歳|ごさい} = 5 tuổi. {五|ご} đọc ご (không kéo dài); {歳|さい} đọc さい. いつ là cách đếm いつつ, không dùng với {歳|さい}."
+     "explanationVi": "{五歳|ごさい} = 5 tuổi. {五|ご} đọc ご (không kéo dài); {歳|さい} đọc さい. いつ là cách đếm いつつ, không dùng với {歳|さい}.",
+     "translationVi": "Em trai tôi 5 tuổi."
     },
     {
      "id": "t2-q04",
@@ -358,7 +383,8 @@
       "くらい"
      ],
      "answer": 1,
-     "explanationVi": "{明|あか}るい = sáng sủa. くらい ({暗|くら}い) tối, ひろい ({広|ひろ}い) rộng, まるい ({丸|まる}い) tròn."
+     "explanationVi": "{明|あか}るい = sáng sủa. くらい ({暗|くら}い) tối, ひろい ({広|ひろ}い) rộng, まるい ({丸|まる}い) tròn.",
+     "translationVi": "Căn phòng này sáng sủa."
     },
     {
      "id": "t2-q05",
@@ -372,7 +398,8 @@
       "字校"
      ],
      "answer": 0,
-     "explanationVi": "がっこう (trường học) là 【学校】. 【字】 (chữ) trông giống 【学】 nhưng thiếu ba chấm ở trên; 【効】 và 【候】 là chữ khác, không dùng trong từ này."
+     "explanationVi": "がっこう (trường học) là 【学校】. 【字】 (chữ) trông giống 【学】 nhưng thiếu ba chấm ở trên; 【効】 và 【候】 là chữ khác, không dùng trong từ này.",
+     "translationVi": "Trường học ở gần nhà ga."
     },
     {
      "id": "t2-q06",
@@ -386,7 +413,8 @@
       "図"
      ],
      "answer": 2,
-     "explanationVi": "くに (đất nước) là 【国】: bên trong khung có chữ 【玉】. 【困】 (khó khăn), 【固】 (cứng), 【図】 (bản đồ) cũng có khung nhưng phần trong khác."
+     "explanationVi": "くに (đất nước) là 【国】: bên trong khung có chữ 【玉】. 【困】 (khó khăn), 【固】 (cứng), 【図】 (bản đồ) cũng có khung nhưng phần trong khác.",
+     "translationVi": "Năm sau tôi sẽ về nước."
     },
     {
      "id": "t2-q07",
@@ -400,7 +428,8 @@
       "休み"
      ],
      "answer": 3,
-     "explanationVi": "やすみ (nghỉ) là 【休】み: bộ nhân 【亻】 + 【木】 (người tựa vào cây để nghỉ). 【体】 (からだ, cơ thể) có 【本】 bên phải; 【林】 (rừng) là hai chữ 【木】."
+     "explanationVi": "やすみ (nghỉ) là 【休】み: bộ nhân 【亻】 + 【木】 (người tựa vào cây để nghỉ). 【体】 (からだ, cơ thể) có 【本】 bên phải; 【林】 (rừng) là hai chữ 【木】.",
+     "translationVi": "Ngày nghỉ bạn làm gì?"
     },
     {
      "id": "t2-q08",
@@ -414,7 +443,8 @@
       "あし"
      ],
      "answer": 2,
-     "explanationVi": "{歯|は}を{磨|みが}きます = đánh răng. {磨|みが}きます (đánh, chà) dùng với răng, giày; て (tay) dùng {洗|あら}います."
+     "explanationVi": "{歯|は}を{磨|みが}きます = đánh răng. {磨|みが}きます (đánh, chà) dùng với răng, giày; て (tay) dùng {洗|あら}います.",
+     "translationVi": "Buổi tối tôi đánh răng rồi mới đi ngủ."
     },
     {
      "id": "t2-q09",
@@ -428,7 +458,8 @@
       "つけて"
      ],
      "answer": 3,
-     "explanationVi": "Phòng tối thì bật đèn: {電気|でんき}をつけます. けします là tắt (ngược nghĩa); しめます là đóng (cửa); かけます dùng cho điện thoại, kính, khóa."
+     "explanationVi": "Phòng tối thì bật đèn: {電気|でんき}をつけます. けします là tắt (ngược nghĩa); しめます là đóng (cửa); かけます dùng cho điện thoại, kính, khóa.",
+     "translationVi": "Phòng tối nên hãy bật đèn lên."
     },
     {
      "id": "t2-q10",
@@ -442,7 +473,8 @@
       "しつもん"
      ],
      "answer": 2,
-     "explanationVi": "{趣味|しゅみ}は～ことです = sở thích là... しごと (công việc), しゅくだい (bài tập), しつもん (câu hỏi) không hợp."
+     "explanationVi": "{趣味|しゅみ}は～ことです = sở thích là... しごと (công việc), しゅくだい (bài tập), しつもん (câu hỏi) không hợp.",
+     "translationVi": "Sở thích của tôi là chụp ảnh."
     },
     {
      "id": "t2-q11",
@@ -456,7 +488,8 @@
       "します"
      ],
      "answer": 2,
-     "explanationVi": "Thời gian / tiền tốn: かかります. ～ぐらいかかります = mất khoảng... あります (có), します (làm), なります (trở nên) không dùng cho thời gian đi đường."
+     "explanationVi": "Thời gian / tiền tốn: かかります. ～ぐらいかかります = mất khoảng... あります (có), します (làm), なります (trở nên) không dùng cho thời gian đi đường.",
+     "translationVi": "Đi bộ đến nhà ga mất khoảng 10 phút."
     },
     {
      "id": "t2-q12",
@@ -470,7 +503,8 @@
       "に"
      ],
      "answer": 1,
-     "explanationVi": "{散歩|さんぽ}します đi với を chỉ nơi đi qua: {公園|こうえん}を{散歩|さんぽ}します. に và へ chỉ đích đến, が không đúng vai trò."
+     "explanationVi": "{散歩|さんぽ}します đi với を chỉ nơi đi qua: {公園|こうえん}を{散歩|さんぽ}します. に và へ chỉ đích đến, が không đúng vai trò.",
+     "translationVi": "Mỗi sáng tôi đi dạo trong công viên."
     },
     {
      "id": "t2-q13",
@@ -484,7 +518,8 @@
       "もの"
      ],
      "answer": 0,
-     "explanationVi": "Vる＋ことができます = có thể làm V. Phải dùng こと để danh từ hóa động từ trong mẫu này."
+     "explanationVi": "Vる＋ことができます = có thể làm V. Phải dùng こと để danh từ hóa động từ trong mẫu này.",
+     "translationVi": "Tôi có thể nói được một chút tiếng Nhật."
     },
     {
      "id": "t2-q14",
@@ -498,7 +533,8 @@
       "まえに"
      ],
      "answer": 3,
-     "explanationVi": "Vる＋まえに = trước khi V: trước khi ngủ thì đánh răng. あとで đi với thể た ({寝|ね}たあとで), không đi với {寝|ね}る; ながら, たり không đi sau thể từ điển."
+     "explanationVi": "Vる＋まえに = trước khi V: trước khi ngủ thì đánh răng. あとで đi với thể た ({寝|ね}たあとで), không đi với {寝|ね}る; ながら, たり không đi sau thể từ điển.",
+     "translationVi": "Trước khi ngủ tôi đánh răng."
     },
     {
      "id": "t2-q15",
@@ -512,7 +548,8 @@
       "{吸|す}っては"
      ],
      "answer": 3,
-     "explanationVi": "Cấm: Vては　いけません. {吸|す}う (nhóm I, đuôi う) → {吸|す}って → {吸|す}っては. ～ても　いいです là cho phép, không đi với いけません."
+     "explanationVi": "Cấm: Vては　いけません. {吸|す}う (nhóm I, đuôi う) → {吸|す}って → {吸|す}っては. ～ても　いいです là cho phép, không đi với いけません.",
+     "translationVi": "Không được hút thuốc ở đây."
     },
     {
      "id": "t2-q16",
@@ -526,7 +563,8 @@
       "{住|す}んで　ください"
      ],
      "answer": 1,
-     "explanationVi": "Đang sống ở đâu (trạng thái kéo dài) dùng ～て　います: {住|す}んで　います. {住|す}みます (sẽ sống) và {住|す}みました (đã sống) không diễn tả hiện tại."
+     "explanationVi": "Đang sống ở đâu (trạng thái kéo dài) dùng ～て　います: {住|す}んで　います. {住|す}みます (sẽ sống) và {住|す}みました (đã sống) không diễn tả hiện tại.",
+     "translationVi": "Anh trai tôi hiện đang sống ở Tokyo."
     },
     {
      "id": "t2-q17",
@@ -540,7 +578,8 @@
       "もらいました"
      ],
      "answer": 1,
-     "explanationVi": "Người khác cho mình: くれます. あげます là mình cho người khác. もらいます thì chủ ngữ phải là người nhận ({私|わたし}は{田中|たなか}さんに{本|ほん}をもらいました)."
+     "explanationVi": "Người khác cho mình: くれます. あげます là mình cho người khác. もらいます thì chủ ngữ phải là người nhận ({私|わたし}は{田中|たなか}さんに{本|ほん}をもらいました).",
+     "translationVi": "Anh Tanaka đã cho tôi quyển sách."
     },
     {
      "id": "t2-q18",
@@ -554,7 +593,8 @@
       "{日本|にほん}の"
      ],
      "answer": 1,
-     "explanationVi": "Câu đúng: {私|わたし}の{趣味|しゅみ}は　{日本|にほん}の　{歌|うた}を　{聞|き}く　こと　です (Sở thích của tôi là nghe nhạc Nhật). {日本|にほん}の bổ nghĩa cho {歌|うた}; {歌|うた}を là tân ngữ của {聞|き}く; mẫu {趣味|しゅみ}は　Vる　ことです. Ô ★ là ô thứ ba: {聞|き}く."
+     "explanationVi": "Câu đúng: {私|わたし}の{趣味|しゅみ}は　{日本|にほん}の　{歌|うた}を　{聞|き}く　こと　です (Sở thích của tôi là nghe nhạc Nhật). {日本|にほん}の bổ nghĩa cho {歌|うた}; {歌|うた}を là tân ngữ của {聞|き}く; mẫu {趣味|しゅみ}は　Vる　ことです. Ô ★ là ô thứ ba: {聞|き}く.",
+     "translationVi": "Sở thích của tôi là nghe bài hát Nhật Bản."
     },
     {
      "id": "t2-q19",
@@ -569,6 +609,7 @@
      ],
      "answer": 2,
      "explanationVi": "Đoạn văn: {海|うみ}で　{泳|およ}いだり、{写真|しゃしん}を　{撮|と}ったり　しました. {魚|さかな} chỉ xuất hiện ở bữa trưa ({魚|さかな}の{料理|りょうり}を{食|た}べました), không phải câu cá.",
+     "translationVi": "Người này đã làm gì ở biển? (Đáp: bơi và chụp ảnh.)",
      "passage": "t2-p1"
     },
     {
@@ -584,6 +625,7 @@
      ],
      "answer": 1,
      "explanationVi": "Đoạn văn: {魚|さかな}の{料理|りょうり}... とても　おいしかったです. Sai: đi cùng bạn ({友達|ともだち}と), không phải một mình; thời tiết đẹp ({天気|てんき}がよくて); và người viết muốn đi lại vào tháng sau ({来月|らいげつ}また{行|い}きたいです).",
+     "translationVi": "Câu nào đúng? (Đáp: Bữa trưa rất ngon.)",
      "passage": "t2-p1"
     }
    ]
@@ -594,7 +636,8 @@
    "passages": [
     {
      "id": "t3-p1",
-     "ja": "{山田|やまだ}さんへ　{明日|あした}の　{会議|かいぎ}は　10{時|じ}からでしたが、11{時|じ}からに　なりました。{場所|ばしょ}は　3{階|がい}の　{会議室|かいぎしつ}です。{会議|かいぎ}の　まえに、{資料|しりょう}を　10{枚|まい}　コピーして　ください。よろしく　お{願|ねが}いします。　{田中|たなか}"
+     "ja": "{山田|やまだ}さんへ　{明日|あした}の　{会議|かいぎ}は　10{時|じ}からでしたが、11{時|じ}からに　なりました。{場所|ばしょ}は　3{階|がい}の　{会議室|かいぎしつ}です。{会議|かいぎ}の　まえに、{資料|しりょう}を　10{枚|まい}　コピーして　ください。よろしく　お{願|ねが}いします。　{田中|たなか}",
+     "vi": "Gửi anh Yamada. Cuộc họp ngày mai lúc đầu từ 10 giờ, nay đổi thành từ 11 giờ. Địa điểm là phòng họp tầng 3. Trước cuộc họp, anh hãy photo tài liệu 10 bản giúp tôi. Nhờ anh nhé. Tanaka"
     }
    ],
    "questions": [
@@ -610,7 +653,8 @@
       "がいしゃ"
      ],
      "answer": 0,
-     "explanationVi": "{会社|かいしゃ} = công ty. しゃ là âm ghép (や nhỏ); かいしや viết や to là sai; がい, じゃ sai âm đục."
+     "explanationVi": "{会社|かいしゃ} = công ty. しゃ là âm ghép (や nhỏ); かいしや viết や to là sai; がい, じゃ sai âm đục.",
+     "translationVi": "Công ty ở trước nhà ga."
     },
     {
      "id": "t3-q02",
@@ -624,7 +668,8 @@
       "まいばん"
      ],
      "answer": 3,
-     "explanationVi": "{毎晩|まいばん} = mỗi tối. まいあさ ({毎朝|まいあさ}) mỗi sáng, まいにち ({毎日|まいにち}) mỗi ngày, まいしゅう ({毎週|まいしゅう}) mỗi tuần."
+     "explanationVi": "{毎晩|まいばん} = mỗi tối. まいあさ ({毎朝|まいあさ}) mỗi sáng, まいにち ({毎日|まいにち}) mỗi ngày, まいしゅう ({毎週|まいしゅう}) mỗi tuần.",
+     "translationVi": "Tối nào tôi cũng xem tivi."
     },
     {
      "id": "t3-q03",
@@ -638,7 +683,8 @@
       "じょ"
      ],
      "answer": 0,
-     "explanationVi": "{女|おんな}の{人|ひと} = người phụ nữ. おとこ ({男|おとこ}) đàn ông. じょ là âm on dùng trong từ ghép ({女性|じょせい}), không dùng trong {女|おんな}の{人|ひと}."
+     "explanationVi": "{女|おんな}の{人|ひと} = người phụ nữ. おとこ ({男|おとこ}) đàn ông. じょ là âm on dùng trong từ ghép ({女性|じょせい}), không dùng trong {女|おんな}の{人|ひと}.",
+     "translationVi": "Trong lớp học có người phụ nữ."
     },
     {
      "id": "t3-q04",
@@ -652,7 +698,8 @@
       "くも"
      ],
      "answer": 1,
-     "explanationVi": "{雨|あめ} = mưa. ゆき ({雪|ゆき}) tuyết, かぜ ({風|かぜ}) gió, くも ({雲|くも}) mây. Mẹo: 【雨】 trông như giọt nước rơi trong khung."
+     "explanationVi": "{雨|あめ} = mưa. ゆき ({雪|ゆき}) tuyết, かぜ ({風|かぜ}) gió, くも ({雲|くも}) mây. Mẹo: 【雨】 trông như giọt nước rơi trong khung.",
+     "translationVi": "Trời đang mưa."
     },
     {
      "id": "t3-q05",
@@ -666,7 +713,8 @@
       "電軍"
      ],
      "answer": 2,
-     "explanationVi": "でんしゃ (tàu điện) là 【電車】. 【雷】 (sấm) gần giống 【電】 nhưng phần dưới là 【田】 không có nét kéo dài; 【東】 và 【軍】 không phải くるま/しゃ."
+     "explanationVi": "でんしゃ (tàu điện) là 【電車】. 【雷】 (sấm) gần giống 【電】 nhưng phần dưới là 【田】 không có nét kéo dài; 【東】 và 【軍】 không phải くるま/しゃ.",
+     "translationVi": "Tôi lên tàu điện."
     },
     {
      "id": "t3-q06",
@@ -680,7 +728,8 @@
       "友達"
      ],
      "answer": 3,
-     "explanationVi": "ともだち là 【友達】. 【反】 (phản) và 【有】 (có) trông giống 【友】; 【逹】 là biến thể sai của 【達】."
+     "explanationVi": "ともだち là 【友達】. 【反】 (phản) và 【有】 (có) trông giống 【友】; 【逹】 là biến thể sai của 【達】.",
+     "translationVi": "Tôi đợi bạn ở nhà ga."
     },
     {
      "id": "t3-q07",
@@ -694,7 +743,8 @@
       "少さい"
      ],
      "answer": 1,
-     "explanationVi": "ちいさい (nhỏ) là 【小】さい. 【少】 (すく-ない, ít) có thêm nét phẩy; 【水】 (nước) khác hẳn. Hay nhầm 【小】 (nhỏ) và 【少】 (ít)."
+     "explanationVi": "ちいさい (nhỏ) là 【小】さい. 【少】 (すく-ない, ít) có thêm nét phẩy; 【水】 (nước) khác hẳn. Hay nhầm 【小】 (nhỏ) và 【少】 (ít).",
+     "translationVi": "Tôi muốn có một cái túi nhỏ."
     },
     {
      "id": "t3-q08",
@@ -708,7 +758,8 @@
       "おしえました"
      ],
      "answer": 1,
-     "explanationVi": "Không biết đường thì hỏi ở đồn cảnh sát: {聞|き}きます (hỏi). おしえます (chỉ cho) là việc của cảnh sát, không phải của mình; かきます, よみます không hợp."
+     "explanationVi": "Không biết đường thì hỏi ở đồn cảnh sát: {聞|き}きます (hỏi). おしえます (chỉ cho) là việc của cảnh sát, không phải của mình; かきます, よみます không hợp.",
+     "translationVi": "Vì không biết đường nên tôi đã hỏi ở đồn cảnh sát."
     },
     {
      "id": "t3-q09",
@@ -722,7 +773,8 @@
       "からい"
      ],
      "answer": 3,
-     "explanationVi": "Món cay ({辛|から}い) nên muốn uống nước. あまい (ngọt), つめたい (lạnh), やすい (rẻ) không là lý do tự nhiên để xin nước."
+     "explanationVi": "Món cay ({辛|から}い) nên muốn uống nước. あまい (ngọt), つめたい (lạnh), やすい (rẻ) không là lý do tự nhiên để xin nước.",
+     "translationVi": "Món này cay quá, cho tôi xin nước."
     },
     {
      "id": "t3-q10",
@@ -736,7 +788,8 @@
       "あさって"
      ],
      "answer": 0,
-     "explanationVi": "{寝|ね}ました là quá khứ nên cần từ chỉ quá khứ: ゆうべ (tối qua). あした, らいしゅう, あさって là tương lai, không đi với ～ました."
+     "explanationVi": "{寝|ね}ました là quá khứ nên cần từ chỉ quá khứ: ゆうべ (tối qua). あした, らいしゅう, あさって là tương lai, không đi với ～ました.",
+     "translationVi": "Tối qua bạn ngủ lúc mấy giờ?"
     },
     {
      "id": "t3-q11",
@@ -750,7 +803,8 @@
       "ながい"
      ],
      "answer": 0,
-     "explanationVi": "{背|せ}が{高|たか}い = cao (người). Tiếng Nhật không nói {背|せ}が{長|なが}い hay {背|せ}が{大|おお}きい; おもい là nặng."
+     "explanationVi": "{背|せ}が{高|たか}い = cao (người). Tiếng Nhật không nói {背|せ}が{長|なが}い hay {背|せ}が{大|おお}きい; おもい là nặng.",
+     "translationVi": "Anh Tanaka cao."
     },
     {
      "id": "t3-q12",
@@ -764,7 +818,8 @@
       "が"
      ],
      "answer": 3,
-     "explanationVi": "{好|す}き đi với が: Nが{好|す}きです. Lỗi hay gặp là dùng を (do tiếng Việt \"thích cái gì\")."
+     "explanationVi": "{好|す}き đi với が: Nが{好|す}きです. Lỗi hay gặp là dùng を (do tiếng Việt \"thích cái gì\").",
+     "translationVi": "Tôi thích phim hoạt hình Nhật Bản."
     },
     {
      "id": "t3-q13",
@@ -778,7 +833,8 @@
       "を"
      ],
      "answer": 0,
-     "explanationVi": "ほしい đi với が: Nが　ほしいです. Câu hỏi: {何|なに}が　ほしいですか."
+     "explanationVi": "ほしい đi với が: Nが　ほしいです. Câu hỏi: {何|なに}が　ほしいですか.",
+     "translationVi": "Sinh nhật bạn muốn có gì?"
     },
     {
      "id": "t3-q14",
@@ -792,7 +848,8 @@
       "{行|い}かなくても　いいです"
      ],
      "answer": 3,
-     "explanationVi": "Ngày nghỉ nên không cần đi: Vなくても　いいです. ～なければなりません (phải đi) mâu thuẫn với ngày nghỉ; ～てはいけません là cấm, quá mạnh; ～たいです (muốn đi) không theo logic から."
+     "explanationVi": "Ngày nghỉ nên không cần đi: Vなくても　いいです. ～なければなりません (phải đi) mâu thuẫn với ngày nghỉ; ～てはいけません là cấm, quá mạnh; ～たいです (muốn đi) không theo logic から.",
+     "translationVi": "Mai là ngày nghỉ nên không cần đến công ty cũng được."
     },
     {
      "id": "t3-q15",
@@ -806,7 +863,8 @@
       "が"
      ],
      "answer": 1,
-     "explanationVi": "Tính từ な + に + なります: {上手|じょうず}に　なりました. Tính từ い mới dùng く ({大|おお}きく　なります)."
+     "explanationVi": "Tính từ な + に + なります: {上手|じょうず}に　なりました. Tính từ い mới dùng く ({大|おお}きく　なります).",
+     "translationVi": "Từ khi đến Nhật, tiếng Nhật của tôi đã giỏi lên."
     },
     {
      "id": "t3-q16",
@@ -820,7 +878,8 @@
       "して"
      ],
      "answer": 1,
-     "explanationVi": "Mẫu V1たり、V2たり　します (nào là... nào là...): cả hai vế phải là ～たり."
+     "explanationVi": "Mẫu V1たり、V2たり　します (nào là... nào là...): cả hai vế phải là ～たり.",
+     "translationVi": "Chủ nhật tôi làm những việc như dọn dẹp, giặt giũ."
     },
     {
      "id": "t3-q17",
@@ -834,7 +893,8 @@
       "こと"
      ],
      "answer": 3,
-     "explanationVi": "Kinh nghiệm: Vた　ことが　あります. Đây là mẫu cố định với こと."
+     "explanationVi": "Kinh nghiệm: Vた　ことが　あります. Đây là mẫu cố định với こと.",
+     "translationVi": "Bạn đã từng leo núi Phú Sĩ chưa?"
     },
     {
      "id": "t3-q18",
@@ -848,7 +908,8 @@
       "と"
      ],
      "answer": 3,
-     "explanationVi": "Câu đúng: {机|つくえ}の{上|うえ}に　{日本語|にほんご}の　{辞書|じしょ}　と　ノートが　あります (Trên bàn có từ điển tiếng Nhật và vở). {日本語|にほんご}の bổ nghĩa cho {辞書|じしょ}; ノートが phải đứng cuối vì が đi trước あります. Ô ★ là ô thứ ba: と."
+     "explanationVi": "Câu đúng: {机|つくえ}の{上|うえ}に　{日本語|にほんご}の　{辞書|じしょ}　と　ノートが　あります (Trên bàn có từ điển tiếng Nhật và vở). {日本語|にほんご}の bổ nghĩa cho {辞書|じしょ}; ノートが phải đứng cuối vì が đi trước あります. Ô ★ là ô thứ ba: と.",
+     "translationVi": "Trên bàn có từ điển và vở tiếng Nhật."
     },
     {
      "id": "t3-q19",
@@ -863,6 +924,7 @@
      ],
      "answer": 1,
      "explanationVi": "Thư viết 10{時|じ}からでしたが、11{時|じ}からに　なりました: trước là 10 giờ nhưng đã đổi thành 11 giờ. \"3\" là tầng 3 (3{階|がい}), không phải giờ.",
+     "translationVi": "Cuộc họp bắt đầu từ mấy giờ? (Đáp: 11 giờ.)",
      "passage": "t3-p1"
     },
     {
@@ -878,6 +940,7 @@
      ],
      "answer": 3,
      "explanationVi": "Thư nhờ: {会議|かいぎ}の　まえに、{資料|しりょう}を　10{枚|まい}　コピーして　ください. Không có yêu cầu dọn phòng, gọi điện hay viết tài liệu.",
+     "translationVi": "Trước cuộc họp anh Yamada sẽ làm gì? (Đáp: photo tài liệu.)",
      "passage": "t3-p1"
     }
    ]
@@ -888,7 +951,8 @@
    "passages": [
     {
      "id": "t4-p1",
-     "ja": "{私|わたし}の　{家族|かぞく}は　{四人|よにん}です。{父|ちち}と　{母|はは}と　{妹|いもうと}と　{私|わたし}です。{父|ちち}は　{銀行|ぎんこう}で　{働|はたら}いて　います。{母|はは}は　{料理|りょうり}が　{上手|じょうず}です。{妹|いもうと}は　{高校生|こうこうせい}で、{歌|うた}が　{好|す}きです。{私|わたし}は　{今|いま}　{日本|にほん}に　いますから、{毎週|まいしゅう}　{日曜日|にちようび}に　{家族|かぞく}に　{電話|でんわ}を　かけます。"
+     "ja": "{私|わたし}の　{家族|かぞく}は　{四人|よにん}です。{父|ちち}と　{母|はは}と　{妹|いもうと}と　{私|わたし}です。{父|ちち}は　{銀行|ぎんこう}で　{働|はたら}いて　います。{母|はは}は　{料理|りょうり}が　{上手|じょうず}です。{妹|いもうと}は　{高校生|こうこうせい}で、{歌|うた}が　{好|す}きです。{私|わたし}は　{今|いま}　{日本|にほん}に　いますから、{毎週|まいしゅう}　{日曜日|にちようび}に　{家族|かぞく}に　{電話|でんわ}を　かけます。",
+     "vi": "Gia đình tôi có bốn người: bố, mẹ, em gái và tôi. Bố tôi làm việc ở ngân hàng. Mẹ tôi nấu ăn giỏi. Em gái tôi là học sinh cấp ba và thích hát. Bây giờ tôi đang ở Nhật nên Chủ nhật hằng tuần tôi gọi điện cho gia đình."
     }
    ],
    "questions": [
@@ -904,7 +968,8 @@
       "りょうこう"
      ],
      "answer": 2,
-     "explanationVi": "{旅行|りょこう} = du lịch. {旅|りょ} ngắn (không kéo dài), {行|こう} có う. りよこう viết よ to là sai."
+     "explanationVi": "{旅行|りょこう} = du lịch. {旅|りょ} ngắn (không kéo dài), {行|こう} có う. りよこう viết よ to là sai.",
+     "translationVi": "Tháng sau tôi đi du lịch."
     },
     {
      "id": "t4-q02",
@@ -918,7 +983,8 @@
       "けさ"
      ],
      "answer": 2,
-     "explanationVi": "{毎朝|まいあさ} = mỗi sáng. けさ ({今朝|けさ}) là sáng nay; まいばん mỗi tối; まいにち mỗi ngày."
+     "explanationVi": "{毎朝|まいあさ} = mỗi sáng. けさ ({今朝|けさ}) là sáng nay; まいばん mỗi tối; まいにち mỗi ngày.",
+     "translationVi": "Mỗi sáng tôi uống cà phê."
     },
     {
      "id": "t4-q03",
@@ -932,7 +998,8 @@
       "しろい"
      ],
      "answer": 3,
-     "explanationVi": "{白|しろ}い = trắng. くろい ({黒|くろ}い) đen, あかい ({赤|あか}い) đỏ, あおい ({青|あお}い) xanh."
+     "explanationVi": "{白|しろ}い = trắng. くろい ({黒|くろ}い) đen, あかい ({赤|あか}い) đỏ, あおい ({青|あお}い) xanh.",
+     "translationVi": "Cái túi này màu trắng."
     },
     {
      "id": "t4-q04",
@@ -946,7 +1013,8 @@
       "くがつ"
      ],
      "answer": 3,
-     "explanationVi": "{九月|くがつ} = tháng 9, đọc くがつ (không đọc きゅうがつ). Tương tự {四月|しがつ}, {七月|しちがつ}."
+     "explanationVi": "{九月|くがつ} = tháng 9, đọc くがつ (không đọc きゅうがつ). Tương tự {四月|しがつ}, {七月|しちがつ}.",
+     "translationVi": "Tháng Chín có kỳ thi."
     },
     {
      "id": "t4-q05",
@@ -960,7 +1028,8 @@
       "名前"
      ],
      "answer": 3,
-     "explanationVi": "なまえ (tên) là 【名前】. 【各】 (mỗi) và 【多】 (nhiều) trông giống 【名】 (tên) nhưng nghĩa khác."
+     "explanationVi": "なまえ (tên) là 【名前】. 【各】 (mỗi) và 【多】 (nhiều) trông giống 【名】 (tên) nhưng nghĩa khác.",
+     "translationVi": "Xin hãy viết tên."
     },
     {
      "id": "t4-q06",
@@ -974,7 +1043,8 @@
       "背"
      ],
      "answer": 2,
-     "explanationVi": "まえ (phía trước) là 【前】. 【後】 là うしろ/あと (phía sau, sau), 【間】 là あいだ (giữa), 【背】 là せ (lưng)."
+     "explanationVi": "まえ (phía trước) là 【前】. 【後】 là うしろ/あと (phía sau, sau), 【間】 là あいだ (giữa), 【背】 là せ (lưng).",
+     "translationVi": "Tôi đang đợi ở trước nhà ga."
     },
     {
      "id": "t4-q07",
@@ -988,7 +1058,8 @@
       "日本語"
      ],
      "answer": 3,
-     "explanationVi": "にほんご là 【日本語】. 【木】 thiếu nét của 【本】; 【目】 (mắt) khác 【日】 (mặt trời); 【話】 (はなし, câu chuyện) khác 【語】 (ngôn ngữ)."
+     "explanationVi": "にほんご là 【日本語】. 【木】 thiếu nét của 【本】; 【目】 (mắt) khác 【日】 (mặt trời); 【話】 (はなし, câu chuyện) khác 【語】 (ngôn ngữ).",
+     "translationVi": "Hằng ngày tôi học tiếng Nhật."
     },
     {
      "id": "t4-q08",
@@ -1002,7 +1073,8 @@
       "おして"
      ],
      "answer": 0,
-     "explanationVi": "Lạnh thì đóng cửa sổ: {窓|まど}を{閉|し}めます. あけます (mở) ngược nghĩa; つけます dùng cho đèn, máy; おします là ấn, đẩy."
+     "explanationVi": "Lạnh thì đóng cửa sổ: {窓|まど}を{閉|し}めます. あけます (mở) ngược nghĩa; つけます dùng cho đèn, máy; おします là ấn, đẩy.",
+     "translationVi": "Vì lạnh nên hãy đóng cửa sổ lại."
     },
     {
      "id": "t4-q09",
@@ -1016,7 +1088,8 @@
       "はいります"
      ],
      "answer": 1,
-     "explanationVi": "Tắm vòi sen: シャワーを{浴|あ}びます. はいります dùng cho bồn tắm (おふろに{入|はい}ります); あらいます là rửa (tay, mặt)."
+     "explanationVi": "Tắm vòi sen: シャワーを{浴|あ}びます. はいります dùng cho bồn tắm (おふろに{入|はい}ります); あらいます là rửa (tay, mặt).",
+     "translationVi": "Mỗi sáng tôi tắm vòi sen."
     },
     {
      "id": "t4-q10",
@@ -1030,7 +1103,8 @@
       "しずか"
      ],
      "answer": 0,
-     "explanationVi": "Nhiều việc nên bận: {忙|いそが}しい. ひま (rảnh) ngược nghĩa; しずか (yên tĩnh), げんき (khỏe) không liên quan."
+     "explanationVi": "Nhiều việc nên bận: {忙|いそが}しい. ひま (rảnh) ngược nghĩa; しずか (yên tĩnh), げんき (khỏe) không liên quan.",
+     "translationVi": "Hôm nay có nhiều việc nên tôi bận."
     },
     {
      "id": "t4-q11",
@@ -1044,7 +1118,8 @@
       "うりました"
      ],
      "answer": 1,
-     "explanationVi": "Mình mượn sách ở thư viện: {借|か}ります. かします (cho mượn) là thư viện cho mình mượn, chủ ngữ phải là thư viện; あげます, うります không hợp."
+     "explanationVi": "Mình mượn sách ở thư viện: {借|か}ります. かします (cho mượn) là thư viện cho mình mượn, chủ ngữ phải là thư viện; あげます, うります không hợp.",
+     "translationVi": "Tôi đã mượn sách ở thư viện."
     },
     {
      "id": "t4-q12",
@@ -1058,7 +1133,8 @@
       "まで"
      ],
      "answer": 1,
-     "explanationVi": "So sánh hơn: AはBより～: tôi cao hơn anh trai. ほど dùng trong câu phủ định (BほどＡくない), không dùng với khẳng định."
+     "explanationVi": "So sánh hơn: AはBより～: tôi cao hơn anh trai. ほど dùng trong câu phủ định (BほどＡくない), không dùng với khẳng định.",
+     "translationVi": "Tôi cao hơn anh trai."
     },
     {
      "id": "t4-q13",
@@ -1072,7 +1148,8 @@
       "は"
      ],
      "answer": 1,
-     "explanationVi": "Từ để hỏi làm chủ ngữ phải dùng が: {何|なに}が　いちばん{好|す}きですか. Không dùng は sau từ để hỏi."
+     "explanationVi": "Từ để hỏi làm chủ ngữ phải dùng が: {何|なに}が　いちばん{好|す}きですか. Không dùng は sau từ để hỏi.",
+     "translationVi": "Trong các món Nhật, bạn thích món nào nhất?"
     },
     {
      "id": "t4-q14",
@@ -1086,7 +1163,8 @@
       "で"
      ],
      "answer": 2,
-     "explanationVi": "Nối tính từ い: bỏ い + くて: {広|ひろ}い → {広|ひろ}くて. で dùng cho tính từ な và danh từ."
+     "explanationVi": "Nối tính từ い: bỏ い + くて: {広|ひろ}い → {広|ひろ}くて. で dùng cho tính từ な và danh từ.",
+     "translationVi": "Căn phòng này rộng và sáng sủa."
     },
     {
      "id": "t4-q15",
@@ -1100,7 +1178,8 @@
       "から"
      ],
      "answer": 3,
-     "explanationVi": "V1てから、V2: làm V1 xong rồi V2 (uống thuốc xong rồi ngủ). まえに đi với thể từ điển, không đi với thể て."
+     "explanationVi": "V1てから、V2: làm V1 xong rồi V2 (uống thuốc xong rồi ngủ). まえに đi với thể từ điển, không đi với thể て.",
+     "translationVi": "Hãy uống thuốc rồi đi ngủ."
     },
     {
      "id": "t4-q16",
@@ -1114,7 +1193,8 @@
       "{続|つづ}けない"
      ],
      "answer": 2,
-     "explanationVi": "Muốn làm V: V (thể ます bỏ ます)＋たいです. {続|つづ}けます → {続|つづ}けたいです. Thể て, thể từ điển và thể ない không ghép trực tiếp với たい."
+     "explanationVi": "Muốn làm V: V (thể ます bỏ ます)＋たいです. {続|つづ}けます → {続|つづ}けたいです. Thể て, thể từ điển và thể ない không ghép trực tiếp với たい.",
+     "translationVi": "Dù về nước tôi vẫn muốn tiếp tục học tiếng Nhật."
     },
     {
      "id": "t4-q17",
@@ -1128,7 +1208,8 @@
       "どういたしまして"
      ],
      "answer": 1,
-     "explanationVi": "Đồng ý cho mượn: ええ、どうぞ (vâng, xin mời). どういたしまして là đáp lại lời cảm ơn; いただきます, ごちそうさま dùng trong bữa ăn."
+     "explanationVi": "Đồng ý cho mượn: ええ、どうぞ (vâng, xin mời). どういたしまして là đáp lại lời cảm ơn; いただきます, ごちそうさま dùng trong bữa ăn.",
+     "translationVi": "A: Tôi mượn cái bút này được không? B: Vâng, xin mời."
     },
     {
      "id": "t4-q18",
@@ -1142,7 +1223,8 @@
       "{会社|かいしゃ}で"
      ],
      "answer": 1,
-     "explanationVi": "Câu đúng: {私|わたし}は{将来|しょうらい}、{車|くるま}の　{会社|かいしゃ}で　{働|はたら}きたい　と　{思|おも}います (Sau này tôi muốn làm việc ở công ty ô tô). {車|くるま}の bổ nghĩa cho {会社|かいしゃ}; と đứng ngay trước {思|おも}います. Ô ★ là ô thứ ba: {働|はたら}きたい."
+     "explanationVi": "Câu đúng: {私|わたし}は{将来|しょうらい}、{車|くるま}の　{会社|かいしゃ}で　{働|はたら}きたい　と　{思|おも}います (Sau này tôi muốn làm việc ở công ty ô tô). {車|くるま}の bổ nghĩa cho {会社|かいしゃ}; と đứng ngay trước {思|おも}います. Ô ★ là ô thứ ba: {働|はたら}きたい.",
+     "translationVi": "Sau này tôi nghĩ là tôi muốn làm việc ở công ty ô tô."
     },
     {
      "id": "t4-q19",
@@ -1157,6 +1239,7 @@
      ],
      "answer": 1,
      "explanationVi": "Đoạn văn: {妹|いもうと}は　{高校生|こうこうせい}で、{歌|うた}が　{好|す}きです. Người làm ngân hàng là bố, người nấu ăn giỏi là mẹ (đáp án đầu đổi chỗ hai người), và gia đình có 4 người.",
+     "translationVi": "Điều nào đúng về gia đình người này? (Đáp: Em gái thích hát.)",
      "passage": "t4-p1"
     },
     {
@@ -1172,6 +1255,7 @@
      ],
      "answer": 0,
      "explanationVi": "Câu cuối: {毎週|まいしゅう}　{日曜日|にちようび}に　{家族|かぞく}に　{電話|でんわ}を　かけます (gọi điện mỗi Chủ nhật).",
+     "translationVi": "Người này gọi điện cho gia đình khi nào? (Đáp: Chủ nhật hằng tuần.)",
      "passage": "t4-p1"
     }
    ]
@@ -1182,7 +1266,8 @@
    "passages": [
     {
      "id": "t5-p1",
-     "ja": "{駅|えき}の　{近|ちか}くに　{新|あたら}しい　レストランが　できました。{昨日|きのう}　{会社|かいしゃ}の　{人|ひと}と　{行|い}きました。{店|みせ}は　{広|ひろ}くて、きれいでした。ラーメンは　800{円|えん}で、{安|やす}くて　おいしかったです。でも、{人|ひと}が　{多|おお}くて、30{分|ぷん}ぐらい　{待|ま}ちました。{今度|こんど}は　{早|はや}く　{行|い}きます。"
+     "ja": "{駅|えき}の　{近|ちか}くに　{新|あたら}しい　レストランが　できました。{昨日|きのう}　{会社|かいしゃ}の　{人|ひと}と　{行|い}きました。{店|みせ}は　{広|ひろ}くて、きれいでした。ラーメンは　800{円|えん}で、{安|やす}くて　おいしかったです。でも、{人|ひと}が　{多|おお}くて、30{分|ぷん}ぐらい　{待|ま}ちました。{今度|こんど}は　{早|はや}く　{行|い}きます。",
+     "vi": "Gần nhà ga có một nhà hàng mới mở. Hôm qua tôi đi cùng người ở công ty. Quán rộng và sạch đẹp. Mì ramen 800 yên, rẻ mà ngon. Nhưng đông người nên chúng tôi đợi khoảng 30 phút. Lần sau tôi sẽ đi sớm."
     }
    ],
    "questions": [
@@ -1198,7 +1283,8 @@
       "はは"
      ],
      "answer": 2,
-     "explanationVi": "{父|ちち} = bố (của mình). はは ({母|はは}) mẹ, あに ({兄|あに}) anh trai, あね ({姉|あね}) chị gái."
+     "explanationVi": "{父|ちち} = bố (của mình). はは ({母|はは}) mẹ, あに ({兄|あに}) anh trai, あね ({姉|あね}) chị gái.",
+     "translationVi": "Bố tôi là bác sĩ."
     },
     {
      "id": "t5-q02",
@@ -1212,7 +1298,8 @@
       "ふかい"
      ],
      "answer": 0,
-     "explanationVi": "{長|なが}い = dài. みじかい ({短|みじか}い) ngắn, ひろい ({広|ひろ}い) rộng, ふかい ({深|ふか}い) sâu."
+     "explanationVi": "{長|なが}い = dài. みじかい ({短|みじか}い) ngắn, ひろい ({広|ひろ}い) rộng, ふかい ({深|ふか}い) sâu.",
+     "translationVi": "Con sông này dài."
     },
     {
      "id": "t5-q03",
@@ -1226,7 +1313,8 @@
       "ごぜん"
      ],
      "answer": 2,
-     "explanationVi": "{午後|ごご} = buổi chiều (PM). ごぜん ({午前|ごぜん}) là buổi sáng; 【後】 đọc ご trong từ này, không đọc あと."
+     "explanationVi": "{午後|ごご} = buổi chiều (PM). ごぜん ({午前|ごぜん}) là buổi sáng; 【後】 đọc ご trong từ này, không đọc あと.",
+     "translationVi": "Gặp nhau lúc 3 giờ chiều nhé."
     },
     {
      "id": "t5-q04",
@@ -1240,7 +1328,8 @@
       "いれて"
      ],
      "answer": 1,
-     "explanationVi": "{入|はい}って ({入|はい}る = vào). いれて ({入|い}れる = cho vào) cũng dùng chữ 【入】 nhưng là động từ khác, cần tân ngữ; でて ({出|で}る) là ra."
+     "explanationVi": "{入|はい}って ({入|はい}る = vào). いれて ({入|い}れる = cho vào) cũng dùng chữ 【入】 nhưng là động từ khác, cần tân ngữ; でて ({出|で}る) là ra.",
+     "translationVi": "Xin mời vào phòng."
     },
     {
      "id": "t5-q05",
@@ -1254,7 +1343,8 @@
       "永"
      ],
      "answer": 0,
-     "explanationVi": "みず (nước) là 【水】. 【氷】 (こおり, đá lạnh) có thêm một chấm; 【永】 (vĩnh) có thêm nét ở trên; 【木】 là cây."
+     "explanationVi": "みず (nước) là 【水】. 【氷】 (こおり, đá lạnh) có thêm một chấm; 【永】 (vĩnh) có thêm nét ở trên; 【木】 là cây.",
+     "translationVi": "Tôi uống nước."
     },
     {
      "id": "t5-q06",
@@ -1268,7 +1358,8 @@
       "買い初"
      ],
      "answer": 1,
-     "explanationVi": "かいもの (mua sắm) là 【買】い【物】. 【貝】 (かい, con sò) thiếu phần 【罒】 ở trên; 【売】 (うる) là bán; 【初】 (はじめ) khác 【物】 (もの)."
+     "explanationVi": "かいもの (mua sắm) là 【買】い【物】. 【貝】 (かい, con sò) thiếu phần 【罒】 ở trên; 【売】 (うる) là bán; 【初】 (はじめ) khác 【物】 (もの).",
+     "translationVi": "Chủ nhật tôi đi mua sắm."
     },
     {
      "id": "t5-q07",
@@ -1282,7 +1373,8 @@
       "膏い"
      ],
      "answer": 1,
-     "explanationVi": "たかい (đắt, cao) viết chuẩn là 【高】い. 【髙】 là dạng chữ dị thể (thường thấy trong họ tên), đề thi dùng 【高】; 【膏】 và 【商】 là chữ khác."
+     "explanationVi": "たかい (đắt, cao) viết chuẩn là 【高】い. 【髙】 là dạng chữ dị thể (thường thấy trong họ tên), đề thi dùng 【高】; 【膏】 và 【商】 là chữ khác.",
+     "translationVi": "Cửa hàng này đắt."
     },
     {
      "id": "t5-q08",
@@ -1296,7 +1388,8 @@
       "ドア"
      ],
      "answer": 0,
-     "explanationVi": "Tối thì bật đèn: {電気|でんき}をつけます. まど, ドア dùng あけます; とけい (đồng hồ) không \"bật\" để sáng."
+     "explanationVi": "Tối thì bật đèn: {電気|でんき}をつけます. まど, ドア dùng あけます; とけい (đồng hồ) không \"bật\" để sáng.",
+     "translationVi": "Tối quá, bật đèn lên nào."
     },
     {
      "id": "t5-q09",
@@ -1310,7 +1403,8 @@
       "みがきます"
      ],
      "answer": 1,
-     "explanationVi": "Rửa mặt: {顔|かお}を{洗|あら}います. みがきます dùng cho răng; ふきます là lau; きります là cắt."
+     "explanationVi": "Rửa mặt: {顔|かお}を{洗|あら}います. みがきます dùng cho răng; ふきます là lau; きります là cắt.",
+     "translationVi": "Buổi sáng thức dậy tôi rửa mặt."
     },
     {
      "id": "t5-q10",
@@ -1324,7 +1418,8 @@
       "とおい"
      ],
      "answer": 0,
-     "explanationVi": "Gần ga nên tiện lợi: {近|ちか}い. とおい (xa) thì không tiện; おもい (nặng), ふるい (cũ) không liên quan đến khoảng cách."
+     "explanationVi": "Gần ga nên tiện lợi: {近|ちか}い. とおい (xa) thì không tiện; おもい (nặng), ふるい (cũ) không liên quan đến khoảng cách.",
+     "translationVi": "Nhà tôi gần nhà ga nên tiện lợi."
     },
     {
      "id": "t5-q11",
@@ -1338,7 +1433,8 @@
       "かして　もらって"
      ],
      "answer": 3,
-     "explanationVi": "Cảm ơn vì được anh Tanaka cho mượn sách: {貸|か}して　もらって (được người khác làm cho mình). かりて (mượn) là việc của mình, không phải của Tanaka; ～てあげて là mình làm cho người khác."
+     "explanationVi": "Cảm ơn vì được anh Tanaka cho mượn sách: {貸|か}して　もらって (được người khác làm cho mình). かりて (mượn) là việc của mình, không phải của Tanaka; ～てあげて là mình làm cho người khác.",
+     "translationVi": "Cảm ơn anh Tanaka đã cho tôi mượn sách."
     },
     {
      "id": "t5-q12",
@@ -1352,7 +1448,8 @@
       "で"
      ],
      "answer": 2,
-     "explanationVi": "AからBまで = từ A đến B. Cặp から…まで là cố định."
+     "explanationVi": "AからBまで = từ A đến B. Cặp から…まで là cố định.",
+     "translationVi": "Từ nhà đến công ty mất một tiếng."
     },
     {
      "id": "t5-q13",
@@ -1366,7 +1463,8 @@
       "{好|す}きくないでした"
      ],
      "answer": 1,
-     "explanationVi": "{好|す}き là tính từ な: quá khứ phủ định là {好|す}きじゃ　ありませんでした. {好|す}きく là chia sai theo tính từ い; ないでした là dạng không tồn tại."
+     "explanationVi": "{好|す}き là tính từ な: quá khứ phủ định là {好|す}きじゃ　ありませんでした. {好|す}きく là chia sai theo tính từ い; ないでした là dạng không tồn tại.",
+     "translationVi": "Hồi còn là học sinh, tôi không thích rau."
     },
     {
      "id": "t5-q14",
@@ -1380,7 +1478,8 @@
       "たら"
      ],
      "answer": 3,
-     "explanationVi": "Điều kiện: ～たら (nếu trời mưa thì trận đấu hủy). ～ても (dù mưa) dẫn đến kết quả trái ngược, không hợp với {中止|ちゅうし}; ～たり là liệt kê."
+     "explanationVi": "Điều kiện: ～たら (nếu trời mưa thì trận đấu hủy). ～ても (dù mưa) dẫn đến kết quả trái ngược, không hợp với {中止|ちゅうし}; ～たり là liệt kê.",
+     "translationVi": "Nếu trời mưa thì trận đấu sẽ bị hủy."
     },
     {
      "id": "t5-q15",
@@ -1394,7 +1493,8 @@
       "{押|お}した"
      ],
      "answer": 1,
-     "explanationVi": "Vる＋と、～: hễ V thì... (kết quả tự nhiên, hướng dẫn máy móc). Trước と dùng thể từ điển {押|お}す."
+     "explanationVi": "Vる＋と、～: hễ V thì... (kết quả tự nhiên, hướng dẫn máy móc). Trước と dùng thể từ điển {押|お}す.",
+     "translationVi": "Ấn nút này thì vé sẽ ra."
     },
     {
      "id": "t5-q16",
@@ -1408,7 +1508,8 @@
       "とき"
      ],
      "answer": 3,
-     "explanationVi": "Khi...: (thể thông thường)＋とき. わからない　とき = khi không biết (đường). ながら đi với thể ます bỏ ます; まで, より không hợp nghĩa."
+     "explanationVi": "Khi...: (thể thông thường)＋とき. わからない　とき = khi không biết (đường). ながら đi với thể ます bỏ ます; まで, より không hợp nghĩa.",
+     "translationVi": "Khi không biết đường, tôi hỏi ở đồn cảnh sát."
     },
     {
      "id": "t5-q17",
@@ -1422,7 +1523,8 @@
       "に"
      ],
      "answer": 2,
-     "explanationVi": "Trích dẫn lời nói: (thể thông thường)と　{言|い}いました. Không dùng を hay が trước {言|い}います trong mẫu này."
+     "explanationVi": "Trích dẫn lời nói: (thể thông thường)と　{言|い}いました. Không dùng を hay が trước {言|い}います trong mẫu này.",
+     "translationVi": "Thầy giáo đã nói là ngày mai có bài kiểm tra."
     },
     {
      "id": "t5-q18",
@@ -1436,7 +1538,8 @@
       "{送|おく}って"
      ],
      "answer": 0,
-     "explanationVi": "Câu đúng: これは{母|はは}が　{日本|にほん}へ　{送|おく}って　くれた　セーター　です (Đây là áo len mẹ đã gửi sang Nhật cho tôi). Mệnh đề bổ nghĩa đặt trước danh từ セーター. Ô ★ là ô thứ ba: くれた."
+     "explanationVi": "Câu đúng: これは{母|はは}が　{日本|にほん}へ　{送|おく}って　くれた　セーター　です (Đây là áo len mẹ đã gửi sang Nhật cho tôi). Mệnh đề bổ nghĩa đặt trước danh từ セーター. Ô ★ là ô thứ ba: くれた.",
+     "translationVi": "Đây là cái áo len mẹ đã gửi sang Nhật cho tôi."
     },
     {
      "id": "t5-q19",
@@ -1451,6 +1554,7 @@
      ],
      "answer": 2,
      "explanationVi": "Đoạn văn: {人|ひと}が　{多|おお}くて、30{分|ぷん}ぐらい　{待|ま}ちました. Quán rộng ({広|ひろ}くて), ramen rẻ ({安|やす}くて), ở gần ga ({駅|えき}の{近|ちか}く).",
+     "translationVi": "Điều nào đúng về nhà hàng? (Đáp: Đông người.)",
      "passage": "t5-p1"
     },
     {
@@ -1466,6 +1570,7 @@
      ],
      "answer": 1,
      "explanationVi": "Câu cuối: {今度|こんど}は　{早|はや}く　{行|い}きます (lần sau sẽ đi sớm để khỏi phải đợi lâu).",
+     "translationVi": "Lần sau người này sẽ làm gì? (Đáp: Sẽ đi sớm.)",
      "passage": "t5-p1"
     }
    ]

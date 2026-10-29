@@ -296,6 +296,9 @@ class TestQuestion {
   final List<String> options;
   final int answer;
   final String explanationVi;
+
+  /// Dịch nghĩa câu (đã điền đáp án đúng), hiện sau phần giải thích.
+  final String translationVi;
   final String? passageId;
 
   const TestQuestion({
@@ -306,6 +309,7 @@ class TestQuestion {
     required this.options,
     required this.answer,
     required this.explanationVi,
+    this.translationVi = '',
     this.passageId,
   });
 
@@ -317,6 +321,7 @@ class TestQuestion {
     options: List<String>.from(j['options'] as List),
     answer: j['answer'] as int,
     explanationVi: j['explanationVi'] as String,
+    translationVi: j['translationVi'] as String? ?? '',
     passageId: j['passage'] as String?,
   );
 }
@@ -326,12 +331,16 @@ class N5Test {
   final String id;
   final String titleVi;
   final Map<String, String> passages;
+
+  /// Bản dịch tiếng Việt của từng đoạn văn, theo mã đoạn.
+  final Map<String, String> passagesVi;
   final List<TestQuestion> questions;
 
   const N5Test({
     required this.id,
     required this.titleVi,
     required this.passages,
+    this.passagesVi = const {},
     required this.questions,
   });
 
@@ -341,6 +350,10 @@ class N5Test {
     passages: {
       for (final p in j['passages'] as List)
         (p as Map)['id'] as String: p['ja'] as String,
+    },
+    passagesVi: {
+      for (final p in j['passages'] as List)
+        if ((p as Map)['vi'] case final String vi) p['id'] as String: vi,
     },
     questions: _list(j['questions'], TestQuestion.fromJson),
   );
